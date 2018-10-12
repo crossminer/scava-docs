@@ -1,3 +1,6 @@
+
+# Consuming REST services
+
 ## When to use ?
 This guideline describes general way of consuming REST services of CROSSMINER. Its basically for the use of CROSSMINER rest APIs in other tools/applications.
 
@@ -6,7 +9,7 @@ The reference guide presenting all REST services implemented by CROSSMINER is av
 
 ## API Gateway
 
-The CROSSMINER integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the CROSSMINER API Gateway. 
+The CROSSMINER integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the CROSSMINER API Gateway.
 
 **All web service request form clients have to go through the gateway.**
 
@@ -29,24 +32,24 @@ Retrieve a Web Tokens from authentication service
 private String getAuthToken(String login,String password) throws MalformedURLException, IOException, ProtocolException {
   // Authentication Service URI
   URL url = new URL("http://localhost:8086/api/authentication");
-		
+
   // AUthentication Request
   HttpURLConnection connection = (HttpURLConnection) url.openConnection();
   connection.setDoOutput(true);
   connection.setRequestMethod("POST");
   connection.setRequestProperty("Content-Type", "application/json");
-		
+
   String input = "{\"username\":\""+login+"\",\"password\":\""+password+"\"}";
   OutputStream os = connection.getOutputStream();
   os.write(input.getBytes());
   os.flush();
-		
+
   if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
     throw new RuntimeException("Failed : HTTP error code : "+ connection.getResponseCode());
   }
 
   connection.disconnect();
-		
+
   // A JWT Token is return in the Header of the response
   return connection.getHeaderField("Authorization");
 }
