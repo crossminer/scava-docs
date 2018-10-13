@@ -19,7 +19,7 @@ mongod --dbpath /data/db --port 27017
 
 ## Get the Code
 
-Get the latest version of the code, and checkout the `dev` branch (please don't commit to the `master` branch: see [[Developer Guidelines|developer-guidelines]]):
+Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../development/Development-Guidelines):
 
 If you are using __Linux / OS X__:
 ````Shell
@@ -54,7 +54,7 @@ Open `org.ossmeter.platform.osgi/ossmeterfromfeature.product`
     * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
   * To get a full platform running, first launch a master thread, then a slave, and finally the API server.
 
-If you are developing code for the Scava platform, be sure to check out the [[Developer Guidelines|developer-guidelines]].
+If you are developing code for the Scava platform, be sure to check out the [[Development Guidelines|../development/Development-Guidelines]].
 
 ## Run the api-gateway
 

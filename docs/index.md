@@ -11,7 +11,7 @@ Useful links:
 ## Platform installation
 
 * [Docker-Ossmeter](deploy/Docker-Ossmeter) How to build and run the Ossmeter docker image.
-* [Running the platform](deploy/Running-the-platform) Quick start guide to get the Scava platform running from source on an Eclipse developement environment.
+* [Running the platform](deploy/Running-the-platform) Quick start guide to get the Scava platform running from source on an Eclipse development environment.
 * [Configuring the platform](deploy/Platform-configuration) Quick start guide to present how to configure the platform using a configuration file.
 
 ## Administration
@@ -34,4 +34,4 @@ Useful links:
 ## Architecture
 
 * [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allow to access to all Scava REST servicies using a centralised and securised common gateway.
-* [Authentication Component](architecture/Authentication-Component) The SCAVA administration dashboard take care of managing Scava's services.
+* [Authentication Component](architecture/Authentication-Component) The administration dashboard takes care of managing Scava's services.

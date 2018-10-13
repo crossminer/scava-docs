@@ -7,7 +7,7 @@ This guideline describes general way of consuming REST services of Scava. Its ba
 
 ## REST API Reference
 
-The reference guide presenting all REST services implemented by Scava is available [[right here |Developement Guidelignes]].
+The reference guide presenting all REST services implemented by Scava is available [[right here |Development Guidelignes]].
 
 ## API Gateway
 
