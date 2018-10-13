@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Access to MongoDB database using PONGO - Eclipse Scava</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Access to MongoDB database using PONGO";
+    var mkdocs_page_input_path = "admin/Access-to-MongoDB-database-using-PONGO.md";
+    var mkdocs_page_url = "/admin/Access-to-MongoDB-database-using-PONGO/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Admin</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../API-Gateway-Configuration/">API Gateway Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Access to MongoDB database using PONGO</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#when-to-use">When to use ?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#context">Context</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#you-want-to-access-to-mongodb-document-from-an-eclipse-plugin">You want to access to MongoDB Document from an Eclipse Plugin ?</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-add-a-dependency-to-the-java-data-model">1. Add a dependency to the Java Data Model</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-initiate-a-connection-to-the-mongodb">2. Initiate a Connection to the MongoDb</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#you-want-to-access-to-mongodb-document-on-from-an-external-java-application">You want to access to MongoDB Document on from an External Java Application ?</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-add-a-dependency-to-the-java-data-model_1">1. Add a dependency to the Java Data Model</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-initiate-a-connection-to-mongodb">2. Initiate a Connection to MongoDb</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#basic-crud-with-a-pongo-java-data-model">Basic CRUD with a PONGO Java data model</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-create">1. CREATE</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-read">2. READ</a></li>
+                
+                    <li><a class="toctree-l4" href="#3-update">3. UPDATE</a></li>
+                
+                    <li><a class="toctree-l4" href="#4-delete">4. DELETE</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#comment">Comment</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../SCAVA-Administration/">SCAVA Administration</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/API-Gateway-Component/">API Gateway Component</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deploy</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Admin &raquo;</li>
+        
+      
+    
+    <li>Access to MongoDB database using PONGO</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="when-to-use">When to use ?</h2>
+<p>This guideline present how to the CROSSMINER Platform can access to his data stored in a MongoDb data base. The guideline describe how to create a connection to the MongoDb database and how to perform CRUD operation on platform datas.</p>
+<h2 id="context">Context</h2>
+<p>The CROSSMINER platform use a MongoDb data base to store his data. We go through <strong>PONGO</strong>, a template based <em>Java POJO generator</em> to access <strong>MongoDB</strong> database. With Pongo we can define the data model which generates strongly-typed Java classes.</p>
+<p>In this guideligne, we will present  : 
+<em> The access to MongoDb Document on from aneclipse plugin integrate to the CROSSMINER platform.
+</em> The access to MongoDb Document on from an external Java application.
+* How to preform basic CRUD operation with a PONGO Java data model.</p>
+<p>We consider that the PONGO Java data model already exist. If it's not the case , please refer the fooling guideline to create the data model : https://github.com/crossminer/crossminer/wiki/Extend-MongoDB-Data-Model</p>
+<h2 id="you-want-to-access-to-mongodb-document-from-an-eclipse-plugin">You want to access to MongoDB Document from an Eclipse Plugin ?</h2>
+<h3 id="1-add-a-dependency-to-the-java-data-model">1. Add a dependency to the Java Data Model</h3>
+<ul>
+<li>Edit the plugin.xml file of your plugin.</li>
+<li>In Dependency section, add a dependency to  the plugin which contained the data model you went to access.</li>
+<li>To <strong>org.ossmeter.repository.model</strong> to access data related to project administration , metric execution process and authentification system.</li>
+<li>To <strong>org.ossmeter.repository.model.'project delta manager'</strong> to access  configuration informations related to source codes managemeny tools.</li>
+<li>To  <strong>specific metric provider plugins</strong>  to access data related to a specific metric provider implementation contains his once data model.</li>
+<li>... others plugin which contained the data model</li>
+<li>In Dependency section, add a dependency to <strong>com.googlecode.pongo.runtime</strong> plugin</li>
+</ul>
+<p><a href="http://ibb.co/kEi236"><img src="http://preview.ibb.co/ccjWwR/Pongo_dependency_addition.png" alt="Pongo dependency addition" border="0" /></a></p>
+<h3 id="2-initiate-a-connection-to-the-mongodb">2. Initiate a Connection to the MongoDb</h3>
+<p>In context of the CROSSMINER platform, a Configuration service allow you to initiate a connection whit the mongoDb data base.</p>
+<ul>
+<li>In Dependency section of plugin.xml file , add a dependency to the <strong>org.ossmeter.platform</strong> plugin.</li>
+<li>You can now create a new connection to the database using the Configuration service.</li>
+</ul>
+<pre><code class="java">Mongo mongo = Configuration.getInstance().getMongoConnection(); 
+</code></pre>
+
+<h2 id="you-want-to-access-to-mongodb-document-on-from-an-external-java-application">You want to access to MongoDB Document on from an External Java Application ?</h2>
+<h3 id="1-add-a-dependency-to-the-java-data-model_1">1. Add a dependency to the Java Data Model</h3>
+<ul>
+<li>Add to your java project a dependency to the jar which contained  the data model you went to access. You will have to deliver this jar with your application.</li>
+</ul>
+<p><a href="http://imgbb.com/"><img src="http://image.ibb.co/kqmriG/MongoJAr.png" alt="MongoJAr" border="0" /></a></p>
+<ul>
+<li>Add o your java project a dependency to the <strong>pongo.jar</strong> jar file which can be download at this url : https://github.com/kolovos/pongo/releases</li>
+</ul>
+<h3 id="2-initiate-a-connection-to-mongodb">2. Initiate a Connection to MongoDb</h3>
+<pre><code class="java">// Define ServerAddress of the MongoDb database
+List&lt;ServerAddress&gt; mongoHostAddresses = new ArrayList&lt;&gt;();
+mongoHostAddresses.add(new ServerAddress(s[0], Integer.valueOf(s[1])));
+
+// Create Connection
+Mongo mongo = new Mongo(mongoHostAddresses);
+</code></pre>
+
+<p>Once the connection to MongoDb has been created, you have to make the link  between the PONGO Java model and the database. On a MongoDb Server, data are organize by database. You need to know the name of the database to link the Java model with the MongoDb document.</p>
+<pre><code class="java">DB db =  mongo.getDB(&quot;databasename&quot;);
+
+// Initiate the Project Java model
+ProjectRepository = new ProjectRepository(db);
+</code></pre>
+
+<h2 id="basic-crud-with-a-pongo-java-data-model">Basic CRUD with a PONGO Java data model</h2>
+<h3 id="1-create">1. CREATE</h3>
+<pre><code class="java">// Connect the Data model to the database
+DB db =  mongo.getDB(&quot;databasename&quot;);
+MetricProvider metricprovider = new MetricProvider(db);
+
+// Used accessors to intialise the object
+metricprovider.setName(&quot;Metric1&quot;).
+......
+
+// Create the Document
+metricprovider.sync(true);
+</code></pre>
+
+<h3 id="2-read">2. READ</h3>
+<pre><code class="java">// Connect the Data model to the database
+DB db =  mongo.getDB(&quot;databasename&quot;);
+MetricProvider metricprovider = new MetricProvider(db);
+
+// Used accessors to access object properties
+metricprovider.getname();
+......
+</code></pre>
+
+<h3 id="3-update">3. UPDATE</h3>
+<pre><code class="java">// Connect the Data model to the database
+DB db =  mongo.getDB(&quot;databasename&quot;);
+MetricProvider metricprovider = new MetricProvider(db);
+
+// Used accessors to intialise the object
+metricprovider.setName(&quot;Metric1&quot;).
+......
+
+// Create the Document
+metricprovider.sync(true);
+</code></pre>
+
+<h3 id="4-delete">4. DELETE</h3>
+<p>Mongo mongo = new Mongo();
+mongo.dropDatabase("databasename");</p>
+<h2 id="comment">Comment</h2>
+<p>This wiki has dealt with the access of MongoDB database using PONGO. To continue learning how to modify and make a new model with Pongo, we have another page here <a href="https://github.com/crossminer/crossminer/wiki/Extend-MongoDB-Data-Model">link</a> . </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Extend-MongoDB-Data-Model/" class="btn btn-neutral float-right" title="Extend MongoDB Data Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../API-Gateway-Configuration/" class="btn btn-neutral" title="API Gateway Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../API-Gateway-Configuration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Extend-MongoDB-Data-Model/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

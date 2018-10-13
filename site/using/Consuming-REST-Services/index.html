@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Consuming REST Services - Eclipse Scava</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Consuming REST Services";
+    var mkdocs_page_input_path = "using/Consuming-REST-Services.md";
+    var mkdocs_page_url = "/using/Consuming-REST-Services/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Admin</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/API-Gateway-Component/">API Gateway Component</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deploy</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Consuming REST Services</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#consuming-rest-services">Consuming REST services</a></li>
+                
+                    <li><a class="toctree-l4" href="#when-to-use">When to use ?</a></li>
+                
+                    <li><a class="toctree-l4" href="#rest-api-reference">REST API Reference</a></li>
+                
+                    <li><a class="toctree-l4" href="#api-gateway">API Gateway</a></li>
+                
+                    <li><a class="toctree-l4" href="#platform-authentication">Platform Authentication</a></li>
+                
+                    <li><a class="toctree-l4" href="#service-consumption">Service Consumption</a></li>
+                
+                    <li><a class="toctree-l4" href="#comment">Comment</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using &raquo;</li>
+        
+      
+    
+    <li>Consuming REST Services</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="consuming-rest-services">Consuming REST services</h1>
+<h2 id="when-to-use">When to use ?</h2>
+<p>This guideline describes general way of consuming REST services of CROSSMINER. Its basically for the use of CROSSMINER rest APIs in other tools/applications.</p>
+<h2 id="rest-api-reference">REST API Reference</h2>
+<p>The reference guide presenting all REST services implemented by CROSSMINER is available [[right here |Developement Guidelignes]].</p>
+<h2 id="api-gateway">API Gateway</h2>
+<p>The CROSSMINER integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the CROSSMINER API Gateway.</p>
+<p><strong>All web service request form clients have to go through the gateway.</strong></p>
+<p><img src="https://zupimages.net/up/18/07/k2wp.png" width="800"></p>
+<p>The api gateway is in charge to redirect the client request to the right service provider. The gateway also manage authentication mechanism for all services provided by the integrated platform.</p>
+<h2 id="platform-authentication">Platform Authentication</h2>
+<p>The CROSSMIER API Gateway is secruized using JSON Web Tokens (JWT https://jwt.io).
+1. To obtain an access to a specific service, the client must authenticate with the authentication service.If the authentication success,he recived a web token that should be include in the header of all of his future requests.
+1. When the client request a specific service, the api gateway valivate the token from the authentication  service. If the token is valide, the api gateway transmite the request to the related service.</p>
+<p><strong>Authentication in Java</strong></p>
+<p>Retrieve a Web Tokens from authentication service</p>
+<pre><code class="java">private String getAuthToken(String login,String password) throws MalformedURLException, IOException, ProtocolException {
+  // Authentication Service URI
+  URL url = new URL(&quot;http://localhost:8086/api/authentication&quot;);
+
+  // AUthentication Request
+  HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+  connection.setDoOutput(true);
+  connection.setRequestMethod(&quot;POST&quot;);
+  connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json&quot;);
+
+  String input = &quot;{\&quot;username\&quot;:\&quot;&quot;+login+&quot;\&quot;,\&quot;password\&quot;:\&quot;&quot;+password+&quot;\&quot;}&quot;;
+  OutputStream os = connection.getOutputStream();
+  os.write(input.getBytes());
+  os.flush();
+
+  if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
+    throw new RuntimeException(&quot;Failed : HTTP error code : &quot;+ connection.getResponseCode());
+  }
+
+  connection.disconnect();
+
+  // A JWT Token is return in the Header of the response
+  return connection.getHeaderField(&quot;Authorization&quot;);
+}
+</code></pre>
+
+<p><strong>REST Service Call</strong></p>
+<pre><code>curl -d '{&quot;username&quot;:&quot;admin&quot;, &quot;password&quot;:&quot;admin&quot;}' -H &quot;Content-Type: application/json&quot; -X POST http://localhost:8086/api/authentication
+</code></pre>
+
+<h2 id="service-consumption">Service Consumption</h2>
+<p>To consume a REST service provided by the integrated platform, the client must include the Token in the header of his request.</p>
+<p>```java
+// Service URL
+URL url = new URL("http://localhost:8086/api/users");
+HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+connection.setRequestMethod("GET");</p>
+<p>// Add Token to the request header
+connection.setRequestProperty("Authorization",token);
+```</p>
+<h2 id="comment">Comment</h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../development/Testing-Guidelignes/" class="btn btn-neutral" title="Testing Guidelignes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../development/Testing-Guidelignes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>

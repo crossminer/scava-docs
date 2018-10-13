@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Docker Ossmeter - Eclipse Scava</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Docker Ossmeter";
+    var mkdocs_page_input_path = "deploy/Docker-Ossmeter.md";
+    var mkdocs_page_url = "/deploy/Docker-Ossmeter/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Admin</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/API-Gateway-Component/">API Gateway Component</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deploy</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Docker Ossmeter</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#running-the-ossmeter-docker-image">Running the Ossmeter docker image</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#building-the-ossmeter-docker-image">Building the Ossmeter docker image</a></li>
+                
+                    <li><a class="toctree-l4" href="#oss-platform">oss-platform</a></li>
+                
+                    <li><a class="toctree-l4" href="#oss-web">oss-web</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#continuous-integration">Continuous integration</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-the-platform/">Running the platform</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Deploy &raquo;</li>
+        
+      
+    
+    <li>Docker Ossmeter</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This page lists information about the Ossmeter docker image. It should be noted that the generated image uses the old <a href="https://github.com/ossmeter/ossmeter">Ossmeter binaries</a> and will not be updated -- all new development will go into the Crossminer repository.</p>
+<p>All images are stored on the <a href="https://hub.docker.com/u/crossminer/dashboard/">Crossminer Docker-hub account</a>.</p>
+<p>The Docker image is composed of 4 services: </p>
+<ul>
+<li>oss-web: corresponds to the service of OSSMETER platform website.</li>
+<li>oss-app: service running api server and the orchestrator of OSSMETER slave instances.</li>
+<li>oss-slave: service corresponding to the OSSMETER slaves responsible for the analysis of software projects. There can be several slaves serving the same master for load balancing.</li>
+<li>oss-db: service responsible for the the storage of OSSMETER data. Uses a MongoDB image.</li>
+</ul>
+<p>The database comes pre-populated with a project and a user. The loaded dump comes from <a href="https://github.com/md2manoppello/OSSMETER_DUMP">md2manoppello's repo</a>. Login information:</p>
+<ul>
+<li>user: demo@crossminer.org</li>
+<li>password: demo18</li>
+</ul>
+<p>Custom quality is in the user object (demo@crossminer.org) stored in the users collection of users db. It resembles the <a href="https://github.com/crossminer/crossminer/blob/dev/web/org-ossmeter-webapp/conf/quality/qualitymodel.json">demo quality model</a>.</p>
+<h2 id="running-the-ossmeter-docker-image">Running the Ossmeter docker image</h2>
+<p>The easiest way to build the full stack is to run the docker-compose file:</p>
+<pre><code>$ docker-compose up
+</code></pre>
+
+<p>This command will download the images and run them. The application is then available on <a href="http://localhost:9000">localhost:9000</a>.</p>
+<h2 id="building-the-ossmeter-docker-image">Building the Ossmeter docker image</h2>
+<p>Two containers actually need to be built. They can be built individually.</p>
+<h3 id="oss-platform">oss-platform</h3>
+<p>Build the image from the oss-platform directory:</p>
+<pre><code>$ docker build -t bbaldassari/ossmeter-platform .
+Sending build context to Docker daemon  3.072kB
+Step 1/5 : FROM openjdk:8-jdk
+</code></pre>
+
+<h3 id="oss-web">oss-web</h3>
+<p>Build the image from the oss-web directory:</p>
+<pre><code>$ docker build -t bbaldassari/ossmeter-web .
+Sending build context to Docker daemon  3.072kB
+Step 1/7 : FROM openjdk:8-jre-alpine
+</code></pre>
+
+<h2 id="continuous-integration">Continuous integration</h2>
+<p>We use Codefresh for the CI of our docker images. The latest demo instance of generated docker images can be found in the <code>#ci</code> channel in Slack.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Running-the-platform/" class="btn btn-neutral float-right" title="Running the platform">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../architecture/Authentication-Component/" class="btn btn-neutral" title="Authentication Component"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../architecture/Authentication-Component/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Running-the-platform/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

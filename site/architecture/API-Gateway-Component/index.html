@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>API Gateway Component - Eclipse Scava</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API Gateway Component";
+    var mkdocs_page_input_path = "architecture/API-Gateway-Component.md";
+    var mkdocs_page_url = "/architecture/API-Gateway-Component/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Admin</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">API Gateway Component</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#the-api-gateway-component">The API Gateway component</a></li>
+                
+                    <li><a class="toctree-l4" href="#api-gateway-architecture">API Gateway Architecture</a></li>
+                
+                    <li><a class="toctree-l4" href="#authentication-mechanism">Authentication Mechanism</a></li>
+                
+                    <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
+                
+                    <li><a class="toctree-l4" href="#api-gateway-configuration">API Gateway Configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#packaging-form-sources">Packaging Form Sources</a></li>
+                
+                    <li><a class="toctree-l4" href="#api-gateway-execution">API Gateway Execution</a></li>
+                
+                    <li><a class="toctree-l4" href="#client-implementation">Client Implementation</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Authentication-Component/">Authentication Component</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deploy</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Architecture &raquo;</li>
+        
+      
+    
+    <li>API Gateway Component</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-api-gateway-component">The API Gateway component</h1>
+<p>The CROSSMIER API Gateway :</p>
+<ul>
+<li>Provide a centralized access point to all web services implemented by the differents tools involved in the platform (DevOps Dashboard,Workflow Execution Engine,Knowledge Base,Metric Provider,Administration Application).</li>
+<li>Provide a centralized mechanisms to secuerize CROSSMINER web services and manage authentication  required to access to this services.</li>
+</ul>
+<h2 id="api-gateway-architecture">API Gateway Architecture</h2>
+<p>The API Gateway  is a pattern which come form microserivces echosystem. An API Gateway is a single point of entry (and control) for front end clients, which could be browser based or mobile. The client only has to know the URL of one server, and the backend can be refactored at will with no change.</p>
+<p>The API Gateway act as a revers web proxy in which can be integrated others functions like load balancing and authentication. In case of the CROSSMINER platform, the  API Gateway will manage the authentication for all services of the platform.  </p>
+<p><img src="https://zupimages.net/up/18/07/k2wp.png" width="800"></p>
+<h2 id="authentication-mechanism">Authentication Mechanism</h2>
+<h4 id="json-web-tokens">JSON Web Tokens</h4>
+<p>The CROSSMIER API Gateway is secruized using JSON Web Tokens (JWT) mechanism, an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.</p>
+<p>In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned and must be saved locally, instead of the traditional approach of creating a session in the server and returning a cookie.When the client request an access to a protected service ,the server's protected routes will check for a valid JWT in the Authorization header of the request, and if it's present, the user will be allowed to access protected resources. (More about JWT : https://jwt.io)</p>
+<p><img src="https://cdn.auth0.com/content/jwt/jwt-diagram.png" width="600"></p>
+<h4 id="authentication-architecture">Authentication Architecture</h4>
+<p>In CROSSMINER, the authentification service is a sub component of the Administration Application which centralise Right Management for the whole platform. As for the others services, the authentication service is accessed behind the API Gateway.</p>
+<p><img src="https://zupimages.net/up/18/07/y9nf.png" width="300"></p>
+<h4 id="authentication-flow">Authentication Flow</h4>
+<ol>
+<li>To obtain an access to a specific service, the client must authenticate with the authentication service.If the authentication success,he recived a web token that should be include in the header of all of his future requests.</li>
+<li>When the client request a specific service, the api gateway valivate the token from the authentication  service. If the token is valide, the api gateway transmite the request to the related service.</li>
+</ol>
+<p><img src="https://zupimages.net/up/18/07/4i2a.png" width="600"></p>
+<h2 id="implementation">Implementation</h2>
+<p>The implementation of the gateway is based on Zuul proxy, a component of the spring-cloud project, an extention ofthe spring framework dedicated to microservices architectures.</p>
+<p>https://projects.spring.io/spring-cloud/spring-cloud.html#_router_and_filter_zuul</p>
+<h2 id="api-gateway-configuration">API Gateway Configuration</h2>
+<p>The CROSSMINER Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the CROSSMINER Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
+<h3 id="server-configuration">Server Configuration</h3>
+<table>
+<tr><td><b>id : </b>server.port</td><td><b>default :</b> 8086</td></tr>
+<tr><td colspan="3">Port of the CORSSMINER API server. Each REST request sent to the gateway must be addressed to this port.</td></tr>
+</table>
+
+<h3 id="jwt-security-configuration">JWT Security Configuration</h3>
+<table>
+<tr><td><b>id : </b>apigateway.security.jwt.secret</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Private key pair which allow to sign jwt tokens using RSA.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>apigateway.security.jwt.url</td><td><b>default :</b> /login</td></tr>
+<tr><td colspan="3">URL Path of the authentication service.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>apigateway.security.jwt.expiration</td><td><b>default :</b> 86400 (24H)</td></tr>
+<tr><td colspan="3">Port of the CORSSMINER API server. Each request sent to the gateway must be addressed to this port.</td></tr>
+</table>
+
+<h3 id="routing-authentication-service-configuration">Routing : Authentication Service Configuration</h3>
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.path</td><td><b>default :</b> /api/authentication/**</td></tr>
+<tr><td colspan="3">Relative path of the authentication service.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.url</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">URL of the authentification server. Example :http://127.0.0.1:8081/ </td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.sensitiveHeaders</td><td><b>default :</b> Cookie,Set-Cookie</td></tr>
+<tr><td colspan="3">Specify a list of ignored headers as part of the route configuration which will be not leaking downstream into external servers.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.stripPrefix</td><td><b>default :</b> false</td></tr>
+<tr><td colspan="3">Switch off the stripping of the service-specific prefix from individual routes</td></tr>
+</table>
+
+<h3 id="routing-service-configuration">Routing : Service Configuration</h3>
+<table>
+<tr><td><b>id : </b>zuul.routes.**servicename**.path</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Relative path of the incoming service which will be redirected. Example : /test1/**</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.**servicename**.url</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Redirection URL of the route. Example : http://127.0.0.1:8082/test1</td></tr>
+</table>
+
+<h3 id="configuration-file-example">Configuration file example</h3>
+<pre><code>#API Gateway Port
+server.port=8086
+
+# JWT Configuration
+apigateway.security.jwt.secret=otherpeopledontknowit
+apigateway.security.jwt.url=/api/authentication
+apigateway.security.jwt.expiration=86400
+
+# Rooting Configuration : Authentication Service
+zuul.routes.auth-center.path=/api/authentication/**
+zuul.routes.auth-center.url=http://127.0.0.1:8081/
+zuul.routes.auth-center.sensitiveHeaders=Cookie,Set-Cookie
+zuul.routes.auth-center.stripPrefix=false
+
+
+# Rooting Configuration : Test1 Service
+zuul.routes.test1.path=/test1/**
+zuul.routes.test1.url=http://127.0.0.1:8082/test1
+
+# Rooting Configuration : Test2 Service
+zuul.routes.test2.path=/test2/**
+zuul.routes.test2.url=http://127.0.0.1:8083/test2
+</code></pre>
+
+<h3 id="control-access-api">Control access API</h3>
+<p>The CROSSMINER platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the CROSSMINER's APIS, including:
+<em> “ROLE_ADMIN”
+</em> “ROLE_PROJECT_MANAGER”
+* “ROLE_USER”</p>
+<p>By the way, The frontend SCAVA administration comes with a default “admin” who is mainly the admin user with all authorities access including “ROLE_ADMIN”, “ROLE_PROJECT_MANAGER” and “ROLE_USER” authorizations. His default password is “admin”.</p>
+<pre><code># Filtering private restApi
+
+scava.routes.config.adminAccessApi[0]=/api/users
+scava.routes.config.adminAccessApi[1]=/api/user/**
+
+scava.routes.config.projectManagerAccessApi[0]=/administration/projects/create
+scava.routes.config.projectManagerAccessApi[1]=/administration/projects/import
+scava.routes.config.projectManagerAccessApi[2]=/administration/analysis/**
+
+scava.routes.config.userAccessApi[0]=/administration/projects
+scava.routes.config.userAccessApi[1]=/administration/projects/p/**
+scava.routes.config.userAccessApi[2]=/api/users/**
+scava.routes.config.userAccessApi[3]=/api/account
+</code></pre>
+
+<h2 id="packaging-form-sources">Packaging Form Sources</h2>
+<p>Maven Packaging</p>
+<pre><code class="shell">mvn -Pprod install
+</code></pre>
+
+<h2 id="api-gateway-execution">API Gateway Execution</h2>
+<ol>
+<li>complete an put the "application.properties" configuration file in the execute directory.</li>
+<li>Execute the crossmeter-api-gateway-1.0.0.jar Jar.</li>
+</ol>
+<pre><code class="shell">java -jar scava-api-gateway-1.0.0.jar
+</code></pre>
+
+<h2 id="client-implementation">Client Implementation</h2>
+<table>
+<tr><td>[[How to consume a CROSSMINER REST services ? | Consuming REST Services]]</td></tr>
+<tr><td>This guideline is dedicated to clients which would like to used CORSSMINER REST Services.It adress authentication issues</td></tr>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Authentication-Component/" class="btn btn-neutral float-right" title="Authentication Component">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../admin/SCAVA-Administration/" class="btn btn-neutral" title="SCAVA Administration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../admin/SCAVA-Administration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Authentication-Component/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

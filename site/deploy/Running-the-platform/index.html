@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Running the platform - Eclipse Scava</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Running the platform";
+    var mkdocs_page_input_path = "deploy/Running-the-platform.md";
+    var mkdocs_page_url = "/deploy/Running-the-platform/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Admin</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/API-Gateway-Component/">API Gateway Component</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deploy</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Docker-Ossmeter/">Docker Ossmeter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Running the platform</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#running-the-platform">Running the platform</a></li>
+                
+                    <li><a class="toctree-l4" href="#start-mongodb">Start MongoDB</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-the-code">Get the Code</a></li>
+                
+                    <li><a class="toctree-l4" href="#setup-eclipse">Setup Eclipse</a></li>
+                
+                    <li><a class="toctree-l4" href="#validate-and-run-the-platform">Validate and Run the Platform</a></li>
+                
+                    <li><a class="toctree-l4" href="#run-the-api-gateway">Run the api-gateway</a></li>
+                
+                    <li><a class="toctree-l4" href="#run-the-authentication-service">Run the authentication service</a></li>
+                
+                    <li><a class="toctree-l4" href="#run-the-administration-dashboard">Run the administration dashboard</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Deploy &raquo;</li>
+        
+      
+    
+    <li>Running the platform</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="running-the-platform">Running the platform</h1>
+<p>This is a quick start guide to get the OSSMETER platform running from source.</p>
+<p>Although these instructions may apply to other versions of Eclipse, they were tested under Eclipse Neon.3 with plug-in development support (Eclipse IDE for RCP Developers package).</p>
+<p>A step-by-step video guide is also available at <a href="https://youtu.be/3Ry4KKfNdYg">https://youtu.be/3Ry4KKfNdYg</a></p>
+<h2 id="start-mongodb">Start MongoDB</h2>
+<p>You can download MongoDB from the <a href="http://www.mongodb.org/downloads">MongoDb website</a>.</p>
+<p>Instructions for starting mongo can be found in the MongoDB <a href="http://docs.mongodb.org/manual/">manual</a>. For example:</p>
+<pre><code class="Shell">mongod --dbpath /data/db --port 27017
+</code></pre>
+
+<h2 id="get-the-code">Get the Code</h2>
+<p>Get the latest version of the code, and checkout the <code>dev</code> branch (please don't commit to the <code>master</code> branch: see [[Developer Guidelines|developer-guidelines]]):</p>
+<p>If you are using <strong>Linux / OS X</strong>:</p>
+<pre><code class="Shell">git clone https://github.com/crossminer/scava.git scava
+cd scava
+git checkout dev
+</code></pre>
+
+<p>If you are using <strong>Windows</strong> you need to do things differently due to Windows' long file name limit. In the Git shell:</p>
+<pre><code class="Shell">mkdir scava
+cd scava
+git init
+git config core.longpaths true
+git add remote origin https://github.com/crossminer/scava.git 
+git fetch
+git checkout dev
+</code></pre>
+
+<h2 id="setup-eclipse">Setup Eclipse</h2>
+<p>Open Eclipse and import all projects from the top level directory of the CROSSMINER code (<code>File -&gt; Import -&gt; Existing projects into workspace</code>), and wait for all the projects to compile without errors.</p>
+<h2 id="validate-and-run-the-platform">Validate and Run the Platform</h2>
+<p>Open <code>org.ossmeter.platform.osgi/ossmeterfromfeature.product</code>
+  * Click the <code>Validate...</code> icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
+  * If things do not validate, there's something wrong -- get in touch :) Problems related to <code>org.eclipse.e4.core.di</code> aren't critical.
+  * Then, click the <code>Export an Eclipse product</code> on the left of the <code>Validate...</code> button. Uncheck the <code>Generate p2 repository</code> checkbox, select a destination directory and validate. After a while, the OSSMETER platform will be generated in the selected directory.
+  * The platform can then be run using the generated <code>eclipse</code> binary; it accepts the following arguments:
+    * <code>-apiServer</code>: Starts up the client API on localhost:8182
+    * <code>-worker ${id-worker}</code>: Spawns a thread that analyses registered projects
+  * To get a full platform running, first launch a master thread, then a slave, and finally the API server.</p>
+<p>If you are developing code for the CROSSMINER platform, be sure to check out the [[Developer Guidelines|developer-guidelines]].</p>
+<h2 id="run-the-api-gateway">Run the api-gateway</h2>
+<ul>
+<li>Right click on 
+<code>scava-api-gateway/src/main/java/org.eclipse.scava.apigateway/ApiGatewayApplication.java</code></li>
+<li>Then click on Run As -&gt; Java Application</li>
+</ul>
+<h2 id="run-the-authentication-service">Run the authentication service</h2>
+<ul>
+<li>Right click on 
+<code>scava-auth-service/src/main/java/org.eclipse.scava.authservice/AuthServiceApplication.java</code></li>
+<li>Then click on Run As -&gt; Java Application</li>
+</ul>
+<h2 id="run-the-administration-dashboard">Run the administration dashboard</h2>
+<p>Scava Administration is a single page web application based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: https://angular.io/guide/quickstart).</p>
+<p>The following instructions show how to run the dashboard web app:
+  * Enter the <code>administration/scava-administration/</code> directory within the scava repository.
+  * Run the web app on port 4200 using angular-cli: <code>ng serve</code>
+  * Navigate to <code>http://localhost:4200/</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../" class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Docker-Ossmeter/" class="btn btn-neutral" title="Docker Ossmeter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Docker-Ossmeter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
