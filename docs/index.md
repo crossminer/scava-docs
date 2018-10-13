@@ -16,11 +16,22 @@ Useful links:
 
 ## Administration
 
-* [Scava Administration](admin/SCAVA-Administration) The SCAVA administration dashboard take care of managing Scava's services.
+* [Scava Administration](admin/SCAVA-Administration) The administration dashboard take care of managing Scava's services.
+* [API Gateway Configuration](admin/API-Gateway-Configuration)
 * [Extending MongoDB Data Model](admin/Extend-MongoDB-Data-Model)
-* [API Gateway Configuration](API-Gateway-Configuration)
 
-## Architectures
+## Users
+
+* [Consuming the REST services](users/Consuming-REST-services) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues
+* [REST API Documentation](users/REST-API-Documentation) Reference documentation of REST services provided by the Scava platform.
+* [REST API Generation](users/REST-API-Generation) Tutorial about automatic generation of REST API Scava library using OpenAPI.
+
+## Development
+
+* [Development Guidelines](development/Development-Guidelines) Collection of Architectural and Technical guidelines dedicated to CROSSMINERS developers.
+* [Testing Guidelines](development/Testing-Guidelines) Collection of testing guidelines dedicated to CROSSMINERS developers.
+
+## Architecture
 
 * [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allow to access to all CROSSMINER REST servicies using a centralised and securised common gateway.
 * [Authentication Component](architecture/Authentication-Component) The SCAVA administration dashboard take care of managing CROSSMINER's services.
