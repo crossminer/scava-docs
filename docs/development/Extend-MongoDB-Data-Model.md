@@ -3,11 +3,11 @@
 
 ## When to use ?
 
-In this guideline, we describe ways to extend the CROSSMINER data model with the existing architecture of CROSSMINER. These guidelines are needed to keep order  the data layer of CROSSMINER platform during the evolution.
+In this guideline, we describe ways to extend the Scava data model with the existing architecture of Scava. These guidelines are needed to keep order  the data layer of Scava platform during the evolution.
 
 ## Context
 
-The CROSSMINER platform use MongoBb as database. The access to the database is managed using the Pongo , a framework which manage the mapping between MongoDb documents and Java class.
+The Scava platform use MongoBb as database. The access to the database is managed using the Pongo , a framework which manage the mapping between MongoDb documents and Java class.
 
 Each MongoDb document is mapped on a Java class which which extend the Pongo class.This Java class are generated form an emf file which describe the data model.
 
@@ -91,7 +91,7 @@ In this case, we invite you to create a new plugin which will contain your data 
 
 * Create a new Eclipse Plug-In Project (
   - In Eclipse Toolbar : File > New > Plug-In Project
-  - Name of the project : org.crossminer.**mycomponent**.repository.model
+  - Name of the project : org.scava.**mycomponent**.repository.model
   - Disable the generation of an Activator Class / contribution to the ui
 * Edit the MANIFEST.MF file
   - In Dependency : add a dependency to the **org.eclipse.core.runtime** plugin
@@ -99,12 +99,12 @@ In this case, we invite you to create a new plugin which will contain your data 
   - In Dependency : add a dependency to the **org.apache.commons.lang3** plugin
   - In Extentions : reference an extension point named **com.googlecode.pongo.runtime.osgi**
 * In source directory
-  - Create a package named org.crossminer.**mycomponent**.repository.model
+  - Create a package named org.scava.**mycomponent**.repository.model
   - In this package create an emf file named **mycomponent.emf**
 
 A presented previously, the Pongo Java class are generated form and EMF file which describe the data model.Define your data model in this file :
 
-```package org.crossminer.mycomponent.repository.model;
+```package org.scava.mycomponent.repository.model;
 
 @db
 class MyComponent {
@@ -118,14 +118,14 @@ You can find more information about the data model description syntax at this ur
 
 * Download the Pongo tool : https://github.com/kolovos/pongo/releases
 * Run the Pongo generator from the command line as follows: **java -jar pongo.jar  youremffile.emf**
-* Add this class in your org.crossminer.**mycomponent**.repository.model package
+* Add this class in your org.scava.**mycomponent**.repository.model package
 
 More information about Pongo  : https://github.com/kolovos/pongo/wiki
 
 
 ## Comment
 
-Here we learnt ways to modify model in the Crossminer platform. To know more about the access of data with the Pongo APIs [link here](https://github.com/crossminer/crossminer/wiki/Access-to-MongoDB-database-using-PONGO) .
+Here we learnt ways to modify model in the Scava platform. To know more about the access of data with the Pongo APIs [link here](../admin/Access-to-MongoDB-database-using-PONGO).
 
 
 

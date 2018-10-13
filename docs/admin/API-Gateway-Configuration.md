@@ -3,13 +3,11 @@
 
 ## When to use this guideline ?
 
-This guideline presents how to configure the CROSSMINER Gateway in order to integrate a new remote REST API.
+This guideline presents how to configure the Scava Gateway in order to integrate a new remote REST API.
 
 ## Context 
 
-
-The CROSSMINER Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the CROSSMINER Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.
-
+The Scava Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the Scava Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.
 
 ### Routing : Service Configuration
 
@@ -21,9 +19,6 @@ Examples :
 * url = http://85.36.10.12:8082/administration
 
 The request http://85.36.10.13:8080/administration/project/create will be redirected to http://85.36.10.12:8082/administration/project/create
-
-
-
 
 <table>
 <tr><td><b>id : </b>zuul.routes.**servicename**.path</td><td><b>default :</b> NA</td></tr>
@@ -49,4 +44,4 @@ zuul.routes.test2.url=http://127.0.0.1:8083/test2
 
 ## Comments
 
-More information about API Gateway configuration : [[API Gateway Component]]
+More information about API Gateway configuration: [API Gateway Component](../architecture/API-Gateway-Component)

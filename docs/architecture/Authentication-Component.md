@@ -1,14 +1,14 @@
 
 # Authentication Component
 
-The CROSSMINER Authentication service:
+The Scava Authentication service:
 
-* Provides a centralized mechanisms to securize CROSSMINER's components and manage authentication for all services of the platform.
+* Provides a centralized mechanisms to securize Scava's components and manage authentication for all services of the platform.
 * Provides user management services, including user registration process, user profile editing and roles based authorization management.
 
 ## Authentication API
 
-The Authentication server is a component of The CROSSMINER platform which manages the authentication for all  services accessible behind the API Gateway.
+The Authentication server is a component of The Scava platform which manages the authentication for all  services accessible behind the API Gateway.
 
 <table>
 <tr><td>Authenticate User</td><td>POST</td><td>/api/authentication</td></tr>
@@ -35,7 +35,7 @@ curl -i -X POST -H "Content-Type:application/json" http://localhost:8086/api/aut
 
 <a href="https://ibb.co/jifgKJ"><img src="https://preview.ibb.co/nf8qDd/Screenshot_from_2018_07_17_16_55_23.png" alt="Screenshot_from_2018_07_17_16_55_23" border="0"></a>
 
-* The generated token will be used by injecting it inside the HTTP Request Authorization Header to get access to the different CROSSMINER's components behind the API Gateway.
+* The generated token will be used by injecting it inside the HTTP Request Authorization Header to get access to the different Scava's components behind the API Gateway.
 ````
 curl -i -X GET -H "Content-Type:application/json" -H "Authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1BST0pFQ1RfTUFOQUdFUiIsIlJPTEVfVVNFUiJdLCJpYXQiOjE1MzE4OTk3NDMsImV4cCI6MTUzMTk4NjE0M30.l-iCJcnae-1mlhMb3_y09HM4HZYFaHxe_JctWi2FRUY" http://localhost:8086/api/users
 ````
@@ -106,6 +106,7 @@ spring.data.mongodb.uri|Url of the MongoDB database server|mongodb://localhost:2
 spring.data.mongodb.database|Name of the MongoDB database|scava
 
 ### Mail Server configuration
+
 In order to register new users, you have to configure a mail server.
 
 Property| Description | Default Value

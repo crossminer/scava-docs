@@ -1,24 +1,26 @@
 
 # The API Gateway component
 
-The CROSSMIER API Gateway :
+The Scava API Gateway :
 
-* Provide a centralized access point to all web services implemented by the differents tools involved in the platform (DevOps Dashboard,Workflow Execution Engine,Knowledge Base,Metric Provider,Administration Application).
-* Provide a centralized mechanisms to secuerize CROSSMINER web services and manage authentication  required to access to this services.
+* Provide a centralized access point to all web services implemented by the differents tools involved in the platform (DevOps Dashboard, Workflow Execution Engine, Knowledge Base, Metric Provider, Administration Application).
+* Provide a centralized mechanisms to secuerize Scava web services and manage authentication  required to access to this services.
 
 ## API Gateway Architecture
 
 The API Gateway  is a pattern which come form microserivces echosystem. An API Gateway is a single point of entry (and control) for front end clients, which could be browser based or mobile. The client only has to know the URL of one server, and the backend can be refactored at will with no change.
 
-The API Gateway act as a revers web proxy in which can be integrated others functions like load balancing and authentication. In case of the CROSSMINER platform, the  API Gateway will manage the authentication for all services of the platform.  
+The API Gateway act as a revers web proxy in which can be integrated others functions like load balancing and authentication. In case of the Scava platform, the  API Gateway will manage the authentication for all services of the platform.  
 
 <img src="https://zupimages.net/up/18/07/k2wp.png" width="800">
 
 
 
 ## Authentication Mechanism
+
 #### JSON Web Tokens
-The CROSSMIER API Gateway is secruized using JSON Web Tokens (JWT) mechanism, an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
+
+The Scava API Gateway is secruized using JSON Web Tokens (JWT) mechanism, an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
 
 In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned and must be saved locally, instead of the traditional approach of creating a session in the server and returning a cookie.When the client request an access to a protected service ,the server's protected routes will check for a valid JWT in the Authorization header of the request, and if it's present, the user will be allowed to access protected resources. (More about JWT : https://jwt.io)
 
@@ -26,7 +28,8 @@ In authentication, when the user successfully logs in using their credentials, a
 <img src="https://cdn.auth0.com/content/jwt/jwt-diagram.png" width="600">
 
 #### Authentication Architecture
-In CROSSMINER, the authentification service is a sub component of the Administration Application which centralise Right Management for the whole platform. As for the others services, the authentication service is accessed behind the API Gateway.
+
+In Scava, the authentification service is a sub component of the Administration Application which centralise Right Management for the whole platform. As for the others services, the authentication service is accessed behind the API Gateway.
 
 <img src="https://zupimages.net/up/18/07/y9nf.png" width="300">
 
@@ -44,7 +47,7 @@ https://projects.spring.io/spring-cloud/spring-cloud.html#_router_and_filter_zuu
 
 ## API Gateway Configuration
 
-The CROSSMINER Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the CROSSMINER Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.
+The Scava Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the Scava Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.
 
 ### Server Configuration
 
@@ -133,7 +136,7 @@ zuul.routes.test2.url=http://127.0.0.1:8083/test2
 
 ### Control access API
 
-The CROSSMINER platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the CROSSMINER's APIS, including:
+The Scava platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the Scava's APIS, including:
 * “ROLE_ADMIN”
 * “ROLE_PROJECT_MANAGER”
 * “ROLE_USER”
@@ -173,5 +176,5 @@ java -jar scava-api-gateway-1.0.0.jar
 
 ## Client Implementation
 
-[How to consume a CROSSMINER REST services ?](../users/Consuming-REST-Services) \
+[How to consume a Scava REST services ?](../users/Consuming-REST-Services) \
 This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.

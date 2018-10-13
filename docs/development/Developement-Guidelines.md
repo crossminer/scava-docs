@@ -1,75 +1,35 @@
-# INTEGRATION GUIDELIGNES
 
-<table>
-<tr><td>[[SCAVA Repository Organisation |CROSSMINER Repository Organisation ]]</td></tr>
-<tr><td>Guideline describing how the SCAVA code repository is organised and how to add a new component in this repository</td></tr>
-</table>
+# Development Guidelines
 
-<table>
-<tr><td>[[How to name SCAVA components ? |CROSSMINER Component Naming]]</td></tr>
-<tr><td>Guideline describing naming constraints for a new scava component (component name  / java namespace / maven artefact id and group id...)</td></tr>
-</table>
+## Subcategories
 
-<table>
-<tr><td>[[How to name SCAVA REST services ? |Naming CORSSMINER REST Services]]</td></tr>
-<tr><td>This guideline provide naming rules for each REST services routes implemented by the SCAVA platform.</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to manage  Licensing ? |CROSSMINER Licensing]]</td></tr>
-<tr><td>Guideline describing licensing requirements for SCAVA components.</td></tr>
-</table>
+* [SCAVA Repository Organisation](Repository-Organisation) Guideline describing how the SCAVA code repository is organised and how to add a new component in this repository.
+* [How to name SCAVA components?](Component-Naming) Guideline describing naming constraints for a new scava component (component name, java namespace, maven artefact id and group id, etc.
+* [How to name SCAVA REST services?](Naming-Scava-REST-Services) This guideline provide naming rules for each REST services routes implemented by the SCAVA platform.
+* [How to manage  Licensing](Licensing) Guideline describing licensing requirements for SCAVA components.
 
 
-# TECHNICAL GUIDELIGNES
-
-
+## Technical Guidelines
 
 ### REST API
-**Each implemented REST services must be documented : [[REST API DOCUMENTATION |REST API Documentation]]** 
 
+**Each implemented REST services must be documented : [[REST API DOCUMENTATION |REST API Documentation]]**
 
-
-<table>
-<tr><td>[[How to configure the SCAVA Gateway in order to integrate a new  REST service ? |API Gateway Configuration]]</td></tr>
-<tr><td>Customers access SCAVA services through the SCAVA API Gateway. This guideline present how to configure the API Gateway to integrate new  remote service provider. </td></tr>
-</table>
-
-<table>
-<tr><td>[[How to consume a SCAVA REST services ? | Consuming REST Services]]</td></tr>
-<tr><td>This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to implement Restlet services ? |Implementing Restlet Service]]</td></tr>
-<tr><td> Guideline which describe how to integrate and implement a REST service in SCAVA platform using the RESTLET framework.</td></tr>
-</table>
+* [How to configure the SCAVA Gateway in order to integrate a new  REST service](../admin/API-Gateway-Configuration) Customers access SCAVA services through the SCAVA API Gateway. This guideline present how to configure the API Gateway to integrate new  remote service provider.
+* [How to consume a SCAVA REST services](../users/Consuming-REST-Services) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues.
+* [How to implement Restlet services](Implementing-Restlet-Service) Guideline which describe how to integrate and implement a REST service in SCAVA platform using the RESTLET framework.
 
 ### DATA ACCESS
 
-<table>
-<tr><td>[[How to access MongoDB database using PONGO ? |Access to MongoDB database using PONGO]]</td></tr>
-<tr><td>Guideline which describe how to the access to MongoDB database using the  PONGO framework. </td></tr>
-</table>
-<table>
+* [How to access MongoDB database using PONGO](../admin/Access to MongoDB database using PONGO) Guideline which describe how to the access to MongoDB database using the  PONGO framework.
 
-<tr><td>[[How to extend the SCAVA data model ? |Extend MongoDB Data Model ]]</td></tr>
-<tr><td>Guideline  which describe ways to extend the SCAVA Data Model, stored in a MongoDb database and based on the PONGO framework</td></tr>
-</table>
-
+* [How to extend the SCAVA data model](Extend-MongoDB-Data-Model) Guideline  which describe ways to extend the SCAVA Data Model, stored in a MongoDb database and based on the PONGO framework.
 
 ### OSGI
 
-<table>
-<tr><td>[[How to integrate OSGI service plugin in SCAVA Architecture? | OSGI Component Integration]]</td></tr>
-<tr><td>Todo</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to communicate between OSGI plugin using JMS ? |OSGI Plugin Communication]]</td></tr>
-<tr><td>Todo</td></tr>
-</table>
+* [How to integrate OSGI service plugin in SCAVA Architecture](OSGI Component Integration) Todo
+* [How to communicate between OSGI plugin using JMS](OSGI Plugin Communication) Todo
 
 ### TEMPLATE
-* [[Guideline Template|Guideline Main Heading]]
 
+* [[Guideline Template|Guideline Main Heading]]

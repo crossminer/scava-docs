@@ -2,14 +2,16 @@
 # Consuming REST services
 
 ## When to use ?
-This guideline describes general way of consuming REST services of CROSSMINER. Its basically for the use of CROSSMINER rest APIs in other tools/applications.
+
+This guideline describes general way of consuming REST services of Scava. Its basically for the use of Scava rest APIs in other tools/applications.
 
 ## REST API Reference
-The reference guide presenting all REST services implemented by CROSSMINER is available [[right here |Developement Guidelignes]].
+
+The reference guide presenting all REST services implemented by Scava is available [[right here |Developement Guidelignes]].
 
 ## API Gateway
 
-The CROSSMINER integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the CROSSMINER API Gateway.
+The Scava integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the Scava API Gateway.
 
 **All web service request form clients have to go through the gateway.**
 

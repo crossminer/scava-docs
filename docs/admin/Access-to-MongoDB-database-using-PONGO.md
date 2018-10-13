@@ -1,21 +1,22 @@
 ## When to use ?
 
-This guideline present how to the CROSSMINER Platform can access to his data stored in a MongoDb data base. The guideline describe how to create a connection to the MongoDb database and how to perform CRUD operation on platform datas.
+This guideline present How to the Scava Platform can access to his data stored in a MongoDb data base. The guideline describe how to create a connection to the MongoDb database and how to perform CRUD operation on platform datas.
 
 ## Context
 
-The CROSSMINER platform use a MongoDb data base to store his data. We go through **PONGO**, a template based _Java POJO generator_ to access **MongoDB** database. With Pongo we can define the data model which generates strongly-typed Java classes.
+The Scava platform use a MongoDb data base to store his data. We go through **PONGO**, a template based _Java POJO generator_ to access **MongoDB** database. With Pongo we can define the data model which generates strongly-typed Java classes.
 
 In this guideligne, we will present  : 
-* The access to MongoDb Document on from aneclipse plugin integrate to the CROSSMINER platform.
+* The access to MongoDb Document on from aneclipse plugin integrate to the Scava platform.
 * The access to MongoDb Document on from an external Java application.
 * How to preform basic CRUD operation with a PONGO Java data model.
 
-We consider that the PONGO Java data model already exist. If it's not the case , please refer the fooling guideline to create the data model : https://github.com/crossminer/crossminer/wiki/Extend-MongoDB-Data-Model
+We consider that the PONGO Java data model already exist. If it's not the case, please refer the following guideline to create the data model : [Extend MongoDB Data Model](../development/Extend-MongoDB-Data-Model).
 
 ## You want to access to MongoDB Document from an Eclipse Plugin ?
 
 ### 1. Add a dependency to the Java Data Model
+
 * Edit the plugin.xml file of your plugin.
 * In Dependency section, add a dependency to  the plugin which contained the data model you went to access.
   - To **org.ossmeter.repository.model** to access data related to project administration , metric execution process and authentification system.
@@ -28,7 +29,7 @@ We consider that the PONGO Java data model already exist. If it's not the case ,
 
 ### 2. Initiate a Connection to the MongoDb
 
-In context of the CROSSMINER platform, a Configuration service allow you to initiate a connection whit the mongoDb data base.
+In context of the Scava platform, a Configuration service allow you to initiate a connection whit the mongoDb data base.
 
 * In Dependency section of plugin.xml file , add a dependency to the **org.ossmeter.platform** plugin.
 * You can now create a new connection to the database using the Configuration service.
@@ -116,4 +117,5 @@ Mongo mongo = new Mongo();
 mongo.dropDatabase("databasename");
 
 ## Comment
-This wiki has dealt with the access of MongoDB database using PONGO. To continue learning how to modify and make a new model with Pongo, we have another page here [link](https://github.com/crossminer/crossminer/wiki/Extend-MongoDB-Data-Model) . 
+
+This wiki has dealt with the access of MongoDB database using PONGO. To continue learning how to modify and make a new model with Pongo, we have another page here [Extend MongoDB Data Model](../development/Extend-MongoDB-Data-Model). 

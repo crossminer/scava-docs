@@ -41,7 +41,7 @@ git checkout dev
 
 ## Setup Eclipse
 
-Open Eclipse and import all projects from the top level directory of the CROSSMINER code (`File -> Import -> Existing projects into workspace`), and wait for all the projects to compile without errors.
+Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Existing projects into workspace`), and wait for all the projects to compile without errors.
 
 ## Validate and Run the Platform
 
@@ -54,7 +54,7 @@ Open `org.ossmeter.platform.osgi/ossmeterfromfeature.product`
     * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
   * To get a full platform running, first launch a master thread, then a slave, and finally the API server.
 
-If you are developing code for the CROSSMINER platform, be sure to check out the [[Developer Guidelines|developer-guidelines]].
+If you are developing code for the Scava platform, be sure to check out the [[Developer Guidelines|developer-guidelines]].
 
 ## Run the api-gateway
 

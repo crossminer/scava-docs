@@ -2,30 +2,35 @@
 # Implementing RESTLET services 
 
 ## When to use this guideline ?
-This guideline present how to create a new REST service using the RESTLET framework in the CROSSMINER platform.
+
+This guideline present how to create a new REST service using the RESTLET framework in the Scava platform.
 
 ## Context
-CROSSMINER project manages REST services with the RESTLET framework.
+
+Scava project manages REST services with the RESTLET framework.
 
 The usage of Restlet framework  has been inherited from the OSSMETER platform. The RESTLET framework is integrated in the platform in a single OSGI plugin :
+
 * org.eclipse.crossmeter.platform.client.api.  
 
-The RESTLET framework used an embedded web server. In order to avoid to multiply the number of deployed web servers  , we plan to centralize all REST service implementation in the same plug-in.
+The RESTLET framework used an embedded web server. In order to avoid to multiply the number of deployed web servers, we plan to centralize all REST service implementation in the same plug-in.
 
 ## You want to access to create a new REST Service ?
 
 ### 1. Create a new Route
+
 To  register a new RESTLET service, the first step is to define the route (base url which allow to access to this service) and make the link between this route an the implementation of the service.
 
 #### Naming the Route
-The routes (Base URL) of services provided by the platform is normalize. Please refer to this guideline to know ho to define the route of the new service : [Naming-CROSSMINER-REST-Services.html](Naming-CROSSMINER-REST-Services.html)
+
+The routes (Base URL) of services provided by the platform is normalize. Please refer to this guideline to know ho to define the route of the new service : [Naming-Scava-REST-Services.html](Naming-Scava-REST-Services)
 
 #### Register the Route
 
-The `org.crossminer.platform.services` plug-in contained the class `PlatformRoute.java`  responsible for declaring routes.
+The `org.scava.platform.services` plug-in contained the class `PlatformRoute.java`  responsible for declaring routes.
 
 ```java
-package org.crossminer.platform.services;
+package org.scava.platform.services;
 import org.restlet.Application;
 import org.restlet.Restlet;
 import org.restlet.routing.Router;
@@ -60,7 +65,7 @@ A route can contained some parameters. In this case, parameters are identified b
 A service implementation is a Java class which extend the _ServerResource_ class provided by the RESTLET framework.
 To create a new service create a new Class :
 * Named "_ServiceName_" + Resource.  Ex : ProjectCreationResource.java
-* On a namespace based on the  route. Ex : org.crossminer.platform.services.administration for platform administration services.
+* On a namespace based on the  route. Ex : org.scava.platform.services.administration for platform administration services.
 * Who extend the org.restlet.resource.ServerResource class.
 
 #### GET Service

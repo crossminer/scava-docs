@@ -28,10 +28,10 @@ Useful links:
 
 ## Development
 
-* [Development Guidelines](development/Development-Guidelines) Collection of Architectural and Technical guidelines dedicated to CROSSMINERS developers.
-* [Testing Guidelines](development/Testing-Guidelines) Collection of testing guidelines dedicated to CROSSMINERS developers.
+* [Development Guidelines](development/Development-Guidelines) Collection of Architectural and Technical guidelines dedicated to Scava developers.
+* [Testing Guidelines](development/Testing-Guidelines) Collection of testing guidelines dedicated to Scava developers.
 
 ## Architecture
 
-* [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allow to access to all CROSSMINER REST servicies using a centralised and securised common gateway.
-* [Authentication Component](architecture/Authentication-Component) The SCAVA administration dashboard take care of managing CROSSMINER's services.
+* [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allow to access to all Scava REST servicies using a centralised and securised common gateway.
+* [Authentication Component](architecture/Authentication-Component) The SCAVA administration dashboard take care of managing Scava's services.
