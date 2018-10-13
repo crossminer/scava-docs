@@ -3,7 +3,7 @@
 
 This repository contains all the documentation pertaining to the [Eclipse Scava project](https://projects.eclipse.org/projects/technology.scava).
 
-[![Documentation Status](https://readthedocs.org/projects/scava-docs/badge/?version=master)](https://scava-docs.readthedocs.io/en/master/?badge=master)
+[![Documentation Status](https://readthedocs.org/projects/scava-docs/badge/?version=latest)](https://scava-docs.readthedocs.io/en/master/?badge=latest)
 
 The documentation system used for Scava relies on Markdown files, stored in the `docs/` directory.
 These can be converted to a full static web site using [mkdocs](https://www.mkdocs.org). The configured output directory for html files is `site/`, which can then be served directly by any web server.
