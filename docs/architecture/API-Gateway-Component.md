@@ -79,7 +79,7 @@ The CROSSMINER Gateway can be configured by the intermediary of an external prop
 </table>
 <table>
 <tr><td><b>id : </b>zuul.routes.auth-center.url</td><td><b>default :</b> NA</td></tr>
-<tr><td colspan="3">URL of the authentification server. Example :http://127.0.0.1:8081/ </td></tr>
+<tr><td colspan="3">URL of the authentification server. Example: http://127.0.0.1:8081/ </td></tr>
 </table>
 <table>
 <tr><td><b>id : </b>zuul.routes.auth-center.sensitiveHeaders</td><td><b>default :</b> Cookie,Set-Cookie</td></tr>
@@ -130,6 +130,7 @@ zuul.routes.test1.url=http://127.0.0.1:8082/test1
 zuul.routes.test2.path=/test2/**
 zuul.routes.test2.url=http://127.0.0.1:8083/test2
 ```
+
 ### Control access API
 
 The CROSSMINER platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the CROSSMINER's APIS, including:
@@ -156,20 +157,21 @@ scava.routes.config.userAccessApi[3]=/api/account
 ```
 
 ## Packaging Form Sources
+
 Maven Packaging
 ```shell
 mvn -Pprod install
 ```
 
 ## API Gateway Execution
+
 1. complete an put the "application.properties" configuration file in the execute directory.
 1. Execute the crossmeter-api-gateway-1.0.0.jar Jar.
 ```shell
 java -jar scava-api-gateway-1.0.0.jar
 ```
+
 ## Client Implementation
 
-<table><tr><td>
-[[How to consume a CROSSMINER REST services ?|../users/Consuming-REST-Services]]</td></tr>
-<tr><td>This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.</td></tr>
-</table>
+[How to consume a CROSSMINER REST services ?](../users/Consuming-REST-Services) \
+This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.

@@ -1,3 +1,4 @@
+
 # Running the platform
 
 This is a quick start guide to get the OSSMETER platform running from source.
@@ -7,6 +8,7 @@ Although these instructions may apply to other versions of Eclipse, they were te
 A step-by-step video guide is also available at [https://youtu.be/3Ry4KKfNdYg](https://youtu.be/3Ry4KKfNdYg)
 
 ## Start MongoDB
+
 You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downloads).
 
 Instructions for starting mongo can be found in the MongoDB [manual](http://docs.mongodb.org/manual/). For example:
@@ -16,6 +18,7 @@ mongod --dbpath /data/db --port 27017
 ````
 
 ## Get the Code
+
 Get the latest version of the code, and checkout the `dev` branch (please don't commit to the `master` branch: see [[Developer Guidelines|developer-guidelines]]):
 
 If you are using __Linux / OS X__:
@@ -31,15 +34,17 @@ mkdir scava
 cd scava
 git init
 git config core.longpaths true
-git add remote origin https://github.com/crossminer/scava.git 
+git add remote origin https://github.com/crossminer/scava.git
 git fetch
 git checkout dev
 ````
 
 ## Setup Eclipse
+
 Open Eclipse and import all projects from the top level directory of the CROSSMINER code (`File -> Import -> Existing projects into workspace`), and wait for all the projects to compile without errors.
 
 ## Validate and Run the Platform
+
 Open `org.ossmeter.platform.osgi/ossmeterfromfeature.product`
   * Click the `Validate...` icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
   * If things do not validate, there's something wrong -- get in touch :) Problems related to `org.eclipse.e4.core.di` aren't critical.
@@ -52,19 +57,24 @@ Open `org.ossmeter.platform.osgi/ossmeterfromfeature.product`
 If you are developing code for the CROSSMINER platform, be sure to check out the [[Developer Guidelines|developer-guidelines]].
 
 ## Run the api-gateway
-  * Right click on 
+
+  * Right click on
 `scava-api-gateway/src/main/java/org.eclipse.scava.apigateway/ApiGatewayApplication.java`
   * Then click on Run As -> Java Application
 
 ## Run the authentication service
-  * Right click on 
+
+  * Right click on
 `scava-auth-service/src/main/java/org.eclipse.scava.authservice/AuthServiceApplication.java`
   * Then click on Run As -> Java Application
 
 ## Run the administration dashboard
+
 Scava Administration is a single page web application based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: https://angular.io/guide/quickstart).
 
 The following instructions show how to run the dashboard web app:
   * Enter the `administration/scava-administration/` directory within the scava repository.
   * Run the web app on port 4200 using angular-cli: `ng serve`
   * Navigate to `http://localhost:4200/`
+
+  

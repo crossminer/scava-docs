@@ -1,11 +1,12 @@
 
-# MongoDB data model
+# Extending MongoDB data model
 
 ## When to use ?
 
 In this guideline, we describe ways to extend the CROSSMINER data model with the existing architecture of CROSSMINER. These guidelines are needed to keep order  the data layer of CROSSMINER platform during the evolution.
 
 ## Context
+
 The CROSSMINER platform use MongoBb as database. The access to the database is managed using the Pongo , a framework which manage the mapping between MongoDb documents and Java class.
 
 Each MongoDb document is mapped on a Java class which which extend the Pongo class.This Java class are generated form an emf file which describe the data model.
@@ -73,6 +74,7 @@ class ProjectError {
 You can find more information about the data model description syntax at this url : https://github.com/kolovos/pongo/wiki/Model-Design-Guidelines
 
 ### 3. Generate the Java Class using the Pongo Tool.
+
 * Download the Pongo tool : https://github.com/kolovos/pongo/releases
 * Run the Pongo generator from the command line as follows: **java -jar pongo.jar  youremffile.emf**
 * Replace the existing Java class by the new generated java class.
@@ -80,11 +82,13 @@ You can find more information about the data model description syntax at this ur
 More information about Pongo  : https://github.com/kolovos/pongo/wiki
 
 ## You need to Create a new Data Model ?
+
 The second way is to evolve the data model by building a new model/ database/ collection in Mongodb. This pongo model is separate from the existing model with separate database and thus avoids issues of breaking the existing model.
 
 In this case, we invite you to create a new plugin which will contain your data model.
 
 ### 1. Create a new Eclipse Plug-In
+
 * Create a new Eclipse Plug-In Project (
   - In Eclipse Toolbar : File > New > Plug-In Project
   - Name of the project : org.crossminer.**mycomponent**.repository.model
@@ -111,6 +115,7 @@ You can find more information about the data model description syntax at this ur
 
 
 ### 2. Generate the Java Class using the Pongo Tool.
+
 * Download the Pongo tool : https://github.com/kolovos/pongo/releases
 * Run the Pongo generator from the command line as follows: **java -jar pongo.jar  youremffile.emf**
 * Add this class in your org.crossminer.**mycomponent**.repository.model package
@@ -119,6 +124,7 @@ More information about Pongo  : https://github.com/kolovos/pongo/wiki
 
 
 ## Comment
+
 Here we learnt ways to modify model in the Crossminer platform. To know more about the access of data with the Pongo APIs [link here](https://github.com/crossminer/crossminer/wiki/Access-to-MongoDB-database-using-PONGO) .
 
 

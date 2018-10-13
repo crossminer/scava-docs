@@ -1,4 +1,6 @@
 
+# Docker Ossmeter
+
 This page lists information about the Ossmeter docker image. It should be noted that the generated image uses the old [Ossmeter binaries](https://github.com/ossmeter/ossmeter) and will not be updated -- all new development will go into the Crossminer repository.
 
 All images are stored on the [Crossminer Docker-hub account](https://hub.docker.com/u/crossminer/dashboard/).
@@ -12,8 +14,8 @@ The Docker image is composed of 4 services:
 
 The database comes pre-populated with a project and a user. The loaded dump comes from [md2manoppello's repo](https://github.com/md2manoppello/OSSMETER_DUMP). Login information:
 
-* user: demo@crossminer.org
-* password: demo18
+* user: `demo@crossminer.org`
+* password: `demo18`
 
 Custom quality is in the user object (demo@crossminer.org) stored in the users collection of users db. It resembles the [demo quality model](https://github.com/crossminer/crossminer/blob/dev/web/org-ossmeter-webapp/conf/quality/qualitymodel.json).
 

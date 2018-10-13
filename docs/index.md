@@ -11,7 +11,7 @@ Useful links:
 ## Administration
 
 * [Scava Administration](admin/SCAVA-Administration)
-* [MongoDB Data Model](admin/Extend-MongoDB-Data-Model)
+* [Extending MongoDB Data Model](admin/Extend-MongoDB-Data-Model)
 * [API Gateway Configuration](API-Gateway-Configuration)
 
 ## Architectures
