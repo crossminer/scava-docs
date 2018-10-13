@@ -1,17 +1,23 @@
+
+# Authentication Component
+
 The CROSSMINER Authentication service:
+
 * Provides a centralized mechanisms to securize CROSSMINER's components and manage authentication for all services of the platform.
 * Provides user management services, including user registration process, user profile editing and roles based authorization management.
 
 ## Authentication API
+
 The Authentication server is a component of The CROSSMINER platform which manages the authentication for all  services accessible behind the API Gateway.
 
 <table>
-<tr><td>[[Authenticate User|REST API : Authenticate User]]</td><td>POST</td><td>/api/authentication</td></tr>
-<tr><td colspan="3">Login a registered user.</td></tr>
+<tr><td>Authenticate User</td><td>POST</td><td>/api/authentication</td></tr>
+<tr><td colspan="3">Login as a registered user.</td></tr>
 </table>
 <table>
 
 ### JSON Web Tokens (JWT)
+
 JSON Web Token (JWT) is an open industry standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. It consists of three parts separated by dots (.), which are:
 * Header
 * Payload
@@ -25,7 +31,7 @@ This solution uses a secure token that holds the information that we want to tra
 ````
 curl -i -X POST -H "Content-Type:application/json" http://localhost:8086/api/authentication -d '{"username":"admin", "password": "admin"}'
 ````
-* Once, the user authenticate, he will get a JWT token in the HTTP Response Authorization Header.
+* Once the user is authenticated, he will get a JWT token in the HTTP Response Authorization Header.
 
 <a href="https://ibb.co/jifgKJ"><img src="https://preview.ibb.co/nf8qDd/Screenshot_from_2018_07_17_16_55_23.png" alt="Screenshot_from_2018_07_17_16_55_23" border="0"></a>
 
@@ -36,30 +42,31 @@ curl -i -X GET -H "Content-Type:application/json" -H "Authorization:Bearer eyJhb
 <a href="https://ibb.co/nKpVUJ"><img src="https://preview.ibb.co/kFN63d/Screenshot_from_2018_07_17_17_43_49.png" alt="Screenshot_from_2018_07_17_17_43_49" border="0"></a>
 
 ## User Management API
+
 The Authentication component provides web services for CRUD user account.
 
 <table>
-<tr><td>[[Register User|REST API : Register User]]</td><td>POST</td><td>/api/register</td></tr>
+<tr><td>Register User</td><td>POST</td><td>/api/register</td></tr>
 <tr><td colspan="3">Register new user.</td></tr>
 </table>
 <table>
-<tr><td>[[Activate User|Activate User]]</td><td>GET</td><td>/api/activate</td></tr>
+<tr><td>Activate User</td><td>GET</td><td>/api/activate</td></tr>
 <tr><td colspan="3">Activate the registered user.</td></tr>
 </table>
 <table>
-<tr><td>[[Update User|Update User]]</td><td>PUT</td><td>/api/users</td></tr>
+<tr><td>Update User</td><td>PUT</td><td>/api/users</td></tr>
 <tr><td colspan="3">Update an existing user.</td></tr>
 </table>
 <table>
-<tr><td>[[Retrieve Users|Retrieve Users]]</td><td>GET</td><td>/api/users</td></tr>
+<tr><td>Retrieve Users</td><td>GET</td><td>/api/users</td></tr>
 <tr><td colspan="3">Get all registered users.</td></tr>
 </table>
 <table>
-<tr><td>[[Retrieve Login User|Retrieve Login User]]</td><td>GET</td><td>/api/users/{login}</td></tr>
+<tr><td>Retrieve Login User</td><td>GET</td><td>/api/users/{login}</td></tr>
 <tr><td colspan="3">Get the "login" user.</td></tr>
 </table>
 <table>
-<tr><td>[[Delete User|Delete User]]</td><td>DELETE</td><td>/api/users/{login}</td></tr>
+<tr><td>Delete User</td><td>DELETE</td><td>/api/users/{login}</td></tr>
 <tr><td colspan="3">Delete the "login" user.</td></tr>
 </table>
 
@@ -127,7 +134,7 @@ mvn -Pprod install
 ```
 
 ## Authentication Server Execution
-1. complete an put the "application.properties" configuration file in the execution directory. 
+1. complete an put the "application.properties" configuration file in the execution directory.
 1. Execute the scava-auth-service-1.0.0.jar Jar.
 ```shell
 java -jar scava-auth-service-1.0.0.jar

@@ -38,7 +38,7 @@ In CROSSMINER, the authentification service is a sub component of the Administra
 
 ## Implementation
 
-The implementation of the gateway is based on Zuul proxy, a component of the spring-cloud project, an extention ofthe spring framework dedicated to microservices architectures.
+The implementation of the gateway is based on Zuul proxy, a component of the spring-cloud project, an extention of the spring framework dedicated to microservices architectures.
 
 https://projects.spring.io/spring-cloud/spring-cloud.html#_router_and_filter_zuul
 
@@ -169,7 +169,7 @@ java -jar scava-api-gateway-1.0.0.jar
 ```
 ## Client Implementation
 
-<table>
-<tr><td>[[How to consume a CROSSMINER REST services ? | Consuming REST Services]]</td></tr>
-<tr><td>This guideline is dedicated to clients which would like to used CORSSMINER REST Services.It adress authentication issues</td></tr>
+<table><tr><td>
+[[How to consume a CROSSMINER REST services ?|../users/Consuming-REST-Services]]</td></tr>
+<tr><td>This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.</td></tr>
 </table>
