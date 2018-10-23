@@ -13,7 +13,19 @@ There are two intended deployment sites:
 * GitHub project pages: [https://crossminer.github.io/scava-docs](https://crossminer.github.io/scava-docs)
 * ReadTheDocs: [https://scava-docs.readthedocs.io](https://scava-docs.readthedocs.io)
 
-# About Scava
+## Building the web site
+
+Simply execute the following command at the root of the directory.
+
+```
+boris@kadath:gh_crossminer_scava-docs$ mkdocs build --clean
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /home/boris/Projects/gh_crossminer_scava-docs/site
+boris@kadath:gh_crossminer_scava-docs$
+```
+
+
+## About Scava
 
 * Eclipse Scava project page: https://projects.eclipse.org/projects/technology.scava
 * Scava official repository for code: https://github.com/crossminer/scava
