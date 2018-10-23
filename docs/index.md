@@ -28,7 +28,8 @@ Useful links:
 
 ## Development
 
-* [Development Guidelines](development/Development-Guidelines) Collection of Architectural and Technical guidelines dedicated to Scava developers.
+* [Contributing](development/Contributing) Collection of Architectural and Technical guidelines dedicated to Scava developers.
+* [Development guidelines](development/Development-Guidelines) Rules and guidelines used for the development of the Scava project.
 * [Testing Guidelines](development/Testing-Guidelines) Collection of testing guidelines dedicated to Scava developers.
 
 ## Architecture

@@ -54,7 +54,7 @@ Open `org.ossmeter.platform.osgi/ossmeterfromfeature.product`
     * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
   * To get a full platform running, first launch a master thread, then a slave, and finally the API server.
 
-If you are developing code for the Scava platform, be sure to check out the [[Development Guidelines|../development/Development-Guidelines]].
+If you are developing code for the Scava platform, be sure to check out the [Contributing](../development/Contributing).
 
 ## Run the api-gateway
 
