@@ -24,8 +24,8 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Consuming REST Services";
-    var mkdocs_page_input_path = "using/Consuming-REST-Services.md";
-    var mkdocs_page_url = "/using/Consuming-REST-Services/";
+    var mkdocs_page_input_path = "users/Consuming-REST-Services.md";
+    var mkdocs_page_url = "/users/Consuming-REST-Services/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -140,14 +126,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -162,28 +148,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../../development/Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -197,14 +183,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../../development/Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -214,7 +221,7 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
@@ -239,6 +246,20 @@
                 
             
             </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -268,7 +289,7 @@
     
       
         
-          <li>Using &raquo;</li>
+          <li>Users &raquo;</li>
         
       
     
@@ -284,11 +305,11 @@
               
                 <h1 id="consuming-rest-services">Consuming REST services</h1>
 <h2 id="when-to-use">When to use ?</h2>
-<p>This guideline describes general way of consuming REST services of CROSSMINER. Its basically for the use of CROSSMINER rest APIs in other tools/applications.</p>
+<p>This guideline describes general way of consuming REST services of Scava. Its basically for the use of Scava rest APIs in other tools/applications.</p>
 <h2 id="rest-api-reference">REST API Reference</h2>
-<p>The reference guide presenting all REST services implemented by CROSSMINER is available [[right here |Developement Guidelignes]].</p>
+<p>The reference guide presenting all REST services implemented by Scava is available [[right here |Development Guidelignes]].</p>
 <h2 id="api-gateway">API Gateway</h2>
-<p>The CROSSMINER integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the CROSSMINER API Gateway.</p>
+<p>The Scava integrated platform provide a centralized access point to all web services implemented by the different tools involved in the platform : the Scava API Gateway.</p>
 <p><strong>All web service request form clients have to go through the gateway.</strong></p>
 <p><img src="https://zupimages.net/up/18/07/k2wp.png" width="800"></p>
 <p>The api gateway is in charge to redirect the client request to the right service provider. The gateway also manage authentication mechanism for all services provided by the integrated platform.</p>
@@ -346,8 +367,10 @@ connection.setRequestProperty("Authorization",token);
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../REST-API-Documentation/" class="btn btn-neutral float-right" title="REST API Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../../development/Testing-Guidelignes/" class="btn btn-neutral" title="Testing Guidelignes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../../development/Testing-Guidelines/" class="btn btn-neutral" title="Testing Guidelines"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -373,8 +396,10 @@ connection.setRequestProperty("Authorization",token);
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../development/Testing-Guidelignes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../development/Testing-Guidelines/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../REST-API-Documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

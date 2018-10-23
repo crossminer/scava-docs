@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -122,28 +108,15 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#authentication-api">Authentication API</a></li>
+                <li class="toctree-l3"><a href="#authentication-component">Authentication Component</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#authentication-server-configuration">Authentication Server Configuration</a></li>
+                    <li><a class="toctree-l4" href="#authentication-api">Authentication API</a></li>
                 
-                    <li><a class="toctree-l4" href="#server-configuration">Server Configuration</a></li>
+                    <li><a class="toctree-l4" href="#authentication-server-configuration">Authentication Server Configuration</a></li>
                 
-                    <li><a class="toctree-l4" href="#jwt-security-configuration">JWT Security Configuration</a></li>
+                    <li><a class="toctree-l4" href="#packaging-from-sources">Packaging From Sources</a></li>
                 
-                    <li><a class="toctree-l4" href="#default-admin-configuration">Default ADMIN configuration</a></li>
-                
-                    <li><a class="toctree-l4" href="#mongodb-database-configuration">Mongodb Database Configuration</a></li>
-                
-                    <li><a class="toctree-l4" href="#mail-server-configuration">Mail Server configuration</a></li>
-                
-                    <li><a class="toctree-l4" href="#administration-dashboard-setting">Administration Dashboard Setting</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#packaging-from-sources">Packaging From Sources</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#authentication-server-execution">Authentication Server Execution</a></li>
+                    <li><a class="toctree-l4" href="#authentication-server-execution">Authentication Server Execution</a></li>
                 
             
             </ul>
@@ -168,14 +141,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -190,28 +163,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../../development/Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -225,14 +198,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../../development/Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -242,12 +236,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -291,19 +299,23 @@
           <div role="main">
             <div class="section">
               
-                <p>The CROSSMINER Authentication service:
-<em> Provides a centralized mechanisms to securize CROSSMINER's components and manage authentication for all services of the platform.
-</em> Provides user management services, including user registration process, user profile editing and roles based authorization management.</p>
+                <h1 id="authentication-component">Authentication Component</h1>
+<p>The Scava Authentication service:</p>
+<ul>
+<li>Provides a centralized mechanisms to securize Scava's components and manage authentication for all services of the platform.</li>
+<li>Provides user management services, including user registration process, user profile editing and roles based authorization management.</li>
+</ul>
 <h2 id="authentication-api">Authentication API</h2>
-<p>The Authentication server is a component of The CROSSMINER platform which manages the authentication for all  services accessible behind the API Gateway.</p>
+<p>The Authentication server is a component of The Scava platform which manages the authentication for all  services accessible behind the API Gateway.</p>
 <table>
-<tr><td>[[Authenticate User|REST API : Authenticate User]]</td><td>POST</td><td>/api/authentication</td></tr>
-<tr><td colspan="3">Login a registered user.</td></tr>
+<tr><td>Authenticate User</td><td>POST</td><td>/api/authentication</td></tr>
+<tr><td colspan="3">Login as a registered user.</td></tr>
 </table>
 
 <table>
 
 ### JSON Web Tokens (JWT)
+
 JSON Web Token (JWT) is an open industry standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. It consists of three parts separated by dots (.), which are:
 * Header
 * Payload
@@ -317,41 +329,42 @@ This solution uses a secure token that holds the information that we want to tra
 
 wzxhzdk:0
 
-* Once, the user authenticate, he will get a JWT token in the HTTP Response Authorization Header.
+* Once the user is authenticated, he will get a JWT token in the HTTP Response Authorization Header.
 
 <a href="https://ibb.co/jifgKJ"><img src="https://preview.ibb.co/nf8qDd/Screenshot_from_2018_07_17_16_55_23.png" alt="Screenshot_from_2018_07_17_16_55_23" border="0"></a>
 
-* The generated token will be used by injecting it inside the HTTP Request Authorization Header to get access to the different CROSSMINER's components behind the API Gateway.
+* The generated token will be used by injecting it inside the HTTP Request Authorization Header to get access to the different Scava's components behind the API Gateway.
 
 wzxhzdk:1
 
 <a href="https://ibb.co/nKpVUJ"><img src="https://preview.ibb.co/kFN63d/Screenshot_from_2018_07_17_17_43_49.png" alt="Screenshot_from_2018_07_17_17_43_49" border="0"></a>
 
 ## User Management API
+
 The Authentication component provides web services for CRUD user account.
 
 <table>
-<tr><td>[[Register User|REST API : Register User]]</td><td>POST</td><td>/api/register</td></tr>
+<tr><td>Register User</td><td>POST</td><td>/api/register</td></tr>
 <tr><td colspan="3">Register new user.</td></tr>
 </table>
 <table>
-<tr><td>[[Activate User|Activate User]]</td><td>GET</td><td>/api/activate</td></tr>
+<tr><td>Activate User</td><td>GET</td><td>/api/activate</td></tr>
 <tr><td colspan="3">Activate the registered user.</td></tr>
 </table>
 <table>
-<tr><td>[[Update User|Update User]]</td><td>PUT</td><td>/api/users</td></tr>
+<tr><td>Update User</td><td>PUT</td><td>/api/users</td></tr>
 <tr><td colspan="3">Update an existing user.</td></tr>
 </table>
 <table>
-<tr><td>[[Retrieve Users|Retrieve Users]]</td><td>GET</td><td>/api/users</td></tr>
+<tr><td>Retrieve Users</td><td>GET</td><td>/api/users</td></tr>
 <tr><td colspan="3">Get all registered users.</td></tr>
 </table>
 <table>
-<tr><td>[[Retrieve Login User|Retrieve Login User]]</td><td>GET</td><td>/api/users/{login}</td></tr>
+<tr><td>Retrieve Login User</td><td>GET</td><td>/api/users/{login}</td></tr>
 <tr><td colspan="3">Get the "login" user.</td></tr>
 </table>
 <table>
-<tr><td>[[Delete User|Delete User]]</td><td>DELETE</td><td>/api/users/{login}</td></tr>
+<tr><td>Delete User</td><td>DELETE</td><td>/api/users/{login}</td></tr>
 <tr><td colspan="3">Delete the "login" user.</td></tr>
 </table>
 
@@ -499,7 +512,7 @@ The Authentication component provides web services for CRUD user account.
 
 <h2 id="authentication-server-execution">Authentication Server Execution</h2>
 <ol>
-<li>complete an put the "application.properties" configuration file in the execution directory. </li>
+<li>complete an put the "application.properties" configuration file in the execution directory.</li>
 <li>Execute the scava-auth-service-1.0.0.jar Jar.</li>
 </ol>
 <pre><code class="shell">java -jar scava-auth-service-1.0.0.jar

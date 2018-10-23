@@ -8,7 +8,7 @@
   
   
   
-  <title>Developement Guidelignes - Eclipse Scava</title>
+  <title>Naming Scava REST Services - Eclipse Scava</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Developement Guidelignes";
-    var mkdocs_page_input_path = "development/Developement-Guidelignes.md";
-    var mkdocs_page_url = "/development/Developement-Guidelignes/";
+    var mkdocs_page_name = "Naming Scava REST Services";
+    var mkdocs_page_input_path = "development/Naming-Scava-REST-Services.md";
+    var mkdocs_page_url = "/development/Naming-Scava-REST-Services/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -140,14 +126,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -162,46 +148,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Developement Guidelignes</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#integration-guidelignes">INTEGRATION GUIDELIGNES</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#technical-guidelignes">TECHNICAL GUIDELIGNES</a></li>
-                
-                    <li><a class="toctree-l4" href="#rest-api">REST API</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-access">DATA ACCESS</a></li>
-                
-                    <li><a class="toctree-l4" href="#osgi">OSGI</a></li>
-                
-                    <li><a class="toctree-l4" href="#template">TEMPLATE</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -215,14 +183,50 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../Licensing/">Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Naming Scava REST Services</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#naming-scava-rest-services">Naming Scava REST services</a></li>
+                
+                    <li><a class="toctree-l4" href="#when-to-use-this-guideline">When to use this guideline ?</a></li>
+                
+                    <li><a class="toctree-l4" href="#context">Context</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-to-name-a-rest-service">How to name a REST service ?</a></li>
+                
+                    <li><a class="toctree-l4" href="#comment">Comment</a></li>
+                
+            
+            </ul>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -232,12 +236,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -271,7 +289,7 @@
         
       
     
-    <li>Developement Guidelignes</li>
+    <li>Naming Scava REST Services</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -281,72 +299,52 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="integration-guidelignes">INTEGRATION GUIDELIGNES</h1>
-<table>
-<tr><td>[[SCAVA Repository Organisation |CROSSMINER Repository Organisation ]]</td></tr>
-<tr><td>Guideline describing how the SCAVA code repository is organised and how to add a new component in this repository</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to name SCAVA components ? |CROSSMINER Component Naming]]</td></tr>
-<tr><td>Guideline describing naming constraints for a new scava component (component name  / java namespace / maven artefact id and group id...)</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to name SCAVA REST services ? |Naming CORSSMINER REST Services]]</td></tr>
-<tr><td>This guideline provide naming rules for each REST services routes implemented by the SCAVA platform.</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to manage  Licensing ? |CROSSMINER Licensing]]</td></tr>
-<tr><td>Guideline describing licensing requirements for SCAVA components.</td></tr>
-</table>
-
-<h1 id="technical-guidelignes">TECHNICAL GUIDELIGNES</h1>
-<h3 id="rest-api">REST API</h3>
-<p><strong>Each implemented REST services must be documented : [[REST API DOCUMENTATION |REST API Documentation]]</strong> </p>
-<table>
-<tr><td>[[How to configure the SCAVA Gateway in order to integrate a new  REST service ? |API Gateway Configuration]]</td></tr>
-<tr><td>Customers access SCAVA services through the SCAVA API Gateway. This guideline present how to configure the API Gateway to integrate new  remote service provider. </td></tr>
-</table>
-
-<table>
-<tr><td>[[How to consume a SCAVA REST services ? | Consuming REST Services]]</td></tr>
-<tr><td>This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to implement Restlet services ? |Implementing Restlet Service]]</td></tr>
-<tr><td> Guideline which describe how to integrate and implement a REST service in SCAVA platform using the RESTLET framework.</td></tr>
-</table>
-
-<h3 id="data-access">DATA ACCESS</h3>
-<table>
-<tr><td>[[How to access MongoDB database using PONGO ? |Access to MongoDB database using PONGO]]</td></tr>
-<tr><td>Guideline which describe how to the access to MongoDB database using the  PONGO framework. </td></tr>
-</table>
-
-<table>
-
-<tr><td>[[How to extend the SCAVA data model ? |Extend MongoDB Data Model ]]</td></tr>
-<tr><td>Guideline  which describe ways to extend the SCAVA Data Model, stored in a MongoDb database and based on the PONGO framework</td></tr>
-</table>
-
-<h3 id="osgi">OSGI</h3>
-<table>
-<tr><td>[[How to integrate OSGI service plugin in SCAVA Architecture? | OSGI Component Integration]]</td></tr>
-<tr><td>Todo</td></tr>
-</table>
-
-<table>
-<tr><td>[[How to communicate between OSGI plugin using JMS ? |OSGI Plugin Communication]]</td></tr>
-<tr><td>Todo</td></tr>
-</table>
-
-<h3 id="template">TEMPLATE</h3>
+                <h1 id="naming-scava-rest-services">Naming Scava REST services</h1>
+<h2 id="when-to-use-this-guideline">When to use this guideline ?</h2>
+<p>This guideline present how to define the route of a new REST service provided by the Scava platform.</p>
+<h2 id="context">Context</h2>
+<p>The REST services are the main integration points between platform components or between the platform and external clients. In order to provide an unified view of  platform services , we need to used a common naming schema for all REST services provided by the platform.</p>
+<h2 id="how-to-name-a-rest-service">How to name a REST service ?</h2>
+<blockquote>
+<p><strong>/{<em>componentid</em>}/{<em>categoryname</em>}/{<em>servicename</em>}</strong></p>
+</blockquote>
 <ul>
-<li>[[Guideline Template|Guideline Main Heading]]</li>
+<li><strong>/<em>componentid</em>/</strong>: Name of the Architectural component which provide the service</li>
+<li><strong>/<em>categoryname</em>/ (Optional)</strong> : optional category of the service</li>
+<li><strong>/<em>servicename</em>/</strong> : Name of the rest service</li>
 </ul>
+<h4 id="component">Component</h4>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th><em>ComponentId</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevOps Dashboard</td>
+<td>dashboard</td>
+</tr>
+<tr>
+<td>Workflow Execution Engine</td>
+<td>workflow</td>
+</tr>
+<tr>
+<td>Knowledge Base</td>
+<td>knowledgebase</td>
+</tr>
+<tr>
+<td>Metric Provider</td>
+<td>metricprovider</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>administration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comment">Comment</h2>
               
             </div>
           </div>
@@ -354,10 +352,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Implementing-Restlet-Service/" class="btn btn-neutral float-right" title="Implementing Restlet Service">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Repository-Organisation/" class="btn btn-neutral float-right" title="Repository Organisation">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../CROSSMINER-Repository-Organisation/" class="btn btn-neutral" title="CROSSMINER Repository Organisation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Licensing/" class="btn btn-neutral" title="Licensing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -383,10 +381,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../CROSSMINER-Repository-Organisation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Licensing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Implementing-Restlet-Service/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Repository-Organisation/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

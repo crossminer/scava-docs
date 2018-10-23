@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -139,6 +125,13 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">Running the platform</a>
         
@@ -166,13 +159,6 @@
     </li>
 
         
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../">Home</a>
-        
-    </li>
-
-        
     </ul>
 <li>
           
@@ -183,28 +169,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../../development/Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -218,14 +204,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../../development/Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -235,12 +242,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -295,7 +316,7 @@
 </code></pre>
 
 <h2 id="get-the-code">Get the Code</h2>
-<p>Get the latest version of the code, and checkout the <code>dev</code> branch (please don't commit to the <code>master</code> branch: see [[Developer Guidelines|developer-guidelines]]):</p>
+<p>Get the latest version of the code, and checkout the <code>dev</code> branch. Please don't commit to the <code>master</code> branch: see the <a href="../../development/Development-Guidelines">Development Guidelines</a>:</p>
 <p>If you are using <strong>Linux / OS X</strong>:</p>
 <pre><code class="Shell">git clone https://github.com/crossminer/scava.git scava
 cd scava
@@ -307,13 +328,13 @@ git checkout dev
 cd scava
 git init
 git config core.longpaths true
-git add remote origin https://github.com/crossminer/scava.git 
+git add remote origin https://github.com/crossminer/scava.git
 git fetch
 git checkout dev
 </code></pre>
 
 <h2 id="setup-eclipse">Setup Eclipse</h2>
-<p>Open Eclipse and import all projects from the top level directory of the CROSSMINER code (<code>File -&gt; Import -&gt; Existing projects into workspace</code>), and wait for all the projects to compile without errors.</p>
+<p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Existing projects into workspace</code>), and wait for all the projects to compile without errors.</p>
 <h2 id="validate-and-run-the-platform">Validate and Run the Platform</h2>
 <p>Open <code>org.ossmeter.platform.osgi/ossmeterfromfeature.product</code>
   * Click the <code>Validate...</code> icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
@@ -323,16 +344,16 @@ git checkout dev
     * <code>-apiServer</code>: Starts up the client API on localhost:8182
     * <code>-worker ${id-worker}</code>: Spawns a thread that analyses registered projects
   * To get a full platform running, first launch a master thread, then a slave, and finally the API server.</p>
-<p>If you are developing code for the CROSSMINER platform, be sure to check out the [[Developer Guidelines|developer-guidelines]].</p>
+<p>If you are developing code for the Scava platform, be sure to check out the <a href="../../development/Contributing">Contributing</a>.</p>
 <h2 id="run-the-api-gateway">Run the api-gateway</h2>
 <ul>
-<li>Right click on 
+<li>Right click on
 <code>scava-api-gateway/src/main/java/org.eclipse.scava.apigateway/ApiGatewayApplication.java</code></li>
 <li>Then click on Run As -&gt; Java Application</li>
 </ul>
 <h2 id="run-the-authentication-service">Run the authentication service</h2>
 <ul>
-<li>Right click on 
+<li>Right click on
 <code>scava-auth-service/src/main/java/org.eclipse.scava.authservice/AuthServiceApplication.java</code></li>
 <li>Then click on Run As -&gt; Java Application</li>
 </ul>
@@ -349,10 +370,10 @@ git checkout dev
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../" class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../development/Component-Naming/" class="btn btn-neutral float-right" title="Component Naming">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Docker-Ossmeter/" class="btn btn-neutral" title="Docker Ossmeter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Platform-configuration/" class="btn btn-neutral" title="Platform configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -378,10 +399,10 @@ git checkout dev
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Docker-Ossmeter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Platform-configuration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../development/Component-Naming/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   
   
-  <title>CROSSMINER Component Naming - Eclipse Scava</title>
+  <title>Contributing - Eclipse Scava</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "CROSSMINER Component Naming";
-    var mkdocs_page_input_path = "development/CROSSMINER-Component-Naming.md";
-    var mkdocs_page_url = "/development/CROSSMINER-Component-Naming/";
+    var mkdocs_page_name = "Contributing";
+    var mkdocs_page_input_path = "development/Contributing.md";
+    var mkdocs_page_url = "/development/Contributing/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -140,14 +126,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -161,12 +147,23 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../Component-Naming/">Component Naming</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
-        <a class="current" href="./">CROSSMINER Component Naming</a>
+        <a class="current" href="./">Contributing</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#project-naming">Project Naming</a></li>
+                <li class="toctree-l3"><a href="#contributing">Contributing</a></li>
+                
+                    <li><a class="toctree-l4" href="#subcategories">Subcategories</a></li>
+                
+                    <li><a class="toctree-l4" href="#technical-guidelines">Technical Guidelines</a></li>
                 
             
             </ul>
@@ -176,21 +173,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -204,14 +194,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -221,12 +232,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -260,7 +285,7 @@
         
       
     
-    <li>CROSSMINER Component Naming</li>
+    <li>Contributing</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -270,77 +295,40 @@
           <div role="main">
             <div class="section">
               
-                <p>As consequence of our status of project hosted by the eclipse foundation, we have to follow a specific naming schema for all components implemented in context of SCAVA project.</p>
-<p>In this section, "component" means big funcional componen of the SCAVA project.</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th><em>ComponentId</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DevOps Dashboard</td>
-<td>dashboard</td>
-</tr>
-<tr>
-<td>Workflow Execution Engine</td>
-<td>workflow</td>
-</tr>
-<tr>
-<td>Knowledge Base</td>
-<td>knowledgebase</td>
-</tr>
-<tr>
-<td>Metric Provider</td>
-<td>metricprovider</td>
-</tr>
-<tr>
-<td>Administration</td>
-<td>administration</td>
-</tr>
-</tbody>
-</table>
-<h2 id="project-naming">Project Naming</h2>
+                <h1 id="contributing">Contributing</h1>
+<h2 id="subcategories">Subcategories</h2>
 <ul>
-<li>For Eclipse Plugin </li>
+<li><a href="../Repository-Organisation">SCAVA Repository Organisation</a> Guideline describing how the SCAVA code repository is organised and how to add a new component in this repository.</li>
+<li><a href="../Component-Naming">How to name SCAVA components?</a> Guideline describing naming constraints for a new scava component (component name, java namespace, maven artefact id and group id, etc.</li>
+<li><a href="../Naming-Scava-REST-Services">How to name SCAVA REST services?</a> This guideline provide naming rules for each REST services routes implemented by the SCAVA platform.</li>
+<li><a href="../Licensing">How to manage  Licensing</a> Guideline describing licensing requirements for SCAVA components.</li>
 </ul>
-<pre><code>org.eclipse.scava.{componentname}
-</code></pre>
-
+<h2 id="technical-guidelines">Technical Guidelines</h2>
+<h3 id="rest-api">REST API</h3>
+<p><strong>Each implemented REST services must be documented (see /users directory): <a href="../../REST-API-Documentation">REST API DOCUMENTATION</a></strong></p>
 <ul>
-<li>For Maven Project : the name of the project if the ArtifactId</li>
+<li><a href="../../admin/API-Gateway-Configuration">How to configure the SCAVA Gateway in order to integrate a new  REST service</a> Customers access SCAVA services through the SCAVA API Gateway. This guideline present how to configure the API Gateway to integrate new  remote service provider.</li>
+<li><a href="../../users/Consuming-REST-Services">How to consume a SCAVA REST services</a> This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues.</li>
+<li><a href="../Implementing-Restlet-Service">How to implement Restlet services</a> Guideline which describe how to integrate and implement a REST service in SCAVA platform using the RESTLET framework.</li>
 </ul>
-<p>If your component is composed of one project :</p>
-<pre><code>{component-name}
-</code></pre>
-
-<p>If your component is composed of several sub projects :</p>
-<pre><code>{sub-component-name}
- ```
-
-## Source Code Namsespace
-All sources must be nemspaces by : 
-</code></pre>
-
-<p>org.eclipse.scava.{componentname}</p>
-<pre><code>
-## Maven Ids
-For  the Maven projects:
-
-* If your component is composed of one project : 
-</code></pre>
-
-<p>Group Id : org.eclipse.scava
-ArtifactId : {component-name}</p>
-<pre><code>
-* If your component is composed of several sub projects : 
-</code></pre>
-
-<p>Group Id : org.eclipse.scava.{component-name}
-ArtifactId : {sub-component-name}
-```</p>
+<h3 id="data-access">DATA ACCESS</h3>
+<ul>
+<li>
+<p><a href="../../admin/Access to MongoDB database using PONGO">How to access MongoDB database using PONGO</a> Guideline which describe how to the access to MongoDB database using the  PONGO framework.</p>
+</li>
+<li>
+<p><a href="../Extend-MongoDB-Data-Model">How to extend the SCAVA data model</a> Guideline  which describe ways to extend the SCAVA Data Model, stored in a MongoDb database and based on the PONGO framework.</p>
+</li>
+</ul>
+<h3 id="osgi">OSGI</h3>
+<ul>
+<li><a href="../OSGI Component Integration">How to integrate OSGI service plugin in SCAVA Architecture</a> Todo</li>
+<li><a href="../OSGI Plugin Communication">How to communicate between OSGI plugin using JMS</a> Todo</li>
+</ul>
+<h3 id="template">TEMPLATE</h3>
+<ul>
+<li>[[Guideline Template|Guideline Main Heading]]</li>
+</ul>
               
             </div>
           </div>
@@ -348,10 +336,10 @@ ArtifactId : {sub-component-name}
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../CROSSMINER-Licensing/" class="btn btn-neutral float-right" title="CROSSMINER Licensing">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Development-Guidelines/" class="btn btn-neutral float-right" title="Development Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../deploy/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Component-Naming/" class="btn btn-neutral" title="Component Naming"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -377,10 +365,10 @@ ArtifactId : {sub-component-name}
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../deploy/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Component-Naming/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../CROSSMINER-Licensing/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Development-Guidelines/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

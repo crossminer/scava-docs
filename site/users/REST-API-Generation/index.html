@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>REST API Generation - Eclipse Scava</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "REST API Generation";
+    var mkdocs_page_input_path = "users/REST-API-Generation.md";
+    var mkdocs_page_url = "/users/REST-API-Generation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Admin</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Architecture</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/API-Gateway-Component/">API Gateway Component</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deploy</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Contributing/">Contributing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Licensing/">Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Users</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">REST API Generation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#rest-api-generation">REST API Generation</a></li>
+                
+                    <li><a class="toctree-l4" href="#install">Install</a></li>
+                
+                    <li><a class="toctree-l4" href="#example">Example</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Users &raquo;</li>
+        
+      
+    
+    <li>REST API Generation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="rest-api-generation">REST API Generation</h1>
+<p><a href="../files/REST_API_tutorial.zip" title="REST API Tutorial">REST API Tutorial files</a></p>
+<h2 id="install">Install</h2>
+<p>First of all, I installed a new copy of Eclipse (Committers), just to make sure I start with a clean install.</p>
+<p>Execute the following steps.</p>
+<ol>
+<li>Clone repository: <code>https://github.com/patrickneubauer/crossminer-workflow</code></li>
+<li>Import projects from the cloned repo to empty Eclipse workspace:</li>
+<li>Import root via <code>Maven &gt; Existing Maven Projects</code>,</li>
+<li>then the rest via <code>General &gt; Existing projects into Workspace</code> <strong>without</strong> checking <code>Search for nested projects</code>.</li>
+<li>Install new software packages:</li>
+<li>Install Graphical Modeling Framework (GMF): http://marketplace.eclipse.org/content/graphical-modeling-framework-gmf-tooling <strong>[web page]</strong></li>
+<li>Install Epsilon (Stable): http://download.eclipse.org/epsilon/updates/ <strong>[update site]</strong></li>
+<li>Update Epsilon (Interim): http://download.eclipse.org/epsilon/interim/ <strong>[update site]</strong></li>
+<li>Install Emfatic: http://download.eclipse.org/emfatic/update/ <strong>[update site]</strong><br />
+<em>Note:</em> I didn't see the the feature until <code>Group items by category</code> was unchecked.</li>
+<li>Install GMF tooling: http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/ <strong>[update site]</strong></li>
+<li>Import the given json projects (<code>org.eclipse.epsilon.emc.json</code> and <code>org.eclipse.epsilon.emc.json.dt</code>) into the workspace via <code>General &gt; Existing projects into Workspace</code>.</li>
+<li>Now right-click on <code>org.eclipse.crossmeter.workflow project</code> and select <code>Maven &gt; Update Project....</code></li>
+<li>Copy the give <code>M2M_Environment_oxygen.launch</code> (for Windows 10) to <code>org.eclipse.crossmeter.workflow\org.eclipse.crossmeter.workflow.restmule.generator</code> and overwrite the old one.</li>
+<li>Refresh project <code>org.eclipse.crossmeter.workflow.restmule.generator</code> in Eclipse.</li>
+<li>Before running the <code>.launch</code> file, right-click on it, <code>Run as &gt; Run configurations....</code> Here go to <code>Plug-ins</code> tab and click on <code>Add Required Plug-ins</code>.</li>
+<li>Now you can run the <code>.launch</code> file TBA:How?</li>
+<li>In the Runtime Eclipse import the <code>org.eclipse.crossmeter.workflow.restmule.generator</code> project as Maven Project.</li>
+<li>Run <code>generateFromOAS.launch</code> as you can see in the videos https://youtu.be/BJXuozHJPeg.</li>
+<li>Now, you should see it generating the project.</li>
+<li>For further steps, watch Patrick's videos .</li>
+<li>github client generation and execution example — https://youtu.be/BJXuozHJPeg</li>
+<li>github client generation example 2 — https://youtu.be/CIebrgRE4zI</li>
+<li>github client generation example — https://youtu.be/ltSNnSZRETA</li>
+<li>kafka twitter default example — https://youtu.be/3XZMMQyURVc</li>
+<li>kafka twitter workflow example 2 — https://youtu.be/Udqd-gaH4O4</li>
+<li>kafka twitter workflow example — https://youtu.be/DB03Rtfa5ZA</li>
+<li>MDEPopularityExample — https://youtu.be/PBeuOaqHngk</li>
+</ol>
+<h2 id="example">Example</h2>
+<p>I've made a simple example for the generator. I've created an OpenAPI specification and then built it with the generator. You will see a minimalistic configuration: it contains a single path specification, which requires one number input parameter and then gives back the parameters square. The number input parameter is provided via the path, so it looks like the following: <code>/square/{number}</code>. You can replace the <code>{number}</code> with any number. The repsonse for this request is a <code>JSON</code> object, which looks like this:</p>
+<pre><code class="json">{
+    &quot;squared&quot;: {squaredValue}
+}
+</code></pre>
+
+<p>It contains only one field, named <code>squared</code>, which has the value of the square of the given number. From the specification the generator will provide us a <code>Java Project</code> which will implement the use of the specified API. It will provide us an interface to easily access the functionalities of the API. To use this interface, after the import of the proper dependencies, we only need to write a few lines:</p>
+<pre><code class="java">ITestAPIApi api = TestAPIApi.createDefault(); //create an instance of the api interface (with default settings).
+int number = 7; //The number to be squared.
+IData&lt;NumberValue&gt; squared = api.getSquareNumberValueByNumber(number); //the actual use of the API descibed in the specification. It sends a request to the server.
+NumberValue numberValue; //NumberValue is the class which represents the object received from the server
+numberValue = squared.observe().blockingSingle(); //Get the actually received object from the response.
+System.out.println(&quot;Squared:&quot; + numberValue.getSquared()); //Print the received answer.
+</code></pre>
+
+<p>Everything, including the <code>IEntityApi</code> interface and the <code>NumberValue</code> class is generated by the generator. The former is a complete set of the functions provided by the API and the latter is an example of the container classes, which has the purpose of letting access through <code>Java</code> to the objects/field inside of the received <code>JSON</code> object. And once again, they are all generated from the OpenAPI specification.</p>
+<p>So, to generate the mentioned <code>Java Project</code>, you have to put your OpenAPI specification file into the <code>schemas</code> folder inside the <code>org.eclipse.crossmeter.workflow.restmule.generator</code> project. I'll call mine as <code>TestAPI.json</code>, and it's made up of the following:</p>
+<pre><code class="json">{
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;schemes&quot;: [
+    &quot;http&quot;
+  ],
+  &quot;host&quot;: &quot;localhost:8080&quot;,
+  &quot;basePath&quot;: &quot;/&quot;,
+  &quot;info&quot;: {
+    &quot;description&quot;: &quot;This is a test API, only for demonstration of the generator.&quot;,
+    &quot;termsOfService&quot;: &quot;&quot;,
+    &quot;title&quot;: &quot;TestAPI&quot;,
+    &quot;version&quot;: &quot;v1&quot;
+  },
+  &quot;consumes&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;produces&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;securityDefinitions&quot;: {
+
+  },
+  &quot;paths&quot;: {
+    &quot;/square/{number}&quot;: {
+      &quot;get&quot;: {
+        &quot;description&quot;: &quot;Square a number.&quot;,
+        &quot;parameters&quot;: [
+          {
+            &quot;description&quot;: &quot;The number to be squared&quot;,
+            &quot;in&quot;: &quot;path&quot;,
+            &quot;name&quot;: &quot;number&quot;,
+            &quot;required&quot;: true,
+            &quot;type&quot;: &quot;integer&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;OK&quot;,
+            &quot;schema&quot;: {
+              &quot;$ref&quot;: &quot;#/definitions/NumberValue&quot;
+            }
+          }
+        }
+      }
+    }
+  },
+  &quot;definitions&quot;: {
+    &quot;NumberValue&quot;: {
+      &quot;properties&quot;: {
+        &quot;squared&quot;: {
+          &quot;type&quot;: &quot;integer&quot;
+        }
+      },
+      &quot;type&quot;: &quot;object&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>You can see here the path and the NumberValue object. They are well specified in this file, so the generator can create our project by on its own.
+Then we have to set the generator to use our new schema. To do this, open the <code>build.xml</code> in the generator project and modify the <code>api</code> and <code>json.model.file</code> property to <code>testapi</code> and <code>schemas/TestAPI.json</code>, respectively.</p>
+<pre><code class="xml">&lt;!--API Variables --&gt;
+&lt;property name=&quot;api&quot; value=&quot;testapi&quot; /&gt;
+&lt;property name=&quot;json.model.file&quot; value=&quot;schemas/TestAPI.json&quot; /&gt;
+</code></pre>
+
+<p>We are almost done, but we have to take one more small step. We have to provide an <code>.eol</code> file in the <code>epsilon/util/fix/</code> folder in the generator project. Its name must be the same as the value of the <code>api</code> property in the previous step, so for this example we use the <code>testapi.eol</code>. The content of this file:</p>
+<pre><code class="eol">import &quot;../restmule.eol&quot;;
+
+var api = RestMule!API.all.first();
+
+// RATE LIMITS
+
+var search = new RestMule!RatePolicyScope;
+search.scope = &quot;Search&quot;;
+var entity = new RestMule!RatePolicyScope;
+entity.scope = &quot;Entity&quot;;
+
+// RATE POLICY
+
+var policy = new RestMule!RatePolicy;
+policy.scopes.add(entity);
+policy.scopes.add(search);
+
+var reset = new RestMule!ResponseHeader;
+var resetInt = new RestMule!TInteger;
+resetInt.label = &quot;X-RateLimit-Reset&quot;;
+reset.type = resetInt;
+policy.reset = reset;
+
+var limit = new RestMule!ResponseHeader;
+var limitInt = new RestMule!TInteger;
+limitInt.label = &quot;X-RateLimit-Limit&quot;;
+limit.type = limitInt;
+policy.limit = limit;
+
+var remaining = new RestMule!ResponseHeader;
+var remainingInt = new RestMule!TInteger;
+remainingInt.label = &quot;X-RateLimit-Remaining&quot;;
+remaining.type = remainingInt;
+policy.remaining = remaining;
+
+api.ratePolicy = policy;
+
+// PAGINATION
+
+var pagination= new RestMule!PaginationPolicy;
+pagination.start = 1;
+pagination.max = 10;
+pagination.increment = 1;
+pagination.maxPerIteration = 100;
+
+var perIteration = new RestMule!Query;
+perIteration.description = &quot;Items per page&quot;;
+perIteration.required = false;
+var type = new RestMule!TInteger;
+type.label = &quot;per_page&quot;;
+type.name = type.label;
+perIteration.type = type;
+pagination.perIteration = perIteration;
+
+var page = new RestMule!Query;
+page.description = &quot;Page identifier&quot;;
+page.required = false;
+var type1 = new RestMule!TInteger;
+type1.label = &quot;page&quot;;
+type1.name = type1.label;
+page.type = type1;
+pagination.page = page;
+
+var link = new RestMule!ResponseHeader;
+link.description = &quot;Page links&quot;;
+var format = new RestMule!TFormattedString;
+format.label = &quot;Link&quot;;
+format.name = format.label;
+link.type = format;
+pagination.links = link;
+
+api.pagination = pagination;
+
+// WRAPPER
+
+var wrapper = new RestMule!Wrapper;
+wrapper.name = &quot;Wrapper&quot;;
+var items = new RestMule!ListType;
+items.label = &quot;items&quot;;
+wrapper.items = items;
+wrapper.totalLabel= &quot;total_count&quot;;
+wrapper.incompleteLabel = &quot;incomplete_results&quot;;
+api.pageWrapper = wrapper;
+
+// ADD RATE &amp; WRAPPER TO REQUESTS (FIXME)
+
+for (r in RestMule!Request.all){
+    if (r.parent.path.startsWith(&quot;/search&quot;)){
+        r.scope = search;
+    } else {
+        r.scope = entity;
+    }
+    r.parameters.removeAll(r.parameters.select(p|p.instanceOf(RequestHeader)));
+    for (resp in r.responses.select(s|s.responseType &lt;&gt; null)){
+        resp.unwrap();
+    }
+}
+
+/*  //////////
+ * OPERATIONS
+ *//////////
+operation RestMule!ObjectType hasWrapper() : Boolean {
+    var wrapper = RestMule!Wrapper.all.first;
+    var lists = self.listFields.collect(a|a.label);
+    return (not lists.isEmpty()) and lists
+        .includes(wrapper.items.label);
+}
+
+operation RestMule!Response unwrap() : RestMule!ObjectType{
+    if (self.responseType.instanceOf(ObjectType)){
+        if (self.responseType.hasWrapper()){
+            (&quot;Unwrapping : &quot;+ self.responseType.name).println;
+            var wrapper = RestMule!Wrapper.all.first;
+            var name = self.responseType.name.println;
+            self.responseType = self.responseType.println.listFields
+                .select(b| b.label == wrapper.items.label).first.elements.first;            
+            self.responseType.name = name;
+            self.pageWrapped = true;
+            self.responseType.description = &quot;UNWRAPPED: &quot; + self.responseType.description;
+        }
+    }
+}
+</code></pre>
+
+<p>After this, we can run the generator and it will generate our <code>Java Project</code> from the specification.</p>
+<p>In the attached zip you can find all of the releated projects and files. There is a spring-boot server, which can serve the request, a java client, which uses the generated project, an eclipse plug-in project which also uses the generated project, the generated project and the additional files for the generator. And there is one more project, which provides the proper dependecies for the plug-in project.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../REST-API-Documentation/" class="btn btn-neutral" title="REST API Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../REST-API-Documentation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>

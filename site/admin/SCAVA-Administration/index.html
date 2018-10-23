@@ -81,37 +81,16 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
     <li class="toctree-l1 current">
         <a class="current" href="./">SCAVA Administration</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#administration-dashboard-installation">Administration Dashboard Installation</a></li>
+                <li class="toctree-l3"><a href="#scava-administration">Scava Administration</a></li>
                 
-                    <li><a class="toctree-l4" href="#prerequired">Prerequired</a></li>
+                    <li><a class="toctree-l4" href="#administration-dashboard-installation">Administration Dashboard Installation</a></li>
                 
-                    <li><a class="toctree-l4" href="#get-started-scava-administration">Get Started Scava Administration</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#scava-dashboard-deployment">Scava Dashboard Deployment</a></li>
-                
-                    <li><a class="toctree-l4" href="#using-the-development-profile">Using the development profile:</a></li>
-                
-                    <li><a class="toctree-l4" href="#using-the-production-profile">Using the production profile:</a></li>
+                    <li><a class="toctree-l4" href="#scava-dashboard-deployment">Scava Dashboard Deployment</a></li>
                 
             
             </ul>
@@ -158,14 +137,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -180,28 +159,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../../development/Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -215,14 +194,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../../development/Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -232,12 +232,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -281,9 +295,12 @@
           <div role="main">
             <div class="section">
               
-                <p>The SCAVA administration dashboard take care of:
-<em> Provide user administration feature, including user profile activation service and roles based authorization management.
-</em> Provide services to analyse automatically open source software projects.</p>
+                <h1 id="scava-administration">Scava Administration</h1>
+<p>The SCAVA administration dashboard take care of:</p>
+<ul>
+<li>Provide user administration feature, including user profile activation service and roles based authorization management.</li>
+<li>Provide services to analyse automatically open source software projects.</li>
+</ul>
 <h2 id="administration-dashboard-installation">Administration Dashboard Installation</h2>
 <h3 id="prerequired">Prerequired</h3>
 <p>The SCAVA administration dashboard  is front end web application based on Angular Framework. It can be executed in both Linux or Windows systems where it's required the installation of the following tools:</p>
@@ -321,7 +338,7 @@
         <a href="../../architecture/API-Gateway-Component/" class="btn btn-neutral float-right" title="API Gateway Component">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Platform-configuration/" class="btn btn-neutral" title="Platform configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Access-to-MongoDB-database-using-PONGO/" class="btn btn-neutral" title="Access to MongoDB database using PONGO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -347,7 +364,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Platform-configuration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Access-to-MongoDB-database-using-PONGO/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../../architecture/API-Gateway-Component/" style="color: #fcfcfc">Next &raquo;</a></span>

@@ -8,7 +8,7 @@
   
   
   
-  <title>CROSSMINER Repository Organisation - Eclipse Scava</title>
+  <title>Running Scava in Eclipse - Eclipse Scava</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "CROSSMINER Repository Organisation";
-    var mkdocs_page_input_path = "development/CROSSMINER-Repository-Organisation.md";
-    var mkdocs_page_url = "/development/CROSSMINER-Repository-Organisation/";
+    var mkdocs_page_name = "Running Scava in Eclipse";
+    var mkdocs_page_input_path = "development/Running-Scava-in-Eclipse.md";
+    var mkdocs_page_url = "/development/Running-Scava-in-Eclipse/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -140,14 +126,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -162,38 +148,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Licensing/">CROSSMINER Licensing</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">CROSSMINER Repository Organisation</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#general-organisation">General organisation</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#comments">Comments</a></li>
-                
-            
-            </ul>
+        <a class="" href="../Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../Development-Guidelines/">Development Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -207,14 +183,39 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Running Scava in Eclipse</a>
+        
+            <ul>
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -224,12 +225,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -263,7 +278,7 @@
         
       
     
-    <li>CROSSMINER Repository Organisation</li>
+    <li>Running Scava in Eclipse</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -273,24 +288,18 @@
           <div role="main">
             <div class="section">
               
-                <p>The SCAVA code repository  is organized by functional components with one package for each of this components. </p>
-<h3 id="general-organisation">General organisation</h3>
-<ul>
-<li>metric-platform </li>
-<li>platform : Core projects of the metric platform</li>
-<li>platform-extensions : Extensions of the metric platform</li>
-<li>metric-providers : Metric Providers implementations projects</li>
-<li>factoids : Factoids implementations projects</li>
-<li>tests : Test projects related to the metric-platform</li>
-<li>web-dashboards : DevOps Dashboard and DevOpsDashboard components </li>
-<li>knowledge-base : Knowledge Base implementation</li>
-<li>Workflow Execution Engine : Workflow Execution Engine implementation</li>
-<li>eclipse-based-ide : SCAVA Eclipse plugin</li>
-<li>api-gateway :  API Gateway implementation.</li>
-<li>administration : Administration component implementation</li>
-<li>mingration : Temporary directory which contains sources which are currently required to run the platform but that will be replaced during the project. </li>
-</ul>
-<h2 id="comments">Comments</h2>
+                <p>This page gives <strong>general guidelines for running Ossmeter platform in Eclipse</strong></p>
+<p>The screeshot below will be used as a reference : </p>
+<p><a href="http://ibb.co/mRUAVm"><img src="http://preview.ibb.co/fty4qm/eclipse_Product.png" alt="eclipse Product" border="0" /></a></p>
+<p>(Eclipse version used in screenshot : Eclipse Java EE IDE for Web developers Luna 2 (4.4.2) )</p>
+<p>1) We compile with <code>Ossmeterfromfeature.product</code> file in <code>org.ossmeter.platform.osgi</code> (highlighted above)
+2) In the file we put program arguements : <code>-apiServer</code>, <code>-master</code>, <code>-slave</code>. More information on https://github.com/crossminer/crossminer/wiki/Running-the-platform
+3) We must validate with the button on corner top right (highlighted above). This will add the required packages.
+4) If the required packages are still missing, go to <code>Run Configurations -&gt; Plug-ins</code> and click on <code>Add Required Plugins</code>.</p>
+<p><a href="http://ibb.co/fjC5Vm"><img src="http://preview.ibb.co/gHoeqm/Eclipse2.jpg" alt="Eclipse2" border="0" /></a></p>
+<p>5) You could also check the <code>general information</code>, if its the same (as in the screenshot below).</p>
+<p><a href="http://ibb.co/mk89O6"><img src="http://preview.ibb.co/n2JnAm/Eclipse_Overview.png" alt="Eclipse Overview" border="0" /></a></p>
+<p>These were some of the things for running the platform. If there is any issue still, do not hesitate to contact us.</p>
               
             </div>
           </div>
@@ -298,10 +307,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Developement-Guidelignes/" class="btn btn-neutral float-right" title="Developement Guidelignes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Testing-Guidelines/" class="btn btn-neutral float-right" title="Testing Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../CROSSMINER-Licensing/" class="btn btn-neutral" title="CROSSMINER Licensing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Repository-Organisation/" class="btn btn-neutral" title="Repository Organisation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -327,10 +336,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../CROSSMINER-Licensing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Repository-Organisation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Developement-Guidelignes/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Testing-Guidelines/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   
   
-  <title>Docker Ossmeter - Eclipse Scava</title>
+  <title>Testing Guidelines - Eclipse Scava</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Docker Ossmeter";
-    var mkdocs_page_input_path = "deploy/Docker-Ossmeter.md";
-    var mkdocs_page_url = "/deploy/Docker-Ossmeter/";
+    var mkdocs_page_name = "Testing Guidelines";
+    var mkdocs_page_input_path = "development/Testing-Guidelines.md";
+    var mkdocs_page_url = "/development/Testing-Guidelines/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -118,35 +118,22 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Docker Ossmeter</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#docker-ossmeter">Docker Ossmeter</a></li>
-                
-                    <li><a class="toctree-l4" href="#running-the-ossmeter-docker-image">Running the Ossmeter docker image</a></li>
-                
-                    <li><a class="toctree-l4" href="#building-the-ossmeter-docker-image">Building the Ossmeter docker image</a></li>
-                
-                    <li><a class="toctree-l4" href="#continuous-integration">Continuous integration</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Platform-configuration/">Platform configuration</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -161,70 +148,77 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Component-Naming/">Component Naming</a>
+        <a class="" href="../Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Contributing/">Contributing</a>
+        <a class="" href="../Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
+        <a class="" href="../Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+        <a class="" href="../Implementing-Restlet-Service/">Implementing Restlet Service</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Licensing/">Licensing</a>
+        <a class="" href="../Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        <a class="" href="../Naming-Scava-REST-Services/">Naming Scava REST Services</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        <a class="" href="../Repository-Organisation/">Repository Organisation</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        <a class="" href="../Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Testing Guidelines</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#knowledge-base">Knowledge Base</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -283,11 +277,11 @@
     
       
         
-          <li>Deploy &raquo;</li>
+          <li>Development &raquo;</li>
         
       
     
-    <li>Docker Ossmeter</li>
+    <li>Testing Guidelines</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -297,46 +291,17 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="docker-ossmeter">Docker Ossmeter</h1>
-<p>This page lists information about the Ossmeter docker image. It should be noted that the generated image uses the old <a href="https://github.com/ossmeter/ossmeter">Ossmeter binaries</a> and will not be updated -- all new development will go into the Crossminer repository.</p>
-<p>All images are stored on the <a href="https://hub.docker.com/u/crossminer/dashboard/">Crossminer Docker-hub account</a>.</p>
-<p>The Docker image is composed of 4 services: </p>
-<ul>
-<li>oss-web: corresponds to the service of OSSMETER platform website.</li>
-<li>oss-app: service running api server and the orchestrator of OSSMETER slave instances.</li>
-<li>oss-slave: service corresponding to the OSSMETER slaves responsible for the analysis of software projects. There can be several slaves serving the same master for load balancing.</li>
-<li>oss-db: service responsible for the the storage of OSSMETER data. Uses a MongoDB image.</li>
-</ul>
-<p>The database comes pre-populated with a project and a user. The loaded dump comes from <a href="https://github.com/md2manoppello/OSSMETER_DUMP">md2manoppello's repo</a>. Login information:</p>
-<ul>
-<li>user: <code>demo@crossminer.org</code></li>
-<li>password: <code>demo18</code></li>
-</ul>
-<p>Custom quality is in the user object (demo@crossminer.org) stored in the users collection of users db. It resembles the <a href="https://github.com/crossminer/crossminer/blob/dev/web/org-ossmeter-webapp/conf/quality/qualitymodel.json">demo quality model</a>.</p>
-<h2 id="running-the-ossmeter-docker-image">Running the Ossmeter docker image</h2>
-<p>The easiest way to build the full stack is to run the docker-compose file:</p>
-<pre><code>$ docker-compose up
+                <h2 id="knowledge-base">Knowledge Base</h2>
+<p>This builds needs some configuration to run successfully. </p>
+<p>In the application.properties files:
+<em> <code>/knowledge-base/org.eclipse.scava.knowledgebase/src/main/resources/application.properties</code>
+</em> <code>/knowledge-base/org.eclipse.scava.knowledgebase/src/test/resources/application.properties</code></p>
+<p>Edit the following parameters:</p>
+<pre><code>lucene.index.folder=/tmp/scava_lucene/
+egit.github.token=3f5accc2f8f4cXXXXXXXXX73b201692fc1df57
 </code></pre>
 
-<p>This command will download the images and run them. The application is then available on <a href="http://localhost:9000">localhost:9000</a>.</p>
-<h2 id="building-the-ossmeter-docker-image">Building the Ossmeter docker image</h2>
-<p>Two containers actually need to be built. They can be built individually.</p>
-<h3 id="oss-platform">oss-platform</h3>
-<p>Build the image from the oss-platform directory:</p>
-<pre><code>$ docker build -t bbaldassari/ossmeter-platform .
-Sending build context to Docker daemon  3.072kB
-Step 1/5 : FROM openjdk:8-jdk
-</code></pre>
-
-<h3 id="oss-web">oss-web</h3>
-<p>Build the image from the oss-web directory:</p>
-<pre><code>$ docker build -t bbaldassari/ossmeter-web .
-Sending build context to Docker daemon  3.072kB
-Step 1/7 : FROM openjdk:8-jre-alpine
-</code></pre>
-
-<h2 id="continuous-integration">Continuous integration</h2>
-<p>We use Codefresh for the CI of our docker images. The latest demo instance of generated docker images can be found in the <code>#ci</code> channel in Slack.</p>
+<p>To generate the GitHub access token you need to go to <a href="https://github.com/settings/tokens">your own GitHub account</a> and create a new one. Once it's done simply restart the tests, they should pass.</p>
               
             </div>
           </div>
@@ -344,10 +309,10 @@ Step 1/7 : FROM openjdk:8-jre-alpine
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Platform-configuration/" class="btn btn-neutral float-right" title="Platform configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../users/Consuming-REST-Services/" class="btn btn-neutral float-right" title="Consuming REST Services">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../architecture/Authentication-Component/" class="btn btn-neutral" title="Authentication Component"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Running-Scava-in-Eclipse/" class="btn btn-neutral" title="Running Scava in Eclipse"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -373,10 +338,10 @@ Step 1/7 : FROM openjdk:8-jre-alpine
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../architecture/Authentication-Component/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Running-Scava-in-Eclipse/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Platform-configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../users/Consuming-REST-Services/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

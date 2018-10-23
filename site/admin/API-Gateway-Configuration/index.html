@@ -95,20 +95,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -153,14 +139,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -175,28 +161,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../../development/Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -210,14 +196,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../../development/Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -227,12 +234,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -278,9 +299,9 @@
               
                 <h1 id="api-gateway-configuration">API Gateway configuration</h1>
 <h2 id="when-to-use-this-guideline">When to use this guideline ?</h2>
-<p>This guideline presents how to configure the CROSSMINER Gateway in order to integrate a new remote REST API.</p>
+<p>This guideline presents how to configure the Scava Gateway in order to integrate a new remote REST API.</p>
 <h2 id="context">Context</h2>
-<p>The CROSSMINER Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the CROSSMINER Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
+<p>The Scava Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the Scava Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
 <h3 id="routing-service-configuration">Routing : Service Configuration</h3>
 <p>To reference a new remote REST API in the gateway, you have to add  2 new properties in the application.properties configuration file : the relative path of services  which will be integrated to this route and the redirection URL.All requests sent to the gateway which start by this relatice path will be redirected to the output url after the authentication process.</p>
 <p>Examples :
@@ -309,7 +330,7 @@ zuul.routes.test2.url=http://127.0.0.1:8083/test2
 </code></pre>
 
 <h2 id="comments">Comments</h2>
-<p>More information about API Gateway configuration : [[API Gateway Component]]</p>
+<p>More information about API Gateway configuration: <a href="../../architecture/API-Gateway-Component">API Gateway Component</a></p>
               
             </div>
           </div>

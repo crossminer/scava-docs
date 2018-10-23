@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -161,14 +147,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -183,28 +169,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../../development/Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../../development/Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -218,14 +204,35 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../../development/Licensing/">Licensing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../development/Testing-Guidelignes/">Testing Guidelignes</a>
+        <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -235,12 +242,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -285,22 +306,22 @@
             <div class="section">
               
                 <h1 id="the-api-gateway-component">The API Gateway component</h1>
-<p>The CROSSMIER API Gateway :</p>
+<p>The Scava API Gateway :</p>
 <ul>
-<li>Provide a centralized access point to all web services implemented by the differents tools involved in the platform (DevOps Dashboard,Workflow Execution Engine,Knowledge Base,Metric Provider,Administration Application).</li>
-<li>Provide a centralized mechanisms to secuerize CROSSMINER web services and manage authentication  required to access to this services.</li>
+<li>Provide a centralized access point to all web services implemented by the differents tools involved in the platform (DevOps Dashboard, Workflow Execution Engine, Knowledge Base, Metric Provider, Administration Application).</li>
+<li>Provide a centralized mechanisms to secuerize Scava web services and manage authentication  required to access to this services.</li>
 </ul>
 <h2 id="api-gateway-architecture">API Gateway Architecture</h2>
 <p>The API Gateway  is a pattern which come form microserivces echosystem. An API Gateway is a single point of entry (and control) for front end clients, which could be browser based or mobile. The client only has to know the URL of one server, and the backend can be refactored at will with no change.</p>
-<p>The API Gateway act as a revers web proxy in which can be integrated others functions like load balancing and authentication. In case of the CROSSMINER platform, the  API Gateway will manage the authentication for all services of the platform.  </p>
+<p>The API Gateway act as a revers web proxy in which can be integrated others functions like load balancing and authentication. In case of the Scava platform, the  API Gateway will manage the authentication for all services of the platform.  </p>
 <p><img src="https://zupimages.net/up/18/07/k2wp.png" width="800"></p>
 <h2 id="authentication-mechanism">Authentication Mechanism</h2>
 <h4 id="json-web-tokens">JSON Web Tokens</h4>
-<p>The CROSSMIER API Gateway is secruized using JSON Web Tokens (JWT) mechanism, an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.</p>
+<p>The Scava API Gateway is secruized using JSON Web Tokens (JWT) mechanism, an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.</p>
 <p>In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned and must be saved locally, instead of the traditional approach of creating a session in the server and returning a cookie.When the client request an access to a protected service ,the server's protected routes will check for a valid JWT in the Authorization header of the request, and if it's present, the user will be allowed to access protected resources. (More about JWT : https://jwt.io)</p>
 <p><img src="https://cdn.auth0.com/content/jwt/jwt-diagram.png" width="600"></p>
 <h4 id="authentication-architecture">Authentication Architecture</h4>
-<p>In CROSSMINER, the authentification service is a sub component of the Administration Application which centralise Right Management for the whole platform. As for the others services, the authentication service is accessed behind the API Gateway.</p>
+<p>In Scava, the authentification service is a sub component of the Administration Application which centralise Right Management for the whole platform. As for the others services, the authentication service is accessed behind the API Gateway.</p>
 <p><img src="https://zupimages.net/up/18/07/y9nf.png" width="300"></p>
 <h4 id="authentication-flow">Authentication Flow</h4>
 <ol>
@@ -309,10 +330,10 @@
 </ol>
 <p><img src="https://zupimages.net/up/18/07/4i2a.png" width="600"></p>
 <h2 id="implementation">Implementation</h2>
-<p>The implementation of the gateway is based on Zuul proxy, a component of the spring-cloud project, an extention ofthe spring framework dedicated to microservices architectures.</p>
+<p>The implementation of the gateway is based on Zuul proxy, a component of the spring-cloud project, an extention of the spring framework dedicated to microservices architectures.</p>
 <p>https://projects.spring.io/spring-cloud/spring-cloud.html#_router_and_filter_zuul</p>
 <h2 id="api-gateway-configuration">API Gateway Configuration</h2>
-<p>The CROSSMINER Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the CROSSMINER Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
+<p>The Scava Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the Scava Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
 <h3 id="server-configuration">Server Configuration</h3>
 <table>
 <tr><td><b>id : </b>server.port</td><td><b>default :</b> 8086</td></tr>
@@ -343,7 +364,7 @@
 
 <table>
 <tr><td><b>id : </b>zuul.routes.auth-center.url</td><td><b>default :</b> NA</td></tr>
-<tr><td colspan="3">URL of the authentification server. Example :http://127.0.0.1:8081/ </td></tr>
+<tr><td colspan="3">URL of the authentification server. Example: http://127.0.0.1:8081/ </td></tr>
 </table>
 
 <table>
@@ -393,7 +414,7 @@ zuul.routes.test2.url=http://127.0.0.1:8083/test2
 </code></pre>
 
 <h3 id="control-access-api">Control access API</h3>
-<p>The CROSSMINER platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the CROSSMINER's APIS, including:
+<p>The Scava platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the Scava's APIS, including:
 <em> “ROLE_ADMIN”
 </em> “ROLE_PROJECT_MANAGER”
 * “ROLE_USER”</p>
@@ -427,10 +448,8 @@ scava.routes.config.userAccessApi[3]=/api/account
 </code></pre>
 
 <h2 id="client-implementation">Client Implementation</h2>
-<table>
-<tr><td>[[How to consume a CROSSMINER REST services ? | Consuming REST Services]]</td></tr>
-<tr><td>This guideline is dedicated to clients which would like to used CORSSMINER REST Services.It adress authentication issues</td></tr>
-</table>
+<p><a href="../../users/Consuming-REST-Services">How to consume a Scava REST services ?</a> \
+This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.</p>
               
             </div>
           </div>

@@ -8,7 +8,7 @@
   
   
   
-  <title>Testing Guidelignes - Eclipse Scava</title>
+  <title>Repository Organisation - Eclipse Scava</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Testing Guidelignes";
-    var mkdocs_page_input_path = "development/Testing-Guidelignes.md";
-    var mkdocs_page_url = "/development/Testing-Guidelignes/";
+    var mkdocs_page_name = "Repository Organisation";
+    var mkdocs_page_input_path = "development/Repository-Organisation.md";
+    var mkdocs_page_url = "/development/Repository-Organisation/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -82,20 +82,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../admin/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../admin/Platform-configuration/">Platform configuration</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
         
     </li>
@@ -140,14 +126,14 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+        <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../deploy/">Home</a>
+        <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
         
     </li>
 
@@ -162,28 +148,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Component-Naming/">CROSSMINER Component Naming</a>
+        <a class="" href="../Component-Naming/">Component Naming</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Licensing/">CROSSMINER Licensing</a>
+        <a class="" href="../Contributing/">Contributing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../CROSSMINER-Repository-Organisation/">CROSSMINER Repository Organisation</a>
+        <a class="" href="../Development-Guidelines/">Development Guidelines</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Developement-Guidelignes/">Developement Guidelignes</a>
+        <a class="" href="../Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
         
     </li>
 
@@ -197,21 +183,45 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Naming-Crossminer-REST-Services/">Naming Crossminer REST Services</a>
+        <a class="" href="../Licensing/">Licensing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Naming-Scava-REST-Services/">Naming Scava REST Services</a>
         
     </li>
 
         
             
     <li class="toctree-l1 current">
-        <a class="current" href="./">Testing Guidelignes</a>
+        <a class="current" href="./">Repository Organisation</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#knowledge-base">Knowledge Base</a></li>
+                <li class="toctree-l3"><a href="#general-organisation">General organisation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#comments">Comments</a></li>
                 
             
             </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Testing-Guidelines/">Testing Guidelines</a>
         
     </li>
 
@@ -221,12 +231,26 @@
           
             <li>
     <ul class="subnav">
-    <li><span>Using</span></li>
+    <li><span>Users</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../using/Consuming-REST-Services/">Consuming REST Services</a>
+        <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
         
     </li>
 
@@ -260,7 +284,7 @@
         
       
     
-    <li>Testing Guidelignes</li>
+    <li>Repository Organisation</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -270,17 +294,24 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="knowledge-base">Knowledge Base</h2>
-<p>This builds needs some configuration to run successfully. </p>
-<p>In the application.properties files:
-<em> <code>/knowledge-base/org.eclipse.scava.knowledgebase/src/main/resources/application.properties</code>
-</em> <code>/knowledge-base/org.eclipse.scava.knowledgebase/src/test/resources/application.properties</code></p>
-<p>Edit the following parameters:</p>
-<pre><code>lucene.index.folder=/tmp/scava_lucene/
-egit.github.token=3f5accc2f8f4cXXXXXXXXX73b201692fc1df57
-</code></pre>
-
-<p>To generate the GitHub access token you need to go to <a href="https://github.com/settings/tokens">your own GitHub account</a> and create a new one. Once it's done simply restart the tests, they should pass.</p>
+                <p>The SCAVA code repository  is organized by functional components with one package for each of this components. </p>
+<h3 id="general-organisation">General organisation</h3>
+<ul>
+<li>metric-platform </li>
+<li>platform : Core projects of the metric platform</li>
+<li>platform-extensions : Extensions of the metric platform</li>
+<li>metric-providers : Metric Providers implementations projects</li>
+<li>factoids : Factoids implementations projects</li>
+<li>tests : Test projects related to the metric-platform</li>
+<li>web-dashboards : DevOps Dashboard and DevOpsDashboard components </li>
+<li>knowledge-base : Knowledge Base implementation</li>
+<li>Workflow Execution Engine : Workflow Execution Engine implementation</li>
+<li>eclipse-based-ide : SCAVA Eclipse plugin</li>
+<li>api-gateway :  API Gateway implementation.</li>
+<li>administration : Administration component implementation</li>
+<li>mingration : Temporary directory which contains sources which are currently required to run the platform but that will be replaced during the project. </li>
+</ul>
+<h2 id="comments">Comments</h2>
               
             </div>
           </div>
@@ -288,10 +319,10 @@ egit.github.token=3f5accc2f8f4cXXXXXXXXX73b201692fc1df57
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../using/Consuming-REST-Services/" class="btn btn-neutral float-right" title="Consuming REST Services">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Running-Scava-in-Eclipse/" class="btn btn-neutral float-right" title="Running Scava in Eclipse">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Naming-Crossminer-REST-Services/" class="btn btn-neutral" title="Naming Crossminer REST Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Naming-Scava-REST-Services/" class="btn btn-neutral" title="Naming Scava REST Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -317,10 +348,10 @@ egit.github.token=3f5accc2f8f4cXXXXXXXXX73b201692fc1df57
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Naming-Crossminer-REST-Services/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Naming-Scava-REST-Services/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../using/Consuming-REST-Services/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Running-Scava-in-Eclipse/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
