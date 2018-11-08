@@ -67,28 +67,33 @@ A complementary practice to CI is that before submitting work, each programmer m
 * Quality analysis on source code
 * Perform all the necessary actions to create a fully functioning build of the software when all tests have passed
 
+The currently used CI server is available at http://ci5.castalia.camp:8080/ 
 
 ### Development and Production environments
 
-According to the DoW we have not promised the availability of a public installation of the Scava platform (i.e., a production environment). However, in order to implement the different use cases it might be the case of providing use case partners with at least a development environment, which will be used by all the members of the consortium. The effectiveness, precision, etc. of the Scava recommendations will very much depend on the available and analyzed data. Having different installations of the system might not be an efficient way to collect data and produce a big enough knowledge base, which is required to support the use case implementations.
+According to the DoW we have not promised the availability of a public installation of the CROSSMINER platform (i.e., a production environment). However, in order to implement the different use cases, use case partners are provided with docker images enabling the local installation of the whole CROSSMINER platform.
 
 ## Naming and change conventions
 
 The repository will contain the code of the high-level components shown in Table 1
 
 
-| Components                       | Leader |
-|---------------------------------------|-----------|
-| Source code analysis tools  | CWI |
-| Natural language analysis tools | EHU |
-| System conﬁguration analysis tools  | AUEB |
-| Workﬂow-based knowledge extractors | YORK|
-| Cross-project relationship analysis tools | UDA |
-| Extensions for the Eclipse IDE | FEA |
-| Web based dashboards | BIT |
-| Integration Core | SFT, UNP |
-| Scava APIs | SFT, UNP |
-Table 1: Main Scava components and corresponding leaders
+| Components | Corresponding folder in repository | Leader |
+|------------|---------------------------------|-----------|
+| DevOps Dashboard  | | CWI |
+| Workflow Diagram Editor | /crossflow| EHU |
+| Administration Web Application | /administration | AUEB |
+| IDE | /eclipse-based-ide | YORK|
+| API Gateway | /api-gateway | UDA |
+| DevOps Backend | | FEA |
+| Knowledge Base | /knowledge-base | BIT |
+| Project Analyser | /metric-platform | SFT, UNP |
+| Data Collector | /metric-platform | SFT, UNP |
+| Project Scheduler | /metric-platform | SFT, UNP |
+| Metric Providers | /metric-platform | SFT, UNP |
+| Data Storage | /metric-platform | SFT, UNP |
+| ElasticSearch | /metric-platform | SFT, UNP |
+Table 1: Leaders and Contributors of the CROSSMINER Deployment diagram nodes
 
 
 For each component a corresponding folder is available in the repository. Changes must have a CR (i.e. issue) entry for traceability. In particular, the requirements and objectives of each Scava components will be detailed in the relevant deliverables and they will be added in the form of items in the provided Bug Tracking infrastructure. In this way progress on the implementation of each requirement can be tracked. Thus:
@@ -99,9 +104,10 @@ For each component a corresponding folder is available in the repository. Change
 The partner in charge of managing the development of a component will be free to organize the content of the corresponding subdirectory in any way as long as the following standard ﬁles/directories are contained in the component folder:
 
 * readme.md. This ﬁle will contain the entry-point to all documentation for the component.
-* Other legal documentation as described in the [Eclipse process handbook](https://www.eclipse.org/projects/handbook/#legaldoc).
-* build: This will be a ﬁle containing executable script code which can automatically run on the target environment. The objective of this build script is to do whatever automated operations are necessary (such as compiling and packaging) to produce a working component.
-* tests: this is a folder containing the unit and/or integration tests
+* Jenkinsfile: In order to compile the component, run tests, etc on the CI server.
+* test: this is a folder containing the unit and/or integration tests.
+
+As a reference, please have a look at https://github.com/crossminer/scava/tree/master/knowledge-base 
 
 ## Communication and collaboration means
 
