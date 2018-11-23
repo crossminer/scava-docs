@@ -10,9 +10,10 @@ Useful links:
 
 ## Platform installation
 
-* [Docker-SCAVA](deploy/Docker-SCAVA) How to build and run the Ossmeter docker image.
+* [Docker-SCAVA](deploy/Docker-SCAVA) How to build and run the Scava docker image.
 * [Running the platform](deploy/Running-the-platform) Quick start guide to get the Scava platform running from source on an Eclipse development environment.
 * [Configuring the platform](deploy/Platform-configuration) Quick start guide to present how to configure the platform using a configuration file.
+* [Docker-OSSMETER](deploy/Docker-OSSMETER) How to build and run the Ossmeter docker image.
 
 ## Administration
 
