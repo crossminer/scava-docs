@@ -40,8 +40,11 @@ This will build required images and pull images hosted on docker hub.
 
 In order to run Scava, you need to:
 
-* Edit the host machine's /etc/hosts file and add `127.0.0.1     admin-webapp`.
-* Anything else?
+1. Edit the hosts of your machine, creating a new record for the IP address: `127.0.0.1` with hostname: `admin-webapp`
+1. Edit the `externalConfig.json` file inside `web-admin/angular/` docker image and put inside it the IP address of your host as follow:
+   {
+    "SERVICE_URL" :"http://HOST-IP:8086"
+   }
 
 ## Running the locally built docker images
 
@@ -51,6 +54,9 @@ To run the locally built images, run the following command. Note that if the ima
 $ docker-compose -f docker-compose-build.yml up
 ```
 
+Access the administration web app by using the following address in the web browser: http://admin-webapp/
+For login use user: admin  pass: admin
+
 ## Running the pre-built docker images
 
 The easiest way to run the full Scava setup is to use the docker images [stored on Docker Hub](https://hub.docker.com/r/crossminer/). Use the `docker-compose-dockerhub.yml` file to download all required images and start the stack:
@@ -58,6 +64,9 @@ The easiest way to run the full Scava setup is to use the docker images [stored 
 ```
 $ docker-compose -f docker-compose-dockerhub.yml up
 ```
+Access the administration web app by using the following address in the web browser: http://admin-webapp/
+
+For login use user: admin  pass: admin
 
 
 ## Continuous integration
