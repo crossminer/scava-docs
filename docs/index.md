@@ -5,6 +5,7 @@ This web site is the main documentation place for the [Eclipse Scava](https://pr
 
 Useful links:
 
+* Eclipse Scava home project: [Eclipse Scava @ Eclipse](https://projects.eclipse.org/projects/technology.scava)
 * Eclipse Scava code repository: [github.com/crossminer/scava](https://github.com/crossminer/scava)
 * Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
 
@@ -38,5 +39,5 @@ Useful links:
 
 ## Architecture
 
-* [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allow to access to all Scava REST servicies using a centralised and securised common gateway.
+* [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allows to access to all Scava REST services using a centralised and securised common gateway.
 * [Authentication Component](architecture/Authentication-Component) The administration dashboard takes care of managing Scava's services.
