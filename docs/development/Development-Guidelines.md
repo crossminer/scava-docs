@@ -18,7 +18,7 @@ Figure 1. Overview of the CROSSMINER development process and tools
 
 ### Source Code Repository
 
-Different branches will be created in the repository. In particular, the `master` branch is the main branch and represents the released state of the product. The `dev` branch contains the most recent code integrated by partners before release. These two branches are always clean, build and run all the tests successfully.
+Different branches will be created in the repository. In particular, the `master` branch is the main branch and represents the released state of the product. It is always clean, builds and runs all the tests successfully. The `dev` branch contains the most recent code integrated by partners before release.
 
 Other branches will be created for the different features/components, which will be eventually merged in the `dev` branch. The name of each branch contains the id of the issue it is supposed to implement.
 
@@ -67,7 +67,7 @@ A complementary practice to CI is that before submitting work, each programmer m
 * Quality analysis on source code
 * Perform all the necessary actions to create a fully functioning build of the software when all tests have passed
 
-The currently used CI server is available at http://ci5.castalia.camp:8080/ 
+The currently used CI server is available at http://ci5.castalia.camp:8080/
 
 ### Development and Production environments
 
@@ -80,21 +80,24 @@ The repository will contain the code of the high-level components shown in Table
 
 | Components | Corresponding folder in repository | Leader |
 |------------|---------------------------------|-----------|
-| DevOps Dashboard  | | CWI |
-| Workflow Diagram Editor | /crossflow| EHU |
-| Administration Web Application | /administration | AUEB |
-| IDE | /eclipse-based-ide | YORK|
-| API Gateway | /api-gateway | UDA |
-| DevOps Backend | | FEA |
-| Knowledge Base | /knowledge-base | BIT |
-| Project Analyser | /metric-platform | SFT, UNP |
-| Data Collector | /metric-platform | SFT, UNP |
-| Project Scheduler | /metric-platform | SFT, UNP |
-| Metric Providers | /metric-platform | SFT, UNP |
-| Data Storage | /metric-platform | SFT, UNP |
-| ElasticSearch | /metric-platform | SFT, UNP |
+| DevOps Dashboard  | | BIT |
+| Workflow Diagram Editor | /crossflow| YORK |
+| Administration Web Application | /administration | SFT |
+| IDE | /eclipse-based-ide | FEA|
+| API Gateway | /api-gateway | SFT |
+| DevOps Backend | | BIT |
+| Knowledge Base | /knowledge-base | UDA |
+| Project Analyser | /metric-platform | SFT |
+| Data Collector | /metric-platform | SFT |
+| Project Scheduler | /metric-platform | SFT |
+| Metric Providers | /metric-platform | YORK, CWI, AUEB, EHU |
+| Data Storage | /metric-platform | SFT |
+| Web-based dashboards | /web-dashboards | BIT |
 Table 1: Leaders and Contributors of the CROSSMINER Deployment diagram nodes
 
+
+![Scava components architecture](images/scava_architecture.png)
+Figure 2: Scava components architecture
 
 For each component a corresponding folder is available in the repository. Changes must have a CR (i.e. issue) entry for traceability. In particular, the requirements and objectives of each Scava components will be detailed in the relevant deliverables and they will be added in the form of items in the provided Bug Tracking infrastructure. In this way progress on the implementation of each requirement can be tracked. Thus:
 
@@ -103,11 +106,23 @@ For each component a corresponding folder is available in the repository. Change
 
 The partner in charge of managing the development of a component will be free to organize the content of the corresponding subdirectory in any way as long as the following standard ﬁles/directories are contained in the component folder:
 
-* readme.md. This ﬁle will contain the entry-point to all documentation for the component.
-* Jenkinsfile: In order to compile the component, run tests, etc on the CI server.
-* test: this is a folder containing the unit and/or integration tests.
+* `readme.md` : this ﬁle will contain the entry-point to all documentation for the component.
+* `Jenkinsfile`: in order to compile the component, run tests, etc on the CI server.
+* `test`: this is a folder containing the unit and/or integration tests.
 
-As a reference, please have a look at https://github.com/crossminer/scava/tree/master/knowledge-base 
+As a reference, please have a look at https://github.com/crossminer/scava/tree/master/knowledge-base
+
+The following items are typical practices when applying CI:
+* Maintain a code repository
+* Automate the build
+* Make the build self-testing
+* Everyone commits to the baseline every day
+* Every commit (to baseline) should be built
+* Keep the build fast
+* Test in a clone of the production environment
+* Make it easy to get the latest deliverables
+* Everyone can see the results of the latest build
+* Automate deployment
 
 ## Communication and collaboration means
 
