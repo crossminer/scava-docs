@@ -33,6 +33,8 @@ Useful links:
 * [Contributing](development/Contributing) Collection of Architectural and Technical guidelines dedicated to Scava developers.
 * [Development guidelines](development/Development-Guidelines) Rules and guidelines used for the development of the Scava project.
 * [Testing Guidelines](development/Testing-Guidelines) Collection of testing guidelines dedicated to Scava developers.
+* [Running Scava in Eclipse](development/Running-Scava-in-Eclipse) How to setup and run the Scava Eclipse IDE plugin.
+* [How to develop a metric provider](development/How-To-Develop-Metric-Provider) Want to add a new metric provider? Here are some hints.
 
 ## Architecture
 
