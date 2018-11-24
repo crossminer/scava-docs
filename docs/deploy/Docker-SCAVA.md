@@ -68,6 +68,12 @@ Access the administration web app by using the following address in the web brow
 
 For login use user: admin  pass: admin
 
+## Configuring the GitHub token
+
+In order to use the GitHub connectors, one needs to setup an authentication mechanism. Simply create a authentication token in yourGitHub account, and create a new property in the webadmin UI:
+
+* key: githubToken
+* value: the github token created on the github account.
 
 ## Continuous integration
 
