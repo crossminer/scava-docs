@@ -11,24 +11,24 @@ Useful links:
 
 ## Platform installation
 
-* [Docker-SCAVA](deploy/Docker-SCAVA) How to build and run the Scava docker image.
-* [Running the platform](deploy/Running-the-platform) Quick start guide to get the Scava platform running from source on an Eclipse development environment.
-* [Configuring the platform](deploy/Platform-configuration) Quick start guide to present how to configure the platform using a configuration file.
-* [Docker-OSSMETER](deploy/Docker-OSSMETER) How to build and run the Ossmeter docker image.
+* [Docker-SCAVA](deploy/Docker-SCAVA.md) How to build and run the Scava docker image.
+* [Running the platform](deploy/Running-the-platform.md) Quick start guide to get the Scava platform running from source on an Eclipse development environment.
+* [Configuring the platform](deploy/Platform-configuration.md) Quick start guide to present how to configure the platform using a configuration file.
+* [Docker-OSSMETER](deploy/Docker-OSSMETER.md) How to build and run the Ossmeter docker image.
 
 ## Administration
 
-* [Scava Administration](admin/SCAVA-Administration) The administration dashboard take care of managing Scava's services.
-* [API Gateway Configuration](admin/API-Gateway-Configuration)
-* [Extending MongoDB Data Model](admin/Extend-MongoDB-Data-Model)
+* [Scava Administration](admin/SCAVA-Administration.md) The administration dashboard take care of managing Scava's services.
+* [API Gateway Configuration](admin/API-Gateway-Configuration.md)
+* [Extending MongoDB Data Model](admin/Extend-MongoDB-Data-Model.md)
 
 ## Users
 
-* [Scava metrics](users/Scava-Metrics) lists metrics computed by the various Scava Components.
-* [Consuming the REST services](users/Consuming-REST-Services) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues
-* [Running Scava in Eclipse](users/Running-Scava-in-Eclipse) How to setup and run the Scava Eclipse IDE plugin.
-* [REST API Documentation](users/REST-API-Documentation) Reference documentation of REST services provided by the Scava platform.
-* [REST API Generation](users/REST-API-Generation) Tutorial about automatic generation of REST API Scava library using OpenAPI.
+* [Scava metrics](users/Scava-Metrics.md) lists metrics computed by the various Scava Components.
+* [Consuming the REST services](users/Consuming-REST-Services.md) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues
+* [Running Scava in Eclipse](users/Running-Scava-in-Eclipse.md) How to setup and run the Scava Eclipse IDE plugin.
+* [REST API Documentation](users/REST-API-Documentation.md) Reference documentation of REST services provided by the Scava platform.
+* [REST API Generation](users/REST-API-Generation.md) Tutorial about automatic generation of REST API Scava library using OpenAPI.
 
 ## Development
 
@@ -41,5 +41,5 @@ Useful links:
 
 ## Architecture
 
-* [API Gateway Component](architecture/API-Gateway-Component) The API Gateway allows to access to all Scava REST services using a centralised and securised common gateway.
-* [Authentication Component](architecture/Authentication-Component) The administration dashboard takes care of managing Scava's services.
+* [API Gateway Component](architecture/API-Gateway-Component.md) The API Gateway allows to access to all Scava REST services using a centralised and securised common gateway.
+* [Authentication Component](architecture/Authentication-Component.md) The administration dashboard takes care of managing Scava's services.
