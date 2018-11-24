@@ -81,7 +81,7 @@ The repository will contain the code of the high-level components shown in Table
 | Components | Corresponding folder in repository | Leader |
 |------------|---------------------------------|-----------|
 | DevOps Dashboard  | | BIT |
-| Workflow Diagram Editor | /crossflow| YORK |
+| Workflow Diagram Editor | /crossflow | YORK |
 | Administration Web Application | /administration | SFT |
 | IDE | /eclipse-based-ide | FEA|
 | API Gateway | /api-gateway | SFT |

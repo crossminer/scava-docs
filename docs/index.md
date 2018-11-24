@@ -26,16 +26,18 @@ Useful links:
 
 * [Scava metrics](users/Scava-Metrics) lists metrics computed by the various Scava Components.
 * [Consuming the REST services](users/Consuming-REST-Services) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues
+* [Running Scava in Eclipse](users/Running-Scava-in-Eclipse) How to setup and run the Scava Eclipse IDE plugin.
 * [REST API Documentation](users/REST-API-Documentation) Reference documentation of REST services provided by the Scava platform.
 * [REST API Generation](users/REST-API-Generation) Tutorial about automatic generation of REST API Scava library using OpenAPI.
 
 ## Development
 
-* [Contributing](development/Contributing) Collection of Architectural and Technical guidelines dedicated to Scava developers.
-* [Development guidelines](development/Development-Guidelines) Rules and guidelines used for the development of the Scava project.
-* [Testing Guidelines](development/Testing-Guidelines) Collection of testing guidelines dedicated to Scava developers.
-* [Running Scava in Eclipse](development/Running-Scava-in-Eclipse) How to setup and run the Scava Eclipse IDE plugin.
-* [How to develop a metric provider](development/How-To-Develop-Metric-Provider) Want to add a new metric provider? Here are some hints.
+* [Contributing](development/Contributing.md) Collection of Architectural and Technical guidelines dedicated to Scava developers.
+* [Development guidelines](development/Development-Guidelines.md) Rules and guidelines used for the development of the Scava project.
+* [Testing Guidelines](development/Testing-Guidelines.md) Collection of testing guidelines dedicated to Scava developers.
+* [Repository-Organisation](development/Repository-Organisation.md)
+* [How to develop a metric provider](development/How-To-Develop-Metric-Provider.md) Want to add a new metric provider? Here are some hints.
+* [Licensing](development/Licensing.md) Information about licensing used within Scava.
 
 ## Architecture
 
