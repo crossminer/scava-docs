@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,19 @@
         
     <url>
      <loc>None/admin/API-Gateway-Configuration/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/admin/Access-to-MongoDB-database-using-PONGO/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/admin/SCAVA-Administration/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,13 +35,13 @@
         
     <url>
      <loc>None/architecture/API-Gateway-Component/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/architecture/Authentication-Component/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -51,19 +51,25 @@
         
     <url>
      <loc>None/deploy/Docker-Ossmeter/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/deploy/Docker-SCAVA/</loc>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/deploy/Platform-configuration/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/deploy/Running-the-platform/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -73,61 +79,61 @@
         
     <url>
      <loc>None/development/Component-Naming/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Contributing/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Development-Guidelines/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Extend-MongoDB-Data-Model/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Implementing-Restlet-Service/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Licensing/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Naming-Scava-REST-Services/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Repository-Organisation/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Running-Scava-in-Eclipse/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/development/Testing-Guidelines/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -137,19 +143,25 @@
         
     <url>
      <loc>None/users/Consuming-REST-Services/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/users/REST-API-Documentation/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/users/REST-API-Generation/</loc>
-     <lastmod>2018-10-23</lastmod>
+     <lastmod>2018-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/users/Scava-Metrics/</loc>
+     <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

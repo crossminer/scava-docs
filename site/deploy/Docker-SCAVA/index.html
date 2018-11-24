@@ -8,7 +8,7 @@
   
   
   
-  <title>Docker Ossmeter - Eclipse Scava</title>
+  <title>Docker SCAVA - Eclipse Scava</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Docker Ossmeter";
-    var mkdocs_page_input_path = "deploy/Docker-Ossmeter.md";
-    var mkdocs_page_url = "/deploy/Docker-Ossmeter/";
+    var mkdocs_page_name = "Docker SCAVA";
+    var mkdocs_page_input_path = "deploy/Docker-SCAVA.md";
+    var mkdocs_page_url = "/deploy/Docker-SCAVA/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -118,28 +118,34 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Docker Ossmeter</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#docker-ossmeter">Docker Ossmeter</a></li>
-                
-                    <li><a class="toctree-l4" href="#running-the-ossmeter-docker-image">Running the Ossmeter docker image</a></li>
-                
-                    <li><a class="toctree-l4" href="#building-the-ossmeter-docker-image">Building the Ossmeter docker image</a></li>
-                
-                    <li><a class="toctree-l4" href="#continuous-integration">Continuous integration</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../Docker-Ossmeter/">Docker Ossmeter</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../Docker-SCAVA/">Docker SCAVA</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Docker SCAVA</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#docker-scava">Docker SCAVA</a></li>
+                
+                    <li><a class="toctree-l4" href="#summary-of-containers">Summary of containers</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-the-docker-images">Building the Docker images</a></li>
+                
+                    <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
+                
+                    <li><a class="toctree-l4" href="#running-the-locally-built-docker-images">Running the locally built docker images</a></li>
+                
+                    <li><a class="toctree-l4" href="#running-the-pre-built-docker-images">Running the pre-built docker images</a></li>
+                
+                    <li><a class="toctree-l4" href="#continuous-integration">Continuous integration</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -301,7 +307,7 @@
         
       
     
-    <li>Docker Ossmeter</li>
+    <li>Docker SCAVA</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -311,44 +317,121 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="docker-ossmeter">Docker Ossmeter</h1>
-<p>This page lists information about the Ossmeter docker image. It should be noted that the generated image uses the old <a href="https://github.com/ossmeter/ossmeter">Ossmeter binaries</a> and will not be updated -- all new development will go into the Crossminer repository.</p>
-<p>All images are stored on the <a href="https://hub.docker.com/u/crossminer/dashboard/">Crossminer Docker-hub account</a>.</p>
-<p>The Docker image is composed of 4 services: </p>
-<ul>
-<li>oss-web: corresponds to the service of OSSMETER platform website.</li>
-<li>oss-app: service running api server and the orchestrator of OSSMETER slave instances.</li>
-<li>oss-slave: service corresponding to the OSSMETER slaves responsible for the analysis of software projects. There can be several slaves serving the same master for load balancing.</li>
-<li>oss-db: service responsible for the the storage of OSSMETER data. Uses a MongoDB image.</li>
-</ul>
-<p>The database comes pre-populated with a project and a user. The loaded dump comes from <a href="https://github.com/md2manoppello/OSSMETER_DUMP">md2manoppello's repo</a>. Login information:</p>
-<ul>
-<li>user: <code>demo@crossminer.org</code></li>
-<li>password: <code>demo18</code></li>
-</ul>
-<p>Custom quality is in the user object (demo@crossminer.org) stored in the users collection of users db. It resembles the <a href="https://github.com/crossminer/crossminer/blob/dev/web/org-ossmeter-webapp/conf/quality/qualitymodel.json">demo quality model</a>.</p>
-<h2 id="running-the-ossmeter-docker-image">Running the Ossmeter docker image</h2>
-<p>The easiest way to build the full stack is to run the docker-compose file:</p>
-<pre><code>$ docker-compose up
+                <h1 id="docker-scava">Docker SCAVA</h1>
+<p>This page is about how to deploy a SCAVA instance on the behalf of Docker.</p>
+<p>At the actual stage of the project, there two ways to get started with the docker images:
+1. Ready-to-use images are stored on the <a href="https://hub.docker.com/u/crossminer/">Crossminer Docker-hub account</a>.
+1. Build them from the <a href="https://github.com/crossminer/scava-deployment">scava-deployment</a> repository. They have to be built from various Dockerfile's and with help of a docker-compose file. At the time being, we're testing the <a href="https://github.com/crossminer/scava-deployment/tree/dashboard-plus-admin">dashboard-plus-admin branch</a>.</p>
+<h2 id="summary-of-containers">Summary of containers</h2>
+<p>The whole Docker stack consists of 11 services:</p>
+<table>
+<thead>
+<tr>
+<th>Docker service name</th>
+<th>Full Name</th>
+<th>Default port</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admin-webapp</td>
+<td>Administration UI</td>
+<td>80</td>
+<td>Built from /web-admin.</td>
+</tr>
+<tr>
+<td>oss-app</td>
+<td>Metric Plateform</td>
+<td>8182</td>
+<td>Built from /metric-platform.</td>
+</tr>
+<tr>
+<td>oss-db</td>
+<td>MongoDB (metrics storage)</td>
+<td>27017</td>
+<td>Built from /metric-platform. Can be used to connect a MongoDB visualisation tool.</td>
+</tr>
+<tr>
+<td>kb</td>
+<td>Knowledge base</td>
+<td>8080</td>
+<td>Built from KB.</td>
+</tr>
+<tr>
+<td>kb-db</td>
+<td>Knowledge base DB (based on MongoDB)</td>
+<td>27018</td>
+<td>Built from /KB-db. Can be used to connect a MongoDB visualisation tool.</td>
+</tr>
+<tr>
+<td>api-gw</td>
+<td>API Gateway</td>
+<td>8086</td>
+<td>Built from /api-gw.</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>Authentication</td>
+<td>8085</td>
+<td>Built from /auth.</td>
+</tr>
+<tr>
+<td>elasticsearch</td>
+<td>ElasticSearch</td>
+<td>9200</td>
+<td>Pulled from docker hub acsdocker/elasticsearch:6.3.1-secured. Can be used to connect an ElasticSearch visualisation tool.</td>
+</tr>
+<tr>
+<td>kibiter</td>
+<td>Kibiter (Bitergia’s customized Kibana)</td>
+<td>5601</td>
+<td>Pulled from docker hub acsdocker/grimoirelab-kibiter:crossminer-6.3.1</td>
+</tr>
+<tr>
+<td>dashb-importer</td>
+<td>Dashboard importer (to kibiter)</td>
+<td></td>
+<td>No port exposed on the host.</td>
+</tr>
+<tr>
+<td>prosoul</td>
+<td>Prosoul Quality Model Viewer</td>
+<td>8000</td>
+<td>Pulled from docker hub acsdocker/prosoul.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="building-the-docker-images">Building the Docker images</h2>
+<p>The deployment setup is hosted in the <a href="https://github.com/crossminer/scava-deployment">scava-deployment</a> repository. One needs to clone the repository locally in order to build and run the docker images.</p>
+<p>To build all the required Docker images, simply go to the root of the cloned repository and issue the following command. This will rebuild all images, dismissing any cached layers.</p>
+<pre><code>$ docker-compose -f docker-compose-build.yml build --no-cache
 </code></pre>
 
-<p>This command will download the images and run them. The application is then available on <a href="http://localhost:9000">localhost:9000</a>.</p>
-<h2 id="building-the-ossmeter-docker-image">Building the Ossmeter docker image</h2>
-<p>Two containers actually need to be built. They can be built individually.</p>
-<h3 id="oss-platform">oss-platform</h3>
-<p>Build the image from the oss-platform directory:</p>
-<pre><code>$ docker build -t bbaldassari/ossmeter-platform .
-Sending build context to Docker daemon  3.072kB
-Step 1/5 : FROM openjdk:8-jdk
+<p>This will build required images and pull images hosted on docker hub.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In order to run Scava, you need to:</p>
+<ol>
+<li>Edit the hosts of your machine, creating a new record for the IP address: <code>127.0.0.1</code> with hostname: <code>admin-webapp</code></li>
+<li>Edit the <code>externalConfig.json</code> file inside <code>web-admin/angular/</code> docker image and put inside it the IP address of your host as follow:
+   {
+    "SERVICE_URL" :"http://HOST-IP:8086"
+   }</li>
+</ol>
+<h2 id="running-the-locally-built-docker-images">Running the locally built docker images</h2>
+<p>To run the locally built images, run the following command. Note that if the images are not available they will be rebuilt.</p>
+<pre><code>$ docker-compose -f docker-compose-build.yml up
 </code></pre>
 
-<h3 id="oss-web">oss-web</h3>
-<p>Build the image from the oss-web directory:</p>
-<pre><code>$ docker build -t bbaldassari/ossmeter-web .
-Sending build context to Docker daemon  3.072kB
-Step 1/7 : FROM openjdk:8-jre-alpine
+<p>Access the administration web app by using the following address in the web browser: http://admin-webapp/
+For login use user: admin  pass: admin</p>
+<h2 id="running-the-pre-built-docker-images">Running the pre-built docker images</h2>
+<p>The easiest way to run the full Scava setup is to use the docker images <a href="https://hub.docker.com/r/crossminer/">stored on Docker Hub</a>. Use the <code>docker-compose-dockerhub.yml</code> file to download all required images and start the stack:</p>
+<pre><code>$ docker-compose -f docker-compose-dockerhub.yml up
 </code></pre>
 
+<p>Access the administration web app by using the following address in the web browser: http://admin-webapp/</p>
+<p>For login use user: admin  pass: admin</p>
 <h2 id="continuous-integration">Continuous integration</h2>
 <p>We use Codefresh for the CI of our docker images. The latest demo instance of generated docker images can be found in the <code>#ci</code> channel in Slack.</p>
               
@@ -358,10 +441,10 @@ Step 1/7 : FROM openjdk:8-jre-alpine
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Docker-SCAVA/" class="btn btn-neutral float-right" title="Docker SCAVA">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Platform-configuration/" class="btn btn-neutral float-right" title="Platform configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../architecture/Authentication-Component/" class="btn btn-neutral" title="Authentication Component"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Docker-Ossmeter/" class="btn btn-neutral" title="Docker Ossmeter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -387,10 +470,10 @@ Step 1/7 : FROM openjdk:8-jre-alpine
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../architecture/Authentication-Component/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Docker-Ossmeter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Docker-SCAVA/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Platform-configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
