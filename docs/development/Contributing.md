@@ -1,5 +1,5 @@
 
-# Contributing 
+# Contributing
 
 ## Subcategories
 
@@ -29,7 +29,3 @@
 
 * [How to integrate OSGI service plugin in SCAVA Architecture](OSGI Component Integration) Todo
 * [How to communicate between OSGI plugin using JMS](OSGI Plugin Communication) Todo
-
-### TEMPLATE
-
-* [[Guideline Template|Guideline Main Heading]]

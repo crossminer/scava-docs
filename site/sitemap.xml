@@ -102,6 +102,12 @@
     </url>
         
     <url>
+     <loc>None/development/How-To-Develop-Metric-Provider/</loc>
+     <lastmod>2018-11-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/development/Implementing-Restlet-Service/</loc>
      <lastmod>2018-11-24</lastmod>
      <changefreq>daily</changefreq>

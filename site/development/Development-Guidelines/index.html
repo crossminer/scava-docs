@@ -200,6 +200,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../How-To-Develop-Metric-Provider/">How To Develop Metric Provider</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../Implementing-Restlet-Service/">Implementing Restlet Service</a>
         
     </li>
@@ -325,7 +332,7 @@
 <p><img alt="Dev Process for Scava" src="../images/scava_dev_process_1.png" />
 Figure 1. Overview of the CROSSMINER development process and tools</p>
 <h3 id="source-code-repository">Source Code Repository</h3>
-<p>Different branches will be created in the repository. In particular, the <code>master</code> branch is the main branch and represents the released state of the product. The <code>dev</code> branch contains the most recent code integrated by partners before release. These two branches are always clean, build and run all the tests successfully.</p>
+<p>Different branches will be created in the repository. In particular, the <code>master</code> branch is the main branch and represents the released state of the product. It is always clean, builds and runs all the tests successfully. The <code>dev</code> branch contains the most recent code integrated by partners before release.</p>
 <p>Other branches will be created for the different features/components, which will be eventually merged in the <code>dev</code> branch. The name of each branch contains the id of the issue it is supposed to implement.</p>
 <p>All source code, binary code and conﬁguration needed to build a working implementation of the system will reside in a GitHub repository.</p>
 <ul>
@@ -362,7 +369,7 @@ test(master) -&gt; test(cool-feature)
 <li>Quality analysis on source code</li>
 <li>Perform all the necessary actions to create a fully functioning build of the software when all tests have passed</li>
 </ul>
-<p>The currently used CI server is available at http://ci5.castalia.camp:8080/ </p>
+<p>The currently used CI server is available at http://ci5.castalia.camp:8080/</p>
 <h3 id="development-and-production-environments">Development and Production environments</h3>
 <p>According to the DoW we have not promised the availability of a public installation of the CROSSMINER platform (i.e., a production environment). However, in order to implement the different use cases, use case partners are provided with docker images enabling the local installation of the whole CROSSMINER platform.</p>
 <h2 id="naming-and-change-conventions">Naming and change conventions</h2>
@@ -379,67 +386,67 @@ test(master) -&gt; test(cool-feature)
 <tr>
 <td>DevOps Dashboard</td>
 <td></td>
-<td>CWI</td>
+<td>BIT</td>
 </tr>
 <tr>
 <td>Workflow Diagram Editor</td>
 <td>/crossflow</td>
-<td>EHU</td>
+<td>YORK</td>
 </tr>
 <tr>
 <td>Administration Web Application</td>
 <td>/administration</td>
-<td>AUEB</td>
+<td>SFT</td>
 </tr>
 <tr>
 <td>IDE</td>
 <td>/eclipse-based-ide</td>
-<td>YORK</td>
+<td>FEA</td>
 </tr>
 <tr>
 <td>API Gateway</td>
 <td>/api-gateway</td>
-<td>UDA</td>
+<td>SFT</td>
 </tr>
 <tr>
 <td>DevOps Backend</td>
 <td></td>
-<td>FEA</td>
+<td>BIT</td>
 </tr>
 <tr>
 <td>Knowledge Base</td>
 <td>/knowledge-base</td>
-<td>BIT</td>
+<td>UDA</td>
 </tr>
 <tr>
 <td>Project Analyser</td>
 <td>/metric-platform</td>
-<td>SFT, UNP</td>
+<td>SFT</td>
 </tr>
 <tr>
 <td>Data Collector</td>
 <td>/metric-platform</td>
-<td>SFT, UNP</td>
+<td>SFT</td>
 </tr>
 <tr>
 <td>Project Scheduler</td>
 <td>/metric-platform</td>
-<td>SFT, UNP</td>
+<td>SFT</td>
 </tr>
 <tr>
 <td>Metric Providers</td>
 <td>/metric-platform</td>
-<td>SFT, UNP</td>
+<td>YORK, CWI, AUEB, EHU</td>
 </tr>
 <tr>
 <td>Data Storage</td>
 <td>/metric-platform</td>
-<td>SFT, UNP</td>
+<td>SFT</td>
 </tr>
 <tr>
-<td>ElasticSearch</td>
-<td>/metric-platform</td>
-<td>SFT, UNP</td>
+<td>Web-based dashboards</td>
+<td>/web-dashboards</td>
+<td>BIT</td>
 </tr>
 <tr>
 <td>Table 1: Leaders and Contributors of the CROSSMINER Deployment diagram nodes</td>
@@ -448,6 +455,8 @@ test(master) -&gt; test(cool-feature)
 </tr>
 </tbody>
 </table>
+<p><img alt="Scava components architecture" src="../images/scava_architecture.png" />
+Figure 2: Scava components architecture</p>
 <p>For each component a corresponding folder is available in the repository. Changes must have a CR (i.e. issue) entry for traceability. In particular, the requirements and objectives of each Scava components will be detailed in the relevant deliverables and they will be added in the form of items in the provided Bug Tracking infrastructure. In this way progress on the implementation of each requirement can be tracked. Thus:</p>
 <ul>
 <li>when developers want to operate changes they have to create corresponding issues in the bug tracking system for traceability reasons;</li>
@@ -455,11 +464,22 @@ test(master) -&gt; test(cool-feature)
 </ul>
 <p>The partner in charge of managing the development of a component will be free to organize the content of the corresponding subdirectory in any way as long as the following standard ﬁles/directories are contained in the component folder:</p>
 <ul>
-<li>readme.md. This ﬁle will contain the entry-point to all documentation for the component.</li>
-<li>Jenkinsfile: In order to compile the component, run tests, etc on the CI server.</li>
-<li>test: this is a folder containing the unit and/or integration tests.</li>
+<li><code>readme.md</code> : this ﬁle will contain the entry-point to all documentation for the component.</li>
+<li><code>Jenkinsfile</code>: in order to compile the component, run tests, etc on the CI server.</li>
+<li><code>test</code>: this is a folder containing the unit and/or integration tests.</li>
 </ul>
-<p>As a reference, please have a look at https://github.com/crossminer/scava/tree/master/knowledge-base </p>
+<p>As a reference, please have a look at https://github.com/crossminer/scava/tree/master/knowledge-base</p>
+<p>The following items are typical practices when applying CI:
+<em> Maintain a code repository
+</em> Automate the build
+<em> Make the build self-testing
+</em> Everyone commits to the baseline every day
+<em> Every commit (to baseline) should be built
+</em> Keep the build fast
+<em> Test in a clone of the production environment
+</em> Make it easy to get the latest deliverables
+<em> Everyone can see the results of the latest build
+</em> Automate deployment</p>
 <h2 id="communication-and-collaboration-means">Communication and collaboration means</h2>
 <p>The development activities can be done by exploiting different communication and collaboration means. In particular, currently the consortium members have the availability of:</p>
 <ul>

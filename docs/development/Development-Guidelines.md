@@ -93,6 +93,7 @@ The repository will contain the code of the high-level components shown in Table
 | Metric Providers | /metric-platform | YORK, CWI, AUEB, EHU |
 | Data Storage | /metric-platform | SFT |
 | Web-based dashboards | /web-dashboards | BIT |
+
 Table 1: Leaders and Contributors of the CROSSMINER Deployment diagram nodes
 
 
