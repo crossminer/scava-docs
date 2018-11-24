@@ -23,6 +23,7 @@ Useful links:
 
 ## Users
 
+* [Scava metrics](users/Scava-Metrics) lists metrics computed by the various Scava Components.
 * [Consuming the REST services](users/Consuming-REST-services) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues
 * [REST API Documentation](users/REST-API-Documentation) Reference documentation of REST services provided by the Scava platform.
 * [REST API Generation](users/REST-API-Generation) Tutorial about automatic generation of REST API Scava library using OpenAPI.
