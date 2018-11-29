@@ -104,7 +104,77 @@ All metrics are defined in [metrics_definition_nlp.docx](/resources/metrics_defi
 * Number of unanswered topics: Number of forums threads which do not have a reply.
 
 
+## Configuration analysis metrics
 
+Metrics of Puppet are defined in detail in [Deliverable 4.2](https://github.com/crossminer/internal-material/blob/master/Workpackages/WP4/D4.2/D4.2.docx).
+
+**Puppet Design** Metrics:
+
+* numberOfMultifacetedSmells --  The number of Multifaceted Abstraction smells
+* numberOfUnnecessarySmells -- The number of Unnecessary Abstraction smells
+* numberOfImperativeSmells -- The number of Imperative Abstraction smells
+* numberOfMissAbSmells -- The number of Missing Abstraction smells
+* numberOfInsufficientSmells -- The number of Insufficient Modularization smells
+* numberOfUnstructuredSmells -- The number of Unstructured Module smells
+* numberOfTightSmells -- The number of Tightly-coupled Module smells
+* numberOfBrokenSmells -- The number of Broken Hierarchy smells
+* numberOfMissingDepSmells -- The number of Missing Dependency smells
+* numberOfHairballSmells -- The number of Hairball Structure smells
+* numberOfDeficientSmells -- The number of Deficient Encapsulation smells
+* numberOfWeakenSmells -- The number of Weaken Modularity smells
+* cumulativeNumberOfDesignSmells -- The number of design smells
+
+**Puppet Implementation** Metrics:
+
+* numberOfMissingDefaultCaseSmells -- Smell exists when a default case is missing in a case or selector statement.
+* numberOfInconsistentNamingConventionSmells -- Smell exists when the used naming convention deviates from the recommended naming convention.
+* numberOfComplexExpressionSmells -- Smell exists when a program contains a difficult to understand complex expression.  
+* numberOfDuplicateEntitySmells -- Smell exists duplicate parameters are present in the configuration code.
+* numberOfMisplacedAttributeSmells -- Smell exists when attribute placement within a resource or a class has not followed a recommended order.
+* numberOfImproperAlignmentSmells -- Smell exists when the code is not properly aligned or tabulation characters are used 
+* numberOfInvalidPropertyValueSmells -- Smell exists when an invalid value of a property or attribute is used.
+* numberOfIncompleteTasksSmells -- Smell exists when the code has “fixme” and “todo” tags indicating incomplete tasks.
+* numberOfDeprecatedStatementUsageSmells -- Smell exists when the configuration code uses one of the deprecated statements.
+* numberOfImproperQuoteUsageSmells -- Smell exists when single and double quotes are not used properly.
+* numberOfLongStatementSmells -- Smell exists when the code contains long statements.
+* numberOfIncompleteConditionalSmells -- Smell exists when an “if..elseif” construct used without a terminating “else” clause.
+* numberOfUnguardedVariableSmells -- Smell exists when a variable is not enclosed in braces when being interpolated in a string.
+
+Docker Metrics are based on the following [rules](https://github.com/hadolint/hadolint#rules).
+
+**Docker** Metrics:
+
+* numberOfUpgradeSmells -- Smell exists when apt-get or apk commands are used problematically.
+* numberOfPinVersionSmells -- Smell exists when version of packages is not explicitly declared.
+* numberOfUntaggedImageSmells -- Smell exists when version of images is not explicitly declared.
+* numberOfSudoSmells -- Smell exists when sudo command and root user are used inappropriately.
+* numberOfCopySmells -- Smell exists when COPY instruction is not used properly.
+* numberOfFromSmells -- Smell exists when FROM instruction is not used properly.
+* numberOfCmdSmells -- Smell exists when CMD and ENTRYPOINT instruction is not used properly.
+* numberOfAddSmells -- Smell exists when ADD instruction is not used properly.
+* numberOfMeaninglessCommandsSmells -- Smell exists when there are commands that makes no sense running them in a Docker container.
+* numberOfInvalidPortsSmells -- Smell exists when invalid UNIX ports range is used.
+* numberOfShellSmells -- Smell exists when SHELL instruction is not used when it should.
+
+All of the above metrics have their corresponding allOfSmells metrics (e.g. numberOfMultifacetedSmells -> allOfMultifacetedSmells) that lists the actual smells.
+
+**Pattern and Anti-pattern** Metrics:
+
+* puppetPatternIntroduction: The metric will list the smells that removed between two consecutive versions of a puppet file.
+* puppetAntipatternIntroduction: The metric will list the smells that introduced between two consecutive versions of a puppet file.
+* dockerPatternIntroduction: The metric will list the smells that removed between two consecutive versions of a Dockerfile.
+* dockerAntipatternIntroduction: The metric will list the smells that introduced between two consecutive versions of a Dockerfile.
+
+**Components** metrics:
+
+* allDockerLibraries: Retrieves all the libraries that are installed with the use of apt-get install or apk install in Dockerfiles
+* numberOfDockerLibraries: Retrieves the number of the above libraries
+* allDockerImages: Retrieves all the images that are used with the use of FROM instruction in Dockerfiles
+* numberOfDockerImages: Retrieves the number of the above images
+
+**New versions** Metrics:
+
+* newVersionFound: The metric will list the new versions (if any) of libraries that are used in the project.
 
 
 
