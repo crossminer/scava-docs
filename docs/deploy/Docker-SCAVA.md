@@ -45,6 +45,9 @@ In order to run Scava, you need to:
    {
     "SERVICE_URL" :"http://HOST-IP:8086"
    }
+1. Edit the `docker-compose-build.yml` file and change:
+    1. Make sure that the ports defined in the file are not already used on the host, and adjust the various ports as required for your setup. Note that the dashboard is on port 80 by default.
+    1. Update the `ALLOWED_HOST`directive to include the host name. This is used by Django on the prosoul image to publish the quality model used by Crossminer.
 
 ## Running the locally built docker images
 
@@ -58,6 +61,8 @@ Access the administration web app by using the following address in the web brow
 For login use user: admin  pass: admin
 
 ## Running the pre-built docker images
+
+> Please note that the docker hub images are not yet ready! We're working on it! :-)
 
 The easiest way to run the full Scava setup is to use the docker images [stored on Docker Hub](https://hub.docker.com/r/crossminer/). Use the `docker-compose-dockerhub.yml` file to download all required images and start the stack:
 
