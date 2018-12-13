@@ -25,17 +25,6 @@ The whole Docker stack consists of 11 services:
 |dashb-importer|Dashboard importer (to kibiter)| | No port exposed on the host. |
 |prosoul|Prosoul Quality Model Viewer| 8000 | Pulled from docker hub acsdocker/prosoul. |
 
-## Building the Docker images
-
-The deployment setup is hosted in the [scava-deployment](https://github.com/crossminer/scava-deployment) repository. One needs to clone the repository locally in order to build and run the docker images.
-
-To build all the required Docker images, simply go to the root of the cloned repository and issue the following command. This will rebuild all images, dismissing any cached layers.
-
-```
-$ docker-compose -f docker-compose-build.yml build --no-cache
-```
-This will build required images and pull images hosted on docker hub.
-
 ## Prerequisites
 
 In order to run Scava, you need to:
@@ -48,6 +37,17 @@ In order to run Scava, you need to:
 1. Edit the `docker-compose-build.yml` file and change:
     1. Make sure that the ports defined in the file are not already used on the host, and adjust the various ports as required for your setup. Note that the dashboard is on port 80 by default.
     1. Update the `ALLOWED_HOST`directive to include the host name. This is used by Django on the prosoul image to publish the quality model used by Crossminer.
+
+## Building the Docker images
+
+    The deployment setup is hosted in the [scava-deployment](https://github.com/crossminer/scava-deployment) repository. One needs to clone the repository locally in order to build and run the docker images.
+
+    To build all the required Docker images, simply go to the root of the cloned repository and issue the following command. This will rebuild all images, dismissing any cached layers.
+
+    ```
+    $ docker-compose -f docker-compose-build.yml build --no-cache
+    ```
+    This will build required images and pull images hosted on docker hub.
 
 ## Running the locally built docker images
 
@@ -73,12 +73,18 @@ Access the administration web app by using the following address in the web brow
 
 For login use user: admin  pass: admin
 
-## Configuring the GitHub token
+## Post-install tasks
+
+### Configuring the GitHub token
 
 In order to use the GitHub connectors, one needs to setup an authentication mechanism. Simply create a authentication token in yourGitHub account, and create a new property in the webadmin UI:
 
 * key: githubToken
 * value: the github token created on the github account.
+
+### Kibana dashboard
+
+The first time Kibana is started, it will ask for a default index pattern. To select one, log into the dashboard (admin/admin), go to the dashboard menu item and select `metrics-scava`. Then click on the star on the top right. 
 
 ## Continuous integration
 
