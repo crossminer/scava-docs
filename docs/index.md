@@ -7,6 +7,7 @@ Useful links:
 
 * Eclipse Scava home project: [Eclipse Scava @ Eclipse](https://projects.eclipse.org/projects/technology.scava)
 * Eclipse Scava code repository: [github.com/crossminer/scava](https://github.com/crossminer/scava)
+* Eclipse Scava deployment repository: [github.com/crossminer/scava-deployment](https://github.com/crossminer/scava-deployment)
 * Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
 
 ## Platform installation
@@ -29,6 +30,7 @@ Useful links:
 * [Running Scava in Eclipse](users/Running-Scava-in-Eclipse.md) How to setup and run the Scava Eclipse IDE plugin.
 * [REST API Documentation](users/REST-API-Documentation.md) Reference documentation of REST services provided by the Scava platform.
 * [REST API Generation](users/REST-API-Generation.md) Tutorial about automatic generation of REST API Scava library using OpenAPI.
+* [Accessing Scava resources](users/Scava-Resources.md) A summary of where to find the various outputs of the Scava platform.
 
 ## Development
 
