@@ -1,11 +1,9 @@
 
 # Licencing for Scava
 
-## Content
-
 The Scava project is licensed under **Eclipse Public License - v 2.0** license.
 
-## "Eclipse Public License" licensing file
+## Eclipse Public License licensing
 
 ```
 Eclipse Public License - v 2.0
