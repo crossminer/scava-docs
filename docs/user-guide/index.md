@@ -3,8 +3,8 @@ The SCAVA user guide provide general instruction to analyse open sources reposit
 
 ## [Platform Administration and Project Analysis](administration/index.md)
 The SCAVA administration dashboard take care of:
-* Provide user administration feature, including user profile activation service and roles based authorization management.
-* Provide services to analyse automatically open source software projects.
+* Provide services to analyse  open source software projects repository.
+* Provide administration feature, including user profile activation service, roles based authorization management and platform configuration servicies.
 ## [Visualisation Dashboard](dashboard/index.md)
 ## [Eclipse Plugin](plugin/index.md)
 ## [Workflow Engine](workflow/index.md)
