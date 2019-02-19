@@ -5,11 +5,7 @@
 
 The Scava project is licensed under **Eclipse Public License - v 2.0** license.
 
-As consequence of our status of project hosted by the eclipse foundation, all Scava components  must contained licensing information from the first commit. In order to be compliant with the Eclipse foundation requirements, an "Eclipse Public License - v 2.0" license file must be added on root folder of the component project and all sources files of the project must have a license Header.
-
 ## "Eclipse Public License" licensing file
-
-The text below must be integrated to the root folder of your project on a text file name "LICENSE".
 
 ```
 Eclipse Public License - v 2.0
@@ -290,27 +286,3 @@ version(s), and exceptions or additional permissions here}."
 
   You may add additional accurate notices of copyright ownership.
 ```
-
-## Source File header
-
-All sources files of each Scava component projects must have a license Header. This file must be fill with the name of organization of the partner who have implemented the file ( example : Softeam,University of York ...).
-
-Optionally an "And Others" following the name of the main contributor can be added to indicate that this file is a result of a collaboration between several organization.
-
-**Example of Java license header file**
-```java
-/*******************************************************************************
- * Copyright (c) 2018 {Name of the partner} {optional: "And Others"}
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
- *
- * SPDX-License-Identifier: EPL-2.0
- ******************************************************************************/
-```
-
-## Comment
-
-n Eclipse plugin : the Copyright Wizard plulgin could help you to manage licensing files.
-
-This plug-in adds a wizard allowing to apply a copyright header comment to a selection of files in projects. The same text can be applyied on different types of files (java, xml...), the comment format being adapted in function of the content type.
