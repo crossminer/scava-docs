@@ -9,3 +9,4 @@ By UNPARALLEL
 ## [Eclipse Plugin Installation](plugin-installation/index.md)
 ## [Platform Configuration](platform-configuration/index.md)  
 By SOFTEAM and UNPARALLEL
+## [Licencing Information](licencing.md)  
