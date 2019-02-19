@@ -5,5 +5,5 @@ The SCAVA user guide provide general instruction to analyse open sources reposit
 * [Visualisation Dashboard](dashboard/index.md)
 * [Eclipse Plugin](plugin/index.md)
 * [Workflow Engine](workflow/index.md)
-* [Metrics Reference Guide] (metrics/index.md)
+* [Metrics Reference Guide](metrics/index.md)
 
