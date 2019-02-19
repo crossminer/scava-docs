@@ -1,0 +1,1 @@
+# Platform Installation using individual components (UNPARALLEL)
