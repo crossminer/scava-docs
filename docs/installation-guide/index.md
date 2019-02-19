@@ -1,6 +1,6 @@
 
 # SCAVA Installation Guide
-The SCAVA installation guide provides instructions on how to install and configure the CORSSMINER Platform on a server and how to deploy the Eclipses Plugin in development environment. 
+The SCAVA installation guide provides instructions on how to install and configure the SCAVA Platform on a server and how to deploy the Eclipses Plugin in development environment. 
 
 ## [Platform Installation using DOCKER images](docker-installation/index.md) 
 By UNPARALLEL
