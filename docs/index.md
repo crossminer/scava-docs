@@ -1,4 +1,4 @@
-[[docs/scava-header.jpg]]
+![Alt](scava-header.jpg)
 ## Scava Documentation
 
 This web site is the main documentation place for the [Eclipse Scava](https://projects.eclipse.org/projects/technology.scava) project.
