@@ -18,7 +18,7 @@ The Contributors Guide summarize the material related to the architecture of the
 * [Extending SCAVA Administration](developement/SCAVA-Administration.md)
 * [Configuring the API Gateway](developement/API-Gateway-Configuration.md)
 * [Extending MongoDB Data Model](developement/Extend-MongoDB-Data-Model.md)
-* [Generating REST API Docuemntation](developement/REST-API-Generation.md): Tutorial about automatic generation of REST API Scava library using OpenAPI.
+* [Generating REST API Documentation](developement/REST-API-Generation.md): Tutorial about automatic generation of REST API Scava library using OpenAPI.
 * [Accessing Scava resources](developement/Scava-Resources.md): A summary of where to find the various outputs of the Scava platform.
 
 ## Architecture Guidelignes
