@@ -18,7 +18,12 @@ All the stuff related to the architecture of the platform which could be useful 
 ## [Other Documentation](others/index.md)
 Documentation which must be migrated on one of the platfomrs guides
 
-Useful links:
+
+---
+
+
+
+### Useful links:
 
 * Eclipse Scava home project: [Eclipse Scava @ Eclipse](https://projects.eclipse.org/projects/technology.scava)
 * Eclipse Scava code repository: [github.com/crossminer/scava](https://github.com/crossminer/scava)
