@@ -8,7 +8,7 @@ The Contributors Guide summarize the material related to the architecture of the
 
 ## Guidelignes
 
-* [contributing guidelignes](contributing/Contributing.md): Collection of Architectural and Technical guidelines dedicated to Scava contributors.
+* [Contributing guidelignes](contributing/Contributing.md): Collection of Architectural and Technical guidelines dedicated to Scava contributors.
 * [Development guidelines](contributing/Development-Guidelines.md): Rules and guidelines used for the development of the Scava project.
 * [Testing Guidelines](contributing/Testing-Guidelines.md): Collection of testing guidelines dedicated to Scava developers.
 * [Repository-Organisation](contributing/Repository-Organisation.md)
