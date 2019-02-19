@@ -3,14 +3,6 @@
 
 This web site is the main documentation place for the [Eclipse Scava](https://projects.eclipse.org/projects/technology.scava) project.
 
-Useful links:
-
-* Eclipse Scava home project: [Eclipse Scava @ Eclipse](https://projects.eclipse.org/projects/technology.scava)
-* Eclipse Scava code repository: [github.com/crossminer/scava](https://github.com/crossminer/scava)
-* Eclipse Scava deployment repository: [github.com/crossminer/scava-deployment](https://github.com/crossminer/scava-deployment)
-* Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
-
-
 ## [SCAVA Installation Guide](installation-guide/index.md)
 The SCAVA installation guide provides instructions on how to install and configure the CORSSMINER Platform on a server and how to deploy the Eclipses Plugin in development environment. 
 
@@ -25,3 +17,11 @@ All the stuff related to the architecture of the platform which could be useful 
 
 ## [Other Documentation](others/index.md)
 Documentation which must be migrated on one of the platfomrs guides
+
+Useful links:
+
+* Eclipse Scava home project: [Eclipse Scava @ Eclipse](https://projects.eclipse.org/projects/technology.scava)
+* Eclipse Scava code repository: [github.com/crossminer/scava](https://github.com/crossminer/scava)
+* Eclipse Scava deployment repository: [github.com/crossminer/scava-deployment](https://github.com/crossminer/scava-deployment)
+* Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
+
