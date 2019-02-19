@@ -11,17 +11,17 @@ Useful links:
 * Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
 
 
-## [SCAVA Installation Guide] (installation-guide/index.md)
+## [SCAVA Installation Guide](installation-guide/index.md)
 The SCAVA installation guide provides instructions on how to install and configure the CORSSMINER Platform on a server and how to deploy the Eclipses Plugin in development environment. 
 
-## [SCAVA User Guide] (user-guide/index.md)
+## [SCAVA User Guide](user-guide/index.md)
 The SCAVA user guide provide general instruction to analyse open sources repository using the platform, visualise the collected data using the visualisation dashboard and access to analysis service provided by the platform by the intermediary of the eclipse plugin.
 
-## [SCAVA Developers Guide] (developers-guide/index.md)
+## [SCAVA Developers Guide](developers-guide/index.md)
 The developers guide is dedicated to who peoples which went to extend the capability of the platform or integrate external tools by the intermediary of the public REST API.
 
-## [SCAVA Contributors Guide]  (contributers-guide/index.md)
+## [SCAVA Contributors Guide](contributers-guide/index.md)
 All the stuff related to the architecture of the platform which could be useful for projects members and external open sources contributors.
 
-## [Other Documentation] (others/index.md)
+## [Other Documentation](others/index.md)
 Documentation which must be migrated on one of the platfomrs guides
