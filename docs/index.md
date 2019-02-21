@@ -1,4 +1,4 @@
-![Alt](scava-header.jpg)
+![SCAVA Project](scava-header.jpg)
 ## Scava Documentation
 
 This web site is the main documentation place for the [Eclipse Scava](https://projects.eclipse.org/projects/technology.scava) project.
@@ -12,7 +12,7 @@ The SCAVA user guide provide general instruction to analyse open sources reposit
 ## [SCAVA Developers Guide](developers-guide/index.md)
 The developers guide is dedicated to who peoples which went to extend the capability of the platform or integrate external tools by the intermediary of the public REST API.
 
-## [SCAVA Contributors Guide](contributers-guide/index.md)
+## [SCAVA Contributors Guide](contributors-guide/index.md)
 The SCAVA Contributors guide containes all the material related to the architecture of the platform which could be useful for projects members and external open sources contributors.
 
 ## [Other Documentation](others/index.md)
