@@ -1,12 +1,12 @@
 # REST API Reference Guide
 
-## [Access to the REST API via the API Gateway](api-gateway.md)
+*[Access to the REST API via the API Gateway](api-gateway.md)
 (Softeam)
-## [Analysis Platform](analysis-platform.md) 
+*[Analysis Platform](analysis-platform.md) 
 (Softeam)
-## [Knowledge Base](knowledge-base.md) 
+*[Knowledge Base](knowledge-base.md) 
 (UDA)
-## [Visualisation Dashboard](visualisation-dashboard.md) 
+*[Visualisation Dashboard](visualisation-dashboard.md) 
 (Bitergia)
-## [Workflow Engine](workflow-engine.md)  
+*[Workflow Engine](workflow-engine.md)
 (York)
