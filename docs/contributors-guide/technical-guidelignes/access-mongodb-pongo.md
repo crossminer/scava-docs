@@ -1,3 +1,5 @@
+# How to access to MongoDB using PONGO
+
 ## When to use ?
 
 This guideline present How to the Scava Platform can access to his data stored in a MongoDb data base. The guideline describe how to create a connection to the MongoDb database and how to perform CRUD operation on platform datas.
@@ -115,6 +117,4 @@ metricprovider.sync(true);
 Mongo mongo = new Mongo();
 mongo.dropDatabase("databasename");
 
-## Comment
 
-This wiki has dealt with the access of MongoDB database using PONGO. To continue learning how to modify and make a new model with Pongo, we have another page here [Extend MongoDB Data Model](../development/Extend-MongoDB-Data-Model). 
