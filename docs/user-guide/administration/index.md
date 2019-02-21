@@ -1,2 +1,2 @@
-# Platform Administration and Project Analysis (Softeam)
+# Platform Administration User Guide (Softeam)
 
