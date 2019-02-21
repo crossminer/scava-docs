@@ -15,8 +15,6 @@ The developers guide is dedicated to who peoples which went to extend the capabi
 ## [SCAVA Contributors Guide](contributors-guide/index.md)
 The SCAVA Contributors guide containes all the material related to the architecture of the platform which could be useful for projects members and external open sources contributors.
 
-## [Other Documentation](others/index.md)
-Documentation which must be migrated on one of the platfomrs guides
 
 
 ---
@@ -30,3 +28,6 @@ Documentation which must be migrated on one of the platfomrs guides
 * Eclipse Scava deployment repository: [github.com/crossminer/scava-deployment](https://github.com/crossminer/scava-deployment)
 * Eclipse Scava documentation repository: [github.com/crossminer/scava-docs](https://github.com/crossminer/scava-docs)
 
+---
+
+* [Old Stuf](others/index.md) : Documentation which must be migrated on one of the platfomrs guides
