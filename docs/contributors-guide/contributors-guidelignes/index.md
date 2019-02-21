@@ -1,4 +1,4 @@
-# [Contributors Guidelines]
+# Contributors Guidelines
 Guidelines related to the organisation ofthe SCAVA developement process.
 
 * [SCAVA Repository Organisation](scava-repository-organisation.md)
