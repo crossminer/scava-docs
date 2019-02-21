@@ -13,7 +13,7 @@ The SCAVA user guide provide general instruction to analyse open sources reposit
 The developers guide is dedicated to who peoples which went to extend the capability of the platform or integrate external tools by the intermediary of the public REST API.
 
 ## [SCAVA Contributors Guide](contributers-guide/index.md)
-All the stuff related to the architecture of the platform which could be useful for projects members and external open sources contributors.
+The SCAVA Contributors guide containes all the material related to the architecture of the platform which could be useful for projects members and external open sources contributors.
 
 ## [Other Documentation](others/index.md)
 Documentation which must be migrated on one of the platfomrs guides
