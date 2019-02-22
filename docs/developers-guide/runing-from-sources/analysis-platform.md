@@ -1,9 +1,9 @@
 
 # Running the Analysis Platform form Sources
 
-This is a quick start guide to get the OSSMETER platform running from source.
+This is a quick start guide to get the CROSSMINER platform running from source.
 
-Although these instructions may apply to other versions of Eclipse, they were tested under Eclipse Neon.3 with plug-in development support (Eclipse IDE for RCP Developers package).
+Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Neon.3 with plug-in development support (Eclipse IDE for RCP Developers package).
 
 A step-by-step video guide is also available at [https://youtu.be/3Ry4KKfNdYg](https://youtu.be/3Ry4KKfNdYg)
 
@@ -14,12 +14,12 @@ You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downl
 Instructions for starting mongo can be found in the MongoDB [manual](http://docs.mongodb.org/manual/). For example:
 
 ````Shell
-mongod --dbpath /data/db --port 27017
+sudo systemctl start mongod
 ````
 
 ## Get the Code
 
-Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../development/Development-Guidelines):
+Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository):
 
 If you are using __Linux / OS X__:
 ````Shell
@@ -45,7 +45,7 @@ Open Eclipse and import all projects from the top level directory of the Scava c
 
 ## Validate and Run the Platform
 
-Open `org.ossmeter.platform.osgi/ossmeterfromfeature.product`
+Open `releng/org.eclipse.scava.product/scava.product`
   * Click the `Validate...` icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
   * If things do not validate, there's something wrong -- get in touch :) Problems related to `org.eclipse.e4.core.di` aren't critical.
   * Then, click the `Export an Eclipse product` on the left of the `Validate...` button. Uncheck the `Generate p2 repository` checkbox, select a destination directory and validate. After a while, the OSSMETER platform will be generated in the selected directory.
