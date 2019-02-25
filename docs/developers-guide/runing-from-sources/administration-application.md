@@ -3,7 +3,7 @@
 
 ## Prerequisites:
 * Start running the [Metric Platform](./analysis-platform.md#running-the-analysis-platform-form-sources).
-* Scava Administration is a single page web application based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart).
+* Scava Administration is a based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart).
 
 ## Get the Code
 
