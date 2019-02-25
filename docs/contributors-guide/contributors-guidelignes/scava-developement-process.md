@@ -32,7 +32,7 @@ Since all source code will be stored in a single GitHub repository, each develop
 
 By taking inspiration from https://datasift.github.io/gitflow/IntroducingGitFlow.html the branching model that will be followed will resemble that shown in Fig. 2 without making use of the release and hotfixes branches. Details about the change conventions, pull requests, etc. are given in Sec. 3.
 
-![Git development workflow](images/scava_dev_process_2.png)
+![Git development workflow](images/scava_dev_process_2.png)<br />
 Figure 2: Branching model
 
 ### Tests
