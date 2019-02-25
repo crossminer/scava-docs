@@ -54,7 +54,7 @@ Open `releng/org.eclipse.scava.product/scava.product`
     * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
   * To get a full platform running, first launch a worker thread, then the API server.
 
-If you are developing code for the Scava platform, be sure to check out the [Contributing](../index.md).
+If you are developing code for the Scava platform, be sure to check out the [Developers Guide](../index.md).
 
 When starting the platform, you can pass a configuration file to control the behaviour of the platform:
 
@@ -102,14 +102,4 @@ A comma-separated list of the hosts and ports in a replica set. E.g. `ua002:2701
   * Right click on
 `scava-auth-service/src/main/java/org.eclipse.scava.authservice/AuthServiceApplication.java`
   * Then click on Run As -> Java Application
-
-## Run the administration dashboard
-
-Scava Administration is a single page web application based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: https://angular.io/guide/quickstart).
-
-The following instructions show how to run the dashboard web app:
-  * Enter the `administration/scava-administration/` directory within the scava repository.
-  * Run the web app on port 4200 using angular-cli: `ng serve`
-  * Navigate to `http://localhost:4200/`
-
   
