@@ -1,20 +1,26 @@
 
 # Running the Analysis Platform form Sources
 
-This is a quick start guide to get the CROSSMINER platform running from source.
+This is a quick start guide to get the SCAVA platform running from source.
 
 Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Neon.3 with plug-in development support (Eclipse IDE for RCP Developers package).
 
 A step-by-step video guide is also available at [https://youtu.be/3Ry4KKfNdYg](https://youtu.be/3Ry4KKfNdYg)
 
-## Start MongoDB
+## Download MongoDB
 
 You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downloads).
+
+## Start MongoDB
 
 Instructions for starting mongo can be found in the MongoDB [manual](http://docs.mongodb.org/manual/). For example:
 
 ````Shell
 sudo systemctl start mongod
+````
+or
+````Shell
+sudo service mongod start
 ````
 
 ## Get the Code
@@ -48,13 +54,11 @@ Open Eclipse and import all projects from the top level directory of the Scava c
 Open `releng/org.eclipse.scava.product/scava.product`
   * Click the `Validate...` icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
   * If things do not validate, there's something wrong -- get in touch :) Problems related to `org.eclipse.e4.core.di` aren't critical.
-  * Then, click the `Export an Eclipse product` on the left of the `Validate...` button. Uncheck the `Generate p2 repository` checkbox, select a destination directory and validate. After a while, the OSSMETER platform will be generated in the selected directory.
+  * Then, click the `Export an Eclipse product` on the left of the `Validate...` button. Uncheck the `Generate p2 repository` checkbox, select a destination directory and validate. After a while, the SCAVA platform will be generated in the selected directory.
   * The platform can then be run using the generated `eclipse` binary; it accepts the following arguments:
     * `-apiServer`: Starts up the client API on localhost:8182
     * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
   * To get a full platform running, first launch a worker thread, then the API server.
-
-If you are developing code for the Scava platform, be sure to check out the [Developers Guide](../index.md).
 
 When starting the platform, you can pass a configuration file to control the behaviour of the platform:
 
