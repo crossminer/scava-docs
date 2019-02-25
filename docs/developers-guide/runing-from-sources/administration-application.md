@@ -1,7 +1,9 @@
 
 # Running the Administration Application form Sources
 
-Scava Administration is a single page web application based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart).
+## Prerequisites:
+* Start running the [Metric Platform](./analysis-platform.md#running-the-analysis-platform-form-sources).
+* Scava Administration is a single page web application based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart).
 
 ## Get the Code
 
@@ -24,30 +26,9 @@ git add remote origin https://github.com/crossminer/scava.git
 git fetch
 git checkout dev
 ````
-## Download MongoDB
-
-You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downloads).
-
-## Start MongoDB
-
-Instructions for starting mongo can be found in the MongoDB [manual](http://docs.mongodb.org/manual/). For example:
-
-````Shell
-sudo systemctl start mongod
-````
-or
-````Shell
-sudo service mongod start
-````
 
 ## Run the Administration webapp
 
-### Prerequisites:
-  * Start the [API Gateway](./analysis-platform.md#run-the-api-gateway).
-  * Start the [Authentication Service](./analysis-platform.md#run-the-authentication-service).
-
-
-### Running the webapp:
 The following instructions show how to run the dashboard web app from source:
   * Enter the `administration/scava-administration/` directory within the scava repository.
   * Run the web app on port 4200 using angular-cli: `ng serve`
