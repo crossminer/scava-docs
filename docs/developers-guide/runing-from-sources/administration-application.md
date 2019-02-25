@@ -42,10 +42,12 @@ sudo service mongod start
 
 ## Run the Administration webapp
 
-Prerequisites:
+### Prerequisites:
   * Start the [API Gateway](./analysis-platform.md#run-the-api-gateway).
   * Start the [Authentication Service](./analysis-platform.md#run-the-authentication-service).
 
+
+### Running the webapp:
 The following instructions show how to run the dashboard web app from source:
   * Enter the `administration/scava-administration/` directory within the scava repository.
   * Run the web app on port 4200 using angular-cli: `ng serve`
