@@ -7,22 +7,6 @@ Although these instructions may apply to other versions of Eclipse IDE, they wer
 
 A step-by-step video guide is also available at [https://youtu.be/3Ry4KKfNdYg](https://youtu.be/3Ry4KKfNdYg)
 
-## Download MongoDB
-
-You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downloads).
-
-## Start MongoDB
-
-Instructions for starting mongo can be found in the MongoDB [manual](http://docs.mongodb.org/manual/). For example:
-
-````Shell
-sudo systemctl start mongod
-````
-or
-````Shell
-sudo service mongod start
-````
-
 ## Get the Code
 
 Get the latest version of the code, and checkout the `dev` branch. Please don't commit to the `master` branch: see the [Development Guidelines](../../contributors-guide/contributors-guidelignes/scava-developement-process.md#source-code-repository):
@@ -43,6 +27,22 @@ git config core.longpaths true
 git add remote origin https://github.com/crossminer/scava.git
 git fetch
 git checkout dev
+````
+
+## Download MongoDB
+
+You can download MongoDB from the [MongoDb website](http://www.mongodb.org/downloads).
+
+## Start MongoDB
+
+Instructions for starting mongo can be found in the MongoDB [manual](http://docs.mongodb.org/manual/). For example:
+
+````Shell
+sudo systemctl start mongod
+````
+or
+````Shell
+sudo service mongod start
 ````
 
 ## Setup Eclipse
