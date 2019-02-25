@@ -12,7 +12,7 @@ It is important to remark that Continuous Integration (CI) requires that the dif
 
 The different elements shown below are individually described in the remaining of the section.
 
-![Dev Process for Scava](images/scava_dev_process_1.png)
+![Dev Process for Scava](images/scava_dev_process_1.png)<br />
 Figure 1. Overview of the CROSSMINER development process and tools.
 
 ### Source Code Repository
@@ -39,7 +39,7 @@ Figure 2: Branching model
 
 Each branch must have the corresponding unit tests. The dev branch must have integration tests and the unit tests of all the features that have been already merged as shown below.
 
-![Master and branches](images/scava_dev_process_3.png)
+![Master and branches](images/scava_dev_process_3.png)<br />
 Figure 3: Explanatory master and branches
 
 ```
@@ -96,7 +96,7 @@ The repository will contain the code of the high-level components shown in Table
 Table 1: Leaders and Contributors of the CROSSMINER Deployment diagram nodes
 
 
-![Scava components architecture](images/scava_architecture.png)
+![Scava components architecture](images/scava_architecture.png)<br />
 Figure 4: Scava components architecture
 
 For each component a corresponding folder is available in the repository. Changes must have a CR (i.e. issue) entry for traceability. In particular, the requirements and objectives of each Scava components will be detailed in the relevant deliverables and they will be added in the form of items in the provided Bug Tracking infrastructure. In this way progress on the implementation of each requirement can be tracked. Thus:
