@@ -52,14 +52,14 @@ Open `releng/org.eclipse.scava.product/scava.product`
   * The platform can then be run using the generated `eclipse` binary; it accepts the following arguments:
     * `-apiServer`: Starts up the client API on localhost:8182
     * `-worker ${id-worker}`: Spawns a thread that analyses registered projects
-  * To get a full platform running, first launch a master thread, then a slave, and finally the API server.
+  * To get a full platform running, first launch a worker thread, then the API server.
 
-If you are developing code for the Scava platform, be sure to check out the [Contributing](../development/Contributing).
+If you are developing code for the Scava platform, be sure to check out the [Contributing](../index.md).
 
 When starting the platform, you can pass a configuration file to control the behaviour of the platform:
 
 ````Shell
-./eclipse -slave -config myconfiguration.properties
+./eclipse -worker ${id-worker} -config myconfiguration.properties
 ````
 
 The configuration file is a typical Java properties file. The properties that can be configured are:
