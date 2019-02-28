@@ -1,4 +1,4 @@
-# Running the Visualisation Dashboard form Sources
+# Running the Visualisation Dashboard form Sources (To be reviewed and completed by Bitergia)
 
 All the documentation below describes how to setup and run the different components
 related to the Web Dashboards.
