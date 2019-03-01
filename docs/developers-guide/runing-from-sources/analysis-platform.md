@@ -84,7 +84,7 @@ Figure 1. Eclipse Preferences.<br/>
 <img src="images/eclipse_target_platform_2.png" height="500px" width="500px" >
 Figure 2. Eclipse Target Platforms Initialization.<br/>
 
-1. Give a name to the new target platform, hit the (`Add`) button to select the Eclipse Mars dependencies and the external rascal libraries content to add to the target, then click (`Finish`).
+1. Give a name to the new target platform, hit the (`Add`) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click (`Finish`).
 <img src="images/eclipse_target_platform_3.png" height="500px" width="500px" >
 Figure 3. Eclipse Target Platforms Dependencies.<br/>
 
