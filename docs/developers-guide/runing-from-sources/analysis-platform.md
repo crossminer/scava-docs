@@ -41,11 +41,16 @@ git checkout dev
 
 #### Import Projects into Eclipse Workspace
 
-Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Existing projects into workspace`), and wait for all the projects to compile without errors.
+Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
+
+Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
+[Tycho Plugin](https://www.eclipse.org/tycho/).
+
+Figure-01: Install m2e-connectors plugins.
 
 #### Configure the Target Platform
 
-The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to rune the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.
+The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to run the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.
 
 * **Download Eclipse Mars platform**
 Download the compleate Eclipse Mars platform.
@@ -59,18 +64,33 @@ In command ligne :
 ````Shell
 ./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.artifact.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
 ````
-
+Then, extract the its context somewehere on your machine.
 
 * **Download Rascal dependencies**
 
-Download two external library required to run metrics providers based on Rascal.
+Download two external libraries required to run metrics providers based on Rascal.
 
-Repository URL : https://update.rascal-mpl.org/unstable/plugins/
+Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/plugins/)
 
 1.  impulse_0.3.0.xxx.jar
 1.  rascal_eclipse_0.12.0.xxx.jar
 
-* **Configure the target platform**
+* **Configure the Target Platform**
+1. Open the Eclipse preferences on (`Windows -> Preferencies`), then choose the Target Platform Definition (`Plug-in Development -> Target Platform`).
+![Eclipse Preferences](images/eclipse_preferences_1.png)<br />
+Figure 1. Eclipse Preferences.
+
+1. Add a new Target Platform for the project, choose the Default initialization, give it a name.
+![Eclipse Target Platform](images/eclipse_target_platform_2.png)<br />
+Figure 2. Eclipse Target Platforms.
+
+1. Select the Eclipse Mars dependencies and the external rascal libraries content to add to the target, then click (`Finish`).
+![Eclipse Target Platform](images/eclipse_target_platform_3.png)<br />
+Figure 3. Eclipse Target Platforms.
+
+1. Finally, check the new target Configuration, then save the changes.
+![Eclipse Target Platform](images/eclipse_target_platform_4.png)<br />
+Figure 4. Eclipse Target Platforms.
 
 
 ### Configure the Analysis Platform
