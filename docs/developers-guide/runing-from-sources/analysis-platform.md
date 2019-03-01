@@ -3,7 +3,7 @@
 
 This is a quick start guide to get the SCAVA platform running from source with Eclipse.
 
-## Prerequisit
+## Prerequisite
 
 ### Install MongoDB
 
@@ -48,6 +48,7 @@ Open Eclipse and import all projects from the top level directory of the Scava c
 The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to rune the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.
 
 * **Download Eclipse Mars platform**
+Download the compleate Eclipse Mars platform.
 
 In command ligne :
 
@@ -61,7 +62,16 @@ In command ligne :
 
 
 * **Download Rascal dependencies**
+
+Download two external library required to run metrics providers based on Rascal.
+
+Repository URL : https://update.rascal-mpl.org/unstable/plugins/
+
+1.  impulse_0.3.0.xxx.jar
+1.  rascal_eclipse_0.12.0.xxx.jar
+
 * **Configure the target platform**
+
 
 ### Configure the Analysis Platform
 
