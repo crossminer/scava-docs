@@ -80,7 +80,7 @@ Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/pl
 ![Eclipse Preferences](images/eclipse_preferences_1.png)<br />
 Figure 1. Eclipse Preferences.
 
-1. Add a new Target Platform for the project, choose the Default initialization, give it a name.
+1. Add a new Target Platform for the project, choose the Default initialization.
 ![Eclipse Target Platform](images/eclipse_target_platform_2.png)<br />
 Figure 2. Eclipse Target Platforms.
 
