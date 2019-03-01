@@ -78,17 +78,17 @@ Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/pl
 * **Configure the Target Platform**
 1. Open the Eclipse preferences on (`Windows -> Preferencies`), then choose the Target Platform Definition (`Plug-in Development -> Target Platform`).
 <img src="images/eclipse_preferences_1.png" height="500px" width="500px" >
-Figure 1. Eclipse Preferences.
+Figure 1. Eclipse Preferences.<br/>
 
-1. Add a new Target Platform for the project, choose the Default initialization.
+1. Add a new Target Platform configuration for the project, choose the Default initialization then click on (`Next`).
 <img src="images/eclipse_target_platform_2.png" height="500px" width="500px" >
-Figure 2. Eclipse Target Platforms.
+Figure 2. Eclipse Target Platforms Initialization.<br/>
 
-1. Select the Eclipse Mars dependencies and the external rascal libraries content to add to the target, then click (`Finish`).
+1. Give a name to the new target platform, hit the (`Add`) button to select the Eclipse Mars dependencies and the external rascal libraries content to add to the target, then click (`Finish`).
 <img src="images/eclipse_target_platform_3.png" height="500px" width="500px" >
-Figure 3. Eclipse Target Platforms.
+Figure 3. Eclipse Target Platforms Dependencies.<br/>
 
-1. Finally, check the new target Configuration, then save the changes.
+1. Finally, check the new target Configuration, then click (`Apply and Close`) to save the changes.
 <img src="images/eclipse_target_platform_4.png" height="500px" width="500px" >
 Figure 4. Eclipse Target Platforms.
 
