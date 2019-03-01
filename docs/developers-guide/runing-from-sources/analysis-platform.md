@@ -37,9 +37,31 @@ git checkout dev
 
 ## Configuration
 
-### Configure Eclipse IDE
+### Configure The Eclipse IDE
+
+#### Import Projects into Eclipse Workspace
 
 Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Existing projects into workspace`), and wait for all the projects to compile without errors.
+
+#### Configure the Target Platform
+
+The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to rune the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.
+
+* **Download Eclipse Mars platform**
+
+In command ligne :
+
+````Shell
+./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.metadata.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
+````
+
+````Shell
+./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.artifact.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
+````
+
+
+* **Download Rascal dependencies**
+* **Configure the target platform**
 
 ### Configure the Analysis Platform
 
@@ -111,9 +133,3 @@ When starting the platform, you can pass a configuration file to control the beh
 ````Shell
 ./eclipse -worker ${id-worker} -config myconfiguration.properties
 ````
-
-The configuration file is a typical Java properties file. The properties that can be configured are:
-
-
-
-  
