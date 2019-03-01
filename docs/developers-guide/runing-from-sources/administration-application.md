@@ -31,6 +31,7 @@ git checkout dev
 
 The following instructions show how to run the dashboard web app from source:
   * Enter the `administration/scava-administration/` directory within the scava repository.
+  * Install Angular dependency using `npm install`
   * Run the web app on port 4200 using angular-cli: `ng serve`
   * Navigate to `http://localhost:4200/`
 
