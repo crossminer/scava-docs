@@ -82,21 +82,17 @@ Open the Eclipse preferences on (`Windows -> Preferencies`), then choose the Tar
 <img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
 Figure-02: Eclipse Preferences.
 
-Add a new Target Platform configuration for the project, choose the Default initialization then click on (`Next`).
-<br/>
+Add a new Target Platform configuration for the project, choose the Default initialization then click on (`Next`).<br/>
 <img src="images/eclipse_target_platform_2.png" height="500px" width="500px" /><br/>
 Figure-03: Eclipse Target Platforms Initialization.
 
-Give a name to the new target platform, hit the (`Add`) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click (`Finish`).
-<br/>
+Give a name to the new target platform, hit the (`Add`) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (`Finish`).<br/>
 <img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
 Figure-04: Eclipse Target Platforms Dependencies.
 
-Finally, check the new target Configuration, then click (`Apply and Close`) to save the changes.
-<br/>
+Finally, check the new target Configuration, then click on (`Apply and Close`) to save the changes.<br/>
 <img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/>
 Figure-05: Eclipse Target Platforms.
-
 
 ### Configure the Analysis Platform
 
