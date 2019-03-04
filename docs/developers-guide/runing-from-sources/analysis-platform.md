@@ -78,7 +78,7 @@ Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/pl
 
 * **Configure the Target Platform**
 
-Open the Eclipse preferences on (`Windows -> Preferencies`), then choose the Target Platform Definition (`Plug-in Development -> Target Platform`).<br/>
+Open the Eclipse preferences on (`Window -> Preferencies`), then choose the Target Platform Definition (`Plug-in Development -> Target Platform`).<br/>
 <img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
 Figure-02: Eclipse Preferences.
 
