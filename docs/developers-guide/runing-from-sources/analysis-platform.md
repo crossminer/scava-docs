@@ -45,7 +45,8 @@ Open Eclipse and import all projects from the top level directory of the Scava c
 
 Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
 [Tycho Plugin](https://www.eclipse.org/tycho/).
-
+<br/>
+<img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
 Figure-01: Install m2e-connectors plugins.
 
 #### Configure the Target Platform
