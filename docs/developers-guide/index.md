@@ -3,7 +3,7 @@
 The developers guide is dedicated to who peoples which went to extend the capability of the platform or integrate external tools by the intermediary of the public REST API.
 
 ## [Running SCAVA Platform form Sources](runing-from-sources/index.md)
-The following section provide informations relatd to how the main platform components can be run from sources in developers mode
+The following section provide informations related to how the main platform components can be run from sources in developers mode
 
 * [Analysis Platform](runing-from-sources/analysis-platform.md) 
 * [Administration Application](runing-from-sources/administration-application.md) 
