@@ -3,7 +3,11 @@
 
 ## Prerequisites:
 * Start running the [Metric Platform](./analysis-platform.md#running-the-analysis-platform-form-sources).
-* Scava Administration is a based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart)).
+* Scava Administration is a based on Angular 6 Framework. To get started with Angular, it's better to install Angular CLI 6.1.4 tool to make application development more quicker and easier (Find more here: [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart)).
+
+````Shell
+sudo yarn add @angular/cli@6.1.4
+````
 
 ## Get the Code
 
