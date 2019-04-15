@@ -2,11 +2,9 @@
 # SCAVA Installation Guide
 The SCAVA installation guide provides instructions on how to install and configure the SCAVA Platform on a server and how to deploy the Eclipses Plugin in development environment. 
 
-## [Platform Installation using DOCKER images](docker-installation/index.md) 
-By UNPARALLEL
-## [Platform Installation using individual components](platform-installation/index.md) 
-By UNPARALLEL
-## [Eclipse Plugin Installation](plugin-installation/index.md)
-## [Platform Configuration](platform-configuration/index.md)  
-By SOFTEAM and UNPARALLEL
-## [Licencing Information](licencing.md)  
+* [Platform Installation using DOCKER images](docker-installation/index.md) 
+* [Platform Installation using individual components ](platform-installation/index.md) 
+* [Platform Data Base Backup And Restoration](runing-from-sources/database-backup.md)
+* [Eclipse Plugin Installation](plugin-installation/index.md)
+* [Platform Configuration](platform-configuration/index.md)  
+* [Licencing Information](licencing.md)  
