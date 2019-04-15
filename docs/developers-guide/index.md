@@ -9,6 +9,7 @@ The following section provide informations related to how the main platform comp
 * [Administration Application](runing-from-sources/administration-application.md) 
 * [Visualisation Dashboard](runing-from-sources/visualisation-dashboard.md) 
 * [Eclipse Plugin](runing-from-sources/eclipse-plugin.md)
+* [Data Base Backup And Restoration](runing-from-sources/database-backup.md)
 
 ## [Metric Provider Development Guide](metric-provider-developement-guide/index.md)
 The following section provide the key informations required to develop a new metric provider and to integrate it on the platforme
