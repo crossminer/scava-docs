@@ -1,5 +1,5 @@
 
-# Platform Installation using DOCKER images (To be revised by UNPARALLEL)
+# Platform Installation using DOCKER images
 
 This page is about how to deploy a SCAVA instance on the behalf of Docker.
 
