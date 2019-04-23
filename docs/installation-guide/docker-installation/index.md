@@ -34,17 +34,36 @@ In order to run Scava, you need to:
     1. The environment variable `API-GATEWAY_VAR`, replacing `localhost`by the IP address of your host on service `admin-webapp`
     1. Make sure that the ports defined in the file are not already used on the host, and adjust the various ports as required for your setup. Note that the Kibiter dashboard is on port 80 by default.
     1. Update the `ALLOWED_HOST`directive to include the host name on service `prosoul`. This is used by Django on the prosoul image to publish the quality model used by Crossminer.
-
+    
 ## Building the Docker images
 
-    The deployment setup is hosted in the [scava-deployment](https://github.com/crossminer/scava-deployment) repository. One needs to clone the repository locally in order to build and run the docker images.
+The deployment setup is hosted in the [scava-deployment](https://github.com/crossminer/scava-deployment) repository. One needs to clone the repository locally in order to build and run the docker images.
 
-    To build all the required Docker images, simply go to the root of the cloned repository and issue the following command. This will rebuild all images, dismissing any cached layers.
+To build all the required Docker images, simply go to the root of the cloned repository and issue the following command. This will rebuild all images, dismissing any cached layers.
 
-    ```
-    $ docker-compose -f docker-compose-build.yml build --no-cache
-    ```
-    This will build required images using the latest version of the binaries on the CI server and pull images hosted on docker hub.
+```
+$ docker-compose -f docker-compose-build.yml build --no-cache
+```
+This will build required images using the latest version of the binaries on the CI server and pull images hosted on docker hub.
+    
+## Setup Configurations
+Some optional configurations can be made to customize the dockerized SCAVA instance. These configuration are applied to the docker-compose description files `docker-compose-build.yml` or `docker-compose-dockerhub.yml` and are applied every time that the instance runs.
+
+### Data persistence
+Volumes can be created to persist the data of the databases between execution of the Scava platform. To enable the creation of volumes uncomemnt the corresponding lines on the `oss-db` and `kb-db` services:
+
+* On `oss-db`:
+```yaml
+    volumes: #creates volume on container
+        - ~/oss-data:/data/db
+```
+
+* On `kb-db`:
+```yaml
+    volumes: #creates volume on container
+        - ~/kb-data:/data/kb-db
+```
+### Workers Configuration
     
 ## Running the locally built docker images
 
