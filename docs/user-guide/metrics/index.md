@@ -1139,6 +1139,35 @@ This metric computes the number of patches submitted by the community (users) fo
 
 ------
 
+#### org.eclipse.scava.metricprovider.trans.bugs.references
+- **Short name**: trans.bugs.references
+- **Friendly name**: Bugs References
+
+This metrics search for references of commits or bugs within comments comming from bugs comments.
+
+- <u>Depends-on</u> : `None`
+
+- <u>Returns</u> :	`BugsReferenceTransMetric` which contains:
+
+	| Variable | Type									|
+	| -------- | --------------------- |
+	| bugs		 | `List<BugReferringTo>` |
+
+<u>*Additional Information*</u> :	
+
+- BugReferringTo : 
+	- `String`	bugTrackerId
+	- `String`	bugId
+	- `String`	commentId
+	- `List<String>`	bugsReferred 	(URLs)
+	- `List<String>`	commitsReferred (URLs)
+	
+<u>*Note*</u> :
+	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
+	
+	
+------
+
 #### org.eclipse.scava.metricprovider.trans.bugs.requestsreplies
 - **Short name**: trans.bugs.requestreplies
 - **Friendly name**: Bug statistics (answered?, response time)
@@ -1158,16 +1187,48 @@ This metric computes for each bug, whether it was  answered. If so, it computes 
 - BugStatistics : 
 	- `String`	bugTrackerId
 	- `String`	bugId
-	- `boolean`	firstRequest
 	- `boolean`	answered
 	- `long`	responseDurationSec
 	- `String`	responseDate
 
 ------
 
-### News Groups and Forums
+### Commits
 
-The following Transient Metric Providers are associated with newsgroups.
+------
+
+#### org.eclipse.scava.metricprovider.trans.commits.messagereferences
+- **Short name**: trans.commits.messagereferences
+- **Friendly name**: Commits Messages References
+
+This metrics search for references of commits or bugs within the messages of commits. In order to work, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, then this metric do not run.
+
+- <u>Depends-on</u> : `None`
+
+- <u>Returns</u> :	`CommitsMessageReferenceTransMetric` which contains:
+
+	| Variable | Type									|
+	| -------- | --------------------- |
+	| bugs		 | `List<CommitMessageReferringTo>` |
+
+<u>*Additional Information*</u> :	
+
+- BugReferringTo : 
+	- `String`	repository (URL)
+	- `String`	revision (Commit SHA)
+	- `List<String>`	bugsReferred 	(URLs)
+	- `List<String>`	commitsReferred (URLs)
+
+<u>*Note*</u> :
+	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
+	
+
+------
+
+### Communication Channels (newsgroups and forums)
+
+The following Transient Metric Providers are associated with communication channels in general, either newsgroups or forums.
+Despite the name of the metrics are newsgroups, all the metrics are valid for communication channels.
 
 ------
 
@@ -1440,9 +1501,9 @@ The metric computes for each thread whether it is answered. If so, it computes t
 
 ------
 
-### Natrual Language Processing
+### Natural Language Processing
 
-The following Transient Metric Providers are associated with Natural Language Processing .
+The following Transient Metric Providers are associated with Natural Language Processing tools.
 
 ------
 #### org.eclipse.scava.metricprovider.trans.detectingcode
