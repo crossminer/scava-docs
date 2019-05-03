@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Metrics computed by Scava - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Metrics computed by Scava";
+    var mkdocs_page_input_path = "others/users/Scava-Metrics.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../contributors-guide/">SCAVA Contributors Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/">Architecture Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/api-gateway/">API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/authentication/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/">Contributors Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/">SCAVA Development Process</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-licensing-recomendation/">SCAVA Licensing recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-naming-recomendations/">SCAVA Naming recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-repository-organisation/">SCAVA Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-testing-organisation/">SCAVA Testing recommendations</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/">Technical Guidelignes</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/access-mongodb-pongo/">How to access to MongoDB using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/api-gateway-configuration/">How to configure the API Gateway in order to integrate a new REST service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/consume-scava-rest-services/">How to consume a SCAVA REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/rest-api-doc-generation/">How to generate REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/restlet-service-implementation/">How to implement Restlet services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/scava-data-model-extention/">How to extend the SCAVA data model</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../developers-guide/">SCAVA Developers Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/">REST API Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/analysis-platform/">Analysis Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/api-gateway/">Access to the REST API via the API Gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/knowledge-base/">Knowledge Base REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/visualisation-dashboard/">Visualisation Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/workflow-engine/">Workflow Engine REST API reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/metric-provider-developement-guide/">Metric Provider Developement Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/">Running SCAVA Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/administration-application/">Running the Administration Application form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/analysis-platform/">Running the Analysis Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/eclipse-plugin/">Running the Eclipse Plugin form Sources (To be completed by FrontendArt)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/visualisation-dashboard/">Running the Visualisation Dashboard form Sources (To be reviewed and completed by Bitergia)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/">SCAVA Installation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/database-backup/">Platform Data Base Backup And Restoration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/licencing/">Licencing for Scava</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/docker-installation/">Platform Installation using DOCKER images</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-configuration/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-installation/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/plugin-installation/">Eclipse Plugin Installation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">Welcome to the Scava documentation</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/SCAVA-Administration/">Scava Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture/API-Gateway-Component/">The API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extending MongoDB data model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/How-To-Develop-Metric-Provider/">How to Develop a Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Implementing-Restlet-Service/">Implementing RESTLET services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Licensing/">Licencing for Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Consuming-REST-Services/">Consuming REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../REST-API-Documentation/">REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Metrics computed by Scava</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#metrics-computed-by-scava">Metrics computed by Scava</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#metric-platform">Metric-platform</a></li>
+        
+            <li><a class="toctree-l5" href="#ide-plugin">IDE plugin</a></li>
+        
+            <li><a class="toctree-l5" href="#natural-language-processing">Natural Language Processing</a></li>
+        
+            <li><a class="toctree-l5" href="#configuration-analysis-metrics">Configuration analysis metrics</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Scava-Resources/">Accessing Scava generated data</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../user-guide/">SCAVA User Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/administration/">Platform Administration User Guide (Softeam)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/dashboard/">Visualisation Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/metrics/">Metrics Reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/plugin/">Eclipse Plugin</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/quickstart/">Quick Start Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/workflow/">Workflow Engine</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Users &raquo;</li>
+        
+      
+        
+          <li>Others &raquo;</li>
+        
+      
+    
+    <li>Metrics computed by Scava</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="metrics-computed-by-scava">Metrics computed by Scava</h1>
+<h2 id="metric-platform">Metric-platform</h2>
+<p><strong>OSGi metrics</strong> are defined in:</p>
+<ul>
+<li>https://github.com/crossminer/scava/blob/master/metric-platform/metric-providers/org.eclipse.scava.metricprovider.trans.rascal.dependency.osgi/src/OSGi.rsc</li>
+</ul>
+<p>List of metrics:</p>
+<ul>
+<li>allOSGiBundleDependencies -- Retrieves all the OSGi bunlde dependencies (i.e. Require-Bundle dependencies).</li>
+<li>allOSGiPackageDependencies -- Retrieves all the OSGi package dependencies (i.e. Import-Package and DynamicImport-Package dependencies).</li>
+<li>allOSGiDynamicImportedPackages -- Retrieves all the OSGi dynamically imported packages. If returned value != {} a smell exists in the Manifest file.</li>
+<li>numberOSGiPackageDependencies -- Retrieves the number of OSGi package dependencies (i.e. Import-Package and DynamicImport-Package dependencies).</li>
+<li>numberOSGiBundleDependencies -- Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependencies).</li>
+<li>unusedOSGiImportedPackages -- Retrieves the set of unused OSGi imported packages. If set != {} then developers are importing more packages than needed (smell).</li>
+<li>ratioUnusedOSGiImportedPackages -- Retrieves the ratio of unused OSGi imported packages with regards to the whole set of imported and dynamically imported OSGi packages.</li>
+<li>ratioUsedOSGiImportedPackages -- Retrieves the ratio of used imported packages. If ratio == 0.0 all imported packages have been used in the project code.</li>
+<li>numberOSGiSplitImportedPackages -- Retrieves the number of split imported packages. If returned value &gt; 0 there is a smell in the Manifest.</li>
+<li>numberOSGiSplitExportedPackages -- Retrieves the number of split exported packages. If returned value &gt; 0 there is a smell in the Manifest..</li>
+<li>unversionedOSGiRequiredBundles -- Retrieves the set of unversioned OSGi required bundles (declared in the Require-Bundle header.</li>
+<li>ratioUnversionedOSGiRequiredBundles -- Retrieves the ratio of unversioned OSGi required bundles.</li>
+<li>unversionedOSGiImportedPackages -- Retrieves the set of unversioned OSGi imported packages (declared in the Import-Package header). If returned value != {} there is a smell in the Manifest.</li>
+<li>ratioUnversionedOSGiImportedPackages -- Retrieves the ratio of unversioned OSGi imported packages.</li>
+<li>unversionedOSGiExportedPackages -- Retrieves the set of unversioned OSGi exported packages (declared in the Export-Package header). If returned value != {} there is a smell in the Manifest.</li>
+<li>ratioUnversionedOSGiExportedPackages -- Retrieves the ratio of unversioned OSGi exported packages.</li>
+</ul>
+<p><strong>Maven metrics</strong> are defined in </p>
+<ul>
+<li>https://github.com/crossminer/scava/blob/master/metric-platform/metric-providers/org.eclipse.scava.metricprovider.trans.rascal.dependency.maven/src/Maven.rsc</li>
+</ul>
+<p>List of metrics: </p>
+<ul>
+<li>allMavenDependencies -- Retrieves all the Maven dependencies.</li>
+<li>allOptionalMavenDependencies -- Retrieves all the optional Maven dependencies.</li>
+<li>numberMavenDependencies -- Retrieves the number of Maven dependencies.</li>
+<li>numberUniqueMavenDependencies -- Retrieves the number of unique Maven dependencies.</li>
+<li>ratioOptionalMavenDependencies -- Retrieves the ratio of optional Maven dependencies.</li>
+<li>isUsingTycho -- Checks if the current project is a Tycho project.</li>
+</ul>
+<h2 id="ide-plugin">IDE plugin</h2>
+<p>All metrics are defined in <a href="/resources/metrics_definition_ide_plugin.docx">metrics_definition_ide_plugin.docx</a></p>
+<ul>
+<li>scava-lib-usage -- Level of using CROSSMINER library change function.</li>
+<li>scava-search-usage -- Level of using CROSSMINER search function.</li>
+<li>scava-search-success -- Level of successfull free text serach using CROSSMINER plug-in.</li>
+<li>modifictaion-rate -- Rate of changes applied to document.</li>
+<li>gui-usage-rate -- Rate of activly using the GUI of Eclipse.</li>
+<li>testing-rate -- Count of executing tests.</li>
+<li>working-time -- Average working time for Java source files.</li>
+<li>file-access-rate -- Average count of Java source files open and brought to top.</li>
+</ul>
+<h2 id="natural-language-processing">Natural Language Processing</h2>
+<p>All metrics are defined in <a href="/resources/metrics_definition_nlp.docx">metrics_definition_nlp.docx</a>.</p>
+<p><strong>Issue tracking</strong> metrics:</p>
+<ul>
+<li>Number of bugs: It indicates how many bugs, through the time, are in total all the issue tracking systems related to a project.</li>
+<li>Number of comments: This metric indicates, through the time, the evolution in the quantity of comments for all the bugs related to a project.</li>
+<li>Emotions: This metric expresses, grosso modo, the emotions found in the issue tracker for a given project.</li>
+<li>Number new bugs: It indicates how many bugs are created every delta through a lapse of time.</li>
+<li>Number of new users: How many users are new in the bug tracking system.</li>
+<li>Open time: This metric shows the average open time of an issue.</li>
+<li>Number of patches: It indicates the number of patches located in the issue tracking system.</li>
+<li>Number of request and replies: From all the comments in the issue tracking system, how many of them are replies and how many are requests.</li>
+<li>Response time: It presents the average time to reply a comment in an issue tracker.</li>
+<li>Sentiments: Which sentiments are found in a issue tracking system for a project.</li>
+<li>Severity: The severity level of the bugs found in the issue tracker. This metric classifies a bug report into 1 of 7 severity levels such as Blocker, Critical, Major, Normal, Minor, Trivial or Enhancement.</li>
+<li>Status: It indicates the issues status, like open or closed.</li>
+<li>Topics: Using clustering methods, this metric indicates the topics that are discussed through the time.</li>
+<li>Unasnwered bugs: It indicates how many issues do not have any reply.</li>
+<li>Users: How many users are found in a issue tracker system.</li>
+</ul>
+<p><strong>Newsgroup</strong> metrics</p>
+<ul>
+<li>Number of articles; It determines the number of articles found in a newsgroup.</li>
+<li>Emotions: Which emotions are found in the newgroup.</li>
+<li>Number of threads: How many threads a newsgroup contains. In other words, how many different branches have been created since the first email was sent to the newsgroup.</li>
+<li>Number of new users: How many users make use of the newsgroup.</li>
+<li>Number of request and replies: From the total number of emails belonging to the newsgroup, how many of them are request and how many are replies.</li>
+<li>Response time: The average time to reply a message.</li>
+<li>Sentiments: The sentiments found in the newsgroup.</li>
+<li>Severity: The severity level of the messages exchanges in the newsgroup. The severity is measured in terms of how severe an issue is.</li>
+<li>Number of new threads: How many threads are created per delta.</li>
+<li>Topics: Using the clustering algorithm, we determine which are the most frequent topics discussed in the newsgroup.</li>
+<li>Number of unanswered topics: How many messages haven’t been answered.</li>
+<li>Number of users: Number of users that make use of the newsgroup.</li>
+</ul>
+<p><strong>Forums</strong> metrics</p>
+<ul>
+<li>Number of posts: For every topic (i.e. forum thread), how many posts in total exist.</li>
+<li>Emotions: Which are the emotions located in the forum.</li>
+<li>Number of topics: How many forum threads contain the forum.</li>
+<li>Number of request and replies: From all the posts in the forum, how many are request and how many are reply.</li>
+<li>Sentiments: Which are the sentiments that can be found in a forum.</li>
+<li>Severity: In the case the forums are used to express issues, we can determine their severity.</li>
+<li>Number of new topics: Number of new forum threads created.</li>
+<li>Topics: Number of content topics, i.e. subjects, are discussed in the forum. </li>
+<li>Number of unanswered topics: Number of forums threads which do not have a reply.</li>
+</ul>
+<h2 id="configuration-analysis-metrics">Configuration analysis metrics</h2>
+<p>Metrics of Puppet are defined in detail in <a href="https://github.com/crossminer/internal-material/blob/master/Workpackages/WP4/D4.2/D4.2.docx">Deliverable 4.2</a>.</p>
+<p><strong>Puppet Design</strong> Metrics:</p>
+<ul>
+<li>numberOfMultifacetedSmells --  The number of Multifaceted Abstraction smells</li>
+<li>numberOfUnnecessarySmells -- The number of Unnecessary Abstraction smells</li>
+<li>numberOfImperativeSmells -- The number of Imperative Abstraction smells</li>
+<li>numberOfMissAbSmells -- The number of Missing Abstraction smells</li>
+<li>numberOfInsufficientSmells -- The number of Insufficient Modularization smells</li>
+<li>numberOfUnstructuredSmells -- The number of Unstructured Module smells</li>
+<li>numberOfTightSmells -- The number of Tightly-coupled Module smells</li>
+<li>numberOfBrokenSmells -- The number of Broken Hierarchy smells</li>
+<li>numberOfMissingDepSmells -- The number of Missing Dependency smells</li>
+<li>numberOfHairballSmells -- The number of Hairball Structure smells</li>
+<li>numberOfDeficientSmells -- The number of Deficient Encapsulation smells</li>
+<li>numberOfWeakenSmells -- The number of Weaken Modularity smells</li>
+<li>cumulativeNumberOfDesignSmells -- The number of design smells</li>
+</ul>
+<p><strong>Puppet Implementation</strong> Metrics:</p>
+<ul>
+<li>numberOfMissingDefaultCaseSmells -- Smell exists when a default case is missing in a case or selector statement.</li>
+<li>numberOfInconsistentNamingConventionSmells -- Smell exists when the used naming convention deviates from the recommended naming convention.</li>
+<li>numberOfComplexExpressionSmells -- Smell exists when a program contains a difficult to understand complex expression.  </li>
+<li>numberOfDuplicateEntitySmells -- Smell exists duplicate parameters are present in the configuration code.</li>
+<li>numberOfMisplacedAttributeSmells -- Smell exists when attribute placement within a resource or a class has not followed a recommended order.</li>
+<li>numberOfImproperAlignmentSmells -- Smell exists when the code is not properly aligned or tabulation characters are used </li>
+<li>numberOfInvalidPropertyValueSmells -- Smell exists when an invalid value of a property or attribute is used.</li>
+<li>numberOfIncompleteTasksSmells -- Smell exists when the code has “fixme” and “todo” tags indicating incomplete tasks.</li>
+<li>numberOfDeprecatedStatementUsageSmells -- Smell exists when the configuration code uses one of the deprecated statements.</li>
+<li>numberOfImproperQuoteUsageSmells -- Smell exists when single and double quotes are not used properly.</li>
+<li>numberOfLongStatementSmells -- Smell exists when the code contains long statements.</li>
+<li>numberOfIncompleteConditionalSmells -- Smell exists when an “if..elseif” construct used without a terminating “else” clause.</li>
+<li>numberOfUnguardedVariableSmells -- Smell exists when a variable is not enclosed in braces when being interpolated in a string.</li>
+</ul>
+<p>Docker Metrics are based on the following <a href="https://github.com/hadolint/hadolint#rules">rules</a>.</p>
+<p><strong>Docker</strong> Metrics:</p>
+<ul>
+<li>numberOfUpgradeSmells -- Smell exists when apt-get or apk commands are used problematically.</li>
+<li>numberOfPinVersionSmells -- Smell exists when version of packages is not explicitly declared.</li>
+<li>numberOfUntaggedImageSmells -- Smell exists when version of images is not explicitly declared.</li>
+<li>numberOfSudoSmells -- Smell exists when sudo command and root user are used inappropriately.</li>
+<li>numberOfCopySmells -- Smell exists when COPY instruction is not used properly.</li>
+<li>numberOfFromSmells -- Smell exists when FROM instruction is not used properly.</li>
+<li>numberOfCmdSmells -- Smell exists when CMD and ENTRYPOINT instruction is not used properly.</li>
+<li>numberOfAddSmells -- Smell exists when ADD instruction is not used properly.</li>
+<li>numberOfMeaninglessCommandsSmells -- Smell exists when there are commands that makes no sense running them in a Docker container.</li>
+<li>numberOfInvalidPortsSmells -- Smell exists when invalid UNIX ports range is used.</li>
+<li>numberOfShellSmells -- Smell exists when SHELL instruction is not used when it should.</li>
+</ul>
+<p>All of the above metrics have their corresponding allOfSmells metrics (e.g. numberOfMultifacetedSmells -&gt; allOfMultifacetedSmells) that lists the actual smells.</p>
+<p><strong>Pattern and Anti-pattern</strong> Metrics:</p>
+<ul>
+<li>puppetPatternIntroduction: The metric will list the smells that removed between two consecutive versions of a puppet file.</li>
+<li>puppetAntipatternIntroduction: The metric will list the smells that introduced between two consecutive versions of a puppet file.</li>
+<li>dockerPatternIntroduction: The metric will list the smells that removed between two consecutive versions of a Dockerfile.</li>
+<li>dockerAntipatternIntroduction: The metric will list the smells that introduced between two consecutive versions of a Dockerfile.</li>
+</ul>
+<p><strong>Components</strong> metrics:</p>
+<ul>
+<li>allDockerLibraries: Retrieves all the libraries that are installed with the use of apt-get install or apk install in Dockerfiles</li>
+<li>numberOfDockerLibraries: Retrieves the number of the above libraries</li>
+<li>allDockerImages: Retrieves all the images that are used with the use of FROM instruction in Dockerfiles</li>
+<li>numberOfDockerImages: Retrieves the number of the above images</li>
+</ul>
+<p><strong>New versions</strong> Metrics:</p>
+<ul>
+<li>newVersionFound: The metric will list the new versions (if any) of libraries that are used in the project.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Scava-Resources/" class="btn btn-neutral float-right" title="Accessing Scava generated data">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Running-Scava-in-Eclipse/" class="btn btn-neutral" title="Running Scava in Eclipse"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Running-Scava-in-Eclipse/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Scava-Resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

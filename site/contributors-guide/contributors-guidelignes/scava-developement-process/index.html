@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>SCAVA Development Process - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SCAVA Development Process";
+    var mkdocs_page_input_path = "contributors-guide/contributors-guidelignes/scava-developement-process.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">SCAVA Contributors Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture-guidelignes/">Architecture Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture-guidelignes/api-gateway/">API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture-guidelignes/authentication/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../">Contributors Guidelines</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">SCAVA Development Process</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#scava-development-process">SCAVA Development Process</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l5" href="#process-overview">Process overview</a></li>
+        
+            <li><a class="toctree-l5" href="#naming-and-change-conventions">Naming and change conventions</a></li>
+        
+            <li><a class="toctree-l5" href="#communication-and-collaboration-means">Communication and collaboration means</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../scava-licensing-recomendation/">SCAVA Licensing recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../scava-naming-recomendations/">SCAVA Naming recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../scava-repository-organisation/">SCAVA Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../scava-testing-organisation/">SCAVA Testing recommendations</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/">Technical Guidelignes</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/access-mongodb-pongo/">How to access to MongoDB using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/api-gateway-configuration/">How to configure the API Gateway in order to integrate a new REST service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/consume-scava-rest-services/">How to consume a SCAVA REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/rest-api-doc-generation/">How to generate REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/restlet-service-implementation/">How to implement Restlet services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../technical-guidelignes/scava-data-model-extention/">How to extend the SCAVA data model</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../developers-guide/">SCAVA Developers Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/">REST API Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/analysis-platform/">Analysis Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/api-gateway/">Access to the REST API via the API Gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/knowledge-base/">Knowledge Base REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/visualisation-dashboard/">Visualisation Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/workflow-engine/">Workflow Engine REST API reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/metric-provider-developement-guide/">Metric Provider Developement Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/">Running SCAVA Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/administration-application/">Running the Administration Application form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/analysis-platform/">Running the Analysis Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/eclipse-plugin/">Running the Eclipse Plugin form Sources (To be completed by FrontendArt)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/visualisation-dashboard/">Running the Visualisation Dashboard form Sources (To be reviewed and completed by Bitergia)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/">SCAVA Installation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/database-backup/">Platform Data Base Backup And Restoration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/licencing/">Licencing for Scava</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/docker-installation/">Platform Installation using DOCKER images</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-configuration/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-installation/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/plugin-installation/">Eclipse Plugin Installation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../others/">Welcome to the Scava documentation</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/admin/API-Gateway-Configuration/">API Gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/admin/SCAVA-Administration/">Scava Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/architecture/API-Gateway-Component/">The API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/architecture/Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Extend-MongoDB-Data-Model/">Extending MongoDB data model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/How-To-Develop-Metric-Provider/">How to Develop a Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Implementing-Restlet-Service/">Implementing RESTLET services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Licensing/">Licencing for Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Naming-Scava-REST-Services/">Naming Scava REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Consuming-REST-Services/">Consuming REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/REST-API-Documentation/">REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Scava-Metrics/">Metrics computed by Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Scava-Resources/">Accessing Scava generated data</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../user-guide/">SCAVA User Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/administration/">Platform Administration User Guide (Softeam)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/dashboard/">Visualisation Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/metrics/">Metrics Reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/plugin/">Eclipse Plugin</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/quickstart/">Quick Start Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/workflow/">Workflow Engine</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Contributors guidelignes &raquo;</li>
+        
+      
+        
+          <li>Contributors guide &raquo;</li>
+        
+      
+    
+    <li>SCAVA Development Process</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="scava-development-process">SCAVA Development Process</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This document presents the guidelines about the processes and tools supporting the development of the Scava platform. In particular, Sec 2 presents an overview of the main development workflow by highlighting the main tools of the supporting development infrastructure. Section 3 mentions peculiar conventions that have to be adopted to write source code and to perform changes. Section 4 makes a list of tools supporting communication and collaboration among the different partners. Section 5 gives some important remarks related to the Scava project and its development.</p>
+<h2 id="process-overview">Process overview</h2>
+<p>The development of the Scava components and of the integrated platform should follow the process shown in the following figure. Essentially, the development relies on the availability of a source code repository (to enable collaborative development) and of a Continuous Integration Server (to do the building and integration on behalf of the developers). Different deployment environments can be considered for deploying the built system.</p>
+<p>It is important to remark that Continuous Integration (CI) requires that the different developers have self-testing code. This is code that tests itself to ensure that it is working as expected, and these tests are often called unit tests. When all the unit tests pass after the code is integrated, developers will get a green build. This indicates that they have verified that their changes are successfully integrated together, and the code is working as expected by the tests.</p>
+<p>The different elements shown below are individually described in the remaining of the section.</p>
+<p><img alt="Dev Process for Scava" src="../images/scava_dev_process_1.png" /><br />
+Figure 1. Overview of the CROSSMINER development process and tools.</p>
+<h3 id="source-code-repository">Source Code Repository</h3>
+<p>Different branches will be created in the repository. In particular, the <code>master</code> branch is the main branch and represents the released state of the product. It is always clean, builds and runs all the tests successfully. The <code>dev</code> branch contains the most recent code integrated by partners before release.</p>
+<p>Other branches will be created for the different features/components, which will be eventually merged in the <code>dev</code> branch. The name of each branch contains the id of the issue it is supposed to implement.</p>
+<p>All source code, binary code and conﬁguration needed to build a working implementation of the system will reside in a GitHub repository.</p>
+<ul>
+<li>Code: https://github.com/crossminer/scava</li>
+<li>Product documentation: https://github.com/crossminer/scava-docs</li>
+<li>Product deployment: https://github.com/crossminer/scava-deployment</li>
+</ul>
+<p>Since all source code will be stored in a single GitHub repository, each developer will have a working copy of the entire project. To simplify collaboration, each component will be contained in one subdirectory within the source structure (see Sec. 3 for details).</p>
+<p>By taking inspiration from https://datasift.github.io/gitflow/IntroducingGitFlow.html the branching model that will be followed will resemble that shown in Fig. 2 without making use of the release and hotfixes branches. Details about the change conventions, pull requests, etc. are given in Sec. 3.</p>
+<p><img alt="Git development workflow" src="../images/scava_dev_process_2.png" /><br />
+Figure 2: Branching model</p>
+<h3 id="tests">Tests</h3>
+<p>Each branch must have the corresponding unit tests. The dev branch must have integration tests and the unit tests of all the features that have been already merged as shown below.</p>
+<p><img alt="Master and branches" src="../images/scava_dev_process_3.png" /><br />
+Figure 3: Explanatory master and branches</p>
+<pre><code>BRANCH: Set of branches
+TEST: Set of tests
+INTGRATION_TEST &lt; TEST
+UNIT_TEST &lt; TEST
+
+function test: BRANCH -&gt; TEST
+
+test(master) -&gt; test(cool-feature)
+    ⋃ {itu, … itz}
+</code></pre>
+
+<h3 id="continuous-integration-server">Continuous Integration Server</h3>
+<p>Continuous integration (CI) involves integrating early and often, so as to avoid the pitfalls of "integration hell". The practice aims to reduce rework and thus <a href="https://en.wikipedia.org/wiki/Continuous_integration">reduce cost and time</a>.</p>
+<p>A complementary practice to CI is that before submitting work, each programmer must do a complete build and run (and pass) all <a href="https://en.wikipedia.org/wiki/Unit_tests">unit tests</a>. <a href="https://en.wikipedia.org/wiki/Integration_testing">Integration tests</a> are usually run automatically on a CI server when it detects a new commit. In particular, a CI server provides developers with at least the following functionalities:</p>
+<ul>
+<li>Allow developers to write unit tests that can be executed automatically</li>
+<li>Perform automated tests against newly written code</li>
+<li>Show a list of tests that have passed and failed</li>
+<li>Quality analysis on source code</li>
+<li>Perform all the necessary actions to create a fully functioning build of the software when all tests have passed</li>
+</ul>
+<p>The currently used CI server is available at http://ci5.castalia.camp:8080/</p>
+<h3 id="development-and-production-environments">Development and Production environments</h3>
+<p>According to the DoW we have not promised the availability of a public installation of the CROSSMINER platform (i.e., a production environment). However, in order to implement the different use cases, use case partners are provided with docker images enabling the local installation of the whole CROSSMINER platform.</p>
+<h2 id="naming-and-change-conventions">Naming and change conventions</h2>
+<p>The repository will contain the code of the high-level components shown in Table 1</p>
+<table>
+<thead>
+<tr>
+<th>Components</th>
+<th>Corresponding folder in repository</th>
+<th>Leader</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevOps Dashboard</td>
+<td></td>
+<td>BIT</td>
+</tr>
+<tr>
+<td>Workflow Diagram Editor</td>
+<td>/crossflow</td>
+<td>YORK</td>
+</tr>
+<tr>
+<td>Administration Web Application</td>
+<td>/administration</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>IDE</td>
+<td>/eclipse-based-ide</td>
+<td>FEA</td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td>/api-gateway</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>DevOps Backend</td>
+<td></td>
+<td>BIT</td>
+</tr>
+<tr>
+<td>Knowledge Base</td>
+<td>/knowledge-base</td>
+<td>UDA</td>
+</tr>
+<tr>
+<td>Project Analyser</td>
+<td>/metric-platform</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>Data Collector</td>
+<td>/metric-platform</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>Project Scheduler</td>
+<td>/metric-platform</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>Metric Providers</td>
+<td>/metric-platform</td>
+<td>YORK, CWI, AUEB, EHU</td>
+</tr>
+<tr>
+<td>Data Storage</td>
+<td>/metric-platform</td>
+<td>SFT</td>
+</tr>
+<tr>
+<td>Web-based dashboards</td>
+<td>/web-dashboards</td>
+<td>BIT</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: Leaders and Contributors of the CROSSMINER Deployment diagram nodes</p>
+<p><img alt="Scava components architecture" src="../images/scava_architecture.png" /><br />
+Figure 4: Scava components architecture</p>
+<p>For each component a corresponding folder is available in the repository. Changes must have a CR (i.e. issue) entry for traceability. In particular, the requirements and objectives of each Scava components will be detailed in the relevant deliverables and they will be added in the form of items in the provided Bug Tracking infrastructure. In this way progress on the implementation of each requirement can be tracked. Thus:</p>
+<ul>
+<li>when developers want to operate changes they have to create corresponding issues in the bug tracking system for traceability reasons;</li>
+<li>when a developer wants to perform changes on a component led by an organization, which is different than that the developer belongs to, a pull request (PR) has to be done. Such a PR will be managed by one of the members of the organization leading the component affected by the changes in the PR.</li>
+</ul>
+<p>The partner in charge of managing the development of a component will be free to organize the content of the corresponding subdirectory in any way as long as the following standard ﬁles/directories are contained in the component folder:</p>
+<ul>
+<li><code>readme.md</code> : this ﬁle will contain the entry-point to all documentation for the component.</li>
+<li><code>Jenkinsfile</code>: in order to compile the component, run tests, etc on the CI server.</li>
+<li><code>test</code>: this is a folder containing the unit and/or integration tests.</li>
+</ul>
+<p>As a reference, please have a look at https://github.com/crossminer/scava/tree/master/knowledge-base</p>
+<p>The following items are typical practices when applying CI:
+* Maintain a code repository
+* Automate the build
+* Make the build self-testing
+* Everyone commits to the baseline every day
+* Every commit (to baseline) should be built
+* Keep the build fast
+* Test in a clone of the production environment
+* Make it easy to get the latest deliverables
+* Everyone can see the results of the latest build
+* Automate deployment</p>
+<h2 id="communication-and-collaboration-means">Communication and collaboration means</h2>
+<p>The development activities can be done by exploiting different communication and collaboration means. In particular, currently the consortium members have the availability of:</p>
+<ul>
+<li>Slack channel: http://crossminer.slack.com</li>
+<li>Eclipse Mailing lists: https://accounts.eclipse.org/mailing-list/scava-dev</li>
+<li>GitHub repository for documentation: https://github.com/crossminer/scava-docs/</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../scava-licensing-recomendation/" class="btn btn-neutral float-right" title="SCAVA Licensing recommendations">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Contributors Guidelines"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../scava-licensing-recomendation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,3581 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Metrics Reference Guide - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Metrics Reference Guide";
+    var mkdocs_page_input_path = "user-guide/metrics/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../contributors-guide/">SCAVA Contributors Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/architecture-guidelignes/">Architecture Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/architecture-guidelignes/api-gateway/">API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/architecture-guidelignes/authentication/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/contributors-guidelignes/">Contributors Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/contributors-guidelignes/scava-developement-process/">SCAVA Development Process</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/contributors-guidelignes/scava-licensing-recomendation/">SCAVA Licensing recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/contributors-guidelignes/scava-naming-recomendations/">SCAVA Naming recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/contributors-guidelignes/scava-repository-organisation/">SCAVA Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/contributors-guidelignes/scava-testing-organisation/">SCAVA Testing recommendations</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/">Technical Guidelignes</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/access-mongodb-pongo/">How to access to MongoDB using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/api-gateway-configuration/">How to configure the API Gateway in order to integrate a new REST service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/consume-scava-rest-services/">How to consume a SCAVA REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/rest-api-doc-generation/">How to generate REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/restlet-service-implementation/">How to implement Restlet services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../contributors-guide/technical-guidelignes/scava-data-model-extention/">How to extend the SCAVA data model</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../developers-guide/">SCAVA Developers Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/api-reference-guide/">REST API Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/api-reference-guide/analysis-platform/">Analysis Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/api-reference-guide/api-gateway/">Access to the REST API via the API Gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/api-reference-guide/knowledge-base/">Knowledge Base REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/api-reference-guide/visualisation-dashboard/">Visualisation Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/api-reference-guide/workflow-engine/">Workflow Engine REST API reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/metric-provider-developement-guide/">Metric Provider Developement Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/runing-from-sources/">Running SCAVA Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/runing-from-sources/administration-application/">Running the Administration Application form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/runing-from-sources/analysis-platform/">Running the Analysis Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/runing-from-sources/eclipse-plugin/">Running the Eclipse Plugin form Sources (To be completed by FrontendArt)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../developers-guide/runing-from-sources/visualisation-dashboard/">Running the Visualisation Dashboard form Sources (To be reviewed and completed by Bitergia)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../installation-guide/">SCAVA Installation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../installation-guide/database-backup/">Platform Data Base Backup And Restoration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../installation-guide/licencing/">Licencing for Scava</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../installation-guide/docker-installation/">Platform Installation using DOCKER images</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../installation-guide/platform-configuration/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../installation-guide/platform-installation/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../installation-guide/plugin-installation/">Eclipse Plugin Installation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../others/">Welcome to the Scava documentation</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/admin/API-Gateway-Configuration/">API Gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/admin/SCAVA-Administration/">Scava Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/architecture/API-Gateway-Component/">The API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/architecture/Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Extend-MongoDB-Data-Model/">Extending MongoDB data model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/How-To-Develop-Metric-Provider/">How to Develop a Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Implementing-Restlet-Service/">Implementing RESTLET services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Licensing/">Licencing for Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Naming-Scava-REST-Services/">Naming Scava REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/users/Consuming-REST-Services/">Consuming REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/users/REST-API-Documentation/">REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/users/REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/users/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/users/Scava-Metrics/">Metrics computed by Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../others/users/Scava-Resources/">Accessing Scava generated data</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">SCAVA User Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../administration/">Platform Administration User Guide (Softeam)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../dashboard/">Visualisation Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Metrics Reference Guide</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#metrics-reference-guide">Metrics Reference Guide</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#historic-metric-providers">Historic Metric Providers</a></li>
+        
+            <li><a class="toctree-l5" href="#transient-metric-providers">Transient Metric Providers</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../plugin/">Eclipse Plugin</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../quickstart/">Quick Start Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../workflow/">Workflow Engine</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Metrics &raquo;</li>
+        
+      
+        
+          <li>User guide &raquo;</li>
+        
+      
+    
+    <li>Metrics Reference Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="metrics-reference-guide">Metrics Reference Guide</h1>
+<p>This guide contains the historic and trans metric providers for for bug trackers and newsgroups (including eclipse forum).</p>
+<h2 id="historic-metric-providers">Historic Metric Providers</h2>
+<p>Historic metrics maintain a record of various heuristics associated with a specific open source project over its lifetime. They typically depend on the results from one or more transient metrics.</p>
+<h3 id="bug-trackers">Bug Trackers</h3>
+<p>The following Historic Metric Providers are associated with Issue trackers</p>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsbugs">org.eclipse.scava.metricprovider.historic.bugs.bugs</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.bugs</li>
+<li><strong>Friendly name</strong>: Number of bugs per day per bug tracker</li>
+</ul>
+<p>This metric computes the number of bugs per day for each bug tracker seperately. It also computes additional information such as average comments per bug, average comments per user, average requests and/or replies per user and bug. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code>,</p>
+<p><code>org.eclipse.scava.metricprovider.trans.bugs.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsBugsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackers</td>
+<td><code>List&lt;DailyBugTrackerData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>averageCommentsPerBug</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageRequestsPerBug</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageRepliesPerBug</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageCommentsPerUser</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageRequestsPerUser</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageRepliesPerUser</td>
+<td><code>float</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfBugs</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugscomments">org.eclipse.scava.metricprovider.historic.bugs.comments</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.comments</li>
+<li><strong>Friendly name</strong>: Number of bug comments per day per bug tracker</li>
+</ul>
+<p>This metric computes the number of bug comments submitted by the community (users) per day for each bug tracker. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.comments</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsCommentsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bugs</td>
+<td><code>List&lt;DailyBugData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfComments</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfComments</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugData : <ul>
+<li><code>String</code>  bugTrackerID</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>int</code> cumulativeNumberOfComments</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsemotions">org.eclipse.scava.metricprovider.historic.bugs.emotions</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.emotions</li>
+<li><strong>Friendly name</strong>: Number of emotions per day per bug tracker</li>
+</ul>
+<p>This metric computes the emotional dimensions present in bug comments submitted by the community (users) per day for each bug tracker. Emotion can be 1 of 6 (anger, fear, joy, sadness, love or surprise).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.emotions</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsEmotionsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugData</td>
+<td><code>List&lt;BugData&gt;</code></td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td><code>List&lt;Dimensions&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>BugData : </p>
+<ul>
+<li><code>String</code> bugTrackerID</li>
+<li><code>int</code>    numberOfComments</li>
+<li><code>int</code>    cumulativeNumberOfComments</li>
+</ul>
+</li>
+<li>
+<p>Dimensions :  </p>
+<ul>
+<li><code>String</code>   bugTrackerId</li>
+<li><code>String</code>  emotionLabel (<code>anger</code>, <code>fear</code>, <code>joy</code>, <code>sadness</code>, <code>love</code>, <code>surprise</code>)</li>
+<li><code>int</code>    numberOfComments</li>
+<li><code>int</code>    cumulativeNumberOfComments</li>
+<li><code>float</code>  percentage</li>
+<li><code>float</code>  cumulativePercentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsnewbugs">org.eclipse.scava.metricprovider.historic.bugs.newbugs</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.newbugs</li>
+<li><strong>Friendly name</strong>: Number of new bugs per day per bug tracker</li>
+</ul>
+<p>This metric computes the number of new bugs reported by the community (users) per day for each bug tracker. A small number of bug reports can indicate either a bug-free, robust project or a project with a small/inactive user community.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.newbugs</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsNewBugsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyBugData</td>
+<td><code>List&lt;DailyBugData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfBugs</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfBugs</li>
+<li><code>int</code>     cumulativeNumberOfBugs</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsnewusers">org.eclipse.scava.metricprovider.historic.bugs.newusers</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.newusers</li>
+<li><strong>Friendly name</strong>: Number of new users per day per bug tracker</li>
+</ul>
+<p>This metric computes the number of new users per day  for each bug tracker seperately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsNewUsersHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackers</td>
+<td><code>List&lt;DailyBugTrackerData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfNewUsers</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfNewUsers</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfNewUsers</li>
+<li><code>int</code>     cumulativeNumberOfNewUsers</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsopentime">org.eclipse.scava.metricprovider.historic.bugs.opentime</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.opentime</li>
+<li><strong>Friendly name</strong>: Average duration to close an open bug</li>
+</ul>
+<p>This metric computes the average duration between creating and closing bugs. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>OpenTimeHistoricMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>avgBugOpenTime</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>avgBugOpenTimeInDays</td>
+<td><code>double</code></td>
+</tr>
+<tr>
+<td>bugsConsidered</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugspatches">org.eclipse.scava.metricprovider.historic.bugs.patches</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.patches</li>
+<li><strong>Friendly name</strong>: Number of bug patches per day</li>
+</ul>
+<p>This class computes the number of bug patches per day, for each bug tracker seperately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.patches</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>PatchesHistoricMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numberOfPatches</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfPatches</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>bugs</td>
+<td><code>List&lt;DailyBugData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :   </p>
+</li>
+<li>
+<p>DailyBugData : </p>
+<ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfPatches</li>
+<li><code>int</code> cumulativeNumberOfPatches   </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsrequestsreplies">org.eclipse.scava.metricprovider.historic.bugs.requestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.requestsreplies</li>
+<li><strong>Friendly name</strong>: Number of request and replies in bug comments per bug tracker</li>
+</ul>
+<p>This metric computes the number of requests and replies realting to comments posted to bugs by the community (users) per day  for each bug tracker seperately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> :<code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsRequestsRepliesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bugs</td>
+<td><code>List&lt;DailyBugTrackerData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfRequests</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfReplies</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfRequests</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfReplies</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>int</code> cumulativeNumberOfRequests  </li>
+<li><code>int</code> cumulativeNumberOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsrequestsrepliesaverage">org.eclipse.scava.metricprovider.historic.bugs.requestsreplies.average</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.requestsreplies.average</li>
+<li><strong>Friendly name</strong>: Average number of requests and replies in bug comments per bug tracker</li>
+</ul>
+<p>This metric computes the average number of bug comments considered as request and reply for each bug tracker per day.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsRequestsRepliesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugs</td>
+<td><code>List&lt;DailyBugTrackerData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfRequests</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfReplies</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfRequests</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeNumberOfReplies</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>int</code> cumulativeNumberOfRequests  </li>
+<li><code>int</code> cumulativeNumberOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsresponsetime">org.eclipse.scava.metricprovider.historic.bugs.responsetime</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.responsetime</li>
+<li><strong>Friendly name</strong>: Average response time to open bugs per bug tracker</li>
+</ul>
+<p>This metric computes the average time in which the community (users) responds to open bugs per day for each bug tracker seperately. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.requestsreplies</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsResponseTimeHistoricMetric</code> which contains:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerId</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>avgResponseTimeFormatted</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>cumulativeAvgResponseTimeFormatted</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>avgResponseTime</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>cumulativeAvgResponseTime</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>bugsConsidered</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeBugsConsidered</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugssentiment">org.eclipse.scava.metricprovider.historic.bugs.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.sentiment</li>
+<li><strong>Friendly name</strong>: Overall sentiment per bug tracker </li>
+</ul>
+<p>This metric computes the overall sentiment per bug tracker up to the processing date. The overall sentiment score could be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). In the computation, the sentiment score for each bug contributes equally, regardless of it's size.    </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsSentimentHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overallAverageSentiment</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>overallSentimentAtThreadBeggining</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>overallSentimentAtThreadEnd</td>
+<td><code>float</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>The sentiment related variables above all represent a <u><strong><em>Polarity</em></strong></u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsseverity">org.eclipse.scava.metricprovider.historic.bugs.severity</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.severity</li>
+<li><strong>Friendly name</strong>: Number of bugs per severity level per bug tracker</li>
+</ul>
+<p>This metric computes the number of severity levels for bugs submitted by the community (users) every day for each bug tracker. Specifically, it calculates the number and percentage of bugs that have been categorised into 1 of 8 severity levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse.  </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsSeveritiesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugData</td>
+<td><code>List&lt;BugData&gt;</code></td>
+</tr>
+<tr>
+<td>severityLevels</td>
+<td><code>List&lt;ServerityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfBugs</li>
+</ul>
+</li>
+<li>SeverityLevel : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  severityLevel   (<code>blocker</code>,<code>critical</code>,<code>major</code>,<code>minor</code>,<code>enhancement</code>, <code>normal</code>, <code>trivial</code>, <code>unknown</code>)</li>
+<li><code>int</code> numberOfBugs</li>
+<li><code>int</code> percentage </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsseveritybugstatus">org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.severitybugstatus</li>
+<li><strong>Friendly name</strong>: Number of each bug status per bug severity level </li>
+</ul>
+<p>This metric computes the total number and percentage of each bug status per severity level, in bugs submitted every day, per bug tracker. There are 7 bug status (ResolvedClosed, WontFix, WorksForMe, NonResolvedClosed, Invalid, Fixed, Duplicate) and 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code>, <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsSeverityBugStatusHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>severityLevels</td>
+<td><code>List&lt;SeverityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>SeverityLevel : <ul>
+<li><code>String</code>  severityLevel   (<code>blocker</code>,<code>critical</code>,<code>major</code>,<code>minor</code>,<code>enhancement</code>, <code>normal</code>, <code>trivial</code>, <code>unknown</code>)</li>
+<li><code>int</code> numberOfBugs</li>
+<li><code>int</code> numberOfWontFixBugs</li>
+<li><code>int</code> numberOfWorksForMeBugs</li>
+<li><code>int</code> numberOfNonResolvedClosedBugs </li>
+<li><code>int</code> numberOfInvalidBugs</li>
+<li><code>int</code> numberOfFixedBugs </li>
+<li><code>int</code> numberOfDuplicateBugs</li>
+<li><code>float</code>   percentageOfResolvedClosedBugs</li>
+<li><code>float</code>   percentageOfWontFixBugs </li>
+<li><code>float</code>   percentageOfWorksForMeBugs  </li>
+<li><code>float</code>   percentageOfNonResolvedClosedBugs   </li>
+<li><code>float</code>   percentageOfInvalidBugs </li>
+<li><code>float</code>   percentageOfFixedBugs   </li>
+<li><code>float</code>   percentageOfDuplicateBugs</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsseverityresponsetime">org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.severityresponsetime</li>
+<li><strong>Friendly name</strong>: Average response time to bugs per severity level per day</li>
+</ul>
+<p>This metric computes the average time in which the community (users) responds to open bugs per severity level per day for each bug tracker. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds. Note: there are 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code>, <code>org.eclipse.scava.metricprovider.trans.bugs.requestsreplies</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsSeverityBugStatusHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>severityLevels</td>
+<td><code>List&lt;SeverityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>SeverityLevel : <ul>
+<li><code>String</code>  severityLevel   (<code>blocker</code>,<code>critical</code>,<code>major</code>,<code>minor</code>,<code>enhancement</code>, <code>normal</code>, <code>trivial</code>, <code>unknown</code>)</li>
+<li><code>String</code>  avgResponseTimeFormatted</li>
+<li><code>int</code> numberOfBugs</li>
+<li><code>long</code>    avgResponseTime</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsseveritysentiment">org.eclipse.scava.metricprovider.historic.bugs.severitysentiment</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.severitysentiment</li>
+<li><strong>Friendly name</strong>: Average sentiment per bugs severity level per day</li>
+</ul>
+<p>This metric computes for each bug severity level, the average sentiment, sentiment at the begining and end of bug comments posted by the community (users) every day for each bug tracker. Sentiment score could be closer to -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). There are 8 severity levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code>, <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsSeverityBugStatusHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>severityLevels</td>
+<td><code>List&lt;SeverityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>SeverityLevel : </p>
+<ul>
+<li><code>String</code>  severityLevel   (<code>blocker</code>,<code>critical</code>,<code>major</code>,<code>minor</code>,<code>enhancement</code>, <code>normal</code>, <code>trivial</code>, <code>unknown</code>)</li>
+<li><code>int</code> numberOfBugs</li>
+<li><code>float</code>   averageSentiment</li>
+<li><code>float</code>   sentimentAtThreadBeggining</li>
+<li><code>float</code>   sentimentAtThreadEnd</li>
+</ul>
+</li>
+<li>
+<p>The sentiment related variables above all represent a <u><strong><em>Polarity</em></strong></u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.</p>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsstatus">org.eclipse.scava.metricprovider.historic.bugs.status</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.status</li>
+<li><strong>Friendly name</strong>: Number of bugs per bug status per day </li>
+</ul>
+<p>This metric computes the total number of bugs that corresponds to each bug status, in bugs submitted every day, per bug tracker. There are 7 bug status (ResolvedClosed, WontFix, WorksForMe, NonResolvedClosed, Invalid, Fixed, Duplicate).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code> </p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsStatusHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numberOfBugs</td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td>numberOfResolvedClosedBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfWontFixBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfWorksForMeBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfNonResolvedClosedBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfInvalidBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfFixedBugs</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfDuplicateBugs</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugstopics">org.eclipse.scava.metricprovider.historic.bugs.topics</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.topics</li>
+<li><strong>Friendly name</strong>: Labels of topics in bug comments per bug tracker </li>
+</ul>
+<p>This metric computes the labels of topics (thematic clusters) in bug comments submitted by the community (users), per bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.topics</code> </p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsTopicsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTopics</td>
+<td><code>List&lt;BugTopic&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>SeverityLevel : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  label</li>
+<li><code>float</code>   numberOfDocuments</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsunansweredbugs">org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.unansweredbugs</li>
+<li><strong>Friendly name</strong>: Number of unanswered bugs per day </li>
+</ul>
+<p>This metric computes the number of unanswered bugs per day.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.requestsreplies</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsUnansweredBugsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numberOfUnansweredBugs</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricbugsusers">org.eclipse.scava.metricprovider.historic.bugs.users</h4>
+<ul>
+<li><strong>Short name</strong>: historic.bugs.users</li>
+<li><strong>Friendly name</strong>: Number of users, active and inactive per day per bug tracker</li>
+</ul>
+<p>This metric computes the number of users, number of active and inactive users per day for each bug tracker separately. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsUsersHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackers</td>
+<td><code>List&lt;DailyBugTrackingData&gt;</code></td>
+</tr>
+<tr>
+<td>numberOfUsers</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfActiveUsers</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>numberOfInactiveUsers</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyBugTrackingData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfUsers</li>
+<li><code>int</code> numberOfActiveUsers</li>
+<li><code>int</code> numberOfInactiveUsers</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="news-groups-and-forums">News Groups and Forums</h3>
+<p>The following Historic Metric Providers are associated with newsgroups.</p>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsarticles">org.eclipse.scava.metricprovider.historic.newsgroups.articles</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.articles</li>
+<li><strong>Friendly name</strong>: Number of articles per day per news group</li>
+</ul>
+<p>This metric computes the number of articles submitted by the community (users) per day for each newsgroup separately</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.articles</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsArticlesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> cummulativeNumberOfArticles</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsemotions">org.eclipse.scava.metricprovider.historic.newsgroups.emotions</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.emotions</li>
+<li><strong>Friendly name</strong>: Number of emotions per day per newsgroup </li>
+</ul>
+<p>This metric computes the emotional dimensions present in newsgroup comments submitted by the community (users) per day for each newsgroup. Emotion can be 1 of 6 (anger, fear, joy, sadness, love or surprise).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.emotions</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsEmotionsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupsData</td>
+<td><code>List&lt;Newsgroups&gt;</code></td>
+</tr>
+<tr>
+<td>emotionDimension</td>
+<td><code>List&lt;Emotion&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>NewsgroupsData : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> cummulativeNumberOfArticles</li>
+</ul>
+</li>
+<li>
+<p>EmotionDimension : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  emotionLabel (<code>anger</code>, <code>fear</code>, <code>joy</code>, <code>sadness</code>, <code>love</code>, <code>surprise</code>)</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> cumulativeNumberOfArticles</li>
+<li><code>float</code>   percentage</li>
+<li><code>float</code>   cumulativePercentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsnewthreads">org.eclipse.scava.metricprovider.historic.newsgroups.newthreads</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.newthreads</li>
+<li><strong>Friendly name</strong>: Number of new threads per day per newsgroup</li>
+</ul>
+<p>This metric computes the number of new threads submitted by the community (users) per day for each newsgroup separately</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsNewThreadsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfNewThreads</li>
+<li><code>int</code> cummulativeNumberOfNewThreads</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsnewusers">org.eclipse.scava.metricprovider.historic.newsgroups.newusers</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.newusers</li>
+<li><strong>Friendly name</strong>: Number of new users per day per newsgroup</li>
+</ul>
+<p>This metric computes the number of new users per day for each newsgroup seperately. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsNewUsersHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfNewUsers</li>
+<li><code>int</code> cummulativeNumberOfNewUsers</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsrequestsreplies">org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.requestsreplies</li>
+<li><strong>Friendly name</strong>: Number of requests and replies in articles per day </li>
+</ul>
+<p>This metric computes the number of requests and replies in newsgroup articles submitted by the community (users) per day for each newsgroup separately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsRequestsRepliesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>int</code> cumulativeNumberOfRequests</li>
+<li><code>int</code> cumulativeNumberOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsrequestsrepliesaverage">org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.requestsreplies.average</li>
+<li><strong>Friendly name</strong>: Average number of articles, requests and replies per day </li>
+</ul>
+<p>This metric computes the average number of newsgroup articles, including the number of requests and replies within the newsgroup articles per day.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsRequestsRepliesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>averageArticlesPerDay</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageRequestsPerDay</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>averageRepliesPerDay</td>
+<td><code>float</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsresponsetime">org.eclipse.scava.metricprovider.historic.newsgroups.responsetime</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.responsetime</li>
+<li><strong>Friendly name</strong>: Average response time to threads per day per newsgroup</li>
+</ul>
+<p>This metric computes the average time in which the community responds to open threads per day for each newsgroup separately. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsResponseTimeHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupName</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>avgResponseTime</td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td>avgResponseTimeFormatted</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>threadsConsidered</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td>cumulativeAvgResponseTimeFormatted</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>cumulativeThreadsConsidered</td>
+<td><code>int</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupssentiment">org.eclipse.scava.metricprovider.historic.newsgroups.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.sentiment</li>
+<li><strong>Friendly name</strong>: Overall sentiment of newsgroup articles </li>
+</ul>
+<p>This metric computes the overall sentiment per newsgroup repository up to the processing date. The overall sentiment score could be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). In the computation, the sentiment score of each thread contributes equally, irrespective of its size. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.sentiment</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>SentimentClassificationTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overallAverageSentiment</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>overallSentimentAtThreadBegining</td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td>overallSentimentAtThreadEnd</td>
+<td><code>float</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>The sentiment related variables above all represent a <u><strong><em>Polarity</em></strong></u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.</p>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsseverity">org.eclipse.scava.metricprovider.historic.newsgroups.severity</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.severity</li>
+<li><strong>Friendly name</strong>: Number of each severity level in newsgroup threads per day </li>
+</ul>
+<p>This metric computes the number of each severity levels in threads submitted every day, per newsgroup. There are 7 severity  levels (blocker, critical, major, minor, enhancement,  normal, trivial).  </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsSeveritiesHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupData</td>
+<td><code>List&lt;Newsgroups&gt;</code></td>
+</tr>
+<tr>
+<td>severityLevel</td>
+<td><code>List&lt;SeverityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>NewsgroupData : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberThreads</li>
+</ul>
+</li>
+<li>
+<p>SeverityLevel : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  severityLabel (<code>blocker</code>, <code>critical</code>, <code>major</code>, <code>minor</code>, <code>enhancement</code>,  <code>normal</code>, <code>trivial</code>)</li>
+<li><code>int</code> numberOfThreads</li>
+<li><code>float</code>   percentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsseverityresponsetime">org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.severityresponsetime</li>
+<li><strong>Friendly name</strong>: Average response time to threads per severity level per day</li>
+</ul>
+<p>This metric computes the average time in which the community (users) responds to open threads per severity level per day for each bug tracker. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds. Note: there are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). </p>
+<p>Average response time to threads per severity level </p>
+<p>This metric computes the average response time for newsgroup threads submitted every day, based on their severity levels.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code>,
+<code>org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsSeverityResponseTimeHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>severityLevel</td>
+<td><code>List&lt;SeverityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>SeverityLevel : <ul>
+<li><code>String</code>  severityLabel (<code>blocker</code>, <code>critical</code>, <code>major</code>, <code>minor</code>, <code>enhancement</code>,  <code>normal</code>, <code>trivial</code>)</li>
+<li><code>int</code> numberOfThreads</li>
+<li><code>long</code>    avgResponseTime</li>
+<li><code>String</code>  avgResponseTimeFormatted</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsseveritysentiment">org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.severitysentiment</li>
+<li><strong>Friendly name</strong>: Average sentiment in threads per severity level per day</li>
+</ul>
+<p>This metric computes the average sentiment, the sentiment at the beginning of threads and the sentiment at the end of threads; for each severity level in newsgroup threads submitted every day. Sentiment can be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). Note: there are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.severityclassification</code>,
+<code>org.eclipse.scava.metricprovider.trans.newsgroups.sentiment</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsSeveritySentimentHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>severityLevel</td>
+<td><code>List&lt;SeverityLevel&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>SeverityLevel : </p>
+<ul>
+<li><code>String</code>  severityLabel (<code>blocker</code>, <code>critical</code>, <code>major</code>, <code>minor</code>, <code>enhancement</code>,  <code>normal</code>, <code>trivial</code>)</li>
+<li><code>int</code> numberOfThreads</li>
+<li><code>float</code>   avgSentiment</li>
+<li><code>float</code>   avgSentimentThreadBeginning</li>
+<li><code>float</code>   avgSentimentThreadEnd</li>
+</ul>
+</li>
+<li>
+<p>The sentiment related variables above all represent a <u><strong><em>Polarity</em></strong></u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.</p>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsthreads">org.eclipse.scava.metricprovider.historic.newsgroups.threads</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.threads</li>
+<li><strong>Friendly name</strong>: Number of threads per day per newsgroup</li>
+</ul>
+<p>This metric computes the number of threads per day for each newsgroup separately. The metric also computes average values for articles per thread, requests per thread, replies per thread, articles per user, requests per user and replies per user.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code>,
+<code>org.eclipse.scava.metricprovider.trans.newsgroups.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsThreadsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfThreads</li>
+<li><code>float</code>   averageArticlesPerThread</li>
+<li><code>float</code>   averageRequestsPerThread</li>
+<li><code>float</code>   averageRepliesPerThread</li>
+<li><code>float</code>   averageArticlesPerUser</li>
+<li><code>float</code>   averageRequestsPerUser</li>
+<li><code>float</code>   averageRepliesPerUser</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupstopics">org.eclipse.scava.metricprovider.historic.newsgroups.topics</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.topics</li>
+<li><strong>Friendly name</strong>: Labels of newsgroup topics per newsgroup</li>
+</ul>
+<p>This metric computes the labels of topics (thematic clusters) in articles submitted by the community (users), for each newsgroup seperately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.topics</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupTopicsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupTopic</td>
+<td><code>List&lt;NewsgrpTopic&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>NewsgroupTopic : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  label</li>
+<li><code>int</code> numberOfDocuments</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsunansweredthreads">org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.unansweredthreads</li>
+<li><strong>Friendly name</strong>: Number of unanswered threads per day per newsgroup</li>
+</ul>
+<p>This metric computes the number of unanswered threads per day for each newsgroup separately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsUnansweredThreadsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfUnansweredThreads</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricnewsgroupsusers">org.eclipse.scava.metricprovider.historic.newsgroups.users</h4>
+<ul>
+<li><strong>Short name</strong>: historic.newsgroups.users</li>
+<li><strong>Friendly name</strong>: Number of users, active and inactive per day per newsgroup</li>
+</ul>
+<p>This metric computes the number of users, including active and inactive users per day for each newsgroup separately.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.activeusers</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsUsersHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyNewsgroupData</td>
+<td><code>List&lt;DailyNewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyNewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfUsers</li>
+<li><code>int</code> numberOfActiveUsers</li>
+<li><code>int</code> numberOfInactiveUsers</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="transient-metric-providers">Transient Metric Providers</h2>
+<p>Transient metrics are used to calculate heuristics that are associated with a particular period in time, i.e. a single day. Transient Metrics are stored temporarily within the knowledge base and their output is passed as parameters in the calculation of other transient and historic metrics. Depending on the complexity, a transient metric can depend on the output from other tools, other transient metircs or have no dependencies at all.</p>
+<h3 id="bug-trackers_1">Bug Trackers</h3>
+<p>The following Transient Metric Providers are associated with Issue trackers.</p>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsactiveusers">org.eclipse.scava.metricprovider.trans.bugs.activeusers</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.activeusers</li>
+<li><strong>Friendly name</strong>: Number of users with new bug comment in the last 15 days </li>
+</ul>
+<p>This metric computes the number of users that submitted new bug comments in the last 15 days, for each bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> : <code>BugsActiveUsersTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugs</td>
+<td><code>List&lt;BugsData&gt;</code></td>
+</tr>
+<tr>
+<td>users</td>
+<td><code>List&lt;User&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugData :<ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> activeUsers</li>
+<li><code>int</code>   inactiveUsers</li>
+<li><code>int</code> previousUsers</li>
+<li><code>int</code> users</li>
+<li><code>int</code> days</li>
+</ul>
+</li>
+<li>User : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  userId</li>
+<li><code>String</code>  lastActivityDate</li>
+<li><code>int</code> comments</li>
+<li><code>int</code> requests</li>
+<li><code>int</code> replies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsbugmetadata">org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.bugmetadata</li>
+<li><strong>Friendly name</strong>: Bug header metadata </li>
+</ul>
+<p>This metric computes various metadata in bug header, i.e. priority, status, operation system and resolution. Other values computed by this metric includes average sentiment, content class and requests/replies.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code>,<code>org.eclipse.scava.metricprovider.trans.sentimentclassification</code>, <code>org.eclipse.scava.metricprovider.trans.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsBugMetadataTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BugData</td>
+<td><code>List&lt;BugData&gt;</code></td>
+</tr>
+<tr>
+<td>CommentData</td>
+<td><code>List&lt;CommentData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>String</code>  status</li>
+<li><code>String</code>  resolution</li>
+<li><code>String</code>  operatingSystem</li>
+<li><code>String</code>  priority</li>
+<li><code>String</code>  creationTime</li>
+<li><code>String</code>  lastClosedTime</li>
+<li><code>String</code>  startSentiment</li>
+<li><code>String</code>  endSentiment</li>
+<li><code>float</code>   averageSentiment</li>
+</ul>
+</li>
+<li>CommentData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>String</code>    commentId</li>
+<li><code>String</code>    creationTime</li>
+<li><code>String</code>    creator</li>
+<li><code>String</code>    contentClass</li>
+<li><code>String</code>    requestReplyPrediction</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugscomments">org.eclipse.scava.metricprovider.trans.bugs.comments</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.comments</li>
+<li><strong>Friendly name</strong>: Number of bug comments</li>
+</ul>
+<p>This metric computes the number of bug comments, per bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsCommentsTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerData</td>
+<td><code>List&lt;BugTrackerData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerData: <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>int</code> cumulativeNumberOfComments</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugscontentclasses">org.eclipse.scava.metricprovider.trans.bugs.contentclasses</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.contentclasses</li>
+<li><strong>Friendly name</strong>: Content classes in bug comments</li>
+</ul>
+<p>This metric computes the frequency and percentage of content Classes in bug comments, per bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsContentClassesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerData</td>
+<td><code>List&lt;BugTrackerData&gt;</code></td>
+</tr>
+<tr>
+<td>contentClasses</td>
+<td><code>List&lt;ContentClass&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfComments</li>
+</ul>
+</li>
+<li>ContentClass : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  classLabel</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>float</code>   percentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsdailyrequestsreplies">org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.dailyrequestsreplies</li>
+<li><strong>Friendly name</strong>: Number of bug comments, requests and replies per day</li>
+</ul>
+<p>This metric computes the number of bug comments, including those regarded as requests and replies each day, per bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsDailyRequestsRepliesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dayComments</td>
+<td><code>List&lt;DayComments&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DayComments : <ul>
+<li><code>String</code>  name</li>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>float</code>   percentageOfComments</li>
+<li><code>float</code>   percentageOfRequests</li>
+<li><code>float</code>   percentageOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsemotions">org.eclipse.scava.metricprovider.trans.bugs.emotions</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.emotions</li>
+<li><strong>Friendly name</strong>: Emotions in bug comments</li>
+</ul>
+<p>This metric computes the emotional dimensions in bug comments, per bug tracker. There are 6 emotion labels (anger, fear, joy, sadness, love, surprise).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.emotionclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsEmotionsTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerData</td>
+<td><code>List&lt;BugTrackerData&gt;</code></td>
+</tr>
+<tr>
+<td>dimensions</td>
+<td><code>List&lt;EmotionDimension&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>int</code> cumulativeNumberOfComments</li>
+</ul>
+</li>
+<li>EmotionDimension : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  emotionLabel (<code>anger</code>, <code>fear</code>, <code>joy</code>, <code>sadness</code>, <code>love</code>, surprise`)</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>int</code> cumulativeNumberOfComments</li>
+<li><code>float</code>   percentage</li>
+<li><code>float</code>   cumulativePercentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugshourlyrequestsreplies">org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.hourlyrequestsreplies</li>
+<li><strong>Friendly name</strong>: Number of bug comments, requests and replies per hour</li>
+</ul>
+<p>This metric computes the number of bug comments, including those regarded as requests and replies, every hour of the day, per bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsHourlyRequestsRepliesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hourComments</td>
+<td><code>List&lt;HourComments&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>HourComments : <ul>
+<li><code>type</code>    bugTrackerId</li>
+<li><code>type</code>    hour</li>
+<li><code>type</code>    numberOfComments</li>
+<li><code>type</code>    numberOfRequests</li>
+<li><code>type</code>    numberOfReplies</li>
+<li><code>type</code>    percentageOfComments</li>
+<li><code>type</code>    percentageOfRequests</li>
+<li><code>type</code>    percentageOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsnewbugs">org.eclipse.scava.metricprovider.trans.bugs.newbugs</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.newbugs</li>
+<li><strong>Friendly name</strong>: Number of new bugs</li>
+</ul>
+<p>This metric computes the number of new bugs over time, per bug tracker.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsNewBugsTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerData</td>
+<td><code>type</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfBugs</li>
+<li><code>int</code> cumulativeNumberOfBugs</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugspatches">org.eclipse.scava.metricprovider.trans.bugs.patches</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.patches</li>
+<li><strong>Friendly name</strong>: Number of patches per bug</li>
+</ul>
+<p>This metric computes the number of patches submitted by the community (users) for each bug.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>PatchesTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerData</td>
+<td><code>type</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerData : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>int</code> numberOfPatches</li>
+<li><code>int</code> cumulativeNumberOfPatches</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsrequestsreplies">org.eclipse.scava.metricprovider.trans.bugs.requestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.requestreplies</li>
+<li><strong>Friendly name</strong>: Bug statistics (answered?, response time)</li>
+</ul>
+<p>This metric computes for each bug, whether it was  answered. If so, it computes the time taken to respond.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.bugmetadata</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsRequestsRepliesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugs</td>
+<td><code>List&lt;BugStatistics&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugStatistics : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>boolean</code> firstRequest</li>
+<li><code>boolean</code> answered</li>
+<li><code>long</code>    responseDurationSec</li>
+<li><code>String</code>  responseDate</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="news-groups-and-forums_1">News Groups and Forums</h3>
+<p>The following Transient Metric Providers are associated with newsgroups.</p>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsactiveusers">org.eclipse.scava.metricprovider.trans.newsgroups.activeusers</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.activeusers</li>
+<li><strong>Friendly name</strong>: Number of users with new comment in the last 15 days</li>
+</ul>
+<p>This metric computes the number of users that submitted news comments in the last 15 days, per newsgroup.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsActiveUsersTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupData</td>
+<td><code>List&lt;NewsgroupData&gt;</code></td>
+</tr>
+<tr>
+<td>user</td>
+<td><code>List&lt;User&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>NewsgroupData : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> activeUsers</li>
+<li><code>int</code> inactiveUsers</li>
+<li><code>int</code> previousUsers</li>
+<li><code>int</code> users</li>
+<li><code>int</code> days</li>
+</ul>
+</li>
+<li>
+<p>User : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  userId</li>
+<li><code>String</code>  lastActiveDate</li>
+<li><code>int</code> articles</li>
+<li><code>int</code> requests</li>
+<li><code>int</code> replies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsarticles">org.eclipse.scava.metricprovider.trans.newsgroups.articles</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.articles</li>
+<li><strong>Friendly name</strong>: Number of articles per newsgroup</li>
+</ul>
+<p>This metric computes the number of articles, per newsgroup.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsArticlesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupData</td>
+<td><code>List&lt;NewsgroupData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>NewsgroupData : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> cumulativeNumberOfArticles</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupscontentclasses">org.eclipse.scava.metricprovider.trans.newsgroups.contentclasses</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.contentclasses</li>
+<li><strong>Friendly name</strong>: Content classes in newsgroup articles</li>
+</ul>
+<p>This metric computes the content classes in newgroup articles, per newsgroup.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsContentClassesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsGroupData</td>
+<td><code>List&lt;NewsgroupData&gt;</code></td>
+</tr>
+<tr>
+<td>contentClass</td>
+<td><code>List&lt; ContentClass&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>NewsGroupData: </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfArticles</li>
+</ul>
+</li>
+<li>
+<p>ContentClass: </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  classLabel</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>float</code>   percentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsdailyrequestsreplies">org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.dailyrequestsreplies</li>
+<li><strong>Friendly name</strong>: Number of articles, requests and replies per day</li>
+</ul>
+<p>This metric computes the number of articles, including those regarded as requests and replies for each day of the week, per newsgroup.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsDailyRequestsRepliesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dailyArticles</td>
+<td><code>List&lt;DailyArticles&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DailyArticles : <ul>
+<li><code>String</code>  name</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>float</code>   percentageOfArticles</li>
+<li><code>float</code>   percentageOfRequests</li>
+<li><code>float</code>   percentageOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsemotions">org.eclipse.scava.metricprovider.trans.newsgroups.emotions</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.emotions</li>
+<li><strong>Friendly name</strong>: Emotions in newsgroup articles</li>
+</ul>
+<p>This metric computes the emotional dimensions in newsgroup articles, per newsgroup. There are 6 emotion labels (anger, fear, joy, sadness, love, surprise).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.emotionclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsEmotionsTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupData</td>
+<td><code>List&lt;NewsgroupData&gt;</code></td>
+</tr>
+<tr>
+<td>emotionDimension</td>
+<td><code>List&lt;EmotionDimension&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>NewsgroupData : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> cumulativeNumberOfArticles</li>
+</ul>
+</li>
+<li>
+<p>EmotionDimension :</p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  emotionLabel (<code>anger</code>, <code>fear</code>, <code>joy</code>, <code>sadness</code>, <code>love</code>, surprise`)</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> cumulativeNumberOfArticles</li>
+<li><code>float</code>   percentage</li>
+<li><code>float</code>   cumulativePercentage</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupshourlyrequestsreplies">org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.hourlyrequestsreplies</li>
+<li><strong>Friendly name</strong>: Number of articles, requests and replies per hour</li>
+</ul>
+<p>This metric computes the number of articles, including those regarded as requests and replies for each hour of the day, per newsgroup.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsHourlyRequestsRepliesTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hourArticles</td>
+<td><code>List&lt;HourArticles&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>HourArticles : <ul>
+<li><code>String</code>  hour</li>
+<li><code>int</code> numberOfArticles</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>float</code>   percentageOfArticles</li>
+<li><code>float</code>   percentageOfRequests</li>
+<li><code>float</code>   percentageOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupssentiment">org.eclipse.scava.metricprovider.trans.newsgroups.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.sentiment</li>
+<li><strong>Friendly name</strong>: Average sentiment in newsgroup threads</li>
+</ul>
+<p>The metric computes the average sentiment, including sentiment at the beginning and end of each thread, per newsgroup.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code>, <code>org.eclipse.scava.metricprovider.trans.sentimentclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsSentimentTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>threadStatistics</td>
+<td><code>List&lt;ThreadStatistics&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>ThreadStatistics : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> threadId</li>
+<li><code>float</code>   averageSentiment</li>
+<li><code>String</code>  startSentiment</li>
+<li><code>String</code>  endSentiment</li>
+</ul>
+</li>
+<li>
+<p>The sentiment related variables above all represent a <u><strong><em>Polarity</em></strong></u> value.    A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.</p>
+<hr />
+</li>
+</ul>
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsthreads">org.eclipse.scava.metricprovider.trans.newsgroups.threads</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.threads</li>
+<li><strong>Friendly name</strong>: Assigns newsgroup articles to threads</li>
+</ul>
+<p>This metric holds information for assigning newsgroup articles to threads. The threading algorithm is executed from scratch every time.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code>, </p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsThreadsTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>articleData</td>
+<td><code>List&lt;ArticleData&gt;</code></td>
+</tr>
+<tr>
+<td>threadData</td>
+<td><code>List&lt;ThreadData&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupData</td>
+<td><code>List&lt;NewsgroupData&gt;</code></td>
+</tr>
+<tr>
+<td>currentDate</td>
+<td><code>List&lt;CurrentDate&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>ArticleData : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> articleNumber</li>
+<li><code>String</code>  articlesId</li>
+<li><code>String</code>  date</li>
+<li><code>String</code>  from</li>
+<li><code>String</code>  subject</li>
+<li><code>String</code>  contentClass</li>
+<li><code>String</code>  references</li>
+</ul>
+</li>
+<li>
+<p>ThreadData : </p>
+<ul>
+<li><code>int</code> threadId</li>
+</ul>
+</li>
+<li>
+<p>NewsgroupData : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> threads</li>
+<li><code>int</code> previousThreads</li>
+</ul>
+</li>
+<li>
+<p>CurrentDate : </p>
+<ul>
+<li><code>String</code>  date</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsthreadsrequestsreplies">org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.threadsrequestsreplies</li>
+<li><strong>Friendly name</strong>: Thread statistics (answered?, response time)</li>
+</ul>
+<p>The metric computes for each thread whether it is answered. If so, it computes the response time.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code>, <code>org.eclipse.scava.metricprovider.trans.requestreplyclassification</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsSentimentTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>threadStatistics</td>
+<td><code>List&lt;ThreadStatistics&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>ThreadStatistics : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> threadId</li>
+<li><code>boolean</code> firstRequest</li>
+<li><code>boolean</code> answered</li>
+<li><code>long</code>    responseDurationSec</li>
+<li><code>String</code>  responseDate</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="natrual-language-processing">Natrual Language Processing</h3>
+<p>The following Transient Metric Providers are associated with Natural Language Processing .</p>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdetectingcode">org.eclipse.scava.metricprovider.trans.detectingcode</h4>
+<ul>
+<li><strong>Short name</strong>: trans.detectingcode</li>
+<li><strong>Friendly name</strong>: Distinguishes between code and natural language</li>
+</ul>
+<p>This metric determines the parts of a bug comment or a newsgroup article that contains code or natural language.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.plaintextprocessing</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DetectingCodeTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerComments</td>
+<td><code>List&lt;BugTrackerCommentDetectingCode&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticleDetectingCode&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>List&lt;ForumPostsDetectingCode&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>BugTrackerCommentDetectingCode : </p>
+<ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>String</code>  commentId</li>
+<li><code>String</code>  naturalLanguage</li>
+<li><code>String</code>  code</li>
+</ul>
+</li>
+<li>
+<p>NewsgroupArticleDetectingCode : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  articleNumber</li>
+<li><code>String</code>  naturalLanguage</li>
+<li><code>String</code>  code</li>
+</ul>
+</li>
+<li>
+<p>ForumPostsDetectingCode : </p>
+<ul>
+<li><code>String</code>  forumId</li>
+<li><code>String</code>  topicId</li>
+<li><code>String</code>  postId</li>
+<li><code>String</code>  naturalLanguage</li>
+<li><code>String</code>  code</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransemotionclassification">org.eclipse.scava.metricprovider.trans.emotionclassification</h4>
+<ul>
+<li><strong>Short name</strong>: trans.emotionclassification</li>
+<li><strong>Friendly name</strong>: Emotion classifier</li>
+</ul>
+<p>This metric computes the emotions present in each bug comment, newsgroup article or forum post. There are 6 emotion labels (anger, fear, joy, sadness, love, surprise).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>EmotionClassificationTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerComments</td>
+<td><code>List&lt;BugTrackerCommentEmotionClassification&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticleEmotionClassification&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>List&lt;ForumPostsEmotionClassification&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>BugTrackerCommentEmotionClassification : </p>
+<ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>String</code>  commentId</li>
+<li><code>String</code>  emotions</li>
+</ul>
+</li>
+<li>
+<p>NewsgroupArticleEmotionClassification : </p>
+<ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>String</code>  articleNumber</li>
+<li><code>String</code>  emotions</li>
+</ul>
+</li>
+<li>
+<p>ForumPostsEmotionClassification : </p>
+<ul>
+<li><code>String</code>  forumId</li>
+<li><code>String</code>  topicId</li>
+<li><code>String</code>  postId</li>
+<li><code>String</code>  emotions</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransplaintextprocessing">org.eclipse.scava.metricprovider.trans.plaintextprocessing</h4>
+<ul>
+<li><strong>Short name</strong>: trans.plaintextprocessing</li>
+<li><strong>Friendly name</strong>: Plain text processing</li>
+</ul>
+<p>This metric preprocess each bug comment, newsgroup article or forum post into a split plain text format.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>PlainTextProcessingTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerComments</td>
+<td><code>List&lt;BugTrackerCommentPlainTextProcessing&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticlePlainTextProcessing&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>List&lt;ForumPostsPlainTextProcessing&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerCommentPlainTextProcessing : </li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    bugId</li>
+<li><code>String</code>    commentId</li>
+<li><code>String</code>    plainText</li>
+<li>
+<p><code>boolean</code>   hadReplies</p>
+</li>
+<li>
+<p>NewsgroupArticlePlainTextProcessing : </p>
+</li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>String</code>    articleNumber</li>
+<li><code>String</code>    plainText</li>
+<li>
+<p><code>boolean</code>   hadReplies</p>
+</li>
+<li>
+<p>ForumPostsPlainTextProcessing : </p>
+</li>
+<li><code>String</code>    forumId</li>
+<li><code>String</code>    topicId</li>
+<li><code>String</code>    postId</li>
+<li><code>String</code>    plainText</li>
+<li><code>boolean</code>   hadReplies</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransrequestreplyclassification">org.eclipse.scava.metricprovider.trans.requestreplyclassification</h4>
+<ul>
+<li><strong>Short name</strong>: trans.requestreplyclassification</li>
+<li><strong>Friendly name</strong>: Request/Reply classification</li>
+</ul>
+<p>This metric computes if a bug comment, newsgroup article or forum post is a request of a reply.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.plaintextprocessing</code>, <code>org.eclipse.scava.metricprovider.trans.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>RequestReplyClassificationTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerComments</td>
+<td><code>List&lt;BugTrackerComments&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticles&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>List&lt;ForumPosts&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerComments : </li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    bugId</li>
+<li><code>String</code>    commentId</li>
+<li><code>String</code>    classificationResult</li>
+<li>
+<p><code>String</code>    date</p>
+</li>
+<li>
+<p>NewsgroupArticles : </p>
+</li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>String</code>    articleNumber</li>
+<li><code>String</code>    classificationResult</li>
+<li>
+<p><code>String</code>    date</p>
+</li>
+<li>
+<p>ForumPosts : </p>
+</li>
+<li><code>String</code>    forumId</li>
+<li><code>String</code>    topicId</li>
+<li><code>String</code>    postId</li>
+<li><code>String</code>    classificationResult</li>
+<li><code>String</code>    date</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertranssentimentclassification">org.eclipse.scava.metricprovider.trans.sentimentclassification</h4>
+<ul>
+<li><strong>Short name</strong>: trans.sentimentclassification</li>
+<li><strong>Friendly name</strong>: Sentiment classification</li>
+</ul>
+<p>This metric computes the sentiment of each bug comment, newsgroup article or forum post. Sentiment can be -1 (negative sentiment), 0 (neutral sentiment) or 1 (positive sentiment).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>SentimentClassificationTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerComments</td>
+<td><code>List&lt;BugTrackerCommentsSentimentClassification&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticlesSentimentClassification&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>List&lt;ForumPostSentimentClassification&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerCommentsSentimentClassification : </li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    bugId</li>
+<li><code>String</code>    commentId</li>
+<li>
+<p><code>String</code>    polarity (<code>negative (-1)</code>, <code>neutral (0)</code> or <code>positive (1)</code>)</p>
+</li>
+<li>
+<p>NewsgroupArticlesSentimentClassification : </p>
+</li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>String</code>    articleNumber</li>
+<li>
+<p><code>String</code>    polarity (<code>negative (-1)</code>, <code>neutral (0)</code> or <code>positive (1)</code>)</p>
+</li>
+<li>
+<p>ForumPostSentimentClassification : </p>
+</li>
+<li><code>String</code>    forumId</li>
+<li><code>String</code>    topicId</li>
+<li><code>String</code>    postId</li>
+<li><code>String</code>    polarity (<code>negative (-1)</code>, <code>neutral (0)</code> or <code>positive (1)</code>)</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransseverityclassification">org.eclipse.scava.metricprovider.trans.severityclassification</h4>
+<ul>
+<li><strong>Short name</strong>: trans.severityclassification</li>
+<li><strong>Friendly name</strong>: Severity classification</li>
+</ul>
+<p>This metric computes the severity of each bug comment, newsgroup article or forum post. Severity could be blocker, critical, major, minor, enhancement,  normal). For bug comments, there is an additional severity level called <code>unknown</code>. A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse. </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.detectingcode</code>, <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>SeverityClassificationTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerBugs</td>
+<td><code>List&lt;BugTrackerBugsData&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticleData&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupThreads</td>
+<td><code>List&lt;NewsgroupThreadData&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>ForumPostData&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerBugsData : </li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    bugId</li>
+<li><code>String</code>    severity</li>
+<li><code>int</code>   unigrams</li>
+<li><code>int</code>   bigrams</li>
+<li><code>int</code>   trigrams</li>
+<li><code>int</code>   quadgrams</li>
+<li><code>int</code>   charTrigrams</li>
+<li><code>int</code>   charQuadgrams</li>
+<li>
+<p><code>int</code>   charFivegrams</p>
+</li>
+<li>
+<p>NewsgroupArticleData : </p>
+</li>
+<li><code>String</code>    NewsgroupName</li>
+<li><code>long</code>  articleNumber</li>
+<li><code>int</code>   unigrams</li>
+<li><code>int</code>   bigrams</li>
+<li><code>int</code>   trigrams</li>
+<li><code>int</code>   quadgrams</li>
+<li><code>int</code>   charTrigrams</li>
+<li><code>int</code>   charQuadgrams</li>
+<li>
+<p><code>int</code>   charFivegrams</p>
+</li>
+<li>
+<p>NewsgroupThreadData : </p>
+</li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>int</code>   threadId</li>
+<li>
+<p><code>String</code>    severity</p>
+</li>
+<li>
+<p>BugTrackerBugsData : </p>
+</li>
+<li><code>String</code>    forumId</li>
+<li><code>String</code>    topicId</li>
+<li><code>String</code>    severity</li>
+<li><code>int</code>   unigrams</li>
+<li><code>int</code>   bigrams</li>
+<li><code>int</code>   trigrams</li>
+<li><code>int</code>   quadgrams</li>
+<li><code>int</code>   charTrigrams</li>
+<li><code>int</code>   charQuadgrams</li>
+<li><code>int</code>   charFivegrams</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertranstopics">org.eclipse.scava.metricprovider.trans.topics</h4>
+<ul>
+<li><strong>Short name</strong>: trans.topics</li>
+<li><strong>Friendly name</strong>: Topic clustering</li>
+</ul>
+<p>This metric computes topic clusters for each bug comment, newsgroup article or forum post in the last 30 days.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>TopicsTransMetricProvider</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerComments</td>
+<td><code>List&lt;BugTrackerCommentsData&gt;</code></td>
+</tr>
+<tr>
+<td>bugTrackerTopics</td>
+<td><code>List&lt;BugTrackerTopic&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupArticles</td>
+<td><code>List&lt;NewsgroupArticlesData&gt;</code></td>
+</tr>
+<tr>
+<td>newsgroupTopics</td>
+<td><code>List&lt;NewsgroupTopic&gt;</code></td>
+</tr>
+<tr>
+<td>forumPosts</td>
+<td><code>List&lt;ForumPostData&gt;</code></td>
+</tr>
+<tr>
+<td>forumTopics</td>
+<td><code>List&lt;ForumPostTopic&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerCommentsData : </li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    bugId</li>
+<li><code>String</code>    commentId</li>
+<li><code>String</code>    subject</li>
+<li><code>String</code>    text</li>
+<li>
+<p><code>String</code>    date</p>
+</li>
+<li>
+<p>NewsgroupArticlesData : </p>
+</li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>long</code>  articleNumber</li>
+<li><code>String</code>    subject</li>
+<li><code>String</code>    text</li>
+<li>
+<p><code>String</code>    date</p>
+</li>
+<li>
+<p>ForumPostData : </p>
+</li>
+<li><code>String</code>    forumId</li>
+<li><code>String</code>    topicId</li>
+<li><code>String</code>    postId</li>
+<li><code>String</code>    subject</li>
+<li><code>String</code>    text</li>
+<li>
+<p><code>String</code>    date</p>
+</li>
+<li>
+<p>BugTrackerTopic : </p>
+</li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    label</li>
+<li>
+<p><code>int</code>   numberOfDocuments</p>
+</li>
+<li>
+<p>NewsgroupTopic : </p>
+</li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>String</code>    label</li>
+<li>
+<p><code>int</code>   numberOfDocuments</p>
+</li>
+<li>
+<p>ForumPostTopic : </p>
+</li>
+<li><code>String</code>    forumId</li>
+<li><code>String</code>    label</li>
+<li><code>int</code>   numberOfDocuments</li>
+</ul>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../plugin/" class="btn btn-neutral float-right" title="Eclipse Plugin">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../dashboard/" class="btn btn-neutral" title="Visualisation Dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../dashboard/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../plugin/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

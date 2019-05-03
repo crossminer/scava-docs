@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Running the Analysis Platform form Sources - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Running the Analysis Platform form Sources";
+    var mkdocs_page_input_path = "developers-guide/runing-from-sources/analysis-platform.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../contributors-guide/">SCAVA Contributors Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/">Architecture Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/api-gateway/">API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/authentication/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/">Contributors Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/">SCAVA Development Process</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-licensing-recomendation/">SCAVA Licensing recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-naming-recomendations/">SCAVA Naming recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-repository-organisation/">SCAVA Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-testing-organisation/">SCAVA Testing recommendations</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/">Technical Guidelignes</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/access-mongodb-pongo/">How to access to MongoDB using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/api-gateway-configuration/">How to configure the API Gateway in order to integrate a new REST service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/consume-scava-rest-services/">How to consume a SCAVA REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/rest-api-doc-generation/">How to generate REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/restlet-service-implementation/">How to implement Restlet services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/scava-data-model-extention/">How to extend the SCAVA data model</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">SCAVA Developers Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../api-reference-guide/">REST API Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../api-reference-guide/analysis-platform/">Analysis Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../api-reference-guide/api-gateway/">Access to the REST API via the API Gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../api-reference-guide/knowledge-base/">Knowledge Base REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../api-reference-guide/visualisation-dashboard/">Visualisation Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../api-reference-guide/workflow-engine/">Workflow Engine REST API reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../metric-provider-developement-guide/">Metric Provider Developement Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../">Running SCAVA Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../administration-application/">Running the Administration Application form Sources</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Running the Analysis Platform form Sources</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#running-the-analysis-platform-form-sources">Running the Analysis Platform form Sources</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#prerequisite">Prerequisite</a></li>
+        
+            <li><a class="toctree-l5" href="#get-the-code">Get the Code</a></li>
+        
+            <li><a class="toctree-l5" href="#configuration">Configuration</a></li>
+        
+            <li><a class="toctree-l5" href="#run-the-analysis-platform">Run the Analysis Platform</a></li>
+        
+            <li><a class="toctree-l5" href="#run-the-api-gateway">Run the api-gateway</a></li>
+        
+            <li><a class="toctree-l5" href="#run-the-authentication-service">Run the authentication service</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../eclipse-plugin/">Running the Eclipse Plugin form Sources (To be completed by FrontendArt)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../visualisation-dashboard/">Running the Visualisation Dashboard form Sources (To be reviewed and completed by Bitergia)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/">SCAVA Installation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/database-backup/">Platform Data Base Backup And Restoration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/licencing/">Licencing for Scava</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/docker-installation/">Platform Installation using DOCKER images</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-configuration/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-installation/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/plugin-installation/">Eclipse Plugin Installation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../others/">Welcome to the Scava documentation</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/admin/API-Gateway-Configuration/">API Gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/admin/SCAVA-Administration/">Scava Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/architecture/API-Gateway-Component/">The API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/architecture/Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Extend-MongoDB-Data-Model/">Extending MongoDB data model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/How-To-Develop-Metric-Provider/">How to Develop a Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Implementing-Restlet-Service/">Implementing RESTLET services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Licensing/">Licencing for Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Naming-Scava-REST-Services/">Naming Scava REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Consuming-REST-Services/">Consuming REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/REST-API-Documentation/">REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Scava-Metrics/">Metrics computed by Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../others/users/Scava-Resources/">Accessing Scava generated data</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../user-guide/">SCAVA User Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/administration/">Platform Administration User Guide (Softeam)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/dashboard/">Visualisation Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/metrics/">Metrics Reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/plugin/">Eclipse Plugin</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/quickstart/">Quick Start Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/workflow/">Workflow Engine</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Runing from sources &raquo;</li>
+        
+      
+        
+          <li>Developers guide &raquo;</li>
+        
+      
+    
+    <li>Running the Analysis Platform form Sources</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="running-the-analysis-platform-form-sources">Running the Analysis Platform form Sources</h1>
+<p>This is a quick start guide to get the SCAVA platform running from source with Eclipse.</p>
+<h2 id="prerequisite">Prerequisite</h2>
+<h3 id="install-mongodb">Install MongoDB</h3>
+<p>You can download MongoDB from the <a href="http://www.mongodb.org/downloads">MongoDb website</a>.</p>
+<h3 id="install-eclipseide">Install EclipseIDE</h3>
+<p>Although these instructions may apply to other versions of Eclipse IDE, they were tested under Eclipse Neon.3 with plug-in development support (Eclipse IDE for RCP Developers package).</p>
+<h2 id="get-the-code">Get the Code</h2>
+<p>Get the latest version of the code, and checkout the <code>dev</code> branch. Please don't commit to the <code>master</code> branch: see the <a href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/#source-code-repository">Development Guidelines</a>:</p>
+<p>If you are using <strong>Linux / OS X</strong>:</p>
+<pre><code class="Shell">git clone https://github.com/crossminer/scava.git scava
+cd scava
+git checkout dev
+</code></pre>
+
+<p>If you are using <strong>Windows</strong> you need to do things differently due to Windows' long file name limit. In the Git shell:</p>
+<pre><code class="Shell">mkdir scava
+cd scava
+git init
+git config core.longpaths true
+git add remote origin https://github.com/crossminer/scava.git
+git fetch
+git checkout dev
+</code></pre>
+
+<h2 id="configuration">Configuration</h2>
+<h3 id="configure-the-eclipse-ide">Configure The Eclipse IDE</h3>
+<h4 id="import-projects-into-eclipse-workspace">Import Projects into Eclipse Workspace</h4>
+<p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
+<p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
+<a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.
+<br/>
+<img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
+Figure-01: Install m2e-connectors plugins.</p>
+<h4 id="configure-the-target-platform">Configure the Target Platform</h4>
+<p>The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to run the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.</p>
+<ul>
+<li><strong>Download Eclipse Mars platform</strong>
+Download the compleate Eclipse Mars platform.</li>
+</ul>
+<p>In command ligne :</p>
+<pre><code class="Shell">./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.metadata.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
+</code></pre>
+
+<pre><code class="Shell">./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.artifact.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
+</code></pre>
+
+<p>Then, extract the its context somewehere on your machine.</p>
+<ul>
+<li><strong>Download Rascal dependencies</strong></li>
+</ul>
+<p>Download two external libraries required to run metrics providers based on Rascal.</p>
+<p>Repository URL : <a href="https://update.rascal-mpl.org/unstable/plugins/">Rascal Dependencies</a></p>
+<ol>
+<li>impulse_0.3.0.xxx.jar</li>
+<li>
+<p>rascal_eclipse_0.12.0.xxx.jar</p>
+</li>
+<li>
+<p><strong>Configure the Target Platform</strong></p>
+</li>
+</ol>
+<p>Open the Eclipse preferences on (<code>Window -&gt; Preferencies</code>), then choose the Target Platform Definition (<code>Plug-in Development -&gt; Target Platform</code>).<br/>
+<img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
+Figure-02: Eclipse Preferences.</p>
+<p>Add a new Target Platform configuration for the project, choose the Default initialization then click on (<code>Next</code>).<br/>
+<img src="images/eclipse_target_platform_2.png" height="500px" width="500px" /><br/>
+Figure-03: Eclipse Target Platforms Initialization.</p>
+<p>Give a name to the new target platform, hit the (<code>Add</code>) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (<code>Finish</code>).<br/>
+<img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
+Figure-04: Eclipse Target Platforms Dependencies.</p>
+<p>Finally, check the new target Configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/>
+<img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/>
+Figure-05: Eclipse Target Platforms.</p>
+<h3 id="configure-the-analysis-platform">Configure the Analysis Platform</h3>
+<h4 id="identifierltyour-namegt"><code>identifier=&lt;your name&gt;</code></h4>
+<p>The identifier of the node. If not specified, the platform will attempt to use the node's hostname, and if it cannot resolve the hostname, it will generated a random UUID. </p>
+<p>If you plan to multiple instances of the platform on the same machine, you should definitely specify different node identifiers.</p>
+<h4 id="logtypeconsolefilerolling"><code>log.type=console|file|rolling</code></h4>
+<p>You can specify whether to log output to the console (Log4J's ConsoleAppender), to a particular file without a size limit (Log4J's FileAppender), or to a different file per day (Log4J's DailyRollingFileAppender). If you specify <code>file</code> or <code>rolling</code>, you must complete the <code>log.file.path</code> or <code>log.rolling.path</code> property as well. </p>
+<p>If the property is not specified, it will default to the console logger.</p>
+<h4 id="logfilepathltpathgt"><code>log.file.path=&lt;path&gt;</code></h4>
+<p>The path to the file to store the log. E.g. <code>log.file.path=/tmp/lovelylog.log</code></p>
+<h4 id="logrollingpathltpathgt"><code>log.rolling.path=&lt;path&gt;</code></h4>
+<p>The path to the file to store the log. This is a Log4J DailyRollingFileAppender that will create separate logs for each 12 hours of the day. The date stamp will be appended to the path provided. E.g.: if you specify <code>log.rolling.path=/tmp/mylovelylog.log</code>, it will store files like so: <code>/tmp/mylovelylog.log.2014-12-17-00</code> and <code>/tmp/mylovelylog.log.2014-12-17-12</code>.</p>
+<h4 id="maven_executableltpathgt"><code>maven_executable=&lt;path&gt;</code></h4>
+<p>The path to where Maven is installed. E.g. <code>maven_executable=/usr/bin/mvn</code></p>
+<h4 id="storage_pathltpathgt"><code>storage_path=&lt;path&gt;</code></h4>
+<p>The path to where files should be stored. E.g. <code>storage_path=/mnt/ossmeter/</code></p>
+<h4 id="mongo_hosts"><code>mongo_hosts</code></h4>
+<p>A comma-separated list of the hosts and ports in a replica set. E.g. <code>ua002:27017,ua009:27017,ua019:27017,ua020:27017</code></p>
+<h2 id="run-the-analysis-platform">Run the Analysis Platform</h2>
+<h3 id="start-mongodb">Start MongoDB</h3>
+<p>Instructions for starting mongo can be found in the MongoDB <a href="http://docs.mongodb.org/manual/">manual</a>. For example:</p>
+<pre><code class="Shell">sudo systemctl start mongod
+</code></pre>
+
+<p>or</p>
+<pre><code class="Shell">sudo service mongod start
+</code></pre>
+
+<h2 id="run-the-api-gateway">Run the api-gateway</h2>
+<ul>
+<li>Right click on
+<code>scava-api-gateway/src/main/java/org.eclipse.scava.apigateway/ApiGatewayApplication.java</code></li>
+<li>Then click on Run As -&gt; Java Application</li>
+</ul>
+<h2 id="run-the-authentication-service">Run the authentication service</h2>
+<ul>
+<li>Right click on
+<code>scava-auth-service/src/main/java/org.eclipse.scava.authservice/AuthServiceApplication.java</code></li>
+<li>Then click on Run As -&gt; Java Application</li>
+</ul>
+<h3 id="validate-and-run-the-platform">Validate and Run the Platform</h3>
+<p>Open <code>releng/org.eclipse.scava.product/scava.product</code>
+  * Click the <code>Validate...</code> icon in the top right of the product configuration editor (the icon is a piece of paper with a tick)
+  * If things do not validate, there's something wrong -- get in touch :) Problems related to <code>org.eclipse.e4.core.di</code> aren't critical.
+  * Then, click the <code>Export an Eclipse product</code> on the left of the <code>Validate...</code> button. Uncheck the <code>Generate p2 repository</code> checkbox, select a destination directory and validate. After a while, the SCAVA platform will be generated in the selected directory.
+  * The platform can then be run using the generated <code>eclipse</code> binary; it accepts the following arguments:
+    * <code>-apiServer</code>: Starts up the client API on localhost:8182
+    * <code>-worker ${id-worker}</code>: Spawns a thread that analyses registered projects
+  * To get a full platform running, first launch a worker thread, then the API server.</p>
+<p>When starting the platform, you can pass a configuration file to control the behaviour of the platform:</p>
+<pre><code class="Shell">./eclipse -worker ${id-worker} -config myconfiguration.properties
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../eclipse-plugin/" class="btn btn-neutral float-right" title="Running the Eclipse Plugin form Sources (To be completed by FrontendArt)">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../administration-application/" class="btn btn-neutral" title="Running the Administration Application form Sources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../administration-application/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../eclipse-plugin/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
