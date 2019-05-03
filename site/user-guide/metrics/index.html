@@ -2510,6 +2510,48 @@
 </li>
 </ul>
 <hr />
+<h4 id="orgeclipsescavametricprovidertransbugsreferences">org.eclipse.scava.metricprovider.trans.bugs.references</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.references</li>
+<li><strong>Friendly name</strong>: Bugs References</li>
+</ul>
+<p>This metrics search for references of commits or bugs within comments comming from bugs comments.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsReferenceTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugs</td>
+<td><code>List&lt;BugReferringTo&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugReferringTo : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>String</code>  commentId</li>
+<li><code>List&lt;String&gt;</code>    bugsReferred    (URLs)</li>
+<li><code>List&lt;String&gt;</code>    commitsReferred (URLs)</li>
+</ul>
+</li>
+</ul>
+<p><u><em>Note</em></u> :
+    When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.</p>
+<hr />
 <h4 id="orgeclipsescavametricprovidertransbugsrequestsreplies">org.eclipse.scava.metricprovider.trans.bugs.requestsreplies</h4>
 <ul>
 <li><strong>Short name</strong>: trans.bugs.requestreplies</li>
@@ -2543,7 +2585,6 @@
 <li>BugStatistics : <ul>
 <li><code>String</code>  bugTrackerId</li>
 <li><code>String</code>  bugId</li>
-<li><code>boolean</code> firstRequest</li>
 <li><code>boolean</code> answered</li>
 <li><code>long</code>    responseDurationSec</li>
 <li><code>String</code>  responseDate</li>
@@ -2551,8 +2592,52 @@
 </li>
 </ul>
 <hr />
-<h3 id="news-groups-and-forums_1">News Groups and Forums</h3>
-<p>The following Transient Metric Providers are associated with newsgroups.</p>
+<h3 id="commits">Commits</h3>
+<hr />
+<h4 id="orgeclipsescavametricprovidertranscommitsmessagereferences">org.eclipse.scava.metricprovider.trans.commits.messagereferences</h4>
+<ul>
+<li><strong>Short name</strong>: trans.commits.messagereferences</li>
+<li><strong>Friendly name</strong>: Commits Messages References</li>
+</ul>
+<p>This metrics search for references of commits or bugs within the messages of commits. In order to work, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, then this metric do not run.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommitsMessageReferenceTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugs</td>
+<td><code>List&lt;CommitMessageReferringTo&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugReferringTo : <ul>
+<li><code>String</code>  repository (URL)</li>
+<li><code>String</code>  revision (Commit SHA)</li>
+<li><code>List&lt;String&gt;</code>    bugsReferred    (URLs)</li>
+<li><code>List&lt;String&gt;</code>    commitsReferred (URLs)</li>
+</ul>
+</li>
+</ul>
+<p><u><em>Note</em></u> :
+    When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.</p>
+<hr />
+<h3 id="communication-channels-newsgroups-and-forums">Communication Channels (newsgroups and forums)</h3>
+<p>The following Transient Metric Providers are associated with communication channels in general, either newsgroups or forums.
+Despite the name of the metrics are newsgroups, all the metrics are valid for communication channels.</p>
 <hr />
 <h4 id="orgeclipsescavametricprovidertransnewsgroupsactiveusers">org.eclipse.scava.metricprovider.trans.newsgroups.activeusers</h4>
 <ul>
@@ -3004,8 +3089,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="natrual-language-processing">Natrual Language Processing</h3>
-<p>The following Transient Metric Providers are associated with Natural Language Processing .</p>
+<h3 id="natural-language-processing">Natural Language Processing</h3>
+<p>The following Transient Metric Providers are associated with Natural Language Processing tools.</p>
 <hr />
 <h4 id="orgeclipsescavametricprovidertransdetectingcode">org.eclipse.scava.metricprovider.trans.detectingcode</h4>
 <ul>
