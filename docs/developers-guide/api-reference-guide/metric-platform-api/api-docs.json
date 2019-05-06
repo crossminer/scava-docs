@@ -1713,7 +1713,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve a metric visualisation data by project id and metric id",
+        "summary": "Retrieve a HistoricalMetricProvider & TransientMetricProvider data by project id and metric id",
         "operationId": "getMetricByProjectIdAndMetricId2",
         "consumes": [],
         "produces": [
@@ -1723,28 +1723,28 @@
           {
             "name": "projectid",
             "in": "path",
-            "description": "The projectId needed to fetch a metric visualisation",
+            "description": "The projectId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "metricid",
             "in": "path",
-            "description": "The metricId needed to fetch a metric visualisation",
+            "description": "The metricId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "startDate",
             "in": "query",
-            "description": "The startDate needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           },
           {
             "name": "endDate",
             "in": "query",
-            "description": "The endDate needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           }
