@@ -1317,16 +1317,16 @@
             "type": "string"
           },
           {
-            "name": "page",
+            "name": "startDate",
             "in": "query",
-            "description": "The page needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           },
           {
-            "name": "size",
+            "name": "endDate",
             "in": "query",
-            "description": "The size per page needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           }
@@ -1371,16 +1371,16 @@
             "type": "string"
           },
           {
-            "name": "page",
+            "name": "startDate",
             "in": "query",
-            "description": "The page needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           },
           {
-            "name": "size",
+            "name": "endDate",
             "in": "query",
-            "description": "The size per page needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           }
@@ -1672,28 +1672,28 @@
           {
             "name": "projectid",
             "in": "path",
-            "description": "The projectId needed to fetch data from a metric visualisation",
+            "description": "The projectId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "metricid",
             "in": "path",
-            "description": "The metricId needed to fetch data from a metric visualisation",
+            "description": "The metricId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "startDate",
             "in": "query",
-            "description": "The startDate needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           },
           {
             "name": "endDate",
             "in": "query",
-            "description": "The endDate needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           }
