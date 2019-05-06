@@ -1662,7 +1662,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve a metric visualisation data by project id and metric id",
+        "summary": "Retrieve a HistoricalMetricProvider & TransientMetricProvider data by project id and metric id",
         "operationId": "getMetricByProjectIdAndMetricId1",
         "consumes": [],
         "produces": [
