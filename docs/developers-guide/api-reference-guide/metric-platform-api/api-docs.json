@@ -1317,16 +1317,16 @@
             "type": "string"
           },
           {
-            "name": "page",
+            "name": "startDate",
             "in": "query",
-            "description": "The page needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           },
           {
-            "name": "size",
+            "name": "endDate",
             "in": "query",
-            "description": "The size per page needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           }
@@ -1371,16 +1371,16 @@
             "type": "string"
           },
           {
-            "name": "page",
+            "name": "startDate",
             "in": "query",
-            "description": "The page needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           },
           {
-            "name": "size",
+            "name": "endDate",
             "in": "query",
-            "description": "The size per page needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data from a metric visualisation",
             "required": false,
             "type": "string"
           }
@@ -1465,7 +1465,7 @@
           "200": {
             "description": "successful operation",
             "schema": {
-              "$ref": "#/definitions/ListMetricProviders"
+              "$ref": "#/definitions/Metric-Providers"
             }
           },
           "404": {
@@ -1662,7 +1662,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve a metric visualisation data by project id and metric id",
+        "summary": "Retrieve a HistoricalMetricProvider & TransientMetricProvider data by project id and metric id",
         "operationId": "getMetricByProjectIdAndMetricId1",
         "consumes": [],
         "produces": [
@@ -1672,28 +1672,28 @@
           {
             "name": "projectid",
             "in": "path",
-            "description": "The projectId needed to fetch data from a metric visualisation",
+            "description": "The projectId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "metricid",
             "in": "path",
-            "description": "The metricId needed to fetch data from a metric visualisation",
+            "description": "The metricId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "startDate",
             "in": "query",
-            "description": "The startDate needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           },
           {
             "name": "endDate",
             "in": "query",
-            "description": "The endDate needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           }
@@ -1713,7 +1713,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve a metric visualisation data by project id and metric id",
+        "summary": "Retrieve a HistoricalMetricProvider & TransientMetricProvider data by project id and metric id",
         "operationId": "getMetricByProjectIdAndMetricId2",
         "consumes": [],
         "produces": [
@@ -1723,28 +1723,28 @@
           {
             "name": "projectid",
             "in": "path",
-            "description": "The projectId needed to fetch a metric visualisation",
+            "description": "The projectId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "metricid",
             "in": "path",
-            "description": "The metricId needed to fetch a metric visualisation",
+            "description": "The metricId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": true,
             "type": "string"
           },
           {
             "name": "startDate",
             "in": "query",
-            "description": "The startDate needed to filter fetching data from a metric visualisation",
+            "description": "The startDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           },
           {
             "name": "endDate",
             "in": "query",
-            "description": "The endDate needed to filter fetching data from a metric visualisation",
+            "description": "The endDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
             "required": false,
             "type": "string"
           }
@@ -3276,6 +3276,32 @@
                 "type": "string"
               },
               "type": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Metric-Providers": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "properties": {
+              "metricProviderId": {
+                "type": "string"
+              },
+              "label": {
                 "type": "string"
               },
               "description": {
