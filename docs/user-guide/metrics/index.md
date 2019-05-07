@@ -1201,7 +1201,7 @@ This metric computes for each bug, whether it was  answered. If so, it computes 
 - **Short name**: trans.commits.messagereferences
 - **Friendly name**: Commits Messages References
 
-This metrics search for references of commits or bugs within the messages of commits. In order to work, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, then this metric do not run.
+This metrics search for references of commits or bugs within the messages of commits. In order to detect bugs references, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, the metric will only search for commits (alphanumeric strings of 40 characters).
 
 - <u>Depends-on</u> : `None`
 

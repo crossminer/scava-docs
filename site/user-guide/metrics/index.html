@@ -2599,7 +2599,7 @@
 <li><strong>Short name</strong>: trans.commits.messagereferences</li>
 <li><strong>Friendly name</strong>: Commits Messages References</li>
 </ul>
-<p>This metrics search for references of commits or bugs within the messages of commits. In order to work, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, then this metric do not run.</p>
+<p>This metrics search for references of commits or bugs within the messages of commits. In order to detect bugs references, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, the metric will only search for commits (alphanumeric strings of 40 characters).</p>
 <ul>
 <li>
 <p><u>Depends-on</u> : <code>None</code></p>
