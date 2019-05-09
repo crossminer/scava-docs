@@ -1,10 +1,10 @@
 # Metrics Reference Guide
 
-This guide contains the historic and trans metric providers for for bug trackers and newsgroups (including eclipse forum).
+This guide describes the historic and transient metric providers provided by the Scava platform.
 
 ## Historic Metric Providers
 
-Historic metrics maintain a record of various heuristics associated with a specific open source project over its lifetime. They typically depend on the results from one or more transient metrics.
+Historic metrics maintain a record of various heuristics associated with a specific open source project over its lifetime. They typically depend on the results from one or more transient metrics and are typically displayed in the Scava dashboards.
 
 ### Bug Trackers
 
@@ -871,6 +871,699 @@ This metric computes the number of users, including active and inactive users pe
 
 ------
 
+### Commits and committers metrics
+
+These metrics are related to the commits and committers of a project.
+
+------
+#### trans.rascal.activecommitters.committersoverfile.historic
+- **Short name**: giniCommittersOverFile.historic
+- **Friendly name**: Historic giniCommittersOverFile
+- **Historic version of**: trans.rascal.activecommitters.committersoverfile
+
+Calculates the gini coefficient of committers per file
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersoverfile`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.activecommitters.percentageOfWeekendCommits.historic
+- **Short name**: percentageOfWeekendCommits.historic
+- **Friendly name**: Historic percentageOfWeekendCommits
+- **Historic version of**: trans.rascal.activecommitters.percentageOfWeekendCommits
+
+Percentage of commits made during the weekend
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.percentageOfWeekendCommits`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.commitsPerDeveloper.historic
+- **Short name**: commitsPerDeveloper.historic
+- **Friendly name**: Historic commitsPerDeveloper
+- **Historic version of**: trans.rascal.activecommitters.commitsPerDeveloper
+
+The number of commits per developer indicates not only the volume of the contribution of an individual but also the style in which he or she commits,
+when combined with other metrics such as churn. Few and big commits are different from many small commits. This metric is used downstream by other metrics as well.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.commitsPerDeveloper`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.activecommitters.numberOfActiveCommittersLongTerm.historic
+- **Short name**: numberOfActiveCommittersLongTerm.historic
+- **Friendly name**: Historic numberOfActiveCommittersLongTerm
+- **Historic version of**: trans.rascal.activecommitters.numberOfActiveCommittersLongTerm
+
+Number of long time active committers over time (active in last year). This measures a smooth window of one year, where every day we report the number of developers active in the previous 365 days.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.numberOfActiveCommittersLongTerm`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.numberOfActiveCommitters.historic
+- **Short name**: numberOfActiveCommitters.historic
+- **Friendly name**: Historic numberOfActiveCommitters
+- **Historic version of**: trans.rascal.activecommitters.numberOfActiveCommitters
+
+Number of active committers over time (active in last two weeks). This measures a smooth window of two weeks, where every day we report the number of developers in the previous 14 days.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.numberOfActiveCommitters`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.commitsToday.historic
+- **Short name**: commitsToday.historic
+- **Friendly name**: Historic commitsToday
+- **Historic version of**: rascal.generic.churn.commitsToday
+
+Counts the number of commits made today.
+
+- <u>Depends-on</u>: `rascal.generic.churn.commitsToday`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnToday.historic
+- **Short name**: commitsToday.historic
+- **Friendly name**: Historic commitsToday
+- **Historic version of**: rascal.generic.churn.churnToday
+
+Counts the churn for today: the total number of lines of code added and deleted. This metric is used further downstream to analyze trends.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnToday`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnPerCommitInTwoWeeks.historic
+- **Short name**: churnPerCommitInTwoWeeks.historic
+- **Friendly name**: Historic churnPerCommitInTwoWeeks
+- **Historic version of**: rascal.generic.churn.churnPerCommitInTwoWeeks
+
+The ratio between the churn and the number of commits indicates how large each commit is on average. We compute this as a sliding average over two weeks which smoothens exceptions and makes it possible to see a trend historically. Commits should not be to big all the time, because that would indicate either that programmers are not focusing on well-defined tasks or that the system architecture does not allow for separation of concerns.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnPerCommitInTwoWeeks`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.filesPerCommit.historic
+- **Short name**: numberOfFilesPerCommit.historic
+- **Friendly name**: Historic numberOfFilesPerCommit
+- **Historic version of**: rascal.generic.churn.filesPerCommit
+
+Counts the number of files per commit to find out about the separation of concerns in the architecture or in the tasks the programmers perform. This metric is used further downstream.
+
+- <u>Depends-on</u>: `rascal.generic.churn.filesPerCommit`
+- <u>Returns</u>: `map[loc, int]`
+
+------
+#### rascal.generic.churn.churnPerCommit.historic
+- **Short name**: churnPerCommit.historic
+- **Friendly name**: Historic churnPerCommit
+- **Historic version of**: rascal.generic.churn.churnPerCommit
+
+Count churn. Churn is the number lines added or deleted. We measure this per commit because the commit
+is a basic unit of work for a programmer. This metric computes a table per commit for today and is not used for comparison between projects. It is used further downstream to analyze activity.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnPerCommit`
+- <u>Returns</u>: `map[loc, int]`
+
+------
+#### rascal.generic.churn.churnPerCommitter.historic
+- **Short name**: churnPerCommitter.historic
+- **Friendly name**: Historic churnPerCommitter
+- **Historic version of**: rascal.generic.churn.churnPerCommitter
+
+Count churn per committer: the number of lines of code added and deleted. It zooms in on the single committer producing a table which can be used for downstream processing.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnPerCommitter`
+- <u>Returns</u>: `map[str author, int churn]`
+
+------
+#### rascal.generic.churn.commitsInTwoWeeks.historic
+- **Short name**: commitsInTwoWeeks.historic
+- **Friendly name**: Historic commitsInTwoWeeks
+- **Historic version of**: rascal.generic.churn.commitsInTwoWeeks
+
+Churn in the last two weeks: aggregates the number of commits over a 14-day sliding window.
+
+- <u>Depends-on</u>: `rascal.generic.churn.commitsInTwoWeeks`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnInTwoWeeks.historic
+- **Short name**: churnInTwoWeeks.historic
+- **Friendly name**: Historic churnInTwoWeeks
+- **Historic version of**: rascal.generic.churn.churnInTwoWeeks
+
+Churn in the last two weeks: aggregates the lines of code added and deleted over a 14-day sliding window.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnInTwoWeeks`
+- <u>Returns</u>: `int`
+
+### Generic source code metrics
+
+These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
+
+------
+#### trans.rascal.clones.cloneLOCPerLanguage.historic
+- **Short name**: cloneLOCPerLanguage.historic
+- **Friendly name**: Historic cloneLOCPerLanguage
+- **Historic version of**: trans.rascal.clones.cloneLOCPerLanguage
+
+Lines of code in Type I clones larger than 6 lines, per language. A Type I clone is a literal clone. A large number of literal clones is considered to be bad. This metric is not easily compared between systems because it is not size normalized yet. We use it for further processing downstream. You can analyze the trend over time using this metric.
+
+- <u>Depends-on</u>: `trans.rascal.clones.cloneLOCPerLanguage`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.readability.fileReadabilityQuartiles.historic
+- **Short name**: fileReadabilityQ.historic
+- **Friendly name**: Historic fileReadabilityQ
+- **Historic version of**: trans.rascal.readability.fileReadabilityQuartiles
+
+We measure file readability by counting exceptions to common usage of whitespace in source code, such as spaces after commas. The quartiles
+represent how many of the files have how many of these deviations. A few deviations per file is ok, but many files with many deviations indicates a
+lack of attention to readability.
+
+- <u>Depends-on</u>: `trans.rascal.readability.fileReadabilityQuartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.comments.commentLinesPerLanguage.historic
+- **Short name**: commentLinesPerLanguage.historic
+- **Friendly name**: Historic commentLinesPerLanguage
+- **Historic version of**: trans.rascal.comments.commentLinesPerLanguage
+
+Number of lines containing comments per language (excluding headers). The balance between comments and code indicates understandability. Too many comments are often not maintained and may lead to confusion, not enough means the code lacks documentation explaining its intent. This is a basic fact collection metric which is used further downstream.
+
+- <u>Depends-on</u>: `trans.rascal.comments.commentLinesPerLanguage`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.comments.commentedOutCodePerLanguage.historic
+- **Short name**: commentedOutCodePerLanguage.historic
+- **Friendly name**: Historic commentedOutCodePerLanguage
+- **Historic version of**: trans.rascal.comments.commentedOutCodePerLanguage
+
+Lines of commented out code per file uses heuristics (frequency of certain substrings typically used in code and not in natural language) to find out how
+much source code comments are actually commented out code. Commented out code is, in large quantities is a quality contra-indicator.
+
+- <u>Depends-on</u>: `trans.rascal.comments.commentedOutCodePerLanguage`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.comments.headerPercentage.historic
+- **Short name**: headerPercentage.historic
+- **Friendly name**: Historic headerPercentage
+- **Historic version of**: trans.rascal.comments.headerPercentage
+
+Percentage of files with headers is an indicator for the amount of files which have been tagged with a copyright statement (or not). If the number is low this indicates a problem with the copyright of the program. Source files without a copyright statement are not open-source, they are owned, in principle, by the author and may not be copied without permission. Note that the existence of a header does not guarantee the presence of an open-source license, but its absence certainly is telling.
+
+- <u>Depends-on</u>: `trans.rascal.comments.headerPercentage`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.LOC.genericLOCoverFiles.historic
+- **Short name**: giniLOCOverFiles.historic
+- **Friendly name**: Historic giniLOCOverFiles
+- **Historic version of**: trans.rascal.LOC.genericLOCoverFiles
+
+We find out how evenly the code is spread over files. The number should be quite stable over time. A jump in this metric indicates a large change in the code base. If the code is focused in only a few very large files then this may be a contra-indicator for quality.
+
+- <u>Depends-on</u>: `trans.rascal.LOC.genericLOCoverFiles`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.LOC.locPerLanguage.historic
+- **Short name**: locPerLanguage.historic
+- **Friendly name**: Historic locPerLanguage
+- **Historic version of**: trans.rascal.LOC.locPerLanguage
+
+Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. We accumulate this number per programming language. 
+The metric can be used to compare the volume between two systems and to assess in which programming language the bulk of the code is written.
+
+- <u>Depends-on</u>: `trans.rascal.LOC.locPerLanguage`
+- <u>Returns</u>: `map[str, int]`
+
+### Java code metrics
+
+These metrics are related to the Java source code of analyzed projects.
+
+------
+#### style.filesWithErrorProneness.historic
+- **Short name**: filesWithErrorProneness.historic
+- **Friendly name**: Historic filesWithErrorProneness
+- **Historic version of**: style.filesWithErrorProneness
+
+Percentage of files with error proneness
+
+- <u>Depends-on</u>: `style.filesWithErrorProneness`
+- <u>Returns</u>: `int`
+
+------
+#### style.filesWithUnderstandabilityIssues.historic
+- **Short name**: filesWithUnderstandabilityIssues.historic
+- **Friendly name**: Historic filesWithUnderstandabilityIssues
+- **Historic version of**: style.filesWithUnderstandabilityIssues
+
+Percentage of files with understandability issues. This is a basic metric which can not be easily compared between projects.
+
+- <u>Depends-on</u>: `style.filesWithUnderstandabilityIssues`
+- <u>Returns</u>: `int`
+
+------
+#### style.spreadOfStyleViolations.historic
+- **Short name**: spreadOfStyleViolations.historic
+- **Friendly name**: Historic spreadOfStyleViolations
+- **Historic version of**: style.spreadOfStyleViolations
+
+Between 0 and 1 how evenly spread are the style violations. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.spreadOfStyleViolations`
+- <u>Returns</u>: `real`
+
+------
+#### style.filesWithInefficiencies.historic
+- **Short name**: filesWithInefficiencies.historic
+- **Friendly name**: Historic filesWithInefficiencies
+- **Historic version of**: style.filesWithInefficiencies
+
+Percentage of files with inefficiencies
+
+- <u>Depends-on</u>: `style.filesWithInefficiencies`
+- <u>Returns</u>: `int`
+
+------
+#### style.filesWithStyleViolations.historic
+- **Short name**: filesWithStyleViolations.historic
+- **Friendly name**: Historic filesWithStyleViolations
+- **Historic version of**: style.filesWithStyleViolations
+
+Percentage of files with style violations
+
+- <u>Depends-on</u>: `style.filesWithStyleViolations`
+- <u>Returns</u>: `int`
+
+------
+#### style.spreadOfUnderstandabilityIssues.historic
+- **Short name**: spreadOfUnderstandabilityIssues.historic
+- **Friendly name**: Historic spreadOfUnderstandabilityIssues
+- **Historic version of**: style.spreadOfUnderstandabilityIssues
+
+Between 0 and 1 how evenly spread are the understandability issues. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.spreadOfUnderstandabilityIssues`
+- <u>Returns</u>: `real`
+
+------
+#### style.spreadOfInefficiencies.historic
+- **Short name**: spreadOfInefficiencies.historic
+- **Friendly name**: Historic spreadOfInefficiencies
+- **Historic version of**: style.spreadOfInefficiencies
+
+Between 0 and 1 how evenly spread are the style violations which indicate inefficiencies. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.spreadOfInefficiencies`
+- <u>Returns</u>: `real`
+
+------
+#### style.spreadOfErrorProneness.historic
+- **Short name**: spreadOfErrorProneness.historic
+- **Friendly name**: Historic spreadOfErrorProneness
+- **Historic version of**: style.spreadOfErrorProneness
+
+Between 0 and 1 how evenly spread are the style violations which indicate error proneness. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.spreadOfErrorProneness`
+- <u>Returns</u>: `real`
+
+------
+#### rascal.testability.java.TestOverPublicMethods.historic
+- **Short name**: percentageOfTestedPublicMethods.historic
+- **Friendly name**: Historic percentageOfTestedPublicMethods
+- **Historic version of**: rascal.testability.java.TestOverPublicMethods
+
+Number of JUnit tests averaged over the total number of public methods. Ideally all public methods are tested. With this number we
+compute how far from the ideal situation the project is.
+
+- <u>Depends-on</u>: `rascal.testability.java.TestOverPublicMethods`
+- <u>Returns</u>: `real`
+
+------
+#### rascal.testability.java.NumberOfTestMethods.historic
+- **Short name**: numberOfTestMethods.historic
+- **Friendly name**: Historic numberOfTestMethods
+- **Historic version of**: rascal.testability.java.NumberOfTestMethods
+
+Number of JUnit test methods
+
+- <u>Depends-on</u>: `rascal.testability.java.NumberOfTestMethods`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.testability.java.TestCoverage.historic
+- **Short name**: estimateTestCoverage.historic
+- **Friendly name**: Historic estimateTestCoverage
+- **Historic version of**: rascal.testability.java.TestCoverage
+
+This is a static over-estimation of test coverage: which code is executed in the system when all JUnit test cases are executed? We approximate
+this by using the static call graphs and assuming every method which can be called, will be called. This leads to an over-approximation,
+as compared to a dynamic code coverage analysis, but the static analysis does follow the trend and a low code coverage here is an good indicator
+for a lack in testing effort for the project.
+
+- <u>Depends-on</u>: `rascal.testability.java.TestCoverage`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.Ca-Java-Quartiles.historic
+- **Short name**: Ca_Java_Q.historic
+- **Friendly name**: Historic Ca_Java_Q
+- **Historic version of**: trans.rascal.OO.java.Ca-Java-Quartiles
+
+Afferent coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.Ca-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.CF-Java.historic
+- **Short name**: CF_Java.historic
+- **Friendly name**: Historic CF_Java
+- **Historic version of**: trans.rascal.OO.java.CF-Java
+
+Coupling factor (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.CF-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.DAC-Java-Quartiles.historic
+- **Short name**: DAC_Java_Q.historic
+- **Friendly name**: Historic DAC_Java_Q
+- **Historic version of**: trans.rascal.OO.java.DAC-Java-Quartiles
+
+Data abstraction coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.DAC-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.MPC-Java-Quartiles.historic
+- **Short name**: MPC_Java_Q.historic
+- **Friendly name**: Historic MPC_Java_Q
+- **Historic version of**: trans.rascal.OO.java.MPC-Java-Quartiles
+
+Message passing coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.MPC-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.PF-Java.historic
+- **Short name**: PF_Java.historic
+- **Friendly name**: Historic PF_Java
+- **Historic version of**: trans.rascal.OO.java.PF-Java
+
+Polymorphism factor (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.PF-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.RFC-Java-Quartiles.historic
+- **Short name**: RFC_Java_Q.historic
+- **Friendly name**: Historic RFC_Java_Q
+- **Historic version of**: trans.rascal.OO.java.RFC-Java-Quartiles
+
+Response for class quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.RFC-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.I-Java-Quartiles.historic
+- **Short name**: I_Java_Q.historic
+- **Friendly name**: Historic I_Java_Q
+- **Historic version of**: trans.rascal.OO.java.I-Java-Quartiles
+
+Instability quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.I-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.MIF-Java-Quartiles.historic
+- **Short name**: MIF_Java_Q.historic
+- **Friendly name**: Historic MIF_Java_Q
+- **Historic version of**: trans.rascal.OO.java.MIF-Java-Quartiles
+
+Method inheritance factor quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.MIF-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.MHF-Java.historic
+- **Short name**: MHF_Java.historic
+- **Friendly name**: Historic MHF_Java
+- **Historic version of**: trans.rascal.OO.java.MHF-Java
+
+Method hiding factor (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.MHF-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.AHF-Java.historic
+- **Short name**: AHF_Java.historic
+- **Friendly name**: Historic AHF_Java
+- **Historic version of**: trans.rascal.OO.java.AHF-Java
+
+Attribute hiding factor (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.AHF-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.LCOM-Java-Quartiles.historic
+- **Short name**: LCOM_Java_Q.historic
+- **Friendly name**: Historic LCOM_Java_Q
+- **Historic version of**: trans.rascal.OO.java.LCOM-Java-Quartiles
+
+Lack of cohesion in methods quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.LCOM-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.A-Java.historic
+- **Short name**: A_Java.historic
+- **Friendly name**: Historic A_Java
+- **Historic version of**: trans.rascal.OO.java.A-Java
+
+Abstractness (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.A-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.DIT-Java-Quartiles.historic
+- **Short name**: DIT_Java_Q.historic
+- **Friendly name**: Historic DIT_Java_Q
+- **Historic version of**: trans.rascal.OO.java.DIT-Java-Quartiles
+
+Depth of inheritance tree quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.DIT-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.TCC-Java-Quartiles.historic
+- **Short name**: TCC_Java_Q.historic
+- **Friendly name**: Historic TCC_Java_Q
+- **Historic version of**: trans.rascal.OO.java.TCC-Java-Quartiles
+
+Tight class cohesion quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.TCC-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.LCOM4-Java-Quartiles.historic
+- **Short name**: LCOM4_Java_Q.historic
+- **Friendly name**: Historic LCOM4_Java_Q
+- **Historic version of**: trans.rascal.OO.java.LCOM4-Java-Quartiles
+
+Lack of cohesion in methods 4 quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.LCOM4-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.SR-Java.historic
+- **Short name**: SR_Java.historic
+- **Friendly name**: Historic SR_Java
+- **Historic version of**: trans.rascal.OO.java.SR-Java
+
+Specialization ratio (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.SR-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.AIF-Java-Quartiles.historic
+- **Short name**: AIF_Java_Q.historic
+- **Friendly name**: Historic AIF_Java_Q
+- **Historic version of**: trans.rascal.OO.java.AIF-Java-Quartiles
+
+Attribute inheritance factor quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.AIF-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOC-Java-Quartiles.historic
+- **Short name**: NOC_Java_Q.historic
+- **Friendly name**: Historic NOC_Java_Q
+- **Historic version of**: trans.rascal.OO.java.NOC-Java-Quartiles
+
+Number of children quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.NOC-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.RR-Java.historic
+- **Short name**: RR_Java.historic
+- **Friendly name**: Historic RR_Java
+- **Historic version of**: trans.rascal.OO.java.RR-Java
+
+Reuse ratio (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.RR-Java`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.LCC-Java-Quartiles.historic
+- **Short name**: LCC_Java_Q.historic
+- **Friendly name**: Historic LCC_Java_Q
+- **Historic version of**: trans.rascal.OO.java.LCC-Java-Quartiles
+
+Loose class cohesion quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.LCC-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.Ce-Java-Quartiles.historic
+- **Short name**: Ce_Java_Q.historic
+- **Friendly name**: Historic Ce_Java_Q
+- **Historic version of**: trans.rascal.OO.java.Ce-Java-Quartiles
+
+Efferent coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.Ce-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOM-Java-Quartiles.historic
+- **Short name**: NOM_Java_Q.historic
+- **Friendly name**: Historic NOM_Java_Q
+- **Historic version of**: trans.rascal.OO.java.NOM-Java-Quartiles
+
+Number of methods quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.NOM-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOA-Java-Quartiles.historic
+- **Short name**: NOA_Java_Q.historic
+- **Friendly name**: Historic NOA_Java_Q
+- **Historic version of**: trans.rascal.OO.java.NOA-Java-Quartiles
+
+Number of attributes quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.NOA-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.CBO-Java-Quartiles.historic
+- **Short name**: CBO_Java_Q.historic
+- **Friendly name**: Historic CBO_Java_Q
+- **Historic version of**: trans.rascal.OO.java.CBO-Java-Quartiles
+
+Coupling between objects quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.CBO-Java-Quartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles.historic
+- **Short name**: countUsesOfAdvancedLanguageFeaturesQ.historic
+- **Friendly name**: Historic countUsesOfAdvancedLanguageFeaturesQ
+- **Historic version of**: trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles
+
+Quartiles of counts of advanced Java features (wildcards, union types and anonymous classes). The numbers indicate the thresholds that delimit the first 25%, 50% and 75% of the data as well as the maximum and minumum values.
+
+- <u>Depends-on</u>: `trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.CC.java.CCHistogramJava.historic
+- **Short name**: CCHistogramJava.historic
+- **Friendly name**: Historic CCHistogramJava
+- **Historic version of**: trans.rascal.CC.java.CCHistogramJava
+
+Number of Java methods per CC risk factor, counts the number of methods which are in a low, medium or high risk factor. The histogram can be compared between projects to indicate which is probably easier to maintain on a method-by-method basis.
+
+- <u>Depends-on</u>: `trans.rascal.CC.java.CCHistogramJava`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.CC.java.CCOverJavaMethods.historic
+- **Short name**: giniCCOverMethodsJava.historic
+- **Friendly name**: Historic giniCCOverMethodsJava
+- **Historic version of**: trans.rascal.CC.java.CCOverJavaMethods
+
+Calculates how cyclomatic complexity is spread over the methods of a system. If high CC is localized, then this may be easily fixed but if many methods have high complexity, then the project may be at risk. This metric is good to compare between projects.
+
+- <u>Depends-on</u>: `trans.rascal.CC.java.CCOverJavaMethods`
+- <u>Returns</u>: `real`
+
+### OSGi dependencies metrics
+
+These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
+
+------
+#### trans.rascal.dependency.osgi.numberOSGiBundleDependencies.historic
+- **Short name**: numberOSGiBundleDependencies.historic
+- **Friendly name**: Historic numberOSGiBundleDependencies
+- **Historic version of**: trans.rascal.dependency.osgi.numberOSGiBundleDependencies
+
+Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependencies).
+
+- <u>Depends-on</u>: `trans.rascal.dependency.osgi.numberOSGiBundleDependencies`
+- <u>Returns</u>: `int`
+
+### Maven dependencies metrics 
+
+These metrics are related to Maven dependencies declared in `pom.xml` files.
+
+------
+#### trans.rascal.dependency.maven.numberMavenDependencies.historic
+- **Short name**: numberMavenDependencies.historic
+- **Friendly name**: Historic numberMavenDependencies
+- **Historic version of**: trans.rascal.dependency.maven.numberMavenDependencies
+
+Retrieves the number of Maven dependencies.
+
+- <u>Depends-on</u>: `trans.rascal.dependency.maven.numberMavenDependencies`
+- <u>Returns</u>: `int`
 
 ## Transient Metric Providers
 
@@ -1815,3 +2508,1340 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
   - `int`	numberOfDocuments
 
 ------
+
+### Commits and committers metrics
+
+These metrics are related to the commits and committers of a project.
+
+------
+#### trans.rascal.activecommitters.activeCommitters
+- **Short name**: activeCommitters
+- **Friendly name**: Committers of last two weeks
+
+A list of committers who have been active the last two weeks. This metric is meant for downstream processing.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
+- <u>Returns</u>: `rel[datetime,set[str]]`
+
+------
+#### trans.rascal.activecommitters.committersoverfile
+- **Short name**: giniCommittersOverFile
+- **Friendly name**: Committers over file
+
+Calculates the gini coefficient of committers per file
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.countCommittersPerFile`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.activecommitters.countCommittersPerFile
+- **Short name**: countCommittersPerFile
+- **Friendly name**: Number of committers per file
+
+Count the number of committers that have touched a file.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersPerFile`
+- <u>Returns</u>: `map[loc file, int numberOfCommitters]`
+
+------
+#### trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper
+- **Short name**: firstLastCommitDates
+- **Friendly name**: First and last commit dates per developer
+
+Collects per developer the first and last dates on which he or she contributed code. This basic metric is used downstream for other metrics, but
+it is also used to drill down on the membership of specific individuals of the development team.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
+- <u>Returns</u>: `map[str, tuple[datetime,datetime]]`
+
+------
+#### trans.rascal.activecommitters.developmentTeam
+- **Short name**: developmentTeam
+- **Friendly name**: Development team
+
+Lists the names of people who have been contributing code at least once in the history of the project.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
+- <u>Returns</u>: `set[str]`
+
+------
+#### trans.rascal.activecommitters.percentageOfWeekendCommits
+- **Short name**: percentageOfWeekendCommits
+- **Friendly name**: Percentage of weekend commits
+
+Percentage of commits made during the weekend
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.commitsPerWeekDay`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.maximumActiveCommittersEver
+- **Short name**: maximumActiveCommittersEver
+- **Friendly name**: Maximum active committers ever
+
+What is the maximum number of committers who have been active together in any two week period?
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.numberOfActiveCommitters.historic`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.developmentTeamEmails
+- **Short name**: developmentTeamEmails
+- **Friendly name**: Development team
+
+Lists the names of people who have been contributing code at least once in the history of the project.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersEmailsToday`
+- <u>Returns</u>: `set[str]`
+
+------
+#### trans.rascal.activecommitters.developmentDomainNames
+- **Short name**: developmentDomainNames
+- **Friendly name**: Development team domain names
+
+Lists the domain names of email addresses of developers if such information is present.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.developmentTeamEmails`
+- <u>Returns</u>: `set[str]`
+
+------
+#### trans.rascal.activecommitters.committersPerFile
+- **Short name**: committersPerFile
+- **Friendly name**: Committers per file
+
+Register which committers have contributed to which files
+
+- <u>Depends-on</u>: - <u>Returns</u>: `rel[loc,str]`
+
+------
+#### trans.rascal.activecommitters.longerTermActiveCommitters
+- **Short name**: longerTermActiveCommitters
+- **Friendly name**: Committers of last year
+
+Committers who have been active the last 12 months. This metric is meant for downstream processing.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
+- <u>Returns</u>: `rel[datetime,set[str]]`
+
+------
+#### trans.rascal.activecommitters.commitsPerDeveloper
+- **Short name**: commitsPerDeveloper
+- **Friendly name**: Number of commits per developer
+
+The number of commits per developer indicates not only the volume of the contribution of an individual but also the style in which he or she commits,
+when combined with other metrics such as churn. Few and big commits are different from many small commits. This metric is used downstream by other metrics as well.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.activecommitters.committersAge
+- **Short name**: ageOfCommitters
+- **Friendly name**: Developer experience in project
+
+Measures in days the amount of time between the first and last contribution of each developer.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper`
+- <u>Returns</u>: `rel[str,int]`
+
+------
+#### trans.rascal.activecommitters.committersToday
+- **Short name**: committersToday
+- **Friendly name**: Active committers
+
+Who have been active today?
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
+
+------
+#### trans.rascal.activecommitters.projectAge
+- **Short name**: projectAge
+- **Friendly name**: Age of the project (nr of days between first and last commit)
+
+Age of the project (nr of days between first and last commit)
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.commitsPerWeekDay
+- **Short name**: commitsPerWeekDay
+- **Friendly name**: Commits per week day
+
+On which day of the week do commits take place?
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.activecommitters.committersEmailsToday
+- **Short name**: committersEmailsToday
+- **Friendly name**: Active committers
+
+Who have been active today?
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
+
+------
+#### trans.rascal.activecommitters.sizeOfDevelopmentTeam
+- **Short name**: sizeOfDevelopmentTeam
+- **Friendly name**: Size of development team
+
+How many people have ever contributed code to this project?
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.developmentTeam`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.numberOfActiveCommittersLongTerm
+- **Short name**: numberOfActiveCommittersLongTerm
+- **Friendly name**: Number of active committers long term
+
+Number of long time active committers over time (active in last year). This measures a smooth window of one year, where every day we report the number of developers active in the previous 365 days.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.longerTermActiveCommitters`
+- <u>Returns</u>: `int`
+
+------
+#### trans.rascal.activecommitters.numberOfActiveCommitters
+- **Short name**: numberOfActiveCommitters
+- **Friendly name**: Number of active committers
+
+Number of active committers over time (active in last two weeks). This measures a smooth window of two weeks, where every day we report the number of developers in the previous 14 days.
+
+- <u>Depends-on</u>: `trans.rascal.activecommitters.activeCommitters`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.commitsToday
+- **Short name**: commitsToday
+- **Friendly name**: Number of commits today
+
+Counts the number of commits made today.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnToday
+- **Short name**: commitsToday
+- **Friendly name**: Churn of today
+
+Counts the churn for today: the total number of lines of code added and deleted. This metric is used further downstream to analyze trends.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnPerCommitInTwoWeeks
+- **Short name**: churnPerCommitInTwoWeeks
+- **Friendly name**: Churn per commit in two weeks
+
+The ratio between the churn and the number of commits indicates how large each commit is on average. We compute this as a sliding average over two weeks which smoothens exceptions and makes it possible to see a trend historically. Commits should not be to big all the time, because that would indicate either that programmers are not focusing on well-defined tasks or that the system architecture does not allow for separation of concerns.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnInTwoWeeks`
+`rascal.generic.churn.commitsInTwoWeeks`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnActivity
+- **Short name**: churnActivity
+- **Friendly name**: Churn over the last two weeks
+
+Churn in the last two weeks: collects the lines of code added and deleted over a 14-day sliding window.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnToday`
+- <u>Returns</u>: `rel[datetime,int]`
+
+------
+#### rascal.generic.churn.commitActivity
+- **Short name**: commitActivity
+- **Friendly name**: Commits in last two weeks
+
+Number of commits in the last two weeks: collects commit activity over a 14-day sliding window.
+
+- <u>Depends-on</u>: `rascal.generic.churn.commitsToday`
+- <u>Returns</u>: `rel[datetime,int]`
+
+------
+#### rascal.generic.churn.coreCommittersChurn
+- **Short name**: coreCommittersChurn
+- **Friendly name**: Churn per core committer
+
+Find out about the committers what their total number of added and deleted lines for this system.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnPerCommitter`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### rascal.generic.churn.filesPerCommit
+- **Short name**: numberOfFilesPerCommit
+- **Friendly name**: Number of files per commit
+
+Counts the number of files per commit to find out about the separation of concerns in the architecture or in the tasks the programmers perform. This metric is used further downstream.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### rascal.generic.churn.churnPerCommit
+- **Short name**: churnPerCommit
+- **Friendly name**: Counts number of lines added and deleted per commit.
+
+Count churn. Churn is the number lines added or deleted. We measure this per commit because the commit
+is a basic unit of work for a programmer. This metric computes a table per commit for today and is not used for comparison between projects. It is used further downstream to analyze activity.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### rascal.generic.churn.churnPerCommitter
+- **Short name**: churnPerCommitter
+- **Friendly name**: Churn per committer
+
+Count churn per committer: the number of lines of code added and deleted. It zooms in on the single committer producing a table which can be used for downstream processing.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[str author, int churn]`
+
+------
+#### rascal.generic.churn.churnPerFile
+- **Short name**: churnPerFile
+- **Friendly name**: Churn per file
+
+Churn per file counts the number of files added and deleted for a single file. This is a basic metric to indicate hotspots in the design of the system which is changed often. This metric is used further downstream.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc file, int churn]`
+
+------
+#### rascal.generic.churn.commitsInTwoWeeks
+- **Short name**: commitsInTwoWeeks
+- **Friendly name**: Number of commits in the last two weeks
+
+Churn in the last two weeks: aggregates the number of commits over a 14-day sliding window.
+
+- <u>Depends-on</u>: `rascal.generic.churn.commitActivity`
+- <u>Returns</u>: `int`
+
+------
+#### rascal.generic.churn.churnInTwoWeeks
+- **Short name**: churnInTwoWeeks
+- **Friendly name**: Sum of churn in the last two weeks
+
+Churn in the last two weeks: aggregates the lines of code added and deleted over a 14-day sliding window.
+
+- <u>Depends-on</u>: `rascal.generic.churn.churnActivity`
+- <u>Returns</u>: `int`
+
+------
+
+### Generic source code metrics
+
+These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
+
+------
+#### trans.rascal.readability.fileReadability
+- **Short name**: fileReadability
+- **Friendly name**: File readability
+
+Code readability per file, measured by use of whitespace measures deviations from common usage of whitespace in source code, such 
+as spaces after commas. This is a basic collection metric which is used further downstream.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
+
+------
+#### trans.rascal.readability.fileReadabilityQuartiles
+- **Short name**: fileReadabilityQ
+- **Friendly name**: File readability quartiles
+
+We measure file readability by counting exceptions to common usage of whitespace in source code, such as spaces after commas. The quartiles
+represent how many of the files have how many of these deviations. A few deviations per file is ok, but many files with many deviations indicates a
+lack of attention to readability.
+
+- <u>Depends-on</u>: `trans.rascal.readability.fileReadability`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.comments.headerCounts
+- **Short name**: headerCounts
+- **Friendly name**: Number of appearances of estimated unique headers
+
+In principle it is expected for the files in a project to share the same license. The license text in the header of each file may differ slightly due to different copyright years and or lists of contributors. The heuristic allows for slight differences. The metric produces the number of different types of header files found. A high number is a contra-indicator, meaning either a confusing licensing scheme or the source code of many different projects is included in the code base of the analyzed system.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `list[int]`
+
+------
+#### trans.rascal.comments.commentedOutCode
+- **Short name**: commentedOutCode
+- **Friendly name**: Lines of commented out code per file
+
+Lines of commented out code per file uses heuristics (frequency of certain substrings typically used in code and not in natural language) to find out how
+much source code comments are actually commented out code. Commented out code is, in large quantities is a quality contra-indicator.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.comments.commentLOC
+- **Short name**: commentLOC
+- **Friendly name**: Number of lines containing comments per file
+
+Number of lines containing comments per file is a basic metric used for downstream processing. This metric does not consider the difference
+between natural language comments and commented out code.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.comments.commentLinesPerLanguage
+- **Short name**: commentLinesPerLanguage
+- **Friendly name**: Number of lines containing comments per language (excluding headers)
+
+Number of lines containing comments per language (excluding headers). The balance between comments and code indicates understandability. Too many comments are often not maintained and may lead to confusion, not enough means the code lacks documentation explaining its intent. This is a basic fact collection metric which is used further downstream.
+
+- <u>Depends-on</u>: `trans.rascal.comments.commentLOC`
+`trans.rascal.comments.headerLOC`
+`trans.rascal.comments.commentedOutCode`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.comments.commentedOutCodePerLanguage
+- **Short name**: commentedOutCodePerLanguage
+- **Friendly name**: Lines of commented out code per language
+
+Lines of commented out code per file uses heuristics (frequency of certain substrings typically used in code and not in natural language) to find out how
+much source code comments are actually commented out code. Commented out code is, in large quantities is a quality contra-indicator.
+
+- <u>Depends-on</u>: `trans.rascal.comments.commentedOutCode`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.comments.headerLOC
+- **Short name**: headerLOC
+- **Friendly name**: Header size per file
+
+Header size per file is a basic metric counting the size of the comment at the start of each file. It is used for further processing downstream.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.comments.matchingLicenses
+- **Short name**: matchingLicenses
+- **Friendly name**: Used licenses (from selected list of known licenses)
+
+We match against a list of known licenses to find out which are used in the current project
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
+
+------
+#### trans.rascal.comments.headerPercentage
+- **Short name**: headerPercentage
+- **Friendly name**: Percentage of files with headers.
+
+Percentage of files with headers is an indicator for the amount of files which have been tagged with a copyright statement (or not). If the number is low this indicates a problem with the copyright of the program. Source files without a copyright statement are not open-source, they are owned, in principle, by the author and may not be copied without permission. Note that the existence of a header does not guarantee the presence of an open-source license, but its absence certainly is telling.
+
+- <u>Depends-on</u>: `trans.rascal.comments.headerLOC`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.LOC.genericLOC
+- **Short name**: countLoc
+- **Friendly name**: Language independent physical lines of code
+
+Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. 
+The metric can be used to compare the volume between two systems.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.LOC.genericLOCoverFiles
+- **Short name**: giniLOCOverFiles
+- **Friendly name**: Spread of code over files
+
+We find out how evenly the code is spread over files. The number should be quite stable over time. A jump in this metric indicates a large change in the code base. If the code is focused in only a few very large files then this may be a contra-indicator for quality.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.LOC.locPerLanguage
+- **Short name**: locPerLanguage
+- **Friendly name**: Physical lines of code per language
+
+Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. We accumulate this number per programming language. 
+The metric can be used to compare the volume between two systems and to assess in which programming language the bulk of the code is written.
+
+- <u>Depends-on</u>: `trans.rascal.LOC.genericLOC`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.clones.cloneLOCPerLanguage
+- **Short name**: cloneLOCPerLanguage
+- **Friendly name**: Lines of code in Type I clones larger than 6 lines, per language
+
+Lines of code in Type I clones larger than 6 lines, per language. A Type I clone is a literal clone. A large number of literal clones is considered to be bad. This metric is not easily compared between systems because it is not size normalized yet. We use it for further processing downstream. You can analyze the trend over time using this metric.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
+------
+
+### Java code metrics
+
+These metrics are related to the Java source code of analyzed projects.
+
+------
+#### style.filesWithErrorProneness
+- **Short name**: filesWithErrorProneness
+- **Friendly name**: Files with style violations which make the code error prone. This is basic metric which can not be easily compared between projects.
+
+Percentage of files with error proneness
+
+- <u>Depends-on</u>: `style.errorProneness`
+- <u>Returns</u>: `int`
+
+------
+#### style.understandability
+- **Short name**: understandability
+- **Friendly name**: Inefficient code
+
+Percentage of the projects files with coding style violations which indicate the code may be hard to read and understand, 
+but not necessarily more error prone.
+
+- <u>Depends-on</u>: `style.styleViolations`
+- <u>Returns</u>: `Table`
+
+------
+#### style.inefficiencies
+- **Short name**: inefficiencies
+- **Friendly name**: Inefficient code
+
+Percentage of the projects files with coding style violations which indicate common inefficient ways of doing things in Java.
+
+- <u>Depends-on</u>: `style.styleViolations`
+- <u>Returns</u>: `Table`
+
+------
+#### style.filesWithUnderstandabilityIssues
+- **Short name**: filesWithUnderstandabilityIssues
+- **Friendly name**: Files with style violations which make the code harder to understand
+
+Percentage of files with understandability issues. This is a basic metric which can not be easily compared between projects.
+
+- <u>Depends-on</u>: `style.understandability`
+- <u>Returns</u>: `int`
+
+------
+#### style.errorProneness
+- **Short name**: errorProneness
+- **Friendly name**: Error proneness
+
+Percentage of the projects files with coding style violations which indicate error prone code. This is a basic metric which collects per file all the style violations, recording the line number and the kind of style violation.
+  Each kind of violation is grouped into a category. The resulting table is hard to interpret manually and can not be compared between projects.
+  Other metrics further downstream do aggregate this information.
+
+- <u>Depends-on</u>: `style.styleViolations`
+- <u>Returns</u>: `Table`
+
+------
+#### style.spreadOfStyleViolations
+- **Short name**: spreadOfStyleViolations
+- **Friendly name**: Spread of style violations over files
+
+Between 0 and 1 how evenly spread are the style violations. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.styleViolations`
+- <u>Returns</u>: `real`
+
+------
+#### style.filesWithInefficiencies
+- **Short name**: filesWithInefficiencies
+- **Friendly name**: Files with style violations which indicate inefficiencies. This is a basic metric which can not be easily compared between projects.
+
+Percentage of files with inefficiencies
+
+- <u>Depends-on</u>: `style.inefficiencies`
+- <u>Returns</u>: `int`
+
+------
+#### style.filesWithStyleViolations
+- **Short name**: filesWithStyleViolations
+- **Friendly name**: Counts the number of files with any kind of style violation. This metric can not be easily compared between projects.
+
+Percentage of files with style violations
+
+- <u>Depends-on</u>: `style.styleViolations`
+- <u>Returns</u>: `int`
+
+------
+#### style.spreadOfUnderstandabilityIssues
+- **Short name**: spreadOfUnderstandabilityIssues
+- **Friendly name**: Spread of understandability issues over files
+
+Between 0 and 1 how evenly spread are the understandability issues. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.understandability`
+- <u>Returns</u>: `real`
+
+------
+#### style.spreadOfInefficiencies
+- **Short name**: spreadOfInefficiencies
+- **Friendly name**: Spread of inefficiencies over files
+
+Between 0 and 1 how evenly spread are the style violations which indicate inefficiencies. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.inefficiencies`
+- <u>Returns</u>: `real`
+
+------
+#### style.styleViolations
+- **Short name**: styleViolations
+- **Friendly name**: All style violations
+
+
+  This is a basic metric which collects per file all the style violations, recording the line number and the kind of style violation.
+  Each kind of violation is grouped into a category. The resulting table is hard to interpret manually and can not be compared between projects.
+  Other metrics further downstream do aggregate this information.
+
+
+- <u>Depends-on</u>: - <u>Returns</u>: `Table`
+
+------
+#### style.spreadOfErrorProneness
+- **Short name**: spreadOfErrorProneness
+- **Friendly name**: Spread of error proneness style violations over files
+
+Between 0 and 1 how evenly spread are the style violations which indicate error proneness. This metric makes sense if there are more than 5 files in a project and can
+be compared between projects as well. If problems are widespread this may be a quality contra-indicator, while a localized problem could be easily fixed.
+
+- <u>Depends-on</u>: `style.errorProneness`
+- <u>Returns</u>: `real`
+
+------
+#### rascal.testability.java.TestOverPublicMethods
+- **Short name**: percentageOfTestedPublicMethods
+- **Friendly name**: Number of JUnit tests averaged over the total number of public methods
+
+Number of JUnit tests averaged over the total number of public methods. Ideally all public methods are tested. With this number we
+compute how far from the ideal situation the project is.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### rascal.testability.java.NumberOfTestMethods
+- **Short name**: numberOfTestMethods
+- **Friendly name**: Number of JUnit test methods. This is an intermediate absolute metric used to compute others. The bare metric is hard to compare between projects.
+
+Number of JUnit test methods
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### rascal.testability.java.TestCoverage
+- **Short name**: estimateTestCoverage
+- **Friendly name**: Static Estimation of test coverage
+
+This is a static over-estimation of test coverage: which code is executed in the system when all JUnit test cases are executed? We approximate
+this by using the static call graphs and assuming every method which can be called, will be called. This leads to an over-approximation,
+as compared to a dynamic code coverage analysis, but the static analysis does follow the trend and a low code coverage here is an good indicator
+for a lack in testing effort for the project.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.MIF-Java
+- **Short name**: MIF_Java
+- **Friendly name**: Method inheritance factor (Java)
+
+Method inheritance factor (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
+
+------
+#### trans.rascal.OO.java.Ca-Java-Quartiles
+- **Short name**: Ca_Java_Q
+- **Friendly name**: Afferent coupling quartiles (Java)
+
+Afferent coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.Ca-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.DAC-Java
+- **Short name**: DAC_Java
+- **Friendly name**: Data abstraction coupling (Java)
+
+Data abstraction coupling (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.CF-Java
+- **Short name**: CF_Java
+- **Friendly name**: Coupling factor (Java)
+
+Coupling factor (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.I-Java
+- **Short name**: I_Java
+- **Friendly name**: Instability (Java)
+
+Instability (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.Ce-Java`
+`trans.rascal.OO.java.Ca-Java`
+- <u>Returns</u>: `map[loc, real]`
+
+------
+#### trans.rascal.OO.java.DAC-Java-Quartiles
+- **Short name**: DAC_Java_Q
+- **Friendly name**: Data abstraction coupling quartiles (Java)
+
+Data abstraction coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.DAC-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.MPC-Java-Quartiles
+- **Short name**: MPC_Java_Q
+- **Friendly name**: Message passing coupling quartiles (Java)
+
+Message passing coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.MPC-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOM-Java
+- **Short name**: NOM_Java
+- **Friendly name**: Number of methods (Java)
+
+Number of methods (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.LCOM-Java
+- **Short name**: LCOM_Java
+- **Friendly name**: Lack of cohesion in methods (Java)
+
+Lack of cohesion in methods (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.CBO-Java
+- **Short name**: CBO_Java
+- **Friendly name**: Coupling between objects (Java)
+
+Coupling between objects (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.Ce-Java
+- **Short name**: Ce_Java
+- **Friendly name**: Efferent coupling (Java)
+
+Efferent coupling (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.PF-Java
+- **Short name**: PF_Java
+- **Friendly name**: Polymorphism factor (Java)
+
+Polymorphism factor (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.RFC-Java-Quartiles
+- **Short name**: RFC_Java_Q
+- **Friendly name**: Response for class quartiles (Java)
+
+Response for class quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.RFC-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.I-Java-Quartiles
+- **Short name**: I_Java_Q
+- **Friendly name**: Instability quartiles (Java)
+
+Instability quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.I-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.RFC-Java
+- **Short name**: RFC_Java
+- **Friendly name**: Response for class (Java)
+
+Response for class (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.LCC-Java
+- **Short name**: LCC_Java
+- **Friendly name**: Loose class cohesion (Java)
+
+Loose class cohesion (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
+
+------
+#### trans.rascal.OO.java.MIF-Java-Quartiles
+- **Short name**: MIF_Java_Q
+- **Friendly name**: Method inheritance factor quartiles (Java)
+
+Method inheritance factor quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.MIF-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.DIT-Java
+- **Short name**: DIT_Java
+- **Friendly name**: Depth of inheritance tree (Java)
+
+Depth of inheritance tree (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.MHF-Java
+- **Short name**: MHF_Java
+- **Friendly name**: Method hiding factor (Java)
+
+Method hiding factor (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.TCC-Java
+- **Short name**: TCC_Java
+- **Friendly name**: Tight class cohesion (Java)
+
+Tight class cohesion (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
+
+------
+#### trans.rascal.OO.java.AHF-Java
+- **Short name**: AHF_Java
+- **Friendly name**: Attribute hiding factor (Java)
+
+Attribute hiding factor (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.LCOM-Java-Quartiles
+- **Short name**: LCOM_Java_Q
+- **Friendly name**: Lack of cohesion in methods quartiles (Java)
+
+Lack of cohesion in methods quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.LCOM-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.Ca-Java
+- **Short name**: Ca_Java
+- **Friendly name**: Afferent coupling (Java)
+
+Afferent coupling (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.A-Java
+- **Short name**: A_Java
+- **Friendly name**: Abstractness (Java)
+
+Abstractness (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.DIT-Java-Quartiles
+- **Short name**: DIT_Java_Q
+- **Friendly name**: Depth of inheritance tree quartiles (Java)
+
+Depth of inheritance tree quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.DIT-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.TCC-Java-Quartiles
+- **Short name**: TCC_Java_Q
+- **Friendly name**: Tight class cohesion quartiles (Java)
+
+Tight class cohesion quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.TCC-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.LCOM4-Java-Quartiles
+- **Short name**: LCOM4_Java_Q
+- **Friendly name**: Lack of cohesion in methods 4 quartiles (Java)
+
+Lack of cohesion in methods 4 quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.LCOM4-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.LCOM4-Java
+- **Short name**: LCOM4_Java
+- **Friendly name**: Lack of cohesion in methods 4 (Java)
+
+Lack of cohesion in methods 4 (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.SR-Java
+- **Short name**: SR_Java
+- **Friendly name**: Specialization ratio (Java)
+
+Specialization ratio (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.AIF-Java-Quartiles
+- **Short name**: AIF_Java_Q
+- **Friendly name**: Attribute inheritance factor quartiles (Java)
+
+Attribute inheritance factor quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.AIF-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOC-Java-Quartiles
+- **Short name**: NOC_Java_Q
+- **Friendly name**: Number of children quartiles (Java)
+
+Number of children quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.NOC-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOC-Java
+- **Short name**: NOC_Java
+- **Friendly name**: Number of children (Java)
+
+Number of children (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.AIF-Java
+- **Short name**: AIF_Java
+- **Friendly name**: Attribute inheritance factor (Java)
+
+Attribute inheritance factor (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
+
+------
+#### trans.rascal.OO.java.RR-Java
+- **Short name**: RR_Java
+- **Friendly name**: Reuse ratio (Java)
+
+Reuse ratio (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.OO.java.LCC-Java-Quartiles
+- **Short name**: LCC_Java_Q
+- **Friendly name**: Loose class cohesion quartiles (Java)
+
+Loose class cohesion quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.LCC-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOA-Java
+- **Short name**: NOA_Java
+- **Friendly name**: Number of attributes (Java)
+
+Number of attributes (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.OO.java.Ce-Java-Quartiles
+- **Short name**: Ce_Java_Q
+- **Friendly name**: Efferent coupling quartiles (Java)
+
+Efferent coupling quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.Ce-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOM-Java-Quartiles
+- **Short name**: NOM_Java_Q
+- **Friendly name**: Number of methods quartiles (Java)
+
+Number of methods quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.NOM-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.NOA-Java-Quartiles
+- **Short name**: NOA_Java_Q
+- **Friendly name**: Number of attributes quartiles (Java)
+
+Number of attributes quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.NOA-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.CBO-Java-Quartiles
+- **Short name**: CBO_Java_Q
+- **Friendly name**: Coupling between objects quartiles (Java)
+
+Coupling between objects quartiles (Java)
+
+- <u>Depends-on</u>: `trans.rascal.OO.java.CBO-Java`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.OO.java.MPC-Java
+- **Short name**: MPC_Java
+- **Friendly name**: Message passing coupling (Java)
+
+Message passing coupling (Java)
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.LOC.java.LOCoverJavaClass
+- **Short name**: giniLOCOverClassJava
+- **Friendly name**: Distribution of physical lines of code over Java classes, interfaces and enums
+
+The distribution of physical lines of code over Java classes, interfaces and enums explains how complexity is distributed over the design elements of a system.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+#### trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles
+- **Short name**: countUsesOfAdvancedLanguageFeaturesQ
+- **Friendly name**: Usage of advanced Java features quartiles
+
+Quartiles of counts of advanced Java features (wildcards, union types and anonymous classes). The numbers indicate the thresholds that delimit the first 25%, 50% and 75% of the data as well as the maximum and minumum values.
+
+- <u>Depends-on</u>: `trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava`
+- <u>Returns</u>: `map[str, real]`
+
+------
+#### trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava
+- **Short name**: countUsesOfAdvancedLanguageFeatures
+- **Friendly name**: Usage of advanced Java features
+
+Usage of advanced Java features (wildcards, union types and anonymous classes), reported per file and line number of the occurrence. This metric is for downstream processing by other metrics.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc file, int count]`
+
+------
+#### trans.rascal.CC.java.CCHistogramJava
+- **Short name**: CCHistogramJava
+- **Friendly name**: Number of Java methods per CC risk factor
+
+Number of Java methods per CC risk factor, counts the number of methods which are in a low, medium or high risk factor. The histogram can be compared between projects to indicate which is probably easier to maintain on a method-by-method basis.
+
+- <u>Depends-on</u>: `trans.rascal.CC.java.CCJava`
+- <u>Returns</u>: `map[str, int]`
+
+------
+#### trans.rascal.CC.java.CCOverJavaMethods
+- **Short name**: giniCCOverMethodsJava
+- **Friendly name**: CC over Java methods
+
+Calculates how cyclomatic complexity is spread over the methods of a system. If high CC is localized, then this may be easily fixed but if many methods have high complexity, then the project may be at risk. This metric is good to compare between projects.
+
+- <u>Depends-on</u>: `trans.rascal.CC.java.CCJava`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.CC.java.CCJava
+- **Short name**: getCC
+- **Friendly name**: McCabe's Cyclomatic Complexity Metric (Java)
+
+Cyclomatic complexity is a measure of the number of unique control flow paths in the methods of a class. This indicates how many different test cases
+you would need to test the method. A high number indicates also a lot of work to understand the method.  This metric is a basic metric for further processing downstream. It is not easily compared between projects.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
+
+------
+#### trans.rascal.CC.java.WMCJava
+- **Short name**: getWMC
+- **Friendly name**: Weighted Method Count (Java)
+
+Cyclomatic complexity is a measure of the number of unique control flow paths in the methods of a class. This indicates how many different test cases
+you would need to test the method. A high number indicates also a lot of work to understand the method. The weighted method count for a class is the sum
+of the cyclomatic complexity measures of all methods in the class. This metric is a basic metric for further processing downstream. It is not easily compared between projects.
+
+- <u>Depends-on</u>: `trans.rascal.CC.java.CCJava`
+- <u>Returns</u>: `map[loc class, int wmcCount]`
+
+------
+
+### OSGi dependencies metrics
+
+These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
+
+------
+#### trans.rascal.dependency.numberRequiredPackagesInSourceCode
+- **Short name**: numberRequiredPackagesInSourceCode
+- **Friendly name**: Number required packages in source code
+
+Retrieves the number of required packages found in the project source code.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.osgi.allOSGiPackageDependencies
+- **Short name**: allOSGiPackageDependencies
+- **Friendly name**: All OSGi package dependencies
+
+Retrieves all the OSGi package dependencies (i.e. Import-Package and DynamicImport-Package dependencies).
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles
+- **Short name**: unversionedOSGiRequiredBundles
+- **Friendly name**: Unversioned OSGi required bundles
+
+Retrieves the set of unversioned OSGi required bundles (declared in the Require-Bundle header). 
+If returned value != {} there is a smell in the Manifest.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.unusedOSGiImportedPackages
+- **Short name**: unusedOSGiImportedPackages
+- **Friendly name**: Unused OSGi imported packages
+
+Retrieves the set of unused OSGi imported packages. If set != {} then developers are importing more packages than needed (smell).
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.numberOSGiSplitImportedPackages
+- **Short name**: numberOSGiSplitImportedPackages
+- **Friendly name**: Number OSGi split imported packages
+
+Retrieves the number of split imported packages. If returned value > 0 there is a smell in the Manifest.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.osgi.ratioUnusedOSGiImportedPackages
+- **Short name**: ratioUnusedOSGiImportedPackages
+- **Friendly name**: Ratio of unused OSGi imported packages
+
+Retrieves the ratio of unused OSGi imported packages with regards to the whole set of imported and dynamically imported OSGi packages.
+
+- <u>Depends-on</u>: `trans.rascal.dependency.osgi.unusedOSGiImportedPackages`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.dependency.osgi.allOSGiBundleDependencies
+- **Short name**: allOSGiBundleDependencies
+- **Friendly name**: All OSGi bundle dependencies
+
+Retrieves all the OSGi bunlde dependencies (i.e. Require-Bundle dependencies).
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.unversionedOSGiExportedPackages
+- **Short name**: unversionedOSGiExportedPackages
+- **Friendly name**: Unversioned OSGi exported packages
+
+Retrieves the set of unversioned OSGi exported packages (declared in the Export-Package header). 
+If returned value != {} there is a smell in the Manifest.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.numberOSGiSplitExportedPackages
+- **Short name**: numberOSGiSplitExportedPackages
+- **Friendly name**: Number OSGi split exported packages
+
+Retrieves the number of split exported packages. If returned value > 0 there is a smell in the Manifest.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.osgi.allOSGiDynamicImportedPackages
+- **Short name**: allOSGiDynamicImportedPackages
+- **Friendly name**: All OSGi dynamically imported packages
+
+Retrieves all the OSGi dynamically imported packages. If returned value != {} a smell exists in the Manifest file.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.numberOSGiBundleDependencies
+- **Short name**: numberOSGiBundleDependencies
+- **Friendly name**: Number all OSGi bundle dependencies
+
+Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependencies).
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.osgi.ratioUnversionedOSGiImportedPackages
+- **Short name**: ratioUnversionedOSGiImportedPackages
+- **Friendly name**: Ratio unversioned OSGi imported packages
+
+Retrieves the ratio of unversioned OSGi imported packages.
+
+- <u>Depends-on</u>: `trans.rascal.dependency.osgi.unversionedOSGiImportedPackages`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.dependency.osgi.unversionedOSGiImportedPackages
+- **Short name**: unversionedOSGiImportedPackages
+- **Friendly name**: Unversioned OSGi imported packages
+
+Retrieves the set of unversioned OSGi imported packages (declared in the Import-Package header). 
+If returned value != {} there is a smell in the Manifest.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.numberOSGiPackageDependencies
+- **Short name**: numberOSGiPackageDependencies
+- **Friendly name**: Number of all OSGi package dependencies
+
+Retrieves the number of OSGi package dependencies (i.e. Import-Package and DynamicImport-Package dependencies).
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.osgi.ratioUnversionedOSGiRequiredBundles
+- **Short name**: ratioUnversionedOSGiRequiredBundles
+- **Friendly name**: Ratio unversioned OSGi required bundles
+
+Retrieves the ratio of unversioned OSGi required bundles.
+
+- <u>Depends-on</u>: `trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.dependency.osgi.usedOSGiUnimportedPackages
+- **Short name**: usedOSGiUnimportedPackages
+- **Friendly name**: Used OSGi unimported packages
+
+Retrieves the set of used but unimported packages. This metric does not consider packages implicitly imported through the Bundle-Require header.
+If set != {} then developers may be depending on the execution environment (smell).
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.osgi.ratioUnversionedOSGiExportedPackages
+- **Short name**: ratioUnversionedOSGiExportedPackages
+- **Friendly name**: Ratio of unversioned OSGi exported packages
+
+Retrieves the ratio of unversioned OSGi exported packages.
+
+- <u>Depends-on</u>: `trans.rascal.dependency.osgi.unversionedOSGiExportedPackages`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.dependency.osgi.ratioUsedOSGiImportedPackages
+- **Short name**: ratioUsedOSGiImportedPackages
+- **Friendly name**: Ratio of used OSGi imported packages
+
+Retrieves the ratio of used imported packages. If ratio == 0.0 all imported packages have been used in the project code.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `real`
+
+------
+
+### Maven dependencies metrics
+
+These metrics are related to Maven dependencies declared in `pom.xml` files.
+
+------
+#### trans.rascal.dependency.numberRequiredPackagesInSourceCode
+- **Short name**: numberRequiredPackagesInSourceCode
+- **Friendly name**: Number required packages in source code
+
+Retrieves the number of required packages found in the project source code.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.maven.ratioOptionalMavenDependencies
+- **Short name**: ratioOptionalMavenDependencies
+- **Friendly name**: Ratio optional Maven dependencies
+
+Retrieves the ratio of optional Maven dependencies.
+
+- <u>Depends-on</u>: `trans.rascal.dependency.maven.allOptionalMavenDependencies`
+- <u>Returns</u>: `real`
+
+------
+#### trans.rascal.dependency.maven.numberUniqueMavenDependencies
+- **Short name**: numberUniqueMavenDependencies
+- **Friendly name**: Number unique Maven dependencies
+
+Retrieves the number of unique Maven dependencies.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.maven.allOptionalMavenDependencies
+- **Short name**: allOptionalMavenDependencies
+- **Friendly name**: All optional Maven dependencies
+
+Retrieves all the optional Maven dependencies.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+#### trans.rascal.dependency.maven.isUsingTycho
+- **Short name**: isUsingTycho
+- **Friendly name**: Is using Tycho
+
+Checks if the current project is a Tycho project.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `bool`
+
+------
+#### trans.rascal.dependency.maven.numberMavenDependencies
+- **Short name**: numberMavenDependencies
+- **Friendly name**: Number Maven dependencies
+
+Retrieves the number of Maven dependencies.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `int`
+
+------
+#### trans.rascal.dependency.maven.allMavenDependencies
+- **Short name**: allMavenDependencies
+- **Friendly name**: All Maven dependencies
+
+Retrieves all the Maven dependencies.
+
+- <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
+
+------
+
