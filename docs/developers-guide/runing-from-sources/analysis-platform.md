@@ -53,8 +53,6 @@ Then, import all third-party dependencies of the metric platform. They are locat
 <img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
 Figure-02: Install m2e-connectors plugins.
 
-Then, import all the plug-ins of the metric platform that are located in the `metric-platform` directory, making sure to theck the "Search for nested projects" checkbox. Wait for all projects to compile without errors.
-
 ### Configure the Analysis Platform
 
 #### `identifier=<your name>` 
