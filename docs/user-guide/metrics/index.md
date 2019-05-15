@@ -636,7 +636,7 @@ This metric computes the average number of newsgroup articles, including the num
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.activeusers`
 
-- <u>Returns</u> :	`NewsgroupsRequestsRepliesHistoricMetric` which contains:
+- <u>Returns</u> :	`NewsgroupsRequestsRepliesAverageHistoricMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -675,7 +675,7 @@ This metric computes the overall sentiment per newsgroup repository up to the pr
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.sentiment`
 
-- <u>Returns</u> :	`SentimentClassificationTransMetric` which contains:
+- <u>Returns</u> :	`NewsgroupsSentimentHistoricMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -1817,7 +1817,7 @@ This metric computes the number of patches submitted by the community (users) fo
 
 - <u>Depends-on</u> : `None`
 
-- <u>Returns</u> :	`PatchesTransMetricProvider` which contains:
+- <u>Returns</u> :	`BugsPatchesTransMetric` which contains:
 
 	| Variable			 | Type	 |
 	| -------------- | ------ |
@@ -1855,6 +1855,7 @@ This metrics search for references of commits or bugs within comments comming fr
 	- `List<String>`	bugsReferred 	(URLs)
 	- `List<String>`	commitsReferred (URLs)
 	
+
 <u>*Note*</u> :
 	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
 	
@@ -2175,7 +2176,7 @@ The metric computes for each thread whether it is answered. If so, it computes t
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.threads`, `org.eclipse.scava.metricprovider.trans.requestreplyclassification`
 
-- <u>Returns</u> :	`NewsgroupsSentimentTransMetric` which contains:
+- <u>Returns</u> :	`NewsgroupsThreadsRequestsRepliesTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2207,7 +2208,7 @@ This metric determines the parts of a bug comment or a newsgroup article that co
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.plaintextprocessing`
 
-- <u>Returns</u> :	`DetectingCodeTransMetricProvider` which contains:
+- <u>Returns</u> :	`DetectingCodeTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2246,7 +2247,7 @@ This metric computes the emotions present in each bug comment, newsgroup article
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.detectingcode`
 
-- <u>Returns</u> :	`EmotionClassificationTransMetricProvider` which contains:
+- <u>Returns</u> :	`EmotionClassificationTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2282,7 +2283,7 @@ This metric preprocess each bug comment, newsgroup article or forum post into a 
 
 - <u>Depends-on</u> : `None`
 
-- <u>Returns</u> :	`PlainTextProcessingTransMetricProvider` which contains:
+- <u>Returns</u> :	`PlainTextProcessingTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2321,7 +2322,7 @@ This metric computes if a bug comment, newsgroup article or forum post is a requ
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.plaintextprocessing`, `org.eclipse.scava.metricprovider.trans.detectingcode`
 
-- <u>Returns</u> :	`RequestReplyClassificationTransMetricProvider` which contains:
+- <u>Returns</u> :	`RequestReplyClassificationTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2360,7 +2361,7 @@ This metric computes the sentiment of each bug comment, newsgroup article or for
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.detectingcode`
 
-- <u>Returns</u> :	`SentimentClassificationTransMetricProvider` which contains:
+- <u>Returns</u> :	`SentimentClassificationTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2396,7 +2397,7 @@ This metric computes the severity of each bug comment, newsgroup article or foru
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.detectingcode`, `org.eclipse.scava.metricprovider.trans.newsgroups.threads`
 
-- <u>Returns</u> :	`SeverityClassificationTransMetricProvider` which contains:
+- <u>Returns</u> :	`SeverityClassificationTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
@@ -2456,7 +2457,7 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.detectingcode`
 
-- <u>Returns</u> :	`TopicsTransMetricProvider` which contains:
+- <u>Returns</u> :	`TopicsTransMetric` which contains:
 
 	| Variable | Type	 |
 	| -------- | ------ |
