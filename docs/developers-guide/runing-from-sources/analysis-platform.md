@@ -42,10 +42,13 @@ git checkout dev
 
 We first need to setup the Target Platform definition of Scava. In Eclipse, import (`File -> Import -> Existing projects into workspace`) the project `metric-platform/releng/org.eclipse.scava.target`. Then, go to `Window -> Preferences -> Plug-in Development -> Target Platform` and check the `scava` target definition in the list. Confirm your selection and wait for the target platform to be resolved by Eclipse; this may take a while.
 
+<img src="images/target-platform.png" height="500px" width="500px"><br/>
+Figure-01: Setup the Eclipse Target Platform.
+
 Then, import all third-party dependencies of the metric platform. They are located in the `migration/third-party` directory. Eclipse will trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
 
 <img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
-Figure-01: Install m2e-connectors plugins.
+Figure-02: Install m2e-connectors plugins.
 
 Then, import all the plug-ins of the metric platform that are located in the `metric-platform` directory, making sure to theck the "Search for nested projects" checkbox. Wait for all projects to compile without errors.
 
