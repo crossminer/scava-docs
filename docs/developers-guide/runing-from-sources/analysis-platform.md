@@ -46,7 +46,7 @@ Figure-01: Setup the Eclipse Target Platform.
 
 #### Import Projects into Eclipse Workspace
 
-To import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
+Import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
 
 Then, import all third-party dependencies of the metric platform. They are located in the `migration/third-party` directory. Eclipse will trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
 
