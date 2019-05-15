@@ -40,7 +40,8 @@ git checkout dev
 
 #### Import Projects into Eclipse Workspace
 
-We first need to setup the Target Platform definition of Scava. In Eclipse, import (`File -> Import -> Existing projects into workspace`) the project `metric-platform/releng/org.eclipse.scava.target`. Then, go to `Window -> Preferences -> Plug-in Development -> Target Platform` and check the `scava` target definition in the list. Confirm your selection and wait for the target platform to be resolved by Eclipse; this may take a while.
+We first need to setup the Target Platform definition of Scava. In Eclipse, import (`File -> Import -> Existing Maven Projects`), select the scava repository and click `finish`. 
+The scava target definition is located on `metric-platform/releng/org.eclipse.scava.target`. Then, go to `Window -> Preferences -> Plug-in Development -> Target Platform` and check the `scava` target definition in the list. Confirm your selection and wait for the target platform to be resolved by Eclipse; this may take a while.
 
 <img src="images/target-platform.png" height="500px" width="600px"><br/>
 Figure-01: Setup the Eclipse Target Platform.
