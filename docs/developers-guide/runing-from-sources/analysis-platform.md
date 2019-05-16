@@ -37,7 +37,7 @@ git checkout dev
 ## Configuration
 
 ### Configure The Eclipse IDE
-#### Setup the Target Definition
+#### Setup the Target Platform Definition
 
 We first need to setup the Target Platform definition of Scava. In Eclipse, import (`File -> Import -> Existing projects into workspace`) the project `metric-platform/releng/org.eclipse.scava.target`. Then, go to `Window -> Preferences -> Plug-in Development -> Target Platform` and check the `scava` target definition in the list. Confirm your selection and wait for the target platform to be resolved by Eclipse; this may take a while.
 
