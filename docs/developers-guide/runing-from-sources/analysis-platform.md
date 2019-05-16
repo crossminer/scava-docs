@@ -48,7 +48,7 @@ Figure-01: Setup the Eclipse Target Platform.
 
 Import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
 
-In the case that Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
+In the case that the Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
 
 <img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
 Figure-02: Install m2e-connectors plugins.
