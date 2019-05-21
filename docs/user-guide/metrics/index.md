@@ -41,6 +41,19 @@ This metric computes the number of bugs per day for each bug tracker seperately.
 	- `String`	bugTrackerId
 	- `int`	numberOfBugs
 
+<u>*Visualisation Output Information*</u> :	
+
+- BugsHistoricMetricProvider : 
+	- `id`	bugs.bugs
+	- `id`	bugs.comments-bugaverage
+	- `id`	bugs.comments-useraverage
+	- `id`	bugs.requests-bugaverage
+	- `id`	bugs.requests-useraverage
+	- `id`	bugs.replies-bugaverage
+	- `id`	bugs.replies-useraverage
+	- `id`	bugs.requestsreplies-useraverage
+	- `id`	bugs.requestsreplies-bugaverage
+	- 
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.comments
@@ -65,6 +78,12 @@ This metric computes the number of bug comments submitted by the community (user
 	- `String`	bugTrackerID
 	- `int`	numberOfComments
 	- `int`	cumulativeNumberOfComments
+
+<u>*Visualisation Output Information*</u> :	
+
+- CommentsHistoricMetricProvider : 
+	- `id`	bugs.comments
+	- `id`	bugs.cumulativeComments
 
 ------
 
@@ -98,6 +117,14 @@ This metric computes the emotional dimensions present in bug comments submitted 
 	 - `float`	percentage
 	 - `float`	cumulativePercentage
 
+<u>*Visualisation Output Information*</u> :	
+
+- EmotionsHistoricMetricProvider : 
+	- `id`	bugs.emotions.cumulativeComments
+	- `id`	bugs.emotions.cumulativeCommentPercentages
+	- `id`	bugs.emotions.comments
+	- `id`	bugs.emotions.commentPercentages
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.newbugs
@@ -123,6 +150,12 @@ This metric computes the number of new bugs reported by the community (users) pe
 	- `int`	numberOfBugs
 	- `int` 	cumulativeNumberOfBugs
 
+<u>*Visualisation Output Information*</u> :	
+
+- NewUsersHistoricMetricProvider : 
+	- `id`	bugs.cumulativeNewUsers
+	- `id`	bugs.newUsers
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.newusers
@@ -139,7 +172,7 @@ This metric computes the number of new users per day  for each bug tracker seper
 	| -------------------------- | --------------------------- |
 	| bugTrackers								| `List<DailyBugTrackerData>` |
 	| numberOfNewUsers					 | `int`											 |
-	| cumulativeNumberOfNewUsers | `int`											 |
+	| cumulativeNumberOfNewUsers | `int`	|
 
 <u>*Additional Information*</u> :	
 
@@ -147,6 +180,12 @@ This metric computes the number of new users per day  for each bug tracker seper
 	- `String`	bugTrackerId
 	- `int`	numberOfNewUsers
 	- `int` 	cumulativeNumberOfNewUsers
+
+<u>*Visualisation Output Information*</u> :	
+
+- NewUsersHistoricMetricProvider : 
+	- `id`	bugs.cumulativeNewUsers
+	- `id`	bugs.newUsers
 
 ------
 #### org.eclipse.scava.metricprovider.historic.bugs.opentime
@@ -165,6 +204,12 @@ This metric computes the average duration between creating and closing bugs. For
 	| avgBugOpenTimeInDays	| `double`	|
 	| bugsConsidered | `int`|
 
+<u>*Visualisation Output Information*</u> :	
+
+- OpenTimeHistoricMetricProvider : 
+	- `id`	bugs.bugOpenTime
+	- `id`	bugs.bugOpenTime-bugs
+
 ------
 #### org.eclipse.scava.metricprovider.historic.bugs.patches
 - **Short name**: historic.bugs.patches
@@ -182,12 +227,18 @@ This class computes the number of bug patches per day, for each bug tracker sepe
 	| cumulativeNumberOfPatches	| `int`	|
 	| bugs | `List<DailyBugData>`|
 	
-	<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :	
 
 - DailyBugData : 
 	- `String`	bugTrackerId
 	- `int`	numberOfPatches
 	- `int`	cumulativeNumberOfPatches	
+
+<u>*Visualisation Output Information*</u> :	
+
+- PatchesHistoricMetricProvider : 
+	- `id`	bugs.cumulativePatches
+	- `id`	bugs.patches
 
 ------
 #### org.eclipse.scava.metricprovider.historic.bugs.requestsreplies
@@ -216,6 +267,16 @@ This metric computes the number of requests and replies realting to comments pos
 	- `int`	numberOfReplies
 	- `int`	cumulativeNumberOfRequests	
 	- `int`	cumulativeNumberOfReplies
+
+<u>*Visualisation Output Information*</u> :	
+
+- RequestsRepliesHistoricMetricProvider : 
+	- `id`	bugs.replies
+	- `id`	bugs.cumulativereplies
+	- `id`	bugs.requests
+	- `id`	bugs.cumulativerequests
+	- `id`	bugs.requestsreplies
+	- `id`	bugs.cumulativerequestsreplies
 
 ------
 
@@ -246,6 +307,14 @@ This metric computes the average number of bug comments considered as request an
 	- `int`	cumulativeNumberOfRequests	
 	- `int`	cumulativeNumberOfReplies
 
+<u>*Visualisation Output Information*</u> :	
+
+- RequestsRepliesHistoricMetricProvider : 
+	- `id`	bugs.requests-averageperday
+	- `id`	bugs.requestsreplies-averageperday
+	- `id`	bugs.comments-averageperday
+	- `id`	bugs.replies-averageperday
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.responsetime
@@ -268,6 +337,14 @@ This metric computes the average time in which the community (users) responds to
 | bugsConsidered		 | `int`  |
 | cumulativeBugsConsidered 		 | `int`  |
 
+<u>*Visualisation Output Information*</u> :	
+
+- ResponseTimeHistoricMetricProvider : 
+	- `id`	bugs.averageResponseTime
+	- `id`	bugs.cumulativeAverageResponseTime
+	- `id`	bugs.cumulativeAverageResponseTime-bugs
+	- `id`	bugs.averageResponseTime-bugs
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.sentiment
@@ -286,7 +363,13 @@ This metric computes the overall sentiment per bug tracker up to the processing 
 	| overallSentimentAtThreadBeggining | `float` |
 	| overallSentimentAtThreadEnd			 | `float` |
 
-<u>*Additional Information*</u> :	
+<u>*Visualisation Output Information*</u> :	
+
+- SentimentHistoricMetricProvider : 
+	- `id`	bugs.averageSentiment
+	- `id`	bugs.sentimentAtThreadEnd
+	- `id`	bugs.sentimentAtThreadBeggining
+	- `id`	bugs.sentiment
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
 
@@ -317,6 +400,12 @@ This metric computes the number of severity levels for bugs submitted by the com
 	- `String`	severityLevel	(`blocker`,`critical`,`major`,`minor`,`enhancement`, `normal`, `trivial`, `unknown`)
 	- `int`	numberOfBugs
 	- `int`	percentage 
+
+<u>*Visualisation Output Information*</u> :	
+
+- SeverityHistoricMetricProvider : 
+	- `id`	bugs.severity
+	- `id`	bugs.severity.percentages
 
 ------
 
@@ -353,6 +442,24 @@ This metric computes the total number and percentage of each bug status per seve
 	- `float`	percentageOfFixedBugs	
 	- `float`	percentageOfDuplicateBugs
 
+<u>*Visualisation Output*</u> :	
+
+- SeverityBugStatusHistoricMetricProvider : 
+	- `id`	bugs.severity.duplicateBugs
+	- `id`	bugs.severity.duplicateBugs.percentages
+	- `id`	bugs.severity.fixedBugs
+	- `id`	bugs.severity.fixedBugs.percentages
+	- `id`	bugs.severity.invalidBugs
+	- `id`	bugs.severity.invalidBugs.percentages
+	- `id`	bugs.severity.nonResolvedClosedBugs
+	- `id`	bugs.severity.nonResolvedClosedBugs.percentages
+	- `id`	bugs.severity.resolvedClosedBugs
+	- `id`	bugs.severity.resolvedClosedBugs.percentages
+	- `id`	bugs.severity.wontFixBugs
+	- `id`	bugs.severity.wontFixBugs.percentages
+	- `id`	bugs.severity.worksForMeBugs
+	- `id`	bugs.severity.worksForMeBugs.percentages
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime
@@ -376,6 +483,11 @@ This metric computes the average time in which the community (users) responds to
 	- `String`	avgResponseTimeFormatted
 	- `int`	numberOfBugs
 	- `long`	avgResponseTime
+
+<u>*Visualisation Output Information*</u> :	
+
+- SeverityResponseTimeHistoricMetricProvider : 
+	- `id`	bugs.severity.averageResponseTime
 
 ------
 
@@ -402,6 +514,13 @@ This metric computes for each bug severity level, the average sentiment, sentime
 	- `float`	sentimentAtThreadBeggining
 	- `float`	sentimentAtThreadEnd
 
+<u>*Visualisation Output Information*</u> :	
+
+- SeveritySentimentHistoricMetricProvider : 
+	- `id`	bugs.severity.sentiment
+	- `id`	bugs.severity.averageSentiment
+	- `id`	bugs.severity.sentimentAtThreadBeggining
+	- `id`	bugs.severity.sentimentAtThreadEnd
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
 
@@ -427,6 +546,17 @@ This metric computes the total number of bugs that corresponds to each bug statu
 	| numberOfInvalidBugs					 | `int`	|
 	| numberOfFixedBugs						 | `int`	|
 	| numberOfDuplicateBugs				 | `int`	|
+
+<u>*Visualisation Output Information*</u> :	
+
+- StatusHistoricMetricProvider : 
+	- `id`	bugs.duplicateBugs
+	- `id`	bugs.fixedBugs
+	- `id`	bugs.invalidBugs
+	- `id`	bugs.nonResolvedClosedBugs
+	- `id`	bugs.wontFixBugs
+	- `id`	bugs.worksForMeBugs
+	- `id`	bugs.resolvedClosedBugs
 
 ------
 
@@ -467,6 +597,11 @@ This metric computes the number of unanswered bugs per day.
 	| ---------------------- | ----- |
 	| numberOfUnansweredBugs | `int` |
 
+<u>*Visualisation Output Information*</u> :	
+
+- UnansweredThreadsHistoricMetricProvider : 
+	- `id`	bugs.unansweredBugs
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.bugs.users
@@ -493,6 +628,13 @@ This metric computes the number of users, number of active and inactive users pe
 	- `int`	numberOfUsers
 	- `int`	numberOfActiveUsers
 	- `int`	numberOfInactiveUsers
+
+<u>*Visualisation Output Information*</u> :	
+
+- UsersHistoricMetricProvider : 
+	- `id`	bugs.users
+	- `id`	bugs.activeusers
+	- `id`	bugs.inactiveusers
 
 ------
 
@@ -522,7 +664,13 @@ This metric computes the number of articles submitted by the community (users) p
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 	- `int`	cummulativeNumberOfArticles
-	
+
+<u>*Visualisation Output Information*</u> :	
+
+- ArticlesHistoricMetricProvider : 
+	- `id`	newsgroups.articles
+	- `id`	newsgroups.cumulativeArticles
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.emotions
@@ -554,6 +702,14 @@ This metric computes the emotional dimensions present in newsgroup comments subm
 	- `int`	cumulativeNumberOfArticles
 	- `float`	percentage
 	- `float`	cumulativePercentage
+
+<u>*Visualisation Output Information*</u> :	
+
+- EmotionsHistoricMetricProvider : 
+	- `id`	newsgroups.emotions.articlePercentages
+	- `id`	newsgroups.emotions.cumulativeArticles
+	- `id`	newsgroups.emotions.cumulativeArticlePercentages
+	- `id`	newsgroups.emotions.articles
 	
 ------
 
@@ -578,6 +734,12 @@ This metric computes the number of new threads submitted by the community (users
 	- `int`	numberOfNewThreads
 	- `int`	cummulativeNumberOfNewThreads
 
+<u>*Visualisation Output Information*</u> :	
+
+- NewThreadsHistoricMetricProvider : 
+	- `id`	newsgroups.newThreads
+	- `id`	newsgroups.cumulativeNewThreads
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.newusers
@@ -600,6 +762,12 @@ This metric computes the number of new users per day for each newsgroup seperate
 	- `String`	newsgroupName
 	- `int`	numberOfNewUsers
 	- `int`	cummulativeNumberOfNewUsers
+
+<u>*Visualisation Output Information*</u> :	
+
+- NewUsersHistoricMetricProvider: 
+	- `id`	newsgroups.cumulativeNewUsers
+	- `id`	newsgroups.newUsers
 
 ------
 
@@ -626,6 +794,16 @@ This metric computes the number of requests and replies in newsgroup articles su
 	- `int`	cumulativeNumberOfRequests
 	- `int`	cumulativeNumberOfReplies
 
+<u>*Visualisation Output Information*</u> :	
+
+- RequestsRepliesHistoricMetricProvider : 
+	- `id`	newsgroups.requests
+	- `id`	newsgroups.cumulativerequests
+	- `id`	newsgroups.replies
+	- `id`	newsgroups.cumulativereplies
+	- `id`	newsgroups.requestsreplies
+	- `id`	newsgroups.cumulativerequestsreplies
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average
@@ -643,6 +821,14 @@ This metric computes the average number of newsgroup articles, including the num
 	| averageArticlesPerDay		 | `float` |
 	| averageRequestsPerDay		 | `float` |
 	| averageRepliesPerDay		 | `float` |
+
+<u>*Visualisation Output Information*</u> :	
+
+- RequestsRepliesAverageHistoricMetricProvider : 
+	- `id`	newsgroups.requestsreplies-averageperday
+	- `id`	newsgroups.requests-averageperday
+	- `id`	newsgroups.replies-averageperday
+	- `id`	newsgroups.comments-averageperday
 
 ------
 
@@ -665,6 +851,14 @@ This metric computes the average time in which the community responds to open th
 	| cumulativeAvgResponseTimeFormatted		 | `String` |
 	| cumulativeThreadsConsidered		 | `int` |
 
+<u>*Visualisation Output Information*</u> :	
+
+- ResponseTimeHistoricMetricProvider : 
+	- `id`	newsgroups.averageResponseTime
+	- `id`	newsgroups.cumulativeAverageResponseTime
+	- `id`	newsgroups.cumulativeAverageResponseTime-threads
+	- `id`	newsgroups.averageResponseTime-threads
+	- 
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.sentiment
@@ -682,6 +876,14 @@ This metric computes the overall sentiment per newsgroup repository up to the pr
 	| overallAverageSentiment		 | `float` |
 	| overallSentimentAtThreadBegining		 | `float` |
 	| overallSentimentAtThreadEnd		 | `float` |
+
+<u>*Visualisation Output Information*</u> :	
+
+- SentimentHistoricMetricProvider : 
+	- `id`	newsgroups.averageSentiment
+	- `id`	newsgroups.sentimentAtThreadEnd
+	- `id`	newsgroups.sentimentAtThreadBeggining
+	- `id`	newsgroups.sentiment
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
 
@@ -714,6 +916,12 @@ This metric computes the number of each severity levels in threads submitted eve
 	- `int`	numberOfThreads
 	- `float`	percentage
 
+<u>*Visualisation Output Information*</u> :	
+
+- SeverityHistoricMetricProvider : 
+	- `id`	newsgroups.severity
+	- `id`	newsgroups.severity.percentages
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime
@@ -743,6 +951,11 @@ This metric computes the average response time for newsgroup threads submitted e
 	- `long`	avgResponseTime
 	- `String`	avgResponseTimeFormatted
 
+<u>*Visualisation Output Information*</u> :	
+
+- SeverityResponseTimeHistoricMetricProvider : 
+	- `id`	newsgroups.severity.averageResponseTime
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment
@@ -768,6 +981,14 @@ This metric computes the average sentiment, the sentiment at the beginning of th
 	- `float`	avgSentiment
 	- `float`	avgSentimentThreadBeginning
 	- `float`	avgSentimentThreadEnd
+
+<u>*Visualisation Output Information*</u> :	
+
+- SeveritySentimentHistoricMetricProvider : 
+	- `id`	newsgroups.severity.averageSentiment
+	- `id`	newsgroups.severity.sentiment
+	- `id`	newsgroups.severity.sentimentAtThreadEnd
+	- `id`	newsgroups.severity.sentimentAtThreadBeggining
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
 
@@ -799,6 +1020,19 @@ This metric computes the number of threads per day for each newsgroup separately
 	- `float`	averageArticlesPerUser
 	- `float`	averageRequestsPerUser
 	- `float`	averageRepliesPerUser
+
+<u>*Visualisation Output Information*</u> :	
+
+- ThreadsHistoricMetricProvider : 
+	- `id`	newsgroups.threads
+	- `id`	newsgroups.articles-threadaverage
+	- `id`	newsgroups.articles-useraverage
+	- `id`	newsgroups.requests-threadaverage
+	- `id`	newsgroups.requests-useraverage
+	- `id`	newsgroups.replies-threadaverage
+	- `id`	newsgroups.replies-useraverage
+	- `id`	newsgroups.requestsreplies-threadaverage
+	- `id`	newsgroups.requestsreplies-useraverage
 
 ------
 
@@ -845,6 +1079,11 @@ This metric computes the number of unanswered threads per day for each newsgroup
 	- `String`	newsgroupName
 	- `int`	numberOfUnansweredThreads
 
+<u>*Visualisation Output Information*</u> :	
+
+- UnansweredThreadsHistoricMetricProvider : 
+	- `id`	newsgroups.unansweredThreads
+
 ------
 
 #### org.eclipse.scava.metricprovider.historic.newsgroups.users
@@ -868,6 +1107,14 @@ This metric computes the number of users, including active and inactive users pe
 	- `int`	numberOfUsers
 	- `int`	numberOfActiveUsers
 	- `int`	numberOfInactiveUsers
+
+<u>*Visualisation Output Information*</u> :	
+
+- UsersHistoricMetricProvider : 
+	- `id`	newsgroups.users
+	- `id`	newsgroups.activeusers
+	- `id`	newsgroups.inactiveusers
+	- `id`	newsgroups.activeinactiveusers
 
 ------
 
