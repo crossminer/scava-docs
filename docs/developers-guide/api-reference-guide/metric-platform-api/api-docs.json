@@ -32,7 +32,7 @@
     "/": {
       "get": {
         "tags": [],
-        "summary": "Ping Api",
+        "summary": "Ping Api : deprecated API from OSSMETER project",
         "operationId": "ping",
         "consumes": [],
         "produces": [
@@ -1914,7 +1914,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Search the projects by a query",
+        "summary": "Search the projects by a query - *",
         "operationId": "searchProjects1",
         "consumes": [],
         "produces": [
