@@ -546,7 +546,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the Factoids metric providers",
+        "summary": "Retrieve the Factoids metric providers : deprecated API from OSSMETER project",
         "operationId": "getListFactoids1",
         "consumes": [],
         "produces": [
@@ -568,7 +568,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the Factoids metric providers",
+        "summary": "Retrieve the Factoids metric providers : deprecated API from OSSMETER project",
         "operationId": "getListFactoids2",
         "consumes": [],
         "produces": [
@@ -590,7 +590,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the metrics with visualisation",
+        "summary": "Retrieve the metrics with visualisation : deprecated API from OSSMETER project",
         "operationId": "getListMetrics1",
         "consumes": [],
         "produces": [
@@ -612,7 +612,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the metrics with visualisation",
+        "summary": "Retrieve the metrics with visualisation : deprecated API from OSSMETER project",
         "operationId": "getListMetrics2",
         "consumes": [],
         "produces": [
@@ -829,7 +829,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform projects",
+        "summary": "Retrieve the metric-platform projects : deprecated API from OSSMETER project",
         "operationId": "getListProjects1",
         "consumes": [],
         "produces": [
@@ -904,7 +904,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform projects",
+        "summary": "Retrieve the metric-platform projects : deprecated API from OSSMETER project",
         "operationId": "getListProjects2",
         "consumes": [],
         "produces": [
@@ -979,7 +979,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Create a project",
+        "summary": "Create a project : deprecated API from OSSMETER project",
         "operationId": "createProject",
         "consumes": [
           "application/json"
@@ -1046,7 +1046,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Import a project",
+        "summary": "Import a project : deprecated API from OSSMETER project",
         "operationId": "importProject",
         "consumes": [
           "application/json"
@@ -1083,7 +1083,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform project by project id",
+        "summary": "Retrieve the metric-platform project by project id : deprecated API from OSSMETER project",
         "operationId": "getProjectById1",
         "consumes": [],
         "produces": [
@@ -1116,7 +1116,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform project by project id",
+        "summary": "Retrieve the metric-platform project by project id : deprecated API from OSSMETER project",
         "operationId": "getProjectById2",
         "consumes": [],
         "produces": [
@@ -1149,7 +1149,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the Factoid metrics by project id",
+        "summary": "Retrieve the Factoid metrics by project id : deprecated API from OSSMETER project",
         "operationId": "getFactoidsByProjectId1",
         "consumes": [],
         "produces": [
@@ -1182,7 +1182,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the Factoid metrics by project id",
+        "summary": "Retrieve the Factoid metrics by project id : deprecated API from OSSMETER project",
         "operationId": "getFactoidsByProjectId2",
         "consumes": [],
         "produces": [
@@ -1215,7 +1215,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the Factoid metric by project id and factoid id",
+        "summary": "Retrieve the Factoid metric by project id and factoid id : deprecated API from OSSMETER project",
         "operationId": "getFactoidByProjectIdAndByFactoidId1",
         "consumes": [],
         "produces": [
@@ -1255,7 +1255,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the Factoid metric by project id and factoid id",
+        "summary": "Retrieve the Factoid metric by project id and factoid id : deprecated API from OSSMETER project",
         "operationId": "getFactoidByProjectIdAndByFactoidId2",
         "consumes": [],
         "produces": [
@@ -1295,7 +1295,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve a metric with visualisation by project id and metric id",
+        "summary": "Retrieve a metric with visualisation by project id and metric id : deprecated API from OSSMETER project",
         "operationId": "getMetricVisualisation1",
         "consumes": [],
         "produces": [
@@ -1349,7 +1349,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve a metric with visualisation by project id and metric id",
+        "summary": "Retrieve a metric with visualisation by project id and metric id : deprecated API from OSSMETER project",
         "operationId": "getMetricVisualisation2",
         "consumes": [],
         "produces": [
@@ -1403,7 +1403,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the list of metric providers",
+        "summary": "Retrieve the list of metric providers : deprecated API from OSSMETER project",
         "operationId": "getListMetricProviders1",
         "consumes": [],
         "produces": [
@@ -1425,7 +1425,7 @@
         "tags": [
           "metric providers"
         ],
-        "summary": "Retrieve the list of metric providers",
+        "summary": "Retrieve the list of metric providers : deprecated API from OSSMETER project",
         "operationId": "getListMetricProviders2",
         "consumes": [],
         "produces": [
@@ -1479,7 +1479,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform projects",
+        "summary": "Retrieve the metric-platform projects : deprecated API from OSSMETER project",
         "operationId": "getListProjects3",
         "consumes": [],
         "produces": [
@@ -1539,7 +1539,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform projects",
+        "summary": "Retrieve the metric-platform projects : deprecated API from OSSMETER project",
         "operationId": "getListProjects4",
         "consumes": [],
         "produces": [
@@ -1596,7 +1596,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform project by project id",
+        "summary": "Retrieve the metric-platform project by project id : deprecated API from OSSMETER project",
         "operationId": "getProjectById3",
         "consumes": [],
         "produces": [
@@ -1629,7 +1629,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform project by project id",
+        "summary": "Retrieve the metric-platform project by project id : deprecated API from OSSMETER project",
         "operationId": "getProjectById4",
         "consumes": [],
         "produces": [
@@ -1764,7 +1764,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform projects by page and size",
+        "summary": "Retrieve the metric-platform projects by page and size : deprecated API from OSSMETER project",
         "operationId": "getListProjects5",
         "consumes": [],
         "produces": [
@@ -1839,7 +1839,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Retrieve the metric-platform projects by page and size",
+        "summary": "Retrieve the metric-platform projects by page and size : deprecated API from OSSMETER project",
         "operationId": "getListProjects6",
         "consumes": [],
         "produces": [
@@ -1914,7 +1914,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Search the projects by a query - *",
+        "summary": "Search the projects by a query : deprecated API from OSSMETER project",
         "operationId": "searchProjects1",
         "consumes": [],
         "produces": [
@@ -1947,7 +1947,7 @@
         "tags": [
           "project"
         ],
-        "summary": "Search the projects by a query",
+        "summary": "Search the projects by a query : deprecated API from OSSMETER project",
         "operationId": "searchProjects2",
         "consumes": [],
         "produces": [
