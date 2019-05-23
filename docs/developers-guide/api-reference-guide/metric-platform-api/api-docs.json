@@ -541,6 +541,31 @@
         }
       }
     },
+    "/analysis/stacktraces": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Retieve all the analysis stacktraces",
+        "operationId": "getAnalysisStackTraces",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Stacktraces"
+            }
+          },
+          "404": {
+            "description": "Stacktraces not found"
+          }
+        }
+      }
+    },
     "/factoids": {
       "get": {
         "tags": [
@@ -2229,6 +2254,42 @@
         },
         "xml": {
           "name": "Worker"
+        }
+      }
+    },
+    "Stacktraces": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "projectId": {
+            "type": "string"
+          },
+          "projectName": {
+            "type": "string"
+          },
+          "clazz": {
+            "type": "string"
+          },
+          "stackTrace": {
+            "type": "string"
+          },
+          "workerIdentifier": {
+            "type": "string"
+          },
+          "executionErrorDate": {
+            "type": "string"
+          },
+          "analysisRangeErrorDate": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "AnalysisTask"
         }
       }
     },
