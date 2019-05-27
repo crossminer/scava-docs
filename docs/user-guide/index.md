@@ -17,5 +17,5 @@ The SCAVA Administration application provide services to analyse  open source so
 [TODO] Overivew  Required
 
 ## [Metrics Reference Guide](metrics/index.md)
-[TODO] Overivew  Required
+This Metrics Reference Guide describes the historic and transient metric providers provided by the Scava platform.
 
