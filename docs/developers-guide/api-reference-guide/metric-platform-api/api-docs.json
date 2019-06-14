@@ -2460,7 +2460,7 @@
         }
       }
     },
-    "Propertie": {
+    "UpdatePropertie": {
       "type": "object",
       "properties": {
         "oldkey": {
