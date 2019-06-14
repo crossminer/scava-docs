@@ -766,7 +766,7 @@
             "description": "Updated property object",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Propertie"
+              "$ref": "#/definitions/UpdatePropertie"
             }
           }
         ],
@@ -2452,6 +2452,20 @@
     "Propertie": {
       "type": "object",
       "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Propertie": {
+      "type": "object",
+      "properties": {
+        "oldkey": {
+          "type": "string"
+        },
         "key": {
           "type": "string"
         },
