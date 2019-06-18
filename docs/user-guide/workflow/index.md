@@ -68,13 +68,13 @@ You will need to run the ANT build-files below to generate stuff after you impor
 
 ### Screenshots
 
-![Screenshot](https://github.com/crossminer/scava/raw/crossflow/crossflow/images/running-example-crossflow-web-docker-index-page.png)
+![Screenshot](https://github.com/crossminer/scava/raw/crossflow/crossflow/images/index.png)
 **Figure**: Main page listing available workflows and *Upload New Workflow* button.
 
 ![Screenshot](https://github.com/crossminer/scava/raw/crossflow/crossflow/images/calculator-advanced.png)
 **Figure**: Calculator experiment page *Advanced* tab listing Calculator workflow configuration.
 
-![Screenshot](https://github.com/crossminer/scava/raw/crossflow/crossflow/images/calculator-input.png)
+![Screenshot](https://github.com/crossminer/scava/raw/crossflow/crossflow/images/calculator-calculations.png)
 **Figure**: Calculator experiment page *Calculations* tab listing Calculator workflow input calculations obtained from CSV source.
 
 ![Screenshot](https://github.com/crossminer/scava/raw/crossflow/crossflow/images/calculator-model.png)
