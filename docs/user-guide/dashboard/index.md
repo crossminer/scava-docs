@@ -89,3 +89,15 @@ The figures below show an example of the dashboard:
 
 ![devops-smells-dashboard](./screenshots/devops-smells-dash1.png)
 ![devops-smells-dashboard](./screenshots/devops-smells-dash2.png)
+
+
+## Dependency dashboard
+
+This Dependency dashboard is useful to show the dependecies. It contains the following visualizations/tables (from left to right, top to bottom):
+
+It starts with a visualization that shows the number of total deps and two pie charts, the first one is a pie chart that shows the deps grouped by project and the second one is a pie chart that shows the deps grouped by top project. Then, there are two tables, one that shows the deps grouped by type (e.g., osgi and maven) and project and other table that shows the deps grouped by type and top project. Below the tables, there is a graph that relates projects to dependency names and a bar chart that shows the evolution of project deps. To finish the dashboard has a table that provides details (name, versions, project and datetime) of the project deps and a table that shows the old and new version of each dependency.
+
+The figures below show an example of the dashboard:
+
+![devops-smells-dashboard](./screenshots/dep-dash1.png)
+![devops-smells-dashboard](./screenshots/dep-dash2.png)
