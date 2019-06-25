@@ -1452,41 +1452,6 @@
             "description": "Internal Server Error"
           }
         }
-      },
-      "post": {
-        "tags": [
-          "project"
-        ],
-        "summary": "Create a project",
-        "operationId": "postProject3",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created project object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/SampleProjet"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/Project"
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
       }
     },
     "/raw/projects/": {
@@ -1507,41 +1472,6 @@
             "schema": {
               "$ref": "#/definitions/Projects"
             }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "project"
-        ],
-        "summary": "Create a project",
-        "operationId": "postProject4",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created project object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/SampleProjet"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/Project"
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
@@ -1752,41 +1682,6 @@
             "description": "Projects not found"
           }
         }
-      },
-      "post": {
-        "tags": [
-          "project"
-        ],
-        "summary": "Create a project",
-        "operationId": "postProject5",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created project object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/SampleProjet"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/Project"
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
       }
     },
     "/raw/projects/{page}/": {
@@ -1825,41 +1720,6 @@
           },
           "404": {
             "description": "Projects not found"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "project"
-        ],
-        "summary": "Create a project",
-        "operationId": "postProject6",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created project object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/SampleProjet"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/Project"
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
