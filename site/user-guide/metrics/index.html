@@ -466,6 +466,10 @@
         
             <li><a class="toctree-l5" href="#-depends-on-returns-mapstr-int">- Depends-on: - Returns: map[str, int]</a></li>
         
+            <li><a class="toctree-l5" href="#indexing-metrics">Indexing Metrics</a></li>
+        
+            <li><a class="toctree-l5" href="#factoids">Factoids</a></li>
+        
         </ul>
     
 
@@ -2573,6 +2577,176 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 <li><u>Depends-on</u>: <code>rascal.generic.churn.churnInTwoWeeks</code></li>
 <li><u>Returns</u>: <code>int</code></li>
 </ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoriccommitsmessagestopics">org.eclipse.scava.metricprovider.historic.commits.messages.topics</h4>
+<ul>
+<li><strong>Short name</strong>: historic.commits.messages.topics</li>
+<li><strong>Friendly name</strong>: Labels of topics in commits messages analyzed in the last 30 days</li>
+</ul>
+<p>This metric computes the labels of topic clusters in commits messages pushed by users in the last 30 days </p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.commits.message.topics</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommitsMessagesTopicsHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commitMessageTopics</td>
+<td><code>List&lt;CommitMessageTopic&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>CommitMessageTopic : <ul>
+<li><code>String</code>  repository</li>
+<li><code>String</code>  labels</li>
+<li><code>int</code> numberOfMessages</li>
+<li><code>String</code>  commitsMessageId</li>
+</ul>
+</li>
+</ul>
+<p><u><em>Visualisation Output Information</em></u> : </p>
+<ul>
+<li>CommitsMessagesTopicsHistoricMetricProvider : <ul>
+<li><code>id</code>  commits.topics.messages</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="documentation">Documentation</h3>
+<p>The following Historic Metric Providers are associated with documentation analyses.</p>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricdocumentationreadability">org.eclipse.scava.metricprovider.historic.documentation.readability</h4>
+<ul>
+<li><strong>Short name</strong>: historic.documentation.readability</li>
+<li><strong>Friendly name</strong>: Documentation readability Historic Metric</li>
+</ul>
+<p>Historic metric that stores the evolution of the documentation readability</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.documentation.readability</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationReadabilityHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationReadability</td>
+<td><code>List&lt;DocumentationHistoricReadability&gt;</code></td>
+</tr>
+<tr>
+<td>documentationEntriesReadability</td>
+<td><code>List&lt;DocumentationEntryHistoricReadability&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>DocumentationHistoricReadability : </p>
+<ul>
+<li><code>String</code>  documentationId</li>
+<li><code>int</code> numberOfDocumentationEntries</li>
+<li><code>double</code>  averageDocumentationReadability</li>
+</ul>
+</li>
+<li>
+<p>DocumentationEntryHistoricReadability : </p>
+<ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>double</code>  readability</li>
+</ul>
+</li>
+</ul>
+<p><u><em>Visualisation Output Information</em></u> : </p>
+<ul>
+<li>readability : <ul>
+<li><code>id</code>  documentation.readability.entries</li>
+<li><code>id</code>  documentation.readability</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderhistoricdocumentationsentiment">org.eclipse.scava.metricprovider.historic.documentation.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: historic.documentation.sentiment</li>
+<li><strong>Friendly name</strong>: Documentation sentiment polarity Historic Metric</li>
+</ul>
+<p>Historic metric that stores the evolution of the documentation sentiment polarity</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.documentation.sentiment</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationSentimentHistoricMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationSentiment</td>
+<td><code>List&lt;DocumentationHistoricSentiment&gt;</code></td>
+</tr>
+<tr>
+<td>documentationEntriesSentiment</td>
+<td><code>List&lt;DocumentationEntryHistoricSentiment&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>DocumentationHistoricSentiment : </p>
+<ul>
+<li><code>String</code>  documentationId</li>
+<li><code>int</code> numberOfDocumentationEntries</li>
+<li><code>double</code>  averageDocumentationSentiment</li>
+</ul>
+</li>
+<li>
+<p>DocumentationEntryHistoricSentiment : </p>
+<ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>String</code>  polarity</li>
+</ul>
+</li>
+</ul>
+<p><u><em>Visualisation Output Information</em></u> : </p>
+<ul>
+<li>sentiment : <ul>
+<li><code>id</code>  documentation.sentiment.entries</li>
+<li><code>id</code>  documentation.sentiment</li>
+</ul>
+</li>
+</ul>
+<hr />
 <h3 id="generic-source-code-metrics">Generic source code metrics</h3>
 <p>These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.</p>
 <hr />
@@ -3487,14 +3661,53 @@ for a lack in testing effort for the project.</p>
 <p><u><em>Additional Information</em></u> :   </p>
 <ul>
 <li>HourComments : <ul>
-<li><code>type</code>    bugTrackerId</li>
-<li><code>type</code>    hour</li>
-<li><code>type</code>    numberOfComments</li>
-<li><code>type</code>    numberOfRequests</li>
-<li><code>type</code>    numberOfReplies</li>
-<li><code>type</code>    percentageOfComments</li>
-<li><code>type</code>    percentageOfRequests</li>
-<li><code>type</code>    percentageOfReplies</li>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  hour</li>
+<li><code>int</code> numberOfComments</li>
+<li><code>int</code> numberOfRequests</li>
+<li><code>int</code> numberOfReplies</li>
+<li><code>float</code>   percentageOfComments</li>
+<li><code>float</code>   percentageOfRequests</li>
+<li><code>float</code>   percentageOfReplies</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransbugsmigrationissues">org.eclipse.scava.metricprovider.trans.bugs.migrationissues</h4>
+<ul>
+<li><strong>Short name</strong>: trans.bugs.migrationissues</li>
+<li><strong>Friendly name</strong>: Migration Issues Detection in Bug Trackers</li>
+</ul>
+<p>This metric detects migration issues in Bug Tracking Systems.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.topics</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugTrackerMigrationIssueTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bugTrackerMigrationIssues</td>
+<td><code>List&lt;BugTrackerMigrationIssue&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugTrackerMigrationIssue : <ul>
+<li><code>String</code>  bugTrackerId</li>
+<li><code>String</code>  bugId</li>
+<li><code>String</code>  software</li>
+<li><code>List&lt;String&gt;</code>    changes</li>
 </ul>
 </li>
 </ul>
@@ -3656,49 +3869,6 @@ for a lack in testing effort for the project.</p>
 </ul>
 </li>
 </ul>
-<hr />
-<h3 id="commits">Commits</h3>
-<hr />
-<h4 id="orgeclipsescavametricprovidertranscommitsmessagereferences">org.eclipse.scava.metricprovider.trans.commits.messagereferences</h4>
-<ul>
-<li><strong>Short name</strong>: trans.commits.messagereferences</li>
-<li><strong>Friendly name</strong>: Commits Messages References</li>
-</ul>
-<p>This metrics search for references of commits or bugs within the messages of commits. In order to detect bugs references, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, the metric will only search for commits (alphanumeric strings of 40 characters).</p>
-<ul>
-<li>
-<p><u>Depends-on</u> : <code>None</code></p>
-</li>
-<li>
-<p><u>Returns</u> :  <code>CommitsMessageReferenceTransMetric</code> which contains:</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bugs</td>
-<td><code>List&lt;CommitMessageReferringTo&gt;</code></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<p><u><em>Additional Information</em></u> :   </p>
-<ul>
-<li>BugReferringTo : <ul>
-<li><code>String</code>  repository (URL)</li>
-<li><code>String</code>  revision (Commit SHA)</li>
-<li><code>List&lt;String&gt;</code>    bugsReferred    (URLs)</li>
-<li><code>List&lt;String&gt;</code>    commitsReferred (URLs)</li>
-</ul>
-</li>
-</ul>
-<p><u><em>Note</em></u> :
-    When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.</p>
 <hr />
 <h3 id="communication-channels-newsgroups-and-forums">Communication Channels (newsgroups and forums)</h3>
 <p>The following Transient Metric Providers are associated with communication channels in general, either newsgroups or forums.
@@ -3991,6 +4161,45 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 </li>
 </ul>
 <hr />
+<h4 id="orgeclipsescavametricprovidertransnewsgroupsmigrationissues">org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues</h4>
+<ul>
+<li><strong>Short name</strong>: trans.newsgroups.migrationissues</li>
+<li><strong>Friendly name</strong>: Migration Issues Detection in Communication Channels</li>
+</ul>
+<p>This metric detects migration issues in Communication Channels articles.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.topics</code>, <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>NewsgroupsMigrationIssueTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newsgroupsMigrationIssues</td>
+<td><code>List&lt;NewsgroupsMigrationIssue&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>NewsgroupsMigrationIssue : <ul>
+<li><code>String</code>  newsgroupName</li>
+<li><code>int</code> threadId</li>
+<li><code>String</code>  software</li>
+<li><code>List&lt;String&gt;</code>    changes</li>
+</ul>
+</li>
+</ul>
+<hr />
 <h4 id="orgeclipsescavametricprovidertransnewsgroupssentiment">org.eclipse.scava.metricprovider.trans.newsgroups.sentiment</h4>
 <ul>
 <li><strong>Short name</strong>: trans.newsgroups.sentiment</li>
@@ -4150,6 +4359,258 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <li><code>boolean</code> answered</li>
 <li><code>long</code>    responseDurationSec</li>
 <li><code>String</code>  responseDate</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="documentation_1">Documentation</h3>
+<p>The following Transient Metric Providers are associated with documentation analyses.</p>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdocumentation">org.eclipse.scava.metricprovider.trans.documentation</h4>
+<ul>
+<li><strong>Short name</strong>: trans.documentation</li>
+<li><strong>Friendly name</strong>: Documentation processing</li>
+</ul>
+<p>This metric process the files returned from the documentation readers and extracts the body (in format HTML or text)</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationEntries</td>
+<td><code>List&lt;DocumentationEntry&gt;</code></td>
+</tr>
+<tr>
+<td>documentation</td>
+<td><code>List&lt;Documentation&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>DocumentationEntry : </p>
+<ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>String</code>  body</li>
+<li><code>String</code>  originalFormatName</li>
+<li><code>String</code>  originalFormatMime</li>
+<li><code>boolean</code> htmlFormatted</li>
+</ul>
+</li>
+<li>
+<p>Documentation : </p>
+<ul>
+<li><code>String</code>  documentationId</li>
+<li><code>List&lt;String&gt;</code>    entriesId</li>
+<li><code>List&lt;String&gt;</code>    removedEntriesId</li>
+<li><code>String</code>  lastUpdateDate</li>
+<li><code>String</code>  lastRevisionAnalyzed</li>
+<li><code>String</code>  nextUpdateDate</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdocumentationclassification">org.eclipse.scava.metricprovider.trans.documentation.classification</h4>
+<ul>
+<li><strong>Short name</strong>: trans.documentation.classification</li>
+<li><strong>Friendly name</strong>: Documentation classification</li>
+</ul>
+<p>This metric determines which type of documentation is present</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.documentation</code>, <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationClassificationTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationEntriesClassification</td>
+<td><code>List&lt;DocumentationEntryClassification&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DocumentationEntryClassification : <ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>List&lt;String&gt;</code>    types</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdocumentationdetectingcode">org.eclipse.scava.metricprovider.trans.documentation.detectingcode</h4>
+<ul>
+<li><strong>Short name</strong>: trans.documentation.detectingcode</li>
+<li><strong>Friendly name</strong>: Documentation detection of code</li>
+</ul>
+<p>This metric process the plain text from documentation and detects the portions corresponding to code and natural language</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation.plaintext</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationDetectingCodeTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationEntriesDetectingCode</td>
+<td><code>List&lt;DocumentationEntryDetectingCode&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DocumentationEntryDetectingCode : <ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>String</code>  naturalLanguage</li>
+<li><code>String</code>  code</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdocumentationplaintext">org.eclipse.scava.metricprovider.trans.documentation.plaintext</h4>
+<ul>
+<li><strong>Short name</strong>: trans.documentation.plaintext</li>
+<li><strong>Friendly name</strong>: Documentation plain text processor</li>
+</ul>
+<p>This metric process the body of each documentation entry and extracts the plain text</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationPlainTextTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationEntriesPlainText</td>
+<td><code>List&lt;DocumentationEntryPlainText&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DocumentationEntryPlainText : <ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>List&lt;String&gt;</code>    plainText</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdocumentationreadability">org.eclipse.scava.metricprovider.trans.documentation.readability</h4>
+<ul>
+<li><strong>Short name</strong>: trans.documentation.readability</li>
+<li><strong>Friendly name</strong>: Documentation calculation of readability</li>
+</ul>
+<p>This metric calculates the readability of each documentation entry</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationReadabilityTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationEntriesReadability</td>
+<td><code>List&lt;DocumentationEntryReadability&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DocumentationEntryReadability : <ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>double</code>  readability</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertransdocumentationsentiment">org.eclipse.scava.metricprovider.trans.documentation.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: trans.documentation.sentiment</li>
+<li><strong>Friendly name</strong>: Documentation Sentiment Analysis</li>
+</ul>
+<p>This metric calculates the sentiment polarity of each documentation entry</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation.detectingcode</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationSentimentTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>documentationEntriesSentiment</td>
+<td><code>List&lt;DocumentationEntrySentiment&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>DocumentationEntrySentiment : <ul>
+<li><code>String</code>  documentationId</li>
+<li><code>String</code>  entryId</li>
+<li><code>String</code>  polarity</li>
 </ul>
 </li>
 </ul>
@@ -4682,6 +5143,140 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <hr />
 <h3 id="commits-and-committers-metrics_1">Commits and committers metrics</h3>
 <p>These metrics are related to the commits and committers of a project.</p>
+<hr />
+<h4 id="orgeclipsescavametricprovidertranscommitsmessageplaintext">org.eclipse.scava.metricprovider.trans.commits.message.plaintext</h4>
+<ul>
+<li><strong>Short name</strong>: trans.commits.message.plaintext</li>
+<li><strong>Friendly name</strong>: Commits message plain text</li>
+</ul>
+<p>This metric preprocess each commit message to get a split plain text version.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommitsMessagePlainTextTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commitsMessagesPlainText</td>
+<td><code>List&lt;CommitMessagePlainText&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>CommitMessagePlainText : <ul>
+<li><code>String</code>  repository (URL)</li>
+<li><code>String</code>  revision (Commit SHA)</li>
+<li><code>List&lt;String&gt;</code>    plainText</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricprovidertranscommitsmessagereferences">org.eclipse.scava.metricprovider.trans.commits.messagereferences</h4>
+<ul>
+<li><strong>Short name</strong>: trans.commits.messagereferences</li>
+<li><strong>Friendly name</strong>: Commits Messages References</li>
+</ul>
+<p>This metrics search for references of commits or bugs within the messages of commits. In order to detect bugs references, it is necessary to use at the same time one Bug Tracker, as the retrieval of references are based on patterns defined by bug trackers. If multiple or zero Bug Trackers are defined in the project, the metric will only search for commits (alphanumeric strings of 40 characters).</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommitsMessageReferenceTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commitsMessagesReferringTo</td>
+<td><code>List&lt;CommitMessageReferringTo&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>BugReferringTo : <ul>
+<li><code>String</code>  repository (URL)</li>
+<li><code>String</code>  revision (Commit SHA)</li>
+<li><code>List&lt;String&gt;</code>    bugsReferred    (URLs)</li>
+<li><code>List&lt;String&gt;</code>    commitsReferred (URLs)</li>
+</ul>
+</li>
+</ul>
+<p><u><em>Note</em></u> :
+    When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.</p>
+<hr />
+<h4 id="orgeclipsescavametricprovidertranscommitsmessagetopics">org.eclipse.scava.metricprovider.trans.commits.message.topics</h4>
+<ul>
+<li><strong>Short name</strong>: trans.commits.message.topics</li>
+<li><strong>Friendly name</strong>: Commits Messages Topic Clustering</li>
+</ul>
+<p>This metric computes topic clusters for each commit message.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.commits.message.plaintext</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommitsMessageTopicsTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commitsMessages</td>
+<td><code>List&lt;CommitMessage&gt;</code></td>
+</tr>
+<tr>
+<td>commitsTopics</td>
+<td><code>List&lt;CommitsTopic&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>
+<p>CommitMessage : </p>
+<ul>
+<li><code>String</code>  repository (URL)</li>
+<li><code>String</code>  revision (Commit SHA)</li>
+<li><code>String</code>  subject</li>
+<li><code>String</code>  message</li>
+<li><code>Date</code>    date</li>
+</ul>
+</li>
+<li>
+<p>CommitsTopic : </p>
+<ul>
+<li><code>String</code>  repository (URL)</li>
+<li><code>List&lt;String&gt;</code>    labels</li>
+<li><code>int</code> numberOfMessages</li>
+<li><code>List&lt;String&gt;</code>    commitsMessageId</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="transrascalactivecommittersactivecommitters">trans.rascal.activecommitters.activeCommitters</h4>
 <ul>
@@ -6129,6 +6724,333 @@ If set != {} then developers may be depending on the execution environment (smel
 <p>Retrieves all the Maven dependencies.</p>
 <ul>
 <li><u>Depends-on</u>: - <u>Returns</u>: <code>set[loc]</code></li>
+</ul>
+<hr />
+<h2 id="indexing-metrics">Indexing Metrics</h2>
+<p>These metrics facilitate data indexing unto the platform.</p>
+<h4 id="orgeclipsescavametricprovidertransindexingpreparation">org.eclipse.scava.metricprovider.trans.indexing.preparation</h4>
+<ul>
+<li><strong>Short name</strong>: index preparation transmetric</li>
+<li><strong>Friendly name</strong>: index preparation</li>
+</ul>
+<p>This identifies the metric(s) that have been chosen to be executed by the user in preparation for indexing (note: This is required to enable the indexing capabilities of the platform to be dynamic.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>None</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>IndexPrepTransMetric</code> which contains:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>executedMetricProviders</td>
+<td><code>List&lt;ExecutedMetricProviders&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>ExecutedMetricProviders : <ul>
+<li><code>List&lt;String&gt;</code>    metricIdentifiers </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderindexingbugs">org.eclipse.scava.metricprovider.indexing.bugs</h4>
+<ul>
+<li><strong>Short name</strong>: bug indexing metric</li>
+<li><strong>Friendly name</strong>: bug tracking system indexer</li>
+</ul>
+<p>This metric prepares and indexes documents relating to bug tracking systems.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>BugsIndexingMetric</code> </p>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderindexingcommits">org.eclipse.scava.metricprovider.indexing.commits</h4>
+<ul>
+<li><strong>Short name</strong>: metricprovider.indexing.commits</li>
+<li><strong>Friendly name</strong>: Commits indexer</li>
+</ul>
+<p>This metric prepares and indexes documents relating to commits.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommitsIndexingMetric</code> </p>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderindexingcommunicationchannels">org.eclipse.scava.metricprovider.indexing.communicationchannels</h4>
+<ul>
+<li><strong>Short name</strong>: communication channels indexing metric</li>
+<li><strong>Friendly name</strong>: communication channels indexer</li>
+</ul>
+<p>This metric prepares and indexes documents relating to communication channels.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>CommunicationChannelsIndexingMetric</code> </p>
+</li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavametricproviderindexingdocumentation">org.eclipse.scava.metricprovider.indexing.documentation</h4>
+<ul>
+<li><strong>Short name</strong>: metricprovider.indexing.documentation</li>
+<li><strong>Friendly name</strong>: Documentation indexer</li>
+</ul>
+<p>This metric prepares and indexes documents relating to documentation.</p>
+<ul>
+<li>
+<p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation</code></p>
+</li>
+<li>
+<p><u>Returns</u> :  <code>DocumentationIndexingMetric</code> </p>
+</li>
+</ul>
+<hr />
+<h2 id="factoids">Factoids</h2>
+<p>Factoids are plugins used to present data that has been mined and analysed using one or more historic and/or transient metric providers.</p>
+<hr />
+<h3 id="bug-factoids">Bug Factoids</h3>
+<p>These factoids are related to bug tracking systems.</p>
+<hr />
+<h4 id="orgeclipsescavafactoidbugschannelusage">org.eclipse.scava.factoid.bugs.channelusage</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.channelusage</li>
+<li><strong>Friendly name</strong>: Bug Tracker Usage data</li>
+</ul>
+<p>This plugin generates the factoid regarding usage data for bug trackers. For example, the total number of new bugs, comments or patches per year.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.newbugs</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.comments</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.patches</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsemotion">org.eclipse.scava.factoid.bugs.emotion</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.emotion</li>
+<li><strong>Friendly name</strong>: Bug Tracker Emotions</li>
+</ul>
+<p>This plugin generates the factoid regarding emotions for bug trackers. For example, the percentage of positive, negative or surprise emotions expressed.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.newbugs</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.comments</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.patches</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugshourly">org.eclipse.scava.factoid.bugs.hourly</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.hourly</li>
+<li><strong>Friendly name</strong>: Bug Tracker hourly data</li>
+</ul>
+<p>This plugin generates the factoid regarding hourly statistics for bug trackers. For example, the percentage of bugs, comments etc.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsresponsetime">org.eclipse.scava.factoid.bugs.responsetime</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.responsetime</li>
+<li><strong>Friendly name</strong>: Bug Tracker Response Time</li>
+</ul>
+<p>This plugin generates the factoid regarding response time for bug trackers. This could be a cummulative average, yearly average etc.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.responsetime</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugssentiment">org.eclipse.scava.factoid.bugs.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.sentiment</li>
+<li><strong>Friendly name</strong>: Bug Tracker Sentiment</li>
+</ul>
+<p>This plugin generates the factoid regarding sentiment for bug trackers. For example, the average sentiment in all bug trackers associated to a project.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.sentiment</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsseverity">org.eclipse.scava.factoid.bugs.severity</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.severity</li>
+<li><strong>Friendly name</strong>: Bug Tracker Severity</li>
+</ul>
+<p>This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.severity</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severitysentiment</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugssize">org.eclipse.scava.factoid.bugs.size</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.size</li>
+<li><strong>Friendly name</strong>: Bug Tracker Size</li>
+</ul>
+<p>This plugin generates the factoid regarding bug size for bug trackers. For example, the cumulative number of bug comments or patches. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.newbugs</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.comments</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.patches</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsstatus">org.eclipse.scava.factoid.bugs.status</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.status</li>
+<li><strong>Friendly name</strong>: Bug Tracker Status</li>
+</ul>
+<p>This plugin generates the factoid regarding bug status for bug trackers. For example, the number of fixed bugs, duplicate bugs etc.  </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.status</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsthreadlength">org.eclipse.scava.factoid.bugs.threadlength</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.threadlength</li>
+<li><strong>Friendly name</strong>: Bug Tracker Thread Length</li>
+</ul>
+<p>This plugin generates the factoid regarding bug thread length for bug trackers. For example, the average length of discussion associated to bugs. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.bugs</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsusers">org.eclipse.scava.factoid.bugs.users</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.users</li>
+<li><strong>Friendly name</strong>: Bug Tracker Users</li>
+</ul>
+<p>This plugin generates the factoid regarding users for bug trackers. For example, the average number of users associated to a project in a bug tracking system. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.users</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.bugs</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidbugsweekly">org.eclipse.scava.factoid.bugs.weekly</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.bugs.weekly</li>
+<li><strong>Friendly name</strong>: Bug Tracker Weekly</li>
+</ul>
+<p>This plugin generates the factoid regarding weekly user engagements for bug trackers. For example, the average number of bug comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies</code></li>
+</ul>
+<hr />
+<h3 id="communication-channel-factoids">Communication Channel Factoids</h3>
+<p>These factoids are related to communication channels.</p>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupschannelusage">org.eclipse.scava.factoid.newsgroups.channelusage</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.channelusage</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Usage</li>
+</ul>
+<p>This plugin generates the factoid regarding usage data for newsgroups. For example, the total number of new articles, bugs or threads per year. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.articles</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.newthreads</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsemotion">org.eclipse.scava.factoid.newsgroups.emotion</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.emotion</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Emotion</li>
+</ul>
+<p>This plugin generates the factoid regarding emotions for newsgroups, such as percentage of positive, negative or surprise emotions expressed.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.emotions</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupshourly">org.eclipse.scava.factoid.newsgroups.hourly</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.hourly</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel hourly data</li>
+</ul>
+<p>This plugin generates the factoid regarding hourly data for newsgroups, such as the percentage of articles, threads etc.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsresponsetime">org.eclipse.scava.factoid.newsgroups.responsetime</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.responsetime</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Response Time</li>
+</ul>
+<p>This plugin generates the factoid regarding response time for newsgroups. This could be a cummulative average, yearly average etc.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.responsetime</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupssentiment">org.eclipse.scava.factoid.newsgroups.sentiment</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.sentiment</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Sentiment</li>
+</ul>
+<p>This plugin generates the factoid regarding sentiments for newsgroups. For example, the average sentiment in all newsgroup channel associated to a project.</p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.sentiment</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsseverity">org.eclipse.scava.factoid.newsgroups.severity</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.severity</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Severity</li>
+</ul>
+<p>This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.severity</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupssize">org.eclipse.scava.factoid.newsgroups.size</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.size</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Size</li>
+</ul>
+<p>This plugin generates the factoid regarding thread or article size for newsgroups. For example, the cummulative number of threads. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.articles</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.newthreads</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsstatus">org.eclipse.scava.factoid.newsgroups.status</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.status</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Status</li>
+</ul>
+<p>This plugin generates the factoid regarding thread or article status for newsgroups. For example, the number of requests and replies, unanswered threads etc.  </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsthreadlength">org.eclipse.scava.factoid.newsgroups.threadlength</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.threadlength</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Thread Length</li>
+</ul>
+<p>This plugin generates the factoid regarding thread length for newsgroups. For example, the average length of discussion per day, month etc. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.threads</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsusers">org.eclipse.scava.factoid.newsgroups.users</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.users</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Users</li>
+</ul>
+<p>This plugin generates the factoid regarding users for newsgroups. For example, the average number of users associated to a project in a newsgroup channel. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.users</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.threads</code></li>
+</ul>
+<hr />
+<h4 id="orgeclipsescavafactoidnewsgroupsweekly">org.eclipse.scava.factoid.newsgroups.weekly</h4>
+<ul>
+<li><strong>Short name</strong>: factoid.newsgroups.weekly</li>
+<li><strong>Friendly name</strong>: Newsgroup Channel Weekly</li>
+</ul>
+<p>This plugin generates the factoid regarding weekly user engagement for newsgroups. For example, the average number of comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project. </p>
+<ul>
+<li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies</code></li>
 </ul>
 <hr />
               
