@@ -563,9 +563,9 @@ This metric computes the total number of bugs that corresponds to each bug statu
 
 #### org.eclipse.scava.metricprovider.historic.bugs.topics
 - **Short name**: historic.bugs.topics
-- **Friendly name**: Labels of topics in bug comments per bug tracker 
+- **Friendly name**: Labels of topic clusters in bug comments per bug tracker 
 
-This metric computes the labels of topics (thematic clusters) in bug comments submitted by the community (users), per bug tracker.
+This metric computes the labels of topic clusters extracted from bug comments submitted by the community (users), per bug tracker.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.topics` 
 
@@ -579,7 +579,7 @@ This metric computes the labels of topics (thematic clusters) in bug comments su
 
 - SeverityLevel : 
 	- `String`	bugTrackerId
-	- `String`	label
+	- `List<String>`	labels
 	- `float`	numberOfDocuments
 
 ------
@@ -1041,7 +1041,7 @@ This metric computes the number of threads per day for each newsgroup separately
 - **Short name**: historic.newsgroups.topics
 - **Friendly name**: Labels of newsgroup topics per newsgroup
 
-This metric computes the labels of topics (thematic clusters) in articles submitted by the community (users), for each newsgroup seperately.
+This metric computes the labels of topics clusters in articles submitted by the community (users), for each newsgroup seperately.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.topics`
 
@@ -1055,7 +1055,7 @@ This metric computes the labels of topics (thematic clusters) in articles submit
 
 - NewsgroupTopic : 
 	- `String`	newsgroupName
-	- `String`	label
+	- `List<String>`	labels
 	- `int`	numberOfDocuments
 
 ------
@@ -2977,8 +2977,6 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 	| bugTrackerTopics		 | `List<BugTrackerTopic>` |
 	| newsgroupArticles		 | `List<NewsgroupArticlesData>` |
 	| newsgroupTopics		 | `List<NewsgroupTopic>` |
-	| forumPosts		 | `List<ForumPostData>` |
-	| forumTopics		 | `List<ForumPostTopic>` |
 
 <u>*Additional Information*</u> :	
 
@@ -2997,28 +2995,25 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
   - `String`	text
   - `String`	date
 
-- ForumPostData : 
-  - `String`	forumId
-  - `String`	topicId
-  - `String`	postId
-  - `String`	subject
-  - `String`	text
-  - `String`	date
-
 - BugTrackerTopic : 
   - `String`	bugTrackerId
   - `String`	label
   - `int`	numberOfDocuments
+  - `List<CommentTopicId>` commentsTopicId
 
 - NewsgroupTopic : 
   - `String`	newsgroupName
   - `String`	label
   - `int`	numberOfDocuments
-
-- ForumPostTopic : 
-  - `String`	forumId
-  - `String`	label
-  - `int`	numberOfDocuments
+  - `List<ArticleTopicId>` articlesTopicId
+  
+ - CommentTopicId : 
+   - `String` bugId
+   - `String`commentId
+ 
+ - ArticleTopicId :
+   - `long` articleNumber
+  
 
 ------
 

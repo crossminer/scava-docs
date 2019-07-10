@@ -8,7 +8,7 @@ The SCAVA user guide provide general instruction to analyse open sources reposit
 The SCAVA Administration application provide services to analyse  open source software projects repository and provide several general administration feature including user managements services and platform configuration servicies. (Softeam)
 
 ## [Visualisation Dashboard](dashboard/index.md)
-[TODO] Overivew  Required
+This Visualisation Dashboard guide describes the different dashboards that are available with the platform.
 
 ## [Eclipse Plugin](plugin/index.md)
 [TODO] Overivew  Required
@@ -17,5 +17,5 @@ The SCAVA Administration application provide services to analyse  open source so
 [TODO] Overivew  Required
 
 ## [Metrics Reference Guide](metrics/index.md)
-[TODO] Overivew  Required
+This Metrics Reference Guide describes the historic and transient metric providers provided by the Scava platform.
 

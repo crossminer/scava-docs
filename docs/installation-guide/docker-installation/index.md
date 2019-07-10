@@ -63,7 +63,14 @@ Volumes can be created to persist the data of the databases between execution of
     volumes: #creates volume on container
         - ~/kb-data:/data/kb-db
 ```
-### Workers Configuration
+### Multiple Workers Configuration
+One instance of the metric-platform is only able to run one worker. Therefore, a setup where it is required to have more than one worker requires the deployment of multiple instances of metric platform.
+
+The main instance of the metric platform runs under the service `oss-app`. This is the service started by default with the `master` and `apiServer` flags, and launchs the worker `w1`.
+
+To enable a second worker, the `docker-compose-build.yml` (or `docker-compose-dockerhub.yml`) file must be edited and uncomented the service `oss-slave`. This service will launch a new instance of the metric platform that will only run one worker (with default name `w2`). This slave instance **do not have** the flags `master` or `apiServer`.
+
+New slaves can be added (e.g. `oss-slave01`,`oss-slave02`,`oss-slave03`, etc.) by copy-paste of the `oss-slave` service and changing the name of service and name of the worker.
     
 ## Running the locally built docker images
 
