@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Readers - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Readers";
+    var mkdocs_page_input_path = "others/resources/readers/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../contributors-guide/">SCAVA Contributors Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/">Architecture Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/api-gateway/">API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/authentication/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/">Contributors Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/">SCAVA Development Process</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-licensing-recomendation/">SCAVA Licensing recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-naming-recomendations/">SCAVA Naming recommendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-repository-organisation/">SCAVA Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-testing-organisation/">SCAVA Testing recommendations</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/">Technical Guidelignes</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/access-mongodb-pongo/">How to access to MongoDB using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/api-gateway-configuration/">How to configure the API Gateway in order to integrate a new REST service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/consume-scava-rest-services/">How to consume a SCAVA REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/rest-api-doc-generation/">How to generate REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/restlet-service-implementation/">How to implement Restlet services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/scava-data-model-extention/">How to extend the SCAVA data model</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../developers-guide/">SCAVA Developers Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/">REST API Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/analysis-platform/">Analysis Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/api-gateway/">Access to the REST API via the API Gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/knowledge-base/">Knowledge Base REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/visualisation-dashboard/">Visualisation Platform REST API reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/workflow-engine/">Workflow Engine REST API reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/metric-provider-developement-guide/">Metric Provider Developement Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/">Running SCAVA Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/administration-application/">Running the Administration Application form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/analysis-platform/">Running the Analysis Platform form Sources</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/eclipse-plugin/">Running the Eclipse Plugin form Sources (To be completed by FrontendArt)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/visualisation-dashboard/">Running the Visualisation Dashboard form Sources (To be reviewed and completed by Bitergia)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/">SCAVA Installation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/database-backup/">Platform Data Base Backup And Restoration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/licencing/">Licencing for Scava</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/docker-installation/">Platform Installation using DOCKER images</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-configuration/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-installation/">Platform Installation using individual components (UNPARALLEL)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/plugin-installation/">Eclipse Plugin Installation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">Welcome to the Scava documentation</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/SCAVA-Administration/">Scava Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture/API-Gateway-Component/">The API Gateway component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extending MongoDB data model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/How-To-Develop-Metric-Provider/">How to Develop a Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Implementing-Restlet-Service/">Implementing RESTLET services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Licensing/">Licencing for Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <span class="caption-text">Readers</span>
+    <ul class="subnav">
+                <li class="toctree-l4 current">
+                    
+    <a class="current" href="./">Readers</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l5"><a href="#readers">Readers</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l6" href="#bug-trackers">Bug Trackers</a></li>
+        
+            <li><a class="toctree-l6" href="#communication-channels">Communication Channels</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Consuming-REST-Services/">Consuming REST services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/REST-API-Documentation/">REST API Documentation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Scava-Metrics/">Metrics computed by Scava</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Scava-Resources/">Accessing Scava generated data</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../user-guide/">SCAVA User Guide</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/administration/">Platform Administration User Guide (Softeam)</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/dashboard/">Visualisation Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/metrics/">Metrics Reference Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/plugin/">Eclipse Plugin</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/quickstart/">Quick Start Guide</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/workflow/">Workflow Engine</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Readers &raquo;</li>
+        
+      
+        
+          <li>Resources &raquo;</li>
+        
+      
+        
+          <li>Others &raquo;</li>
+        
+      
+    
+    <li>Readers</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="readers">Readers</h1>
+<p>This document describes the readers used to provide data for the Scava platform.</p>
+<h2 id="bug-trackers">Bug Trackers</h2>
+<p>The following readers retrieve data from bug tracking systems.</p>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystembitbucket">org.eclipse.scava.platform.bugtrackingsystem.bitbucket</h3>
+<p>This reader retrieves data from Bitbucket through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://bitbucket.org/fenics-project/dolfin</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Login</td>
+<td><code>String</code></td>
+<td>Username used to log into Bitbucket</td>
+<td>admin</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>Password used to log into Bitbucket</td>
+<td>admin101</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystembugzilla">org.eclipse.scava.platform.bugtrackingsystem.bugzilla</h3>
+<p>This reader retrieves data from Bugzilla through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://bugzilla.redhat.com/xmlrpc.cgi</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Product</td>
+<td><code>String</code></td>
+<td>An existing project in Bugzilla</td>
+<td>Red Hat Enterprise Linux 8</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Component</td>
+<td><code>String</code></td>
+<td>An existing component of the project</td>
+<td>389-ds-base</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Project</td>
+<td><code>String</code></td>
+<td>The Project name</td>
+<td>Bugzilla</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystemgithub">org.eclipse.scava.platform.bugtrackingsystem.github</h3>
+<p>This reader retrieves data from GitHub through a REST API.  To register a project on the platform the user must use the <code>Import Project</code> option and provide the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://github.com/Adrian-Berrigan/adriantest</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystemgitlab">org.eclipse.scava.platform.bugtrackingsystem.gitlab</h3>
+<p>This reader retrieves data from GitLab through a REST API.  To register a project on the platform the user must use the <code>Import Project</code> option and provide the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://github.com/Adrian-Berrigan/adriantest</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystemjira">org.eclipse.scava.platform.bugtrackingsystem.jira</h3>
+<p>This reader retrieves data from Jira through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://jira.xwiki.org</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Login</td>
+<td><code>String</code></td>
+<td>Username used to log into Jira</td>
+<td>admin</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>Password used to log into Jira</td>
+<td>admin101</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Project</td>
+<td><code>String</code></td>
+<td>Name of the project</td>
+<td>XWIKI</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystemmantis">org.eclipse.scava.platform.bugtrackingsystem.mantis</h3>
+<p>This reader retrieves data from Mantis through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://www.mantisbt.org/</td>
+</tr>
+<tr>
+<td>Token</td>
+<td><code>String</code></td>
+<td>A unique token used to make authentication request</td>
+<td>6aefdre554675bfgtrhgfy77567</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystemredmine">org.eclipse.scava.platform.bugtrackingsystem.redmine</h3>
+<p>This reader retrieves data from Redmine through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>http://forge.modelio.org</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>String</code></td>
+<td>Name of the user</td>
+<td>Dave</td>
+</tr>
+<tr>
+<td>Project</td>
+<td><code>String</code></td>
+<td>Name of the project</td>
+<td>intocps</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="orgeclipsescavaplatformbugtrackingsystemsourceforge">org.eclipse.scava.platform.bugtrackingsystem.sourceforge</h3>
+<p>This reader retrieves data from SOURCEFORGE through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the project repository</td>
+<td>https://sourceforge.net/rest/p/vice-emu/bugs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="communication-channels">Communication Channels</h2>
+<p>The following readers retrieve data from communication channels.</p>
+<hr />
+<h3 id="orgeclipsescavaplatformcommunicationchanneleclipseforums">org.eclipse.scava.platform.communicationchannel.eclipseforums</h3>
+<p>This reader retrieves data from Eclipse Forums through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forum Id</td>
+<td><code>String</code></td>
+<td>The unique ID of the eclipse forum</td>
+<td>305</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Forum Name</td>
+<td><code>String</code></td>
+<td>Name of the forum</td>
+<td>Andmore</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Client Id</td>
+<td><code>String</code></td>
+<td>Unique ID provided by eclipse for authenticated access</td>
+<td>G12DrqtW86745tTre65476</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Client Secret</td>
+<td><code>String</code></td>
+<td>Access token provided by eclipse for authenticated access</td>
+<td>wp199NB564Frt5R43Ghy87</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :
+-   The <code>Forum Id</code> can be found within the forum URL. For example, the <code>Andmore</code> forum URL is https://www.eclipse.org/forums/index.php/f/305/ and the <code>Forum Id</code> is <code>305</code> shown in the last directory of the path.
+-   Eclipse enforces a rate limit of 1,000 requests per hour for both authenticated and anonymous requests. However, authenticated users may request to increase the call limit, subject to Eclipse approval.</p>
+<hr />
+<h3 id="orgeclipsescavaplatformcommunicationchannelirc">org.eclipse.scava.platform.communicationchannel.irc</h3>
+<p>The Irc reader supports data retrieval from log archive. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>The URL location of the archive</td>
+<td>http://localhost/Downloads/</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>String</code></td>
+<td>Name of the Irc</td>
+<td>kubuntu</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>String</code></td>
+<td>Brief description of the Irc</td>
+<td>The kubuntu archive contains ....</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Compressed File Ext.</td>
+<td><code>String</code></td>
+<td>File extension of the archive</td>
+<td>tar.gzip</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Username</td>
+<td><code>String</code></td>
+<td>Username (for protected archive)</td>
+<td>admin</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>Password (for protected archive)</td>
+<td>admin101</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :
+- The reader currently supports "tarballs" (i.e., tar.gzip, tgz).
+- Each archive must be stored in the following name format <code>IrcName-yyyymmdd.ext</code> , to specify the date of analysis (e.g., <code>kubuntu-20040306.tar</code>). The archive may contain one or more files stored in a folder, and each file represents interaction within a single chat room.</p>
+<hr />
+<h3 id="orgeclipsescavaplatformcommunicationchannelmbox">org.eclipse.scava.platform.communicationchannel.mbox</h3>
+<p>The Mbox reader supports data retrieval from log archive. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>The URL location of the archive</td>
+<td>http://localhost/Downloads/</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>String</code></td>
+<td>Name of the Mbox</td>
+<td>mboxes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>String</code></td>
+<td>Brief description of the Mbox</td>
+<td>The mboxes archive contains ....</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Compressed File Ext.</td>
+<td><code>String</code></td>
+<td>File extension of the archive</td>
+<td>tar.gzip</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Username</td>
+<td><code>String</code></td>
+<td>Username (for protected archive)</td>
+<td>admin</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>Password (for protected archive)</td>
+<td>admin101</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>The reader currently supports "tarballs" (i.e., tar.gzip, tgz).</li>
+<li>The storage location may contain one or more Mbox archive(s), each stored in the following name format <code>MboxName-yyyymmdd.ext</code> , to specify the date of analysis. Each Mbox archive must contain one or more email messages (of the same analysis date), stored in a folder. </li>
+</ul>
+<hr />
+<h3 id="orgeclipsescavaplatformcommunicationchannelnntp">org.eclipse.scava.platform.communicationchannel.nntp</h3>
+<p>This reader retrieves data from NNTP through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the project repository</td>
+<td>news.mozilla.org</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>String</code></td>
+<td>The newsgroup name</td>
+<td>mozilla.activity-stream</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Username</td>
+<td><code>String</code></td>
+<td>Username used to log into the newsgroup channel</td>
+<td>admin</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>Password used to log into the newsgroup channel</td>
+<td>admin101</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Port</td>
+<td><code>int</code></td>
+<td>The port number</td>
+<td>119 by default</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Interval</td>
+<td><code>int</code></td>
+<td>The frequency of calls</td>
+<td>10000 by default</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>The port number is mandatory and defaults to 119. However, the user has the option to change this value, if their port number is different from 119.</li>
+<li>The Interval is not mandatory but defaults to 10000. However, the user has the option to lower or increase this value.</li>
+</ul>
+<hr />
+<h3 id="orgeclipsescavaplatformcommunicationchannelsympa">org.eclipse.scava.platform.communicationchannel.sympa</h3>
+<p>The Sympa reader supports data retrieval from log archive. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+<th>Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>The URL location of the archive</td>
+<td>http://localhost/Downloads/</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>String</code></td>
+<td>Name of the Sympa</td>
+<td>sympa</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>String</code></td>
+<td>Brief description of the Sympa</td>
+<td>The sympa archive contains ....</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Compressed File Ext.</td>
+<td><code>String</code></td>
+<td>File extension of the archive</td>
+<td>tar.gzip</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Username</td>
+<td><code>String</code></td>
+<td>Username (for protected archive)</td>
+<td>admin</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>Password (for protected archive)</td>
+<td>admin101</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>The reader currently supports "tarballs" (i.e., tar.gzip, tgz).</li>
+<li>The storage location may contain one or more Sympa archive(s), each stored in the following name format <code>SympaName-yyyymmdd.ext</code> , to specify the date of analysis. Each Sympa archive must contain one or more email messages (of the same analysis date), stored in a folder. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../users/Consuming-REST-Services/" class="btn btn-neutral float-right" title="Consuming REST services">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../development/Testing-Guidelines/" class="btn btn-neutral" title="Testing Guidelines"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../development/Testing-Guidelines/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../users/Consuming-REST-Services/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

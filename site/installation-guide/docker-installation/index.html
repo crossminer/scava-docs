@@ -414,6 +414,22 @@
                 </li>
                 <li class="">
                     
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Readers</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../others/resources/readers/">Readers</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
     <span class="caption-text">Users</span>
     <ul class="subnav">
                 <li class="toctree-l3">
@@ -677,7 +693,11 @@
         - ~/kb-data:/data/kb-db
 </code></pre>
 
-<h3 id="workers-configuration">Workers Configuration</h3>
+<h3 id="multiple-workers-configuration">Multiple Workers Configuration</h3>
+<p>One instance of the metric-platform is only able to run one worker. Therefore, a setup where it is required to have more than one worker requires the deployment of multiple instances of metric platform.</p>
+<p>The main instance of the metric platform runs under the service <code>oss-app</code>. This is the service started by default with the <code>master</code> and <code>apiServer</code> flags, and launchs the worker <code>w1</code>.</p>
+<p>To enable a second worker, the <code>docker-compose-build.yml</code> (or <code>docker-compose-dockerhub.yml</code>) file must be edited and uncomented the service <code>oss-slave</code>. This service will launch a new instance of the metric platform that will only run one worker (with default name <code>w2</code>). This slave instance <strong>do not have</strong> the flags <code>master</code> or <code>apiServer</code>.</p>
+<p>New slaves can be added (e.g. <code>oss-slave01</code>,<code>oss-slave02</code>,<code>oss-slave03</code>, etc.) by copy-paste of the <code>oss-slave</code> service and changing the name of service and name of the worker.</p>
 <h2 id="running-the-locally-built-docker-images">Running the locally built docker images</h2>
 <p>To run the locally built images, run the following command. Note that if the images are not available they will be rebuilt.</p>
 <pre><code>$ docker-compose -f docker-compose-build.yml up

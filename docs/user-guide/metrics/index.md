@@ -1981,7 +1981,7 @@ This metric computes various metadata in bug header, i.e. priority, status, oper
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `String`	status
-	- `String`	resolution
+	- `List<String>`	resolution
 	- `String`	operatingSystem
 	- `String`	priority
 	- `String`	creationTime
@@ -1989,6 +1989,11 @@ This metric computes various metadata in bug header, i.e. priority, status, oper
 	- `String`	startSentiment
 	- `String`	endSentiment
 	- `float`	averageSentiment
+	- `int`		commentSum
+	- `int`		sentimentSum
+	- `String`	firstCommentId
+	- `String`	lastCommentId
+
 - CommentData : 
 	- `String`	bugTrackerId
 	- `String`	bugId

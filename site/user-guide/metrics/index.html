@@ -388,6 +388,22 @@
                 </li>
                 <li class="">
                     
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Readers</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../others/resources/readers/">Readers</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
     <span class="caption-text">Users</span>
     <ul class="subnav">
                 <li class="toctree-l3">
@@ -463,8 +479,6 @@
             <li><a class="toctree-l5" href="#historic-metric-providers">Historic Metric Providers</a></li>
         
             <li><a class="toctree-l5" href="#transient-metric-providers">Transient Metric Providers</a></li>
-        
-            <li><a class="toctree-l5" href="#-depends-on-returns-mapstr-int">- Depends-on: - Returns: map[str, int]</a></li>
         
             <li><a class="toctree-l5" href="#indexing-metrics">Indexing Metrics</a></li>
         
@@ -1514,9 +1528,9 @@
 <h4 id="orgeclipsescavametricproviderhistoricbugstopics">org.eclipse.scava.metricprovider.historic.bugs.topics</h4>
 <ul>
 <li><strong>Short name</strong>: historic.bugs.topics</li>
-<li><strong>Friendly name</strong>: Labels of topics in bug comments per bug tracker </li>
+<li><strong>Friendly name</strong>: Labels of topic clusters in bug comments per bug tracker </li>
 </ul>
-<p>This metric computes the labels of topics (thematic clusters) in bug comments submitted by the community (users), per bug tracker.</p>
+<p>This metric computes the labels of topic clusters extracted from bug comments submitted by the community (users), per bug tracker.</p>
 <ul>
 <li>
 <p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.topics</code> </p>
@@ -1543,7 +1557,7 @@
 <ul>
 <li>SeverityLevel : <ul>
 <li><code>String</code>  bugTrackerId</li>
-<li><code>String</code>  label</li>
+<li><code>List&lt;String&gt;</code>    labels</li>
 <li><code>float</code>   numberOfDocuments</li>
 </ul>
 </li>
@@ -2291,7 +2305,7 @@
 <li><strong>Short name</strong>: historic.newsgroups.topics</li>
 <li><strong>Friendly name</strong>: Labels of newsgroup topics per newsgroup</li>
 </ul>
-<p>This metric computes the labels of topics (thematic clusters) in articles submitted by the community (users), for each newsgroup seperately.</p>
+<p>This metric computes the labels of topics clusters in articles submitted by the community (users), for each newsgroup seperately.</p>
 <ul>
 <li>
 <p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.topics</code></p>
@@ -2318,7 +2332,7 @@
 <ul>
 <li>NewsgroupTopic : <ul>
 <li><code>String</code>  newsgroupName</li>
-<li><code>String</code>  label</li>
+<li><code>List&lt;String&gt;</code>    labels</li>
 <li><code>int</code> numberOfDocuments</li>
 </ul>
 </li>
@@ -3424,11 +3438,13 @@ for a lack in testing effort for the project.</p>
 </ul>
 <p><u><em>Additional Information</em></u> :   </p>
 <ul>
-<li>BugData : <ul>
+<li>
+<p>BugData : </p>
+<ul>
 <li><code>String</code>  bugTrackerId</li>
 <li><code>String</code>  bugId</li>
 <li><code>String</code>  status</li>
-<li><code>String</code>  resolution</li>
+<li><code>List&lt;String&gt;</code>    resolution</li>
 <li><code>String</code>  operatingSystem</li>
 <li><code>String</code>  priority</li>
 <li><code>String</code>  creationTime</li>
@@ -3436,9 +3452,15 @@ for a lack in testing effort for the project.</p>
 <li><code>String</code>  startSentiment</li>
 <li><code>String</code>  endSentiment</li>
 <li><code>float</code>   averageSentiment</li>
+<li><code>int</code>     commentSum</li>
+<li><code>int</code>     sentimentSum</li>
+<li><code>String</code>  firstCommentId</li>
+<li><code>String</code>  lastCommentId</li>
 </ul>
 </li>
-<li>CommentData : <ul>
+<li>
+<p>CommentData : </p>
+<ul>
 <li><code>String</code>  bugTrackerId</li>
 <li><code>String</code>  bugId</li>
 <li><code>String</code>    commentId</li>
@@ -5073,14 +5095,6 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <td>newsgroupTopics</td>
 <td><code>List&lt;NewsgroupTopic&gt;</code></td>
 </tr>
-<tr>
-<td>forumPosts</td>
-<td><code>List&lt;ForumPostData&gt;</code></td>
-</tr>
-<tr>
-<td>forumTopics</td>
-<td><code>List&lt;ForumPostTopic&gt;</code></td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -5107,38 +5121,34 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <p><code>String</code>    date</p>
 </li>
 <li>
-<p>ForumPostData : </p>
-</li>
-<li><code>String</code>    forumId</li>
-<li><code>String</code>    topicId</li>
-<li><code>String</code>    postId</li>
-<li><code>String</code>    subject</li>
-<li><code>String</code>    text</li>
-<li>
-<p><code>String</code>    date</p>
-</li>
-<li>
 <p>BugTrackerTopic : </p>
 </li>
 <li><code>String</code>    bugTrackerId</li>
 <li><code>String</code>    label</li>
+<li><code>int</code>   numberOfDocuments</li>
 <li>
-<p><code>int</code>   numberOfDocuments</p>
+<p><code>List&lt;CommentTopicId&gt;</code> commentsTopicId</p>
 </li>
 <li>
 <p>NewsgroupTopic : </p>
 </li>
 <li><code>String</code>    newsgroupName</li>
 <li><code>String</code>    label</li>
-<li>
-<p><code>int</code>   numberOfDocuments</p>
-</li>
-<li>
-<p>ForumPostTopic : </p>
-</li>
-<li><code>String</code>    forumId</li>
-<li><code>String</code>    label</li>
 <li><code>int</code>   numberOfDocuments</li>
+<li>
+<p><code>List&lt;ArticleTopicId&gt;</code> articlesTopicId</p>
+</li>
+<li>
+<p>CommentTopicId : </p>
+</li>
+<li><code>String</code> bugId</li>
+<li>
+<p><code>String</code>commentId</p>
+</li>
+<li>
+<p>ArticleTopicId :</p>
+</li>
+<li><code>long</code> articleNumber</li>
 </ul>
 <hr />
 <h3 id="commits-and-committers-metrics_1">Commits and committers metrics</h3>
@@ -5777,7 +5787,10 @@ The metric can be used to compare the volume between two systems and to assess i
 <li><strong>Friendly name</strong>: Lines of code in Type I clones larger than 6 lines, per language</li>
 </ul>
 <p>Lines of code in Type I clones larger than 6 lines, per language. A Type I clone is a literal clone. A large number of literal clones is considered to be bad. This metric is not easily compared between systems because it is not size normalized yet. We use it for further processing downstream. You can analyze the trend over time using this metric.</p>
-<h2 id="-depends-on-returns-mapstr-int">- <u>Depends-on</u>: - <u>Returns</u>: <code>map[str, int]</code></h2>
+<ul>
+<li><u>Depends-on</u>: - <u>Returns</u>: <code>map[str, int]</code></li>
+</ul>
+<hr />
 <h3 id="java-code-metrics_1">Java code metrics</h3>
 <p>These metrics are related to the Java source code of analyzed projects.</p>
 <hr />
