@@ -185,3 +185,41 @@ The Sympa reader supports data retrieval from log archive. To register a project
 
 - The reader currently supports "tarballs" (i.e., tar.gzip, tgz).
 - The storage location may contain one or more Sympa archive(s), each stored in the following name format `SympaName-yyyymmdd.ext` , to specify the date of analysis. Each Sympa archive must contain one or more email messages (of the same analysis date), stored in a folder. 
+
+## Documentation Readers
+
+The following readers retrieve project documentation from relevant sources.
+
+------
+### org.eclipse.scava.platform.documentation.gitbased
+
+This reader is Git-Based and thus retrieves data through a REST API.  To register a project on the platform the user must use the `Documentation Git-Based` option and provide the following parameter:
+
+| Parameter              | Type     | Description | Example |
+| ---------------------- | -------- | ----------- | ------- |
+| URL | `String` | URL of the repository | https://github.com/linhr/pongo-pongo/wiki |
+
+<u>*Additional Information*</u> :
+-	This reader cannot be used along with a Git project, because internally they use the same model and the `documentation.Git-Based` reader extends the Git project reader.
+
+------
+### org.eclipse.scava.platform.documentation.systematic
+
+This reader uses web crawler to retrieve data from websites.  To register a project on the platform the user must use the `Documentation Systematic` option and provide the relevant parameter:
+
+| Parameter              | Type     | Description | Example |
+| ---------------------- | -------- | ----------- | ------- |
+| URL | `String` | URL of the repository | https://wiki.eclipse.org/Trace_Compass#User_Guides |
+| ExecutionFrequency | `int` | Crawling frequency defined in days, e.g., 1 represents a day  | 1 |
+| UserName | `String` | The `username` used to log into the website | name@domain.com |
+| Password | `String` | The `password` used to log into the website | p$%7876 |
+| LoginURL | `String` | The URL of the login page | https://accounts.eclipse.org/user/login?destination=user/login%3Ftakemeback%3Dhttp%253A//www.eclipse.org/forums/index.php%253Ft%253Dlogin |
+| UsernameFieldName | `String` | The name used to define the `username` field on the website | name |
+| PasswordFieldName | `String` | The name used to define the `password` field on the website | pass |
+
+<u>*Additional Information*</u> :
+-	For clarity, all examples used in the above table are derived from the Eclipse Foundation website. For example, the `username` field is defined as name.
+-	The `Documentation Systematic` reader supports both password protected and un-protected sources. `URL` and `ExecutionFrequency` are mandatory for both sources. However, only the password protected sources require the additional paramenters.
+-	Dates preceeding the current date are processed once because the reader does not keep track of the website evolution up to the current date.
+-	The reader assumes that all textual information within the specified URL location are related to documentation.
+-	The crawler is configured to comply with the Robots Exclusion protocol and thus folows the rules in the robots.txt file during crawling.

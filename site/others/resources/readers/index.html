@@ -407,6 +407,8 @@
         
             <li><a class="toctree-l6" href="#communication-channels">Communication Channels</a></li>
         
+            <li><a class="toctree-l6" href="#documentation-readers">Documentation Readers</a></li>
+        
         </ul>
     
 
@@ -1116,6 +1118,94 @@
 <li>The reader currently supports "tarballs" (i.e., tar.gzip, tgz).</li>
 <li>The storage location may contain one or more Sympa archive(s), each stored in the following name format <code>SympaName-yyyymmdd.ext</code> , to specify the date of analysis. Each Sympa archive must contain one or more email messages (of the same analysis date), stored in a folder. </li>
 </ul>
+<h2 id="documentation-readers">Documentation Readers</h2>
+<p>The following readers retrieve project documentation from relevant sources.</p>
+<hr />
+<h3 id="orgeclipsescavaplatformdocumentationgitbased">org.eclipse.scava.platform.documentation.gitbased</h3>
+<p>This reader is Git-Based and thus retrieves data through a REST API.  To register a project on the platform the user must use the <code>Documentation Git-Based</code> option and provide the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://github.com/linhr/pongo-pongo/wiki</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :
+-   This reader cannot be used along with a Git project, because internally they use the same model and the <code>documentation.Git-Based</code> reader extends the Git project reader.</p>
+<hr />
+<h3 id="orgeclipsescavaplatformdocumentationsystematic">org.eclipse.scava.platform.documentation.systematic</h3>
+<p>This reader uses web crawler to retrieve data from websites.  To register a project on the platform the user must use the <code>Documentation Systematic</code> option and provide the relevant parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>String</code></td>
+<td>URL of the repository</td>
+<td>https://wiki.eclipse.org/Trace_Compass#User_Guides</td>
+</tr>
+<tr>
+<td>ExecutionFrequency</td>
+<td><code>int</code></td>
+<td>Crawling frequency defined in days, e.g., 1 represents a day</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UserName</td>
+<td><code>String</code></td>
+<td>The <code>username</code> used to log into the website</td>
+<td>name@domain.com</td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>String</code></td>
+<td>The <code>password</code> used to log into the website</td>
+<td>p$%7876</td>
+</tr>
+<tr>
+<td>LoginURL</td>
+<td><code>String</code></td>
+<td>The URL of the login page</td>
+<td>https://accounts.eclipse.org/user/login?destination=user/login%3Ftakemeback%3Dhttp%253A//www.eclipse.org/forums/index.php%253Ft%253Dlogin</td>
+</tr>
+<tr>
+<td>UsernameFieldName</td>
+<td><code>String</code></td>
+<td>The name used to define the <code>username</code> field on the website</td>
+<td>name</td>
+</tr>
+<tr>
+<td>PasswordFieldName</td>
+<td><code>String</code></td>
+<td>The name used to define the <code>password</code> field on the website</td>
+<td>pass</td>
+</tr>
+</tbody>
+</table>
+<p><u><em>Additional Information</em></u> :
+-   For clarity, all examples used in the above table are derived from the Eclipse Foundation website. For example, the <code>username</code> field is defined as name.
+-   The <code>Documentation Systematic</code> reader supports both password protected and un-protected sources. <code>URL</code> and <code>ExecutionFrequency</code> are mandatory for both sources. However, only the password protected sources require the additional paramenters.
+-   Dates preceeding the current date are processed once because the reader does not keep track of the website evolution up to the current date.
+-   The reader assumes that all textual information within the specified URL location are related to documentation.
+-   The crawler is configured to comply with the Robots Exclusion protocol and thus folows the rules in the robots.txt file during crawling.</p>
               
             </div>
           </div>
