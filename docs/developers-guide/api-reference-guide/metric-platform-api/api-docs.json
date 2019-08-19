@@ -98,7 +98,7 @@
           "200": {
             "description": "successful operation",
             "schema": {
-              "$ref": "#/definitions/Task"
+              "$ref": "#/definitions/TaskObject"
             }
           },
           "404": {
@@ -1845,6 +1845,82 @@
       },
       "xml": {
         "name": "MetricProvider"
+      }
+    },
+    "TaskObject": {
+      "type": "object",
+      "properties": {
+        "analysisTaskId": {
+          "type": "string"
+        },
+        "projectId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "object"
+        },
+        "endDate": {
+          "type": "object"
+        },
+        "scheduling": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "currentDate": {
+              "type": "object"
+            },
+            "workerId": {
+              "type": "string"
+            },
+            "progress": {
+              "type": "integer"
+            },
+            "currentMetric": {
+              "type": "string"
+            },
+            "lastDailyExecutionDuration": {
+              "type": "integer"
+            }
+          }
+        },
+        "metricExecutions": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "metricProviderId": {
+                "type": "string"
+              },
+              "projectId": {
+                "type": "string"
+              },
+              "lastDateExecution": {
+                "type": "string"
+              },
+              "hasVisualisation": {
+                "type": "boolean"
+              }
+            },
+            "xml": {
+              "name": "AnalysisTask"
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
       }
     },
     "Task": {
