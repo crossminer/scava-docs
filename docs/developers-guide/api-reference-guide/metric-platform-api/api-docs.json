@@ -2068,9 +2068,6 @@
           "analysisTaskId": {
             "type": "string"
           },
-          "projectId": {
-            "type": "string"
-          },
           "label": {
             "type": "string"
           },
