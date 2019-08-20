@@ -471,7 +471,7 @@
           {
             "name": "projectid",
             "in": "path",
-            "description": "The projectId needed to fetch analysis tasks",
+            "description": "The projectId needed to fetch the analysis tasks",
             "required": true,
             "type": "string"
           }
@@ -480,7 +480,7 @@
           "200": {
             "description": "successful operation",
             "schema": {
-              "$ref": "#/definitions/Tasks"
+              "$ref": "#/definitions/TasksArray"
             }
           },
           "404": {
@@ -504,7 +504,7 @@
           {
             "name": "projectid",
             "in": "path",
-            "description": "The projectId needed to fetch analysis tasks",
+            "description": "The projectId needed to fetch the analysis tasks",
             "required": true,
             "type": "string"
           }
@@ -2022,6 +2022,89 @@
           },
           "scheduling": {
             "type": "object"
+          },
+          "metricExecutions": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "metricProviderId": {
+                  "type": "string"
+                },
+                "projectId": {
+                  "type": "string"
+                },
+                "lastDateExecution": {
+                  "type": "string"
+                },
+                "hasVisualisation": {
+                  "type": "boolean"
+                }
+              },
+              "xml": {
+                "name": "AnalysisTask"
+              }
+            }
+          }
+        },
+        "xml": {
+          "name": "AnalysisTask"
+        }
+      }
+    },
+    "TasksArray": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "analysisTaskId": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "object"
+          },
+          "endDate": {
+            "type": "object"
+          },
+          "scheduling": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "currentDate": {
+                "type": "object"
+              },
+              "workerId": {
+                "type": "string"
+              },
+              "progress": {
+                "type": "integer"
+              },
+              "currentMetric": {
+                "type": "string"
+              },
+              "lastDailyExecutionDuration": {
+                "type": "integer"
+              }
+            }
           },
           "metricExecutions": {
             "type": "array",
