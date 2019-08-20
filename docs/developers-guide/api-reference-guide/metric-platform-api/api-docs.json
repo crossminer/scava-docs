@@ -164,7 +164,7 @@
             "description": "Updated analysis task object",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/AnalysisTask"
+              "$ref": "#/definitions/AnalysisTaskUpdate"
             }
           }
         ],
