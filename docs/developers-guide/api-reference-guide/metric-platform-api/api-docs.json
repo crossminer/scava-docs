@@ -1929,9 +1929,6 @@
         "analysisTaskId": {
           "type": "string"
         },
-        "projectId": {
-          "type": "string"
-        },
         "label": {
           "type": "string"
         },
@@ -1947,17 +1944,26 @@
         "scheduling": {
           "type": "object",
           "properties": {
-            "currentDate": {
-              "type": "string"
-            },
-            "progress": {
+            "status": {
               "type": "string"
             },
             "executionRequestDate": {
+              "type": "object"
+            },
+            "currentDate": {
+              "type": "object"
+            },
+            "workerId": {
               "type": "string"
             },
-            "status": {
+            "progress": {
+              "type": "integer"
+            },
+            "currentMetric": {
               "type": "string"
+            },
+            "lastDailyExecutionDuration": {
+              "type": "integer"
             }
           }
         },
@@ -1969,20 +1975,6 @@
             "required": [
               "name"
             ],
-            "properties": {
-              "metricProviderId": {
-                "type": "string"
-              },
-              "projectId": {
-                "type": "string"
-              },
-              "lastDateExecution": {
-                "type": "string"
-              },
-              "hasVisualisation": {
-                "type": "boolean"
-              }
-            },
             "xml": {
               "name": "AnalysisTask"
             }
@@ -3330,6 +3322,9 @@
         "label": {
           "type": "string"
         },
+        "projectId": {
+          "type": "string"
+        },
         "type": {
           "type": "string"
         },
@@ -3339,7 +3334,43 @@
         "endDate": {
           "type": "string"
         },
-        "metricExecutions": {
+        "metricProviders": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "string",
+            "required": [
+              "name"
+            ]
+          }
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
+      }
+    },
+    "AnalysisTaskUpdate": {
+      "type": "object",
+      "properties": {
+        "oldAnalysisTaskId": {
+          "type": "string"
+        },
+        "analysisTaskId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string"
+        },
+        "metricProviders": {
           "type": "array",
           "items": {
             "minItems": 1,
