@@ -1033,6 +1033,43 @@
         }
       }
     },
+    "/projects/edit": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Edit a project",
+        "operationId": "editProject",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Url to edit a project",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProjetEdition"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ProjetEdition"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/projects/p/{projectid}": {
       "get": {
         "tags": [
@@ -2797,6 +2834,96 @@
       "properties": {
         "url": {
           "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Project"
+      }
+    },
+    "ProjetEdition": {
+      "type": "object",
+      "properties": {
+        "shortName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "homePage": {
+          "type": "string"
+        },
+        "vcsRepositories": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "bts": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "login": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              }
+              ,
+              "project": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "communication_channels": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "MailingListName": {
+                "type": "string"
+              },
+              "MailingListDescription": {
+                "type": "string"
+              },
+              "compressedFileExtension": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              }
+            }
+          }
         }
       },
       "xml": {
