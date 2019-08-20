@@ -447,7 +447,7 @@
           "200": {
             "description": "successful operation",
             "schema": {
-              "$ref": "#/definitions/Tasks"
+              "$ref": "#/definitions/TasksArray"
             }
           },
           "404": {
@@ -1991,69 +1991,6 @@
       },
       "xml": {
         "name": "AnalysisTask"
-      }
-    },
-    "Tasks": {
-      "type": "array",
-      "items": {
-        "minItems": 1,
-        "type": "object",
-        "required": [
-          "name"
-        ],
-        "properties": {
-          "analysisTaskId": {
-            "type": "string"
-          },
-          "projectId": {
-            "type": "string"
-          },
-          "label": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "startDate": {
-            "type": "object"
-          },
-          "endDate": {
-            "type": "object"
-          },
-          "scheduling": {
-            "type": "object"
-          },
-          "metricExecutions": {
-            "type": "array",
-            "items": {
-              "minItems": 1,
-              "type": "object",
-              "required": [
-                "name"
-              ],
-              "properties": {
-                "metricProviderId": {
-                  "type": "string"
-                },
-                "projectId": {
-                  "type": "string"
-                },
-                "lastDateExecution": {
-                  "type": "string"
-                },
-                "hasVisualisation": {
-                  "type": "boolean"
-                }
-              },
-              "xml": {
-                "name": "AnalysisTask"
-              }
-            }
-          }
-        },
-        "xml": {
-          "name": "AnalysisTask"
-        }
       }
     },
     "TasksArray": {
