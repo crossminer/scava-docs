@@ -1,5 +1,5 @@
 # Platform Administration User Guide
-The guide show up the diffretens features available through the Administration Dashboard, including:
+The guide show up the different features available through the Administration Dashboard, including:
 * The Login feature
 * The Projects management feature
 * The Users management feature
