@@ -12,7 +12,11 @@ The Dashboard's Main view provides an overview about the CROSSMINER project. Nam
 ![main-view](./screenshots/main-view.png)
 
 ### The Projects view
-The Projects view displays the list of the OSS projects downloaded from the OSS forges. In order to add a new project, the dashboard proposes two operations:
+The Projects view displays the list of the OSS projects downloaded from the OSS forges. In order to add a new project.
+
+![project-view](./screenshots/project-view.png)
+
+The dashboard provides two operations:
 * Import Project
 If your project is hosted on an OSS forge, you can simply paste the URL on the field and we'll add it.
 ![import-project-view](./screenshots/import-project-view.png)
@@ -32,5 +36,5 @@ The workers view shows up the status of the analysis process of the metric-platf
 
 ### The Properties view
 The Properties view allows to configure generic properties applied on the metric-platform, eg., Github OAth tokens, ..
-![properties-view](./screenshots/properties-view.png)
 
+![properties-view](./screenshots/properties-view.png)
