@@ -14,7 +14,7 @@ The Dashboard's Main view provides an overview about the CROSSMINER project. Nam
 ### The Projects view
 The Projects view displays the list of the OSS projects downloaded from the OSS forges. In order to add a new project.
 
-![project-view](./screenshots/project-view.png)
+![project-config-view](./screenshots/project-view.png)
 
 The dashboard provides two operations:
 * Import Project
