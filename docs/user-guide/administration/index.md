@@ -1,6 +1,10 @@
 # Platform Administration User Guide
 The guide show up the diffretens features available through the Administration Dashboard, including:
-
+* The Login feature
+* The Projects management feature
+* The Users management feature
+* The Workers feature
+* The Properties management feature
 
 ### The Login feature
 The first time the user access the administration dashboard, a login form will be shown in order to authenticate the associated user.
@@ -13,11 +17,11 @@ The Projects view displays the list of the OSS projects downloaded from the OSS 
 ![projects-view](./screenshots/projects-view.png)
 
 The administration dashboard provides two operations:
-* Import Project
+* Import Project: 
 If your project is hosted on an OSS forge, you can simply paste the URL on the field and add it.
 ![import-project-view](./screenshots/import-project-view.png)
 
-* Create Project
+* Create Project:
 The second operation provides an extra-options to customize the project creation alongside to the metadata available from differents related sources, eg., communication channels and bug tracking systems.
 ![create-project-view](./screenshots/create-project-view.png)
 
@@ -35,7 +39,7 @@ The Users view allows to manage the differents users of the the administration d
 ![users-management-view](./screenshots/users-management-view.png)
 
 ### The Workers feature
-The workers view shows up the status of the analysis process of the metric-platform. The Platform Workers section illustres the metric-platform's available workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a worker to be avalaible
+The workers view is dedicated to the dashboard administrators which allow them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section illustres the metric-platform's available workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a worker to be avalaible
 
 ![workers-view](./screenshots/workers-view.png)
 
