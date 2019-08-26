@@ -72,7 +72,7 @@ The Users view allows to manage the differents users of the the administration d
 
 ![users-management-view](./screenshots/users-management-view.png)
 
-### The profile view
+#### The profile view
 Both the user and the project manager profiles have the ability to edit its own account and manage the token authorities section to generate a  kind of a token authorities assigned and available only on his profile.
 ![profile-view](./screenshots/profile-view.png)
 
