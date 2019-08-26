@@ -59,14 +59,14 @@ The Users view allows to manage the differents users of the the administration d
   * Show up the list of metric-providers.
   * Manage its own token authorities.
   * Show up the stack traces.
-* ADMIN ROLE: The admin profile is the super-user of the admini-ui which is enable to get access to almost all the features come with the administration dashboard, including:
+* ADMIN ROLE: The admin profile is the super-user of the admin-ui which is enable to get access to almost all the features come with the administration dashboard, including:
   * Import/create new projects.
   * Show up the list of registred projects.
   * Manage new analysis tasks.
   * Show up the analysis tasks status.
   * Show up the list of metric-providers.
   * Manage the admin-ui users and their roles.
-  * Monitor the workers and their analysis tasks.
+  * Monitor the workers and theirs analysis tasks.
   * Manage configuration properties.
   * Show up the stack traces.
 
@@ -77,7 +77,7 @@ Both the user and the project manager profiles have the ability to edit its own 
 ![profile-view](./screenshots/profile-view.png)
 
 ### The Workers feature
-The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a worker to be avalaible
+The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a free worker.
 
 ![workers-view](./screenshots/workers-view.png)
 
