@@ -1034,7 +1034,7 @@
       }
     },
     "/projects/edit": {
-      "post": {
+      "put": {
         "tags": [
           "project"
         ],
