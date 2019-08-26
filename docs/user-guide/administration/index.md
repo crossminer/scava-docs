@@ -73,7 +73,7 @@ The Users view allows to manage the differents users of the the administration d
 ![users-management-view](./screenshots/users-management-view.png)
 
 #### The profile view
-Both the user and the project manager profiles have the ability to edit its own account and manage the token authorities section to generate a  kind of a token authorities assigned and available only on his profile.
+Both the user and the project manager profiles have the ability to edit its own account and manage the token authorities related the Eclipse Integrated Development Environments (IDEs) component. The generated token authorities is assigned and available only on current profile.
 ![profile-view](./screenshots/profile-view.png)
 
 ### The Workers feature
