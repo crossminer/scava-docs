@@ -43,13 +43,37 @@ These tasks will be executed later to compute/calculate some metrics that will b
 
 
 ### The Users management feature
-The Users view allows to manage the differents users of the the administration dashboards. It provides three levels of roles: * USER ROLE: 
-* PROJECT MANAGER ROLE:
-* ADMIN ROLE:
+The Users view allows to manage the differents users of the the administration dashboards. It provides three levels of roles:
+
+* USER ROLE: The user profile is enable to shows up the basic administration dashboard features including:
+  * Show up the list of registred projects.
+  * Show up the analysis tasks status.
+  * Show up the list of metric-providers.
+  * Manage its own token authorities.
+  * Show up the stack traces.
+* PROJECT MANAGER ROLE: The project manager profile is enable to manage the main administration dashboard features including:
+  * Import/create new projects.
+  * Show up the list of registred projects.
+  * Manage new analysis tasks.
+  * Show up the analysis tasks status.
+  * Show up the list of metric-providers.
+  * Manage its own token authorities.
+  * Show up the stack traces.
+* ADMIN ROLE: The admin profile is the super-user of the admini-ui which is enable to get access to almost all the features come with the administration dashboard, including:
+  * Import/create new projects.
+  * Show up the list of registred projects.
+  * Manage new analysis tasks.
+  * Show up the analysis tasks status.
+  * Show up the list of metric-providers.
+  * Manage the admin-ui users and their roles.
+  * Monitor the workers and their analysis tasks.
+  * Manage configuration properties.
+  * Show up the stack traces.
+
 ![users-management-view](./screenshots/users-management-view.png)
 
 ### The Workers feature
-The workers view is dedicated to the dashboard administrators which allow them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section illustres the metric-platform's available workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a worker to be avalaible
+The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a worker to be avalaible
 
 ![workers-view](./screenshots/workers-view.png)
 
