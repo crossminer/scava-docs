@@ -29,7 +29,8 @@ The second operation provides an extra-options to customize the project creation
 Once the project has been registred, it's possible to configure inside it some analysis tasks. A analisis task is consist of:
 * Label name: the analysis task name.
 * Task type: the scheduling tasks execution mechanism which could be:
-  * Single Execution: which allow to run a task between a start date and an end date.
+  * Single Execution: which allows to execute
+ a task between a start date and an end date.
   * Monitoring Execution: which permits to run a task from a start date until the current date then to schedule the task execution each new day.
 * Start date: the start time range of the analysis process.
 * End date: the end time range of the analysis process.
@@ -40,7 +41,6 @@ Once the project has been registred, it's possible to configure inside it some a
 These tasks will be executed later to compute/calculate some metrics that will be used to measure the quality of the OSS projects during various period of time.
 
 ![project-config-view](./screenshots/project-config-view.png)
-
 
 ### The Users management feature
 The Users view allows to manage the differents users of the the administration dashboards. It provides three levels of roles:
@@ -71,6 +71,10 @@ The Users view allows to manage the differents users of the the administration d
   * Show up the stack traces.
 
 ![users-management-view](./screenshots/users-management-view.png)
+
+### The profile view
+Both the user and the project manager profiles have the ability to edit its own account and manage the token authorities section to generate a  kind of a token authorities assigned and available only on his profile.
+![profile-view](./screenshots/profile-view.png)
 
 ### The Workers feature
 The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a worker to be avalaible
