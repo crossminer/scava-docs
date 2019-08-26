@@ -5,7 +5,7 @@ The SCAVA user guide provide general instruction to analyse open sources reposit
 [TODO] Overivew  Required
 
 ## [Platform Administration and Project Analysis](administration/index.md)
-The SCAVA Administration application provide services to analyse  open source software projects repository and provide several general administration feature including user managements services and platform configuration servicies.
+The SCAVA Administration application provide services to analyse  open source software projects repository and provide several general administration feature including user managements services and platform configuration services.
 
 ## [Visualisation Dashboard](dashboard/index.md)
 This Visualisation Dashboard guide describes the different dashboards that are available with the platform.
