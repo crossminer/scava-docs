@@ -26,7 +26,7 @@ If your project is hosted on an OSS forge, you can simply paste the URL on the f
 The second operation provides an extra-options to customize the project creation alongside to the metadata available from differents related sources, eg., communication channels and bug tracking systems.
 ![create-project-view](./screenshots/create-project-view.png)
 
-Once the project has been registred, it's possible to configure inside it some analysis tasks. A analisis task is consist of:
+Once the project has been registred, it's possible to configure inside it some analysis tasks. An analysis task is consist of:
 * Label name: the analysis task name.
 * Task type: the scheduling tasks execution mechanism which could be:
   * Single Execution: which allows to execute
