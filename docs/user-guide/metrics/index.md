@@ -4625,7 +4625,7 @@ These factoids are related to communication channels.
 - **Short name**: factoid.newsgroups.channelusage
 - **Friendly name**: Newsgroup Channel Usage
 
-This plugin generates the factoid regarding usage data for newsgroups. For example, the total number of new articles, bugs or threads per year. 
+This plugin generates the factoid regarding usage data for newsgroups. For example, the total number of new articles or threads per year. 
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.articles`, `org.eclipse.scava.metricprovider.historic.newsgroups.newthreads`
 
