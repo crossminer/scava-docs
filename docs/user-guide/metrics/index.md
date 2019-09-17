@@ -12,7 +12,7 @@ The following Historic Metric Providers are associated with Issue trackers
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.bugs
+#### [org.eclipse.scava.metricprovider.historic.bugs.bugs](#org.eclipse.scava.metricprovider.historic.bugs.bugs)
 - **Short name**: historic.bugs.bugs
 - **Friendly name**: Number of bugs per day per bug tracker
 
@@ -56,7 +56,7 @@ This metric computes the number of bugs per day for each bug tracker seperately.
 	- 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.comments
+#### [org.eclipse.scava.metricprovider.historic.bugs.comments](#org.eclipse.scava.metricprovider.historic.bugs.comments)
 - **Short name**: historic.bugs.comments
 - **Friendly name**: Number of bug comments per day per bug tracker
 
@@ -87,7 +87,7 @@ This metric computes the number of bug comments submitted by the community (user
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.emotions
+#### [org.eclipse.scava.metricprovider.historic.bugs.emotions](#org.eclipse.scava.metricprovider.historic.bugs.emotions)
 - **Short name**: historic.bugs.emotions
 - **Friendly name**: Number of emotions per day per bug tracker
 
@@ -127,7 +127,7 @@ This metric computes the emotional dimensions present in bug comments submitted 
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.newbugs
+#### [org.eclipse.scava.metricprovider.historic.bugs.newbugs](#org.eclipse.scava.metricprovider.historic.bugs.newbugs)
 - **Short name**: historic.bugs.newbugs
 - **Friendly name**: Number of new bugs per day per bug tracker
 
@@ -158,7 +158,7 @@ This metric computes the number of new bugs reported by the community (users) pe
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.newusers
+#### [org.eclipse.scava.metricprovider.historic.bugs.newusers](#org.eclipse.scava.metricprovider.historic.bugs.newusers)
 - **Short name**: historic.bugs.newusers
 - **Friendly name**: Number of new users per day per bug tracker
 
@@ -188,7 +188,7 @@ This metric computes the number of new users per day  for each bug tracker seper
 	- `id`	bugs.newUsers
 
 ------
-#### org.eclipse.scava.metricprovider.historic.bugs.opentime
+#### [org.eclipse.scava.metricprovider.historic.bugs.opentime](#org.eclipse.scava.metricprovider.historic.bugs.opentime)
 - **Short name**: historic.bugs.opentime
 - **Friendly name**: Average duration to close an open bug
 
@@ -211,7 +211,7 @@ This metric computes the average duration between creating and closing bugs. For
 	- `id`	bugs.bugOpenTime-bugs
 
 ------
-#### org.eclipse.scava.metricprovider.historic.bugs.patches
+#### [org.eclipse.scava.metricprovider.historic.bugs.patches](#org.eclipse.scava.metricprovider.historic.bugs.patches)
 - **Short name**: historic.bugs.patches
 - **Friendly name**: Number of bug patches per day
 
@@ -242,7 +242,7 @@ This class computes the number of bug patches per day, for each bug tracker sepe
 	- `id`	bugs.patches
 
 ------
-#### org.eclipse.scava.metricprovider.historic.bugs.requestsreplies
+#### [org.eclipse.scava.metricprovider.historic.bugs.requestsreplies](#org.eclipse.scava.metricprovider.historic.bugs.requestsreplies)
 - **Short name**: historic.bugs.requestsreplies
 - **Friendly name**: Number of request and replies in bug comments per bug tracker
 
@@ -281,7 +281,7 @@ This metric computes the number of requests and replies realting to comments pos
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.requestsreplies.average
+#### [org.eclipse.scava.metricprovider.historic.bugs.requestsreplies.average](#org.eclipse.scava.metricprovider.historic.bugs.requestsreplies.average)
 - **Short name**: historic.bugs.requestsreplies.average
 - **Friendly name**: Average number of requests and replies in bug comments per bug tracker
 
@@ -318,7 +318,7 @@ This metric computes the average number of bug comments considered as request an
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.responsetime
+#### [org.eclipse.scava.metricprovider.historic.bugs.responsetime](#org.eclipse.scava.metricprovider.historic.bugs.responsetime)
 - **Short name**: historic.bugs.responsetime
 - **Friendly name**: Average response time to open bugs per bug tracker
 
@@ -348,7 +348,7 @@ This metric computes the average time in which the community (users) responds to
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.sentiment
+#### [org.eclipse.scava.metricprovider.historic.bugs.sentiment](#org.eclipse.scava.metricprovider.historic.bugs.sentiment)
 - **Short name**: historic.bugs.sentiment
 - **Friendly name**: Overall sentiment per bug tracker 
 
@@ -376,7 +376,7 @@ This metric computes the overall sentiment per bug tracker up to the processing 
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.severity
+#### [org.eclipse.scava.metricprovider.historic.bugs.severity](#org.eclipse.scava.metricprovider.historic.bugs.severity)
 - **Short name**: historic.bugs.severity
 - **Friendly name**: Number of bugs per severity level per bug tracker
 
@@ -410,7 +410,7 @@ This metric computes the number of severity levels for bugs submitted by the com
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus
+#### [org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus](#org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus)
 - **Short name**: historic.bugs.severitybugstatus
 - **Friendly name**: Number of each bug status per bug severity level 
 
@@ -463,7 +463,7 @@ This metric computes the total number and percentage of each bug status per seve
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime
+#### [org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime](#org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime)
 - **Short name**: historic.bugs.severityresponsetime
 - **Friendly name**: Average response time to bugs per severity level per day
 
@@ -492,7 +492,7 @@ This metric computes the average time in which the community (users) responds to
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.severitysentiment
+#### [org.eclipse.scava.metricprovider.historic.bugs.severitysentiment](#org.eclipse.scava.metricprovider.historic.bugs.severitysentiment)
 - **Short name**: historic.bugs.severitysentiment
 - **Friendly name**: Average sentiment per bugs severity level per day
 
@@ -527,7 +527,7 @@ This metric computes for each bug severity level, the average sentiment, sentime
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.status
+#### [org.eclipse.scava.metricprovider.historic.bugs.status](#org.eclipse.scava.metricprovider.historic.bugs.status)
 - **Short name**: historic.bugs.status
 - **Friendly name**: Number of bugs per bug status per day 
 
@@ -561,7 +561,7 @@ This metric computes the total number of bugs that corresponds to each bug statu
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.topics
+#### [org.eclipse.scava.metricprovider.historic.bugs.topics](#org.eclipse.scava.metricprovider.historic.bugs.status)
 - **Short name**: historic.bugs.topics
 - **Friendly name**: Labels of topic clusters in bug comments per bug tracker 
 
@@ -584,7 +584,7 @@ This metric computes the labels of topic clusters extracted from bug comments su
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs
+#### [org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs](#org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs)
 - **Short name**: historic.bugs.unansweredbugs
 - **Friendly name**: Number of unanswered bugs per day 
 
@@ -605,7 +605,7 @@ This metric computes the number of unanswered bugs per day.
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.bugs.users
+#### [org.eclipse.scava.metricprovider.historic.bugs.users](#org.eclipse.scava.metricprovider.historic.bugs.users)
 - **Short name**: historic.bugs.users
 - **Friendly name**: Number of users, active and inactive per day per bug tracker
 
@@ -3015,10 +3015,9 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
  - CommentTopicId : 
    - `String` bugId
    - `String`commentId
- 
+
  - ArticleTopicId :
    - `long` articleNumber
-  
 
 ------
 
