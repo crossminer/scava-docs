@@ -645,7 +645,7 @@ The following Historic Metric Providers are associated with newsgroups.
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.articles
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.articles](#org.eclipse.scava.metricprovider.historic.newsgroups.articles)
 - **Short name**: historic.newsgroups.articles
 - **Friendly name**: Number of articles per day per news group
 
@@ -674,7 +674,7 @@ This metric computes the number of articles submitted by the community (users) p
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.emotions
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.emotions](#org.eclipse.scava.metricprovider.historic.newsgroups.emotions)
 - **Short name**: historic.newsgroups.emotions
 - **Friendly name**: Number of emotions per day per newsgroup 
 
@@ -714,7 +714,7 @@ This metric computes the emotional dimensions present in newsgroup comments subm
 	
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.newthreads
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.newthreads](#org.eclipse.scava.metricprovider.historic.newsgroups.newthreads)
 - **Short name**: historic.newsgroups.newthreads
 - **Friendly name**: Number of new threads per day per newsgroup
 
@@ -743,7 +743,7 @@ This metric computes the number of new threads submitted by the community (users
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.newusers
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.newusers](#org.eclipse.scava.metricprovider.historic.newsgroups.newusers)
 - **Short name**: historic.newsgroups.newusers
 - **Friendly name**: Number of new users per day per newsgroup
 
@@ -772,7 +772,7 @@ This metric computes the number of new users per day for each newsgroup seperate
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies](#org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies)
 - **Short name**: historic.newsgroups.requestsreplies
 - **Friendly name**: Number of requests and replies in articles per day 
 
@@ -807,7 +807,7 @@ This metric computes the number of requests and replies in newsgroup articles su
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average](#org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average)
 - **Short name**: historic.newsgroups.requestsreplies.average
 - **Friendly name**: Average number of articles, requests and replies per day 
 
@@ -833,7 +833,7 @@ This metric computes the average number of newsgroup articles, including the num
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.responsetime
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.responsetime](#org.eclipse.scava.metricprovider.historic.newsgroups.responsetime)
 - **Short name**: historic.newsgroups.responsetime
 - **Friendly name**: Average response time to threads per day per newsgroup
 
@@ -862,7 +862,7 @@ This metric computes the average time in which the community responds to open th
 	- 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.sentiment
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.sentiment](#org.eclipse.scava.metricprovider.historic.newsgroups.sentiment)
 - **Short name**: historic.newsgroups.sentiment
 - **Friendly name**: Overall sentiment of newsgroup articles 
 
@@ -890,7 +890,7 @@ This metric computes the overall sentiment per newsgroup repository up to the pr
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.severity
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.severity](#org.eclipse.scava.metricprovider.historic.newsgroups.severity)
 - **Short name**: historic.newsgroups.severity
 - **Friendly name**: Number of each severity level in newsgroup threads per day 
 
@@ -925,7 +925,7 @@ This metric computes the number of each severity levels in threads submitted eve
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime](#org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime)
 - **Short name**: historic.newsgroups.severityresponsetime
 - **Friendly name**: Average response time to threads per severity level per day
 
@@ -959,7 +959,7 @@ This metric computes the average response time for newsgroup threads submitted e
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment](#org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment)
 - **Short name**: historic.newsgroups.severitysentiment
 - **Friendly name**: Average sentiment in threads per severity level per day
 
@@ -995,7 +995,7 @@ This metric computes the average sentiment, the sentiment at the beginning of th
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.threads
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.threads](#org.eclipse.scava.metricprovider.historic.newsgroups.threads)
 - **Short name**: historic.newsgroups.threads
 - **Friendly name**: Number of threads per day per newsgroup
 
@@ -1037,7 +1037,7 @@ This metric computes the number of threads per day for each newsgroup separately
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.topics
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.topics](#org.eclipse.scava.metricprovider.historic.newsgroups.topics)
 - **Short name**: historic.newsgroups.topics
 - **Friendly name**: Labels of newsgroup topics per newsgroup
 
@@ -1060,7 +1060,7 @@ This metric computes the labels of topics clusters in articles submitted by the 
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads](#org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads)
 - **Short name**: historic.newsgroups.unansweredthreads
 - **Friendly name**: Number of unanswered threads per day per newsgroup
 
@@ -1087,7 +1087,7 @@ This metric computes the number of unanswered threads per day for each newsgroup
 
 ------
 
-#### org.eclipse.scava.metricprovider.historic.newsgroups.users
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.users](#org.eclipse.scava.metricprovider.historic.newsgroups.users)
 - **Short name**: historic.newsgroups.users
 - **Friendly name**: Number of users, active and inactive per day per newsgroup
 
@@ -1258,7 +1258,7 @@ Churn in the last two weeks: aggregates the number of commits over a 14-day slid
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnInTwoWeeks.historic
+#### [rascal.generic.churn.churnInTwoWeeks.historic](#rascal.generic.churn.churnInTwoWeeks.historic)
 - **Short name**: churnInTwoWeeks.historic
 - **Friendly name**: Historic churnInTwoWeeks
 - **Historic version of**: rascal.generic.churn.churnInTwoWeeks
@@ -1269,7 +1269,7 @@ Churn in the last two weeks: aggregates the lines of code added and deleted over
 - <u>Returns</u>: `int`
 
 ------
-#### org.eclipse.scava.metricprovider.historic.commits.messages.topics
+#### [org.eclipse.scava.metricprovider.historic.commits.messages.topics](#org.eclipse.scava.metricprovider.historic.commits.messages.topics)
 - **Short name**: historic.commits.messages.topics
 - **Friendly name**: Labels of topics in commits messages analyzed in the last 30 days
 
@@ -1302,7 +1302,7 @@ This metric computes the labels of topic clusters in commits messages pushed by 
 The following Historic Metric Providers are associated with documentation analyses.
 
 ------
-#### org.eclipse.scava.metricprovider.historic.documentation.readability
+#### [org.eclipse.scava.metricprovider.historic.documentation.readability](#org.eclipse.scava.metricprovider.historic.documentation.readability)
 - **Short name**: historic.documentation.readability
 - **Friendly name**: Documentation readability Historic Metric
 
@@ -1336,7 +1336,7 @@ Historic metric that stores the evolution of the documentation readability
 	- `id`	documentation.readability
 
 ------
-#### org.eclipse.scava.metricprovider.historic.documentation.sentiment
+#### [org.eclipse.scava.metricprovider.historic.documentation.sentiment](#org.eclipse.scava.metricprovider.historic.documentation.sentiment)
 - **Short name**: historic.documentation.sentiment
 - **Friendly name**: Documentation sentiment polarity Historic Metric
 
@@ -1926,7 +1926,7 @@ The following Transient Metric Providers are associated with Issue trackers.
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.activeusers
+#### [org.eclipse.scava.metricprovider.trans.bugs.activeusers](#org.eclipse.scava.metricprovider.trans.bugs.activeusers)
 - **Short name**: trans.bugs.activeusers
 - **Friendly name**: Number of users with new bug comment in the last 15 days 
 
@@ -1960,7 +1960,7 @@ This metric computes the number of users that submitted new bug comments in the 
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.bugmetadata
+#### [org.eclipse.scava.metricprovider.trans.bugs.bugmetadata](#org.eclipse.scava.metricprovider.trans.bugs.bugmetadata)
 - **Short name**: trans.bugs.bugmetadata
 - **Friendly name**: Bug header metadata 
 
@@ -2005,7 +2005,7 @@ This metric computes various metadata in bug header, i.e. priority, status, oper
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.comments
+#### [org.eclipse.scava.metricprovider.trans.bugs.comments](#org.eclipse.scava.metricprovider.trans.bugs.comments)
 - **Short name**: trans.bugs.comments
 - **Friendly name**: Number of bug comments
 
@@ -2028,7 +2028,7 @@ This metric computes the number of bug comments, per bug tracker.
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.contentclasses
+#### [org.eclipse.scava.metricprovider.trans.bugs.contentclasses](#org.eclipse.scava.metricprovider.trans.bugs.contentclasses)
 - **Short name**: trans.bugs.contentclasses
 - **Friendly name**: Content classes in bug comments
 
@@ -2056,7 +2056,7 @@ This metric computes the frequency and percentage of content Classes in bug comm
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies
+#### [org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies)
 - **Short name**: trans.bugs.dailyrequestsreplies
 - **Friendly name**: Number of bug comments, requests and replies per day
 
@@ -2084,7 +2084,7 @@ This metric computes the number of bug comments, including those regarded as req
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.emotions
+#### [org.eclipse.scava.metricprovider.trans.bugs.emotions](#org.eclipse.scava.metricprovider.trans.bugs.emotions)
 - **Short name**: trans.bugs.emotions
 - **Friendly name**: Emotions in bug comments
 
@@ -2115,7 +2115,7 @@ This metric computes the emotional dimensions in bug comments, per bug tracker. 
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies
+#### [org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies)
 - **Short name**: trans.bugs.hourlyrequestsreplies
 - **Friendly name**: Number of bug comments, requests and replies per hour
 
@@ -2142,7 +2142,7 @@ This metric computes the number of bug comments, including those regarded as req
 	- `float`	percentageOfReplies
 
 ------
-#### org.eclipse.scava.metricprovider.trans.bugs.migrationissues
+#### [org.eclipse.scava.metricprovider.trans.bugs.migrationissues](#org.eclipse.scava.metricprovider.trans.bugs.migrationissues)
 - **Short name**: trans.bugs.migrationissues
 - **Friendly name**: Migration Issues Detection in Bug Trackers
 
@@ -2165,7 +2165,7 @@ This metric detects migration issues in Bug Tracking Systems.
 	- `List<String>`	changes
 
 ------
-#### org.eclipse.scava.metricprovider.trans.bugs.newbugs
+#### [org.eclipse.scava.metricprovider.trans.bugs.newbugs](#org.eclipse.scava.metricprovider.trans.bugs.newbugs)
 - **Short name**: trans.bugs.newbugs
 - **Friendly name**: Number of new bugs
 
@@ -2187,7 +2187,7 @@ This metric computes the number of new bugs over time, per bug tracker.
 	- `int`	cumulativeNumberOfBugs
 
 ------
-#### org.eclipse.scava.metricprovider.trans.bugs.patches
+#### [org.eclipse.scava.metricprovider.trans.bugs.patches](#org.eclipse.scava.metricprovider.trans.bugs.patches)
 - **Short name**: trans.bugs.patches
 - **Friendly name**: Number of patches per bug
 
@@ -2210,7 +2210,7 @@ This metric computes the number of patches submitted by the community (users) fo
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.references
+#### [org.eclipse.scava.metricprovider.trans.bugs.references](#org.eclipse.scava.metricprovider.trans.bugs.references)
 - **Short name**: trans.bugs.references
 - **Friendly name**: Bugs References
 
@@ -2240,7 +2240,7 @@ This metrics search for references of commits or bugs within comments comming fr
 	
 ------
 
-#### org.eclipse.scava.metricprovider.trans.bugs.requestsreplies
+#### [org.eclipse.scava.metricprovider.trans.bugs.requestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.requestsreplies)
 - **Short name**: trans.bugs.requestreplies
 - **Friendly name**: Bug statistics (answered?, response time)
 
@@ -2272,7 +2272,7 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.activeusers 
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.activeusers ](#org.eclipse.scava.metricprovider.trans.newsgroups.activeusers )
 - **Short name**: trans.newsgroups.activeusers
 - **Friendly name**: Number of users with new comment in the last 15 days
 
@@ -2307,7 +2307,7 @@ This metric computes the number of users that submitted news comments in the las
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.articles
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.articles](#org.eclipse.scava.metricprovider.trans.newsgroups.articles)
 - **Short name**: trans.newsgroups.articles
 - **Friendly name**: Number of articles per newsgroup
 
@@ -2330,7 +2330,7 @@ This metric computes the number of articles, per newsgroup.
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.contentclasses
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.contentclasses](#org.eclipse.scava.metricprovider.trans.newsgroups.contentclasses)
 - **Short name**: trans.newsgroups.contentclasses
 - **Friendly name**: Content classes in newsgroup articles
 
@@ -2359,7 +2359,7 @@ This metric computes the content classes in newgroup articles, per newsgroup.
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies)
 - **Short name**: trans.newsgroups.dailyrequestsreplies
 - **Friendly name**: Number of articles, requests and replies per day
 
@@ -2386,7 +2386,7 @@ This metric computes the number of articles, including those regarded as request
 
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.emotions
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.emotions](#org.eclipse.scava.metricprovider.trans.newsgroups.emotions)
 - **Short name**: trans.newsgroups.emotions
 - **Friendly name**: Emotions in newsgroup articles
 
@@ -2418,7 +2418,7 @@ This metric computes the emotional dimensions in newsgroup articles, per newsgro
 	
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies)
 - **Short name**: trans.newsgroups.hourlyrequestsreplies
 - **Friendly name**: Number of articles, requests and replies per hour
 
@@ -2444,7 +2444,7 @@ This metric computes the number of articles, including those regarded as request
 	- `float`	percentageOfReplies
 	
 ------
-#### org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues](#org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues)
 - **Short name**: trans.newsgroups.migrationissues
 - **Friendly name**: Migration Issues Detection in Communication Channels
 
@@ -2467,7 +2467,7 @@ This metric detects migration issues in Communication Channels articles.
 	- `List<String>`	changes
 	
 ------
-#### org.eclipse.scava.metricprovider.trans.newsgroups.sentiment
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.sentiment](#org.eclipse.scava.metricprovider.trans.newsgroups.sentiment)
 - **Short name**: trans.newsgroups.sentiment
 - **Friendly name**: Average sentiment in newsgroup threads
 
@@ -2494,7 +2494,7 @@ The metric computes the average sentiment, including sentiment at the beginning 
 	
 	------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.threads
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.threads](#org.eclipse.scava.metricprovider.trans.newsgroups.threads)
 - **Short name**: trans.newsgroups.threads
 - **Friendly name**: Assigns newsgroup articles to threads
 
@@ -2536,7 +2536,7 @@ This metric holds information for assigning newsgroup articles to threads. The t
 	
 ------
 
-#### org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies)
 - **Short name**: trans.newsgroups.threadsrequestsreplies
 - **Friendly name**: Thread statistics (answered?, response time)
 
@@ -2566,7 +2566,7 @@ The metric computes for each thread whether it is answered. If so, it computes t
 The following Transient Metric Providers are associated with documentation analyses.
 
 ------
-#### org.eclipse.scava.metricprovider.trans.documentation
+#### [org.eclipse.scava.metricprovider.trans.documentation](#org.eclipse.scava.metricprovider.trans.documentation)
 - **Short name**: trans.documentation
 - **Friendly name**: Documentation processing
 
@@ -2600,7 +2600,7 @@ This metric process the files returned from the documentation readers and extrac
 	- `String`	nextUpdateDate
 
 ------
-#### org.eclipse.scava.metricprovider.trans.documentation.classification
+#### [org.eclipse.scava.metricprovider.trans.documentation.classification](#org.eclipse.scava.metricprovider.trans.documentation.classification)
 - **Short name**: trans.documentation.classification
 - **Friendly name**: Documentation classification
 
@@ -2622,7 +2622,7 @@ This metric determines which type of documentation is present
 	- `List<String>`	types
 
 ------
-#### org.eclipse.scava.metricprovider.trans.documentation.detectingcode
+#### [org.eclipse.scava.metricprovider.trans.documentation.detectingcode](#org.eclipse.scava.metricprovider.trans.documentation.detectingcode)
 - **Short name**: trans.documentation.detectingcode
 - **Friendly name**: Documentation detection of code
 
@@ -2645,7 +2645,7 @@ This metric process the plain text from documentation and detects the portions c
 	- `String`	code
 
 ------
-#### org.eclipse.scava.metricprovider.trans.documentation.plaintext
+#### [org.eclipse.scava.metricprovider.trans.documentation.plaintext](#org.eclipse.scava.metricprovider.trans.documentation.plaintext)
 - **Short name**: trans.documentation.plaintext
 - **Friendly name**: Documentation plain text processor
 
@@ -2667,7 +2667,7 @@ This metric process the body of each documentation entry and extracts the plain 
 	- `List<String>`	plainText
 
 ------
-#### org.eclipse.scava.metricprovider.trans.documentation.readability
+#### [org.eclipse.scava.metricprovider.trans.documentation.readability](#org.eclipse.scava.metricprovider.trans.documentation.readability)
 - **Short name**: trans.documentation.readability
 - **Friendly name**: Documentation calculation of readability
 
@@ -2689,7 +2689,7 @@ This metric calculates the readability of each documentation entry
 	- `double`	readability
 
 ------
-#### org.eclipse.scava.metricprovider.trans.documentation.sentiment
+#### [org.eclipse.scava.metricprovider.trans.documentation.sentiment](#org.eclipse.scava.metricprovider.trans.documentation.sentiment)
 - **Short name**: trans.documentation.sentiment
 - **Friendly name**: Documentation Sentiment Analysis
 
@@ -2717,7 +2717,7 @@ This metric calculates the sentiment polarity of each documentation entry
 The following Transient Metric Providers are associated with Natural Language Processing tools.
 
 ------
-#### org.eclipse.scava.metricprovider.trans.detectingcode
+#### [org.eclipse.scava.metricprovider.trans.detectingcode](#org.eclipse.scava.metricprovider.trans.detectingcode)
 - **Short name**: trans.detectingcode
 - **Friendly name**: Distinguishes between code and natural language
 
@@ -2756,7 +2756,7 @@ This metric determines the parts of a bug comment or a newsgroup article that co
 	- `String`	code
 	
 ------
-#### org.eclipse.scava.metricprovider.trans.emotionclassification
+#### [org.eclipse.scava.metricprovider.trans.emotionclassification](#org.eclipse.scava.metricprovider.trans.emotionclassification)
 - **Short name**: trans.emotionclassification
 - **Friendly name**: Emotion classifier
 
@@ -2792,7 +2792,7 @@ This metric computes the emotions present in each bug comment, newsgroup article
 	- `String`	emotions
 	
 ------
-#### org.eclipse.scava.metricprovider.trans.plaintextprocessing
+#### [org.eclipse.scava.metricprovider.trans.plaintextprocessing](#org.eclipse.scava.metricprovider.trans.plaintextprocessing)
 - **Short name**: trans.plaintextprocessing
 - **Friendly name**: Plain text processing
 
@@ -2831,7 +2831,7 @@ This metric preprocess each bug comment, newsgroup article or forum post into a 
   - `boolean`	hadReplies
 
 ------
-#### org.eclipse.scava.metricprovider.trans.requestreplyclassification
+#### [org.eclipse.scava.metricprovider.trans.requestreplyclassification](#org.eclipse.scava.metricprovider.trans.requestreplyclassification)
 - **Short name**: trans.requestreplyclassification
 - **Friendly name**: Request/Reply classification
 
@@ -2870,7 +2870,7 @@ This metric computes if a bug comment, newsgroup article or forum post is a requ
   - `String`	date
 
 ------
-#### org.eclipse.scava.metricprovider.trans.sentimentclassification
+#### [org.eclipse.scava.metricprovider.trans.sentimentclassification](#org.eclipse.scava.metricprovider.trans.sentimentclassification)
 - **Short name**: trans.sentimentclassification
 - **Friendly name**: Sentiment classification
 
@@ -2906,7 +2906,7 @@ This metric computes the sentiment of each bug comment, newsgroup article or for
   - `String`	polarity (`negative (-1)`, `neutral (0)` or `positive (1)`)
 
 ------
-#### org.eclipse.scava.metricprovider.trans.severityclassification
+#### [org.eclipse.scava.metricprovider.trans.severityclassification](#org.eclipse.scava.metricprovider.trans.severityclassification)
 - **Short name**: trans.severityclassification
 - **Friendly name**: Severity classification
 
@@ -2966,7 +2966,7 @@ This metric computes the severity of each bug comment, newsgroup article or foru
   - `int`	charFivegrams
 
 ------
-#### org.eclipse.scava.metricprovider.trans.topics
+#### [org.eclipse.scava.metricprovider.trans.topics](#org.eclipse.scava.metricprovider.trans.topics)
 - **Short name**: trans.topics
 - **Friendly name**: Topic clustering
 
@@ -3026,7 +3026,7 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 These metrics are related to the commits and committers of a project.
 
 ------
-#### org.eclipse.scava.metricprovider.trans.commits.message.plaintext
+#### [org.eclipse.scava.metricprovider.trans.commits.message.plaintext](#org.eclipse.scava.metricprovider.trans.commits.message.plaintext)
 - **Short name**: trans.commits.message.plaintext
 - **Friendly name**: Commits message plain text
 
@@ -3048,7 +3048,7 @@ This metric preprocess each commit message to get a split plain text version.
 	- `List<String>`	plainText
 
 ------
-#### org.eclipse.scava.metricprovider.trans.commits.messagereferences
+#### [org.eclipse.scava.metricprovider.trans.commits.messagereferences](#org.eclipse.scava.metricprovider.trans.commits.messagereferences)
 - **Short name**: trans.commits.messagereferences
 - **Friendly name**: Commits Messages References
 
@@ -3074,7 +3074,7 @@ This metrics search for references of commits or bugs within the messages of com
 	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
 
 ------
-#### org.eclipse.scava.metricprovider.trans.commits.message.topics
+#### [org.eclipse.scava.metricprovider.trans.commits.message.topics](#org.eclipse.scava.metricprovider.trans.commits.message.topics)
 - **Short name**: trans.commits.message.topics
 - **Friendly name**: Commits Messages Topic Clustering
 
@@ -4441,7 +4441,7 @@ Retrieves all the Maven dependencies.
 These metrics facilitate data indexing unto the platform.
 
 
-#### org.eclipse.scava.metricprovider.trans.indexing.preparation 
+#### [org.eclipse.scava.metricprovider.trans.indexing.preparation](#org.eclipse.scava.metricprovider.trans.indexing.preparation) 
 - **Short name**: index preparation transmetric
 - **Friendly name**: index preparation
 
@@ -4461,7 +4461,7 @@ This identifies the metric(s) that have been chosen to be executed by the user i
 	- `List<String>`	metricIdentifiers 
 
 ------
-#### org.eclipse.scava.metricprovider.indexing.bugs
+#### [org.eclipse.scava.metricprovider.indexing.bugs](#org.eclipse.scava.metricprovider.indexing.bugs)
 - **Short name**: bug indexing metric
 - **Friendly name**: bug tracking system indexer
 
@@ -4472,7 +4472,7 @@ This metric prepares and indexes documents relating to bug tracking systems.
 - <u>Returns</u> :	`BugsIndexingMetric` 
 
 ------
-#### org.eclipse.scava.metricprovider.indexing.commits
+#### [org.eclipse.scava.metricprovider.indexing.commits](#org.eclipse.scava.metricprovider.indexing.commits)
 - **Short name**: metricprovider.indexing.commits
 - **Friendly name**: Commits indexer
 
@@ -4483,7 +4483,7 @@ This metric prepares and indexes documents relating to commits.
 - <u>Returns</u> :	`CommitsIndexingMetric` 
 
 ------
-#### org.eclipse.scava.metricprovider.indexing.communicationchannels
+#### [org.eclipse.scava.metricprovider.indexing.communicationchannels](#org.eclipse.scava.metricprovider.indexing.communicationchannels)
 - **Short name**: communication channels indexing metric
 - **Friendly name**: communication channels indexer
 
@@ -4494,7 +4494,7 @@ This metric prepares and indexes documents relating to communication channels.
 - <u>Returns</u> :	`CommunicationChannelsIndexingMetric` 
 
 ------
-#### org.eclipse.scava.metricprovider.indexing.documentation
+#### [org.eclipse.scava.metricprovider.indexing.documentation](#org.eclipse.scava.metricprovider.indexing.documentation)
 - **Short name**: metricprovider.indexing.documentation
 - **Friendly name**: Documentation indexer
 
@@ -4516,7 +4516,7 @@ These factoids are related to bug tracking systems.
 
 ------
 
-#### org.eclipse.scava.factoid.bugs.channelusage
+#### [org.eclipse.scava.factoid.bugs.channelusage](#org.eclipse.scava.factoid.bugs.channelusage)
 - **Short name**: factoid.bugs.channelusage
 - **Friendly name**: Bug Tracker Usage data
 
@@ -4525,7 +4525,7 @@ This plugin generates the factoid regarding usage data for bug trackers. For exa
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.newbugs`, `org.eclipse.scava.metricprovider.historic.bugs.comments`, `org.eclipse.scava.metricprovider.historic.bugs.patches`
 
 ------
-#### org.eclipse.scava.factoid.bugs.emotion
+#### [org.eclipse.scava.factoid.bugs.emotion](#org.eclipse.scava.factoid.bugs.emotion)
 - **Short name**: factoid.bugs.emotion
 - **Friendly name**: Bug Tracker Emotions
 
@@ -4534,7 +4534,7 @@ This plugin generates the factoid regarding emotions for bug trackers. For examp
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.newbugs`, `org.eclipse.scava.metricprovider.historic.bugs.comments`, `org.eclipse.scava.metricprovider.historic.bugs.patches`
 
 ------
-#### org.eclipse.scava.factoid.bugs.hourly
+#### [org.eclipse.scava.factoid.bugs.hourly](#org.eclipse.scava.factoid.bugs.hourly)
 - **Short name**: factoid.bugs.hourly
 - **Friendly name**: Bug Tracker hourly data
 
@@ -4543,7 +4543,7 @@ This plugin generates the factoid regarding hourly statistics for bug trackers. 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies`
 
 ------
-#### org.eclipse.scava.factoid.bugs.responsetime
+#### [org.eclipse.scava.factoid.bugs.responsetime](#org.eclipse.scava.factoid.bugs.responsetime)
 - **Short name**: factoid.bugs.responsetime
 - **Friendly name**: Bug Tracker Response Time
 
@@ -4552,7 +4552,7 @@ This plugin generates the factoid regarding response time for bug trackers. This
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.responsetime`
 
 ------
-#### org.eclipse.scava.factoid.bugs.sentiment
+#### [org.eclipse.scava.factoid.bugs.sentiment](#org.eclipse.scava.factoid.bugs.sentiment)
 - **Short name**: factoid.bugs.sentiment
 - **Friendly name**: Bug Tracker Sentiment
 
@@ -4561,7 +4561,7 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.sentiment`
 
 ------
-#### org.eclipse.scava.factoid.bugs.severity
+#### [org.eclipse.scava.factoid.bugs.severity](#org.eclipse.scava.factoid.bugs.severity)
 - **Short name**: factoid.bugs.severity
 - **Friendly name**: Bug Tracker Severity
 
@@ -4570,7 +4570,7 @@ This plugin generates the factoid regarding severity for bug trackers. For examp
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.severity`, `org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus`, `org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime`, `org.eclipse.scava.metricprovider.historic.bugs.severitysentiment`
 
 ------
-#### org.eclipse.scava.factoid.bugs.size
+#### [org.eclipse.scava.factoid.bugs.size](#org.eclipse.scava.factoid.bugs.size)
 - **Short name**: factoid.bugs.size
 - **Friendly name**: Bug Tracker Size
 
@@ -4579,7 +4579,7 @@ This plugin generates the factoid regarding bug size for bug trackers. For examp
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.newbugs`, `org.eclipse.scava.metricprovider.historic.bugs.comments`, `org.eclipse.scava.metricprovider.historic.bugs.patches`
 
 ------
-#### org.eclipse.scava.factoid.bugs.status
+#### [org.eclipse.scava.factoid.bugs.status](#org.eclipse.scava.factoid.bugs.status)
 - **Short name**: factoid.bugs.status
 - **Friendly name**: Bug Tracker Status
 
@@ -4588,7 +4588,7 @@ This plugin generates the factoid regarding bug status for bug trackers. For exa
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.status`
 
 ------
-#### org.eclipse.scava.factoid.bugs.threadlength
+#### [org.eclipse.scava.factoid.bugs.threadlength](#org.eclipse.scava.factoid.bugs.threadlength)
 - **Short name**: factoid.bugs.threadlength
 - **Friendly name**: Bug Tracker Thread Length
 
@@ -4597,7 +4597,7 @@ This plugin generates the factoid regarding bug thread length for bug trackers. 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.bugs`
 
 ------
-#### org.eclipse.scava.factoid.bugs.users
+#### [org.eclipse.scava.factoid.bugs.users](org.eclipse.scava.factoid.bugs.users)
 - **Short name**: factoid.bugs.users
 - **Friendly name**: Bug Tracker Users
 
@@ -4606,7 +4606,7 @@ This plugin generates the factoid regarding users for bug trackers. For example,
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.users`, `org.eclipse.scava.metricprovider.historic.bugs.bugs`
 
 ------
-#### org.eclipse.scava.factoid.bugs.weekly
+#### [org.eclipse.scava.factoid.bugs.weekly](org.eclipse.scava.factoid.bugs.weekly)
 - **Short name**: factoid.bugs.weekly
 - **Friendly name**: Bug Tracker Weekly
 
@@ -4620,7 +4620,7 @@ This plugin generates the factoid regarding weekly user engagements for bug trac
 These factoids are related to communication channels.
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.channelusage
+#### [org.eclipse.scava.factoid.newsgroups.channelusage](#org.eclipse.scava.factoid.newsgroups.channelusage)
 - **Short name**: factoid.newsgroups.channelusage
 - **Friendly name**: Newsgroup Channel Usage
 
@@ -4629,7 +4629,7 @@ This plugin generates the factoid regarding usage data for newsgroups. For examp
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.articles`, `org.eclipse.scava.metricprovider.historic.newsgroups.newthreads`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.emotion
+#### [org.eclipse.scava.factoid.newsgroups.emotion](#org.eclipse.scava.factoid.newsgroups.emotion)
 - **Short name**: factoid.newsgroups.emotion
 - **Friendly name**: Newsgroup Channel Emotion
 
@@ -4638,7 +4638,7 @@ This plugin generates the factoid regarding emotions for newsgroups, such as per
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.emotions`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.hourly
+#### [org.eclipse.scava.factoid.newsgroups.hourly](#org.eclipse.scava.factoid.newsgroups.hourly)
 - **Short name**: factoid.newsgroups.hourly
 - **Friendly name**: Newsgroup Channel hourly data
 
@@ -4647,7 +4647,7 @@ This plugin generates the factoid regarding hourly data for newsgroups, such as 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.responsetime
+#### [org.eclipse.scava.factoid.newsgroups.responsetime](#org.eclipse.scava.factoid.newsgroups.responsetime)
 - **Short name**: factoid.newsgroups.responsetime
 - **Friendly name**: Newsgroup Channel Response Time
 
@@ -4656,7 +4656,7 @@ This plugin generates the factoid regarding response time for newsgroups. This c
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.responsetime`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.sentiment
+#### [org.eclipse.scava.factoid.newsgroups.sentiment](org.eclipse.scava.factoid.newsgroups.sentiment)
 - **Short name**: factoid.newsgroups.sentiment
 - **Friendly name**: Newsgroup Channel Sentiment
 
@@ -4665,7 +4665,7 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.sentiment`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.severity
+#### [org.eclipse.scava.factoid.newsgroups.severity](#org.eclipse.scava.factoid.newsgroups.severity)
 - **Short name**: factoid.newsgroups.severity
 - **Friendly name**: Newsgroup Channel Severity
 
@@ -4674,7 +4674,7 @@ This plugin generates the factoid regarding severity for newsgroups. For example
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime`, `org.eclipse.scava.metricprovider.historic.newsgroups.severity`, `org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.size
+#### [org.eclipse.scava.factoid.newsgroups.size](#org.eclipse.scava.factoid.newsgroups.size)
 - **Short name**: factoid.newsgroups.size
 - **Friendly name**: Newsgroup Channel Size
 
@@ -4683,7 +4683,7 @@ This plugin generates the factoid regarding thread or article size for newsgroup
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.articles`, `org.eclipse.scava.metricprovider.historic.newsgroups.newthreads`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.status
+#### [org.eclipse.scava.factoid.newsgroups.status](#org.eclipse.scava.factoid.newsgroups.status)
 - **Short name**: factoid.newsgroups.status
 - **Friendly name**: Newsgroup Channel Status
 
@@ -4692,7 +4692,7 @@ This plugin generates the factoid regarding thread or article status for newsgro
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads`, `org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies`, `org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.threadlength
+#### [org.eclipse.scava.factoid.newsgroups.threadlength](#org.eclipse.scava.factoid.newsgroups.threadlength)
 - **Short name**: factoid.newsgroups.threadlength
 - **Friendly name**: Newsgroup Channel Thread Length
 
@@ -4701,7 +4701,7 @@ This plugin generates the factoid regarding thread length for newsgroups. For ex
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.threads`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.users
+#### [org.eclipse.scava.factoid.newsgroups.users](#org.eclipse.scava.factoid.newsgroups.users)
 - **Short name**: factoid.newsgroups.users
 - **Friendly name**: Newsgroup Channel Users
 
@@ -4710,7 +4710,7 @@ This plugin generates the factoid regarding users for newsgroups. For example, t
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.users`, `org.eclipse.scava.metricprovider.historic.newsgroups.threads`
 
 ------
-#### org.eclipse.scava.factoid.newsgroups.weekly
+#### [org.eclipse.scava.factoid.newsgroups.weekly](#org.eclipse.scava.factoid.newsgroups.weekly)
 - **Short name**: factoid.newsgroups.weekly
 - **Friendly name**: Newsgroup Channel Weekly
 
