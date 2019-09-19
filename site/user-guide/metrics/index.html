@@ -2702,7 +2702,7 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 <li><strong>Short name</strong>: historic.documentation.sentiment</li>
 <li><strong>Friendly name</strong>: Documentation sentiment polarity Historic Metric</li>
 </ul>
-<p>Historic metric that stores the evolution of the documentation sentiment polarity</p>
+<p>Historic metric that stores the evolution of the documentation sentiment polarity. Sentiment score could be closer to -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment)</p>
 <ul>
 <li>
 <p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.documentation.sentiment</code></p>
@@ -4223,7 +4223,7 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <li><strong>Short name</strong>: trans.newsgroups.sentiment</li>
 <li><strong>Friendly name</strong>: Average sentiment in newsgroup threads</li>
 </ul>
-<p>The metric computes the average sentiment, including sentiment at the beginning and end of each thread, per newsgroup.</p>
+<p>The metric computes the average sentiment, including sentiment at the beginning and end of each thread, per newsgroup. Sentiment polarity value could be closer to -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment)</p>
 <ul>
 <li>
 <p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.threads</code>, <code>org.eclipse.scava.metricprovider.trans.sentimentclassification</code></p>
@@ -4248,21 +4248,14 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 </ul>
 <p><u><em>Additional Information</em></u> :   </p>
 <ul>
-<li>
-<p>ThreadStatistics : </p>
-<ul>
-<li><code>String</code>  newsgroupName</li>
-<li><code>int</code> threadId</li>
-<li><code>float</code>   averageSentiment</li>
-<li><code>String</code>  startSentiment</li>
-<li><code>String</code>  endSentiment</li>
+<li>ThreadStatistics : </li>
+<li><code>String</code>    newsgroupName</li>
+<li><code>int</code>   threadId</li>
+<li><code>float</code> averageSentiment</li>
+<li><code>String</code>    startSentiment</li>
+<li><code>String</code>    endSentiment</li>
 </ul>
-</li>
-<li>
-<p>The sentiment related variables above all represent a <u><strong><em>Polarity</em></strong></u> value.    A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.</p>
 <hr />
-</li>
-</ul>
 <h4 id="orgeclipsescavametricprovidertransnewsgroupsthreads"><a href="#org.eclipse.scava.metricprovider.trans.newsgroups.threads">org.eclipse.scava.metricprovider.trans.newsgroups.threads</a></h4>
 <ul>
 <li><strong>Short name</strong>: trans.newsgroups.threads</li>
@@ -4600,7 +4593,7 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <li><strong>Short name</strong>: trans.documentation.sentiment</li>
 <li><strong>Friendly name</strong>: Documentation Sentiment Analysis</li>
 </ul>
-<p>This metric calculates the sentiment polarity of each documentation entry</p>
+<p>This metric calculates the sentiment polarity of each documentation entry. Sentiment polarity value could be closer to -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment)</p>
 <ul>
 <li>
 <p><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.indexing.preparation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation</code>, <code>org.eclipse.scava.metricprovider.trans.documentation.detectingcode</code></p>
@@ -6848,15 +6841,35 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.newbugs</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.comments</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.patches</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>number of bugs or comments</em> &gt; <em>working days in a year (250)</em>.</li>
+<li><code>3 star</code>  <em>2</em> x <em>number of bugs or comments</em> &gt; <em>working days in a year (250)</em>.</li>
+<li><code>2 star</code>  <em>4</em> x <em>number of bugs or comments</em> &gt; <em>working days in a year (250)</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> </li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsemotion"><a href="#org.eclipse.scava.factoid.bugs.emotion">org.eclipse.scava.factoid.bugs.emotion</a></h4>
 <ul>
 <li><strong>Short name</strong>: factoid.bugs.emotion</li>
 <li><strong>Friendly name</strong>: Bug Tracker Emotions</li>
 </ul>
-<p>This plugin generates the factoid regarding emotions for bug trackers. For example, the percentage of positive, negative or surprise emotions expressed.</p>
+<p>This plugin generates the factoid regarding emotions for bug trackers. For example, the percentage of positive, negative or surprise emotions expressed. There are 6 emotion labels (anger, fear, joy, sadness, love, surprise). Anger, fear and sadness are considered negative while joy and love are considered positive.</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.newbugs</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.comments</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.patches</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>positive emotion percentage</em> &gt; <em>80</em> || <em>negative emotion percentage</em> &lt; <em>35</em>.</li>
+<li><code>3 star</code>  <em>positive emotion percentage</em> &gt; <em>65</em> || <em>negative emotion percentage</em> &lt; <em>50</em>.</li>
+<li><code>2 star</code>  <em>positive emotion percentage</em> &gt; <em>50</em> || <em>negative emotion percentage</em> &lt; <em>65</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> </li>
+</ul>
+</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugshourly"><a href="#org.eclipse.scava.factoid.bugs.hourly">org.eclipse.scava.factoid.bugs.hourly</a></h4>
@@ -6868,6 +6881,16 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>maximum percentage of hourly comments</em> &gt; <em>2</em> x <em>uniform percentage of comments per hour (100/24)</em>.</li>
+<li><code>3 star</code>  <em>maximum percentage of hourly comments</em> &gt; <em>4</em> x <em>uniform percentage of comments per hour (100/24)</em>.</li>
+<li><code>2 star</code>  <em>maximum percentage of hourly comments</em> &gt; <em>6</em> x <em>uniform percentage of comments per hour (100/24)</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> </li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsresponsetime"><a href="#org.eclipse.scava.factoid.bugs.responsetime">org.eclipse.scava.factoid.bugs.responsetime</a></h4>
 <ul>
@@ -6878,15 +6901,35 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.responsetime</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>Zero(0)</em> &lt; <em>yearly average response time</em> &lt; <em>eight hours milliseconds (8 x 60 x 60 x 1000)</em>.</li>
+<li><code>3 star</code>  <em>Zero(0)</em> &lt; <em>yearly average response time</em> &lt; <em>day milliseconds (3 x eight hour milliseconds)</em>.</li>
+<li><code>2 star</code>  <em>Zero(0)</em> &lt; <em>yearly average response time</em> &lt; <em>week milliseconds (7 x week milliseconds)</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> </li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugssentiment"><a href="#org.eclipse.scava.factoid.bugs.sentiment">org.eclipse.scava.factoid.bugs.sentiment</a></h4>
 <ul>
 <li><strong>Short name</strong>: factoid.bugs.sentiment</li>
 <li><strong>Friendly name</strong>: Bug Tracker Sentiment</li>
 </ul>
-<p>This plugin generates the factoid regarding sentiment for bug trackers. For example, the average sentiment in all bug trackers associated to a project.</p>
+<p>This plugin generates the factoid regarding sentiment for bug trackers. For example, the average sentiment in all bug trackers associated to a project. Sentiment score could be closer to -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment)</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.sentiment</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>average sentiment</em> &gt; <em>0.5</em> || <em>thread end sentiment</em> - <em>thread begining sentiment</em> &gt; <em>0.25</em> &amp;&amp; <em>thread begining sentiment</em> &gt; <em>0.15</em>.</li>
+<li><code>3 star</code>  <em>average sentiment</em> &gt; <em>0.25</em> || <em>thread end sentiment</em> - <em>thread begining sentiment</em> &gt; <em>0.125</em> &amp;&amp; <em>thread begining sentiment</em> &gt; <em>0.0</em>.</li>
+<li><code>2 star</code>  <em>average sentiment</em> &gt; <em>0</em> || <em>thread end sentiment</em> - <em>thread begining sentiment</em> &gt; <em>0</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> </li>
+</ul>
+</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsseverity"><a href="#org.eclipse.scava.factoid.bugs.severity">org.eclipse.scava.factoid.bugs.severity</a></h4>
@@ -6894,9 +6937,20 @@ If set != {} then developers may be depending on the execution environment (smel
 <li><strong>Short name</strong>: factoid.bugs.severity</li>
 <li><strong>Friendly name</strong>: Bug Tracker Severity</li>
 </ul>
-<p>This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. </p>
+<p>This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. There are 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.severity</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severitysentiment</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>1 star</code>  <em>percentage of serious bugs</em> &gt; <em>50</em>.</li>
+<li><code>2 star</code>  <em>percentage of serious bugs</em> &gt; <em>25</em>.</li>
+<li><code>3 star</code>  <em>percentage of serious bugs</em> &gt; <em>12.5</em>.</li>
+<li><code>4 star</code>  <em>otherwise</em> (i.e., fewer percentage of serious bugs).
+Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code>major</code> bugs</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugssize"><a href="#org.eclipse.scava.factoid.bugs.size">org.eclipse.scava.factoid.bugs.size</a></h4>
@@ -6908,15 +6962,35 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.newbugs</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.comments</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.patches</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>number of bugs or parches</em> &gt; <em>1000</em> || <em>number of comments</em> &gt; <em>10000</em>.</li>
+<li><code>3 star</code>  <em>2</em> x <em>number of bugs or parches</em> &gt; <em>1000</em> || <em>2</em> x <em>number of comments</em> &gt; <em>10000</em>.</li>
+<li><code>2 star</code>  <em>4</em> x <em>number of bugs or parches</em> &gt; <em>1000</em> || <em>4</em> x <em>number of comments</em> &gt; <em>10000</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> </li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsstatus"><a href="#org.eclipse.scava.factoid.bugs.status">org.eclipse.scava.factoid.bugs.status</a></h4>
 <ul>
 <li><strong>Short name</strong>: factoid.bugs.status</li>
 <li><strong>Friendly name</strong>: Bug Tracker Status</li>
 </ul>
-<p>This plugin generates the factoid regarding bug status for bug trackers. For example, the number of fixed bugs, duplicate bugs etc.  </p>
+<p>This plugin generates the factoid regarding bug status for bug trackers. For example, the number of fixed bugs, duplicate bugs etc. There are 7 bug status labels (resolved, nonResolved, fixed, worksForMe, wontFix, invalid and duplicate).</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.status</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>perventage of resolved bug</em> &gt; <em>75</em>.</li>
+<li><code>3 star</code>  <em>perventage of resolved bug</em> &gt; <em>50</em>.</li>
+<li><code>2 star</code>  <em>perventage of resolved bug</em> &gt; <em>25</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em> (i.e., very few resolved bugs)</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsthreadlength"><a href="#org.eclipse.scava.factoid.bugs.threadlength">org.eclipse.scava.factoid.bugs.threadlength</a></h4>
@@ -6928,6 +7002,16 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.bugs</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>Zero(0)</em> &lt; <em>average comments</em> &lt; <em>5</em>.</li>
+<li><code>3 star</code>  <em>Zero(0)</em> &lt; <em>average comments</em> &lt; <em>10</em>.</li>
+<li><code>2 star</code>  <em>Zero(0)</em> &lt; <em>average comments</em> &lt; <em>20</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em></li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsusers"><a href="org.eclipse.scava.factoid.bugs.users">org.eclipse.scava.factoid.bugs.users</a></h4>
 <ul>
@@ -6938,6 +7022,16 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.users</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.bugs</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>daily new users in last month</em> &gt; <em>8</em> x <em>0.25</em> || <em>daily active users in last month</em> &gt; <em>8</em> x <em>2.5</em> || <em>daily new users in last year</em> &gt; <em>4</em> x <em>0.25 || daily active users in last year</em> &gt; <em>4</em> x <em>2.5</em>.</li>
+<li><code>3 star</code>  <em>daily new users in last month</em> &gt; <em>4</em> x <em>0.25</em> || <em>daily active users in last month</em> &gt; <em>4</em> x <em>2.5</em> || <em>daily new users in last year</em> &gt; <em>2</em> x <em>0.25 || daily active users in last year</em> &gt; <em>2</em> x <em>2.5</em>.</li>
+<li><code>2 star</code>  <em>daily new users in last month</em> &gt; <em>2</em> x <em>0.25</em> || <em>daily active users in last month</em> &gt; <em>2</em> x <em>2.5</em> || <em>daily new users in last year</em> &gt; <em>0.25</em> || <em>daily active users in last year</em> &gt; <em>2.5</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em></li>
+</ul>
+</li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugsweekly"><a href="org.eclipse.scava.factoid.bugs.weekly">org.eclipse.scava.factoid.bugs.weekly</a></h4>
 <ul>
@@ -6947,6 +7041,16 @@ If set != {} then developers may be depending on the execution environment (smel
 <p>This plugin generates the factoid regarding weekly user engagements for bug trackers. For example, the average number of bug comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project. </p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : <ul>
+<li><code>4 star</code>  <em>maximum percentage of weekly comments</em> &lt; <em>2</em> x <em>uniform percentage of comments per week (100/7)</em>.</li>
+<li><code>3 star</code>  <em>maximum percentage of weekly comments</em> &lt; <em>3</em> x <em>uniform percentage of comments per week (100/7)</em>.</li>
+<li><code>2 star</code>  <em>maximum percentage of weekly comments</em> &lt; <em>4</em> x <em>uniform percentage of comments per week (100/7)</em>.</li>
+<li><code>1 star</code>  <em>otherwise</em></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="communication-channel-factoids">Communication Channel Factoids</h3>
@@ -6961,15 +7065,31 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.articles</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.newthreads</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>number of articles || threads</em> &gt; <em>working days in a year (250</em>).</li>
+<li><code>3 star</code>    <em>2</em> x <em>number of articles || threads</em> &gt; <em>working days in a year (250)</em>.</li>
+<li><code>2 star</code>    <em>4</em> x <em>number of articles || threads</em> &gt; <em>working days in a year (250)</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em></li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsemotion"><a href="#org.eclipse.scava.factoid.newsgroups.emotion">org.eclipse.scava.factoid.newsgroups.emotion</a></h4>
 <ul>
 <li><strong>Short name</strong>: factoid.newsgroups.emotion</li>
 <li><strong>Friendly name</strong>: Newsgroup Channel Emotion</li>
 </ul>
-<p>This plugin generates the factoid regarding emotions for newsgroups, such as percentage of positive, negative or surprise emotions expressed.</p>
+<p>This plugin generates the factoid regarding emotions for newsgroups, such as the percentage of positive, negative or surprise emotions expressed. There are 6 emotion labels (anger, fear, joy, sadness, love, surprise). Anger, fear and sadness are considered negative while joy and love are considered positive.</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.emotions</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>positive emotion percentage</em> &gt; <em>80</em> || <em>negative emotion percentage</em> &lt; <em>35</em>.</li>
+<li><code>3 star</code>    <em>positive emotion percentage</em> &gt; <em>65</em> || <em>negative emotion percentage</em> &lt; <em>50</em>.</li>
+<li><code>2 star</code>    <em>positive emotion percentage</em> &gt; <em>50</em> || <em>negative emotion percentage</em> &lt; <em>65</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em> </li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupshourly"><a href="#org.eclipse.scava.factoid.newsgroups.hourly">org.eclipse.scava.factoid.newsgroups.hourly</a></h4>
@@ -6981,6 +7101,14 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>maximum percentage of hourly articles</em> &gt; <em>2</em> x <em>uniform percentage of articles per hour (100/24)</em>.</li>
+<li><code>3 star</code>    <em>maximum percentage of hourly articles</em> &gt; <em>4</em> x <em>uniform percentage of articles per hour (100/24)</em>.</li>
+<li><code>2 star</code>    <em>maximum percentage of hourly articles</em> &gt; <em>6</em> x <em>uniform percentage of articles per hour (100/24)</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em> </li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsresponsetime"><a href="#org.eclipse.scava.factoid.newsgroups.responsetime">org.eclipse.scava.factoid.newsgroups.responsetime</a></h4>
 <ul>
@@ -6991,15 +7119,31 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.responsetime</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>Zero(0)</em> &lt; <em>yearly average response time</em> &lt; <em>eight hours milliseconds (8 x 60 x 60 x 1000)</em>.</li>
+<li><code>3 star</code>    <em>Zero(0)</em> &lt; <em>yearly average response time</em> &lt; <em>day milliseconds (3 x eight hour milliseconds)</em>.</li>
+<li><code>2 star</code>    <em>Zero(0)</em> &lt; <em>yearly average response time</em> &lt; <em>week milliseconds (7 x week milliseconds)</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em> </li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupssentiment"><a href="org.eclipse.scava.factoid.newsgroups.sentiment">org.eclipse.scava.factoid.newsgroups.sentiment</a></h4>
 <ul>
 <li><strong>Short name</strong>: factoid.newsgroups.sentiment</li>
 <li><strong>Friendly name</strong>: Newsgroup Channel Sentiment</li>
 </ul>
-<p>This plugin generates the factoid regarding sentiments for newsgroups. For example, the average sentiment in all newsgroup channel associated to a project.</p>
+<p>This plugin generates the factoid regarding sentiments for newsgroups. For example, the average sentiment in all newsgroup channel associated to a project. Sentiment score could be closer to -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment)</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.sentiment</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>average sentiment</em> &gt; <em>0.5</em> || <em>thread end sentiment</em> - <em>thread begining sentiment</em> &gt; <em>0.25</em> &amp;&amp; <em>thread begining sentiment</em> &gt; <em>0.15</em>.</li>
+<li><code>3 star</code>    <em>average sentiment</em> &gt; <em>0.25</em> || <em>thread end sentiment</em> - <em>thread begining sentiment</em> &gt; <em>0.125</em> &amp;&amp; <em>thread begining sentiment</em> &gt; <em>0.0</em>.</li>
+<li><code>2 star</code>    <em>average sentiment</em> &gt; <em>0</em> || <em>thread end sentiment</em> - <em>thread begining sentiment</em> &gt; <em>0</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em> </li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsseverity"><a href="#org.eclipse.scava.factoid.newsgroups.severity">org.eclipse.scava.factoid.newsgroups.severity</a></h4>
@@ -7007,9 +7151,18 @@ If set != {} then developers may be depending on the execution environment (smel
 <li><strong>Short name</strong>: factoid.newsgroups.severity</li>
 <li><strong>Friendly name</strong>: Newsgroup Channel Severity</li>
 </ul>
-<p>This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. </p>
+<p>This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. There are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). </p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.severity</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>1 star</code>    <em>percentage of serious bugs</em> &gt; <em>50</em>.</li>
+<li><code>2 star</code>    <em>percentage of serious bugs</em> &gt; <em>25</em>.</li>
+<li><code>3 star</code>    <em>percentage of serious bugs</em> &gt; <em>12.5</em>.</li>
+<li><code>4 star</code>    <em>otherwise</em> (i.e., fewer percentage of serious bugs).
+    Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code>major</code> bugs</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupssize"><a href="#org.eclipse.scava.factoid.newsgroups.size">org.eclipse.scava.factoid.newsgroups.size</a></h4>
@@ -7020,6 +7173,14 @@ If set != {} then developers may be depending on the execution environment (smel
 <p>This plugin generates the factoid regarding thread or article size for newsgroups. For example, the cummulative number of threads. </p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.articles</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.newthreads</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>number of threads</em> &gt; <em>1000</em> || <em>number of articles</em> &gt; <em>10000</em>.</li>
+<li><code>3 star</code>    <em>2</em> x <em>number of threads</em> &gt; <em>1000</em> || <em>2</em> x <em>number of articles</em> &gt; <em>10000</em>.</li>
+<li><code>2 star</code>    <em>4</em> x <em>number of threads</em> &gt; <em>1000</em> || <em>4</em> x <em>number of articles</em> &gt; <em>10000</em>.</li>
+<li><code>1 star</code>    *otherwise </li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsstatus"><a href="#org.eclipse.scava.factoid.newsgroups.status">org.eclipse.scava.factoid.newsgroups.status</a></h4>
@@ -7041,6 +7202,14 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.threads</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>Zero(0)</em> &lt; <em>average comments</em> &lt; <em>5</em>.</li>
+<li><code>3 star</code>    <em>Zero(0)</em> &lt; <em>average comments</em> &lt; <em>10</em>.</li>
+<li><code>2 star</code>    <em>Zero(0)</em> &lt; <em>average comments</em> &lt; <em>20</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em></li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsusers"><a href="#org.eclipse.scava.factoid.newsgroups.users">org.eclipse.scava.factoid.newsgroups.users</a></h4>
 <ul>
@@ -7051,6 +7220,14 @@ If set != {} then developers may be depending on the execution environment (smel
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.users</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.threads</code></li>
 </ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>daily new users in last month</em> &gt; <em>8</em> x <em>0.25</em> || <em>daily active users in last month</em> &gt; <em>8</em> x <em>2.5</em> || <em>daily new users in last year</em> &gt; <em>4</em> x <em>0.25</em> || <em>daily active users in last year</em> &gt; <em>4</em> x <em>2.5</em>.</li>
+<li><code>3 star</code>    <em>daily new users in last month</em> &gt; <em>4</em> x <em>0.25</em> || <em>daily active users in last month</em> &gt; <em>4</em> x <em>2.5</em> || <em>daily new users in last year</em> &gt; <em>2</em> x <em>0.25</em> || <em>daily active users in last year</em> &gt; <em>2</em> x <em>2.5</em>.</li>
+<li><code>2 star</code>    <em>daily new users in last month</em> &gt; <em>2</em> x <em>0.25</em> || <em>daily active users in last month &gt; 2 x 2.5</em> || <em>daily new users in last year</em> &gt; <em>0.25</em> || <em>daily active users in last year</em> &gt; <em>2.5</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em></li>
+</ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsweekly"><a href="#org.eclipse.scava.factoid.newsgroups.weekly">org.eclipse.scava.factoid.newsgroups.weekly</a></h4>
 <ul>
@@ -7060,6 +7237,14 @@ If set != {} then developers may be depending on the execution environment (smel
 <p>This plugin generates the factoid regarding weekly user engagement for newsgroups. For example, the average number of comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project. </p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>maximum percentage of weekly articles</em> &lt; <em>2</em> x <em>uniform percentage of articles per week (100/7)</em>.</li>
+<li><code>3 star</code>    <em>maximum percentage of weekly articles</em> &lt; <em>3</em> x <em>uniform percentage of articles per week (100/7)</em>.</li>
+<li><code>2 star</code>    <em>maximum percentage of weekly articles</em> &lt; <em>4</em> x <em>uniform percentage of articles per week (100/7)</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em></li>
 </ul>
 <hr />
               
