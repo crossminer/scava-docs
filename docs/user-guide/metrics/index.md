@@ -4597,18 +4597,17 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 - **Short name**: factoid.bugs.severity
 - **Friendly name**: Bug Tracker Severity
 
-This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. There are 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered `unknown` if there is not enough information for the classifier to make a decision
+This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. There are 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered `unknown` if there is not enough information for the classifier to make a decision. Also,  `blocker`, `critical` and `major` are regarded as serious bugs.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.severity`, `org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus`, `org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime`, `org.eclipse.scava.metricprovider.historic.bugs.severitysentiment`
 
 <u>*Additional Information*</u> :	
 
 - Star rating information : 
-	- `1 star`	*percentage of serious bugs* > *50*.
-	- `2 star`	*percentage of serious bugs* > *25*.
-	- `3 star`	*percentage of serious bugs* > *12.5*.
-	- `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
-Note: serious bugs include `blocker`, `critical` and `major` bugs
+  - `1 star`	*percentage of serious bugs* > *50*.
+  - `2 star`	*percentage of serious bugs* > *25*.
+  - `3 star`	*percentage of serious bugs* > *12.5*.
+  - `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
 ------
 #### [org.eclipse.scava.factoid.bugs.size](#org.eclipse.scava.factoid.bugs.size)
 - **Short name**: factoid.bugs.size
@@ -4779,7 +4778,7 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
 - **Short name**: factoid.newsgroups.severity
 - **Friendly name**: Newsgroup Channel Severity
 
-This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. There are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). 
+This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. There are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). Note:  `blocker`, `critical` and `major` are regarded as serious bugs.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime`, `org.eclipse.scava.metricprovider.historic.newsgroups.severity`, `org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment`
 
@@ -4790,7 +4789,6 @@ This plugin generates the factoid regarding severity for newsgroups. For example
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
   - `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
-    Note: serious bugs include `blocker`, `critical` and `major` bugs
 ------
 #### [org.eclipse.scava.factoid.newsgroups.size](#org.eclipse.scava.factoid.newsgroups.size)
 - **Short name**: factoid.newsgroups.size
@@ -4815,6 +4813,14 @@ This plugin generates the factoid regarding thread or article size for newsgroup
 This plugin generates the factoid regarding thread or article status for newsgroups. For example, the number of requests and replies, unanswered threads etc.  
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads`, `org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies`, `org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average`
+
+<u>*Additional Information*</u> :	
+
+- Star rating information : 
+  - `4 star`	*perventage of replies* > *75*.
+  - `3 star`	*perventage of replies* > *50*.
+  - `2 star`	*perventage of replies* > *25*.
+  - `1 star`	*otherwise* (i.e., very few replies)
 
 ------
 #### [org.eclipse.scava.factoid.newsgroups.threadlength](#org.eclipse.scava.factoid.newsgroups.threadlength)

@@ -6937,20 +6937,17 @@ If set != {} then developers may be depending on the execution environment (smel
 <li><strong>Short name</strong>: factoid.bugs.severity</li>
 <li><strong>Friendly name</strong>: Bug Tracker Severity</li>
 </ul>
-<p>This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. There are 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision</p>
+<p>This plugin generates the factoid regarding severity for bug trackers. For example, the number of bugs per severity level, the average sentiment for each severity etc. There are 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered <code>unknown</code> if there is not enough information for the classifier to make a decision. Also,  <code>blocker</code>, <code>critical</code> and <code>major</code> are regarded as serious bugs.</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.bugs.severity</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime</code>, <code>org.eclipse.scava.metricprovider.historic.bugs.severitysentiment</code></li>
 </ul>
 <p><u><em>Additional Information</em></u> :   </p>
 <ul>
-<li>Star rating information : <ul>
-<li><code>1 star</code>  <em>percentage of serious bugs</em> &gt; <em>50</em>.</li>
-<li><code>2 star</code>  <em>percentage of serious bugs</em> &gt; <em>25</em>.</li>
-<li><code>3 star</code>  <em>percentage of serious bugs</em> &gt; <em>12.5</em>.</li>
-<li><code>4 star</code>  <em>otherwise</em> (i.e., fewer percentage of serious bugs).
-Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code>major</code> bugs</li>
-</ul>
-</li>
+<li>Star rating information : </li>
+<li><code>1 star</code>    <em>percentage of serious bugs</em> &gt; <em>50</em>.</li>
+<li><code>2 star</code>    <em>percentage of serious bugs</em> &gt; <em>25</em>.</li>
+<li><code>3 star</code>    <em>percentage of serious bugs</em> &gt; <em>12.5</em>.</li>
+<li><code>4 star</code>    <em>otherwise</em> (i.e., fewer percentage of serious bugs).</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidbugssize"><a href="#org.eclipse.scava.factoid.bugs.size">org.eclipse.scava.factoid.bugs.size</a></h4>
@@ -7151,7 +7148,7 @@ Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code
 <li><strong>Short name</strong>: factoid.newsgroups.severity</li>
 <li><strong>Friendly name</strong>: Newsgroup Channel Severity</li>
 </ul>
-<p>This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. There are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). </p>
+<p>This plugin generates the factoid regarding severity for newsgroups. For example, the number of articles per severity level, the average sentiment for each severity etc. There are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). Note:  <code>blocker</code>, <code>critical</code> and <code>major</code> are regarded as serious bugs.</p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.severity</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment</code></li>
 </ul>
@@ -7161,8 +7158,7 @@ Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code
 <li><code>1 star</code>    <em>percentage of serious bugs</em> &gt; <em>50</em>.</li>
 <li><code>2 star</code>    <em>percentage of serious bugs</em> &gt; <em>25</em>.</li>
 <li><code>3 star</code>    <em>percentage of serious bugs</em> &gt; <em>12.5</em>.</li>
-<li><code>4 star</code>    <em>otherwise</em> (i.e., fewer percentage of serious bugs).
-    Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code>major</code> bugs</li>
+<li><code>4 star</code>    <em>otherwise</em> (i.e., fewer percentage of serious bugs).</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupssize"><a href="#org.eclipse.scava.factoid.newsgroups.size">org.eclipse.scava.factoid.newsgroups.size</a></h4>
@@ -7191,6 +7187,14 @@ Note: serious bugs include <code>blocker</code>, <code>critical</code> and <code
 <p>This plugin generates the factoid regarding thread or article status for newsgroups. For example, the number of requests and replies, unanswered threads etc.  </p>
 <ul>
 <li><u>Depends-on</u> : <code>org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies</code>, <code>org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average</code></li>
+</ul>
+<p><u><em>Additional Information</em></u> :   </p>
+<ul>
+<li>Star rating information : </li>
+<li><code>4 star</code>    <em>perventage of replies</em> &gt; <em>75</em>.</li>
+<li><code>3 star</code>    <em>perventage of replies</em> &gt; <em>50</em>.</li>
+<li><code>2 star</code>    <em>perventage of replies</em> &gt; <em>25</em>.</li>
+<li><code>1 star</code>    <em>otherwise</em> (i.e., very few replies)</li>
 </ul>
 <hr />
 <h4 id="orgeclipsescavafactoidnewsgroupsthreadlength"><a href="#org.eclipse.scava.factoid.newsgroups.threadlength">org.eclipse.scava.factoid.newsgroups.threadlength</a></h4>
