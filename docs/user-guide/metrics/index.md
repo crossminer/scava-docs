@@ -5390,9 +5390,9 @@ This plugin generates the factoid regarding emotions for bug trackers. For examp
 <u>*Additional Information*</u> :
 
 - Star rating information :
-	- `4 star`	*positive emotion percentage* > *80* || *negative emotion percentage* < *35*.
-	- `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
-	- `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
+	- `4 star`	*positive emotion percentage* > *80* OR *negative emotion percentage* < *35*.
+	- `3 star`	*positive emotion percentage* > *65* OR *negative emotion percentage* < *50*.
+	- `2 star`	*positive emotion percentage* > *50* OR *negative emotion percentage* < *65*.
 	- `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5450,9 +5450,9 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 <u>*Additional Information*</u> :
 
 - Star rating information :
-	- `4 star`	*average sentiment* > *0.5* || *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
-	- `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
-	- `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
+	- `4 star`	*average sentiment* > *0.5* OR *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
+	- `3 star`	*average sentiment* > *0.25* OR *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
+	- `2 star`	*average sentiment* > *0* OR *thread end sentiment* - *thread begining sentiment* > *0*.
 	- `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5490,9 +5490,9 @@ This plugin generates the factoid regarding bug size for bug trackers. For examp
 <u>*Additional Information*</u> :
 
 - Star rating information :
-	- `4 star`	*number of bugs or parches* > *1000* || *number of comments* > *10000*.
-	- `3 star`	*2* x *number of bugs or parches* > *1000* || *2* x *number of comments* > *10000*.
-	- `2 star`	*4* x *number of bugs or parches* > *1000* || *4* x *number of comments* > *10000*.
+	- `4 star`	*number of bugs or parches* > *1000* OR *number of comments* > *10000*.
+	- `3 star`	*2* x *number of bugs or parches* > *1000* OR *2* x *number of comments* > *10000*.
+	- `2 star`	*4* x *number of bugs or parches* > *1000* OR *4* x *number of comments* > *10000*.
 	- `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5550,9 +5550,9 @@ This plugin generates the factoid regarding users for bug trackers. For example,
 <u>*Additional Information*</u> :
 
 - Star rating information :
-	- `4 star`	*daily new users in last month* > *8* x *0.25* || *daily active users in last month* > *8* x *2.5* || *daily new users in last year* > *4* x *0.25 || daily active users in last year* > *4* x *2.5*.
-	- `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25 || daily active users in last year* > *2* x *2.5*.
-	- `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month* > *2* x *2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
+	- `4 star`	*daily new users in last month* > *8* x *0.25* OR *daily active users in last month* > *8* x *2.5* OR *daily new users in last year* > *4* x *0.25* OR daily active users in last year* > *4* x *2.5*.
+	- `3 star`	*daily new users in last month* > *4* x *0.25* OR *daily active users in last month* > *4* x *2.5* OR *daily new users in last year* > *2* x *0.25* OR daily active users in last year* > *2* x *2.5*.
+	- `2 star`	*daily new users in last month* > *2* x *0.25* OR *daily active users in last month* > *2* x *2.5* OR *daily new users in last year* > *0.25* OR *daily active users in last year* > *2.5*.
 	- `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5599,9 +5599,9 @@ This plugin generates the factoid regarding usage data for newsgroups. For examp
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*number of articles || threads* > *working days in a year (250*).
-  - `3 star`	*2* x *number of articles || threads* > *working days in a year (250)*.
-  - `2 star`	*4* x *number of articles || threads* > *working days in a year (250)*.
+  - `4 star`	*number of articles* OR *threads* > *working days in a year (250*).
+  - `3 star`	*2* x *number of articles* OR *threads* > *working days in a year (250)*.
+  - `2 star`	*4* x *number of articles* OR *threads* > *working days in a year (250)*.
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5620,9 +5620,9 @@ This plugin generates the factoid regarding emotions for newsgroups, such as the
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*positive emotion percentage* > *80* || *negative emotion percentage* < *35*.
-  - `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
-  - `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
+  - `4 star`	*positive emotion percentage* > *80* OR *negative emotion percentage* < *35*.
+  - `3 star`	*positive emotion percentage* > *65* OR *negative emotion percentage* < *50*.
+  - `2 star`	*positive emotion percentage* > *50* OR *negative emotion percentage* < *65*.
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5662,9 +5662,9 @@ This plugin generates the factoid regarding response time for newsgroups. This c
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*Zero(0)* < *yearly average response time* < *eight hours milliseconds (8 x 60 x 60 x 1000)*.
-  - `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
-  - `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
+  - `4 star`	*Zero(0)* < *yearly average response time* < *eight hours in milliseconds (8 x 60 x 60 x 1000)*.
+  - `3 star`	*Zero(0)* < *yearly average response time* < *day in milliseconds (3 x eight hours in milliseconds)*.
+  - `2 star`	*Zero(0)* < *yearly average response time* < *week in milliseconds (7 x day in milliseconds)*.
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5683,9 +5683,9 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*average sentiment* > *0.5* || *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
-  - `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
-  - `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
+  - `4 star`	*average sentiment* > *0.5* OR *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
+  - `3 star`	*average sentiment* > *0.25* OR *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
+  - `2 star`	*average sentiment* > *0* OR *thread end sentiment* - *thread begining sentiment* > *0*.
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5725,9 +5725,9 @@ This plugin generates the factoid regarding thread or article size for newsgroup
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*number of threads* > *1000* || *number of articles* > *10000*.
-  - `3 star`	*2* x *number of threads* > *1000* || *2* x *number of articles* > *10000*.
-  - `2 star`	*4* x *number of threads* > *1000* || *4* x *number of articles* > *10000*.
+  - `4 star`	*number of threads* > *1000* OR *number of articles* > *10000*.
+  - `3 star`	*2* x *number of threads* > *1000* OR *2* x *number of articles* > *10000*.
+  - `2 star`	*4* x *number of threads* > *1000* OR *4* x *number of articles* > *10000*.
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
@@ -5788,9 +5788,9 @@ This plugin generates the factoid regarding users for newsgroups. For example, t
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*daily new users in last month* > *8* x *0.25* || *daily active users in last month* > *8* x *2.5* || *daily new users in last year* > *4* x *0.25* || *daily active users in last year* > *4* x *2.5*.
-  - `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25* || *daily active users in last year* > *2* x *2.5*.
-  - `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month > 2 x 2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
+  - `4 star`	*daily new users in last month* > *8* x *0.25* OR *daily active users in last month* > *8* x *2.5* OR *daily new users in last year* > *4* x *0.25* OR *daily active users in last year* > *4* x *2.5*.
+  - `3 star`	*daily new users in last month* > *4* x *0.25* OR *daily active users in last month* > *4* x *2.5* OR *daily new users in last year* > *2* x *0.25* OR *daily active users in last year* > *2* x *2.5*.
+  - `2 star`	*daily new users in last month* > *2* x *0.25* OR *daily active users in last month > 2 x 2.5* OR *daily new users in last year* > *0.25* OR *daily active users in last year* > *2.5*.
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
