@@ -3490,7 +3490,8 @@
           "type": "string"
         },
         "type": {
-          "type": "string"
+          "type": "string",
+          "enum": ["SINGLE_EXECUTION", "CONTINUOUS_MONITORING"],
         },
         "startDate": {
           "type": "string"
