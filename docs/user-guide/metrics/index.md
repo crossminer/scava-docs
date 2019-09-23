@@ -2,8 +2,8 @@
 
 This guide describes the historic and transient metric providers provided by the Scava platform.
 
-- [Historic Metric Providers](#historic-Metric-Providers) for:
- - [Bug Trackers](#historic-Bug-Trackers)
+- [Historic Metric Providers](#historic-metric-providers) for:
+ - [Bug Trackers](#historic-bug-trackers)
  - [Newsgroups and Forums](#historic-newsgroups-forums)
  - [Commits and Committers](#historic-commits-committers)
  - [Documentation](#historic-documentation)
@@ -11,12 +11,24 @@ This guide describes the historic and transient metric providers provided by the
  - [Java Code](#historic-java-code)
  - [OSGi Dependencies](#historic-osgi-dependencies)
  - [Maven Dependencies](#historic-maven-dependencies)
+-[Transient Metric Providers](#transient-metric-providers) for:
+ - [Bug Trackers](#transient-bug-trackers)
+ - [Newsgroups and forums](#transient-newsgroups-forums)
+ - [Documentation](#transient-documentation)
+ - [Natural Language Processing](#transient-nlp)
+ - [Commits and Committers](#transient-commits-committers)
+ - [Generic Source Code](#transient-source-code)
+ - [Java Code](#transient-java-code)
+ - [OSGi Dependencies](#transient-osgi-dependencies)
+ - [Maven Dependencies](#transient-maven-dependencies)
+ - [Indexing](#transient-indexing)
+-[Factoids](#factoids)
 
-## [Historic Metric Providers](#historic-Metric-Providers)
+## [Historic Metric Providers](#historic-metric-providers)
 
 Historic metrics maintain a record of various heuristics associated with a specific open source project over its lifetime. They typically depend on the results from one or more transient metrics and are typically displayed in the Scava dashboards.
 
-### [Historic Metric Provider for Bug Trackers](#historic-Bug-Trackers)
+### [Historic Metric Provider for Bug Trackers](#historic-bug-trackers)
 
 The following Historic Metric Providers are associated with Issue trackers
 
@@ -1926,11 +1938,11 @@ Retrieves the number of Maven dependencies.
 - <u>Depends-on</u>: `trans.rascal.dependency.maven.numberMavenDependencies`
 - <u>Returns</u>: `int`
 
-## Transient Metric Providers
+## [Transient Metric Providers](#transient-metric-providers)
 
 Transient metrics are used to calculate heuristics that are associated with a particular period in time, i.e. a single day. Transient Metrics are stored temporarily within the knowledge base and their output is passed as parameters in the calculation of other transient and historic metrics. Depending on the complexity, a transient metric can depend on the output from other tools, other transient metircs or have no dependencies at all.
 
-### Bug Trackers
+### [Transient Metric Providers for Bug Trackers](#transient-bug-trackers)
 
 The following Transient Metric Providers are associated with Issue trackers.
 
@@ -2117,7 +2129,7 @@ This metric computes the emotional dimensions in bug comments, per bug tracker. 
 	- `int`	cumulativeNumberOfComments
 - EmotionDimension :
 	- `String`	bugTrackerId
-	- `String`	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, surprise`)
+	- `String`	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, `surprise`)
 	- `int`	numberOfComments
 	- `int`	cumulativeNumberOfComments
 	- `float`	percentage
@@ -2275,7 +2287,7 @@ This metric computes for each bug, whether it was  answered. If so, it computes 
 
 ------
 
-### Communication Channels (newsgroups and forums)
+### [Transient Metrics for Newsgroups and Forums](#transient-newsgroups-forums)
 
 The following Transient Metric Providers are associated with communication channels in general, either newsgroups or forums.
 Despite the name of the metrics are newsgroups, all the metrics are valid for communication channels.
@@ -2420,7 +2432,7 @@ This metric computes the emotional dimensions in newsgroup articles, per newsgro
 
 - EmotionDimension :
 	- `String`	newsgroupName
-	- `String`	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, surprise`)
+	- `String`	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, `surprise`)
 	- `int`	numberOfArticles
 	- `int`	cumulativeNumberOfArticles
 	- `float`	percentage
@@ -2568,7 +2580,7 @@ The metric computes for each thread whether it is answered. If so, it computes t
 	- `String`	responseDate
 
 ------
-### Documentation
+### [Transient Metrics for Documentation](#transient-documentation)
 
 The following Transient Metric Providers are associated with documentation analyses.
 
@@ -2719,7 +2731,7 @@ This metric calculates the sentiment polarity of each documentation entry. Senti
 
 ------
 
-### Natural Language Processing
+### [Transient Metric Providers for Natural Language Processing](#transient-nlp)
 
 The following Transient Metric Providers are associated with Natural Language Processing tools.
 
@@ -3028,7 +3040,7 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 
 ------
 
-### Commits and committers metrics
+### [Transient Metrics for Commits and Committers](#transient-commits-committers)
 
 These metrics are related to the commits and committers of a project.
 
@@ -3112,7 +3124,7 @@ This metric computes topic clusters for each commit message.
 	- `List<String>`	commitsMessageId
 
 ------
-#### trans.rascal.activecommitters.activeCommitters
+#### [trans.rascal.activecommitters.activeCommitters](#trans.rascal.activecommitters.activeCommitters)
 - **Short name**: activeCommitters
 - **Friendly name**: Committers of last two weeks
 
@@ -3122,7 +3134,7 @@ A list of committers who have been active the last two weeks. This metric is mea
 - <u>Returns</u>: `rel[datetime,set[str]]`
 
 ------
-#### trans.rascal.activecommitters.committersoverfile
+#### [trans.rascal.activecommitters.committersoverfile](#trans.rascal.activecommitters.committersoverfile)
 - **Short name**: giniCommittersOverFile
 - **Friendly name**: Committers over file
 
@@ -3132,7 +3144,7 @@ Calculates the gini coefficient of committers per file
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.activecommitters.countCommittersPerFile
+#### [trans.rascal.activecommitters.countCommittersPerFile](#trans.rascal.activecommitters.countCommittersPerFile)
 - **Short name**: countCommittersPerFile
 - **Friendly name**: Number of committers per file
 
@@ -3142,7 +3154,7 @@ Count the number of committers that have touched a file.
 - <u>Returns</u>: `map[loc file, int numberOfCommitters]`
 
 ------
-#### trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper
+#### [trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper](#trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper)
 - **Short name**: firstLastCommitDates
 - **Friendly name**: First and last commit dates per developer
 
@@ -3153,7 +3165,7 @@ it is also used to drill down on the membership of specific individuals of the d
 - <u>Returns</u>: `map[str, tuple[datetime,datetime]]`
 
 ------
-#### trans.rascal.activecommitters.developmentTeam
+#### [trans.rascal.activecommitters.developmentTeam](#trans.rascal.activecommitters.developmentTeam)
 - **Short name**: developmentTeam
 - **Friendly name**: Development team
 
@@ -3163,7 +3175,7 @@ Lists the names of people who have been contributing code at least once in the h
 - <u>Returns</u>: `set[str]`
 
 ------
-#### trans.rascal.activecommitters.percentageOfWeekendCommits
+#### [trans.rascal.activecommitters.percentageOfWeekendCommits](#trans.rascal.activecommitters.percentageOfWeekendCommits)
 - **Short name**: percentageOfWeekendCommits
 - **Friendly name**: Percentage of weekend commits
 
@@ -3173,7 +3185,7 @@ Percentage of commits made during the weekend
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.maximumActiveCommittersEver
+#### [trans.rascal.activecommitters.maximumActiveCommittersEver](#trans.rascal.activecommitters.maximumActiveCommittersEver)
 - **Short name**: maximumActiveCommittersEver
 - **Friendly name**: Maximum active committers ever
 
@@ -3183,7 +3195,7 @@ What is the maximum number of committers who have been active together in any tw
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.developmentTeamEmails
+#### [trans.rascal.activecommitters.developmentTeamEmails](#trans.rascal.activecommitters.developmentTeamEmails)
 - **Short name**: developmentTeamEmails
 - **Friendly name**: Development team
 
@@ -3193,7 +3205,7 @@ Lists the names of people who have been contributing code at least once in the h
 - <u>Returns</u>: `set[str]`
 
 ------
-#### trans.rascal.activecommitters.developmentDomainNames
+#### [trans.rascal.activecommitters.developmentDomainNames](#trans.rascal.activecommitters.developmentDomainNames)
 - **Short name**: developmentDomainNames
 - **Friendly name**: Development team domain names
 
@@ -3203,7 +3215,7 @@ Lists the domain names of email addresses of developers if such information is p
 - <u>Returns</u>: `set[str]`
 
 ------
-#### trans.rascal.activecommitters.committersPerFile
+#### [trans.rascal.activecommitters.committersPerFile](#trans.rascal.activecommitters.committersPerFile)
 - **Short name**: committersPerFile
 - **Friendly name**: Committers per file
 
@@ -3212,7 +3224,7 @@ Register which committers have contributed to which files
 - <u>Depends-on</u>: - <u>Returns</u>: `rel[loc,str]`
 
 ------
-#### trans.rascal.activecommitters.longerTermActiveCommitters
+#### [trans.rascal.activecommitters.longerTermActiveCommitters](#trans.rascal.activecommitters.longerTermActiveCommitters)
 - **Short name**: longerTermActiveCommitters
 - **Friendly name**: Committers of last year
 
@@ -3222,7 +3234,7 @@ Committers who have been active the last 12 months. This metric is meant for dow
 - <u>Returns</u>: `rel[datetime,set[str]]`
 
 ------
-#### trans.rascal.activecommitters.commitsPerDeveloper
+#### [trans.rascal.activecommitters.commitsPerDeveloper](#trans.rascal.activecommitters.commitsPerDeveloper)
 - **Short name**: commitsPerDeveloper
 - **Friendly name**: Number of commits per developer
 
@@ -3232,7 +3244,7 @@ when combined with other metrics such as churn. Few and big commits are differen
 - <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.activecommitters.committersAge
+#### [trans.rascal.activecommitters.committersAge](#trans.rascal.activecommitters.committersAge)
 - **Short name**: ageOfCommitters
 - **Friendly name**: Developer experience in project
 
@@ -3242,7 +3254,7 @@ Measures in days the amount of time between the first and last contribution of e
 - <u>Returns</u>: `rel[str,int]`
 
 ------
-#### trans.rascal.activecommitters.committersToday
+#### [trans.rascal.activecommitters.committersToday](#trans.rascal.activecommitters.committersToday)
 - **Short name**: committersToday
 - **Friendly name**: Active committers
 
@@ -3251,7 +3263,7 @@ Who have been active today?
 - <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
 
 ------
-#### trans.rascal.activecommitters.projectAge
+#### [trans.rascal.activecommitters.projectAge](#trans.rascal.activecommitters.projectAge)
 - **Short name**: projectAge
 - **Friendly name**: Age of the project (nr of days between first and last commit)
 
@@ -3261,7 +3273,7 @@ Age of the project (nr of days between first and last commit)
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.commitsPerWeekDay
+#### [trans.rascal.activecommitters.commitsPerWeekDay](#trans.rascal.activecommitters.commitsPerWeekDay)
 - **Short name**: commitsPerWeekDay
 - **Friendly name**: Commits per week day
 
@@ -3270,7 +3282,7 @@ On which day of the week do commits take place?
 - <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.activecommitters.committersEmailsToday
+#### [trans.rascal.activecommitters.committersEmailsToday](#trans.rascal.activecommitters.committersEmailsToday)
 - **Short name**: committersEmailsToday
 - **Friendly name**: Active committers
 
@@ -3279,7 +3291,7 @@ Who have been active today?
 - <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
 
 ------
-#### trans.rascal.activecommitters.sizeOfDevelopmentTeam
+#### [trans.rascal.activecommitters.sizeOfDevelopmentTeam](#trans.rascal.activecommitters.sizeOfDevelopmentTeam)
 - **Short name**: sizeOfDevelopmentTeam
 - **Friendly name**: Size of development team
 
@@ -3289,7 +3301,7 @@ How many people have ever contributed code to this project?
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.numberOfActiveCommittersLongTerm
+#### [trans.rascal.activecommitters.numberOfActiveCommittersLongTerm](#trans.rascal.activecommitters.numberOfActiveCommittersLongTerm)
 - **Short name**: numberOfActiveCommittersLongTerm
 - **Friendly name**: Number of active committers long term
 
@@ -3299,7 +3311,7 @@ Number of long time active committers over time (active in last year). This meas
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.numberOfActiveCommitters
+#### [trans.rascal.activecommitters.numberOfActiveCommitters](#trans.rascal.activecommitters.numberOfActiveCommitters)
 - **Short name**: numberOfActiveCommitters
 - **Friendly name**: Number of active committers
 
@@ -3309,7 +3321,7 @@ Number of active committers over time (active in last two weeks). This measures 
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.commitsToday
+#### [rascal.generic.churn.commitsToday](#rascal.generic.churn.commitsToday)
 - **Short name**: commitsToday
 - **Friendly name**: Number of commits today
 
@@ -3318,7 +3330,7 @@ Counts the number of commits made today.
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnToday
+#### [rascal.generic.churn.churnToday](#rascal.generic.churn.churnToday)
 - **Short name**: commitsToday
 - **Friendly name**: Churn of today
 
@@ -3327,7 +3339,7 @@ Counts the churn for today: the total number of lines of code added and deleted.
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnPerCommitInTwoWeeks
+#### [rascal.generic.churn.churnPerCommitInTwoWeeks](#rascal.generic.churn.churnPerCommitInTwoWeeks)
 - **Short name**: churnPerCommitInTwoWeeks
 - **Friendly name**: Churn per commit in two weeks
 
@@ -3338,7 +3350,7 @@ The ratio between the churn and the number of commits indicates how large each c
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnActivity
+#### [rascal.generic.churn.churnActivity](#rascal.generic.churn.churnActivity)
 - **Short name**: churnActivity
 - **Friendly name**: Churn over the last two weeks
 
@@ -3348,7 +3360,7 @@ Churn in the last two weeks: collects the lines of code added and deleted over a
 - <u>Returns</u>: `rel[datetime,int]`
 
 ------
-#### rascal.generic.churn.commitActivity
+#### [rascal.generic.churn.commitActivity](#rascal.generic.churn.commitActivity)
 - **Short name**: commitActivity
 - **Friendly name**: Commits in last two weeks
 
@@ -3358,7 +3370,7 @@ Number of commits in the last two weeks: collects commit activity over a 14-day 
 - <u>Returns</u>: `rel[datetime,int]`
 
 ------
-#### rascal.generic.churn.coreCommittersChurn
+#### [rascal.generic.churn.coreCommittersChurn](#rascal.generic.churn.coreCommittersChurn)
 - **Short name**: coreCommittersChurn
 - **Friendly name**: Churn per core committer
 
@@ -3368,7 +3380,7 @@ Find out about the committers what their total number of added and deleted lines
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### rascal.generic.churn.filesPerCommit
+#### [rascal.generic.churn.filesPerCommit](#rascal.generic.churn.filesPerCommit)
 - **Short name**: numberOfFilesPerCommit
 - **Friendly name**: Number of files per commit
 
@@ -3377,7 +3389,7 @@ Counts the number of files per commit to find out about the separation of concer
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### rascal.generic.churn.churnPerCommit
+#### [rascal.generic.churn.churnPerCommit](#rascal.generic.churn.churnPerCommit)
 - **Short name**: churnPerCommit
 - **Friendly name**: Counts number of lines added and deleted per commit.
 
@@ -3387,7 +3399,7 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### rascal.generic.churn.churnPerCommitter
+#### [rascal.generic.churn.churnPerCommitter](#rascal.generic.churn.churnPerCommitter)
 - **Short name**: churnPerCommitter
 - **Friendly name**: Churn per committer
 
@@ -3396,7 +3408,7 @@ Count churn per committer: the number of lines of code added and deleted. It zoo
 - <u>Depends-on</u>: - <u>Returns</u>: `map[str author, int churn]`
 
 ------
-#### rascal.generic.churn.churnPerFile
+#### [rascal.generic.churn.churnPerFile](#rascal.generic.churn.churnPerFile)
 - **Short name**: churnPerFile
 - **Friendly name**: Churn per file
 
@@ -3405,7 +3417,7 @@ Churn per file counts the number of files added and deleted for a single file. T
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc file, int churn]`
 
 ------
-#### rascal.generic.churn.commitsInTwoWeeks
+#### [rascal.generic.churn.commitsInTwoWeeks](#rascal.generic.churn.commitsInTwoWeeks)
 - **Short name**: commitsInTwoWeeks
 - **Friendly name**: Number of commits in the last two weeks
 
@@ -3415,7 +3427,7 @@ Churn in the last two weeks: aggregates the number of commits over a 14-day slid
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnInTwoWeeks
+#### [rascal.generic.churn.churnInTwoWeeks](#rascal.generic.churn.churnInTwoWeeks)
 - **Short name**: churnInTwoWeeks
 - **Friendly name**: Sum of churn in the last two weeks
 
@@ -3426,12 +3438,12 @@ Churn in the last two weeks: aggregates the lines of code added and deleted over
 
 ------
 
-### Generic source code metrics
+### [Transient Metric Providers for Generic Source Code](#transient-source-code)
 
 These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
 
 ------
-#### trans.rascal.readability.fileReadability
+#### [trans.rascal.readability.fileReadability](#trans.rascal.readability.fileReadability)
 - **Short name**: fileReadability
 - **Friendly name**: File readability
 
@@ -3441,7 +3453,7 @@ as spaces after commas. This is a basic collection metric which is used further 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
 ------
-#### trans.rascal.readability.fileReadabilityQuartiles
+#### [trans.rascal.readability.fileReadabilityQuartiles](#trans.rascal.readability.fileReadabilityQuartiles)
 - **Short name**: fileReadabilityQ
 - **Friendly name**: File readability quartiles
 
@@ -3453,7 +3465,7 @@ lack of attention to readability.
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.comments.headerCounts
+#### [trans.rascal.comments.headerCounts](#trans.rascal.comments.headerCounts)
 - **Short name**: headerCounts
 - **Friendly name**: Number of appearances of estimated unique headers
 
@@ -3462,7 +3474,7 @@ In principle it is expected for the files in a project to share the same license
 - <u>Depends-on</u>: - <u>Returns</u>: `list[int]`
 
 ------
-#### trans.rascal.comments.commentedOutCode
+#### [trans.rascal.comments.commentedOutCode](#trans.rascal.comments.commentedOutCode)
 - **Short name**: commentedOutCode
 - **Friendly name**: Lines of commented out code per file
 
@@ -3472,7 +3484,7 @@ much source code comments are actually commented out code. Commented out code is
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.comments.commentLOC
+#### [trans.rascal.comments.commentLOC](#trans.rascal.comments.commentLOC)
 - **Short name**: commentLOC
 - **Friendly name**: Number of lines containing comments per file
 
@@ -3482,7 +3494,7 @@ between natural language comments and commented out code.
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.comments.commentLinesPerLanguage
+#### [trans.rascal.comments.commentLinesPerLanguage](#trans.rascal.comments.commentLinesPerLanguage)
 - **Short name**: commentLinesPerLanguage
 - **Friendly name**: Number of lines containing comments per language (excluding headers)
 
@@ -3494,7 +3506,7 @@ Number of lines containing comments per language (excluding headers). The balanc
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.comments.commentedOutCodePerLanguage
+#### [trans.rascal.comments.commentedOutCodePerLanguage](#trans.rascal.comments.commentedOutCodePerLanguage)
 - **Short name**: commentedOutCodePerLanguage
 - **Friendly name**: Lines of commented out code per language
 
@@ -3505,7 +3517,7 @@ much source code comments are actually commented out code. Commented out code is
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.comments.headerLOC
+#### [trans.rascal.comments.headerLOC](#trans.rascal.comments.headerLOC)
 - **Short name**: headerLOC
 - **Friendly name**: Header size per file
 
@@ -3514,7 +3526,7 @@ Header size per file is a basic metric counting the size of the comment at the s
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.comments.matchingLicenses
+#### [trans.rascal.comments.matchingLicenses](#trans.rascal.comments.matchingLicenses)
 - **Short name**: matchingLicenses
 - **Friendly name**: Used licenses (from selected list of known licenses)
 
@@ -3523,7 +3535,7 @@ We match against a list of known licenses to find out which are used in the curr
 - <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
 
 ------
-#### trans.rascal.comments.headerPercentage
+#### [trans.rascal.comments.headerPercentage](#trans.rascal.comments.headerPercentage)
 - **Short name**: headerPercentage
 - **Friendly name**: Percentage of files with headers.
 
@@ -3533,7 +3545,7 @@ Percentage of files with headers is an indicator for the amount of files which h
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.LOC.genericLOC
+#### [trans.rascal.LOC.genericLOC](#trans.rascal.LOC.genericLOC)
 - **Short name**: countLoc
 - **Friendly name**: Language independent physical lines of code
 
@@ -3543,7 +3555,7 @@ The metric can be used to compare the volume between two systems.
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.LOC.genericLOCoverFiles
+#### [trans.rascal.LOC.genericLOCoverFiles](#trans.rascal.LOC.genericLOCoverFiles)
 - **Short name**: giniLOCOverFiles
 - **Friendly name**: Spread of code over files
 
@@ -3552,7 +3564,7 @@ We find out how evenly the code is spread over files. The number should be quite
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.LOC.locPerLanguage
+#### [trans.rascal.LOC.locPerLanguage](#trans.rascal.LOC.locPerLanguage)
 - **Short name**: locPerLanguage
 - **Friendly name**: Physical lines of code per language
 
@@ -3563,7 +3575,7 @@ The metric can be used to compare the volume between two systems and to assess i
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.clones.cloneLOCPerLanguage
+#### [trans.rascal.clones.cloneLOCPerLanguage](#trans.rascal.clones.cloneLOCPerLanguage)
 - **Short name**: cloneLOCPerLanguage
 - **Friendly name**: Lines of code in Type I clones larger than 6 lines, per language
 
@@ -3573,12 +3585,12 @@ Lines of code in Type I clones larger than 6 lines, per language. A Type I clone
 
 ------
 
-### Java code metrics
+### [Transient Metric for Java Code](#transient-java-code)
 
 These metrics are related to the Java source code of analyzed projects.
 
 ------
-#### style.filesWithErrorProneness
+#### [style.filesWithErrorProneness](#style.filesWithErrorProneness)
 - **Short name**: filesWithErrorProneness
 - **Friendly name**: Files with style violations which make the code error prone. This is basic metric which can not be easily compared between projects.
 
@@ -3588,7 +3600,7 @@ Percentage of files with error proneness
 - <u>Returns</u>: `int`
 
 ------
-#### style.understandability
+#### [style.understandability](#style.understandability)
 - **Short name**: understandability
 - **Friendly name**: Inefficient code
 
@@ -3599,7 +3611,7 @@ but not necessarily more error prone.
 - <u>Returns</u>: `Table`
 
 ------
-#### style.inefficiencies
+#### [style.inefficiencies](#style.inefficiencies)
 - **Short name**: inefficiencies
 - **Friendly name**: Inefficient code
 
@@ -3609,7 +3621,7 @@ Percentage of the projects files with coding style violations which indicate com
 - <u>Returns</u>: `Table`
 
 ------
-#### style.filesWithUnderstandabilityIssues
+#### [style.filesWithUnderstandabilityIssues](#style.filesWithUnderstandabilityIssues)
 - **Short name**: filesWithUnderstandabilityIssues
 - **Friendly name**: Files with style violations which make the code harder to understand
 
@@ -3619,7 +3631,7 @@ Percentage of files with understandability issues. This is a basic metric which 
 - <u>Returns</u>: `int`
 
 ------
-#### style.errorProneness
+#### [style.errorProneness](#style.errorProneness)
 - **Short name**: errorProneness
 - **Friendly name**: Error proneness
 
@@ -3631,7 +3643,7 @@ Percentage of the projects files with coding style violations which indicate err
 - <u>Returns</u>: `Table`
 
 ------
-#### style.spreadOfStyleViolations
+#### [style.spreadOfStyleViolations](#style.spreadOfStyleViolations)
 - **Short name**: spreadOfStyleViolations
 - **Friendly name**: Spread of style violations over files
 
@@ -3642,7 +3654,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### style.filesWithInefficiencies
+#### [style.filesWithInefficiencies](#style.filesWithInefficiencies)
 - **Short name**: filesWithInefficiencies
 - **Friendly name**: Files with style violations which indicate inefficiencies. This is a basic metric which can not be easily compared between projects.
 
@@ -3652,7 +3664,7 @@ Percentage of files with inefficiencies
 - <u>Returns</u>: `int`
 
 ------
-#### style.filesWithStyleViolations
+#### [style.filesWithStyleViolations](#style.filesWithStyleViolations)
 - **Short name**: filesWithStyleViolations
 - **Friendly name**: Counts the number of files with any kind of style violation. This metric can not be easily compared between projects.
 
@@ -3662,7 +3674,7 @@ Percentage of files with style violations
 - <u>Returns</u>: `int`
 
 ------
-#### style.spreadOfUnderstandabilityIssues
+#### [style.spreadOfUnderstandabilityIssues](#style.spreadOfUnderstandabilityIssues)
 - **Short name**: spreadOfUnderstandabilityIssues
 - **Friendly name**: Spread of understandability issues over files
 
@@ -3673,7 +3685,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### style.spreadOfInefficiencies
+#### [style.spreadOfInefficiencies](#style.spreadOfInefficiencies)
 - **Short name**: spreadOfInefficiencies
 - **Friendly name**: Spread of inefficiencies over files
 
@@ -3684,7 +3696,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### style.styleViolations
+#### [style.styleViolations](#style.styleViolations)
 - **Short name**: styleViolations
 - **Friendly name**: All style violations
 
@@ -3697,7 +3709,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: - <u>Returns</u>: `Table`
 
 ------
-#### style.spreadOfErrorProneness
+#### [style.spreadOfErrorProneness](#style.spreadOfErrorProneness)
 - **Short name**: spreadOfErrorProneness
 - **Friendly name**: Spread of error proneness style violations over files
 
@@ -3708,7 +3720,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### rascal.testability.java.TestOverPublicMethods
+#### [rascal.testability.java.TestOverPublicMethods](#rascal.testability.java.TestOverPublicMethods)
 - **Short name**: percentageOfTestedPublicMethods
 - **Friendly name**: Number of JUnit tests averaged over the total number of public methods
 
@@ -3718,7 +3730,7 @@ compute how far from the ideal situation the project is.
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### rascal.testability.java.NumberOfTestMethods
+#### [rascal.testability.java.NumberOfTestMethods](#rascal.testability.java.NumberOfTestMethods)
 - **Short name**: numberOfTestMethods
 - **Friendly name**: Number of JUnit test methods. This is an intermediate absolute metric used to compute others. The bare metric is hard to compare between projects.
 
@@ -3727,7 +3739,7 @@ Number of JUnit test methods
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### rascal.testability.java.TestCoverage
+#### [rascal.testability.java.TestCoverage](#rascal.testability.java.TestCoverage)
 - **Short name**: estimateTestCoverage
 - **Friendly name**: Static Estimation of test coverage
 
@@ -3739,7 +3751,7 @@ for a lack in testing effort for the project.
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.MIF-Java
+#### [trans.rascal.OO.java.MIF-Java](#trans.rascal.OO.java.MIF-Java)
 - **Short name**: MIF_Java
 - **Friendly name**: Method inheritance factor (Java)
 
@@ -3748,7 +3760,7 @@ Method inheritance factor (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
 ------
-#### trans.rascal.OO.java.Ca-Java-Quartiles
+#### [trans.rascal.OO.java.Ca-Java-Quartiles](#trans.rascal.OO.java.Ca-Java-Quartiles)
 - **Short name**: Ca_Java_Q
 - **Friendly name**: Afferent coupling quartiles (Java)
 
@@ -3758,7 +3770,7 @@ Afferent coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.DAC-Java
+#### [trans.rascal.OO.java.DAC-Java](#trans.rascal.OO.java.DAC-Java)
 - **Short name**: DAC_Java
 - **Friendly name**: Data abstraction coupling (Java)
 
@@ -3767,7 +3779,7 @@ Data abstraction coupling (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.CF-Java
+#### [trans.rascal.OO.java.CF-Java](#trans.rascal.OO.java.CF-Java)
 - **Short name**: CF_Java
 - **Friendly name**: Coupling factor (Java)
 
@@ -3776,7 +3788,7 @@ Coupling factor (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.I-Java
+#### [trans.rascal.OO.java.I-Java](#trans.rascal.OO.java.I-Java)
 - **Short name**: I_Java
 - **Friendly name**: Instability (Java)
 
@@ -3787,7 +3799,7 @@ Instability (Java)
 - <u>Returns</u>: `map[loc, real]`
 
 ------
-#### trans.rascal.OO.java.DAC-Java-Quartiles
+#### [trans.rascal.OO.java.DAC-Java-Quartiles](#trans.rascal.OO.java.DAC-Java-Quartiles)
 - **Short name**: DAC_Java_Q
 - **Friendly name**: Data abstraction coupling quartiles (Java)
 
@@ -3797,7 +3809,7 @@ Data abstraction coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.MPC-Java-Quartiles
+#### [trans.rascal.OO.java.MPC-Java-Quartiles](#trans.rascal.OO.java.MPC-Java-Quartiles)
 - **Short name**: MPC_Java_Q
 - **Friendly name**: Message passing coupling quartiles (Java)
 
@@ -3807,7 +3819,7 @@ Message passing coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOM-Java
+#### [trans.rascal.OO.java.NOM-Java](#trans.rascal.OO.java.NOM-Java)
 - **Short name**: NOM_Java
 - **Friendly name**: Number of methods (Java)
 
@@ -3816,7 +3828,7 @@ Number of methods (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.LCOM-Java
+#### [trans.rascal.OO.java.LCOM-Java](#trans.rascal.OO.java.LCOM-Java)
 - **Short name**: LCOM_Java
 - **Friendly name**: Lack of cohesion in methods (Java)
 
@@ -3825,7 +3837,7 @@ Lack of cohesion in methods (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.CBO-Java
+#### [trans.rascal.OO.java.CBO-Java](#trans.rascal.OO.java.CBO-Java)
 - **Short name**: CBO_Java
 - **Friendly name**: Coupling between objects (Java)
 
@@ -3834,7 +3846,7 @@ Coupling between objects (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.Ce-Java
+#### [trans.rascal.OO.java.Ce-Java](#trans.rascal.OO.java.Ce-Java)
 - **Short name**: Ce_Java
 - **Friendly name**: Efferent coupling (Java)
 
@@ -3843,7 +3855,7 @@ Efferent coupling (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.PF-Java
+#### [trans.rascal.OO.java.PF-Java](#trans.rascal.OO.java.PF-Java)
 - **Short name**: PF_Java
 - **Friendly name**: Polymorphism factor (Java)
 
@@ -3852,7 +3864,7 @@ Polymorphism factor (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.RFC-Java-Quartiles
+#### [trans.rascal.OO.java.RFC-Java-Quartiles](#trans.rascal.OO.java.RFC-Java-Quartiles)
 - **Short name**: RFC_Java_Q
 - **Friendly name**: Response for class quartiles (Java)
 
@@ -3862,7 +3874,7 @@ Response for class quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.I-Java-Quartiles
+#### [trans.rascal.OO.java.I-Java-Quartiles](#trans.rascal.OO.java.I-Java-Quartiles)
 - **Short name**: I_Java_Q
 - **Friendly name**: Instability quartiles (Java)
 
@@ -3872,7 +3884,7 @@ Instability quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.RFC-Java
+#### [trans.rascal.OO.java.RFC-Java](#trans.rascal.OO.java.RFC-Java)
 - **Short name**: RFC_Java
 - **Friendly name**: Response for class (Java)
 
@@ -3881,7 +3893,7 @@ Response for class (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.LCC-Java
+#### [trans.rascal.OO.java.LCC-Java](#trans.rascal.OO.java.LCC-Java)
 - **Short name**: LCC_Java
 - **Friendly name**: Loose class cohesion (Java)
 
@@ -3890,7 +3902,7 @@ Loose class cohesion (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
 ------
-#### trans.rascal.OO.java.MIF-Java-Quartiles
+#### [trans.rascal.OO.java.MIF-Java-Quartiles](#trans.rascal.OO.java.MIF-Java-Quartiles)
 - **Short name**: MIF_Java_Q
 - **Friendly name**: Method inheritance factor quartiles (Java)
 
@@ -3900,7 +3912,7 @@ Method inheritance factor quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.DIT-Java
+#### [trans.rascal.OO.java.DIT-Java](#trans.rascal.OO.java.DIT-Java)
 - **Short name**: DIT_Java
 - **Friendly name**: Depth of inheritance tree (Java)
 
@@ -3909,7 +3921,7 @@ Depth of inheritance tree (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.MHF-Java
+#### [trans.rascal.OO.java.MHF-Java](#trans.rascal.OO.java.MHF-Java)
 - **Short name**: MHF_Java
 - **Friendly name**: Method hiding factor (Java)
 
@@ -3918,7 +3930,7 @@ Method hiding factor (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.TCC-Java
+#### [trans.rascal.OO.java.TCC-Java](#trans.rascal.OO.java.TCC-Java)
 - **Short name**: TCC_Java
 - **Friendly name**: Tight class cohesion (Java)
 
@@ -3927,7 +3939,7 @@ Tight class cohesion (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
 ------
-#### trans.rascal.OO.java.AHF-Java
+#### [trans.rascal.OO.java.AHF-Java](#trans.rascal.OO.java.AHF-Java)
 - **Short name**: AHF_Java
 - **Friendly name**: Attribute hiding factor (Java)
 
@@ -3936,7 +3948,7 @@ Attribute hiding factor (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.LCOM-Java-Quartiles
+#### [trans.rascal.OO.java.LCOM-Java-Quartiles](#trans.rascal.OO.java.LCOM-Java-Quartiles)
 - **Short name**: LCOM_Java_Q
 - **Friendly name**: Lack of cohesion in methods quartiles (Java)
 
@@ -3946,7 +3958,7 @@ Lack of cohesion in methods quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.Ca-Java
+#### [trans.rascal.OO.java.Ca-Java](#trans.rascal.OO.java.Ca-Java)
 - **Short name**: Ca_Java
 - **Friendly name**: Afferent coupling (Java)
 
@@ -3955,7 +3967,7 @@ Afferent coupling (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.A-Java
+#### [trans.rascal.OO.java.A-Java](#trans.rascal.OO.java.A-Java)
 - **Short name**: A_Java
 - **Friendly name**: Abstractness (Java)
 
@@ -3964,7 +3976,7 @@ Abstractness (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.DIT-Java-Quartiles
+#### [trans.rascal.OO.java.DIT-Java-Quartiles](#trans.rascal.OO.java.DIT-Java-Quartiles)
 - **Short name**: DIT_Java_Q
 - **Friendly name**: Depth of inheritance tree quartiles (Java)
 
@@ -3974,7 +3986,7 @@ Depth of inheritance tree quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.TCC-Java-Quartiles
+#### [trans.rascal.OO.java.TCC-Java-Quartiles](#trans.rascal.OO.java.TCC-Java-Quartiles)
 - **Short name**: TCC_Java_Q
 - **Friendly name**: Tight class cohesion quartiles (Java)
 
@@ -3984,7 +3996,7 @@ Tight class cohesion quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.LCOM4-Java-Quartiles
+#### [trans.rascal.OO.java.LCOM4-Java-Quartiles](#trans.rascal.OO.java.LCOM4-Java-Quartiles)
 - **Short name**: LCOM4_Java_Q
 - **Friendly name**: Lack of cohesion in methods 4 quartiles (Java)
 
@@ -3994,7 +4006,7 @@ Lack of cohesion in methods 4 quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.LCOM4-Java
+#### [trans.rascal.OO.java.LCOM4-Java](#trans.rascal.OO.java.LCOM4-Java)
 - **Short name**: LCOM4_Java
 - **Friendly name**: Lack of cohesion in methods 4 (Java)
 
@@ -4003,7 +4015,7 @@ Lack of cohesion in methods 4 (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.SR-Java
+#### [trans.rascal.OO.java.SR-Java](#trans.rascal.OO.java.SR-Java)
 - **Short name**: SR_Java
 - **Friendly name**: Specialization ratio (Java)
 
@@ -4012,7 +4024,7 @@ Specialization ratio (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.AIF-Java-Quartiles
+#### [trans.rascal.OO.java.AIF-Java-Quartiles](#trans.rascal.OO.java.AIF-Java-Quartiles)
 - **Short name**: AIF_Java_Q
 - **Friendly name**: Attribute inheritance factor quartiles (Java)
 
@@ -4022,7 +4034,7 @@ Attribute inheritance factor quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOC-Java-Quartiles
+#### [trans.rascal.OO.java.NOC-Java-Quartiles](#trans.rascal.OO.java.NOC-Java-Quartiles)
 - **Short name**: NOC_Java_Q
 - **Friendly name**: Number of children quartiles (Java)
 
@@ -4032,7 +4044,7 @@ Number of children quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOC-Java
+#### [trans.rascal.OO.java.NOC-Java](#trans.rascal.OO.java.NOC-Java)
 - **Short name**: NOC_Java
 - **Friendly name**: Number of children (Java)
 
@@ -4041,7 +4053,7 @@ Number of children (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.AIF-Java
+#### [trans.rascal.OO.java.AIF-Java](#trans.rascal.OO.java.AIF-Java)
 - **Short name**: AIF_Java
 - **Friendly name**: Attribute inheritance factor (Java)
 
@@ -4050,7 +4062,7 @@ Attribute inheritance factor (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
 ------
-#### trans.rascal.OO.java.RR-Java
+#### [trans.rascal.OO.java.RR-Java](#trans.rascal.OO.java.RR-Java)
 - **Short name**: RR_Java
 - **Friendly name**: Reuse ratio (Java)
 
@@ -4059,7 +4071,7 @@ Reuse ratio (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.LCC-Java-Quartiles
+#### [trans.rascal.OO.java.LCC-Java-Quartiles](#trans.rascal.OO.java.LCC-Java-Quartiles)
 - **Short name**: LCC_Java_Q
 - **Friendly name**: Loose class cohesion quartiles (Java)
 
@@ -4069,7 +4081,7 @@ Loose class cohesion quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOA-Java
+#### [trans.rascal.OO.java.NOA-Java](#trans.rascal.OO.java.NOA-Java)
 - **Short name**: NOA_Java
 - **Friendly name**: Number of attributes (Java)
 
@@ -4078,7 +4090,7 @@ Number of attributes (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.OO.java.Ce-Java-Quartiles
+#### [trans.rascal.OO.java.Ce-Java-Quartiles](#trans.rascal.OO.java.Ce-Java-Quartiles)
 - **Short name**: Ce_Java_Q
 - **Friendly name**: Efferent coupling quartiles (Java)
 
@@ -4088,7 +4100,7 @@ Efferent coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOM-Java-Quartiles
+#### [trans.rascal.OO.java.NOM-Java-Quartiles](#trans.rascal.OO.java.NOM-Java-Quartiles)
 - **Short name**: NOM_Java_Q
 - **Friendly name**: Number of methods quartiles (Java)
 
@@ -4098,7 +4110,7 @@ Number of methods quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOA-Java-Quartiles
+#### [trans.rascal.OO.java.NOA-Java-Quartiles](#trans.rascal.OO.java.NOA-Java-Quartiles)
 - **Short name**: NOA_Java_Q
 - **Friendly name**: Number of attributes quartiles (Java)
 
@@ -4108,7 +4120,7 @@ Number of attributes quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.CBO-Java-Quartiles
+#### [trans.rascal.OO.java.CBO-Java-Quartiles](#trans.rascal.OO.java.CBO-Java-Quartiles)
 - **Short name**: CBO_Java_Q
 - **Friendly name**: Coupling between objects quartiles (Java)
 
@@ -4118,7 +4130,7 @@ Coupling between objects quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.MPC-Java
+#### [trans.rascal.OO.java.MPC-Java](#trans.rascal.OO.java.MPC-Java)
 - **Short name**: MPC_Java
 - **Friendly name**: Message passing coupling (Java)
 
@@ -4127,7 +4139,7 @@ Message passing coupling (Java)
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.LOC.java.LOCoverJavaClass
+#### [trans.rascal.LOC.java.LOCoverJavaClass](#trans.rascal.LOC.java.LOCoverJavaClass)
 - **Short name**: giniLOCOverClassJava
 - **Friendly name**: Distribution of physical lines of code over Java classes, interfaces and enums
 
@@ -4136,7 +4148,7 @@ The distribution of physical lines of code over Java classes, interfaces and enu
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles
+#### [trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles](#trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles)
 - **Short name**: countUsesOfAdvancedLanguageFeaturesQ
 - **Friendly name**: Usage of advanced Java features quartiles
 
@@ -4146,7 +4158,7 @@ Quartiles of counts of advanced Java features (wildcards, union types and anonym
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava
+#### [trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava](#trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava)
 - **Short name**: countUsesOfAdvancedLanguageFeatures
 - **Friendly name**: Usage of advanced Java features
 
@@ -4155,7 +4167,7 @@ Usage of advanced Java features (wildcards, union types and anonymous classes), 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc file, int count]`
 
 ------
-#### trans.rascal.CC.java.CCHistogramJava
+#### [trans.rascal.CC.java.CCHistogramJava](#trans.rascal.CC.java.CCHistogramJava)
 - **Short name**: CCHistogramJava
 - **Friendly name**: Number of Java methods per CC risk factor
 
@@ -4165,7 +4177,7 @@ Number of Java methods per CC risk factor, counts the number of methods which ar
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.CC.java.CCOverJavaMethods
+#### [trans.rascal.CC.java.CCOverJavaMethods](#trans.rascal.CC.java.CCOverJavaMethods)
 - **Short name**: giniCCOverMethodsJava
 - **Friendly name**: CC over Java methods
 
@@ -4175,7 +4187,7 @@ Calculates how cyclomatic complexity is spread over the methods of a system. If 
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.CC.java.CCJava
+#### [trans.rascal.CC.java.CCJava](#trans.rascal.CC.java.CCJava)
 - **Short name**: getCC
 - **Friendly name**: McCabe's Cyclomatic Complexity Metric (Java)
 
@@ -4185,7 +4197,7 @@ you would need to test the method. A high number indicates also a lot of work to
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### trans.rascal.CC.java.WMCJava
+#### [trans.rascal.CC.java.WMCJava](#trans.rascal.CC.java.WMCJava)
 - **Short name**: getWMC
 - **Friendly name**: Weighted Method Count (Java)
 
@@ -4198,12 +4210,12 @@ of the cyclomatic complexity measures of all methods in the class. This metric i
 
 ------
 
-### OSGi dependencies metrics
+### [Transient Metric Providers for OSGi Dependencies](#transient-osgi-dependencies)
 
 These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
 
 ------
-#### trans.rascal.dependency.numberRequiredPackagesInSourceCode
+#### [trans.rascal.dependency.numberRequiredPackagesInSourceCode](#trans.rascal.dependency.numberRequiredPackagesInSourceCode)
 - **Short name**: numberRequiredPackagesInSourceCode
 - **Friendly name**: Number required packages in source code
 
@@ -4212,7 +4224,7 @@ Retrieves the number of required packages found in the project source code.
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.osgi.allOSGiPackageDependencies
+#### [trans.rascal.dependency.osgi.allOSGiPackageDependencies](#trans.rascal.dependency.osgi.allOSGiPackageDependencies)
 - **Short name**: allOSGiPackageDependencies
 - **Friendly name**: All OSGi package dependencies
 
@@ -4221,7 +4233,7 @@ Retrieves all the OSGi package dependencies (i.e. Import-Package and DynamicImpo
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles
+#### [trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles](#trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles)
 - **Short name**: unversionedOSGiRequiredBundles
 - **Friendly name**: Unversioned OSGi required bundles
 
@@ -4231,7 +4243,7 @@ If returned value != {} there is a smell in the Manifest.
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.unusedOSGiImportedPackages
+#### [trans.rascal.dependency.osgi.unusedOSGiImportedPackages](#trans.rascal.dependency.osgi.unusedOSGiImportedPackages)
 - **Short name**: unusedOSGiImportedPackages
 - **Friendly name**: Unused OSGi imported packages
 
@@ -4240,7 +4252,7 @@ Retrieves the set of unused OSGi imported packages. If set != {} then developers
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.numberOSGiSplitImportedPackages
+#### [trans.rascal.dependency.osgi.numberOSGiSplitImportedPackages](#trans.rascal.dependency.osgi.numberOSGiSplitImportedPackages)
 - **Short name**: numberOSGiSplitImportedPackages
 - **Friendly name**: Number OSGi split imported packages
 
@@ -4249,7 +4261,7 @@ Retrieves the number of split imported packages. If returned value > 0 there is 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.osgi.ratioUnusedOSGiImportedPackages
+#### [trans.rascal.dependency.osgi.ratioUnusedOSGiImportedPackages](#trans.rascal.dependency.osgi.ratioUnusedOSGiImportedPackages)
 - **Short name**: ratioUnusedOSGiImportedPackages
 - **Friendly name**: Ratio of unused OSGi imported packages
 
@@ -4259,7 +4271,7 @@ Retrieves the ratio of unused OSGi imported packages with regards to the whole s
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.dependency.osgi.allOSGiBundleDependencies
+#### [trans.rascal.dependency.osgi.allOSGiBundleDependencies](#trans.rascal.dependency.osgi.allOSGiBundleDependencies)
 - **Short name**: allOSGiBundleDependencies
 - **Friendly name**: All OSGi bundle dependencies
 
@@ -4268,7 +4280,7 @@ Retrieves all the OSGi bunlde dependencies (i.e. Require-Bundle dependencies).
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.unversionedOSGiExportedPackages
+#### [trans.rascal.dependency.osgi.unversionedOSGiExportedPackages](#trans.rascal.dependency.osgi.unversionedOSGiExportedPackages)
 - **Short name**: unversionedOSGiExportedPackages
 - **Friendly name**: Unversioned OSGi exported packages
 
@@ -4278,7 +4290,7 @@ If returned value != {} there is a smell in the Manifest.
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.numberOSGiSplitExportedPackages
+#### [trans.rascal.dependency.osgi.numberOSGiSplitExportedPackages](#trans.rascal.dependency.osgi.numberOSGiSplitExportedPackages)
 - **Short name**: numberOSGiSplitExportedPackages
 - **Friendly name**: Number OSGi split exported packages
 
@@ -4287,7 +4299,7 @@ Retrieves the number of split exported packages. If returned value > 0 there is 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.osgi.allOSGiDynamicImportedPackages
+#### [trans.rascal.dependency.osgi.allOSGiDynamicImportedPackages](#trans.rascal.dependency.osgi.allOSGiDynamicImportedPackages)
 - **Short name**: allOSGiDynamicImportedPackages
 - **Friendly name**: All OSGi dynamically imported packages
 
@@ -4296,7 +4308,7 @@ Retrieves all the OSGi dynamically imported packages. If returned value != {} a 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.numberOSGiBundleDependencies
+#### [trans.rascal.dependency.osgi.numberOSGiBundleDependencies](#trans.rascal.dependency.osgi.numberOSGiBundleDependencies)
 - **Short name**: numberOSGiBundleDependencies
 - **Friendly name**: Number all OSGi bundle dependencies
 
@@ -4305,7 +4317,7 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.osgi.ratioUnversionedOSGiImportedPackages
+#### [trans.rascal.dependency.osgi.ratioUnversionedOSGiImportedPackages](#trans.rascal.dependency.osgi.ratioUnversionedOSGiImportedPackages)
 - **Short name**: ratioUnversionedOSGiImportedPackages
 - **Friendly name**: Ratio unversioned OSGi imported packages
 
@@ -4315,7 +4327,7 @@ Retrieves the ratio of unversioned OSGi imported packages.
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.dependency.osgi.unversionedOSGiImportedPackages
+#### [trans.rascal.dependency.osgi.unversionedOSGiImportedPackages](#trans.rascal.dependency.osgi.unversionedOSGiImportedPackages)
 - **Short name**: unversionedOSGiImportedPackages
 - **Friendly name**: Unversioned OSGi imported packages
 
@@ -4325,7 +4337,7 @@ If returned value != {} there is a smell in the Manifest.
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.numberOSGiPackageDependencies
+#### [trans.rascal.dependency.osgi.numberOSGiPackageDependencies](#trans.rascal.dependency.osgi.numberOSGiPackageDependencies)
 - **Short name**: numberOSGiPackageDependencies
 - **Friendly name**: Number of all OSGi package dependencies
 
@@ -4334,7 +4346,7 @@ Retrieves the number of OSGi package dependencies (i.e. Import-Package and Dynam
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.osgi.ratioUnversionedOSGiRequiredBundles
+#### [trans.rascal.dependency.osgi.ratioUnversionedOSGiRequiredBundles](#trans.rascal.dependency.osgi.ratioUnversionedOSGiRequiredBundles)
 - **Short name**: ratioUnversionedOSGiRequiredBundles
 - **Friendly name**: Ratio unversioned OSGi required bundles
 
@@ -4344,7 +4356,7 @@ Retrieves the ratio of unversioned OSGi required bundles.
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.dependency.osgi.usedOSGiUnimportedPackages
+#### [trans.rascal.dependency.osgi.usedOSGiUnimportedPackages](#trans.rascal.dependency.osgi.usedOSGiUnimportedPackages)
 - **Short name**: usedOSGiUnimportedPackages
 - **Friendly name**: Used OSGi unimported packages
 
@@ -4354,7 +4366,7 @@ If set != {} then developers may be depending on the execution environment (smel
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.osgi.ratioUnversionedOSGiExportedPackages
+#### [trans.rascal.dependency.osgi.ratioUnversionedOSGiExportedPackages](#trans.rascal.dependency.osgi.ratioUnversionedOSGiExportedPackages)
 - **Short name**: ratioUnversionedOSGiExportedPackages
 - **Friendly name**: Ratio of unversioned OSGi exported packages
 
@@ -4364,7 +4376,7 @@ Retrieves the ratio of unversioned OSGi exported packages.
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.dependency.osgi.ratioUsedOSGiImportedPackages
+#### [trans.rascal.dependency.osgi.ratioUsedOSGiImportedPackages](#trans.rascal.dependency.osgi.ratioUsedOSGiImportedPackages)
 - **Short name**: ratioUsedOSGiImportedPackages
 - **Friendly name**: Ratio of used OSGi imported packages
 
@@ -4374,12 +4386,12 @@ Retrieves the ratio of used imported packages. If ratio == 0.0 all imported pack
 
 ------
 
-### Maven dependencies metrics
+### [Transient Metric Providers for Maven dependencies](#transient-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
 
 ------
-#### trans.rascal.dependency.numberRequiredPackagesInSourceCode
+#### [trans.rascal.dependency.numberRequiredPackagesInSourceCode](#trans.rascal.dependency.numberRequiredPackagesInSourceCode)
 - **Short name**: numberRequiredPackagesInSourceCode
 - **Friendly name**: Number required packages in source code
 
@@ -4388,7 +4400,7 @@ Retrieves the number of required packages found in the project source code.
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.maven.ratioOptionalMavenDependencies
+#### [trans.rascal.dependency.maven.ratioOptionalMavenDependencies](#trans.rascal.dependency.maven.ratioOptionalMavenDependencies)
 - **Short name**: ratioOptionalMavenDependencies
 - **Friendly name**: Ratio optional Maven dependencies
 
@@ -4398,7 +4410,7 @@ Retrieves the ratio of optional Maven dependencies.
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.dependency.maven.numberUniqueMavenDependencies
+#### [trans.rascal.dependency.maven.numberUniqueMavenDependencies](#trans.rascal.dependency.maven.numberUniqueMavenDependencies)
 - **Short name**: numberUniqueMavenDependencies
 - **Friendly name**: Number unique Maven dependencies
 
@@ -4407,7 +4419,7 @@ Retrieves the number of unique Maven dependencies.
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.maven.allOptionalMavenDependencies
+#### [trans.rascal.dependency.maven.allOptionalMavenDependencies](#trans.rascal.dependency.maven.allOptionalMavenDependencies)
 - **Short name**: allOptionalMavenDependencies
 - **Friendly name**: All optional Maven dependencies
 
@@ -4416,7 +4428,7 @@ Retrieves all the optional Maven dependencies.
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-#### trans.rascal.dependency.maven.isUsingTycho
+#### [trans.rascal.dependency.maven.isUsingTycho](#trans.rascal.dependency.maven.isUsingTycho)
 - **Short name**: isUsingTycho
 - **Friendly name**: Is using Tycho
 
@@ -4425,7 +4437,7 @@ Checks if the current project is a Tycho project.
 - <u>Depends-on</u>: - <u>Returns</u>: `bool`
 
 ------
-#### trans.rascal.dependency.maven.numberMavenDependencies
+#### [trans.rascal.dependency.maven.numberMavenDependencies](#trans.rascal.dependency.maven.numberMavenDependencies)
 - **Short name**: numberMavenDependencies
 - **Friendly name**: Number Maven dependencies
 
@@ -4434,7 +4446,7 @@ Retrieves the number of Maven dependencies.
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.dependency.maven.allMavenDependencies
+#### [trans.rascal.dependency.maven.allMavenDependencies](#trans.rascal.dependency.maven.allMavenDependencies)
 - **Short name**: allMavenDependencies
 - **Friendly name**: All Maven dependencies
 
@@ -4443,7 +4455,7 @@ Retrieves all the Maven dependencies.
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-## Indexing Metrics
+## [Transient Metric Providers for Indexing](#transient-indexing)
 
 These metrics facilitate data indexing unto the platform.
 
