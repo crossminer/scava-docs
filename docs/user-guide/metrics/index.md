@@ -711,6 +711,7 @@ This metric computes the labels of topic clusters extracted from bug comments su
 	- `String`	bugTrackerId
 	- `List<String>`	labels
 	- `float`	numberOfDocuments
+	- `List<String>` commentsId
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -1285,6 +1286,7 @@ This metric computes the labels of topics clusters in articles submitted by the 
 	- `String`	newsgroupName
 	- `List<String>`	labels
 	- `int`	numberOfDocuments
+	- `List<Integer>` articlesId
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -1565,7 +1567,7 @@ This metric computes the labels of topic clusters in commits messages pushed by 
 	- `String`	repository
 	- `String`	labels
 	- `int`	numberOfMessages
-	- `String`	commitsMessageId
+	- `List<String>`	commitsMessageId
 
 <u>*Visualisation Output Information*</u> :
 
@@ -3585,22 +3587,15 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 
 - BugTrackerTopic :
   - `String`	bugTrackerId
-  - `String`	label
+  - `List<String>`	labels
   - `int`	numberOfDocuments
-  - `List<CommentTopicId>` commentsTopicId
+  - `List<String>` commentsId
 
 - NewsgroupTopic :
   - `String`	newsgroupName
-  - `String`	label
+  - `List<String>`	labels
   - `int`	numberOfDocuments
-  - `List<ArticleTopicId>` articlesTopicId
-
- - CommentTopicId :
-   - `String` bugId
-   - `String`commentId
-
- - ArticleTopicId :
-   - `long` articleNumber
+  - `List<Long>` articlesId
 
 ------
 

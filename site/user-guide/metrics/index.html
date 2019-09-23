@@ -1709,6 +1709,7 @@
 <li><code>String</code>  bugTrackerId</li>
 <li><code>List&lt;String&gt;</code>    labels</li>
 <li><code>float</code>   numberOfDocuments</li>
+<li><code>List&lt;String&gt;</code> commentsId</li>
 </ul>
 </li>
 </ul>
@@ -2603,6 +2604,7 @@
 <li><code>String</code>  newsgroupName</li>
 <li><code>List&lt;String&gt;</code>    labels</li>
 <li><code>int</code> numberOfDocuments</li>
+<li><code>List&lt;Integer&gt;</code> articlesId</li>
 </ul>
 </li>
 </ul>
@@ -2912,7 +2914,7 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 <li><code>String</code>  repository</li>
 <li><code>String</code>  labels</li>
 <li><code>int</code> numberOfMessages</li>
-<li><code>String</code>  commitsMessageId</li>
+<li><code>List&lt;String&gt;</code>    commitsMessageId</li>
 </ul>
 </li>
 </ul>
@@ -5576,31 +5578,18 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 <p>BugTrackerTopic :</p>
 </li>
 <li><code>String</code>    bugTrackerId</li>
-<li><code>String</code>    label</li>
+<li><code>List&lt;String&gt;</code>  labels</li>
 <li><code>int</code>   numberOfDocuments</li>
 <li>
-<p><code>List&lt;CommentTopicId&gt;</code> commentsTopicId</p>
+<p><code>List&lt;String&gt;</code> commentsId</p>
 </li>
 <li>
 <p>NewsgroupTopic :</p>
 </li>
 <li><code>String</code>    newsgroupName</li>
-<li><code>String</code>    label</li>
+<li><code>List&lt;String&gt;</code>  labels</li>
 <li><code>int</code>   numberOfDocuments</li>
-<li>
-<p><code>List&lt;ArticleTopicId&gt;</code> articlesTopicId</p>
-</li>
-<li>
-<p>CommentTopicId :</p>
-</li>
-<li><code>String</code> bugId</li>
-<li>
-<p><code>String</code>commentId</p>
-</li>
-<li>
-<p>ArticleTopicId :</p>
-</li>
-<li><code>long</code> articleNumber</li>
+<li><code>List&lt;Long&gt;</code> articlesId</li>
 </ul>
 <hr />
 <h3 id="transient-metric-providers-for-commits-and-committers"><a href="#transient-metric-providers-for-commits-and-committers">Transient Metric Providers for Commits and Committers</a></h3>
