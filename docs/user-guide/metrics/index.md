@@ -3,28 +3,28 @@
 This guide describes the historic and transient metric providers, as well as factoids, provided by the Scava platform.
 
 - [Historic Metric Providers](#historic-metric-providers) for:
-	- [Bug Trackers](#historic-bug-trackers)
-	- [Newsgroups and Forums](#historic-newsgroups-forums)
-	- [Commits and Committers](#historic-commits-committers)
-	- [Documentation](#historic-documentation)
-	- [Generic Source Code](#historic-generic-source-code)
-	- [Java Code](#historic-java-code)
-	- [OSGi Dependencies](#historic-osgi-dependencies)
-	- [Maven Dependencies](#historic-maven-dependencies)
+	- [Bug Trackers](#historic-metric-providers-for-bug-trackers)
+	- [Newsgroups and Forums](#historic-metric-providers-for-newsgroups-and-forums)
+	- [Commits and Committers](#historic-metric-providers-for-commits-and-committers)
+	- [Documentation](#historic-metric-providers-for-documentation)
+	- [Generic Source Code](#historic-metric-providers-for-generic-source-code)
+	- [Java Code](#historic-metric-providers-for-java-code)
+	- [OSGi Dependencies](#historic-metric-providers-for-osgi-dependencies)
+	- [Maven Dependencies](#historic-metric-providers-for-maven-dependencies)
 - [Transient Metric Providers](#transient-metric-providers) for:
-	- [Bug Trackers](#transient-bug-trackers)
-	- [Newsgroups and forums](#transient-newsgroups-forums)
-	- [Documentation](#transient-documentation)
-	- [Natural Language Processing](#transient-nlp)
-	- [Commits and Committers](#transient-commits-committers)
-	- [Generic Source Code](#transient-source-code)
-	- [Java Code](#transient-java-code)
-	- [OSGi Dependencies](#transient-osgi-dependencies)
-	- [Maven Dependencies](#transient-maven-dependencies)
-	- [Indexing](#transient-indexing)
+	- [Bug Trackers](#transient-metric-providers-for-bug-trackers)
+	- [Newsgroups and forums](#transient-metric-providers-for-newsgroups-and-forums)
+	- [Documentation](#transient-metric-providers-for-documentation)
+	- [Natural Language Processing](#transient-metric-providers-for-natural-language-processing)
+	- [Commits and Committers](#transient-metric-providers-for-commits-and-committers)
+	- [Generic Source Code](#transient-metric-providers-for-generic-source-code)
+	- [Java Code](#transient-metric-providers-for-java-code)
+	- [OSGi Dependencies](#transient-metric-providers-for-osgi-dependencies)
+	- [Maven Dependencies](#transient-metric-providers-for-maven-dependencies)
+	- [Indexing](#transient-metric-providers-for-indexing)
 - [Factoids](#factoids) for:
-	- [Bug Trackers](#factoids-bug-trackers)
-	- [Newsgroups and Forums](#factoids-newsgroups-forums)
+	- [Bug Trackers](#factoids-for-bug-trackers)
+	- [Newsgroups and Forums](#factoids-for-newsgroups-and-forums)
 
 ------
 
@@ -32,7 +32,7 @@ This guide describes the historic and transient metric providers, as well as fac
 
 Historic metrics maintain a record of various heuristics associated with a specific open source project over its lifetime. They typically depend on the results from one or more transient metrics and are typically displayed in the Scava dashboards.
 
-### [Historic Metric Provider for Bug Trackers](#historic-bug-trackers)
+### [Historic Metric Providers for Bug Trackers](#historic-metric-provider-for-bug-trackers)
 
 The following Historic Metric Providers are associated with Issue trackers
 
@@ -224,7 +224,7 @@ This metric computes the number of new users per day  for each bug tracker seper
 	- `id`	bugs.newUsers
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.opentime](#org.eclipse.scava.metricprovider.historic.bugs.opentime)
@@ -249,7 +249,7 @@ This metric computes the average duration between creating and closing bugs. For
 	- `id`	bugs.bugOpenTime
 	- `id`	bugs.bugOpenTime-bugs
 
-[<img src="./arrow_drop_up.svg">Back to top](#top)	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -284,7 +284,7 @@ This class computes the number of bug patches per day, for each bug tracker sepe
 	- `id`	bugs.patches
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.requestsreplies](#org.eclipse.scava.metricprovider.historic.bugs.requestsreplies)
@@ -705,10 +705,10 @@ This metric computes the number of users, number of active and inactive users pe
 	- `id`	bugs.inactiveusers
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
-### [Historic Metric Provider for Newsgroups and Forums](#historic-newsgroups-forums)
+### [Historic Metric Providers for Newsgroups and Forums](#historic-metric-provider-for-newsgroups-and-forums)
 
 The following Historic Metric Providers are associated with newsgroups.
 
@@ -1217,10 +1217,10 @@ This metric computes the number of users, including active and inactive users pe
 	- `id`	newsgroups.activeinactiveusers
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
-### [Historic Metric Provider for Commits and Committers](#historic-commits-committers)
+### [Historic Metric Providers for Commits and Committers](#historic-metric-providers-for-commits-and-committers)
 
 The following Historic Metric Providers are related to the commits and committers of a project.
 
@@ -1239,6 +1239,7 @@ Calculates the gini coefficient of committers per file
 - <u>Returns</u>: `real`
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [trans.rascal.activecommitters.percentageOfWeekendCommits.historic](#trans.rascal.activecommitters.percentageOfWeekendCommits.historic)
@@ -1442,7 +1443,7 @@ This metric computes the labels of topic clusters in commits messages pushed by 
 
 ------
 
-### [Historic Metric Providers for Documentation](#historic-documentation)
+### [Historic Metric Providers for Documentation](#historic-metric-providers-for-documentation)
 
 The following Historic Metric Providers are associated with documentation analyses.
 
@@ -1520,11 +1521,11 @@ Historic metric that stores the evolution of the documentation sentiment polarit
 	- `id`	documentation.sentiment.entries
 	- `id`	documentation.sentiment
 
-[<img src="./arrow_drop_up.svg">Back to top](#top)	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
-### Historic Metric Provider for Generic Source Code
+### [Historic Metric Providers for Generic Source Code](#historic-metric-providers-for-generic-source-code)
 
 These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
 
@@ -1634,7 +1635,7 @@ The metric can be used to compare the volume between two systems and to assess i
 
 ------
 
-### Historic Metric Provider for Java code
+### [Historic Metric Providers for Java code](#historic-metric-providers-for-java-code)
 
 These metrics are related to the Java source code of analyzed projects.
 
@@ -2178,7 +2179,7 @@ Calculates how cyclomatic complexity is spread over the methods of a system. If 
 - <u>Depends-on</u>: `trans.rascal.CC.java.CCOverJavaMethods`
 - <u>Returns</u>: `real`
 
-### [Historic Metric Providers for OSGi Dependencies](#historic-osgi-dependencies)
+### [Historic Metric Providers for OSGi Dependencies](#historic-metric-providers-for-osgi-dependencies)
 
 These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
 
@@ -2196,7 +2197,7 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.numberOSGiBundleDependencies`
 - <u>Returns</u>: `int`
 
-### [Historic Metric Providers for Maven Dependencies](#historic-maven-dependencies)
+### [Historic Metric Providers for Maven Dependencies](#historic-metric-providers-for-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
 
@@ -2226,7 +2227,7 @@ Transient metrics are used to calculate heuristics that are associated with a pa
 
 ------
 
-### [Transient Metric Providers for Bug Trackers](#transient-bug-trackers)
+### [Transient Metric Providers for Bug Trackers](#transient-metric-providers-for-bug-trackers)
 
 The following Transient Metric Providers are associated with Issue trackers.
 
@@ -2597,10 +2598,10 @@ This metric computes for each bug, whether it was  answered. If so, it computes 
 	- `String`	responseDate
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
-### [Transient Metrics for Newsgroups and Forums](#transient-newsgroups-forums)
+### [Transient Metric Providers for Newsgroups and Forums](#transient-metric-providers-for-newsgroups-and-forums)
 
 The following Transient Metric Providers are associated with communication channels in general, either newsgroups or forums.
 Despite the name of the metrics are newsgroups, all the metrics are valid for communication channels.
@@ -2916,10 +2917,10 @@ The metric computes for each thread whether it is answered. If so, it computes t
 	- `String`	responseDate
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
-### [Transient Metrics for Documentation](#transient-documentation)
+### [Transient Metric Providers for Documentation](#transient-metric-providers-for-documentation)
 
 The following Transient Metric Providers are associated with documentation analyses.
 
@@ -3087,10 +3088,10 @@ This metric calculates the sentiment polarity of each documentation entry. Senti
 	- `String`	polarity
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-	
+
 ------
 
-### [Transient Metric Providers for Natural Language Processing](#transient-nlp)
+### [Transient Metric Providers for Natural Language Processing](#transient-metric-providers-for-natural-language-processing)
 
 The following Transient Metric Providers are associated with Natural Language Processing tools.
 
@@ -3420,7 +3421,7 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 
 ------
 
-### [Transient Metrics for Commits and Committers](#transient-commits-committers)
+### [Transient Metric Providers for Commits and Committers](#transient-metric-providers-for-commits-and-committers)
 
 These metrics are related to the commits and committers of a project.
 
@@ -3925,7 +3926,7 @@ Churn in the last two weeks: aggregates the lines of code added and deleted over
 
 ------
 
-### [Transient Metric Providers for Generic Source Code](#transient-source-code)
+### [Transient Metric Providers for Generic Source Code](#transient-metric-providers-for-generic-source-code)
 
 These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
 
@@ -4114,7 +4115,7 @@ Lines of code in Type I clones larger than 6 lines, per language. A Type I clone
 
 ------
 
-### [Transient Metric for Java Code](#transient-java-code)
+### [Transient Metric Providers for Java Code](#transient-metric-providers-for-java-code)
 
 These metrics are related to the Java source code of analyzed projects.
 
@@ -4930,7 +4931,7 @@ of the cyclomatic complexity measures of all methods in the class. This metric i
 
 ------
 
-### [Transient Metric Providers for OSGi Dependencies](#transient-osgi-dependencies)
+### [Transient Metric Providers for OSGi Dependencies](#transient-metric-providers-for-osgi-dependencies)
 
 These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
 
@@ -5162,7 +5163,7 @@ Retrieves the ratio of used imported packages. If ratio == 0.0 all imported pack
 
 ------
 
-### [Transient Metric Providers for Maven dependencies](#transient-maven-dependencies)
+### [Transient Metric Providers for Maven dependencies](#transient-metric-providers-for-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
 
@@ -5255,10 +5256,13 @@ Retrieves all the Maven dependencies.
 
 ------
 
-## [Transient Metric Providers for Indexing](#transient-indexing)
+## [Transient Metric Providers for Indexing](#transient-metric-providers-for-indexing)
 
 These metrics facilitate data indexing unto the platform.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
 
 #### [org.eclipse.scava.metricprovider.trans.indexing.preparation](#org.eclipse.scava.metricprovider.trans.indexing.preparation)
 - **Short name**: index preparation transmetric
@@ -5347,7 +5351,7 @@ Factoids are plugins used to present data that has been mined and analysed using
 
 ------
 
-### [Factoids for Bug Trackers](#factoids-bug-trackers)
+### [Factoids for Bug Trackers](#factoids-for-bug-trackers)
 
 These factoids are related to bug tracking systems.
 
@@ -5370,7 +5374,7 @@ This plugin generates the factoid regarding usage data for bug trackers. For exa
 	- `3 star`	*2* x *number of bugs or comments* > *working days in a year (250)*.
 	- `2 star`	*4* x *number of bugs or comments* > *working days in a year (250)*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5390,7 +5394,7 @@ This plugin generates the factoid regarding emotions for bug trackers. For examp
 	- `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
 	- `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5410,7 +5414,7 @@ This plugin generates the factoid regarding hourly statistics for bug trackers. 
 	- `3 star`	*maximum percentage of hourly comments* > *4* x *uniform percentage of comments per hour (100/24)*.
 	- `2 star`	*maximum percentage of hourly comments* > *6* x *uniform percentage of comments per hour (100/24)*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5430,7 +5434,7 @@ This plugin generates the factoid regarding response time for bug trackers. This
 	- `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
 	- `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5450,7 +5454,7 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 	- `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
 	- `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5470,7 +5474,7 @@ This plugin generates the factoid regarding severity for bug trackers. For examp
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
   - `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5490,7 +5494,7 @@ This plugin generates the factoid regarding bug size for bug trackers. For examp
 	- `3 star`	*2* x *number of bugs or parches* > *1000* || *2* x *number of comments* > *10000*.
 	- `2 star`	*4* x *number of bugs or parches* > *1000* || *4* x *number of comments* > *10000*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5510,7 +5514,7 @@ This plugin generates the factoid regarding bug status for bug trackers. For exa
 	- `3 star`	*perventage of resolved bug* > *50*.
 	- `2 star`	*perventage of resolved bug* > *25*.
 	- `1 star`	*otherwise* (i.e., very few resolved bugs)
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5530,7 +5534,7 @@ This plugin generates the factoid regarding bug thread length for bug trackers. 
 	- `3 star`	*Zero(0)* < *average comments* < *10*.
 	- `2 star`	*Zero(0)* < *average comments* < *20*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5550,7 +5554,7 @@ This plugin generates the factoid regarding users for bug trackers. For example,
 	- `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25 || daily active users in last year* > *2* x *2.5*.
 	- `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month* > *2* x *2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5570,12 +5574,12 @@ This plugin generates the factoid regarding weekly user engagements for bug trac
 	- `3 star`	*maximum percentage of weekly comments* < *3* x *uniform percentage of comments per week (100/7)*.
 	- `2 star`	*maximum percentage of weekly comments* < *4* x *uniform percentage of comments per week (100/7)*.
 	- `1 star`	*otherwise*
-	
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
-### [Factoids for Newsgroups and Forums](#factoids-newsgroups-forums)
+### [Factoids for Newsgroups and Forums](#factoids-for-newsgroups-and-forums)
 
 These factoids are related to communication channels.
 
@@ -5599,7 +5603,7 @@ This plugin generates the factoid regarding usage data for newsgroups. For examp
   - `3 star`	*2* x *number of articles || threads* > *working days in a year (250)*.
   - `2 star`	*4* x *number of articles || threads* > *working days in a year (250)*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5620,7 +5624,7 @@ This plugin generates the factoid regarding emotions for newsgroups, such as the
   - `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
   - `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5641,7 +5645,7 @@ This plugin generates the factoid regarding hourly data for newsgroups, such as 
   - `3 star`	*maximum percentage of hourly articles* > *4* x *uniform percentage of articles per hour (100/24)*.
   - `2 star`	*maximum percentage of hourly articles* > *6* x *uniform percentage of articles per hour (100/24)*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5662,7 +5666,7 @@ This plugin generates the factoid regarding response time for newsgroups. This c
   - `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
   - `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5683,7 +5687,7 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
   - `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
   - `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5704,7 +5708,7 @@ This plugin generates the factoid regarding severity for newsgroups. For example
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
   - `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5725,7 +5729,7 @@ This plugin generates the factoid regarding thread or article size for newsgroup
   - `3 star`	*2* x *number of threads* > *1000* || *2* x *number of articles* > *10000*.
   - `2 star`	*4* x *number of threads* > *1000* || *4* x *number of articles* > *10000*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5767,7 +5771,7 @@ This plugin generates the factoid regarding thread length for newsgroups. For ex
   - `3 star`	*Zero(0)* < *average comments* < *10*.
   - `2 star`	*Zero(0)* < *average comments* < *20*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5788,7 +5792,7 @@ This plugin generates the factoid regarding users for newsgroups. For example, t
   - `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25* || *daily active users in last year* > *2* x *2.5*.
   - `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month > 2 x 2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
   - `1 star`	*otherwise*
-  
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -5811,5 +5815,5 @@ This plugin generates the factoid regarding weekly user engagement for newsgroup
   - `1 star`	*otherwise*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
-  
+
 ------
