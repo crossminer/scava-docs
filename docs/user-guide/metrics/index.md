@@ -1,6 +1,6 @@
 # Metrics Reference Guide
 
-This guide describes the historic and transient metric providers provided by the Scava platform.
+This guide describes the historic and transient metric providers, as well as factoids, provided by the Scava platform.
 
 - [Historic Metric Providers](#historic-metric-providers) for:
  - [Bug Trackers](#historic-bug-trackers)
@@ -22,7 +22,11 @@ This guide describes the historic and transient metric providers provided by the
  - [OSGi Dependencies](#transient-osgi-dependencies)
  - [Maven Dependencies](#transient-maven-dependencies)
  - [Indexing](#transient-indexing)
--[Factoids](#factoids)
+-[Factoids](#factoids) for:
+ - [Bug Trackers](#factoids-bug-trackers)
+ - [Newsgroups and Forums](#factoids-newsgroups-forums)
+
+------
 
 ## [Historic Metric Providers](#historic-metric-providers)
 
@@ -4524,12 +4528,12 @@ This metric prepares and indexes documents relating to documentation.
 - <u>Returns</u> :	`DocumentationIndexingMetric`
 
 ------
-## Factoids
+## [Factoids](#factoids)
 
 Factoids are plugins used to present data that has been mined and analysed using one or more historic and/or transient metric providers.
 
 ------
-### Bug Factoids
+### [Factoids for Bug Trackers](#factoids-bug-trackers)
 
 These factoids are related to bug tracking systems.
 
@@ -4711,7 +4715,7 @@ This plugin generates the factoid regarding weekly user engagements for bug trac
 	- `2 star`	*maximum percentage of weekly comments* < *4* x *uniform percentage of comments per week (100/7)*.
 	- `1 star`	*otherwise*
 ------
-### Communication Channel Factoids
+### [Factoids for Newsgroups and Forums](#factoids-newsgroups-forums)
 
 These factoids are related to communication channels.
 
