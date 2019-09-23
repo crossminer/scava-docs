@@ -2,11 +2,21 @@
 
 This guide describes the historic and transient metric providers provided by the Scava platform.
 
-## Historic Metric Providers
+- [Historic Metric Providers](#historic-Metric-Providers) for:
+ - [Bug Trackers](#historic-Bug-Trackers)
+ - [Newsgroups and Forums](#historic-newsgroups-forums)
+ - [Commits and Committers](#historic-commits-committers)
+ - [Documentation](#historic-documentation)
+ - [Generic Source Code](#historic-generic-source-code)
+ - [Java Code](#historic-java-code)
+ - [OSGi Dependencies](#historic-osgi-dependencies)
+ - [Maven Dependencies](#historic-maven-dependencies)
+
+## [Historic Metric Providers](#historic-Metric-Providers)
 
 Historic metrics maintain a record of various heuristics associated with a specific open source project over its lifetime. They typically depend on the results from one or more transient metrics and are typically displayed in the Scava dashboards.
 
-### Bug Trackers
+### [Historic Metric Provider for Bug Trackers](#historic-Bug-Trackers)
 
 The following Historic Metric Providers are associated with Issue trackers
 
@@ -16,7 +26,7 @@ The following Historic Metric Providers are associated with Issue trackers
 - **Short name**: historic.bugs.bugs
 - **Friendly name**: Number of bugs per day per bug tracker
 
-This metric computes the number of bugs per day for each bug tracker seperately. It also computes additional information such as average comments per bug, average comments per user, average requests and/or replies per user and bug. 
+This metric computes the number of bugs per day for each bug tracker seperately. It also computes additional information such as average comments per bug, average comments per user, average requests and/or replies per user and bug.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.bugmetadata`,
 
@@ -35,15 +45,15 @@ This metric computes the number of bugs per day for each bug tracker seperately.
 	| averageRequestsPerUser | `float`										 |
 	| averageRepliesPerUser	| `float`										 |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugTrackerData : 
+- DailyBugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfBugs
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- BugsHistoricMetricProvider : 
+- BugsHistoricMetricProvider :
 	- `id`	bugs.bugs
 	- `id`	bugs.comments-bugaverage
 	- `id`	bugs.comments-useraverage
@@ -53,14 +63,14 @@ This metric computes the number of bugs per day for each bug tracker seperately.
 	- `id`	bugs.replies-useraverage
 	- `id`	bugs.requestsreplies-useraverage
 	- `id`	bugs.requestsreplies-bugaverage
-	- 
+	-
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.comments](#org.eclipse.scava.metricprovider.historic.bugs.comments)
 - **Short name**: historic.bugs.comments
 - **Friendly name**: Number of bug comments per day per bug tracker
 
-This metric computes the number of bug comments submitted by the community (users) per day for each bug tracker. 
+This metric computes the number of bug comments submitted by the community (users) per day for each bug tracker.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.comments`
 
@@ -72,16 +82,16 @@ This metric computes the number of bug comments submitted by the community (user
 	| numberOfComments					 | `int`			|
 	| cumulativeNumberOfComments | `int`						|
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugData : 
+- DailyBugData :
 	- `String`	bugTrackerID
 	- `int`	numberOfComments
 	- `int`	cumulativeNumberOfComments
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- CommentsHistoricMetricProvider : 
+- CommentsHistoricMetricProvider :
 	- `id`	bugs.comments
 	- `id`	bugs.cumulativeComments
 
@@ -102,14 +112,14 @@ This metric computes the emotional dimensions present in bug comments submitted 
 	| bugData		| `List<BugData>`		|
 	| Dimensions | `List<Dimensions>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugData : 
+- BugData :
 	 - `String`	bugTrackerID
 	 - `int`	numberOfComments
 	 - `int` 	cumulativeNumberOfComments
 
-- Dimensions :	
+- Dimensions :
 	- `String`	 bugTrackerId
 	- `String` 	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, `surprise`)
 	 - `int`	numberOfComments
@@ -117,9 +127,9 @@ This metric computes the emotional dimensions present in bug comments submitted 
 	 - `float`	percentage
 	 - `float`	cumulativePercentage
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- EmotionsHistoricMetricProvider : 
+- EmotionsHistoricMetricProvider :
 	- `id`	bugs.emotions.cumulativeComments
 	- `id`	bugs.emotions.cumulativeCommentPercentages
 	- `id`	bugs.emotions.comments
@@ -143,16 +153,16 @@ This metric computes the number of new bugs reported by the community (users) pe
 	| numberOfBugs					 | `int`								|
 	| cumulativeNumberOfBugs | `int`								|
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugData : 
+- DailyBugData :
 	- `String`	bugTrackerId
 	- `int`	numberOfBugs
 	- `int` 	cumulativeNumberOfBugs
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- NewUsersHistoricMetricProvider : 
+- NewUsersHistoricMetricProvider :
 	- `id`	bugs.cumulativeNewUsers
 	- `id`	bugs.newUsers
 
@@ -174,16 +184,16 @@ This metric computes the number of new users per day  for each bug tracker seper
 	| numberOfNewUsers					 | `int`											 |
 	| cumulativeNumberOfNewUsers | `int`	|
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugTrackerData : 
+- DailyBugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfNewUsers
 	- `int` 	cumulativeNumberOfNewUsers
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- NewUsersHistoricMetricProvider : 
+- NewUsersHistoricMetricProvider :
 	- `id`	bugs.cumulativeNewUsers
 	- `id`	bugs.newUsers
 
@@ -204,9 +214,9 @@ This metric computes the average duration between creating and closing bugs. For
 	| avgBugOpenTimeInDays	| `double`	|
 	| bugsConsidered | `int`|
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- OpenTimeHistoricMetricProvider : 
+- OpenTimeHistoricMetricProvider :
 	- `id`	bugs.bugOpenTime
 	- `id`	bugs.bugOpenTime-bugs
 
@@ -226,18 +236,18 @@ This class computes the number of bug patches per day, for each bug tracker sepe
 	| numberOfPatches	| `int` |
 	| cumulativeNumberOfPatches	| `int`	|
 	| bugs | `List<DailyBugData>`|
-	
 
-<u>*Additional Information*</u> :	
 
-- DailyBugData : 
+<u>*Additional Information*</u> :
+
+- DailyBugData :
 	- `String`	bugTrackerId
 	- `int`	numberOfPatches
-	- `int`	cumulativeNumberOfPatches	
+	- `int`	cumulativeNumberOfPatches
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- PatchesHistoricMetricProvider : 
+- PatchesHistoricMetricProvider :
 	- `id`	bugs.cumulativePatches
 	- `id`	bugs.patches
 
@@ -260,18 +270,18 @@ This metric computes the number of requests and replies realting to comments pos
 	| cumulativeNumberOfRequests | `int`											 |
 	| cumulativeNumberOfReplies	| `int`											 |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugTrackerData : 
+- DailyBugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfRequests
 	- `int`	numberOfReplies
-	- `int`	cumulativeNumberOfRequests	
+	- `int`	cumulativeNumberOfRequests
 	- `int`	cumulativeNumberOfReplies
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- RequestsRepliesHistoricMetricProvider : 
+- RequestsRepliesHistoricMetricProvider :
 	- `id`	bugs.replies
 	- `id`	bugs.cumulativereplies
 	- `id`	bugs.requests
@@ -299,18 +309,18 @@ This metric computes the average number of bug comments considered as request an
 	| cumulativeNumberOfRequests | `int`											 |
 	| cumulativeNumberOfReplies	| `int`											 |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugTrackerData : 
+- DailyBugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfRequests
 	- `int`	numberOfReplies
-	- `int`	cumulativeNumberOfRequests	
+	- `int`	cumulativeNumberOfRequests
 	- `int`	cumulativeNumberOfReplies
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- RequestsRepliesHistoricMetricProvider : 
+- RequestsRepliesHistoricMetricProvider :
 	- `id`	bugs.requests-averageperday
 	- `id`	bugs.requestsreplies-averageperday
 	- `id`	bugs.comments-averageperday
@@ -322,7 +332,7 @@ This metric computes the average number of bug comments considered as request an
 - **Short name**: historic.bugs.responsetime
 - **Friendly name**: Average response time to open bugs per bug tracker
 
-This metric computes the average time in which the community (users) responds to open bugs per day for each bug tracker seperately. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds. 
+This metric computes the average time in which the community (users) responds to open bugs per day for each bug tracker seperately. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.requestsreplies`
 
@@ -338,9 +348,9 @@ This metric computes the average time in which the community (users) responds to
 | bugsConsidered		 | `int`  |
 | cumulativeBugsConsidered 		 | `int`  |
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- ResponseTimeHistoricMetricProvider : 
+- ResponseTimeHistoricMetricProvider :
 	- `id`	bugs.averageResponseTime
 	- `id`	bugs.cumulativeAverageResponseTime
 	- `id`	bugs.cumulativeAverageResponseTime-bugs
@@ -350,9 +360,9 @@ This metric computes the average time in which the community (users) responds to
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.sentiment](#org.eclipse.scava.metricprovider.historic.bugs.sentiment)
 - **Short name**: historic.bugs.sentiment
-- **Friendly name**: Overall sentiment per bug tracker 
+- **Friendly name**: Overall sentiment per bug tracker
 
-This metric computes the overall sentiment per bug tracker up to the processing date. The overall sentiment score could be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). In the computation, the sentiment score for each bug contributes equally, regardless of it's size.	
+This metric computes the overall sentiment per bug tracker up to the processing date. The overall sentiment score could be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). In the computation, the sentiment score for each bug contributes equally, regardless of it's size.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.bugmetadata`
 
@@ -364,9 +374,9 @@ This metric computes the overall sentiment per bug tracker up to the processing 
 	| overallSentimentAtThreadBeggining | `float` |
 	| overallSentimentAtThreadEnd			 | `float` |
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SentimentHistoricMetricProvider : 
+- SentimentHistoricMetricProvider :
 	- `id`	bugs.averageSentiment
 	- `id`	bugs.sentimentAtThreadEnd
 	- `id`	bugs.sentimentAtThreadBeggining
@@ -391,20 +401,20 @@ This metric computes the number of severity levels for bugs submitted by the com
 	| bugData				| `List<BugData>`				|
 	| severityLevels | `List<ServerityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugData : 
+- BugData :
 	- `String`	bugTrackerId
 	- `int`	numberOfBugs
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	bugTrackerId
 	- `String`	severityLevel	(`blocker`,`critical`,`major`,`minor`,`enhancement`, `normal`, `trivial`, `unknown`)
 	- `int`	numberOfBugs
-	- `int`	percentage 
+	- `int`	percentage
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SeverityHistoricMetricProvider : 
+- SeverityHistoricMetricProvider :
 	- `id`	bugs.severity
 	- `id`	bugs.severity.percentages
 
@@ -412,9 +422,9 @@ This metric computes the number of severity levels for bugs submitted by the com
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus](#org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus)
 - **Short name**: historic.bugs.severitybugstatus
-- **Friendly name**: Number of each bug status per bug severity level 
+- **Friendly name**: Number of each bug status per bug severity level
 
-This metric computes the total number and percentage of each bug status per severity level, in bugs submitted every day, per bug tracker. There are 7 bug status (ResolvedClosed, WontFix, WorksForMe, NonResolvedClosed, Invalid, Fixed, Duplicate) and 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered `unknown` if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse. 
+This metric computes the total number and percentage of each bug status per severity level, in bugs submitted every day, per bug tracker. There are 7 bug status (ResolvedClosed, WontFix, WorksForMe, NonResolvedClosed, Invalid, Fixed, Duplicate) and 8 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial, unknown). A bug severity is considered `unknown` if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.severityclassification`, `org.eclipse.scava.metricprovider.trans.bugs.bugmetadata`
 
@@ -424,28 +434,28 @@ This metric computes the total number and percentage of each bug status per seve
 	| -------------- | --------------------- |
 	| severityLevels | `List<SeverityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	severityLevel	(`blocker`,`critical`,`major`,`minor`,`enhancement`, `normal`, `trivial`, `unknown`)
 	- `int`	numberOfBugs
 	- `int`	numberOfWontFixBugs
 	- `int`	numberOfWorksForMeBugs
-	- `int`	numberOfNonResolvedClosedBugs 
+	- `int`	numberOfNonResolvedClosedBugs
 	- `int`	numberOfInvalidBugs
-	- `int`	numberOfFixedBugs 
+	- `int`	numberOfFixedBugs
 	- `int`	numberOfDuplicateBugs
 	- `float`	percentageOfResolvedClosedBugs
-	- `float`	percentageOfWontFixBugs	
-	- `float`	percentageOfWorksForMeBugs	
-	- `float`	percentageOfNonResolvedClosedBugs	
-	- `float`	percentageOfInvalidBugs	
-	- `float`	percentageOfFixedBugs	
+	- `float`	percentageOfWontFixBugs
+	- `float`	percentageOfWorksForMeBugs
+	- `float`	percentageOfNonResolvedClosedBugs
+	- `float`	percentageOfInvalidBugs
+	- `float`	percentageOfFixedBugs
 	- `float`	percentageOfDuplicateBugs
 
-<u>*Visualisation Output*</u> :	
+<u>*Visualisation Output*</u> :
 
-- SeverityBugStatusHistoricMetricProvider : 
+- SeverityBugStatusHistoricMetricProvider :
 	- `id`	bugs.severity.duplicateBugs
 	- `id`	bugs.severity.duplicateBugs.percentages
 	- `id`	bugs.severity.fixedBugs
@@ -477,17 +487,17 @@ This metric computes the average time in which the community (users) responds to
 	| -------------- | --------------------- |
 	| severityLevels | `List<SeverityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	severityLevel	(`blocker`,`critical`,`major`,`minor`,`enhancement`, `normal`, `trivial`, `unknown`)
 	- `String`	avgResponseTimeFormatted
 	- `int`	numberOfBugs
 	- `long`	avgResponseTime
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SeverityResponseTimeHistoricMetricProvider : 
+- SeverityResponseTimeHistoricMetricProvider :
 	- `id`	bugs.severity.averageResponseTime
 
 ------
@@ -506,18 +516,18 @@ This metric computes for each bug severity level, the average sentiment, sentime
 	| -------------- | --------------------- |
 	| severityLevels | `List<SeverityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	severityLevel	(`blocker`,`critical`,`major`,`minor`,`enhancement`, `normal`, `trivial`, `unknown`)
 	- `int`	numberOfBugs
 	- `float`	averageSentiment
 	- `float`	sentimentAtThreadBeggining
 	- `float`	sentimentAtThreadEnd
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SeveritySentimentHistoricMetricProvider : 
+- SeveritySentimentHistoricMetricProvider :
 	- `id`	bugs.severity.sentiment
 	- `id`	bugs.severity.averageSentiment
 	- `id`	bugs.severity.sentimentAtThreadBeggining
@@ -529,11 +539,11 @@ This metric computes for each bug severity level, the average sentiment, sentime
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.status](#org.eclipse.scava.metricprovider.historic.bugs.status)
 - **Short name**: historic.bugs.status
-- **Friendly name**: Number of bugs per bug status per day 
+- **Friendly name**: Number of bugs per bug status per day
 
 This metric computes the total number of bugs that corresponds to each bug status, in bugs submitted every day, per bug tracker. There are 7 bug status (ResolvedClosed, WontFix, WorksForMe, NonResolvedClosed, Invalid, Fixed, Duplicate).
 
-- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.bugmetadata` 
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.bugmetadata`
 
 - <u>Returns</u> :	`BugsStatusHistoricMetric` which contains:
 
@@ -548,9 +558,9 @@ This metric computes the total number of bugs that corresponds to each bug statu
 	| numberOfFixedBugs						 | `int`	|
 	| numberOfDuplicateBugs				 | `int`	|
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- StatusHistoricMetricProvider : 
+- StatusHistoricMetricProvider :
 	- `id`	bugs.duplicateBugs
 	- `id`	bugs.fixedBugs
 	- `id`	bugs.invalidBugs
@@ -563,11 +573,11 @@ This metric computes the total number of bugs that corresponds to each bug statu
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.topics](#org.eclipse.scava.metricprovider.historic.bugs.status)
 - **Short name**: historic.bugs.topics
-- **Friendly name**: Labels of topic clusters in bug comments per bug tracker 
+- **Friendly name**: Labels of topic clusters in bug comments per bug tracker
 
 This metric computes the labels of topic clusters extracted from bug comments submitted by the community (users), per bug tracker.
 
-- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.topics` 
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.topics`
 
 - <u>Returns</u> :	`BugsTopicsHistoricMetric` which contains:
 
@@ -575,9 +585,9 @@ This metric computes the labels of topic clusters extracted from bug comments su
 	| --------- | ---------------- |
 	| bugTopics | `List<BugTopic>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	bugTrackerId
 	- `List<String>`	labels
 	- `float`	numberOfDocuments
@@ -586,7 +596,7 @@ This metric computes the labels of topic clusters extracted from bug comments su
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs](#org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs)
 - **Short name**: historic.bugs.unansweredbugs
-- **Friendly name**: Number of unanswered bugs per day 
+- **Friendly name**: Number of unanswered bugs per day
 
 This metric computes the number of unanswered bugs per day.
 
@@ -598,9 +608,9 @@ This metric computes the number of unanswered bugs per day.
 	| ---------------------- | ----- |
 	| numberOfUnansweredBugs | `int` |
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- UnansweredThreadsHistoricMetricProvider : 
+- UnansweredThreadsHistoricMetricProvider :
 	- `id`	bugs.unansweredBugs
 
 ------
@@ -609,7 +619,7 @@ This metric computes the number of unanswered bugs per day.
 - **Short name**: historic.bugs.users
 - **Friendly name**: Number of users, active and inactive per day per bug tracker
 
-This metric computes the number of users, number of active and inactive users per day for each bug tracker separately. 
+This metric computes the number of users, number of active and inactive users per day for each bug tracker separately.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.activeusers`
 
@@ -622,24 +632,24 @@ This metric computes the number of users, number of active and inactive users pe
 	| numberOfActiveUsers	 | `int`												|
 	| numberOfInactiveUsers | `int`												|
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyBugTrackingData : 
+- DailyBugTrackingData :
 	- `String`	bugTrackerId
 	- `int`	numberOfUsers
 	- `int`	numberOfActiveUsers
 	- `int`	numberOfInactiveUsers
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- UsersHistoricMetricProvider : 
+- UsersHistoricMetricProvider :
 	- `id`	bugs.users
 	- `id`	bugs.activeusers
 	- `id`	bugs.inactiveusers
 
 ------
 
-### News Groups and Forums
+### [Historic Metric Provider for Newsgroups and Forums](#historic-newsgroups-forums)
 
 The following Historic Metric Providers are associated with newsgroups.
 
@@ -659,16 +669,16 @@ This metric computes the number of articles submitted by the community (users) p
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 	- `int`	cummulativeNumberOfArticles
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- ArticlesHistoricMetricProvider : 
+- ArticlesHistoricMetricProvider :
 	- `id`	newsgroups.articles
 	- `id`	newsgroups.cumulativeArticles
 
@@ -676,7 +686,7 @@ This metric computes the number of articles submitted by the community (users) p
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.emotions](#org.eclipse.scava.metricprovider.historic.newsgroups.emotions)
 - **Short name**: historic.newsgroups.emotions
-- **Friendly name**: Number of emotions per day per newsgroup 
+- **Friendly name**: Number of emotions per day per newsgroup
 
 This metric computes the emotional dimensions present in newsgroup comments submitted by the community (users) per day for each newsgroup. Emotion can be 1 of 6 (anger, fear, joy, sadness, love or surprise).
 
@@ -689,14 +699,14 @@ This metric computes the emotional dimensions present in newsgroup comments subm
 	| newsgroupsData		 | `List<Newsgroups>` |
 	| emotionDimension		 | `List<Emotion>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupsData : 
+- NewsgroupsData :
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 	- `int`	cummulativeNumberOfArticles
 
-- EmotionDimension : 
+- EmotionDimension :
 	- `String`	newsgroupName
 	- `String`	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, `surprise`)
 	- `int`	numberOfArticles
@@ -704,14 +714,14 @@ This metric computes the emotional dimensions present in newsgroup comments subm
 	- `float`	percentage
 	- `float`	cumulativePercentage
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- EmotionsHistoricMetricProvider : 
+- EmotionsHistoricMetricProvider :
 	- `id`	newsgroups.emotions.articlePercentages
 	- `id`	newsgroups.emotions.cumulativeArticles
 	- `id`	newsgroups.emotions.cumulativeArticlePercentages
 	- `id`	newsgroups.emotions.articles
-	
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.newthreads](#org.eclipse.scava.metricprovider.historic.newsgroups.newthreads)
@@ -728,16 +738,16 @@ This metric computes the number of new threads submitted by the community (users
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfNewThreads
 	- `int`	cummulativeNumberOfNewThreads
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- NewThreadsHistoricMetricProvider : 
+- NewThreadsHistoricMetricProvider :
 	- `id`	newsgroups.newThreads
 	- `id`	newsgroups.cumulativeNewThreads
 
@@ -747,7 +757,7 @@ This metric computes the number of new threads submitted by the community (users
 - **Short name**: historic.newsgroups.newusers
 - **Friendly name**: Number of new users per day per newsgroup
 
-This metric computes the number of new users per day for each newsgroup seperately. 
+This metric computes the number of new users per day for each newsgroup seperately.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.activeusers`
 
@@ -757,16 +767,16 @@ This metric computes the number of new users per day for each newsgroup seperate
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfNewUsers
 	- `int`	cummulativeNumberOfNewUsers
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- NewUsersHistoricMetricProvider: 
+- NewUsersHistoricMetricProvider:
 	- `id`	newsgroups.cumulativeNewUsers
 	- `id`	newsgroups.newUsers
 
@@ -774,7 +784,7 @@ This metric computes the number of new users per day for each newsgroup seperate
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies](#org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies)
 - **Short name**: historic.newsgroups.requestsreplies
-- **Friendly name**: Number of requests and replies in articles per day 
+- **Friendly name**: Number of requests and replies in articles per day
 
 This metric computes the number of requests and replies in newsgroup articles submitted by the community (users) per day for each newsgroup separately.
 
@@ -786,18 +796,18 @@ This metric computes the number of requests and replies in newsgroup articles su
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfRequests
 	- `int`	numberOfReplies
 	- `int`	cumulativeNumberOfRequests
 	- `int`	cumulativeNumberOfReplies
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- RequestsRepliesHistoricMetricProvider : 
+- RequestsRepliesHistoricMetricProvider :
 	- `id`	newsgroups.requests
 	- `id`	newsgroups.cumulativerequests
 	- `id`	newsgroups.replies
@@ -809,7 +819,7 @@ This metric computes the number of requests and replies in newsgroup articles su
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average](#org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average)
 - **Short name**: historic.newsgroups.requestsreplies.average
-- **Friendly name**: Average number of articles, requests and replies per day 
+- **Friendly name**: Average number of articles, requests and replies per day
 
 This metric computes the average number of newsgroup articles, including the number of requests and replies within the newsgroup articles per day.
 
@@ -823,9 +833,9 @@ This metric computes the average number of newsgroup articles, including the num
 	| averageRequestsPerDay		 | `float` |
 	| averageRepliesPerDay		 | `float` |
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- RequestsRepliesAverageHistoricMetricProvider : 
+- RequestsRepliesAverageHistoricMetricProvider :
 	- `id`	newsgroups.requestsreplies-averageperday
 	- `id`	newsgroups.requests-averageperday
 	- `id`	newsgroups.replies-averageperday
@@ -852,21 +862,21 @@ This metric computes the average time in which the community responds to open th
 	| cumulativeAvgResponseTimeFormatted		 | `String` |
 	| cumulativeThreadsConsidered		 | `int` |
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- ResponseTimeHistoricMetricProvider : 
+- ResponseTimeHistoricMetricProvider :
 	- `id`	newsgroups.averageResponseTime
 	- `id`	newsgroups.cumulativeAverageResponseTime
 	- `id`	newsgroups.cumulativeAverageResponseTime-threads
 	- `id`	newsgroups.averageResponseTime-threads
-	- 
+	-
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.sentiment](#org.eclipse.scava.metricprovider.historic.newsgroups.sentiment)
 - **Short name**: historic.newsgroups.sentiment
-- **Friendly name**: Overall sentiment of newsgroup articles 
+- **Friendly name**: Overall sentiment of newsgroup articles
 
-This metric computes the overall sentiment per newsgroup repository up to the processing date. The overall sentiment score could be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). In the computation, the sentiment score of each thread contributes equally, irrespective of its size. 
+This metric computes the overall sentiment per newsgroup repository up to the processing date. The overall sentiment score could be -1 (negative sentiment), 0 (neutral sentiment) or +1 (positive sentiment). In the computation, the sentiment score of each thread contributes equally, irrespective of its size.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.sentiment`
 
@@ -878,9 +888,9 @@ This metric computes the overall sentiment per newsgroup repository up to the pr
 	| overallSentimentAtThreadBegining		 | `float` |
 	| overallSentimentAtThreadEnd		 | `float` |
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SentimentHistoricMetricProvider : 
+- SentimentHistoricMetricProvider :
 	- `id`	newsgroups.averageSentiment
 	- `id`	newsgroups.sentimentAtThreadEnd
 	- `id`	newsgroups.sentimentAtThreadBeggining
@@ -892,7 +902,7 @@ This metric computes the overall sentiment per newsgroup repository up to the pr
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.severity](#org.eclipse.scava.metricprovider.historic.newsgroups.severity)
 - **Short name**: historic.newsgroups.severity
-- **Friendly name**: Number of each severity level in newsgroup threads per day 
+- **Friendly name**: Number of each severity level in newsgroup threads per day
 
 This metric computes the number of each severity levels in threads submitted every day, per newsgroup. There are 7 severity  levels (blocker, critical, major, minor, enhancement,  normal, trivial).  
 
@@ -905,21 +915,21 @@ This metric computes the number of each severity levels in threads submitted eve
 	| newsgroupData		 | `List<Newsgroups>` |
 	| severityLevel		 | `List<SeverityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupData : 
+- NewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberThreads
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	newsgroupName
 	- `String`	severityLabel (`blocker`, `critical`, `major`, `minor`, `enhancement`,  `normal`, `trivial`)
 	- `int`	numberOfThreads
 	- `float`	percentage
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SeverityHistoricMetricProvider : 
+- SeverityHistoricMetricProvider :
 	- `id`	newsgroups.severity
 	- `id`	newsgroups.severity.percentages
 
@@ -929,9 +939,9 @@ This metric computes the number of each severity levels in threads submitted eve
 - **Short name**: historic.newsgroups.severityresponsetime
 - **Friendly name**: Average response time to threads per severity level per day
 
-This metric computes the average time in which the community (users) responds to open threads per severity level per day for each bug tracker. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds. Note: there are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial). 
+This metric computes the average time in which the community (users) responds to open threads per severity level per day for each bug tracker. Format: dd:HH:mm:ss:SS, where dd=days, HH:hours, mm=minutes, ss:seconds, SS=milliseconds. Note: there are 7 severity  levels (blocker, critical, major, minor, enhancement, normal, trivial).
 
-Average response time to threads per severity level 
+Average response time to threads per severity level
 
 This metric computes the average response time for newsgroup threads submitted every day, based on their severity levels.
 
@@ -944,17 +954,17 @@ This metric computes the average response time for newsgroup threads submitted e
 	| -------- | ------ |
 	| severityLevel		 | `List<SeverityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	severityLabel (`blocker`, `critical`, `major`, `minor`, `enhancement`,  `normal`, `trivial`)
 	- `int`	numberOfThreads
 	- `long`	avgResponseTime
 	- `String`	avgResponseTimeFormatted
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SeverityResponseTimeHistoricMetricProvider : 
+- SeverityResponseTimeHistoricMetricProvider :
 	- `id`	newsgroups.severity.averageResponseTime
 
 ------
@@ -974,18 +984,18 @@ This metric computes the average sentiment, the sentiment at the beginning of th
 	| -------- | ------ |
 	| severityLevel		 | `List<SeverityLevel>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- SeverityLevel : 
+- SeverityLevel :
 	- `String`	severityLabel (`blocker`, `critical`, `major`, `minor`, `enhancement`,  `normal`, `trivial`)
 	- `int`	numberOfThreads
 	- `float`	avgSentiment
 	- `float`	avgSentimentThreadBeginning
 	- `float`	avgSentimentThreadEnd
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- SeveritySentimentHistoricMetricProvider : 
+- SeveritySentimentHistoricMetricProvider :
 	- `id`	newsgroups.severity.averageSentiment
 	- `id`	newsgroups.severity.sentiment
 	- `id`	newsgroups.severity.sentimentAtThreadEnd
@@ -1010,9 +1020,9 @@ This metric computes the number of threads per day for each newsgroup separately
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfThreads
 	- `float`	averageArticlesPerThread
@@ -1022,9 +1032,9 @@ This metric computes the number of threads per day for each newsgroup separately
 	- `float`	averageRequestsPerUser
 	- `float`	averageRepliesPerUser
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- ThreadsHistoricMetricProvider : 
+- ThreadsHistoricMetricProvider :
 	- `id`	newsgroups.threads
 	- `id`	newsgroups.articles-threadaverage
 	- `id`	newsgroups.articles-useraverage
@@ -1051,9 +1061,9 @@ This metric computes the labels of topics clusters in articles submitted by the 
 	| -------- | ------ |
 	| newsgroupTopic		 | `List<NewsgrpTopic>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupTopic : 
+- NewsgroupTopic :
 	- `String`	newsgroupName
 	- `List<String>`	labels
 	- `int`	numberOfDocuments
@@ -1074,15 +1084,15 @@ This metric computes the number of unanswered threads per day for each newsgroup
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfUnansweredThreads
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- UnansweredThreadsHistoricMetricProvider : 
+- UnansweredThreadsHistoricMetricProvider :
 	- `id`	newsgroups.unansweredThreads
 
 ------
@@ -1101,17 +1111,17 @@ This metric computes the number of users, including active and inactive users pe
 	| -------- | ------ |
 	| dailyNewsgroupData		 | `List<DailyNewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyNewsgroupData : 
+- DailyNewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfUsers
 	- `int`	numberOfActiveUsers
 	- `int`	numberOfInactiveUsers
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- UsersHistoricMetricProvider : 
+- UsersHistoricMetricProvider :
 	- `id`	newsgroups.users
 	- `id`	newsgroups.activeusers
 	- `id`	newsgroups.inactiveusers
@@ -1119,12 +1129,12 @@ This metric computes the number of users, including active and inactive users pe
 
 ------
 
-### Commits and committers metrics
+### [Historic Metric Provider for Commits and Committers](#historic-commits-committers)
 
-These metrics are related to the commits and committers of a project.
+The following Historic Metric Providers are related to the commits and committers of a project.
 
 ------
-#### trans.rascal.activecommitters.committersoverfile.historic
+#### [trans.rascal.activecommitters.committersoverfile.historic](#trans.rascal.activecommitters.committersoverfile.historic)
 - **Short name**: giniCommittersOverFile.historic
 - **Friendly name**: Historic giniCommittersOverFile
 - **Historic version of**: trans.rascal.activecommitters.committersoverfile
@@ -1135,7 +1145,7 @@ Calculates the gini coefficient of committers per file
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.activecommitters.percentageOfWeekendCommits.historic
+#### [trans.rascal.activecommitters.percentageOfWeekendCommits.historic](#trans.rascal.activecommitters.percentageOfWeekendCommits.historic)
 - **Short name**: percentageOfWeekendCommits.historic
 - **Friendly name**: Historic percentageOfWeekendCommits
 - **Historic version of**: trans.rascal.activecommitters.percentageOfWeekendCommits
@@ -1146,7 +1156,7 @@ Percentage of commits made during the weekend
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.commitsPerDeveloper.historic
+#### [trans.rascal.activecommitters.commitsPerDeveloper.historic](#trans.rascal.activecommitters.commitsPerDeveloper.historic)
 - **Short name**: commitsPerDeveloper.historic
 - **Friendly name**: Historic commitsPerDeveloper
 - **Historic version of**: trans.rascal.activecommitters.commitsPerDeveloper
@@ -1158,7 +1168,7 @@ when combined with other metrics such as churn. Few and big commits are differen
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.activecommitters.numberOfActiveCommittersLongTerm.historic
+#### [trans.rascal.activecommitters.numberOfActiveCommittersLongTerm.historic](#trans.rascal.activecommitters.numberOfActiveCommittersLongTerm.historic)
 - **Short name**: numberOfActiveCommittersLongTerm.historic
 - **Friendly name**: Historic numberOfActiveCommittersLongTerm
 - **Historic version of**: trans.rascal.activecommitters.numberOfActiveCommittersLongTerm
@@ -1169,7 +1179,7 @@ Number of long time active committers over time (active in last year). This meas
 - <u>Returns</u>: `int`
 
 ------
-#### trans.rascal.activecommitters.numberOfActiveCommitters.historic
+#### [trans.rascal.activecommitters.numberOfActiveCommitters.historic](#trans.rascal.activecommitters.numberOfActiveCommitters.historic)
 - **Short name**: numberOfActiveCommitters.historic
 - **Friendly name**: Historic numberOfActiveCommitters
 - **Historic version of**: trans.rascal.activecommitters.numberOfActiveCommitters
@@ -1180,7 +1190,7 @@ Number of active committers over time (active in last two weeks). This measures 
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.commitsToday.historic
+#### [rascal.generic.churn.commitsToday.historic](#rascal.generic.churn.commitsToday.historic)
 - **Short name**: commitsToday.historic
 - **Friendly name**: Historic commitsToday
 - **Historic version of**: rascal.generic.churn.commitsToday
@@ -1191,7 +1201,7 @@ Counts the number of commits made today.
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnToday.historic
+#### [rascal.generic.churn.churnToday.historic](#rascal.generic.churn.churnToday.historic)
 - **Short name**: commitsToday.historic
 - **Friendly name**: Historic commitsToday
 - **Historic version of**: rascal.generic.churn.churnToday
@@ -1202,7 +1212,7 @@ Counts the churn for today: the total number of lines of code added and deleted.
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.churnPerCommitInTwoWeeks.historic
+#### [rascal.generic.churn.churnPerCommitInTwoWeeks.historic](#rascal.generic.churn.churnPerCommitInTwoWeeks.historic)
 - **Short name**: churnPerCommitInTwoWeeks.historic
 - **Friendly name**: Historic churnPerCommitInTwoWeeks
 - **Historic version of**: rascal.generic.churn.churnPerCommitInTwoWeeks
@@ -1213,7 +1223,7 @@ The ratio between the churn and the number of commits indicates how large each c
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.generic.churn.filesPerCommit.historic
+#### [rascal.generic.churn.filesPerCommit.historic](#rascal.generic.churn.filesPerCommit.historic)
 - **Short name**: numberOfFilesPerCommit.historic
 - **Friendly name**: Historic numberOfFilesPerCommit
 - **Historic version of**: rascal.generic.churn.filesPerCommit
@@ -1224,7 +1234,7 @@ Counts the number of files per commit to find out about the separation of concer
 - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### rascal.generic.churn.churnPerCommit.historic
+#### [rascal.generic.churn.churnPerCommit.historic](#rascal.generic.churn.churnPerCommit.historic)
 - **Short name**: churnPerCommit.historic
 - **Friendly name**: Historic churnPerCommit
 - **Historic version of**: rascal.generic.churn.churnPerCommit
@@ -1236,7 +1246,7 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 - <u>Returns</u>: `map[loc, int]`
 
 ------
-#### rascal.generic.churn.churnPerCommitter.historic
+#### [rascal.generic.churn.churnPerCommitter.historic](#rascal.generic.churn.churnPerCommitter.historic)
 - **Short name**: churnPerCommitter.historic
 - **Friendly name**: Historic churnPerCommitter
 - **Historic version of**: rascal.generic.churn.churnPerCommitter
@@ -1247,7 +1257,7 @@ Count churn per committer: the number of lines of code added and deleted. It zoo
 - <u>Returns</u>: `map[str author, int churn]`
 
 ------
-#### rascal.generic.churn.commitsInTwoWeeks.historic
+#### [rascal.generic.churn.commitsInTwoWeeks.historic](#rascal.generic.churn.commitsInTwoWeeks.historic)
 - **Short name**: commitsInTwoWeeks.historic
 - **Friendly name**: Historic commitsInTwoWeeks
 - **Historic version of**: rascal.generic.churn.commitsInTwoWeeks
@@ -1273,7 +1283,7 @@ Churn in the last two weeks: aggregates the lines of code added and deleted over
 - **Short name**: historic.commits.messages.topics
 - **Friendly name**: Labels of topics in commits messages analyzed in the last 30 days
 
-This metric computes the labels of topic clusters in commits messages pushed by users in the last 30 days 
+This metric computes the labels of topic clusters in commits messages pushed by users in the last 30 days
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.commits.message.topics`
 
@@ -1283,21 +1293,21 @@ This metric computes the labels of topic clusters in commits messages pushed by 
 	| --------------------- | ---------------------------- |
 	| commitMessageTopics			| `List<CommitMessageTopic>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- CommitMessageTopic : 
+- CommitMessageTopic :
 	- `String`	repository
 	- `String`	labels
 	- `int`	numberOfMessages
 	- `String`	commitsMessageId
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- CommitsMessagesTopicsHistoricMetricProvider : 
+- CommitsMessagesTopicsHistoricMetricProvider :
 	- `id`	commits.topics.messages
 
 ------
-### Documentation
+### [Historic Metric Providers for Documentation](#historic-documentation)
 
 The following Historic Metric Providers are associated with documentation analyses.
 
@@ -1317,21 +1327,21 @@ Historic metric that stores the evolution of the documentation readability
 	| documentationReadability	| `List<DocumentationHistoricReadability>` |
 	| documentationEntriesReadability | `List<DocumentationEntryHistoricReadability>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationHistoricReadability : 
+- DocumentationHistoricReadability :
 	- `String`	documentationId
 	- `int`	numberOfDocumentationEntries
 	- `double`	averageDocumentationReadability
 
-- DocumentationEntryHistoricReadability : 
+- DocumentationEntryHistoricReadability :
 	- `String`	documentationId
 	- `String`	entryId
 	- `double`	readability
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- readability : 
+- readability :
 	- `id`	documentation.readability.entries
 	- `id`	documentation.readability
 
@@ -1351,32 +1361,32 @@ Historic metric that stores the evolution of the documentation sentiment polarit
 	| documentationSentiment	| `List<DocumentationHistoricSentiment>` |
 	| documentationEntriesSentiment | `List<DocumentationEntryHistoricSentiment>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationHistoricSentiment : 
+- DocumentationHistoricSentiment :
 	- `String`	documentationId
 	- `int`	numberOfDocumentationEntries
 	- `double`	averageDocumentationSentiment
 
-- DocumentationEntryHistoricSentiment : 
+- DocumentationEntryHistoricSentiment :
 	- `String`	documentationId
 	- `String`	entryId
 	- `String`	polarity
 
-<u>*Visualisation Output Information*</u> :	
+<u>*Visualisation Output Information*</u> :
 
-- sentiment : 
+- sentiment :
 	- `id`	documentation.sentiment.entries
 	- `id`	documentation.sentiment
 
 ------
 
-### Generic source code metrics
+### Historic Metric Provider for Generic Source Code
 
 These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
 
 ------
-#### trans.rascal.clones.cloneLOCPerLanguage.historic
+#### [trans.rascal.clones.cloneLOCPerLanguage.historic](#trans.rascal.clones.cloneLOCPerLanguage.historic)
 - **Short name**: cloneLOCPerLanguage.historic
 - **Friendly name**: Historic cloneLOCPerLanguage
 - **Historic version of**: trans.rascal.clones.cloneLOCPerLanguage
@@ -1387,7 +1397,7 @@ Lines of code in Type I clones larger than 6 lines, per language. A Type I clone
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.readability.fileReadabilityQuartiles.historic
+#### [trans.rascal.readability.fileReadabilityQuartiles.historic](#trans.rascal.readability.fileReadabilityQuartiles.historic)
 - **Short name**: fileReadabilityQ.historic
 - **Friendly name**: Historic fileReadabilityQ
 - **Historic version of**: trans.rascal.readability.fileReadabilityQuartiles
@@ -1400,7 +1410,7 @@ lack of attention to readability.
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.comments.commentLinesPerLanguage.historic
+#### [trans.rascal.comments.commentLinesPerLanguage.historic](#trans.rascal.comments.commentLinesPerLanguage.historic)
 - **Short name**: commentLinesPerLanguage.historic
 - **Friendly name**: Historic commentLinesPerLanguage
 - **Historic version of**: trans.rascal.comments.commentLinesPerLanguage
@@ -1411,7 +1421,7 @@ Number of lines containing comments per language (excluding headers). The balanc
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.comments.commentedOutCodePerLanguage.historic
+#### [trans.rascal.comments.commentedOutCodePerLanguage.historic](#trans.rascal.comments.commentedOutCodePerLanguage.historic)
 - **Short name**: commentedOutCodePerLanguage.historic
 - **Friendly name**: Historic commentedOutCodePerLanguage
 - **Historic version of**: trans.rascal.comments.commentedOutCodePerLanguage
@@ -1423,7 +1433,7 @@ much source code comments are actually commented out code. Commented out code is
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.comments.headerPercentage.historic
+#### [trans.rascal.comments.headerPercentage.historic](#trans.rascal.comments.headerPercentage.historic)
 - **Short name**: headerPercentage.historic
 - **Friendly name**: Historic headerPercentage
 - **Historic version of**: trans.rascal.comments.headerPercentage
@@ -1434,7 +1444,7 @@ Percentage of files with headers is an indicator for the amount of files which h
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.LOC.genericLOCoverFiles.historic
+#### [trans.rascal.LOC.genericLOCoverFiles.historic](#trans.rascal.LOC.genericLOCoverFiles.historic)
 - **Short name**: giniLOCOverFiles.historic
 - **Friendly name**: Historic giniLOCOverFiles
 - **Historic version of**: trans.rascal.LOC.genericLOCoverFiles
@@ -1445,23 +1455,23 @@ We find out how evenly the code is spread over files. The number should be quite
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.LOC.locPerLanguage.historic
+#### [trans.rascal.LOC.locPerLanguage.historic](#trans.rascal.LOC.locPerLanguage.historic)
 - **Short name**: locPerLanguage.historic
 - **Friendly name**: Historic locPerLanguage
 - **Historic version of**: trans.rascal.LOC.locPerLanguage
 
-Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. We accumulate this number per programming language. 
+Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. We accumulate this number per programming language.
 The metric can be used to compare the volume between two systems and to assess in which programming language the bulk of the code is written.
 
 - <u>Depends-on</u>: `trans.rascal.LOC.locPerLanguage`
 - <u>Returns</u>: `map[str, int]`
 
-### Java code metrics
+### Historic Metric Provider for Java code
 
 These metrics are related to the Java source code of analyzed projects.
 
 ------
-#### style.filesWithErrorProneness.historic
+#### [style.filesWithErrorProneness.historic](#style.filesWithErrorProneness.historic)
 - **Short name**: filesWithErrorProneness.historic
 - **Friendly name**: Historic filesWithErrorProneness
 - **Historic version of**: style.filesWithErrorProneness
@@ -1472,7 +1482,7 @@ Percentage of files with error proneness
 - <u>Returns</u>: `int`
 
 ------
-#### style.filesWithUnderstandabilityIssues.historic
+#### [style.filesWithUnderstandabilityIssues.historic](#style.filesWithUnderstandabilityIssues.historic)
 - **Short name**: filesWithUnderstandabilityIssues.historic
 - **Friendly name**: Historic filesWithUnderstandabilityIssues
 - **Historic version of**: style.filesWithUnderstandabilityIssues
@@ -1483,7 +1493,7 @@ Percentage of files with understandability issues. This is a basic metric which 
 - <u>Returns</u>: `int`
 
 ------
-#### style.spreadOfStyleViolations.historic
+#### [style.spreadOfStyleViolations.historic](#style.spreadOfStyleViolations.historic)
 - **Short name**: spreadOfStyleViolations.historic
 - **Friendly name**: Historic spreadOfStyleViolations
 - **Historic version of**: style.spreadOfStyleViolations
@@ -1495,7 +1505,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### style.filesWithInefficiencies.historic
+#### [style.filesWithInefficiencies.historic](#style.filesWithInefficiencies.historic)
 - **Short name**: filesWithInefficiencies.historic
 - **Friendly name**: Historic filesWithInefficiencies
 - **Historic version of**: style.filesWithInefficiencies
@@ -1506,7 +1516,7 @@ Percentage of files with inefficiencies
 - <u>Returns</u>: `int`
 
 ------
-#### style.filesWithStyleViolations.historic
+#### [style.filesWithStyleViolations.historic](#style.filesWithStyleViolations.historic)
 - **Short name**: filesWithStyleViolations.historic
 - **Friendly name**: Historic filesWithStyleViolations
 - **Historic version of**: style.filesWithStyleViolations
@@ -1517,7 +1527,7 @@ Percentage of files with style violations
 - <u>Returns</u>: `int`
 
 ------
-#### style.spreadOfUnderstandabilityIssues.historic
+#### [style.spreadOfUnderstandabilityIssues.historic](#style.spreadOfUnderstandabilityIssues.historic)
 - **Short name**: spreadOfUnderstandabilityIssues.historic
 - **Friendly name**: Historic spreadOfUnderstandabilityIssues
 - **Historic version of**: style.spreadOfUnderstandabilityIssues
@@ -1529,7 +1539,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### style.spreadOfInefficiencies.historic
+#### [style.spreadOfInefficiencies.historic](#style.spreadOfInefficiencies.historic)
 - **Short name**: spreadOfInefficiencies.historic
 - **Friendly name**: Historic spreadOfInefficiencies
 - **Historic version of**: style.spreadOfInefficiencies
@@ -1541,7 +1551,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### style.spreadOfErrorProneness.historic
+#### [style.spreadOfErrorProneness.historic](#style.spreadOfErrorProneness.historic)
 - **Short name**: spreadOfErrorProneness.historic
 - **Friendly name**: Historic spreadOfErrorProneness
 - **Historic version of**: style.spreadOfErrorProneness
@@ -1553,7 +1563,7 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Returns</u>: `real`
 
 ------
-#### rascal.testability.java.TestOverPublicMethods.historic
+#### [rascal.testability.java.TestOverPublicMethods.historic](#rascal.testability.java.TestOverPublicMethods.historic)
 - **Short name**: percentageOfTestedPublicMethods.historic
 - **Friendly name**: Historic percentageOfTestedPublicMethods
 - **Historic version of**: rascal.testability.java.TestOverPublicMethods
@@ -1565,7 +1575,7 @@ compute how far from the ideal situation the project is.
 - <u>Returns</u>: `real`
 
 ------
-#### rascal.testability.java.NumberOfTestMethods.historic
+#### [rascal.testability.java.NumberOfTestMethods.historic](#rascal.testability.java.NumberOfTestMethods.historic)
 - **Short name**: numberOfTestMethods.historic
 - **Friendly name**: Historic numberOfTestMethods
 - **Historic version of**: rascal.testability.java.NumberOfTestMethods
@@ -1576,7 +1586,7 @@ Number of JUnit test methods
 - <u>Returns</u>: `int`
 
 ------
-#### rascal.testability.java.TestCoverage.historic
+#### [rascal.testability.java.TestCoverage.historic](#rascal.testability.java.TestCoverage.historic)
 - **Short name**: estimateTestCoverage.historic
 - **Friendly name**: Historic estimateTestCoverage
 - **Historic version of**: rascal.testability.java.TestCoverage
@@ -1590,7 +1600,7 @@ for a lack in testing effort for the project.
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.Ca-Java-Quartiles.historic
+#### [trans.rascal.OO.java.Ca-Java-Quartiles.historic](#trans.rascal.OO.java.Ca-Java-Quartiles.historic)
 - **Short name**: Ca_Java_Q.historic
 - **Friendly name**: Historic Ca_Java_Q
 - **Historic version of**: trans.rascal.OO.java.Ca-Java-Quartiles
@@ -1601,7 +1611,7 @@ Afferent coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.CF-Java.historic
+#### [trans.rascal.OO.java.CF-Java.historic](#trans.rascal.OO.java.CF-Java.historic)
 - **Short name**: CF_Java.historic
 - **Friendly name**: Historic CF_Java
 - **Historic version of**: trans.rascal.OO.java.CF-Java
@@ -1612,7 +1622,7 @@ Coupling factor (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.DAC-Java-Quartiles.historic
+#### [trans.rascal.OO.java.DAC-Java-Quartiles.historic](#trans.rascal.OO.java.DAC-Java-Quartiles.historic)
 - **Short name**: DAC_Java_Q.historic
 - **Friendly name**: Historic DAC_Java_Q
 - **Historic version of**: trans.rascal.OO.java.DAC-Java-Quartiles
@@ -1623,7 +1633,7 @@ Data abstraction coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.MPC-Java-Quartiles.historic
+#### [trans.rascal.OO.java.MPC-Java-Quartiles.historic](#trans.rascal.OO.java.MPC-Java-Quartiles.historic)
 - **Short name**: MPC_Java_Q.historic
 - **Friendly name**: Historic MPC_Java_Q
 - **Historic version of**: trans.rascal.OO.java.MPC-Java-Quartiles
@@ -1634,7 +1644,7 @@ Message passing coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.PF-Java.historic
+#### [trans.rascal.OO.java.PF-Java.historic](#trans.rascal.OO.java.PF-Java.historic)
 - **Short name**: PF_Java.historic
 - **Friendly name**: Historic PF_Java
 - **Historic version of**: trans.rascal.OO.java.PF-Java
@@ -1645,7 +1655,7 @@ Polymorphism factor (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.RFC-Java-Quartiles.historic
+#### [trans.rascal.OO.java.RFC-Java-Quartiles.historic](#trans.rascal.OO.java.RFC-Java-Quartiles.historic)
 - **Short name**: RFC_Java_Q.historic
 - **Friendly name**: Historic RFC_Java_Q
 - **Historic version of**: trans.rascal.OO.java.RFC-Java-Quartiles
@@ -1656,7 +1666,7 @@ Response for class quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.I-Java-Quartiles.historic
+#### [trans.rascal.OO.java.I-Java-Quartiles.historic](#trans.rascal.OO.java.I-Java-Quartiles.historic)
 - **Short name**: I_Java_Q.historic
 - **Friendly name**: Historic I_Java_Q
 - **Historic version of**: trans.rascal.OO.java.I-Java-Quartiles
@@ -1667,7 +1677,7 @@ Instability quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.MIF-Java-Quartiles.historic
+#### [trans.rascal.OO.java.MIF-Java-Quartiles.historic](#trans.rascal.OO.java.MIF-Java-Quartiles.historic)
 - **Short name**: MIF_Java_Q.historic
 - **Friendly name**: Historic MIF_Java_Q
 - **Historic version of**: trans.rascal.OO.java.MIF-Java-Quartiles
@@ -1678,7 +1688,7 @@ Method inheritance factor quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.MHF-Java.historic
+#### [trans.rascal.OO.java.MHF-Java.historic](#trans.rascal.OO.java.MHF-Java.historic)
 - **Short name**: MHF_Java.historic
 - **Friendly name**: Historic MHF_Java
 - **Historic version of**: trans.rascal.OO.java.MHF-Java
@@ -1689,7 +1699,7 @@ Method hiding factor (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.AHF-Java.historic
+#### [trans.rascal.OO.java.AHF-Java.historic](#trans.rascal.OO.java.AHF-Java.historic)
 - **Short name**: AHF_Java.historic
 - **Friendly name**: Historic AHF_Java
 - **Historic version of**: trans.rascal.OO.java.AHF-Java
@@ -1700,7 +1710,7 @@ Attribute hiding factor (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.LCOM-Java-Quartiles.historic
+#### [trans.rascal.OO.java.LCOM-Java-Quartiles.historic](#trans.rascal.OO.java.LCOM-Java-Quartiles.historic)
 - **Short name**: LCOM_Java_Q.historic
 - **Friendly name**: Historic LCOM_Java_Q
 - **Historic version of**: trans.rascal.OO.java.LCOM-Java-Quartiles
@@ -1711,7 +1721,7 @@ Lack of cohesion in methods quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.A-Java.historic
+#### [trans.rascal.OO.java.A-Java.historic](#trans.rascal.OO.java.A-Java.historic)
 - **Short name**: A_Java.historic
 - **Friendly name**: Historic A_Java
 - **Historic version of**: trans.rascal.OO.java.A-Java
@@ -1722,7 +1732,7 @@ Abstractness (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.DIT-Java-Quartiles.historic
+#### [trans.rascal.OO.java.DIT-Java-Quartiles.historic](#trans.rascal.OO.java.DIT-Java-Quartiles.historic)
 - **Short name**: DIT_Java_Q.historic
 - **Friendly name**: Historic DIT_Java_Q
 - **Historic version of**: trans.rascal.OO.java.DIT-Java-Quartiles
@@ -1733,7 +1743,7 @@ Depth of inheritance tree quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.TCC-Java-Quartiles.historic
+#### [trans.rascal.OO.java.TCC-Java-Quartiles.historic](#trans.rascal.OO.java.TCC-Java-Quartiles.historic)
 - **Short name**: TCC_Java_Q.historic
 - **Friendly name**: Historic TCC_Java_Q
 - **Historic version of**: trans.rascal.OO.java.TCC-Java-Quartiles
@@ -1744,7 +1754,7 @@ Tight class cohesion quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.LCOM4-Java-Quartiles.historic
+#### [trans.rascal.OO.java.LCOM4-Java-Quartiles.historic](#trans.rascal.OO.java.LCOM4-Java-Quartiles.historic)
 - **Short name**: LCOM4_Java_Q.historic
 - **Friendly name**: Historic LCOM4_Java_Q
 - **Historic version of**: trans.rascal.OO.java.LCOM4-Java-Quartiles
@@ -1755,7 +1765,7 @@ Lack of cohesion in methods 4 quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.SR-Java.historic
+#### [trans.rascal.OO.java.SR-Java.historic](#trans.rascal.OO.java.SR-Java.historic)
 - **Short name**: SR_Java.historic
 - **Friendly name**: Historic SR_Java
 - **Historic version of**: trans.rascal.OO.java.SR-Java
@@ -1766,7 +1776,7 @@ Specialization ratio (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.AIF-Java-Quartiles.historic
+#### [trans.rascal.OO.java.AIF-Java-Quartiles.historic](#trans.rascal.OO.java.AIF-Java-Quartiles.historic)
 - **Short name**: AIF_Java_Q.historic
 - **Friendly name**: Historic AIF_Java_Q
 - **Historic version of**: trans.rascal.OO.java.AIF-Java-Quartiles
@@ -1777,7 +1787,7 @@ Attribute inheritance factor quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOC-Java-Quartiles.historic
+#### [trans.rascal.OO.java.NOC-Java-Quartiles.historic](#trans.rascal.OO.java.NOC-Java-Quartiles.historic)
 - **Short name**: NOC_Java_Q.historic
 - **Friendly name**: Historic NOC_Java_Q
 - **Historic version of**: trans.rascal.OO.java.NOC-Java-Quartiles
@@ -1788,7 +1798,7 @@ Number of children quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.RR-Java.historic
+#### [trans.rascal.OO.java.RR-Java.historic](#trans.rascal.OO.java.RR-Java.historic)
 - **Short name**: RR_Java.historic
 - **Friendly name**: Historic RR_Java
 - **Historic version of**: trans.rascal.OO.java.RR-Java
@@ -1799,7 +1809,7 @@ Reuse ratio (Java)
 - <u>Returns</u>: `real`
 
 ------
-#### trans.rascal.OO.java.LCC-Java-Quartiles.historic
+#### [trans.rascal.OO.java.LCC-Java-Quartiles.historic](#trans.rascal.OO.java.LCC-Java-Quartiles.historic)
 - **Short name**: LCC_Java_Q.historic
 - **Friendly name**: Historic LCC_Java_Q
 - **Historic version of**: trans.rascal.OO.java.LCC-Java-Quartiles
@@ -1810,7 +1820,7 @@ Loose class cohesion quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.Ce-Java-Quartiles.historic
+#### [trans.rascal.OO.java.Ce-Java-Quartiles.historic](#trans.rascal.OO.java.Ce-Java-Quartiles.historic)
 - **Short name**: Ce_Java_Q.historic
 - **Friendly name**: Historic Ce_Java_Q
 - **Historic version of**: trans.rascal.OO.java.Ce-Java-Quartiles
@@ -1821,7 +1831,7 @@ Efferent coupling quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOM-Java-Quartiles.historic
+#### [trans.rascal.OO.java.NOM-Java-Quartiles.historic](#trans.rascal.OO.java.NOM-Java-Quartiles.historic)
 - **Short name**: NOM_Java_Q.historic
 - **Friendly name**: Historic NOM_Java_Q
 - **Historic version of**: trans.rascal.OO.java.NOM-Java-Quartiles
@@ -1832,7 +1842,7 @@ Number of methods quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.NOA-Java-Quartiles.historic
+#### [trans.rascal.OO.java.NOA-Java-Quartiles.historic](#trans.rascal.OO.java.NOA-Java-Quartiles.historic)
 - **Short name**: NOA_Java_Q.historic
 - **Friendly name**: Historic NOA_Java_Q
 - **Historic version of**: trans.rascal.OO.java.NOA-Java-Quartiles
@@ -1843,7 +1853,7 @@ Number of attributes quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.OO.java.CBO-Java-Quartiles.historic
+#### [trans.rascal.OO.java.CBO-Java-Quartiles.historic](#trans.rascal.OO.java.CBO-Java-Quartiles.historic)
 - **Short name**: CBO_Java_Q.historic
 - **Friendly name**: Historic CBO_Java_Q
 - **Historic version of**: trans.rascal.OO.java.CBO-Java-Quartiles
@@ -1854,7 +1864,7 @@ Coupling between objects quartiles (Java)
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles.historic
+#### [trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles.historic](#trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles.historic)
 - **Short name**: countUsesOfAdvancedLanguageFeaturesQ.historic
 - **Friendly name**: Historic countUsesOfAdvancedLanguageFeaturesQ
 - **Historic version of**: trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles
@@ -1865,7 +1875,7 @@ Quartiles of counts of advanced Java features (wildcards, union types and anonym
 - <u>Returns</u>: `map[str, real]`
 
 ------
-#### trans.rascal.CC.java.CCHistogramJava.historic
+#### [trans.rascal.CC.java.CCHistogramJava.historic](#trans.rascal.CC.java.CCHistogramJava.historic)
 - **Short name**: CCHistogramJava.historic
 - **Friendly name**: Historic CCHistogramJava
 - **Historic version of**: trans.rascal.CC.java.CCHistogramJava
@@ -1876,7 +1886,7 @@ Number of Java methods per CC risk factor, counts the number of methods which ar
 - <u>Returns</u>: `map[str, int]`
 
 ------
-#### trans.rascal.CC.java.CCOverJavaMethods.historic
+#### [trans.rascal.CC.java.CCOverJavaMethods.historic](#trans.rascal.CC.java.CCOverJavaMethods.historic)
 - **Short name**: giniCCOverMethodsJava.historic
 - **Friendly name**: Historic giniCCOverMethodsJava
 - **Historic version of**: trans.rascal.CC.java.CCOverJavaMethods
@@ -1886,12 +1896,12 @@ Calculates how cyclomatic complexity is spread over the methods of a system. If 
 - <u>Depends-on</u>: `trans.rascal.CC.java.CCOverJavaMethods`
 - <u>Returns</u>: `real`
 
-### OSGi dependencies metrics
+### [Historic Metric Providers for OSGi Dependencies](#historic-osgi-dependencies)
 
 These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
 
 ------
-#### trans.rascal.dependency.osgi.numberOSGiBundleDependencies.historic
+#### [trans.rascal.dependency.osgi.numberOSGiBundleDependencies.historic](#trans.rascal.dependency.osgi.numberOSGiBundleDependencies.historic)
 - **Short name**: numberOSGiBundleDependencies.historic
 - **Friendly name**: Historic numberOSGiBundleDependencies
 - **Historic version of**: trans.rascal.dependency.osgi.numberOSGiBundleDependencies
@@ -1901,12 +1911,12 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.numberOSGiBundleDependencies`
 - <u>Returns</u>: `int`
 
-### Maven dependencies metrics 
+### [Historic Metric Providers for Maven Dependencies](#historic-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
 
 ------
-#### trans.rascal.dependency.maven.numberMavenDependencies.historic
+#### [trans.rascal.dependency.maven.numberMavenDependencies.historic](#trans.rascal.dependency.maven.numberMavenDependencies.historic)
 - **Short name**: numberMavenDependencies.historic
 - **Friendly name**: Historic numberMavenDependencies
 - **Historic version of**: trans.rascal.dependency.maven.numberMavenDependencies
@@ -1928,7 +1938,7 @@ The following Transient Metric Providers are associated with Issue trackers.
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.activeusers](#org.eclipse.scava.metricprovider.trans.bugs.activeusers)
 - **Short name**: trans.bugs.activeusers
-- **Friendly name**: Number of users with new bug comment in the last 15 days 
+- **Friendly name**: Number of users with new bug comment in the last 15 days
 
 This metric computes the number of users that submitted new bug comments in the last 15 days, for each bug tracker.
 
@@ -1941,7 +1951,7 @@ This metric computes the number of users that submitted new bug comments in the 
 	| bugs		 | `List<BugsData>` |
 	| users		| `List<User>`		 |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
 - BugData :
 	- `String` 	bugTrackerId
@@ -1950,7 +1960,7 @@ This metric computes the number of users that submitted new bug comments in the 
 	- `int`	previousUsers
 	- `int`	users
 	- `int`	days
-- User : 
+- User :
 	- `String`	bugTrackerId
 	- `String`	userId
 	- `String`	lastActivityDate
@@ -1962,7 +1972,7 @@ This metric computes the number of users that submitted new bug comments in the 
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.bugmetadata](#org.eclipse.scava.metricprovider.trans.bugs.bugmetadata)
 - **Short name**: trans.bugs.bugmetadata
-- **Friendly name**: Bug header metadata 
+- **Friendly name**: Bug header metadata
 
 This metric computes various metadata in bug header, i.e. priority, status, operation system and resolution. Other values computed by this metric includes average sentiment, content class and requests/replies.
 
@@ -1975,9 +1985,9 @@ This metric computes various metadata in bug header, i.e. priority, status, oper
 	| BugData		 | `List<BugData>`		 |
 	| CommentData | `List<CommentData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugData : 
+- BugData :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `String`	status
@@ -1994,7 +2004,7 @@ This metric computes various metadata in bug header, i.e. priority, status, oper
 	- `String`	firstCommentId
 	- `String`	lastCommentId
 
-- CommentData : 
+- CommentData :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	-	`String`	commentId
@@ -2019,9 +2029,9 @@ This metric computes the number of bug comments, per bug tracker.
 	| -------------- | ---------------------- |
 	| bugTrackerData | `List<BugTrackerData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerData: 
+- BugTrackerData:
 	- `String`	bugTrackerId
 	- `int`	numberOfComments
 	- `int`	cumulativeNumberOfComments
@@ -2043,12 +2053,12 @@ This metric computes the frequency and percentage of content Classes in bug comm
 	| bugTrackerData | `List<BugTrackerData>` |
 	| contentClasses | `List<ContentClass>`	 |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerData : 
+- BugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfComments
-- ContentClass : 
+- ContentClass :
 	- `String`	bugTrackerId
 	- `String`	classLabel
 	- `int`	numberOfComments
@@ -2070,9 +2080,9 @@ This metric computes the number of bug comments, including those regarded as req
 	| ----------- | ------------------- |
 	| dayComments | `List<DayComments>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DayComments : 
+- DayComments :
 	- `String`	name
 	- `String`	bugTrackerId
 	- `int`	numberOfComments
@@ -2099,13 +2109,13 @@ This metric computes the emotional dimensions in bug comments, per bug tracker. 
 	| bugTrackerData | `List<BugTrackerData>`	 |
 	| dimensions		 | `List<EmotionDimension>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerData : 
+- BugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfComments
 	- `int`	cumulativeNumberOfComments
-- EmotionDimension : 
+- EmotionDimension :
 	- `String`	bugTrackerId
 	- `String`	emotionLabel (`anger`, `fear`, `joy`, `sadness`, `love`, surprise`)
 	- `int`	numberOfComments
@@ -2129,9 +2139,9 @@ This metric computes the number of bug comments, including those regarded as req
 	| ------------ | -------------------- |
 	| hourComments | `List<HourComments>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- HourComments : 
+- HourComments :
 	- `String`	bugTrackerId
 	- `String`	hour
 	- `int`	numberOfComments
@@ -2156,9 +2166,9 @@ This metric detects migration issues in Bug Tracking Systems.
 	| ------------ | -------------------- |
 	| bugTrackerMigrationIssues | `List<BugTrackerMigrationIssue>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerMigrationIssue : 
+- BugTrackerMigrationIssue :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `String`	software
@@ -2179,9 +2189,9 @@ This metric computes the number of new bugs over time, per bug tracker.
 	| -------------- | ------ |
 	| bugTrackerData | `type` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerData : 
+- BugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfBugs
 	- `int`	cumulativeNumberOfBugs
@@ -2201,9 +2211,9 @@ This metric computes the number of patches submitted by the community (users) fo
 	| -------------- | ------ |
 	| bugTrackerData | `type` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerData : 
+- BugTrackerData :
 	- `String`	bugTrackerId
 	- `int`	numberOfPatches
 	- `int`	cumulativeNumberOfPatches
@@ -2224,20 +2234,20 @@ This metrics search for references of commits or bugs within comments comming fr
 	| -------- | --------------------- |
 	| bugs		 | `List<BugReferringTo>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugReferringTo : 
+- BugReferringTo :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `String`	commentId
 	- `List<String>`	bugsReferred 	(URLs)
 	- `List<String>`	commitsReferred (URLs)
-	
+
 
 <u>*Note*</u> :
 	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
-	
-	
+
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.requestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.requestsreplies)
@@ -2254,9 +2264,9 @@ This metric computes for each bug, whether it was  answered. If so, it computes 
 	| -------- | --------------------- |
 	| bugs		 | `List<BugStatistics>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugStatistics : 
+- BugStatistics :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `boolean`	answered
@@ -2287,9 +2297,9 @@ This metric computes the number of users that submitted news comments in the las
 	| newsgroupData | `List<NewsgroupData>` |
 	| user					| `List<User>`					|
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupData : 
+- NewsgroupData :
 	- `String`	newsgroupName
 	- `int`	activeUsers
 	- `int`	inactiveUsers
@@ -2297,7 +2307,7 @@ This metric computes the number of users that submitted news comments in the las
 	- `int`	users
 	- `int`	days
 
-- User : 
+- User :
 	- `String`	newsgroupName
 	- `String`	userId
 	- `String`	lastActiveDate
@@ -2321,9 +2331,9 @@ This metric computes the number of articles, per newsgroup.
 	| -------- | ------ |
 	| newsgroupData		 | `List<NewsgroupData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupData : 
+- NewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 	- `int`	cumulativeNumberOfArticles
@@ -2345,13 +2355,13 @@ This metric computes the content classes in newgroup articles, per newsgroup.
 	| newsGroupData		 | `List<NewsgroupData>` |
 	| contentClass		 | `List< ContentClass>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsGroupData: 
+- NewsGroupData:
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 
-- ContentClass: 
+- ContentClass:
 	- `String`	newsgroupName
 	- `String`	classLabel
 	- `int`	numberOfArticles
@@ -2373,9 +2383,9 @@ This metric computes the number of articles, including those regarded as request
 	| -------- | ------ |
 	| dailyArticles		 | `List<DailyArticles>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DailyArticles : 
+- DailyArticles :
 	- `String`	name
 	- `int`	numberOfArticles
 	- `int`	numberOfRequests
@@ -2401,9 +2411,9 @@ This metric computes the emotional dimensions in newsgroup articles, per newsgro
 	| newsgroupData		 | `List<NewsgroupData>` |
 	| emotionDimension		 | `List<EmotionDimension>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupData : 
+- NewsgroupData :
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 	- `int`	cumulativeNumberOfArticles
@@ -2415,7 +2425,7 @@ This metric computes the emotional dimensions in newsgroup articles, per newsgro
 	- `int`	cumulativeNumberOfArticles
 	- `float`	percentage
 	- `float`	cumulativePercentage
-	
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies)
@@ -2432,9 +2442,9 @@ This metric computes the number of articles, including those regarded as request
 	| -------- | ------ |
 	| hourArticles		 | `List<HourArticles>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- HourArticles : 
+- HourArticles :
 	- `String`	hour
 	- `int`	numberOfArticles
 	- `int`	numberOfRequests
@@ -2442,7 +2452,7 @@ This metric computes the number of articles, including those regarded as request
 	- `float`	percentageOfArticles
 	- `float`	percentageOfRequests
 	- `float`	percentageOfReplies
-	
+
 ------
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues](#org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues)
 - **Short name**: trans.newsgroups.migrationissues
@@ -2458,14 +2468,14 @@ This metric detects migration issues in Communication Channels articles.
 	| -------- | ------ |
 	| newsgroupsMigrationIssues		 | `List<NewsgroupsMigrationIssue>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- NewsgroupsMigrationIssue : 
+- NewsgroupsMigrationIssue :
 	- `String`	newsgroupName
 	- `int`	threadId
 	- `String`	software
 	- `List<String>`	changes
-	
+
 ------
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.sentiment](#org.eclipse.scava.metricprovider.trans.newsgroups.sentiment)
 - **Short name**: trans.newsgroups.sentiment
@@ -2481,9 +2491,9 @@ The metric computes the average sentiment, including sentiment at the beginning 
 	| -------- | ------ |
 	| threadStatistics		 | `List<ThreadStatistics>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- ThreadStatistics : 
+- ThreadStatistics :
   - `String`	newsgroupName
   - `int`	threadId
   - `float`	averageSentiment
@@ -2497,7 +2507,7 @@ The metric computes the average sentiment, including sentiment at the beginning 
 
 This metric holds information for assigning newsgroup articles to threads. The threading algorithm is executed from scratch every time.
 
-- <u>Depends-on</u> : `None`, 
+- <u>Depends-on</u> : `None`,
 
 - <u>Returns</u> :	`NewsgroupsThreadsTransMetric` which contains:
 
@@ -2508,9 +2518,9 @@ This metric holds information for assigning newsgroup articles to threads. The t
 	| newsgroupData		 | `List<NewsgroupData>` |
 	| currentDate		 | `List<CurrentDate>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- ArticleData : 
+- ArticleData :
 	- `String`	newsgroupName
 	- `int`	articleNumber
 	- `String`	articlesId
@@ -2520,17 +2530,17 @@ This metric holds information for assigning newsgroup articles to threads. The t
 	- `String`	contentClass
 	- `String`	references
 
-- ThreadData : 
+- ThreadData :
 	- `int`	threadId
 
-- NewsgroupData : 
+- NewsgroupData :
 	- `String`	newsgroupName
 	- `int`	threads
 	- `int`	previousThreads
 
-- CurrentDate : 
+- CurrentDate :
 	- `String`	date
-	
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies)
@@ -2547,9 +2557,9 @@ The metric computes for each thread whether it is answered. If so, it computes t
 	| -------- | ------ |
 	| threadStatistics		 | `List<ThreadStatistics>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- ThreadStatistics : 
+- ThreadStatistics :
 	- `String`	newsgroupName
 	- `int`	threadId
 	- `boolean`	firstRequest
@@ -2578,9 +2588,9 @@ This metric process the files returned from the documentation readers and extrac
 	| documentationEntries	| `List<DocumentationEntry>` |
 	| documentation | `List<Documentation>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationEntry : 
+- DocumentationEntry :
 	- `String`	documentationId
 	- `String`	entryId
 	- `String`	body
@@ -2588,7 +2598,7 @@ This metric process the files returned from the documentation readers and extrac
 	- `String`	originalFormatMime
 	- `boolean`	htmlFormatted
 
-- Documentation : 
+- Documentation :
 	- `String`	documentationId
 	- `List<String>`	entriesId
 	- `List<String>`	removedEntriesId
@@ -2611,9 +2621,9 @@ This metric determines which type of documentation is present
 	| --------------------- | ---------------------------- |
 	| documentationEntriesClassification	| `List<DocumentationEntryClassification>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationEntryClassification : 
+- DocumentationEntryClassification :
 	- `String`	documentationId
 	- `String`	entryId
 	- `List<String>`	types
@@ -2633,9 +2643,9 @@ This metric process the plain text from documentation and detects the portions c
 	| --------------------- | ---------------------------- |
 	| documentationEntriesDetectingCode	| `List<DocumentationEntryDetectingCode>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationEntryDetectingCode : 
+- DocumentationEntryDetectingCode :
 	- `String`	documentationId
 	- `String`	entryId
 	- `String`	naturalLanguage
@@ -2656,9 +2666,9 @@ This metric process the body of each documentation entry and extracts the plain 
 	| --------------------- | ---------------------------- |
 	| documentationEntriesPlainText	| `List<DocumentationEntryPlainText>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationEntryPlainText : 
+- DocumentationEntryPlainText :
 	- `String`	documentationId
 	- `String`	entryId
 	- `List<String>`	plainText
@@ -2678,9 +2688,9 @@ This metric calculates the readability of each documentation entry
 	| --------------------- | ---------------------------- |
 	| documentationEntriesReadability	| `List<DocumentationEntryReadability>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationEntryReadability : 
+- DocumentationEntryReadability :
 	- `String`	documentationId
 	- `String`	entryId
 	- `double`	readability
@@ -2700,9 +2710,9 @@ This metric calculates the sentiment polarity of each documentation entry. Senti
 	| --------------------- | ---------------------------- |
 	| documentationEntriesSentiment	| `List<DocumentationEntrySentiment>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- DocumentationEntrySentiment : 
+- DocumentationEntrySentiment :
 	- `String`	documentationId
 	- `String`	entryId
 	- `String`	polarity
@@ -2730,28 +2740,28 @@ This metric determines the parts of a bug comment or a newsgroup article that co
 	| newsgroupArticles		 | `List<NewsgroupArticleDetectingCode>` |
 	| forumPosts		 | `List<ForumPostsDetectingCode>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerCommentDetectingCode : 
+- BugTrackerCommentDetectingCode :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `String`	commentId
 	- `String`	naturalLanguage
 	- `String`	code
 
-- NewsgroupArticleDetectingCode : 
+- NewsgroupArticleDetectingCode :
 	- `String`	newsgroupName
 	- `String`	articleNumber
 	- `String`	naturalLanguage
 	- `String`	code
-	
-- ForumPostsDetectingCode : 
+
+- ForumPostsDetectingCode :
 	- `String`	forumId
 	- `String`	topicId
 	- `String`	postId
 	- `String`	naturalLanguage
 	- `String`	code
-	
+
 ------
 #### [org.eclipse.scava.metricprovider.trans.emotionclassification](#org.eclipse.scava.metricprovider.trans.emotionclassification)
 - **Short name**: trans.emotionclassification
@@ -2769,25 +2779,25 @@ This metric computes the emotions present in each bug comment, newsgroup article
 	| newsgroupArticles		 | `List<NewsgroupArticleEmotionClassification>` |
 	| forumPosts		 | `List<ForumPostsEmotionClassification>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerCommentEmotionClassification : 
+- BugTrackerCommentEmotionClassification :
 	- `String`	bugTrackerId
 	- `String`	bugId
 	- `String`	commentId
 	- `String`	emotions
 
-- NewsgroupArticleEmotionClassification : 
+- NewsgroupArticleEmotionClassification :
 	- `String`	newsgroupName
 	- `String`	articleNumber
 	- `String`	emotions
-	
-- ForumPostsEmotionClassification : 
+
+- ForumPostsEmotionClassification :
 	- `String`	forumId
 	- `String`	topicId
 	- `String`	postId
 	- `String`	emotions
-	
+
 ------
 #### [org.eclipse.scava.metricprovider.trans.plaintextprocessing](#org.eclipse.scava.metricprovider.trans.plaintextprocessing)
 - **Short name**: trans.plaintextprocessing
@@ -2805,22 +2815,22 @@ This metric preprocess each bug comment, newsgroup article or forum post into a 
 	| newsgroupArticles		 | `List<NewsgroupArticlePlainTextProcessing>` |
 	| forumPosts		 | `List<ForumPostsPlainTextProcessing>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerCommentPlainTextProcessing : 
+- BugTrackerCommentPlainTextProcessing :
   - `String`	bugTrackerId
   - `String`	bugId
   - `String`	commentId
   - `String`	plainText
   - `boolean`	hadReplies
 
-- NewsgroupArticlePlainTextProcessing : 
+- NewsgroupArticlePlainTextProcessing :
   - `String`	newsgroupName
   - `String`	articleNumber
   - `String`	plainText
   - `boolean`	hadReplies
 
-- ForumPostsPlainTextProcessing : 
+- ForumPostsPlainTextProcessing :
   - `String`	forumId
   - `String`	topicId
   - `String`	postId
@@ -2844,22 +2854,22 @@ This metric computes if a bug comment, newsgroup article or forum post is a requ
 	| newsgroupArticles		 | `List<NewsgroupArticles>` |
 	| forumPosts		 | `List<ForumPosts>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerComments : 
+- BugTrackerComments :
   - `String`	bugTrackerId
   - `String`	bugId
   - `String`	commentId
   - `String`	classificationResult
   - `String`	date
 
-- NewsgroupArticles : 
+- NewsgroupArticles :
   - `String`	newsgroupName
   - `String`	articleNumber
   - `String`	classificationResult
   - `String`	date
 
-- ForumPosts : 
+- ForumPosts :
   - `String`	forumId
   - `String`	topicId
   - `String`	postId
@@ -2883,20 +2893,20 @@ This metric computes the sentiment of each bug comment, newsgroup article or for
 	| newsgroupArticles		 | `List<NewsgroupArticlesSentimentClassification>` |
 	| forumPosts		 | `List<ForumPostSentimentClassification>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerCommentsSentimentClassification : 
+- BugTrackerCommentsSentimentClassification :
   - `String`	bugTrackerId
   - `String`	bugId
   - `String`	commentId
   - `String`	polarity (`negative (-1)`, `neutral (0)` or `positive (1)`)
 
-- NewsgroupArticlesSentimentClassification : 
+- NewsgroupArticlesSentimentClassification :
   - `String`	newsgroupName
   - `String`	articleNumber
   - `String`	polarity (`negative (-1)`, `neutral (0)` or `positive (1)`)
 
-- ForumPostSentimentClassification : 
+- ForumPostSentimentClassification :
   - `String`	forumId
   - `String`	topicId
   - `String`	postId
@@ -2907,7 +2917,7 @@ This metric computes the sentiment of each bug comment, newsgroup article or for
 - **Short name**: trans.severityclassification
 - **Friendly name**: Severity classification
 
-This metric computes the severity of each bug comment, newsgroup article or forum post. Severity could be blocker, critical, major, minor, enhancement,  normal). For bug comments, there is an additional severity level called `unknown`. A bug severity is considered `unknown` if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse. 
+This metric computes the severity of each bug comment, newsgroup article or forum post. Severity could be blocker, critical, major, minor, enhancement,  normal). For bug comments, there is an additional severity level called `unknown`. A bug severity is considered `unknown` if there is not enough information for the classifier to make a decision. For example, an unanswered bug with no user comment to analyse.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.detectingcode`, `org.eclipse.scava.metricprovider.trans.newsgroups.threads`
 
@@ -2920,9 +2930,9 @@ This metric computes the severity of each bug comment, newsgroup article or foru
 	| newsgroupThreads		 | `List<NewsgroupThreadData>` |
 	| forumPosts		 | `ForumPostData>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerBugsData : 
+- BugTrackerBugsData :
   - `String`	bugTrackerId
   - `String`	bugId
   - `String`	severity
@@ -2934,7 +2944,7 @@ This metric computes the severity of each bug comment, newsgroup article or foru
   - `int`	charQuadgrams
   - `int`	charFivegrams
 
-- NewsgroupArticleData : 
+- NewsgroupArticleData :
   - `String`	NewsgroupName
   - `long`	articleNumber
   - `int`	unigrams
@@ -2945,12 +2955,12 @@ This metric computes the severity of each bug comment, newsgroup article or foru
   - `int`	charQuadgrams
   - `int`	charFivegrams
 
-- NewsgroupThreadData : 
+- NewsgroupThreadData :
   - `String`	newsgroupName
   - `int`	threadId
   - `String`	severity
 
-- BugTrackerBugsData : 
+- BugTrackerBugsData :
   - `String`	forumId
   - `String`	topicId
   - `String`	severity
@@ -2980,9 +2990,9 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 	| newsgroupArticles		 | `List<NewsgroupArticlesData>` |
 	| newsgroupTopics		 | `List<NewsgroupTopic>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugTrackerCommentsData : 
+- BugTrackerCommentsData :
   - `String`	bugTrackerId
   - `String`	bugId
   - `String`	commentId
@@ -2990,26 +3000,26 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
   - `String`	text
   - `String`	date
 
-- NewsgroupArticlesData : 
+- NewsgroupArticlesData :
   - `String`	newsgroupName
   - `long`	articleNumber
   - `String`	subject
   - `String`	text
   - `String`	date
 
-- BugTrackerTopic : 
+- BugTrackerTopic :
   - `String`	bugTrackerId
   - `String`	label
   - `int`	numberOfDocuments
   - `List<CommentTopicId>` commentsTopicId
 
-- NewsgroupTopic : 
+- NewsgroupTopic :
   - `String`	newsgroupName
   - `String`	label
   - `int`	numberOfDocuments
   - `List<ArticleTopicId>` articlesTopicId
-  
- - CommentTopicId : 
+
+ - CommentTopicId :
    - `String` bugId
    - `String`commentId
 
@@ -3037,9 +3047,9 @@ This metric preprocess each commit message to get a split plain text version.
 	| -------- | --------------------- |
 	| commitsMessagesPlainText		 | `List<CommitMessagePlainText>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- CommitMessagePlainText : 
+- CommitMessagePlainText :
 	- `String`	repository (URL)
 	- `String`	revision (Commit SHA)
 	- `List<String>`	plainText
@@ -3059,9 +3069,9 @@ This metrics search for references of commits or bugs within the messages of com
 	| -------- | --------------------- |
 	| commitsMessagesReferringTo		 | `List<CommitMessageReferringTo>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- BugReferringTo : 
+- BugReferringTo :
 	- `String`	repository (URL)
 	- `String`	revision (Commit SHA)
 	- `List<String>`	bugsReferred 	(URLs)
@@ -3086,16 +3096,16 @@ This metric computes topic clusters for each commit message.
 	| commitsMessages		 | `List<CommitMessage>` |
 	| commitsTopics		 | `List<CommitsTopic>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- CommitMessage : 
+- CommitMessage :
 	- `String`	repository (URL)
 	- `String`	revision (Commit SHA)
 	- `String`	subject
 	- `String`	message
 	- `Date`	date
 
-- CommitsTopic : 
+- CommitsTopic :
 	- `String`	repository (URL)
 	- `List<String>`	labels
 	- `int`	numberOfMessages
@@ -3425,7 +3435,7 @@ These metrics are related to the source code of analyzed projects, regardless of
 - **Short name**: fileReadability
 - **Friendly name**: File readability
 
-Code readability per file, measured by use of whitespace measures deviations from common usage of whitespace in source code, such 
+Code readability per file, measured by use of whitespace measures deviations from common usage of whitespace in source code, such
 as spaces after commas. This is a basic collection metric which is used further downstream.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
@@ -3527,7 +3537,7 @@ Percentage of files with headers is an indicator for the amount of files which h
 - **Short name**: countLoc
 - **Friendly name**: Language independent physical lines of code
 
-Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. 
+Physical lines of code simply counts the number of newline characters (OS independent) in a source code file.
 The metric can be used to compare the volume between two systems.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
@@ -3546,7 +3556,7 @@ We find out how evenly the code is spread over files. The number should be quite
 - **Short name**: locPerLanguage
 - **Friendly name**: Physical lines of code per language
 
-Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. We accumulate this number per programming language. 
+Physical lines of code simply counts the number of newline characters (OS independent) in a source code file. We accumulate this number per programming language.
 The metric can be used to compare the volume between two systems and to assess in which programming language the bulk of the code is written.
 
 - <u>Depends-on</u>: `trans.rascal.LOC.genericLOC`
@@ -3582,7 +3592,7 @@ Percentage of files with error proneness
 - **Short name**: understandability
 - **Friendly name**: Inefficient code
 
-Percentage of the projects files with coding style violations which indicate the code may be hard to read and understand, 
+Percentage of the projects files with coding style violations which indicate the code may be hard to read and understand,
 but not necessarily more error prone.
 
 - <u>Depends-on</u>: `style.styleViolations`
@@ -4215,7 +4225,7 @@ Retrieves all the OSGi package dependencies (i.e. Import-Package and DynamicImpo
 - **Short name**: unversionedOSGiRequiredBundles
 - **Friendly name**: Unversioned OSGi required bundles
 
-Retrieves the set of unversioned OSGi required bundles (declared in the Require-Bundle header). 
+Retrieves the set of unversioned OSGi required bundles (declared in the Require-Bundle header).
 If returned value != {} there is a smell in the Manifest.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
@@ -4262,7 +4272,7 @@ Retrieves all the OSGi bunlde dependencies (i.e. Require-Bundle dependencies).
 - **Short name**: unversionedOSGiExportedPackages
 - **Friendly name**: Unversioned OSGi exported packages
 
-Retrieves the set of unversioned OSGi exported packages (declared in the Export-Package header). 
+Retrieves the set of unversioned OSGi exported packages (declared in the Export-Package header).
 If returned value != {} there is a smell in the Manifest.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
@@ -4309,7 +4319,7 @@ Retrieves the ratio of unversioned OSGi imported packages.
 - **Short name**: unversionedOSGiImportedPackages
 - **Friendly name**: Unversioned OSGi imported packages
 
-Retrieves the set of unversioned OSGi imported packages (declared in the Import-Package header). 
+Retrieves the set of unversioned OSGi imported packages (declared in the Import-Package header).
 If returned value != {} there is a smell in the Manifest.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
@@ -4433,12 +4443,12 @@ Retrieves all the Maven dependencies.
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
 ------
-## Indexing Metrics 
+## Indexing Metrics
 
 These metrics facilitate data indexing unto the platform.
 
 
-#### [org.eclipse.scava.metricprovider.trans.indexing.preparation](#org.eclipse.scava.metricprovider.trans.indexing.preparation) 
+#### [org.eclipse.scava.metricprovider.trans.indexing.preparation](#org.eclipse.scava.metricprovider.trans.indexing.preparation)
 - **Short name**: index preparation transmetric
 - **Friendly name**: index preparation
 
@@ -4452,10 +4462,10 @@ This identifies the metric(s) that have been chosen to be executed by the user i
 	| -------- | --------------------- |
 	| executedMetricProviders		 | `List<ExecutedMetricProviders>` |
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- ExecutedMetricProviders : 
-	- `List<String>`	metricIdentifiers 
+- ExecutedMetricProviders :
+	- `List<String>`	metricIdentifiers
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.bugs](#org.eclipse.scava.metricprovider.indexing.bugs)
@@ -4466,7 +4476,7 @@ This metric prepares and indexes documents relating to bug tracking systems.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`
 
-- <u>Returns</u> :	`BugsIndexingMetric` 
+- <u>Returns</u> :	`BugsIndexingMetric`
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.commits](#org.eclipse.scava.metricprovider.indexing.commits)
@@ -4477,7 +4487,7 @@ This metric prepares and indexes documents relating to commits.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`
 
-- <u>Returns</u> :	`CommitsIndexingMetric` 
+- <u>Returns</u> :	`CommitsIndexingMetric`
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.communicationchannels](#org.eclipse.scava.metricprovider.indexing.communicationchannels)
@@ -4488,7 +4498,7 @@ This metric prepares and indexes documents relating to communication channels.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`
 
-- <u>Returns</u> :	`CommunicationChannelsIndexingMetric` 
+- <u>Returns</u> :	`CommunicationChannelsIndexingMetric`
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.documentation](#org.eclipse.scava.metricprovider.indexing.documentation)
@@ -4499,10 +4509,10 @@ This metric prepares and indexes documents relating to documentation.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`, `org.eclipse.scava.metricprovider.trans.documentation`
 
-- <u>Returns</u> :	`DocumentationIndexingMetric` 
+- <u>Returns</u> :	`DocumentationIndexingMetric`
 
 ------
-## Factoids 
+## Factoids
 
 Factoids are plugins used to present data that has been mined and analysed using one or more historic and/or transient metric providers.
 
@@ -4521,13 +4531,13 @@ This plugin generates the factoid regarding usage data for bug trackers. For exa
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.newbugs`, `org.eclipse.scava.metricprovider.historic.bugs.comments`, `org.eclipse.scava.metricprovider.historic.bugs.patches`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*number of bugs or comments* > *working days in a year (250)*.
 	- `3 star`	*2* x *number of bugs or comments* > *working days in a year (250)*.
 	- `2 star`	*4* x *number of bugs or comments* > *working days in a year (250)*.
-	- `1 star`	*otherwise* 
+	- `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.bugs.emotion](#org.eclipse.scava.factoid.bugs.emotion)
 - **Short name**: factoid.bugs.emotion
@@ -4537,13 +4547,13 @@ This plugin generates the factoid regarding emotions for bug trackers. For examp
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.newbugs`, `org.eclipse.scava.metricprovider.historic.bugs.comments`, `org.eclipse.scava.metricprovider.historic.bugs.patches`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*positive emotion percentage* > *80* || *negative emotion percentage* < *35*.
 	- `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
 	- `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
-	- `1 star`	*otherwise* 
+	- `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.bugs.hourly](#org.eclipse.scava.factoid.bugs.hourly)
 - **Short name**: factoid.bugs.hourly
@@ -4553,13 +4563,13 @@ This plugin generates the factoid regarding hourly statistics for bug trackers. 
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*maximum percentage of hourly comments* > *2* x *uniform percentage of comments per hour (100/24)*.
 	- `3 star`	*maximum percentage of hourly comments* > *4* x *uniform percentage of comments per hour (100/24)*.
 	- `2 star`	*maximum percentage of hourly comments* > *6* x *uniform percentage of comments per hour (100/24)*.
-	- `1 star`	*otherwise* 
+	- `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.bugs.responsetime](#org.eclipse.scava.factoid.bugs.responsetime)
 - **Short name**: factoid.bugs.responsetime
@@ -4569,13 +4579,13 @@ This plugin generates the factoid regarding response time for bug trackers. This
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.responsetime`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*Zero(0)* < *yearly average response time* < *eight hours milliseconds (8 x 60 x 60 x 1000)*.
 	- `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
 	- `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
-	- `1 star`	*otherwise* 
+	- `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.bugs.sentiment](#org.eclipse.scava.factoid.bugs.sentiment)
 - **Short name**: factoid.bugs.sentiment
@@ -4585,13 +4595,13 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.sentiment`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*average sentiment* > *0.5* || *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
 	- `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
 	- `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
-	- `1 star`	*otherwise* 
+	- `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.bugs.severity](#org.eclipse.scava.factoid.bugs.severity)
 - **Short name**: factoid.bugs.severity
@@ -4601,9 +4611,9 @@ This plugin generates the factoid regarding severity for bug trackers. For examp
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.severity`, `org.eclipse.scava.metricprovider.historic.bugs.severitybugstatus`, `org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime`, `org.eclipse.scava.metricprovider.historic.bugs.severitysentiment`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `1 star`	*percentage of serious bugs* > *50*.
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
@@ -4613,17 +4623,17 @@ This plugin generates the factoid regarding severity for bug trackers. For examp
 - **Short name**: factoid.bugs.size
 - **Friendly name**: Bug Tracker Size
 
-This plugin generates the factoid regarding bug size for bug trackers. For example, the cumulative number of bug comments or patches. 
+This plugin generates the factoid regarding bug size for bug trackers. For example, the cumulative number of bug comments or patches.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.newbugs`, `org.eclipse.scava.metricprovider.historic.bugs.comments`, `org.eclipse.scava.metricprovider.historic.bugs.patches`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*number of bugs or parches* > *1000* || *number of comments* > *10000*.
 	- `3 star`	*2* x *number of bugs or parches* > *1000* || *2* x *number of comments* > *10000*.
 	- `2 star`	*4* x *number of bugs or parches* > *1000* || *4* x *number of comments* > *10000*.
-	- `1 star`	*otherwise* 
+	- `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.bugs.status](#org.eclipse.scava.factoid.bugs.status)
 - **Short name**: factoid.bugs.status
@@ -4633,9 +4643,9 @@ This plugin generates the factoid regarding bug status for bug trackers. For exa
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.status`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*perventage of resolved bug* > *75*.
 	- `3 star`	*perventage of resolved bug* > *50*.
 	- `2 star`	*perventage of resolved bug* > *25*.
@@ -4645,13 +4655,13 @@ This plugin generates the factoid regarding bug status for bug trackers. For exa
 - **Short name**: factoid.bugs.threadlength
 - **Friendly name**: Bug Tracker Thread Length
 
-This plugin generates the factoid regarding bug thread length for bug trackers. For example, the average length of discussion associated to bugs. 
+This plugin generates the factoid regarding bug thread length for bug trackers. For example, the average length of discussion associated to bugs.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.bugs`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*Zero(0)* < *average comments* < *5*.
 	- `3 star`	*Zero(0)* < *average comments* < *10*.
 	- `2 star`	*Zero(0)* < *average comments* < *20*.
@@ -4661,13 +4671,13 @@ This plugin generates the factoid regarding bug thread length for bug trackers. 
 - **Short name**: factoid.bugs.users
 - **Friendly name**: Bug Tracker Users
 
-This plugin generates the factoid regarding users for bug trackers. For example, the average number of users associated to a project in a bug tracking system. 
+This plugin generates the factoid regarding users for bug trackers. For example, the average number of users associated to a project in a bug tracking system.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.bugs.users`, `org.eclipse.scava.metricprovider.historic.bugs.bugs`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*daily new users in last month* > *8* x *0.25* || *daily active users in last month* > *8* x *2.5* || *daily new users in last year* > *4* x *0.25 || daily active users in last year* > *4* x *2.5*.
 	- `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25 || daily active users in last year* > *2* x *2.5*.
 	- `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month* > *2* x *2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
@@ -4677,13 +4687,13 @@ This plugin generates the factoid regarding users for bug trackers. For example,
 - **Short name**: factoid.bugs.weekly
 - **Friendly name**: Bug Tracker Weekly
 
-This plugin generates the factoid regarding weekly user engagements for bug trackers. For example, the average number of bug comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project. 
+This plugin generates the factoid regarding weekly user engagements for bug trackers. For example, the average number of bug comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
 	- `4 star`	*maximum percentage of weekly comments* < *2* x *uniform percentage of comments per week (100/7)*.
 	- `3 star`	*maximum percentage of weekly comments* < *3* x *uniform percentage of comments per week (100/7)*.
 	- `2 star`	*maximum percentage of weekly comments* < *4* x *uniform percentage of comments per week (100/7)*.
@@ -4698,13 +4708,13 @@ These factoids are related to communication channels.
 - **Short name**: factoid.newsgroups.channelusage
 - **Friendly name**: Newsgroup Channel Usage
 
-This plugin generates the factoid regarding usage data for newsgroups. For example, the total number of new articles or threads per year. 
+This plugin generates the factoid regarding usage data for newsgroups. For example, the total number of new articles or threads per year.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.articles`, `org.eclipse.scava.metricprovider.historic.newsgroups.newthreads`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*number of articles || threads* > *working days in a year (250*).
   - `3 star`	*2* x *number of articles || threads* > *working days in a year (250)*.
   - `2 star`	*4* x *number of articles || threads* > *working days in a year (250)*.
@@ -4718,13 +4728,13 @@ This plugin generates the factoid regarding emotions for newsgroups, such as the
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.emotions`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*positive emotion percentage* > *80* || *negative emotion percentage* < *35*.
   - `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
   - `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
-  - `1 star`	*otherwise* 
+  - `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.newsgroups.hourly](#org.eclipse.scava.factoid.newsgroups.hourly)
 - **Short name**: factoid.newsgroups.hourly
@@ -4734,13 +4744,13 @@ This plugin generates the factoid regarding hourly data for newsgroups, such as 
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*maximum percentage of hourly articles* > *2* x *uniform percentage of articles per hour (100/24)*.
   - `3 star`	*maximum percentage of hourly articles* > *4* x *uniform percentage of articles per hour (100/24)*.
   - `2 star`	*maximum percentage of hourly articles* > *6* x *uniform percentage of articles per hour (100/24)*.
-  - `1 star`	*otherwise* 
+  - `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.newsgroups.responsetime](#org.eclipse.scava.factoid.newsgroups.responsetime)
 - **Short name**: factoid.newsgroups.responsetime
@@ -4750,13 +4760,13 @@ This plugin generates the factoid regarding response time for newsgroups. This c
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.responsetime`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*Zero(0)* < *yearly average response time* < *eight hours milliseconds (8 x 60 x 60 x 1000)*.
   - `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
   - `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
-  - `1 star`	*otherwise* 
+  - `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.newsgroups.sentiment](org.eclipse.scava.factoid.newsgroups.sentiment)
 - **Short name**: factoid.newsgroups.sentiment
@@ -4766,13 +4776,13 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.sentiment`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*average sentiment* > *0.5* || *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
   - `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
   - `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
-  - `1 star`	*otherwise* 
+  - `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.newsgroups.severity](#org.eclipse.scava.factoid.newsgroups.severity)
 - **Short name**: factoid.newsgroups.severity
@@ -4782,9 +4792,9 @@ This plugin generates the factoid regarding severity for newsgroups. For example
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime`, `org.eclipse.scava.metricprovider.historic.newsgroups.severity`, `org.eclipse.scava.metricprovider.historic.newsgroups.severitysentiment`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `1 star`	*percentage of serious bugs* > *50*.
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
@@ -4794,17 +4804,17 @@ This plugin generates the factoid regarding severity for newsgroups. For example
 - **Short name**: factoid.newsgroups.size
 - **Friendly name**: Newsgroup Channel Size
 
-This plugin generates the factoid regarding thread or article size for newsgroups. For example, the cummulative number of threads. 
+This plugin generates the factoid regarding thread or article size for newsgroups. For example, the cummulative number of threads.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.articles`, `org.eclipse.scava.metricprovider.historic.newsgroups.newthreads`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*number of threads* > *1000* || *number of articles* > *10000*.
   - `3 star`	*2* x *number of threads* > *1000* || *2* x *number of articles* > *10000*.
   - `2 star`	*4* x *number of threads* > *1000* || *4* x *number of articles* > *10000*.
-  - `1 star`	*otherwise 
+  - `1 star`	*otherwise
 ------
 #### [org.eclipse.scava.factoid.newsgroups.status](#org.eclipse.scava.factoid.newsgroups.status)
 - **Short name**: factoid.newsgroups.status
@@ -4814,9 +4824,9 @@ This plugin generates the factoid regarding thread or article status for newsgro
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.unansweredthreads`, `org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies`, `org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*perventage of replies* > *75*.
   - `3 star`	*perventage of replies* > *50*.
   - `2 star`	*perventage of replies* > *25*.
@@ -4827,13 +4837,13 @@ This plugin generates the factoid regarding thread or article status for newsgro
 - **Short name**: factoid.newsgroups.threadlength
 - **Friendly name**: Newsgroup Channel Thread Length
 
-This plugin generates the factoid regarding thread length for newsgroups. For example, the average length of discussion per day, month etc. 
+This plugin generates the factoid regarding thread length for newsgroups. For example, the average length of discussion per day, month etc.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.threads`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*Zero(0)* < *average comments* < *5*.
   - `3 star`	*Zero(0)* < *average comments* < *10*.
   - `2 star`	*Zero(0)* < *average comments* < *20*.
@@ -4843,13 +4853,13 @@ This plugin generates the factoid regarding thread length for newsgroups. For ex
 - **Short name**: factoid.newsgroups.users
 - **Friendly name**: Newsgroup Channel Users
 
-This plugin generates the factoid regarding users for newsgroups. For example, the average number of users associated to a project in a newsgroup channel. 
+This plugin generates the factoid regarding users for newsgroups. For example, the average number of users associated to a project in a newsgroup channel.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.newsgroups.users`, `org.eclipse.scava.metricprovider.historic.newsgroups.threads`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*daily new users in last month* > *8* x *0.25* || *daily active users in last month* > *8* x *2.5* || *daily new users in last year* > *4* x *0.25* || *daily active users in last year* > *4* x *2.5*.
   - `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25* || *daily active users in last year* > *2* x *2.5*.
   - `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month > 2 x 2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
@@ -4859,13 +4869,13 @@ This plugin generates the factoid regarding users for newsgroups. For example, t
 - **Short name**: factoid.newsgroups.weekly
 - **Friendly name**: Newsgroup Channel Weekly
 
-This plugin generates the factoid regarding weekly user engagement for newsgroups. For example, the average number of comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project. 
+This plugin generates the factoid regarding weekly user engagement for newsgroups. For example, the average number of comments per week. This can be used to present the most and least busy week in terms of engagement for a particular project.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies`
 
-<u>*Additional Information*</u> :	
+<u>*Additional Information*</u> :
 
-- Star rating information : 
+- Star rating information :
   - `4 star`	*maximum percentage of weekly articles* < *2* x *uniform percentage of articles per week (100/7)*.
   - `3 star`	*maximum percentage of weekly articles* < *3* x *uniform percentage of articles per week (100/7)*.
   - `2 star`	*maximum percentage of weekly articles* < *4* x *uniform percentage of articles per week (100/7)*.
