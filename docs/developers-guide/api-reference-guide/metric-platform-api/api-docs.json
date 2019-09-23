@@ -3450,7 +3450,8 @@
           "type": "string"
         },
         "projectId": {
-          "type": "string"
+          "type": "string",
+          "enum": ["SINGLE_EXECUTION", "CONTINUOUS_MONITORING"]
         },
         "type": {
           "type": "string"
