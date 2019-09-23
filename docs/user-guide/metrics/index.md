@@ -3,28 +3,28 @@
 This guide describes the historic and transient metric providers, as well as factoids, provided by the Scava platform.
 
 - [Historic Metric Providers](#historic-metric-providers) for:
-  - [Bug Trackers](#historic-bug-trackers)
-  - [Newsgroups and Forums](#historic-newsgroups-forums)
-  - [Commits and Committers](#historic-commits-committers)
-  - [Documentation](#historic-documentation)
-  - [Generic Source Code](#historic-generic-source-code)
-  - [Java Code](#historic-java-code)
-  - [OSGi Dependencies](#historic-osgi-dependencies)
-  - [Maven Dependencies](#historic-maven-dependencies)
+	- [Bug Trackers](#historic-bug-trackers)
+ 	- [Newsgroups and Forums](#historic-newsgroups-forums)
+	- [Commits and Committers](#historic-commits-committers)
+	- [Documentation](#historic-documentation)
+	- [Generic Source Code](#historic-generic-source-code)
+	- [Java Code](#historic-java-code)
+	- [OSGi Dependencies](#historic-osgi-dependencies)
+	- [Maven Dependencies](#historic-maven-dependencies)
 -[Transient Metric Providers](#transient-metric-providers) for:
-  - [Bug Trackers](#transient-bug-trackers)
-  - [Newsgroups and forums](#transient-newsgroups-forums)
-  - [Documentation](#transient-documentation)
-  - [Natural Language Processing](#transient-nlp)
-  - [Commits and Committers](#transient-commits-committers)
-  - [Generic Source Code](#transient-source-code)
-  - [Java Code](#transient-java-code)
-  - [OSGi Dependencies](#transient-osgi-dependencies)
-  - [Maven Dependencies](#transient-maven-dependencies)
-  - [Indexing](#transient-indexing)
+	- [Bug Trackers](#transient-bug-trackers)
+	- [Newsgroups and forums](#transient-newsgroups-forums)
+	- [Documentation](#transient-documentation)
+	- [Natural Language Processing](#transient-nlp)
+	- [Commits and Committers](#transient-commits-committers)
+	- [Generic Source Code](#transient-source-code)
+	- [Java Code](#transient-java-code)
+	- [OSGi Dependencies](#transient-osgi-dependencies)
+	- [Maven Dependencies](#transient-maven-dependencies)
+	- [Indexing](#transient-indexing)
 -[Factoids](#factoids) for:
-  - [Bug Trackers](#factoids-bug-trackers)
-  - [Newsgroups and Forums](#factoids-newsgroups-forums)
+	- [Bug Trackers](#factoids-bug-trackers)
+	- [Newsgroups and Forums](#factoids-newsgroups-forums)
 
 ------
 
