@@ -3,28 +3,28 @@
 This guide describes the historic and transient metric providers, as well as factoids, provided by the Scava platform.
 
 - [Historic Metric Providers](#historic-metric-providers) for:
- - [Bug Trackers](#historic-bug-trackers)
- - [Newsgroups and Forums](#historic-newsgroups-forums)
- - [Commits and Committers](#historic-commits-committers)
- - [Documentation](#historic-documentation)
- - [Generic Source Code](#historic-generic-source-code)
- - [Java Code](#historic-java-code)
- - [OSGi Dependencies](#historic-osgi-dependencies)
- - [Maven Dependencies](#historic-maven-dependencies)
+  - [Bug Trackers](#historic-bug-trackers)
+  - [Newsgroups and Forums](#historic-newsgroups-forums)
+  - [Commits and Committers](#historic-commits-committers)
+  - [Documentation](#historic-documentation)
+  - [Generic Source Code](#historic-generic-source-code)
+  - [Java Code](#historic-java-code)
+  - [OSGi Dependencies](#historic-osgi-dependencies)
+  - [Maven Dependencies](#historic-maven-dependencies)
 -[Transient Metric Providers](#transient-metric-providers) for:
- - [Bug Trackers](#transient-bug-trackers)
- - [Newsgroups and forums](#transient-newsgroups-forums)
- - [Documentation](#transient-documentation)
- - [Natural Language Processing](#transient-nlp)
- - [Commits and Committers](#transient-commits-committers)
- - [Generic Source Code](#transient-source-code)
- - [Java Code](#transient-java-code)
- - [OSGi Dependencies](#transient-osgi-dependencies)
- - [Maven Dependencies](#transient-maven-dependencies)
- - [Indexing](#transient-indexing)
+  - [Bug Trackers](#transient-bug-trackers)
+  - [Newsgroups and forums](#transient-newsgroups-forums)
+  - [Documentation](#transient-documentation)
+  - [Natural Language Processing](#transient-nlp)
+  - [Commits and Committers](#transient-commits-committers)
+  - [Generic Source Code](#transient-source-code)
+  - [Java Code](#transient-java-code)
+  - [OSGi Dependencies](#transient-osgi-dependencies)
+  - [Maven Dependencies](#transient-maven-dependencies)
+  - [Indexing](#transient-indexing)
 -[Factoids](#factoids) for:
- - [Bug Trackers](#factoids-bug-trackers)
- - [Newsgroups and Forums](#factoids-newsgroups-forums)
+  - [Bug Trackers](#factoids-bug-trackers)
+  - [Newsgroups and Forums](#factoids-newsgroups-forums)
 
 ------
 
@@ -4683,7 +4683,7 @@ This plugin generates the factoid regarding bug thread length for bug trackers. 
 	- `2 star`	*Zero(0)* < *average comments* < *20*.
 	- `1 star`	*otherwise*
 ------
-#### [org.eclipse.scava.factoid.bugs.users](org.eclipse.scava.factoid.bugs.users)
+#### [org.eclipse.scava.factoid.bugs.users](#org.eclipse.scava.factoid.bugs.users)
 - **Short name**: factoid.bugs.users
 - **Friendly name**: Bug Tracker Users
 
@@ -4699,7 +4699,7 @@ This plugin generates the factoid regarding users for bug trackers. For example,
 	- `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month* > *2* x *2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
 	- `1 star`	*otherwise*
 ------
-#### [org.eclipse.scava.factoid.bugs.weekly](org.eclipse.scava.factoid.bugs.weekly)
+#### [org.eclipse.scava.factoid.bugs.weekly](#org.eclipse.scava.factoid.bugs.weekly)
 - **Short name**: factoid.bugs.weekly
 - **Friendly name**: Bug Tracker Weekly
 
@@ -4784,7 +4784,7 @@ This plugin generates the factoid regarding response time for newsgroups. This c
   - `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
   - `1 star`	*otherwise*
 ------
-#### [org.eclipse.scava.factoid.newsgroups.sentiment](org.eclipse.scava.factoid.newsgroups.sentiment)
+#### [org.eclipse.scava.factoid.newsgroups.sentiment](#org.eclipse.scava.factoid.newsgroups.sentiment)
 - **Short name**: factoid.newsgroups.sentiment
 - **Friendly name**: Newsgroup Channel Sentiment
 
@@ -4830,7 +4830,7 @@ This plugin generates the factoid regarding thread or article size for newsgroup
   - `4 star`	*number of threads* > *1000* || *number of articles* > *10000*.
   - `3 star`	*2* x *number of threads* > *1000* || *2* x *number of articles* > *10000*.
   - `2 star`	*4* x *number of threads* > *1000* || *4* x *number of articles* > *10000*.
-  - `1 star`	*otherwise
+  - `1 star`	*otherwise*
 ------
 #### [org.eclipse.scava.factoid.newsgroups.status](#org.eclipse.scava.factoid.newsgroups.status)
 - **Short name**: factoid.newsgroups.status
