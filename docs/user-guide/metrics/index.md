@@ -36,6 +36,8 @@ Historic metrics maintain a record of various heuristics associated with a speci
 
 The following Historic Metric Providers are associated with Issue trackers
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.bugs](#org.eclipse.scava.metricprovider.historic.bugs.bugs)
@@ -79,7 +81,9 @@ This metric computes the number of bugs per day for each bug tracker seperately.
 	- `id`	bugs.replies-useraverage
 	- `id`	bugs.requestsreplies-useraverage
 	- `id`	bugs.requestsreplies-bugaverage
-	-
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.comments](#org.eclipse.scava.metricprovider.historic.bugs.comments)
@@ -110,6 +114,8 @@ This metric computes the number of bug comments submitted by the community (user
 - CommentsHistoricMetricProvider :
 	- `id`	bugs.comments
 	- `id`	bugs.cumulativeComments
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -151,6 +157,8 @@ This metric computes the emotional dimensions present in bug comments submitted 
 	- `id`	bugs.emotions.comments
 	- `id`	bugs.emotions.commentPercentages
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.newbugs](#org.eclipse.scava.metricprovider.historic.bugs.newbugs)
@@ -181,6 +189,8 @@ This metric computes the number of new bugs reported by the community (users) pe
 - NewUsersHistoricMetricProvider :
 	- `id`	bugs.cumulativeNewUsers
 	- `id`	bugs.newUsers
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -213,7 +223,10 @@ This metric computes the number of new users per day  for each bug tracker seper
 	- `id`	bugs.cumulativeNewUsers
 	- `id`	bugs.newUsers
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
+
 #### [org.eclipse.scava.metricprovider.historic.bugs.opentime](#org.eclipse.scava.metricprovider.historic.bugs.opentime)
 - **Short name**: historic.bugs.opentime
 - **Friendly name**: Average duration to close an open bug
@@ -236,7 +249,10 @@ This metric computes the average duration between creating and closing bugs. For
 	- `id`	bugs.bugOpenTime
 	- `id`	bugs.bugOpenTime-bugs
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)	
+
 ------
+
 #### [org.eclipse.scava.metricprovider.historic.bugs.patches](#org.eclipse.scava.metricprovider.historic.bugs.patches)
 - **Short name**: historic.bugs.patches
 - **Friendly name**: Number of bug patches per day
@@ -267,7 +283,10 @@ This class computes the number of bug patches per day, for each bug tracker sepe
 	- `id`	bugs.cumulativePatches
 	- `id`	bugs.patches
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
+
 #### [org.eclipse.scava.metricprovider.historic.bugs.requestsreplies](#org.eclipse.scava.metricprovider.historic.bugs.requestsreplies)
 - **Short name**: historic.bugs.requestsreplies
 - **Friendly name**: Number of request and replies in bug comments per bug tracker
@@ -304,6 +323,8 @@ This metric computes the number of requests and replies realting to comments pos
 	- `id`	bugs.cumulativerequests
 	- `id`	bugs.requestsreplies
 	- `id`	bugs.cumulativerequestsreplies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -342,6 +363,8 @@ This metric computes the average number of bug comments considered as request an
 	- `id`	bugs.comments-averageperday
 	- `id`	bugs.replies-averageperday
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.responsetime](#org.eclipse.scava.metricprovider.historic.bugs.responsetime)
@@ -372,6 +395,8 @@ This metric computes the average time in which the community (users) responds to
 	- `id`	bugs.cumulativeAverageResponseTime-bugs
 	- `id`	bugs.averageResponseTime-bugs
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.sentiment](#org.eclipse.scava.metricprovider.historic.bugs.sentiment)
@@ -399,6 +424,8 @@ This metric computes the overall sentiment per bug tracker up to the processing 
 	- `id`	bugs.sentiment
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -433,6 +460,8 @@ This metric computes the number of severity levels for bugs submitted by the com
 - SeverityHistoricMetricProvider :
 	- `id`	bugs.severity
 	- `id`	bugs.severity.percentages
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -487,6 +516,8 @@ This metric computes the total number and percentage of each bug status per seve
 	- `id`	bugs.severity.worksForMeBugs
 	- `id`	bugs.severity.worksForMeBugs.percentages
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime](#org.eclipse.scava.metricprovider.historic.bugs.severityresponsetime)
@@ -515,6 +546,8 @@ This metric computes the average time in which the community (users) responds to
 
 - SeverityResponseTimeHistoricMetricProvider :
 	- `id`	bugs.severity.averageResponseTime
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -551,6 +584,8 @@ This metric computes for each bug severity level, the average sentiment, sentime
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.status](#org.eclipse.scava.metricprovider.historic.bugs.status)
@@ -585,6 +620,8 @@ This metric computes the total number of bugs that corresponds to each bug statu
 	- `id`	bugs.worksForMeBugs
 	- `id`	bugs.resolvedClosedBugs
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.topics](#org.eclipse.scava.metricprovider.historic.bugs.status)
@@ -608,6 +645,8 @@ This metric computes the labels of topic clusters extracted from bug comments su
 	- `List<String>`	labels
 	- `float`	numberOfDocuments
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs](#org.eclipse.scava.metricprovider.historic.bugs.unansweredbugs)
@@ -628,6 +667,8 @@ This metric computes the number of unanswered bugs per day.
 
 - UnansweredThreadsHistoricMetricProvider :
 	- `id`	bugs.unansweredBugs
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -663,11 +704,15 @@ This metric computes the number of users, number of active and inactive users pe
 	- `id`	bugs.activeusers
 	- `id`	bugs.inactiveusers
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
 
 ### [Historic Metric Provider for Newsgroups and Forums](#historic-newsgroups-forums)
 
 The following Historic Metric Providers are associated with newsgroups.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -697,6 +742,8 @@ This metric computes the number of articles submitted by the community (users) p
 - ArticlesHistoricMetricProvider :
 	- `id`	newsgroups.articles
 	- `id`	newsgroups.cumulativeArticles
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -738,6 +785,8 @@ This metric computes the emotional dimensions present in newsgroup comments subm
 	- `id`	newsgroups.emotions.cumulativeArticlePercentages
 	- `id`	newsgroups.emotions.articles
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.newthreads](#org.eclipse.scava.metricprovider.historic.newsgroups.newthreads)
@@ -767,6 +816,8 @@ This metric computes the number of new threads submitted by the community (users
 	- `id`	newsgroups.newThreads
 	- `id`	newsgroups.cumulativeNewThreads
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.newusers](#org.eclipse.scava.metricprovider.historic.newsgroups.newusers)
@@ -795,6 +846,8 @@ This metric computes the number of new users per day for each newsgroup seperate
 - NewUsersHistoricMetricProvider:
 	- `id`	newsgroups.cumulativeNewUsers
 	- `id`	newsgroups.newUsers
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -831,6 +884,8 @@ This metric computes the number of requests and replies in newsgroup articles su
 	- `id`	newsgroups.requestsreplies
 	- `id`	newsgroups.cumulativerequestsreplies
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average](#org.eclipse.scava.metricprovider.historic.newsgroups.requestsreplies.average)
@@ -856,6 +911,8 @@ This metric computes the average number of newsgroup articles, including the num
 	- `id`	newsgroups.requests-averageperday
 	- `id`	newsgroups.replies-averageperday
 	- `id`	newsgroups.comments-averageperday
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -886,6 +943,8 @@ This metric computes the average time in which the community responds to open th
 	- `id`	newsgroups.cumulativeAverageResponseTime-threads
 	- `id`	newsgroups.averageResponseTime-threads
 	-
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.sentiment](#org.eclipse.scava.metricprovider.historic.newsgroups.sentiment)
@@ -913,6 +972,8 @@ This metric computes the overall sentiment per newsgroup repository up to the pr
 	- `id`	newsgroups.sentiment
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -949,6 +1010,8 @@ This metric computes the number of each severity levels in threads submitted eve
 	- `id`	newsgroups.severity
 	- `id`	newsgroups.severity.percentages
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime](#org.eclipse.scava.metricprovider.historic.newsgroups.severityresponsetime)
@@ -982,6 +1045,8 @@ This metric computes the average response time for newsgroup threads submitted e
 
 - SeverityResponseTimeHistoricMetricProvider :
 	- `id`	newsgroups.severity.averageResponseTime
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -1018,6 +1083,8 @@ This metric computes the average sentiment, the sentiment at the beginning of th
 	- `id`	newsgroups.severity.sentimentAtThreadBeggining
 
 - The sentiment related variables above all represent a <u>***Polarity***</u> value. A polarity value closer to: <u>-1</u> indicates negative sentiment, closer to <u>0</u> indicates neutral sentiment and closer to <u>1</u> indicates positive sentiment.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -1061,6 +1128,8 @@ This metric computes the number of threads per day for each newsgroup separately
 	- `id`	newsgroups.requestsreplies-threadaverage
 	- `id`	newsgroups.requestsreplies-useraverage
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.historic.newsgroups.topics](#org.eclipse.scava.metricprovider.historic.newsgroups.topics)
@@ -1083,6 +1152,8 @@ This metric computes the labels of topics clusters in articles submitted by the 
 	- `String`	newsgroupName
 	- `List<String>`	labels
 	- `int`	numberOfDocuments
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -1110,6 +1181,8 @@ This metric computes the number of unanswered threads per day for each newsgroup
 
 - UnansweredThreadsHistoricMetricProvider :
 	- `id`	newsgroups.unansweredThreads
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -1143,13 +1216,18 @@ This metric computes the number of users, including active and inactive users pe
 	- `id`	newsgroups.inactiveusers
 	- `id`	newsgroups.activeinactiveusers
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
 
 ### [Historic Metric Provider for Commits and Committers](#historic-commits-committers)
 
 The following Historic Metric Providers are related to the commits and committers of a project.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.committersoverfile.historic](#trans.rascal.activecommitters.committersoverfile.historic)
 - **Short name**: giniCommittersOverFile.historic
 - **Friendly name**: Historic giniCommittersOverFile
@@ -1160,7 +1238,9 @@ Calculates the gini coefficient of committers per file
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersoverfile`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 ------
+
 #### [trans.rascal.activecommitters.percentageOfWeekendCommits.historic](#trans.rascal.activecommitters.percentageOfWeekendCommits.historic)
 - **Short name**: percentageOfWeekendCommits.historic
 - **Friendly name**: Historic percentageOfWeekendCommits
@@ -1171,7 +1251,10 @@ Percentage of commits made during the weekend
 - <u>Depends-on</u>: `trans.rascal.activecommitters.percentageOfWeekendCommits`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.commitsPerDeveloper.historic](#trans.rascal.activecommitters.commitsPerDeveloper.historic)
 - **Short name**: commitsPerDeveloper.historic
 - **Friendly name**: Historic commitsPerDeveloper
@@ -1183,7 +1266,10 @@ when combined with other metrics such as churn. Few and big commits are differen
 - <u>Depends-on</u>: `trans.rascal.activecommitters.commitsPerDeveloper`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.numberOfActiveCommittersLongTerm.historic](#trans.rascal.activecommitters.numberOfActiveCommittersLongTerm.historic)
 - **Short name**: numberOfActiveCommittersLongTerm.historic
 - **Friendly name**: Historic numberOfActiveCommittersLongTerm
@@ -1194,7 +1280,10 @@ Number of long time active committers over time (active in last year). This meas
 - <u>Depends-on</u>: `trans.rascal.activecommitters.numberOfActiveCommittersLongTerm`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.numberOfActiveCommitters.historic](#trans.rascal.activecommitters.numberOfActiveCommitters.historic)
 - **Short name**: numberOfActiveCommitters.historic
 - **Friendly name**: Historic numberOfActiveCommitters
@@ -1205,7 +1294,10 @@ Number of active committers over time (active in last two weeks). This measures 
 - <u>Depends-on</u>: `trans.rascal.activecommitters.numberOfActiveCommitters`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.commitsToday.historic](#rascal.generic.churn.commitsToday.historic)
 - **Short name**: commitsToday.historic
 - **Friendly name**: Historic commitsToday
@@ -1216,7 +1308,10 @@ Counts the number of commits made today.
 - <u>Depends-on</u>: `rascal.generic.churn.commitsToday`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnToday.historic](#rascal.generic.churn.churnToday.historic)
 - **Short name**: commitsToday.historic
 - **Friendly name**: Historic commitsToday
@@ -1227,7 +1322,10 @@ Counts the churn for today: the total number of lines of code added and deleted.
 - <u>Depends-on</u>: `rascal.generic.churn.churnToday`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerCommitInTwoWeeks.historic](#rascal.generic.churn.churnPerCommitInTwoWeeks.historic)
 - **Short name**: churnPerCommitInTwoWeeks.historic
 - **Friendly name**: Historic churnPerCommitInTwoWeeks
@@ -1238,7 +1336,10 @@ The ratio between the churn and the number of commits indicates how large each c
 - <u>Depends-on</u>: `rascal.generic.churn.churnPerCommitInTwoWeeks`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.filesPerCommit.historic](#rascal.generic.churn.filesPerCommit.historic)
 - **Short name**: numberOfFilesPerCommit.historic
 - **Friendly name**: Historic numberOfFilesPerCommit
@@ -1249,7 +1350,10 @@ Counts the number of files per commit to find out about the separation of concer
 - <u>Depends-on</u>: `rascal.generic.churn.filesPerCommit`
 - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerCommit.historic](#rascal.generic.churn.churnPerCommit.historic)
 - **Short name**: churnPerCommit.historic
 - **Friendly name**: Historic churnPerCommit
@@ -1261,7 +1365,10 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 - <u>Depends-on</u>: `rascal.generic.churn.churnPerCommit`
 - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerCommitter.historic](#rascal.generic.churn.churnPerCommitter.historic)
 - **Short name**: churnPerCommitter.historic
 - **Friendly name**: Historic churnPerCommitter
@@ -1272,7 +1379,10 @@ Count churn per committer: the number of lines of code added and deleted. It zoo
 - <u>Depends-on</u>: `rascal.generic.churn.churnPerCommitter`
 - <u>Returns</u>: `map[str author, int churn]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.commitsInTwoWeeks.historic](#rascal.generic.churn.commitsInTwoWeeks.historic)
 - **Short name**: commitsInTwoWeeks.historic
 - **Friendly name**: Historic commitsInTwoWeeks
@@ -1283,7 +1393,10 @@ Churn in the last two weeks: aggregates the number of commits over a 14-day slid
 - <u>Depends-on</u>: `rascal.generic.churn.commitsInTwoWeeks`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnInTwoWeeks.historic](#rascal.generic.churn.churnInTwoWeeks.historic)
 - **Short name**: churnInTwoWeeks.historic
 - **Friendly name**: Historic churnInTwoWeeks
@@ -1294,7 +1407,10 @@ Churn in the last two weeks: aggregates the lines of code added and deleted over
 - <u>Depends-on</u>: `rascal.generic.churn.churnInTwoWeeks`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.historic.commits.messages.topics](#org.eclipse.scava.metricprovider.historic.commits.messages.topics)
 - **Short name**: historic.commits.messages.topics
 - **Friendly name**: Labels of topics in commits messages analyzed in the last 30 days
@@ -1322,12 +1438,18 @@ This metric computes the labels of topic clusters in commits messages pushed by 
 - CommitsMessagesTopicsHistoricMetricProvider :
 	- `id`	commits.topics.messages
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 ### [Historic Metric Providers for Documentation](#historic-documentation)
 
 The following Historic Metric Providers are associated with documentation analyses.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.historic.documentation.readability](#org.eclipse.scava.metricprovider.historic.documentation.readability)
 - **Short name**: historic.documentation.readability
 - **Friendly name**: Documentation readability Historic Metric
@@ -1361,7 +1483,10 @@ Historic metric that stores the evolution of the documentation readability
 	- `id`	documentation.readability.entries
 	- `id`	documentation.readability
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.historic.documentation.sentiment](#org.eclipse.scava.metricprovider.historic.documentation.sentiment)
 - **Short name**: historic.documentation.sentiment
 - **Friendly name**: Documentation sentiment polarity Historic Metric
@@ -1395,13 +1520,18 @@ Historic metric that stores the evolution of the documentation sentiment polarit
 	- `id`	documentation.sentiment.entries
 	- `id`	documentation.sentiment
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)	
+
 ------
 
 ### Historic Metric Provider for Generic Source Code
 
 These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.clones.cloneLOCPerLanguage.historic](#trans.rascal.clones.cloneLOCPerLanguage.historic)
 - **Short name**: cloneLOCPerLanguage.historic
 - **Friendly name**: Historic cloneLOCPerLanguage
@@ -1412,7 +1542,10 @@ Lines of code in Type I clones larger than 6 lines, per language. A Type I clone
 - <u>Depends-on</u>: `trans.rascal.clones.cloneLOCPerLanguage`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.readability.fileReadabilityQuartiles.historic](#trans.rascal.readability.fileReadabilityQuartiles.historic)
 - **Short name**: fileReadabilityQ.historic
 - **Friendly name**: Historic fileReadabilityQ
@@ -1425,7 +1558,10 @@ lack of attention to readability.
 - <u>Depends-on</u>: `trans.rascal.readability.fileReadabilityQuartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.commentLinesPerLanguage.historic](#trans.rascal.comments.commentLinesPerLanguage.historic)
 - **Short name**: commentLinesPerLanguage.historic
 - **Friendly name**: Historic commentLinesPerLanguage
@@ -1436,7 +1572,10 @@ Number of lines containing comments per language (excluding headers). The balanc
 - <u>Depends-on</u>: `trans.rascal.comments.commentLinesPerLanguage`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.commentedOutCodePerLanguage.historic](#trans.rascal.comments.commentedOutCodePerLanguage.historic)
 - **Short name**: commentedOutCodePerLanguage.historic
 - **Friendly name**: Historic commentedOutCodePerLanguage
@@ -1448,7 +1587,10 @@ much source code comments are actually commented out code. Commented out code is
 - <u>Depends-on</u>: `trans.rascal.comments.commentedOutCodePerLanguage`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.headerPercentage.historic](#trans.rascal.comments.headerPercentage.historic)
 - **Short name**: headerPercentage.historic
 - **Friendly name**: Historic headerPercentage
@@ -1459,7 +1601,10 @@ Percentage of files with headers is an indicator for the amount of files which h
 - <u>Depends-on</u>: `trans.rascal.comments.headerPercentage`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.LOC.genericLOCoverFiles.historic](#trans.rascal.LOC.genericLOCoverFiles.historic)
 - **Short name**: giniLOCOverFiles.historic
 - **Friendly name**: Historic giniLOCOverFiles
@@ -1470,7 +1615,10 @@ We find out how evenly the code is spread over files. The number should be quite
 - <u>Depends-on</u>: `trans.rascal.LOC.genericLOCoverFiles`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.LOC.locPerLanguage.historic](#trans.rascal.LOC.locPerLanguage.historic)
 - **Short name**: locPerLanguage.historic
 - **Friendly name**: Historic locPerLanguage
@@ -1482,11 +1630,18 @@ The metric can be used to compare the volume between two systems and to assess i
 - <u>Depends-on</u>: `trans.rascal.LOC.locPerLanguage`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
 ### Historic Metric Provider for Java code
 
 These metrics are related to the Java source code of analyzed projects.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithErrorProneness.historic](#style.filesWithErrorProneness.historic)
 - **Short name**: filesWithErrorProneness.historic
 - **Friendly name**: Historic filesWithErrorProneness
@@ -1497,7 +1652,10 @@ Percentage of files with error proneness
 - <u>Depends-on</u>: `style.filesWithErrorProneness`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithUnderstandabilityIssues.historic](#style.filesWithUnderstandabilityIssues.historic)
 - **Short name**: filesWithUnderstandabilityIssues.historic
 - **Friendly name**: Historic filesWithUnderstandabilityIssues
@@ -1508,7 +1666,10 @@ Percentage of files with understandability issues. This is a basic metric which 
 - <u>Depends-on</u>: `style.filesWithUnderstandabilityIssues`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfStyleViolations.historic](#style.spreadOfStyleViolations.historic)
 - **Short name**: spreadOfStyleViolations.historic
 - **Friendly name**: Historic spreadOfStyleViolations
@@ -1520,7 +1681,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.spreadOfStyleViolations`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithInefficiencies.historic](#style.filesWithInefficiencies.historic)
 - **Short name**: filesWithInefficiencies.historic
 - **Friendly name**: Historic filesWithInefficiencies
@@ -1531,7 +1695,10 @@ Percentage of files with inefficiencies
 - <u>Depends-on</u>: `style.filesWithInefficiencies`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithStyleViolations.historic](#style.filesWithStyleViolations.historic)
 - **Short name**: filesWithStyleViolations.historic
 - **Friendly name**: Historic filesWithStyleViolations
@@ -1542,7 +1709,10 @@ Percentage of files with style violations
 - <u>Depends-on</u>: `style.filesWithStyleViolations`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfUnderstandabilityIssues.historic](#style.spreadOfUnderstandabilityIssues.historic)
 - **Short name**: spreadOfUnderstandabilityIssues.historic
 - **Friendly name**: Historic spreadOfUnderstandabilityIssues
@@ -1554,7 +1724,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.spreadOfUnderstandabilityIssues`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfInefficiencies.historic](#style.spreadOfInefficiencies.historic)
 - **Short name**: spreadOfInefficiencies.historic
 - **Friendly name**: Historic spreadOfInefficiencies
@@ -1566,7 +1739,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.spreadOfInefficiencies`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfErrorProneness.historic](#style.spreadOfErrorProneness.historic)
 - **Short name**: spreadOfErrorProneness.historic
 - **Friendly name**: Historic spreadOfErrorProneness
@@ -1578,7 +1754,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.spreadOfErrorProneness`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.testability.java.TestOverPublicMethods.historic](#rascal.testability.java.TestOverPublicMethods.historic)
 - **Short name**: percentageOfTestedPublicMethods.historic
 - **Friendly name**: Historic percentageOfTestedPublicMethods
@@ -1590,7 +1769,10 @@ compute how far from the ideal situation the project is.
 - <u>Depends-on</u>: `rascal.testability.java.TestOverPublicMethods`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.testability.java.NumberOfTestMethods.historic](#rascal.testability.java.NumberOfTestMethods.historic)
 - **Short name**: numberOfTestMethods.historic
 - **Friendly name**: Historic numberOfTestMethods
@@ -1601,7 +1783,10 @@ Number of JUnit test methods
 - <u>Depends-on</u>: `rascal.testability.java.NumberOfTestMethods`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.testability.java.TestCoverage.historic](#rascal.testability.java.TestCoverage.historic)
 - **Short name**: estimateTestCoverage.historic
 - **Friendly name**: Historic estimateTestCoverage
@@ -1615,7 +1800,10 @@ for a lack in testing effort for the project.
 - <u>Depends-on</u>: `rascal.testability.java.TestCoverage`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.Ca-Java-Quartiles.historic](#trans.rascal.OO.java.Ca-Java-Quartiles.historic)
 - **Short name**: Ca_Java_Q.historic
 - **Friendly name**: Historic Ca_Java_Q
@@ -1626,7 +1814,10 @@ Afferent coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.Ca-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.CF-Java.historic](#trans.rascal.OO.java.CF-Java.historic)
 - **Short name**: CF_Java.historic
 - **Friendly name**: Historic CF_Java
@@ -1637,7 +1828,10 @@ Coupling factor (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.CF-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.DAC-Java-Quartiles.historic](#trans.rascal.OO.java.DAC-Java-Quartiles.historic)
 - **Short name**: DAC_Java_Q.historic
 - **Friendly name**: Historic DAC_Java_Q
@@ -1648,7 +1842,10 @@ Data abstraction coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.DAC-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MPC-Java-Quartiles.historic](#trans.rascal.OO.java.MPC-Java-Quartiles.historic)
 - **Short name**: MPC_Java_Q.historic
 - **Friendly name**: Historic MPC_Java_Q
@@ -1659,7 +1856,10 @@ Message passing coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.MPC-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.PF-Java.historic](#trans.rascal.OO.java.PF-Java.historic)
 - **Short name**: PF_Java.historic
 - **Friendly name**: Historic PF_Java
@@ -1670,7 +1870,10 @@ Polymorphism factor (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.PF-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.RFC-Java-Quartiles.historic](#trans.rascal.OO.java.RFC-Java-Quartiles.historic)
 - **Short name**: RFC_Java_Q.historic
 - **Friendly name**: Historic RFC_Java_Q
@@ -1681,7 +1884,10 @@ Response for class quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.RFC-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.I-Java-Quartiles.historic](#trans.rascal.OO.java.I-Java-Quartiles.historic)
 - **Short name**: I_Java_Q.historic
 - **Friendly name**: Historic I_Java_Q
@@ -1692,7 +1898,10 @@ Instability quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.I-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MIF-Java-Quartiles.historic](#trans.rascal.OO.java.MIF-Java-Quartiles.historic)
 - **Short name**: MIF_Java_Q.historic
 - **Friendly name**: Historic MIF_Java_Q
@@ -1703,7 +1912,10 @@ Method inheritance factor quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.MIF-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MHF-Java.historic](#trans.rascal.OO.java.MHF-Java.historic)
 - **Short name**: MHF_Java.historic
 - **Friendly name**: Historic MHF_Java
@@ -1714,7 +1926,10 @@ Method hiding factor (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.MHF-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.AHF-Java.historic](#trans.rascal.OO.java.AHF-Java.historic)
 - **Short name**: AHF_Java.historic
 - **Friendly name**: Historic AHF_Java
@@ -1725,7 +1940,10 @@ Attribute hiding factor (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.AHF-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCOM-Java-Quartiles.historic](#trans.rascal.OO.java.LCOM-Java-Quartiles.historic)
 - **Short name**: LCOM_Java_Q.historic
 - **Friendly name**: Historic LCOM_Java_Q
@@ -1736,7 +1954,10 @@ Lack of cohesion in methods quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.LCOM-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.A-Java.historic](#trans.rascal.OO.java.A-Java.historic)
 - **Short name**: A_Java.historic
 - **Friendly name**: Historic A_Java
@@ -1747,7 +1968,10 @@ Abstractness (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.A-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.DIT-Java-Quartiles.historic](#trans.rascal.OO.java.DIT-Java-Quartiles.historic)
 - **Short name**: DIT_Java_Q.historic
 - **Friendly name**: Historic DIT_Java_Q
@@ -1758,7 +1982,10 @@ Depth of inheritance tree quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.DIT-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.TCC-Java-Quartiles.historic](#trans.rascal.OO.java.TCC-Java-Quartiles.historic)
 - **Short name**: TCC_Java_Q.historic
 - **Friendly name**: Historic TCC_Java_Q
@@ -1769,7 +1996,10 @@ Tight class cohesion quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.TCC-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCOM4-Java-Quartiles.historic](#trans.rascal.OO.java.LCOM4-Java-Quartiles.historic)
 - **Short name**: LCOM4_Java_Q.historic
 - **Friendly name**: Historic LCOM4_Java_Q
@@ -1780,7 +2010,10 @@ Lack of cohesion in methods 4 quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.LCOM4-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.SR-Java.historic](#trans.rascal.OO.java.SR-Java.historic)
 - **Short name**: SR_Java.historic
 - **Friendly name**: Historic SR_Java
@@ -1791,7 +2024,10 @@ Specialization ratio (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.SR-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.AIF-Java-Quartiles.historic](#trans.rascal.OO.java.AIF-Java-Quartiles.historic)
 - **Short name**: AIF_Java_Q.historic
 - **Friendly name**: Historic AIF_Java_Q
@@ -1802,7 +2038,10 @@ Attribute inheritance factor quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.AIF-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOC-Java-Quartiles.historic](#trans.rascal.OO.java.NOC-Java-Quartiles.historic)
 - **Short name**: NOC_Java_Q.historic
 - **Friendly name**: Historic NOC_Java_Q
@@ -1813,7 +2052,10 @@ Number of children quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.NOC-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.RR-Java.historic](#trans.rascal.OO.java.RR-Java.historic)
 - **Short name**: RR_Java.historic
 - **Friendly name**: Historic RR_Java
@@ -1824,7 +2066,10 @@ Reuse ratio (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.RR-Java`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCC-Java-Quartiles.historic](#trans.rascal.OO.java.LCC-Java-Quartiles.historic)
 - **Short name**: LCC_Java_Q.historic
 - **Friendly name**: Historic LCC_Java_Q
@@ -1835,7 +2080,10 @@ Loose class cohesion quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.LCC-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.Ce-Java-Quartiles.historic](#trans.rascal.OO.java.Ce-Java-Quartiles.historic)
 - **Short name**: Ce_Java_Q.historic
 - **Friendly name**: Historic Ce_Java_Q
@@ -1846,7 +2094,10 @@ Efferent coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.Ce-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOM-Java-Quartiles.historic](#trans.rascal.OO.java.NOM-Java-Quartiles.historic)
 - **Short name**: NOM_Java_Q.historic
 - **Friendly name**: Historic NOM_Java_Q
@@ -1857,7 +2108,10 @@ Number of methods quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.NOM-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOA-Java-Quartiles.historic](#trans.rascal.OO.java.NOA-Java-Quartiles.historic)
 - **Short name**: NOA_Java_Q.historic
 - **Friendly name**: Historic NOA_Java_Q
@@ -1868,7 +2122,10 @@ Number of attributes quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.NOA-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.CBO-Java-Quartiles.historic](#trans.rascal.OO.java.CBO-Java-Quartiles.historic)
 - **Short name**: CBO_Java_Q.historic
 - **Friendly name**: Historic CBO_Java_Q
@@ -1879,7 +2136,10 @@ Coupling between objects quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.CBO-Java-Quartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles.historic](#trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles.historic)
 - **Short name**: countUsesOfAdvancedLanguageFeaturesQ.historic
 - **Friendly name**: Historic countUsesOfAdvancedLanguageFeaturesQ
@@ -1890,7 +2150,10 @@ Quartiles of counts of advanced Java features (wildcards, union types and anonym
 - <u>Depends-on</u>: `trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.CC.java.CCHistogramJava.historic](#trans.rascal.CC.java.CCHistogramJava.historic)
 - **Short name**: CCHistogramJava.historic
 - **Friendly name**: Historic CCHistogramJava
@@ -1901,7 +2164,10 @@ Number of Java methods per CC risk factor, counts the number of methods which ar
 - <u>Depends-on</u>: `trans.rascal.CC.java.CCHistogramJava`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.CC.java.CCOverJavaMethods.historic](#trans.rascal.CC.java.CCOverJavaMethods.historic)
 - **Short name**: giniCCOverMethodsJava.historic
 - **Friendly name**: Historic giniCCOverMethodsJava
@@ -1916,7 +2182,10 @@ Calculates how cyclomatic complexity is spread over the methods of a system. If 
 
 These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.numberOSGiBundleDependencies.historic](#trans.rascal.dependency.osgi.numberOSGiBundleDependencies.historic)
 - **Short name**: numberOSGiBundleDependencies.historic
 - **Friendly name**: Historic numberOSGiBundleDependencies
@@ -1931,7 +2200,10 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.numberMavenDependencies.historic](#trans.rascal.dependency.maven.numberMavenDependencies.historic)
 - **Short name**: numberMavenDependencies.historic
 - **Friendly name**: Historic numberMavenDependencies
@@ -1942,13 +2214,23 @@ Retrieves the number of Maven dependencies.
 - <u>Depends-on</u>: `trans.rascal.dependency.maven.numberMavenDependencies`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
 ## [Transient Metric Providers](#transient-metric-providers)
 
 Transient metrics are used to calculate heuristics that are associated with a particular period in time, i.e. a single day. Transient Metrics are stored temporarily within the knowledge base and their output is passed as parameters in the calculation of other transient and historic metrics. Depending on the complexity, a transient metric can depend on the output from other tools, other transient metircs or have no dependencies at all.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
 ### [Transient Metric Providers for Bug Trackers](#transient-bug-trackers)
 
 The following Transient Metric Providers are associated with Issue trackers.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -1983,6 +2265,8 @@ This metric computes the number of users that submitted new bug comments in the 
 	- `int`	comments
 	- `int`	requests
 	- `int`	replies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2029,6 +2313,8 @@ This metric computes various metadata in bug header, i.e. priority, status, oper
 	-	`String`	contentClass
 	-	`String`	requestReplyPrediction
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.comments](#org.eclipse.scava.metricprovider.trans.bugs.comments)
@@ -2051,6 +2337,8 @@ This metric computes the number of bug comments, per bug tracker.
 	- `String`	bugTrackerId
 	- `int`	numberOfComments
 	- `int`	cumulativeNumberOfComments
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2080,6 +2368,8 @@ This metric computes the frequency and percentage of content Classes in bug comm
 	- `int`	numberOfComments
 	- `float`	percentage
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies)
@@ -2107,6 +2397,8 @@ This metric computes the number of bug comments, including those regarded as req
 	- `float`	percentageOfComments
 	- `float`	percentageOfRequests
 	- `float`	percentageOfReplies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2139,6 +2431,8 @@ This metric computes the emotional dimensions in bug comments, per bug tracker. 
 	- `float`	percentage
 	- `float`	cumulativePercentage
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.hourlyrequestsreplies)
@@ -2167,7 +2461,10 @@ This metric computes the number of bug comments, including those regarded as req
 	- `float`	percentageOfRequests
 	- `float`	percentageOfReplies
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.bugs.migrationissues](#org.eclipse.scava.metricprovider.trans.bugs.migrationissues)
 - **Short name**: trans.bugs.migrationissues
 - **Friendly name**: Migration Issues Detection in Bug Trackers
@@ -2190,7 +2487,10 @@ This metric detects migration issues in Bug Tracking Systems.
 	- `String`	software
 	- `List<String>`	changes
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.bugs.newbugs](#org.eclipse.scava.metricprovider.trans.bugs.newbugs)
 - **Short name**: trans.bugs.newbugs
 - **Friendly name**: Number of new bugs
@@ -2212,7 +2512,10 @@ This metric computes the number of new bugs over time, per bug tracker.
 	- `int`	numberOfBugs
 	- `int`	cumulativeNumberOfBugs
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.bugs.patches](#org.eclipse.scava.metricprovider.trans.bugs.patches)
 - **Short name**: trans.bugs.patches
 - **Friendly name**: Number of patches per bug
@@ -2233,6 +2536,8 @@ This metric computes the number of patches submitted by the community (users) fo
 	- `String`	bugTrackerId
 	- `int`	numberOfPatches
 	- `int`	cumulativeNumberOfPatches
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2264,6 +2569,8 @@ This metrics search for references of commits or bugs within comments comming fr
 	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
 
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.bugs.requestsreplies](#org.eclipse.scava.metricprovider.trans.bugs.requestsreplies)
@@ -2289,12 +2596,16 @@ This metric computes for each bug, whether it was  answered. If so, it computes 
 	- `long`	responseDurationSec
 	- `String`	responseDate
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
 
 ### [Transient Metrics for Newsgroups and Forums](#transient-newsgroups-forums)
 
 The following Transient Metric Providers are associated with communication channels in general, either newsgroups or forums.
 Despite the name of the metrics are newsgroups, all the metrics are valid for communication channels.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2331,6 +2642,8 @@ This metric computes the number of users that submitted news comments in the las
 	- `int`	requests
 	- `int`	replies
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.articles](#org.eclipse.scava.metricprovider.trans.newsgroups.articles)
@@ -2353,6 +2666,8 @@ This metric computes the number of articles, per newsgroup.
 	- `String`	newsgroupName
 	- `int`	numberOfArticles
 	- `int`	cumulativeNumberOfArticles
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2383,6 +2698,8 @@ This metric computes the content classes in newgroup articles, per newsgroup.
 	- `int`	numberOfArticles
 	- `float`	percentage
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies)
@@ -2409,6 +2726,8 @@ This metric computes the number of articles, including those regarded as request
 	- `float`	percentageOfArticles
 	- `float`	percentageOfRequests
 	- `float`	percentageOfReplies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -2442,6 +2761,8 @@ This metric computes the emotional dimensions in newsgroup articles, per newsgro
 	- `float`	percentage
 	- `float`	cumulativePercentage
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.hourlyrequestsreplies)
@@ -2469,7 +2790,10 @@ This metric computes the number of articles, including those regarded as request
 	- `float`	percentageOfRequests
 	- `float`	percentageOfReplies
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues](#org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues)
 - **Short name**: trans.newsgroups.migrationissues
 - **Friendly name**: Migration Issues Detection in Communication Channels
@@ -2492,7 +2816,10 @@ This metric detects migration issues in Communication Channels articles.
 	- `String`	software
 	- `List<String>`	changes
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.sentiment](#org.eclipse.scava.metricprovider.trans.newsgroups.sentiment)
 - **Short name**: trans.newsgroups.sentiment
 - **Friendly name**: Average sentiment in newsgroup threads
@@ -2515,7 +2842,10 @@ The metric computes the average sentiment, including sentiment at the beginning 
   - `float`	averageSentiment
   - `String`	startSentiment
   - `String`	endSentiment
-- ------
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.threads](#org.eclipse.scava.metricprovider.trans.newsgroups.threads)
 - **Short name**: trans.newsgroups.threads
@@ -2557,6 +2887,8 @@ This metric holds information for assigning newsgroup articles to threads. The t
 - CurrentDate :
 	- `String`	date
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 #### [org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies](#org.eclipse.scava.metricprovider.trans.newsgroups.threadsrequestsreplies)
@@ -2583,12 +2915,18 @@ The metric computes for each thread whether it is answered. If so, it computes t
 	- `long`	responseDurationSec
 	- `String`	responseDate
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
+
 ### [Transient Metrics for Documentation](#transient-documentation)
 
 The following Transient Metric Providers are associated with documentation analyses.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.documentation](#org.eclipse.scava.metricprovider.trans.documentation)
 - **Short name**: trans.documentation
 - **Friendly name**: Documentation processing
@@ -2622,7 +2960,10 @@ This metric process the files returned from the documentation readers and extrac
 	- `String`	lastRevisionAnalyzed
 	- `String`	nextUpdateDate
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.documentation.classification](#org.eclipse.scava.metricprovider.trans.documentation.classification)
 - **Short name**: trans.documentation.classification
 - **Friendly name**: Documentation classification
@@ -2644,7 +2985,10 @@ This metric determines which type of documentation is present
 	- `String`	entryId
 	- `List<String>`	types
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.documentation.detectingcode](#org.eclipse.scava.metricprovider.trans.documentation.detectingcode)
 - **Short name**: trans.documentation.detectingcode
 - **Friendly name**: Documentation detection of code
@@ -2667,7 +3011,10 @@ This metric process the plain text from documentation and detects the portions c
 	- `String`	naturalLanguage
 	- `String`	code
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.documentation.plaintext](#org.eclipse.scava.metricprovider.trans.documentation.plaintext)
 - **Short name**: trans.documentation.plaintext
 - **Friendly name**: Documentation plain text processor
@@ -2689,7 +3036,10 @@ This metric process the body of each documentation entry and extracts the plain 
 	- `String`	entryId
 	- `List<String>`	plainText
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.documentation.readability](#org.eclipse.scava.metricprovider.trans.documentation.readability)
 - **Short name**: trans.documentation.readability
 - **Friendly name**: Documentation calculation of readability
@@ -2711,7 +3061,10 @@ This metric calculates the readability of each documentation entry
 	- `String`	entryId
 	- `double`	readability
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.documentation.sentiment](#org.eclipse.scava.metricprovider.trans.documentation.sentiment)
 - **Short name**: trans.documentation.sentiment
 - **Friendly name**: Documentation Sentiment Analysis
@@ -2733,13 +3086,18 @@ This metric calculates the sentiment polarity of each documentation entry. Senti
 	- `String`	entryId
 	- `String`	polarity
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+	
 ------
 
 ### [Transient Metric Providers for Natural Language Processing](#transient-nlp)
 
 The following Transient Metric Providers are associated with Natural Language Processing tools.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.detectingcode](#org.eclipse.scava.metricprovider.trans.detectingcode)
 - **Short name**: trans.detectingcode
 - **Friendly name**: Distinguishes between code and natural language
@@ -2778,7 +3136,10 @@ This metric determines the parts of a bug comment or a newsgroup article that co
 	- `String`	naturalLanguage
 	- `String`	code
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.emotionclassification](#org.eclipse.scava.metricprovider.trans.emotionclassification)
 - **Short name**: trans.emotionclassification
 - **Friendly name**: Emotion classifier
@@ -2814,7 +3175,10 @@ This metric computes the emotions present in each bug comment, newsgroup article
 	- `String`	postId
 	- `String`	emotions
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.plaintextprocessing](#org.eclipse.scava.metricprovider.trans.plaintextprocessing)
 - **Short name**: trans.plaintextprocessing
 - **Friendly name**: Plain text processing
@@ -2853,7 +3217,10 @@ This metric preprocess each bug comment, newsgroup article or forum post into a 
   - `String`	plainText
   - `boolean`	hadReplies
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.requestreplyclassification](#org.eclipse.scava.metricprovider.trans.requestreplyclassification)
 - **Short name**: trans.requestreplyclassification
 - **Friendly name**: Request/Reply classification
@@ -2892,7 +3259,10 @@ This metric computes if a bug comment, newsgroup article or forum post is a requ
   - `String`	classificationResult
   - `String`	date
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.sentimentclassification](#org.eclipse.scava.metricprovider.trans.sentimentclassification)
 - **Short name**: trans.sentimentclassification
 - **Friendly name**: Sentiment classification
@@ -2928,7 +3298,10 @@ This metric computes the sentiment of each bug comment, newsgroup article or for
   - `String`	postId
   - `String`	polarity (`negative (-1)`, `neutral (0)` or `positive (1)`)
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.severityclassification](#org.eclipse.scava.metricprovider.trans.severityclassification)
 - **Short name**: trans.severityclassification
 - **Friendly name**: Severity classification
@@ -2988,7 +3361,10 @@ This metric computes the severity of each bug comment, newsgroup article or foru
   - `int`	charQuadgrams
   - `int`	charFivegrams
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.topics](#org.eclipse.scava.metricprovider.trans.topics)
 - **Short name**: trans.topics
 - **Friendly name**: Topic clustering
@@ -3048,7 +3424,10 @@ This metric computes topic clusters for each bug comment, newsgroup article or f
 
 These metrics are related to the commits and committers of a project.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.commits.message.plaintext](#org.eclipse.scava.metricprovider.trans.commits.message.plaintext)
 - **Short name**: trans.commits.message.plaintext
 - **Friendly name**: Commits message plain text
@@ -3070,7 +3449,10 @@ This metric preprocess each commit message to get a split plain text version.
 	- `String`	revision (Commit SHA)
 	- `List<String>`	plainText
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.commits.messagereferences](#org.eclipse.scava.metricprovider.trans.commits.messagereferences)
 - **Short name**: trans.commits.messagereferences
 - **Friendly name**: Commits Messages References
@@ -3096,7 +3478,10 @@ This metrics search for references of commits or bugs within the messages of com
 <u>*Note*</u> :
 	When this metric is used on GitHub, it should be noted that some references of bugs will be in fact pull requests. The reason is that GitHub considers pull requests equally as issues.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.trans.commits.message.topics](#org.eclipse.scava.metricprovider.trans.commits.message.topics)
 - **Short name**: trans.commits.message.topics
 - **Friendly name**: Commits Messages Topic Clustering
@@ -3127,7 +3512,10 @@ This metric computes topic clusters for each commit message.
 	- `int`	numberOfMessages
 	- `List<String>`	commitsMessageId
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.activeCommitters](#trans.rascal.activecommitters.activeCommitters)
 - **Short name**: activeCommitters
 - **Friendly name**: Committers of last two weeks
@@ -3137,7 +3525,10 @@ A list of committers who have been active the last two weeks. This metric is mea
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
 - <u>Returns</u>: `rel[datetime,set[str]]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.committersoverfile](#trans.rascal.activecommitters.committersoverfile)
 - **Short name**: giniCommittersOverFile
 - **Friendly name**: Committers over file
@@ -3147,7 +3538,10 @@ Calculates the gini coefficient of committers per file
 - <u>Depends-on</u>: `trans.rascal.activecommitters.countCommittersPerFile`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.countCommittersPerFile](#trans.rascal.activecommitters.countCommittersPerFile)
 - **Short name**: countCommittersPerFile
 - **Friendly name**: Number of committers per file
@@ -3157,7 +3551,10 @@ Count the number of committers that have touched a file.
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersPerFile`
 - <u>Returns</u>: `map[loc file, int numberOfCommitters]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper](#trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper)
 - **Short name**: firstLastCommitDates
 - **Friendly name**: First and last commit dates per developer
@@ -3168,7 +3565,10 @@ it is also used to drill down on the membership of specific individuals of the d
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
 - <u>Returns</u>: `map[str, tuple[datetime,datetime]]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.developmentTeam](#trans.rascal.activecommitters.developmentTeam)
 - **Short name**: developmentTeam
 - **Friendly name**: Development team
@@ -3178,7 +3578,10 @@ Lists the names of people who have been contributing code at least once in the h
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
 - <u>Returns</u>: `set[str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.percentageOfWeekendCommits](#trans.rascal.activecommitters.percentageOfWeekendCommits)
 - **Short name**: percentageOfWeekendCommits
 - **Friendly name**: Percentage of weekend commits
@@ -3188,7 +3591,10 @@ Percentage of commits made during the weekend
 - <u>Depends-on</u>: `trans.rascal.activecommitters.commitsPerWeekDay`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.maximumActiveCommittersEver](#trans.rascal.activecommitters.maximumActiveCommittersEver)
 - **Short name**: maximumActiveCommittersEver
 - **Friendly name**: Maximum active committers ever
@@ -3198,7 +3604,10 @@ What is the maximum number of committers who have been active together in any tw
 - <u>Depends-on</u>: `trans.rascal.activecommitters.numberOfActiveCommitters.historic`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.developmentTeamEmails](#trans.rascal.activecommitters.developmentTeamEmails)
 - **Short name**: developmentTeamEmails
 - **Friendly name**: Development team
@@ -3208,7 +3617,10 @@ Lists the names of people who have been contributing code at least once in the h
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersEmailsToday`
 - <u>Returns</u>: `set[str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.developmentDomainNames](#trans.rascal.activecommitters.developmentDomainNames)
 - **Short name**: developmentDomainNames
 - **Friendly name**: Development team domain names
@@ -3218,7 +3630,10 @@ Lists the domain names of email addresses of developers if such information is p
 - <u>Depends-on</u>: `trans.rascal.activecommitters.developmentTeamEmails`
 - <u>Returns</u>: `set[str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.committersPerFile](#trans.rascal.activecommitters.committersPerFile)
 - **Short name**: committersPerFile
 - **Friendly name**: Committers per file
@@ -3227,7 +3642,10 @@ Register which committers have contributed to which files
 
 - <u>Depends-on</u>: - <u>Returns</u>: `rel[loc,str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.longerTermActiveCommitters](#trans.rascal.activecommitters.longerTermActiveCommitters)
 - **Short name**: longerTermActiveCommitters
 - **Friendly name**: Committers of last year
@@ -3237,7 +3655,10 @@ Committers who have been active the last 12 months. This metric is meant for dow
 - <u>Depends-on</u>: `trans.rascal.activecommitters.committersToday`
 - <u>Returns</u>: `rel[datetime,set[str]]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.commitsPerDeveloper](#trans.rascal.activecommitters.commitsPerDeveloper)
 - **Short name**: commitsPerDeveloper
 - **Friendly name**: Number of commits per developer
@@ -3247,7 +3668,10 @@ when combined with other metrics such as churn. Few and big commits are differen
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.committersAge](#trans.rascal.activecommitters.committersAge)
 - **Short name**: ageOfCommitters
 - **Friendly name**: Developer experience in project
@@ -3257,7 +3681,10 @@ Measures in days the amount of time between the first and last contribution of e
 - <u>Depends-on</u>: `trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper`
 - <u>Returns</u>: `rel[str,int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.committersToday](#trans.rascal.activecommitters.committersToday)
 - **Short name**: committersToday
 - **Friendly name**: Active committers
@@ -3266,7 +3693,10 @@ Who have been active today?
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.projectAge](#trans.rascal.activecommitters.projectAge)
 - **Short name**: projectAge
 - **Friendly name**: Age of the project (nr of days between first and last commit)
@@ -3276,7 +3706,10 @@ Age of the project (nr of days between first and last commit)
 - <u>Depends-on</u>: `trans.rascal.activecommitters.firstLastCommitDatesPerDeveloper`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.commitsPerWeekDay](#trans.rascal.activecommitters.commitsPerWeekDay)
 - **Short name**: commitsPerWeekDay
 - **Friendly name**: Commits per week day
@@ -3285,7 +3718,10 @@ On which day of the week do commits take place?
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.committersEmailsToday](#trans.rascal.activecommitters.committersEmailsToday)
 - **Short name**: committersEmailsToday
 - **Friendly name**: Active committers
@@ -3294,7 +3730,10 @@ Who have been active today?
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.sizeOfDevelopmentTeam](#trans.rascal.activecommitters.sizeOfDevelopmentTeam)
 - **Short name**: sizeOfDevelopmentTeam
 - **Friendly name**: Size of development team
@@ -3304,7 +3743,10 @@ How many people have ever contributed code to this project?
 - <u>Depends-on</u>: `trans.rascal.activecommitters.developmentTeam`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.numberOfActiveCommittersLongTerm](#trans.rascal.activecommitters.numberOfActiveCommittersLongTerm)
 - **Short name**: numberOfActiveCommittersLongTerm
 - **Friendly name**: Number of active committers long term
@@ -3314,7 +3756,10 @@ Number of long time active committers over time (active in last year). This meas
 - <u>Depends-on</u>: `trans.rascal.activecommitters.longerTermActiveCommitters`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.activecommitters.numberOfActiveCommitters](#trans.rascal.activecommitters.numberOfActiveCommitters)
 - **Short name**: numberOfActiveCommitters
 - **Friendly name**: Number of active committers
@@ -3324,7 +3769,10 @@ Number of active committers over time (active in last two weeks). This measures 
 - <u>Depends-on</u>: `trans.rascal.activecommitters.activeCommitters`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.commitsToday](#rascal.generic.churn.commitsToday)
 - **Short name**: commitsToday
 - **Friendly name**: Number of commits today
@@ -3333,7 +3781,10 @@ Counts the number of commits made today.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnToday](#rascal.generic.churn.churnToday)
 - **Short name**: commitsToday
 - **Friendly name**: Churn of today
@@ -3342,7 +3793,10 @@ Counts the churn for today: the total number of lines of code added and deleted.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerCommitInTwoWeeks](#rascal.generic.churn.churnPerCommitInTwoWeeks)
 - **Short name**: churnPerCommitInTwoWeeks
 - **Friendly name**: Churn per commit in two weeks
@@ -3353,7 +3807,10 @@ The ratio between the churn and the number of commits indicates how large each c
 `rascal.generic.churn.commitsInTwoWeeks`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnActivity](#rascal.generic.churn.churnActivity)
 - **Short name**: churnActivity
 - **Friendly name**: Churn over the last two weeks
@@ -3363,7 +3820,10 @@ Churn in the last two weeks: collects the lines of code added and deleted over a
 - <u>Depends-on</u>: `rascal.generic.churn.churnToday`
 - <u>Returns</u>: `rel[datetime,int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.commitActivity](#rascal.generic.churn.commitActivity)
 - **Short name**: commitActivity
 - **Friendly name**: Commits in last two weeks
@@ -3373,7 +3833,10 @@ Number of commits in the last two weeks: collects commit activity over a 14-day 
 - <u>Depends-on</u>: `rascal.generic.churn.commitsToday`
 - <u>Returns</u>: `rel[datetime,int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.coreCommittersChurn](#rascal.generic.churn.coreCommittersChurn)
 - **Short name**: coreCommittersChurn
 - **Friendly name**: Churn per core committer
@@ -3383,7 +3846,10 @@ Find out about the committers what their total number of added and deleted lines
 - <u>Depends-on</u>: `rascal.generic.churn.churnPerCommitter`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.filesPerCommit](#rascal.generic.churn.filesPerCommit)
 - **Short name**: numberOfFilesPerCommit
 - **Friendly name**: Number of files per commit
@@ -3392,7 +3858,10 @@ Counts the number of files per commit to find out about the separation of concer
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerCommit](#rascal.generic.churn.churnPerCommit)
 - **Short name**: churnPerCommit
 - **Friendly name**: Counts number of lines added and deleted per commit.
@@ -3402,7 +3871,10 @@ is a basic unit of work for a programmer. This metric computes a table per commi
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerCommitter](#rascal.generic.churn.churnPerCommitter)
 - **Short name**: churnPerCommitter
 - **Friendly name**: Churn per committer
@@ -3411,7 +3883,10 @@ Count churn per committer: the number of lines of code added and deleted. It zoo
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[str author, int churn]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnPerFile](#rascal.generic.churn.churnPerFile)
 - **Short name**: churnPerFile
 - **Friendly name**: Churn per file
@@ -3420,7 +3895,10 @@ Churn per file counts the number of files added and deleted for a single file. T
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc file, int churn]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.commitsInTwoWeeks](#rascal.generic.churn.commitsInTwoWeeks)
 - **Short name**: commitsInTwoWeeks
 - **Friendly name**: Number of commits in the last two weeks
@@ -3430,7 +3908,10 @@ Churn in the last two weeks: aggregates the number of commits over a 14-day slid
 - <u>Depends-on</u>: `rascal.generic.churn.commitActivity`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.generic.churn.churnInTwoWeeks](#rascal.generic.churn.churnInTwoWeeks)
 - **Short name**: churnInTwoWeeks
 - **Friendly name**: Sum of churn in the last two weeks
@@ -3440,13 +3921,18 @@ Churn in the last two weeks: aggregates the lines of code added and deleted over
 - <u>Depends-on</u>: `rascal.generic.churn.churnActivity`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 ### [Transient Metric Providers for Generic Source Code](#transient-source-code)
 
 These metrics are related to the source code of analyzed projects, regardless of the language(s) they are written in.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.readability.fileReadability](#trans.rascal.readability.fileReadability)
 - **Short name**: fileReadability
 - **Friendly name**: File readability
@@ -3456,7 +3942,10 @@ as spaces after commas. This is a basic collection metric which is used further 
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.readability.fileReadabilityQuartiles](#trans.rascal.readability.fileReadabilityQuartiles)
 - **Short name**: fileReadabilityQ
 - **Friendly name**: File readability quartiles
@@ -3468,7 +3957,10 @@ lack of attention to readability.
 - <u>Depends-on</u>: `trans.rascal.readability.fileReadability`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.headerCounts](#trans.rascal.comments.headerCounts)
 - **Short name**: headerCounts
 - **Friendly name**: Number of appearances of estimated unique headers
@@ -3477,7 +3969,10 @@ In principle it is expected for the files in a project to share the same license
 
 - <u>Depends-on</u>: - <u>Returns</u>: `list[int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.commentedOutCode](#trans.rascal.comments.commentedOutCode)
 - **Short name**: commentedOutCode
 - **Friendly name**: Lines of commented out code per file
@@ -3487,7 +3982,10 @@ much source code comments are actually commented out code. Commented out code is
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.commentLOC](#trans.rascal.comments.commentLOC)
 - **Short name**: commentLOC
 - **Friendly name**: Number of lines containing comments per file
@@ -3497,7 +3995,10 @@ between natural language comments and commented out code.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.commentLinesPerLanguage](#trans.rascal.comments.commentLinesPerLanguage)
 - **Short name**: commentLinesPerLanguage
 - **Friendly name**: Number of lines containing comments per language (excluding headers)
@@ -3509,7 +4010,10 @@ Number of lines containing comments per language (excluding headers). The balanc
 `trans.rascal.comments.commentedOutCode`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.commentedOutCodePerLanguage](#trans.rascal.comments.commentedOutCodePerLanguage)
 - **Short name**: commentedOutCodePerLanguage
 - **Friendly name**: Lines of commented out code per language
@@ -3520,7 +4024,10 @@ much source code comments are actually commented out code. Commented out code is
 - <u>Depends-on</u>: `trans.rascal.comments.commentedOutCode`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.headerLOC](#trans.rascal.comments.headerLOC)
 - **Short name**: headerLOC
 - **Friendly name**: Header size per file
@@ -3529,7 +4036,10 @@ Header size per file is a basic metric counting the size of the comment at the s
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.matchingLicenses](#trans.rascal.comments.matchingLicenses)
 - **Short name**: matchingLicenses
 - **Friendly name**: Used licenses (from selected list of known licenses)
@@ -3538,7 +4048,10 @@ We match against a list of known licenses to find out which are used in the curr
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[str]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.comments.headerPercentage](#trans.rascal.comments.headerPercentage)
 - **Short name**: headerPercentage
 - **Friendly name**: Percentage of files with headers.
@@ -3548,7 +4061,10 @@ Percentage of files with headers is an indicator for the amount of files which h
 - <u>Depends-on</u>: `trans.rascal.comments.headerLOC`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.LOC.genericLOC](#trans.rascal.LOC.genericLOC)
 - **Short name**: countLoc
 - **Friendly name**: Language independent physical lines of code
@@ -3558,7 +4074,10 @@ The metric can be used to compare the volume between two systems.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.LOC.genericLOCoverFiles](#trans.rascal.LOC.genericLOCoverFiles)
 - **Short name**: giniLOCOverFiles
 - **Friendly name**: Spread of code over files
@@ -3567,7 +4086,10 @@ We find out how evenly the code is spread over files. The number should be quite
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.LOC.locPerLanguage](#trans.rascal.LOC.locPerLanguage)
 - **Short name**: locPerLanguage
 - **Friendly name**: Physical lines of code per language
@@ -3578,7 +4100,10 @@ The metric can be used to compare the volume between two systems and to assess i
 - <u>Depends-on</u>: `trans.rascal.LOC.genericLOC`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.clones.cloneLOCPerLanguage](#trans.rascal.clones.cloneLOCPerLanguage)
 - **Short name**: cloneLOCPerLanguage
 - **Friendly name**: Lines of code in Type I clones larger than 6 lines, per language
@@ -3593,7 +4118,10 @@ Lines of code in Type I clones larger than 6 lines, per language. A Type I clone
 
 These metrics are related to the Java source code of analyzed projects.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithErrorProneness](#style.filesWithErrorProneness)
 - **Short name**: filesWithErrorProneness
 - **Friendly name**: Files with style violations which make the code error prone. This is basic metric which can not be easily compared between projects.
@@ -3603,7 +4131,10 @@ Percentage of files with error proneness
 - <u>Depends-on</u>: `style.errorProneness`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.understandability](#style.understandability)
 - **Short name**: understandability
 - **Friendly name**: Inefficient code
@@ -3614,7 +4145,10 @@ but not necessarily more error prone.
 - <u>Depends-on</u>: `style.styleViolations`
 - <u>Returns</u>: `Table`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.inefficiencies](#style.inefficiencies)
 - **Short name**: inefficiencies
 - **Friendly name**: Inefficient code
@@ -3624,7 +4158,10 @@ Percentage of the projects files with coding style violations which indicate com
 - <u>Depends-on</u>: `style.styleViolations`
 - <u>Returns</u>: `Table`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithUnderstandabilityIssues](#style.filesWithUnderstandabilityIssues)
 - **Short name**: filesWithUnderstandabilityIssues
 - **Friendly name**: Files with style violations which make the code harder to understand
@@ -3634,7 +4171,10 @@ Percentage of files with understandability issues. This is a basic metric which 
 - <u>Depends-on</u>: `style.understandability`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.errorProneness](#style.errorProneness)
 - **Short name**: errorProneness
 - **Friendly name**: Error proneness
@@ -3646,7 +4186,10 @@ Percentage of the projects files with coding style violations which indicate err
 - <u>Depends-on</u>: `style.styleViolations`
 - <u>Returns</u>: `Table`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfStyleViolations](#style.spreadOfStyleViolations)
 - **Short name**: spreadOfStyleViolations
 - **Friendly name**: Spread of style violations over files
@@ -3657,7 +4200,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.styleViolations`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithInefficiencies](#style.filesWithInefficiencies)
 - **Short name**: filesWithInefficiencies
 - **Friendly name**: Files with style violations which indicate inefficiencies. This is a basic metric which can not be easily compared between projects.
@@ -3667,7 +4213,10 @@ Percentage of files with inefficiencies
 - <u>Depends-on</u>: `style.inefficiencies`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.filesWithStyleViolations](#style.filesWithStyleViolations)
 - **Short name**: filesWithStyleViolations
 - **Friendly name**: Counts the number of files with any kind of style violation. This metric can not be easily compared between projects.
@@ -3677,7 +4226,10 @@ Percentage of files with style violations
 - <u>Depends-on</u>: `style.styleViolations`
 - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfUnderstandabilityIssues](#style.spreadOfUnderstandabilityIssues)
 - **Short name**: spreadOfUnderstandabilityIssues
 - **Friendly name**: Spread of understandability issues over files
@@ -3688,7 +4240,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.understandability`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfInefficiencies](#style.spreadOfInefficiencies)
 - **Short name**: spreadOfInefficiencies
 - **Friendly name**: Spread of inefficiencies over files
@@ -3699,7 +4254,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.inefficiencies`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.styleViolations](#style.styleViolations)
 - **Short name**: styleViolations
 - **Friendly name**: All style violations
@@ -3712,7 +4270,10 @@ be compared between projects as well. If problems are widespread this may be a q
 
 - <u>Depends-on</u>: - <u>Returns</u>: `Table`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [style.spreadOfErrorProneness](#style.spreadOfErrorProneness)
 - **Short name**: spreadOfErrorProneness
 - **Friendly name**: Spread of error proneness style violations over files
@@ -3723,7 +4284,10 @@ be compared between projects as well. If problems are widespread this may be a q
 - <u>Depends-on</u>: `style.errorProneness`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.testability.java.TestOverPublicMethods](#rascal.testability.java.TestOverPublicMethods)
 - **Short name**: percentageOfTestedPublicMethods
 - **Friendly name**: Number of JUnit tests averaged over the total number of public methods
@@ -3733,7 +4297,10 @@ compute how far from the ideal situation the project is.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.testability.java.NumberOfTestMethods](#rascal.testability.java.NumberOfTestMethods)
 - **Short name**: numberOfTestMethods
 - **Friendly name**: Number of JUnit test methods. This is an intermediate absolute metric used to compute others. The bare metric is hard to compare between projects.
@@ -3742,7 +4309,10 @@ Number of JUnit test methods
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [rascal.testability.java.TestCoverage](#rascal.testability.java.TestCoverage)
 - **Short name**: estimateTestCoverage
 - **Friendly name**: Static Estimation of test coverage
@@ -3754,7 +4324,10 @@ for a lack in testing effort for the project.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MIF-Java](#trans.rascal.OO.java.MIF-Java)
 - **Short name**: MIF_Java
 - **Friendly name**: Method inheritance factor (Java)
@@ -3763,7 +4336,10 @@ Method inheritance factor (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.Ca-Java-Quartiles](#trans.rascal.OO.java.Ca-Java-Quartiles)
 - **Short name**: Ca_Java_Q
 - **Friendly name**: Afferent coupling quartiles (Java)
@@ -3773,7 +4349,10 @@ Afferent coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.Ca-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.DAC-Java](#trans.rascal.OO.java.DAC-Java)
 - **Short name**: DAC_Java
 - **Friendly name**: Data abstraction coupling (Java)
@@ -3782,7 +4361,10 @@ Data abstraction coupling (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.CF-Java](#trans.rascal.OO.java.CF-Java)
 - **Short name**: CF_Java
 - **Friendly name**: Coupling factor (Java)
@@ -3791,7 +4373,10 @@ Coupling factor (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.I-Java](#trans.rascal.OO.java.I-Java)
 - **Short name**: I_Java
 - **Friendly name**: Instability (Java)
@@ -3802,7 +4387,10 @@ Instability (Java)
 `trans.rascal.OO.java.Ca-Java`
 - <u>Returns</u>: `map[loc, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.DAC-Java-Quartiles](#trans.rascal.OO.java.DAC-Java-Quartiles)
 - **Short name**: DAC_Java_Q
 - **Friendly name**: Data abstraction coupling quartiles (Java)
@@ -3812,7 +4400,10 @@ Data abstraction coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.DAC-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MPC-Java-Quartiles](#trans.rascal.OO.java.MPC-Java-Quartiles)
 - **Short name**: MPC_Java_Q
 - **Friendly name**: Message passing coupling quartiles (Java)
@@ -3822,7 +4413,10 @@ Message passing coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.MPC-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOM-Java](#trans.rascal.OO.java.NOM-Java)
 - **Short name**: NOM_Java
 - **Friendly name**: Number of methods (Java)
@@ -3831,7 +4425,10 @@ Number of methods (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCOM-Java](#trans.rascal.OO.java.LCOM-Java)
 - **Short name**: LCOM_Java
 - **Friendly name**: Lack of cohesion in methods (Java)
@@ -3840,7 +4437,10 @@ Lack of cohesion in methods (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.CBO-Java](#trans.rascal.OO.java.CBO-Java)
 - **Short name**: CBO_Java
 - **Friendly name**: Coupling between objects (Java)
@@ -3849,7 +4449,10 @@ Coupling between objects (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.Ce-Java](#trans.rascal.OO.java.Ce-Java)
 - **Short name**: Ce_Java
 - **Friendly name**: Efferent coupling (Java)
@@ -3858,7 +4461,10 @@ Efferent coupling (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.PF-Java](#trans.rascal.OO.java.PF-Java)
 - **Short name**: PF_Java
 - **Friendly name**: Polymorphism factor (Java)
@@ -3867,7 +4473,10 @@ Polymorphism factor (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.RFC-Java-Quartiles](#trans.rascal.OO.java.RFC-Java-Quartiles)
 - **Short name**: RFC_Java_Q
 - **Friendly name**: Response for class quartiles (Java)
@@ -3877,7 +4486,10 @@ Response for class quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.RFC-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.I-Java-Quartiles](#trans.rascal.OO.java.I-Java-Quartiles)
 - **Short name**: I_Java_Q
 - **Friendly name**: Instability quartiles (Java)
@@ -3887,7 +4499,10 @@ Instability quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.I-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.RFC-Java](#trans.rascal.OO.java.RFC-Java)
 - **Short name**: RFC_Java
 - **Friendly name**: Response for class (Java)
@@ -3896,7 +4511,10 @@ Response for class (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCC-Java](#trans.rascal.OO.java.LCC-Java)
 - **Short name**: LCC_Java
 - **Friendly name**: Loose class cohesion (Java)
@@ -3905,7 +4523,10 @@ Loose class cohesion (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MIF-Java-Quartiles](#trans.rascal.OO.java.MIF-Java-Quartiles)
 - **Short name**: MIF_Java_Q
 - **Friendly name**: Method inheritance factor quartiles (Java)
@@ -3915,7 +4536,10 @@ Method inheritance factor quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.MIF-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.DIT-Java](#trans.rascal.OO.java.DIT-Java)
 - **Short name**: DIT_Java
 - **Friendly name**: Depth of inheritance tree (Java)
@@ -3924,7 +4548,10 @@ Depth of inheritance tree (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MHF-Java](#trans.rascal.OO.java.MHF-Java)
 - **Short name**: MHF_Java
 - **Friendly name**: Method hiding factor (Java)
@@ -3933,7 +4560,10 @@ Method hiding factor (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.TCC-Java](#trans.rascal.OO.java.TCC-Java)
 - **Short name**: TCC_Java
 - **Friendly name**: Tight class cohesion (Java)
@@ -3942,7 +4572,10 @@ Tight class cohesion (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.AHF-Java](#trans.rascal.OO.java.AHF-Java)
 - **Short name**: AHF_Java
 - **Friendly name**: Attribute hiding factor (Java)
@@ -3951,7 +4584,10 @@ Attribute hiding factor (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCOM-Java-Quartiles](#trans.rascal.OO.java.LCOM-Java-Quartiles)
 - **Short name**: LCOM_Java_Q
 - **Friendly name**: Lack of cohesion in methods quartiles (Java)
@@ -3961,7 +4597,10 @@ Lack of cohesion in methods quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.LCOM-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.Ca-Java](#trans.rascal.OO.java.Ca-Java)
 - **Short name**: Ca_Java
 - **Friendly name**: Afferent coupling (Java)
@@ -3970,7 +4609,10 @@ Afferent coupling (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.A-Java](#trans.rascal.OO.java.A-Java)
 - **Short name**: A_Java
 - **Friendly name**: Abstractness (Java)
@@ -3979,7 +4621,10 @@ Abstractness (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.DIT-Java-Quartiles](#trans.rascal.OO.java.DIT-Java-Quartiles)
 - **Short name**: DIT_Java_Q
 - **Friendly name**: Depth of inheritance tree quartiles (Java)
@@ -3989,7 +4634,10 @@ Depth of inheritance tree quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.DIT-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.TCC-Java-Quartiles](#trans.rascal.OO.java.TCC-Java-Quartiles)
 - **Short name**: TCC_Java_Q
 - **Friendly name**: Tight class cohesion quartiles (Java)
@@ -3999,7 +4647,10 @@ Tight class cohesion quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.TCC-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCOM4-Java-Quartiles](#trans.rascal.OO.java.LCOM4-Java-Quartiles)
 - **Short name**: LCOM4_Java_Q
 - **Friendly name**: Lack of cohesion in methods 4 quartiles (Java)
@@ -4009,7 +4660,10 @@ Lack of cohesion in methods 4 quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.LCOM4-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCOM4-Java](#trans.rascal.OO.java.LCOM4-Java)
 - **Short name**: LCOM4_Java
 - **Friendly name**: Lack of cohesion in methods 4 (Java)
@@ -4018,7 +4672,10 @@ Lack of cohesion in methods 4 (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.SR-Java](#trans.rascal.OO.java.SR-Java)
 - **Short name**: SR_Java
 - **Friendly name**: Specialization ratio (Java)
@@ -4027,7 +4684,10 @@ Specialization ratio (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.AIF-Java-Quartiles](#trans.rascal.OO.java.AIF-Java-Quartiles)
 - **Short name**: AIF_Java_Q
 - **Friendly name**: Attribute inheritance factor quartiles (Java)
@@ -4037,7 +4697,10 @@ Attribute inheritance factor quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.AIF-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOC-Java-Quartiles](#trans.rascal.OO.java.NOC-Java-Quartiles)
 - **Short name**: NOC_Java_Q
 - **Friendly name**: Number of children quartiles (Java)
@@ -4047,7 +4710,10 @@ Number of children quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.NOC-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOC-Java](#trans.rascal.OO.java.NOC-Java)
 - **Short name**: NOC_Java
 - **Friendly name**: Number of children (Java)
@@ -4056,7 +4722,10 @@ Number of children (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.AIF-Java](#trans.rascal.OO.java.AIF-Java)
 - **Short name**: AIF_Java
 - **Friendly name**: Attribute inheritance factor (Java)
@@ -4065,7 +4734,10 @@ Attribute inheritance factor (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.RR-Java](#trans.rascal.OO.java.RR-Java)
 - **Short name**: RR_Java
 - **Friendly name**: Reuse ratio (Java)
@@ -4074,7 +4746,10 @@ Reuse ratio (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.LCC-Java-Quartiles](#trans.rascal.OO.java.LCC-Java-Quartiles)
 - **Short name**: LCC_Java_Q
 - **Friendly name**: Loose class cohesion quartiles (Java)
@@ -4084,7 +4759,10 @@ Loose class cohesion quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.LCC-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOA-Java](#trans.rascal.OO.java.NOA-Java)
 - **Short name**: NOA_Java
 - **Friendly name**: Number of attributes (Java)
@@ -4093,7 +4771,10 @@ Number of attributes (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.Ce-Java-Quartiles](#trans.rascal.OO.java.Ce-Java-Quartiles)
 - **Short name**: Ce_Java_Q
 - **Friendly name**: Efferent coupling quartiles (Java)
@@ -4103,7 +4784,10 @@ Efferent coupling quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.Ce-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOM-Java-Quartiles](#trans.rascal.OO.java.NOM-Java-Quartiles)
 - **Short name**: NOM_Java_Q
 - **Friendly name**: Number of methods quartiles (Java)
@@ -4113,7 +4797,10 @@ Number of methods quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.NOM-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.NOA-Java-Quartiles](#trans.rascal.OO.java.NOA-Java-Quartiles)
 - **Short name**: NOA_Java_Q
 - **Friendly name**: Number of attributes quartiles (Java)
@@ -4123,7 +4810,10 @@ Number of attributes quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.NOA-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.CBO-Java-Quartiles](#trans.rascal.OO.java.CBO-Java-Quartiles)
 - **Short name**: CBO_Java_Q
 - **Friendly name**: Coupling between objects quartiles (Java)
@@ -4133,7 +4823,10 @@ Coupling between objects quartiles (Java)
 - <u>Depends-on</u>: `trans.rascal.OO.java.CBO-Java`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.OO.java.MPC-Java](#trans.rascal.OO.java.MPC-Java)
 - **Short name**: MPC_Java
 - **Friendly name**: Message passing coupling (Java)
@@ -4142,7 +4835,10 @@ Message passing coupling (Java)
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.LOC.java.LOCoverJavaClass](#trans.rascal.LOC.java.LOCoverJavaClass)
 - **Short name**: giniLOCOverClassJava
 - **Friendly name**: Distribution of physical lines of code over Java classes, interfaces and enums
@@ -4151,7 +4847,10 @@ The distribution of physical lines of code over Java classes, interfaces and enu
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles](#trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJavaQuartiles)
 - **Short name**: countUsesOfAdvancedLanguageFeaturesQ
 - **Friendly name**: Usage of advanced Java features quartiles
@@ -4161,7 +4860,10 @@ Quartiles of counts of advanced Java features (wildcards, union types and anonym
 - <u>Depends-on</u>: `trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava`
 - <u>Returns</u>: `map[str, real]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava](#trans.rascal.advancedfeatures.java.AdvancedLanguageFeaturesJava)
 - **Short name**: countUsesOfAdvancedLanguageFeatures
 - **Friendly name**: Usage of advanced Java features
@@ -4170,7 +4872,10 @@ Usage of advanced Java features (wildcards, union types and anonymous classes), 
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc file, int count]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.CC.java.CCHistogramJava](#trans.rascal.CC.java.CCHistogramJava)
 - **Short name**: CCHistogramJava
 - **Friendly name**: Number of Java methods per CC risk factor
@@ -4180,7 +4885,10 @@ Number of Java methods per CC risk factor, counts the number of methods which ar
 - <u>Depends-on</u>: `trans.rascal.CC.java.CCJava`
 - <u>Returns</u>: `map[str, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.CC.java.CCOverJavaMethods](#trans.rascal.CC.java.CCOverJavaMethods)
 - **Short name**: giniCCOverMethodsJava
 - **Friendly name**: CC over Java methods
@@ -4190,7 +4898,10 @@ Calculates how cyclomatic complexity is spread over the methods of a system. If 
 - <u>Depends-on</u>: `trans.rascal.CC.java.CCJava`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.CC.java.CCJava](#trans.rascal.CC.java.CCJava)
 - **Short name**: getCC
 - **Friendly name**: McCabe's Cyclomatic Complexity Metric (Java)
@@ -4200,7 +4911,10 @@ you would need to test the method. A high number indicates also a lot of work to
 
 - <u>Depends-on</u>: - <u>Returns</u>: `map[loc, int]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.CC.java.WMCJava](#trans.rascal.CC.java.WMCJava)
 - **Short name**: getWMC
 - **Friendly name**: Weighted Method Count (Java)
@@ -4212,13 +4926,18 @@ of the cyclomatic complexity measures of all methods in the class. This metric i
 - <u>Depends-on</u>: `trans.rascal.CC.java.CCJava`
 - <u>Returns</u>: `map[loc class, int wmcCount]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 ### [Transient Metric Providers for OSGi Dependencies](#transient-osgi-dependencies)
 
 These metrics are related to OSGi dependencies declared in `MANIFEST.MF` files.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.numberRequiredPackagesInSourceCode](#trans.rascal.dependency.numberRequiredPackagesInSourceCode)
 - **Short name**: numberRequiredPackagesInSourceCode
 - **Friendly name**: Number required packages in source code
@@ -4227,7 +4946,10 @@ Retrieves the number of required packages found in the project source code.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.allOSGiPackageDependencies](#trans.rascal.dependency.osgi.allOSGiPackageDependencies)
 - **Short name**: allOSGiPackageDependencies
 - **Friendly name**: All OSGi package dependencies
@@ -4236,7 +4958,10 @@ Retrieves all the OSGi package dependencies (i.e. Import-Package and DynamicImpo
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles](#trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles)
 - **Short name**: unversionedOSGiRequiredBundles
 - **Friendly name**: Unversioned OSGi required bundles
@@ -4246,7 +4971,10 @@ If returned value != {} there is a smell in the Manifest.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.unusedOSGiImportedPackages](#trans.rascal.dependency.osgi.unusedOSGiImportedPackages)
 - **Short name**: unusedOSGiImportedPackages
 - **Friendly name**: Unused OSGi imported packages
@@ -4255,7 +4983,10 @@ Retrieves the set of unused OSGi imported packages. If set != {} then developers
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.numberOSGiSplitImportedPackages](#trans.rascal.dependency.osgi.numberOSGiSplitImportedPackages)
 - **Short name**: numberOSGiSplitImportedPackages
 - **Friendly name**: Number OSGi split imported packages
@@ -4264,7 +4995,10 @@ Retrieves the number of split imported packages. If returned value > 0 there is 
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.ratioUnusedOSGiImportedPackages](#trans.rascal.dependency.osgi.ratioUnusedOSGiImportedPackages)
 - **Short name**: ratioUnusedOSGiImportedPackages
 - **Friendly name**: Ratio of unused OSGi imported packages
@@ -4274,7 +5008,10 @@ Retrieves the ratio of unused OSGi imported packages with regards to the whole s
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.unusedOSGiImportedPackages`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.allOSGiBundleDependencies](#trans.rascal.dependency.osgi.allOSGiBundleDependencies)
 - **Short name**: allOSGiBundleDependencies
 - **Friendly name**: All OSGi bundle dependencies
@@ -4283,7 +5020,10 @@ Retrieves all the OSGi bunlde dependencies (i.e. Require-Bundle dependencies).
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.unversionedOSGiExportedPackages](#trans.rascal.dependency.osgi.unversionedOSGiExportedPackages)
 - **Short name**: unversionedOSGiExportedPackages
 - **Friendly name**: Unversioned OSGi exported packages
@@ -4293,7 +5033,10 @@ If returned value != {} there is a smell in the Manifest.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.numberOSGiSplitExportedPackages](#trans.rascal.dependency.osgi.numberOSGiSplitExportedPackages)
 - **Short name**: numberOSGiSplitExportedPackages
 - **Friendly name**: Number OSGi split exported packages
@@ -4302,7 +5045,10 @@ Retrieves the number of split exported packages. If returned value > 0 there is 
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.allOSGiDynamicImportedPackages](#trans.rascal.dependency.osgi.allOSGiDynamicImportedPackages)
 - **Short name**: allOSGiDynamicImportedPackages
 - **Friendly name**: All OSGi dynamically imported packages
@@ -4311,7 +5057,10 @@ Retrieves all the OSGi dynamically imported packages. If returned value != {} a 
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.numberOSGiBundleDependencies](#trans.rascal.dependency.osgi.numberOSGiBundleDependencies)
 - **Short name**: numberOSGiBundleDependencies
 - **Friendly name**: Number all OSGi bundle dependencies
@@ -4320,7 +5069,10 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.ratioUnversionedOSGiImportedPackages](#trans.rascal.dependency.osgi.ratioUnversionedOSGiImportedPackages)
 - **Short name**: ratioUnversionedOSGiImportedPackages
 - **Friendly name**: Ratio unversioned OSGi imported packages
@@ -4330,7 +5082,10 @@ Retrieves the ratio of unversioned OSGi imported packages.
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.unversionedOSGiImportedPackages`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.unversionedOSGiImportedPackages](#trans.rascal.dependency.osgi.unversionedOSGiImportedPackages)
 - **Short name**: unversionedOSGiImportedPackages
 - **Friendly name**: Unversioned OSGi imported packages
@@ -4340,7 +5095,10 @@ If returned value != {} there is a smell in the Manifest.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.numberOSGiPackageDependencies](#trans.rascal.dependency.osgi.numberOSGiPackageDependencies)
 - **Short name**: numberOSGiPackageDependencies
 - **Friendly name**: Number of all OSGi package dependencies
@@ -4349,7 +5107,10 @@ Retrieves the number of OSGi package dependencies (i.e. Import-Package and Dynam
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.ratioUnversionedOSGiRequiredBundles](#trans.rascal.dependency.osgi.ratioUnversionedOSGiRequiredBundles)
 - **Short name**: ratioUnversionedOSGiRequiredBundles
 - **Friendly name**: Ratio unversioned OSGi required bundles
@@ -4359,7 +5120,10 @@ Retrieves the ratio of unversioned OSGi required bundles.
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.unversionedOSGiRequiredBundles`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.usedOSGiUnimportedPackages](#trans.rascal.dependency.osgi.usedOSGiUnimportedPackages)
 - **Short name**: usedOSGiUnimportedPackages
 - **Friendly name**: Used OSGi unimported packages
@@ -4369,7 +5133,10 @@ If set != {} then developers may be depending on the execution environment (smel
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.ratioUnversionedOSGiExportedPackages](#trans.rascal.dependency.osgi.ratioUnversionedOSGiExportedPackages)
 - **Short name**: ratioUnversionedOSGiExportedPackages
 - **Friendly name**: Ratio of unversioned OSGi exported packages
@@ -4379,7 +5146,10 @@ Retrieves the ratio of unversioned OSGi exported packages.
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.unversionedOSGiExportedPackages`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.osgi.ratioUsedOSGiImportedPackages](#trans.rascal.dependency.osgi.ratioUsedOSGiImportedPackages)
 - **Short name**: ratioUsedOSGiImportedPackages
 - **Friendly name**: Ratio of used OSGi imported packages
@@ -4388,13 +5158,18 @@ Retrieves the ratio of used imported packages. If ratio == 0.0 all imported pack
 
 - <u>Depends-on</u>: - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
 
 ### [Transient Metric Providers for Maven dependencies](#transient-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.numberRequiredPackagesInSourceCode](#trans.rascal.dependency.numberRequiredPackagesInSourceCode)
 - **Short name**: numberRequiredPackagesInSourceCode
 - **Friendly name**: Number required packages in source code
@@ -4403,7 +5178,10 @@ Retrieves the number of required packages found in the project source code.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.ratioOptionalMavenDependencies](#trans.rascal.dependency.maven.ratioOptionalMavenDependencies)
 - **Short name**: ratioOptionalMavenDependencies
 - **Friendly name**: Ratio optional Maven dependencies
@@ -4413,7 +5191,10 @@ Retrieves the ratio of optional Maven dependencies.
 - <u>Depends-on</u>: `trans.rascal.dependency.maven.allOptionalMavenDependencies`
 - <u>Returns</u>: `real`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.numberUniqueMavenDependencies](#trans.rascal.dependency.maven.numberUniqueMavenDependencies)
 - **Short name**: numberUniqueMavenDependencies
 - **Friendly name**: Number unique Maven dependencies
@@ -4422,7 +5203,10 @@ Retrieves the number of unique Maven dependencies.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.allOptionalMavenDependencies](#trans.rascal.dependency.maven.allOptionalMavenDependencies)
 - **Short name**: allOptionalMavenDependencies
 - **Friendly name**: All optional Maven dependencies
@@ -4431,7 +5215,10 @@ Retrieves all the optional Maven dependencies.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.isUsingTycho](#trans.rascal.dependency.maven.isUsingTycho)
 - **Short name**: isUsingTycho
 - **Friendly name**: Is using Tycho
@@ -4440,7 +5227,10 @@ Checks if the current project is a Tycho project.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `bool`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.numberMavenDependencies](#trans.rascal.dependency.maven.numberMavenDependencies)
 - **Short name**: numberMavenDependencies
 - **Friendly name**: Number Maven dependencies
@@ -4449,7 +5239,10 @@ Retrieves the number of Maven dependencies.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `int`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [trans.rascal.dependency.maven.allMavenDependencies](#trans.rascal.dependency.maven.allMavenDependencies)
 - **Short name**: allMavenDependencies
 - **Friendly name**: All Maven dependencies
@@ -4458,7 +5251,10 @@ Retrieves all the Maven dependencies.
 
 - <u>Depends-on</u>: - <u>Returns</u>: `set[loc]`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 ## [Transient Metric Providers for Indexing](#transient-indexing)
 
 These metrics facilitate data indexing unto the platform.
@@ -4483,7 +5279,10 @@ This identifies the metric(s) that have been chosen to be executed by the user i
 - ExecutedMetricProviders :
 	- `List<String>`	metricIdentifiers
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.indexing.bugs](#org.eclipse.scava.metricprovider.indexing.bugs)
 - **Short name**: bug indexing metric
 - **Friendly name**: bug tracking system indexer
@@ -4494,7 +5293,10 @@ This metric prepares and indexes documents relating to bug tracking systems.
 
 - <u>Returns</u> :	`BugsIndexingMetric`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.indexing.commits](#org.eclipse.scava.metricprovider.indexing.commits)
 - **Short name**: metricprovider.indexing.commits
 - **Friendly name**: Commits indexer
@@ -4505,7 +5307,10 @@ This metric prepares and indexes documents relating to commits.
 
 - <u>Returns</u> :	`CommitsIndexingMetric`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.indexing.communicationchannels](#org.eclipse.scava.metricprovider.indexing.communicationchannels)
 - **Short name**: communication channels indexing metric
 - **Friendly name**: communication channels indexer
@@ -4516,7 +5321,10 @@ This metric prepares and indexes documents relating to communication channels.
 
 - <u>Returns</u> :	`CommunicationChannelsIndexingMetric`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.metricprovider.indexing.documentation](#org.eclipse.scava.metricprovider.indexing.documentation)
 - **Short name**: metricprovider.indexing.documentation
 - **Friendly name**: Documentation indexer
@@ -4527,15 +5335,23 @@ This metric prepares and indexes documents relating to documentation.
 
 - <u>Returns</u> :	`DocumentationIndexingMetric`
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 ## [Factoids](#factoids)
 
 Factoids are plugins used to present data that has been mined and analysed using one or more historic and/or transient metric providers.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 ### [Factoids for Bug Trackers](#factoids-bug-trackers)
 
 These factoids are related to bug tracking systems.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
 
@@ -4554,7 +5370,11 @@ This plugin generates the factoid regarding usage data for bug trackers. For exa
 	- `3 star`	*2* x *number of bugs or comments* > *working days in a year (250)*.
 	- `2 star`	*4* x *number of bugs or comments* > *working days in a year (250)*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.emotion](#org.eclipse.scava.factoid.bugs.emotion)
 - **Short name**: factoid.bugs.emotion
 - **Friendly name**: Bug Tracker Emotions
@@ -4570,7 +5390,11 @@ This plugin generates the factoid regarding emotions for bug trackers. For examp
 	- `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
 	- `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.hourly](#org.eclipse.scava.factoid.bugs.hourly)
 - **Short name**: factoid.bugs.hourly
 - **Friendly name**: Bug Tracker hourly data
@@ -4586,7 +5410,11 @@ This plugin generates the factoid regarding hourly statistics for bug trackers. 
 	- `3 star`	*maximum percentage of hourly comments* > *4* x *uniform percentage of comments per hour (100/24)*.
 	- `2 star`	*maximum percentage of hourly comments* > *6* x *uniform percentage of comments per hour (100/24)*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.responsetime](#org.eclipse.scava.factoid.bugs.responsetime)
 - **Short name**: factoid.bugs.responsetime
 - **Friendly name**: Bug Tracker Response Time
@@ -4602,7 +5430,11 @@ This plugin generates the factoid regarding response time for bug trackers. This
 	- `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
 	- `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.sentiment](#org.eclipse.scava.factoid.bugs.sentiment)
 - **Short name**: factoid.bugs.sentiment
 - **Friendly name**: Bug Tracker Sentiment
@@ -4618,7 +5450,11 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 	- `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
 	- `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.severity](#org.eclipse.scava.factoid.bugs.severity)
 - **Short name**: factoid.bugs.severity
 - **Friendly name**: Bug Tracker Severity
@@ -4634,7 +5470,11 @@ This plugin generates the factoid regarding severity for bug trackers. For examp
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
   - `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.size](#org.eclipse.scava.factoid.bugs.size)
 - **Short name**: factoid.bugs.size
 - **Friendly name**: Bug Tracker Size
@@ -4650,7 +5490,11 @@ This plugin generates the factoid regarding bug size for bug trackers. For examp
 	- `3 star`	*2* x *number of bugs or parches* > *1000* || *2* x *number of comments* > *10000*.
 	- `2 star`	*4* x *number of bugs or parches* > *1000* || *4* x *number of comments* > *10000*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.status](#org.eclipse.scava.factoid.bugs.status)
 - **Short name**: factoid.bugs.status
 - **Friendly name**: Bug Tracker Status
@@ -4666,7 +5510,11 @@ This plugin generates the factoid regarding bug status for bug trackers. For exa
 	- `3 star`	*perventage of resolved bug* > *50*.
 	- `2 star`	*perventage of resolved bug* > *25*.
 	- `1 star`	*otherwise* (i.e., very few resolved bugs)
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.threadlength](#org.eclipse.scava.factoid.bugs.threadlength)
 - **Short name**: factoid.bugs.threadlength
 - **Friendly name**: Bug Tracker Thread Length
@@ -4682,7 +5530,11 @@ This plugin generates the factoid regarding bug thread length for bug trackers. 
 	- `3 star`	*Zero(0)* < *average comments* < *10*.
 	- `2 star`	*Zero(0)* < *average comments* < *20*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.users](#org.eclipse.scava.factoid.bugs.users)
 - **Short name**: factoid.bugs.users
 - **Friendly name**: Bug Tracker Users
@@ -4698,7 +5550,11 @@ This plugin generates the factoid regarding users for bug trackers. For example,
 	- `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25 || daily active users in last year* > *2* x *2.5*.
 	- `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month* > *2* x *2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.bugs.weekly](#org.eclipse.scava.factoid.bugs.weekly)
 - **Short name**: factoid.bugs.weekly
 - **Friendly name**: Bug Tracker Weekly
@@ -4714,13 +5570,21 @@ This plugin generates the factoid regarding weekly user engagements for bug trac
 	- `3 star`	*maximum percentage of weekly comments* < *3* x *uniform percentage of comments per week (100/7)*.
 	- `2 star`	*maximum percentage of weekly comments* < *4* x *uniform percentage of comments per week (100/7)*.
 	- `1 star`	*otherwise*
+	
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 ### [Factoids for Newsgroups and Forums](#factoids-newsgroups-forums)
 
 These factoids are related to communication channels.
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.channelusage](#org.eclipse.scava.factoid.newsgroups.channelusage)
+
 - **Short name**: factoid.newsgroups.channelusage
 - **Friendly name**: Newsgroup Channel Usage
 
@@ -4735,8 +5599,13 @@ This plugin generates the factoid regarding usage data for newsgroups. For examp
   - `3 star`	*2* x *number of articles || threads* > *working days in a year (250)*.
   - `2 star`	*4* x *number of articles || threads* > *working days in a year (250)*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.emotion](#org.eclipse.scava.factoid.newsgroups.emotion)
+
 - **Short name**: factoid.newsgroups.emotion
 - **Friendly name**: Newsgroup Channel Emotion
 
@@ -4751,8 +5620,13 @@ This plugin generates the factoid regarding emotions for newsgroups, such as the
   - `3 star`	*positive emotion percentage* > *65* || *negative emotion percentage* < *50*.
   - `2 star`	*positive emotion percentage* > *50* || *negative emotion percentage* < *65*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.hourly](#org.eclipse.scava.factoid.newsgroups.hourly)
+
 - **Short name**: factoid.newsgroups.hourly
 - **Friendly name**: Newsgroup Channel hourly data
 
@@ -4767,8 +5641,13 @@ This plugin generates the factoid regarding hourly data for newsgroups, such as 
   - `3 star`	*maximum percentage of hourly articles* > *4* x *uniform percentage of articles per hour (100/24)*.
   - `2 star`	*maximum percentage of hourly articles* > *6* x *uniform percentage of articles per hour (100/24)*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.responsetime](#org.eclipse.scava.factoid.newsgroups.responsetime)
+
 - **Short name**: factoid.newsgroups.responsetime
 - **Friendly name**: Newsgroup Channel Response Time
 
@@ -4783,8 +5662,13 @@ This plugin generates the factoid regarding response time for newsgroups. This c
   - `3 star`	*Zero(0)* < *yearly average response time* < *day milliseconds (3 x eight hour milliseconds)*.
   - `2 star`	*Zero(0)* < *yearly average response time* < *week milliseconds (7 x week milliseconds)*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.sentiment](#org.eclipse.scava.factoid.newsgroups.sentiment)
+
 - **Short name**: factoid.newsgroups.sentiment
 - **Friendly name**: Newsgroup Channel Sentiment
 
@@ -4799,8 +5683,13 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
   - `3 star`	*average sentiment* > *0.25* || *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
   - `2 star`	*average sentiment* > *0* || *thread end sentiment* - *thread begining sentiment* > *0*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.severity](#org.eclipse.scava.factoid.newsgroups.severity)
+
 - **Short name**: factoid.newsgroups.severity
 - **Friendly name**: Newsgroup Channel Severity
 
@@ -4815,8 +5704,13 @@ This plugin generates the factoid regarding severity for newsgroups. For example
   - `2 star`	*percentage of serious bugs* > *25*.
   - `3 star`	*percentage of serious bugs* > *12.5*.
   - `4 star`	*otherwise* (i.e., fewer percentage of serious bugs).
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.size](#org.eclipse.scava.factoid.newsgroups.size)
+
 - **Short name**: factoid.newsgroups.size
 - **Friendly name**: Newsgroup Channel Size
 
@@ -4831,8 +5725,13 @@ This plugin generates the factoid regarding thread or article size for newsgroup
   - `3 star`	*2* x *number of threads* > *1000* || *2* x *number of articles* > *10000*.
   - `2 star`	*4* x *number of threads* > *1000* || *4* x *number of articles* > *10000*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.status](#org.eclipse.scava.factoid.newsgroups.status)
+
 - **Short name**: factoid.newsgroups.status
 - **Friendly name**: Newsgroup Channel Status
 
@@ -4848,8 +5747,12 @@ This plugin generates the factoid regarding thread or article status for newsgro
   - `2 star`	*perventage of replies* > *25*.
   - `1 star`	*otherwise* (i.e., very few replies)
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.threadlength](#org.eclipse.scava.factoid.newsgroups.threadlength)
+
 - **Short name**: factoid.newsgroups.threadlength
 - **Friendly name**: Newsgroup Channel Thread Length
 
@@ -4864,8 +5767,13 @@ This plugin generates the factoid regarding thread length for newsgroups. For ex
   - `3 star`	*Zero(0)* < *average comments* < *10*.
   - `2 star`	*Zero(0)* < *average comments* < *20*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.users](#org.eclipse.scava.factoid.newsgroups.users)
+
 - **Short name**: factoid.newsgroups.users
 - **Friendly name**: Newsgroup Channel Users
 
@@ -4880,8 +5788,13 @@ This plugin generates the factoid regarding users for newsgroups. For example, t
   - `3 star`	*daily new users in last month* > *4* x *0.25* || *daily active users in last month* > *4* x *2.5* || *daily new users in last year* > *2* x *0.25* || *daily active users in last year* > *2* x *2.5*.
   - `2 star`	*daily new users in last month* > *2* x *0.25* || *daily active users in last month > 2 x 2.5* || *daily new users in last year* > *0.25* || *daily active users in last year* > *2.5*.
   - `1 star`	*otherwise*
+  
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
 ------
+
 #### [org.eclipse.scava.factoid.newsgroups.weekly](#org.eclipse.scava.factoid.newsgroups.weekly)
+
 - **Short name**: factoid.newsgroups.weekly
 - **Friendly name**: Newsgroup Channel Weekly
 
@@ -4897,4 +5810,6 @@ This plugin generates the factoid regarding weekly user engagement for newsgroup
   - `2 star`	*maximum percentage of weekly articles* < *4* x *uniform percentage of articles per week (100/7)*.
   - `1 star`	*otherwise*
 
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+  
 ------
