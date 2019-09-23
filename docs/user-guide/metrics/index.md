@@ -22,6 +22,7 @@ This guide describes the historic and transient metric providers, as well as fac
 	- [OSGi Dependencies](#transient-metric-providers-for-osgi-dependencies)
 	- [Maven Dependencies](#transient-metric-providers-for-maven-dependencies)
 	- [Indexing](#transient-metric-providers-for-indexing)
+	- [API](#transient-metric-providers-for-api)
 - [Factoids](#factoids) for:
 	- [Bug Trackers](#factoids-for-bug-trackers)
 	- [Newsgroups and Forums](#factoids-for-newsgroups-and-forums)
@@ -156,6 +157,72 @@ This metric computes the emotional dimensions present in bug comments submitted 
 	- `id`	bugs.emotions.cumulativeCommentPercentages
 	- `id`	bugs.emotions.comments
 	- `id`	bugs.emotions.commentPercentages
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.bugs.migrationissues](#org.eclipse.scava.metricprovider.historic.bugs.migrationissues)
+- **Short name**: historic.bugs.migrationissues
+- **Friendly name**: Migration Issues Detection in Bug Trackers per day per bug tracker
+
+This metric stores how many migration issues have been found per day for each bug tracker.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.migrationissues`
+
+- <u>Returns</u> :	`BugTrackerMigrationIssueHistoricMetric` which contains:
+
+	| Variable							 | Type								 |
+	| ---------------------- | -------------------- |
+	| dailyBugTrackerMigrationData					 | `List<DailyBugTrackerMigrationData>` |
+
+<u>*Additional Information*</u> :
+
+- DailyBugTrackerMigrationData :
+	- `String`	bugTrackerId
+	- `List<String>` bugsId;
+	- `int`	numberOfBugs
+
+<u>*Visualisation Output Information*</u> :
+
+- BugTrackerMigrationIssueHistoricMetricProvider :
+	- `id`	bugs.dailymigrationissues
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.bugs.migrationissuesmaracas](#org.eclipse.scava.metricprovider.historic.bugs.migrationissuesmaracas)
+- **Short name**: historic.bugs.migrationissuesmaracas
+- **Friendly name**: Migration Issues Detection along with Maracas in Bug Trackers per day per bug tracker
+
+This metric stores how many migration issues have been found containing changes detected with *MARACAS* per day for each bug tracker.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.bugs.migrationissuesmaracas`
+
+- <u>Returns</u> :	`BugTrackerMigrationIssueMaracasHistoricMetric` which contains:
+
+	| Variable							 | Type								 |
+	| ---------------------- | -------------------- |
+	| dailyBugTrackerMigrationMaracasData					 | `List<DailyBugTrackerMigrationMaracasData>` |
+	| bugTrackerMigrationMaracasData					 | `List<BugTrackerMigrationMaracasData>` |
+
+<u>*Additional Information*</u> :
+
+- DailyBugTrackerMigrationMaracasData :
+	- `String`	bugTrackerId
+	- `List<String>` bugsId;
+	- `int`	numberOfIssues
+- BugTrackerMigrationMaracasData :
+	- `String`	bugTrackerId
+	- `String` bugId;
+	- `List<String>` changesAndMatchingPercentage
+
+<u>*Visualisation Output Information*</u> :
+
+- BugTrackerMigrationIssueMaracasHistoricMetricProvider :
+	- `id`	bugs.dailymigrationissuesmaracas
+	- `id`	bugs.migrationissuesmaracas.changes
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -784,6 +851,72 @@ This metric computes the emotional dimensions present in newsgroup comments subm
 	- `id`	newsgroups.emotions.cumulativeArticles
 	- `id`	newsgroups.emotions.cumulativeArticlePercentages
 	- `id`	newsgroups.emotions.articles
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.migrationissues](#org.eclipse.scava.metricprovider.historic.newsgroups.migrationissues)
+- **Short name**: historic.newsgroups.migrationissues
+- **Friendly name**: Migration Issues Detection in articles per day per newsgroup
+
+This metric detects migration issues in articles per day for each newgroup.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues`
+
+- <u>Returns</u> :	`NewsgroupsMigrationIssueHistoricMetric` which contains:
+
+	| Variable							 | Type								 |
+	| ---------------------- | -------------------- |
+	| dailyNewsgroupsMigrationData					 | `List<DailyNewsgroupsMigrationData>` |
+
+<u>*Additional Information*</u> :
+
+- DailyBugTrackerMigrationData :
+	- `String`	newsgroupName
+	- `List<Integer>` threadsId
+	- `int`	numberOfIssues
+
+<u>*Visualisation Output Information*</u> :
+
+- NewsgroupsMigrationIssueHistoricMetricProvider :
+	- `id`	newsgroups.dailymigrationissues
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.newsgroups.migrationissuesmaracas](#org.eclipse.scava.metricprovider.historic.newsgroups.migrationissuesmaracas)
+- **Short name**: historic.newsgroups.migrationissuesmaracas
+- **Friendly name**: Migration Issues Detection along with Maracas in articles per day per newsgroup
+
+This metric stores how many migration issues have been found containing changes detected with *MARACAS* per day for each newsgroup.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.newsgroups.migrationissuesmaracas`
+
+- <u>Returns</u> :	`NewsgroupMigrationIssueMaracasHistoricMetric` which contains:
+
+	| Variable							 | Type								 |
+	| ---------------------- | -------------------- |
+	| dailyNewsgroupMigrationMaracasData					 | `List<DailyNewsgroupMigrationMaracasData>` |
+	| newsgroupMigrationMaracasData					 | `List<NewsgroupMigrationMaracasData>` |
+
+<u>*Additional Information*</u> :
+
+- DailyNewsgroupMigrationMaracasData :
+	- `String`	newsgroupName
+	- `List<Integer>` threadsId;
+	- `int`	numberOfIssues
+- NewsgroupMigrationMaracasData :
+	- `String`	newsgroupName
+	- int threadId;
+	- `List<String>` changesAndMatchingPercentage
+
+<u>*Visualisation Output Information*</u> :
+
+- NewsgroupMigrationIssueMaracasHistoricMetricProvider :
+	- `id`	newsgroups.dailymigrationissuesmaracas
+	- `id`	newsgroups.migrationissuesmaracas.changes
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -1455,7 +1588,7 @@ The following Historic Metric Providers are associated with documentation analys
 - **Short name**: historic.documentation.readability
 - **Friendly name**: Documentation readability Historic Metric
 
-Historic metric that stores the evolution of the documentation readability
+Historic metric that stores the evolution of the documentation readability. The higher the readability score, the harder to understand the text. 
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.documentation.readability`
 
@@ -2485,8 +2618,33 @@ This metric detects migration issues in Bug Tracking Systems.
 - BugTrackerMigrationIssue :
 	- `String`	bugTrackerId
 	- `String`	bugId
-	- `String`	software
-	- `List<String>`	changes
+	- `String`  summary
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.bugs.migrationissuesmaracas](#org.eclipse.scava.metricprovider.trans.bugs.migrationissuesmaracas)
+- **Short name**: trans.bugs.migrationissuesmaracas
+- **Friendly name**: Migration Issues Detection Maracas in Bug Trackers
+
+This metric detects migration issues in Bug Tracking Systems along with data from Maracas.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`, `org.eclipse.scava.metricprovider.trans.bugs.migrationissues`, `org.eclipse.scava.metricprovider.trans.migrationissuesmaracas`, `org.eclipse.scava.metricprovider.trans.plaintextprocessing`
+
+- <u>Returns</u> :	`BugTrackerMigrationIssueMaracasTransMetric` which contains:
+
+	| Variable		 | Type								 |
+	| ------------ | -------------------- |
+	| bugTrackerMigrationIssuesMaracas | `List<BugTrackerMigrationIssueMaracas>` |
+
+<u>*Additional Information*</u> :
+
+- BugTrackerMigrationIssueMaracas :
+	- `String`	bugTrackerId
+	- `String`	bugId
+	- `List<String>` changes
+	- `List<Double>` matchingPercentage
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -2814,8 +2972,33 @@ This metric detects migration issues in Communication Channels articles.
 - NewsgroupsMigrationIssue :
 	- `String`	newsgroupName
 	- `int`	threadId
-	- `String`	software
-	- `List<String>`	changes
+	- `long` articleId
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.newsgroups.migrationissuesmaracas](#org.eclipse.scava.metricprovider.trans.newsgroups.migrationissuesmaracas)
+- **Short name**: trans.newsgroups.migrationissuesmaracas
+- **Friendly name**: Migration Issues Detection Maracas in Newsgroups
+
+This metric detects migration issues in Newsgroups along with data from Maracas.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`, `org.eclipse.scava.metricprovider.trans.newsgroups.migrationissues`, `org.eclipse.scava.metricprovider.trans.migrationissuesmaracas`, `org.eclipse.scava.metricprovider.trans.plaintextprocessing`
+
+- <u>Returns</u> :	`BugTrackerMigrationIssueMaracasTransMetric` which contains:
+
+	| Variable		 | Type								 |
+	| ------------ | -------------------- |
+	| newsgroupsMigrationIssuesMaracas | `List<NewsgroupMigrationIssueMaracas>` |
+
+<u>*Additional Information*</u> :
+
+- NewsgroupMigrationIssueMaracas :
+	- `String`	newsgrupName
+	- `int`	threadId
+	- `List<String>` changes
+	- `List<Double>` matchingPercentage
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -2969,7 +3152,7 @@ This metric process the files returned from the documentation readers and extrac
 - **Short name**: trans.documentation.classification
 - **Friendly name**: Documentation classification
 
-This metric determines which type of documentation is present
+This metric determines which type of documentation is present. The possible types are: *API*, *Development*, *Installation*, *Started*, *User*.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.documentation`, `org.eclipse.scava.metricprovider.trans.indexing.preparation`
 
@@ -3045,7 +3228,7 @@ This metric process the body of each documentation entry and extracts the plain 
 - **Short name**: trans.documentation.readability
 - **Friendly name**: Documentation calculation of readability
 
-This metric calculates the readability of each documentation entry
+This metric calculates the readability of each documentation entry. The higher the score, the more difficult to understand the text.
 
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`, `org.eclipse.scava.metricprovider.trans.documentation`, `org.eclipse.scava.metricprovider.trans.documentation.detectingcode`
 
@@ -5338,6 +5521,40 @@ This metric prepares and indexes documents relating to documentation.
 - <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.indexing.preparation`, `org.eclipse.scava.metricprovider.trans.documentation`
 
 - <u>Returns</u> :	`DocumentationIndexingMetric`
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for API](#transient-metric-providers-for-api)
+
+These transient metrics are related to the analysis and evolution of API
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.migrationissuesmaracas](#org.eclipse.scava.metricprovider.trans.migrationissuesmaracas)
+- **Short name**: trans.migrationissuesmaracas
+- **Friendly name**: Migration Issues Detection using Maracas
+
+This metric convert the changes found by Maracas into Regex useful for other metrics.
+
+- <u>Depends-on</u> : `trans.rascal.api.changedMethods`
+
+- <u>Returns</u> :	`MigrationIssueMaracasTransMetric` which contains:
+
+	| Variable | Type	 |
+	| -------- | ------ |
+	| maracasMeasurements		 | `List<MaracasMeasurement>` |
+
+<u>*Additional Information*</u> :
+
+- MaracasMeasurement :
+  - `List<String>`	regex
+  - `String`	change
+  - `int`	lastUpdateDate
+
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
