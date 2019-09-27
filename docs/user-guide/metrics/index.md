@@ -29,8 +29,8 @@ This guide describes the historic and transient metric providers, as well as fac
         - [Puppet Dependencies](#transient-metric-providers-for-puppet-dependencies)
 	- [Docker Smells](#transient-metric-providers-for-docker-smells)
 	- [Puppet Smells](#transient-metric-providers-for-puppet-smells)
-	- [Docker Smells](#transient-metric-providers-for-docker-antipatterns)
-	- [Puppet Smells](#transient-metric-providers-for-puppet-antipatterns)
+	- [Docker Antipatterns](#transient-metric-providers-for-docker-antipatterns)
+	- [Puppet Antipatterns](#transient-metric-providers-for-puppet-antipatterns)
 	- [Projects Relations](#transient-metric-providers-for-projects-relations)
 	- [New Versions](#transient-metric-providers-for-new-versions)
 	- [Indexing](#transient-metric-providers-for-indexing)
@@ -5726,7 +5726,7 @@ Retrieves the names of the dependencies that are declared in the Puppet manifest
 
 ------
 
-### [Transient Metric Providers for Docker Smells](#transient-metric-providers-for-docker-smells))
+### [Transient Metric Providers for Docker Smells](#transient-metric-providers-for-docker-smells)
 
 This metric is related to Docker smells detected in Dockerfiles.
 
@@ -5756,7 +5756,7 @@ Detects the smells in the Dockerfiles of a project and additional information su
 
 ------
 
-### [Transient Metric Providers for Puppet Smells](#transient-metric-providers-for-puppet-smells))
+### [Transient Metric Providers for Puppet Smells](#transient-metric-providers-for-puppet-smells)
 
 These metrics are related to Puppet smells detected in Puppet manifests.
 
@@ -5805,7 +5805,7 @@ Detects the implementation smells in the Puppet manifests of a project and addit
 
 ------
 
-### [Transient Metric Providers for Docker Antipatterns](#transient-metric-providers-for-docker-antipatterns))
+### [Transient Metric Providers for Docker Antipatterns](#transient-metric-providers-for-docker-antipatterns)
 
 This metric is related to Docker antipatterns detected in Dockerfiles.
 
@@ -5837,7 +5837,7 @@ Detects the antipatterns in the Dockerfiles of a project and additional informat
 
 ------
 
-### [Transient Metric Providers for Puppet Antipatterns](#transient-metric-providers-for-puppet-antipatterns))
+### [Transient Metric Providers for Puppet Antipatterns](#transient-metric-providers-for-puppet-antipatterns)
 
 These metrics are related to Puppet antipatterns detected in Puppet manifests.
 
@@ -5898,7 +5898,7 @@ These metrics facilitate data indexing unto the platform.
 
 ------
 
-### [Transient Metric Providers for Projects Relations](#transient-metric-providers-for-projects-relations))
+### [Transient Metric Providers for Projects Relations](#transient-metric-providers-for-projects-relations)
 
 This metric is related to the relations between projects that are analysed at the platform.
 
@@ -5925,7 +5925,7 @@ Detects the relations between projects that are already analysed at the platform
 
 ------
 
-### [Transient Metric Providers for New Versions](#transient-metric-providers-for-new-versions))
+### [Transient Metric Providers for New Versions](#transient-metric-providers-for-new-versions)
 
 These metrics are related to the new version of the dependencies of the projects that are analysed at the platform.
 
