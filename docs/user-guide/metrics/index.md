@@ -2344,6 +2344,8 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.numberOSGiBundleDependencies`
 - <u>Returns</u>: `int`
 
+------
+
 ### [Historic Metric Providers for Maven Dependencies](#historic-metric-providers-for-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
@@ -5669,7 +5671,7 @@ Retrieves all the Maven dependencies.
 
 ------
 
-### [Transient Metric Providers for Docker Dependencies](#transient-metric-providers-for-docker-dependencies))
+### [Transient Metric Providers for Docker Dependencies](#transient-metric-providers-for-docker-dependencies)
 
 This metric is related to Docker dependencies declared in Dockerfiles.
 
@@ -5698,7 +5700,7 @@ Retrieves the names of the dependencies that are declared in the Dockerfiles of 
 
 ------
 
-### [Transient Metric Providers for Puppet Dependencies](#transient-metric-providers-for-puppet-dependencies))
+### [Transient Metric Providers for Puppet Dependencies](#transient-metric-providers-for-puppet-dependencies)
 
 This metric is related to Puppet dependencies declared in Puppet manifests.
 
