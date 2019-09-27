@@ -2344,8 +2344,6 @@ Retrieves the number of OSGi bunlde dependencies (i.e. Require-Bundle dependenci
 - <u>Depends-on</u>: `trans.rascal.dependency.osgi.numberOSGiBundleDependencies`
 - <u>Returns</u>: `int`
 
-------
-
 ### [Historic Metric Providers for Maven Dependencies](#historic-metric-providers-for-maven-dependencies)
 
 These metrics are related to Maven dependencies declared in `pom.xml` files.
