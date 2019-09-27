@@ -11,6 +11,10 @@ This guide describes the historic and transient metric providers, as well as fac
 	- [Java Code](#historic-metric-providers-for-java-code)
 	- [OSGi Dependencies](#historic-metric-providers-for-osgi-dependencies)
 	- [Maven Dependencies](#historic-metric-providers-for-maven-dependencies)
+        - [Docker Dependencies](#historic-metric-providers-for-docker-dependencies)
+        - [Puppet Dependencies](#historic-metric-providers-for-puppet-dependencies)
+	- [Docker Smells](#historic-metric-providers-for-docker-smells)
+	- [Puppet Smells](#historic-metric-providers-for-puppet-smells)
 - [Transient Metric Providers](#transient-metric-providers) for:
 	- [Bug Trackers](#transient-metric-providers-for-bug-trackers)
 	- [Newsgroups and forums](#transient-metric-providers-for-newsgroups-and-forums)
@@ -21,6 +25,14 @@ This guide describes the historic and transient metric providers, as well as fac
 	- [Java Code](#transient-metric-providers-for-java-code)
 	- [OSGi Dependencies](#transient-metric-providers-for-osgi-dependencies)
 	- [Maven Dependencies](#transient-metric-providers-for-maven-dependencies)
+        - [Docker Dependencies](#transient-metric-providers-for-docker-dependencies)
+        - [Puppet Dependencies](#transient-metric-providers-for-puppet-dependencies)
+	- [Docker Smells](#transient-metric-providers-for-docker-smells)
+	- [Puppet Smells](#transient-metric-providers-for-puppet-smells)
+	- [Docker Smells](#transient-metric-providers-for-docker-antipatterns)
+	- [Puppet Smells](#transient-metric-providers-for-puppet-antipatterns)
+	- [Projects Relations](#transient-metric-providers-for-projects-relations)
+	- [New Versions](#transient-metric-providers-for-new-versions)
 	- [Indexing](#transient-metric-providers-for-indexing)
 	- [API](#transient-metric-providers-for-api)
 - [Factoids](#factoids) for:
@@ -2349,6 +2361,229 @@ Retrieves the number of Maven dependencies.
 
 - <u>Depends-on</u>: `trans.rascal.dependency.maven.numberMavenDependencies`
 - <u>Returns</u>: `int`
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Historic Metric Providers for Docker Dependencies](#historic-metric-providers-for-docker-dependencies)
+
+The following Historic Metric Provider is associated with Docker Dependencies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.configuration.docker.dependencies](#org.eclipse.scava.metricprovider.historic.configuration.docker.dependencies)
+- **Short name**: historic.configuration.docker.dependencies
+- **Friendly name**: Number of dependencies defined in Dockerfiles per day
+
+This metric computes the number of the dependencies that are defined in the Dockerfiles of a project per day. It also computes additional information such as the number of each version of the dependencies (image/package).
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.docker.dependencies`
+- <u>Returns</u> :	`DockerDependenciesHistoricMetric` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| numberOfDockerDependencies	| `int`			|
+	| numberOfDockerPackageDependencies	| `int `	|
+	| numberOfDockerImageDependencies	| `int `	|
+
+<u>*Visualisation Output Information*</u> :
+
+- DockerDependenciesHistoricMetric :
+	- `id`	docker.dependencies
+	- `id`	docker.packageDependencies
+	- `id`	docker.imageDependencies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Historic Metric Providers for Puppet Dependencies](#historic-metric-providers-for-puppet-dependencies)
+
+The following Historic Metric Provider is associated with Puppet Dependencies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.configuration.puppet.dependencies](#org.eclipse.scava.metricprovider.historic.configuration.puppet.dependencies)
+- **Short name**: historic.configuration.puppet.dependencies
+- **Friendly name**: Number of dependencies defined in Puppet manifests per day
+
+This metric computes the number of the dependencies that are defined in the Puppet manifests of a project per day.
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.puppet.dependencies`
+- <u>Returns</u> :	`PuppetDependenciesHistoricMetric` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| numberOfPuppetDependencies	| `int`			|
+
+<u>*Visualisation Output Information*</u> :
+
+- DockerDependenciesHistoricMetric :
+	- `id`	puppet.dependencies
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+
+### [Historic Metric Providers for Docker Smells](#historic-metric-providers-for-docker-smells)
+
+The following Historic Metric Provider is associated with Docker Smells
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.configuration.docker.smells](#org.eclipse.scava.metricprovider.historic.configuration.docker.smells)
+- **Short name**: historic.configuration.docker.smells
+- **Friendly name**: Number of smells detected in Dockerfiles per day
+
+This metric computes the number of the smells that are detected in the Dockerfiles of a project per day. It also computes additional information such as the number of each type of the smell.
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.docker.smells`
+- <u>Returns</u> :	`DockerSmellsHistoricMetric` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| cumulativeNumberOfDockerSmells	| `int`			|
+	| numberOfImproperUpgradeSmells	| `int `	|
+	| numberOfUnknownPackageVersionSmells	| `int `	|
+	| numberOfUntaggedImageSmells	| `int`			|
+	| numberOfImproperSudoSmells	| `int `	|
+	| numberOfImproperCopySmells	| `int `	|
+	| numberOfImproperFromSmells	| `int`			|
+	| numberOfImproperCmdSmells	| `int `	|
+	| numberOfMeaninglessSmells	| `int `	|
+	| numberOfInvalidPortsSmells	| `int `	|
+	| numberOfImproperShellSmells	| `int `	|
+	| numberOfImproperEntrypointSmells	| `int `	|
+	| numberOfDeprecatedInstructionSmells	| `int `	|
+
+<u>*Visualisation Output Information*</u> :
+
+- DockerDependenciesHistoricMetric :
+	- `id`	docker.smells
+	- `id`	docker.smells.improperUpgradeSmells
+	- `id`	docker.smells.unknownPackageVersionSmells
+	- `id`	docker.smells.untaggedImageSmells
+	- `id`	docker.smells.improperSudoSmells
+	- `id`	docker.smells.improperCopySmells
+	- `id`	docker.smells.improperFromSmells
+	- `id`	docker.smells.improperCmdSmells
+	- `id`	docker.smells.meaninglessSmells
+	- `id`	docker.smells.invalidPortsSmells
+	- `id`	docker.smells.improperShellSmells
+	- `id`	docker.smells.improperEntrypointSmells
+	- `id`	docker.smells.deprecatedInstructionSmells
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Historic Metric Providers for Puppet Smells](#historic-metric-providers-for-puppet-smells)
+
+The following Historic Metric Providers are associated with Puppet Smells
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.configuration.puppet.designsmells](#org.eclipse.scava.metricprovider.historic.configuration.puppet.designsmells)
+- **Short name**: historic.configuration.puppet.designsmells
+- **Friendly name**: Number of design smells detected in Puppet manifests per day
+
+This metric computes the number of the design smells that are detected in the Puppet manifests of a project per day. It also computes additional information such as the number of each type of the smell.
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.puppet.designsmells`
+- <u>Returns</u> :	`PuppetDesignSmellsHistoricMetric` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| cumulativeNumberOfDesignSmells	| `int`			|
+	| numberOfMultifacetedSmells	| `int `	|
+	| numberOfUnnecessarySmells	| `int `	|
+	| numberOfImperativeSmells	| `int`			|
+	| numberOfMissAbSmells	| `int `	|
+	| numberOfInsufficientSmells	| `int `	|
+	| numberOfUnstructuredSmells	| `int`			|
+	| numberOfTightSmells	| `int `	|
+	| numberOfBrokenSmells	| `int `	|
+	| numberOfMissingDepSmells	| `int `	|
+	| numberOfHairballSmells	| `int `	|
+	| numberOfDeficientSmells	| `int `	|
+	| numberOfWeakenSmells	| `int `	|
+
+<u>*Visualisation Output Information*</u> :
+
+- DockerDependenciesHistoricMetric :
+	- `id`	puppet.design.smells
+	- `id`	puppet.design.multifacetedSmells
+	- `id`	puppet.design.unnecessarySmells
+	- `id`	puppet.design.imperativeSmells
+	- `id`	puppet.design.missAbSmells
+	- `id`	puppet.design.insufficientSmells
+	- `id`	puppet.design.unstructuredSmells
+	- `id`	puppet.design.tightSmells
+	- `id`	puppet.design.brokenSmells
+	- `id`	puppet.design.missingDepSmells
+	- `id`	puppet.design.hairballSmells
+	- `id`	puppet.design.deficientSmells
+	- `id`	puppet.design.weakenSmells
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.historic.configuration.puppet.implementationsmells](#org.eclipse.scava.metricprovider.historic.configuration.puppet.implementationsmells)
+- **Short name**: historic.configuration.puppet.implementationsmells
+- **Friendly name**: Number of implementation smells detected in Puppet manifests per day
+
+This metric computes the number of the implementation smells that are detected in the Puppet manifests of a project per day. It also computes additional information such as the number of each type of the smell.
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.puppet.implementationsmells`
+- <u>Returns</u> :	`PuppetImplementationSmellsHistoricMetric` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| cumulativeNumberOfImplementationSmells	| `int`			|
+	| numberOfMissingDefaultCaseSmells	| `int `	|
+	| numberOfInconsistentNamingSmells	| `int `	|
+	| numberOfDuplicateEntitySmells	| `int`			|
+	| numberOfMisplacedAttributeSmells	| `int `	|
+	| numberOfImproperAlignment	| `int `	|
+	| numberOfInvalidPropertySmells	| `int`			|
+	| numberOfImproperQuoteSmells	| `int `	|
+	| numberOfLongStatementsSmells	| `int `	|
+	| numberOfUnguardedVariableSmells	| `int `	|
+	| numberOfMissingDocSmells	| `int `	|
+	| numberOfDeprecatedStatementsSmells	| `int `	|
+	| numberOfIncompleteTasksSmells	| `int `	|
+	| numberOfComplexExpressionSmells	| `int `	|
+	| numberOfMissingElseSmells	| `int `	|
+
+<u>*Visualisation Output Information*</u> :
+
+- DockerDependenciesHistoricMetric :
+	- `id`	puppet.implementation.smells
+	- `id`	puppet.implementation.missingDefaultCaseSmells
+	- `id`	puppet.implementation.inconsistentNamingSmells
+	- `id`	puppet.implementation.duplicateEntitySmells
+	- `id`	puppet.implementation.misplacedAttributeSmells
+	- `id`	puppet.implementation.improperAlignmentSmells
+	- `id`	puppet.implementation.invalidPropertySmells
+	- `id`	puppet.implementation.improperQuoteSmells
+	- `id`	puppet.implementation.longStatementsSmells
+	- `id`	puppet.implementation.unguardedVariableSmells
+	- `id`	puppet.implementation.missingDocSmells
+	- `id`	puppet.implementation.deprecatedStatementsSmells
+	- `id`	puppet.implementation.incompleteTasksSmells
+	- `id`	puppet.implementation.complexExpressionSmells
+	- `id`	puppet.implementation.missingElseSmells
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -5434,9 +5669,345 @@ Retrieves all the Maven dependencies.
 
 ------
 
+### [Transient Metric Providers for Docker Dependencies](#transient-metric-providers-for-docker-dependencies)
+
+This metric is related to Docker dependencies declared in Dockerfiles.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.docker.dependencies](#org.eclipse.scava.metricprovider.trans.configuration.docker.dependencies)
+- **Short name**: trans.configuration.docker.dependencies
+- **Friendly name**: Dependencies declared in Dockerfiles
+
+Retrieves the names of the dependencies that are declared in the Dockerfiles of a project and additional information such as their version and type.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `DockerDependency` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| dependencyName	| `String`			|
+	| dependencyVersion	| `String `	|
+	| type	| `String `	|
+	| subType	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for Puppet Dependencies](#transient-metric-providers-for-puppet-dependencies)
+
+This metric is related to Puppet dependencies declared in Puppet manifests.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.puppet.dependencies](#org.eclipse.scava.metricprovider.trans.configuration.puppet.dependencies)
+- **Short name**: trans.configuration.puppet.dependencies
+- **Friendly name**: Dependencies declared in Puppet manifests
+
+Retrieves the names of the dependencies that are declared in the Puppet manifests of a project and additional information such as their version and type.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `PuppetDependency` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| dependencyName	| `String`			|
+	| dependencyVersion	| `String `	|
+	| type	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for Docker Smells](#transient-metric-providers-for-docker-smells))
+
+This metric is related to Docker smells detected in Dockerfiles.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.docker.smells](#org.eclipse.scava.metricprovider.trans.configuration.docker.smells)
+- **Short name**: trans.configuration.docker.smells
+- **Friendly name**: Smells detected in Dockerfiles
+
+Detects the smells in the Dockerfiles of a project and additional information such as their reason, the file and the line that each smells is detected.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `Smell` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| smellName	| `String`			|
+	| reason	| `String `	|
+	| code	| `String `	|
+	| fileName	| `String `	|
+	| line	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for Puppet Smells](#transient-metric-providers-for-puppet-smells))
+
+These metrics are related to Puppet smells detected in Puppet manifests.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.puppet.designsmells](#org.eclipse.scava.metricprovider.trans.configuration.puppet.designsmells)
+- **Short name**: trans.configuration.puppet.designsmells
+- **Friendly name**: Design smells detected in Puppet manifests
+
+Detects the design smells in the Puppet manifests of a project and additional information such as their reason and the file that each smells is detected.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `Smell` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| smellName	| `String`			|
+	| reason	| `String `	|
+	| fileName	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.puppet.implementationsmells](#org.eclipse.scava.metricprovider.trans.configuration.puppet.implementationsmells)
+- **Short name**: trans.configuration.puppet.implementationsmells
+- **Friendly name**: Implementation smells detected in Puppet manifests
+
+Detects the implementation smells in the Puppet manifests of a project and additional information such as their reason, the file and the line that each smells is detected.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `Smell` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| smellName	| `String`			|
+	| reason	| `String `	|
+	| fileName	| `String `	|
+	| line	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for Docker Antipatterns](#transient-metric-providers-for-docker-antipatterns))
+
+This metric is related to Docker antipatterns detected in Dockerfiles.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.docker.antipatterns](#org.eclipse.scava.metricprovider.trans.configuration.docker.antipatterns)
+- **Short name**: trans.configuration.docker.antipatterns
+- **Friendly name**: Antipatterns detected in Dockerfiles
+
+Detects the antipatterns in the Dockerfiles of a project and additional information such as their reason, the file and the line that each antipattern is detected and the commit and date that this antipattern is related.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `DockerAntipattern` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| smellName	| `String`			|
+	| reason	| `String `	|
+	| code	| `String `	|
+	| fileName	| `String `	|
+	| line	| `String `	|
+	| commit	| `String `	|
+	| date	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for Puppet Antipatterns](#transient-metric-providers-for-puppet-antipatterns))
+
+These metrics are related to Puppet antipatterns detected in Puppet manifests.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.puppet.designantipatterns](#org.eclipse.scava.metricprovider.trans.configuration.puppet.designantipatterns)
+- **Short name**: trans.configuration.puppet.designantipatterns
+- **Friendly name**: Design antipatterns detected in Puppet manifests
+
+Detects the design antipatterns in the Puppet manifests of a project and additional information such as their reason, the file that each antipattern is detected and the commit and date that this antipattern is related.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `DesignAntipattern` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| smellName	| `String`			|
+	| reason	| `String `	|
+	| fileName	| `String `	|
+	| commit	| `String `	|
+	| date	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.puppet.implementationantipatterns](#org.eclipse.scava.metricprovider.trans.configuration.puppet.implementationantipatterns)
+- **Short name**: trans.configuration.puppet.implementationantipatterns
+- **Friendly name**: Implementation antipatterns detected in Puppet manifests
+
+Detects the implementation antipatterns in the Puppet manifests of a project and additional information such as their reason, the file and the line that each antipattern is detected and the commit and date that this antipattern is related.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `Smell` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| smellName	| `String`			|
+	| reason	| `String `	|
+	| fileName	| `String `	|
+	| line	| `String `	|
+	| commit	| `String `	|
+	| date	| `String `	|
+org.eclipse.scava.metricprovider.trans.configuration.projects.relations
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
 ## [Transient Metric Providers for Indexing](#transient-metric-providers-for-indexing)
 
 These metrics facilitate data indexing unto the platform.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for Projects Relations](#transient-metric-providers-for-projects-relations))
+
+This metric is related to the relations between projects that are analysed at the platform.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.configuration.projects.relations](#org.eclipse.scava.metricprovider.trans.configuration.projects.relations)
+- **Short name**: trans.configuration.projects.relations
+- **Friendly name**: Relations between projects
+
+Detects the relations between projects that are already analysed at the platform by determining if a project is used as dependency by another project.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `ProjectRelation` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| relationName	| `String`			|
+	| dependencyType	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Transient Metric Providers for New Versions](#transient-metric-providers-for-new-versions))
+
+These metrics are related to the new version of the dependencies of the projects that are analysed at the platform.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.newversion.docker](#org.eclipse.scava.metricprovider.trans.newversion.docker)
+- **Short name**: trans.newversion.docker
+- **Friendly name**: New versions of Docker dependencies
+
+Detects the new versions of dependencies of Docker based projects.
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.docker.dependencies`
+
+- <u>Returns</u>: `NewDockerVersion` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| packageName	| `String`			|
+	| oldVersion	| `String `	|
+	| newVersion	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.newversion.puppet](#org.eclipse.scava.metricprovider.trans.newversion.puppet)
+- **Short name**: trans.newversion.puppet
+- **Friendly name**: New versions of Puppet dependencies
+
+Detects the new versions of dependencies of Puppet based projects.
+
+- <u>Depends-on</u>: `org.eclipse.scava.metricprovider.trans.configuration.puppet.dependencies`
+
+- <u>Returns</u>: `NewPuppetVersion` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| packageName	| `String`			|
+	| oldVersion	| `String `	|
+	| newVersion	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.newversion.osgi](#org.eclipse.scava.metricprovider.trans.newversion.osgi)
+- **Short name**: trans.newversion.osgi
+- **Friendly name**: New versions of OSGi dependencies
+
+Detects the new versions of dependencies of OSGi based projects.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `NewOsgiVersion` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| packageName	| `String`			|
+	| oldVersion	| `String `	|
+	| newVersion	| `String `	|
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.metricprovider.trans.newversion.maven](#org.eclipse.scava.metricprovider.trans.newversion.maven)
+- **Short name**: trans.newversion.maven
+- **Friendly name**: New versions of Maven dependencies
+
+Detects the new versions of dependencies of Maven based projects.
+
+- <u>Depends-on</u>: `None`
+
+- <u>Returns</u>: `NewMavenVersion` which contains:
+
+	| Variable		| Type				|
+	| ---------------------- | --------------------------- |
+	| packageName	| `String`			|
+	| oldVersion	| `String `	|
+	| newVersion	| `String `	|
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
