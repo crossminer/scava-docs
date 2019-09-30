@@ -13,7 +13,7 @@
 
 ### REST API
 
-**Each implemented REST services must be documented (see /users directory): [REST API DOCUMENTATION](../REST-API-Documentation)**
+**Each implemented REST services must be documented (see /users directory): [REST API DOCUMENTATION](/developers-guide/api-reference-guide/metric-platform-api/)**
 
 * [How to configure the SCAVA Gateway in order to integrate a new  REST service](../admin/API-Gateway-Configuration) Customers access SCAVA services through the SCAVA API Gateway. This guideline present how to configure the API Gateway to integrate new  remote service provider.
 * [How to consume a SCAVA REST services](../users/Consuming-REST-Services) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues.

@@ -270,6 +270,12 @@
             
     <li class="toctree-l4"><a href="#platform-installation-using-individual-components-unparallel">Platform Installation using individual components (UNPARALLEL)</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l5" href="#kb-installation">KB installation</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -418,10 +424,6 @@
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../others/users/REST-API-Documentation/">REST API Documentation</a>
-                </li>
-                <li class="toctree-l3">
-                    
     <a class="" href="../../others/users/REST-API-Generation/">REST API Generation</a>
                 </li>
                 <li class="toctree-l3">
@@ -455,7 +457,7 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../user-guide/administration/">Platform Administration User Guide (Softeam)</a>
+    <a class="" href="../../user-guide/administration/">Platform Administration User Guide</a>
                 </li>
     </ul>
                 </li>
@@ -553,6 +555,38 @@
             <div class="section">
               
                 <h1 id="platform-installation-using-individual-components-unparallel">Platform Installation using individual components (UNPARALLEL)</h1>
+<h2 id="kb-installation">KB installation</h2>
+<p>un it by maven:</p>
+<pre><code>mvn spring-boot:run
+</code></pre>
+
+<p>test it by maven:</p>
+<pre><code>mvn test
+</code></pre>
+
+<p>When starting the platform, you can set configuration application parameters in properly configuration file:</p>
+<ul>
+<li>deploy configuration file at src/test/resources/application.properties.</li>
+<li>test cnfiguration file at src/test/resources/application.properties. The configuration file is a typical Java properties file. The properties that can be configured are:</li>
+</ul>
+<pre><code>spring.data.mongodb.host=&lt;DB_HOST&gt;
+spring.data.mongodb.port=&lt;DB_PORT&gt;
+spring.data.mongodb.database=&lt;DB_NAME&gt;
+lucene.index.folder=&lt;path_to_lucene_index&gt;
+egit.github.token=&lt;GITHUB_TOKEN&gt;
+ossmeter.url=&lt;OSSMETER_URL&gt;
+...
+</code></pre>
+
+<p>An instance of configuration file:</p>
+<pre><code>spring.data.mongodb.host=localhost 
+spring.data.mongodb.port=27017 
+spring.data.mongodb.database=CROSSMINER_TEST
+lucene.index.folder=/home/user/CROSSMiner_lucene/
+egit.github.token=&lt;github_token&gt;
+ossmeter.url=http://localhost:8182/
+...
+</code></pre>
               
             </div>
           </div>

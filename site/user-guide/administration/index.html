@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Platform Administration User Guide (Softeam) - Eclipse Scava</title>
+  <title>Platform Administration User Guide - Eclipse Scava</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Platform Administration User Guide (Softeam)";
+    var mkdocs_page_name = "Platform Administration User Guide";
     var mkdocs_page_input_path = "user-guide/administration/index.md";
     var mkdocs_page_url = null;
   </script>
@@ -412,10 +412,6 @@
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../others/users/REST-API-Documentation/">REST API Documentation</a>
-                </li>
-                <li class="toctree-l3">
-                    
     <a class="" href="../../others/users/REST-API-Generation/">REST API Generation</a>
                 </li>
                 <li class="toctree-l3">
@@ -449,10 +445,26 @@
     <ul class="subnav">
                 <li class="toctree-l3 current">
                     
-    <a class="current" href="./">Platform Administration User Guide (Softeam)</a>
+    <a class="current" href="./">Platform Administration User Guide</a>
     <ul class="subnav">
             
-    <li class="toctree-l4"><a href="#platform-administration-user-guide-softeam">Platform Administration User Guide (Softeam)</a></li>
+    <li class="toctree-l4"><a href="#platform-administration-user-guide">Platform Administration User Guide</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#the-login-feature">The Login feature</a></li>
+        
+            <li><a class="toctree-l5" href="#the-projects-management-feature">The Projects management feature</a></li>
+        
+            <li><a class="toctree-l5" href="#the-users-management-feature">The Users management feature</a></li>
+        
+            <li><a class="toctree-l5" href="#the-workers-feature">The Workers feature</a></li>
+        
+            <li><a class="toctree-l5" href="#the-properties-management-feature">The Properties management feature</a></li>
+        
+            <li><a class="toctree-l5" href="#the-stack-traces-feature">The Stack Traces feature</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -542,7 +554,7 @@
         
       
     
-    <li>Platform Administration User Guide (Softeam)</li>
+    <li>Platform Administration User Guide</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -552,7 +564,82 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="platform-administration-user-guide-softeam">Platform Administration User Guide (Softeam)</h1>
+                <h1 id="platform-administration-user-guide">Platform Administration User Guide</h1>
+<p>The guide show up the different features available through the Administration Dashboard, including:
+* The Login feature
+* The Projects management feature
+* The Users management feature
+* The Workers feature
+* The Properties management feature
+* The Stack Traces feature</p>
+<h3 id="the-login-feature">The Login feature</h3>
+<p>The first time the user access the administration dashboard, a login form will be shown in order to authenticate the associated user.</p>
+<p><img alt="login-view" src="screenshots/login-view.png" /></p>
+<h3 id="the-projects-management-feature">The Projects management feature</h3>
+<p>The Projects view displays the list of the OSS projects downloaded from the OSS forges.</p>
+<p><img alt="projects-view" src="screenshots/projects-view.png" /></p>
+<p>The administration dashboard provides two operations:
+* Import Project: 
+If your project is hosted on an OSS forge, you can simply paste the URL on the field and add it.
+<img alt="import-project-view" src="screenshots/import-project-view.png" /></p>
+<ul>
+<li>Create Project:
+The second operation provides an extra-options to customize the project creation alongside to the metadata available from differents related sources, eg., communication channels and bug tracking systems.
+<img alt="create-project-view" src="screenshots/create-project-view.png" /></li>
+</ul>
+<p>Once the project has been registred, it's possible to configure inside it some analysis tasks. An analysis task is consist of:
+* Label name: the analysis task name.
+* Task type: the scheduling tasks execution mechanism which could be:
+  * Single Execution: which allows to execute
+ a task between a start date and an end date.
+  * Monitoring Execution: which permits to run a task from a start date until the current date then to schedule the task execution each new day.
+* Start date: the start time range of the analysis process.
+* End date: the end time range of the analysis process.
+* Metric Providers: the metrics available on the metric-platform through the extension points mechanism.</p>
+<p><img alt="analysis-task-view" src="screenshots/analysis-task-view.png" /></p>
+<p>These tasks will be executed later to compute/calculate some metrics that will be used to measure the quality of the OSS projects during various period of time.</p>
+<p><img alt="project-config-view" src="screenshots/project-config-view.png" /></p>
+<h3 id="the-users-management-feature">The Users management feature</h3>
+<p>The Users view allows to manage the differents users of the the administration dashboards. It provides three levels of roles:</p>
+<ul>
+<li>USER ROLE: The user profile is enable to shows up the basic administration dashboard features including:</li>
+<li>Show up the list of registred projects.</li>
+<li>Show up the analysis tasks status.</li>
+<li>Show up the list of metric-providers.</li>
+<li>Manage its own token authorities.</li>
+<li>Show up the stack traces.</li>
+<li>PROJECT MANAGER ROLE: The project manager profile is enable to manage the main administration dashboard features including:</li>
+<li>Import/create new projects.</li>
+<li>Show up the list of registred projects.</li>
+<li>Manage new analysis tasks.</li>
+<li>Show up the analysis tasks status.</li>
+<li>Show up the list of metric-providers.</li>
+<li>Manage its own token authorities.</li>
+<li>Show up the stack traces.</li>
+<li>ADMIN ROLE: The admin profile is the super-user of the admin-ui which is enable to get access to almost all the features come with the administration dashboard, including:</li>
+<li>Import/create new projects.</li>
+<li>Show up the list of registred projects.</li>
+<li>Manage new analysis tasks.</li>
+<li>Show up the analysis tasks status.</li>
+<li>Show up the list of metric-providers.</li>
+<li>Manage the admin-ui users and their roles.</li>
+<li>Monitor the workers and theirs analysis tasks.</li>
+<li>Manage configuration properties.</li>
+<li>Show up the stack traces.</li>
+</ul>
+<p><img alt="users-management-view" src="screenshots/users-management-view.png" /></p>
+<h4 id="the-profile-view">The profile view</h4>
+<p>Both the user and the project manager profiles have the ability to edit its own account and manage the token authorities related the Eclipse Integrated Development Environments (IDEs) component. The generated token authorities is assigned and available only on current profile.
+<img alt="profile-view" src="screenshots/profile-view.png" /></p>
+<h3 id="the-workers-feature">The Workers feature</h3>
+<p>The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a free worker.</p>
+<p><img alt="workers-view" src="screenshots/workers-view.png" /></p>
+<h3 id="the-properties-management-feature">The Properties management feature</h3>
+<p>The Properties feature allows to configure generic configurations applied to the metric-platform, eg., Github OAuth tokens, ..</p>
+<p><img alt="properties-view" src="screenshots/properties-view.png" /></p>
+<h3 id="the-stack-traces-feature">The Stack Traces feature</h3>
+<p>The Stack traces feature allows to display the errors/stracktraces produced during the metric-platform analysis process in the admin UI to ease debugging.</p>
+<p><img alt="stacktraces-view" src="screenshots/stacktraces-view.png" /></p>
               
             </div>
           </div>

@@ -28,7 +28,7 @@ Useful links:
 * [Scava metrics](users/Scava-Metrics.md) lists metrics computed by the various Scava Components.
 * [Consuming the REST services](users/Consuming-REST-Services.md) This guideline is dedicated to clients which would like to used SCAVA REST Services.It adress authentication issues
 * [Running Scava in Eclipse](users/Running-Scava-in-Eclipse.md) How to setup and run the Scava Eclipse IDE plugin.
-* [REST API Documentation](users/REST-API-Documentation.md) Reference documentation of REST services provided by the Scava platform.
+* [REST API Documentation](developers-guide/api-reference-guide/metric-platform-api/) Reference documentation of REST services provided by the Scava platform.
 * [REST API Generation](users/REST-API-Generation.md) Tutorial about automatic generation of REST API Scava library using OpenAPI.
 * [Accessing Scava resources](users/Scava-Resources.md) A summary of where to find the various outputs of the Scava platform.
 
