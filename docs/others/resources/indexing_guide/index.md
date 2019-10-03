@@ -132,6 +132,8 @@ This metric prepares and indexes documents relating to communication channels.
 
 The query below retrieves entries that has the API documentation. Further information about Elasticsearch query can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html
 
+
+```
 GET documentation.documentation.entry.nlp/_search
 {
   "query" : {
@@ -142,5 +144,6 @@ GET documentation.documentation.entry.nlp/_search
   }
 
 }
+```
 
 ------
