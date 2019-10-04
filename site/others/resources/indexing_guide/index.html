@@ -414,7 +414,15 @@
         </ul>
     
 
-    <li class="toctree-l5"><a href="#query-example">Query Example</a></li>
+    <li class="toctree-l5"><a href="#query-examples">Query Examples</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l6" href="#example-1">Example 1</a></li>
+        
+            <li><a class="toctree-l6" href="#example-2">Example 2</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -578,7 +586,7 @@
             <div class="section">
               
                 <h1 id="indexing-metrics-guide">Indexing Metrics Guide</h1>
-<p>This guide describes the indexing metric providers available in Scava platform. It provides the mapping so that users can query the index. </p>
+<p>This guide describes the indexing metric providers available in Scava platform. It provides the mapping so that users can query the index.</p>
 <hr />
 <h4 id="orgeclipsescavametricproviderindexingbugs"><a href="#org.eclipse.scava.metricprovider.indexing.bugs">org.eclipse.scava.metricprovider.indexing.bugs</a></h4>
 <ul>
@@ -722,16 +730,197 @@
 </li>
 </ul>
 <hr />
-<h1 id="query-example">Query Example</h1>
-<p>The query below retrieves entries that has the API documentation. Further information about Elasticsearch query can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html</p>
+<h1 id="query-examples">Query Examples</h1>
+<p>Here we present a series of examples of how you can use ElasticSearch queries for finding specific data or doing some aggregations.</p>
+<p>More information about ElasticSearch queries can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html</p>
+<h3 id="example-1">Example 1</h3>
+<p>Retrieve the documentation entries that have been determined containing a <em>Getting Started</em> guide.</p>
+<pre><code>GET documentation.documentation.entry.nlp/_search
+{
+  &quot;query&quot;: {
+    &quot;match&quot; : {
+      &quot;documentation_types&quot;: &quot;Started&quot;
+
+    }
+  }
+}
+</code></pre>
+
+<p>As <em>documentation_types</em> is an array, we need to use a <em>match</em> within the query.</p>
+<h2 id="example-2">Example 2</h2>
+<p>Retrieve the documentation entries that have at least one of the following characteristics:
+- Are a <em>Getting Started</em> guide
+- Are a <em>Development</em> guide
+- Have a neutral sentiment</p>
+<pre><code>GET documentation.documentation.entry.nlp/_search
+{
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;should&quot;: [
+          {
+            &quot;match&quot; : {
+              &quot;documentation_types&quot;: &quot;Started&quot;
+            }
+          },
+          {
+            &quot;match&quot; : {
+              &quot;documentation_types&quot;: &quot;Development&quot;
+            }
+          },
+          {
+            &quot;term&quot;:{
+              &quot;sentiment&quot; : &quot;__label__neutral&quot;
+            }
+          }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<p>In this case, the field sentiment is not an array, thus, for looking inside of it we should use a <em>term</em> query, while a <em>match</em> query for fields that are arrays. Furthermore, as we have multiple queries that are linked through OR, we need to declare a query of type <em>bool</em> and <em>should</em>. If the query would be to find the documentation entries that have a <em>Getting Started</em>, a <em>Development</em> guide and have a neutral sentiment, instead of using a <em>should</em> operation, it need to be used a <em>must</em>.</p>
+<pre><code>GET documentation.documentation.entry.nlp/_search
+{
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;must&quot;: [
+          {
+            &quot;match&quot; : {
+              &quot;documentation_types&quot;: &quot;Started&quot;
+            }
+          },
+          {
+            &quot;match&quot; : {
+              &quot;documentation_types&quot;: &quot;Development&quot;
+            }
+          },
+          {
+            &quot;term&quot;:{
+              &quot;sentiment&quot; : &quot;__label__neutral&quot;
+            }
+          }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<h3 id="example-3">Example 3</h3>
+<p>Searching for GitHub Issues comments containing the word <em>issue</em> in the field <em>plain_text</em>:</p>
+<p>```
+GET github.bug.comment.nlp/_search
+{
+  "query": {
+    "match": {
+      "plain_text": "issue"
+    }
+  }
+}</p>
+<pre><code>
+### Example 4
+
+ Searching in all the indexes the string *Astérix*:
+
+</code></pre>
+
+<p>GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix"
+   }
+ }
+}</p>
+<pre><code>In this case, as we are not quering any particular field, we use the *query_string*.
+
+If we would like to search either for *Astérix* or *Obélix*, we can use boolean operators:
+
+</code></pre>
+
+<p>GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix OR Obélix"
+   }
+ }
+}</p>
+<pre><code>
+If both names must appear, instead of using OR, we can use AND.
+
+</code></pre>
+
+<p>GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix AND Obélix"
+   }
+ }
+}</p>
+<pre><code>Query strings such as *Astérix Obélix* will be considered to have an implicit OR, i.e. *Astéric OR Obélix*.
+
+</code></pre>
+
+<p>GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix Obélix"
+   }
+ }
+}</p>
+<pre><code>
+If the we are looking for the exact combination of words, such as *Astérix and Obélix*, we can use parenthesis to indicate ElasticSearch that the words should be split.
+
+</code></pre>
+
+<p>GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "(Astérix and Obélix) OR (Felix the Cat)"
+   }
+ }
+}</p>
+<pre><code>
+### Example 5
+
+ElasticSearch can do some statistics regarding the output of queries. In this example, we want extended statistics about the field readability in the documentation entries:
+
+</code></pre>
+
 <p>GET documentation.documentation.entry.nlp/_search
 {
-  "query" : {
-    "match": {
-      "documentation_types" : "API"
-    }</p>
-<p>}</p>
-<p>}</p>
+  "size": 0,
+  "aggs" : {
+        "readability_stats" : {
+            "extended_stats" : {
+                "field" : "readability"
+            }
+        }
+    }
+}</p>
+<pre><code>
+The option *size=0*, indicates that only the aggregation with the statistics must be returned, otherwise the query will return the elements that also match the searching query.
+
+If instead of wanting some statistics, we want to autogenerate histograms, then we can use the following query:
+
+</code></pre>
+
+<p>POST documentation.documentation.entry.nlp/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_analysis": {
+      "histogram" : {
+                "field" : "readability",
+                "interval" : 2
+      }
+    }
+  }
+}
+```</p>
 <hr />
               
             </div>

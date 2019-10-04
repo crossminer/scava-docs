@@ -1,6 +1,6 @@
 # Indexing Metrics Guide
 
-This guide describes the indexing metric providers available in Scava platform. It provides the mapping so that users can query the index. 
+This guide describes the indexing metric providers available in Scava platform. It provides the mapping so that users can query the index.
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.bugs](#org.eclipse.scava.metricprovider.indexing.bugs)
@@ -128,21 +128,208 @@ This metric prepares and indexes documents relating to communication channels.
 	- `List<String>`	documentation_entries
 
 ------
-# Query Example
+# Query Examples
 
-The query below retrieves entries that has the API documentation. Further information about Elasticsearch query can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html
+Here we present a series of examples of how you can use ElasticSearch queries for finding specific data or doing some aggregations.
 
+More information about ElasticSearch queries can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html
+
+### Example 1
+
+ Retrieve the documentation entries that have been determined containing a *Getting Started* guide.
 
 ```
 GET documentation.documentation.entry.nlp/_search
 {
-  "query" : {
-    "match": {
-      "documentation_types" : "API"
-    }
+  "query": {
+	"match" : {
+	  "documentation_types": "Started"
 
+	}
   }
+}
+```
+As *documentation_types* is an array, we need to use a *match* within the query.
 
+## Example 2
+
+Retrieve the documentation entries that have at least one of the following characteristics:
+- Are a *Getting Started* guide
+- Are a *Development* guide
+- Have a neutral sentiment
+
+```
+GET documentation.documentation.entry.nlp/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+          {
+            "match" : {
+              "documentation_types": "Started"
+          	}
+          },
+          {
+            "match" : {
+              "documentation_types": "Development"
+            }
+          },
+          {
+            "term":{
+              "sentiment" : "__label__neutral"
+            }
+          }
+      ]
+    }
+  }
+}
+```
+
+In this case, the field sentiment is not an array, thus, for looking inside of it we should use a *term* query, while a *match* query for fields that are arrays. Furthermore, as we have multiple queries that are linked through OR, we need to declare a query of type *bool* and *should*. If the query would be to find the documentation entries that have a *Getting Started*, a *Development* guide and have a neutral sentiment, instead of using a *should* operation, it need to be used a *must*.
+
+```
+GET documentation.documentation.entry.nlp/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+          {
+            "match" : {
+              "documentation_types": "Started"
+          	}
+          },
+          {
+            "match" : {
+              "documentation_types": "Development"
+            }
+          },
+          {
+            "term":{
+              "sentiment" : "__label__neutral"
+            }
+          }
+      ]
+    }
+  }
+}
+```
+
+### Example 3
+
+Searching for GitHub Issues comments containing the word *issue* in the field *plain_text*:
+
+ ```
+GET github.bug.comment.nlp/_search
+{
+  "query": {
+    "match": {
+      "plain_text": "issue"
+    }
+  }
+}
+```
+
+### Example 4
+
+ Searching in all the indexes the string *Astérix*:
+
+```
+GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix"
+   }
+ }
+}
+```
+In this case, as we are not quering any particular field, we use the *query_string*.
+
+If we would like to search either for *Astérix* or *Obélix*, we can use boolean operators:
+
+```
+GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix OR Obélix"
+   }
+ }
+}
+```
+
+If both names must appear, instead of using OR, we can use AND.
+
+```
+GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix AND Obélix"
+   }
+ }
+}
+```
+Query strings such as *Astérix Obélix* will be considered to have an implicit OR, i.e. *Astéric OR Obélix*.
+
+```
+GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "Astérix Obélix"
+   }
+ }
+}
+```
+
+If the we are looking for the exact combination of words, such as *Astérix and Obélix*, we can use parenthesis to indicate ElasticSearch that the words should be split.
+
+```
+GET _search
+{
+ "query": {
+   "query_string": {
+     "query": "(Astérix and Obélix) OR (Felix the Cat)"
+   }
+ }
+}
+```
+
+### Example 5
+
+ElasticSearch can do some statistics regarding the output of queries. In this example, we want extended statistics about the field readability in the documentation entries:
+
+```
+GET documentation.documentation.entry.nlp/_search
+{
+  "size": 0,
+  "aggs" : {
+        "readability_stats" : {
+			"extended_stats" : {
+				"field" : "readability"
+			}
+		}
+    }
+}
+```
+
+The option *size=0*, indicates that only the aggregation with the statistics must be returned, otherwise the query will return the elements that also match the searching query.
+
+If instead of wanting some statistics, we want to autogenerate histograms, then we can use the following query:
+
+```
+POST documentation.documentation.entry.nlp/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_analysis": {
+      "histogram" : {
+            	"field" : "readability",
+                "interval" : 2
+      }
+    }
+  }
 }
 ```
 
