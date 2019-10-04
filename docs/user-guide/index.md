@@ -19,3 +19,8 @@ This Visualisation Dashboard guide describes the different dashboards that are a
 ## [Metrics Reference Guide](metrics/index.md)
 This Metrics Reference Guide describes the historic and transient metric providers provided by the Scava platform.
 
+## [Indexes Reference Guide](indexes/index.md)
+This Indexes Reference Guide presents the mappings used to index the data in Scava platform, as well as some examples of how to retrieve the data.
+
+## [Readers Guide](readers/index.md)
+This Readers Guide introduce the users to the readers created for retrieving data in Scava. 
