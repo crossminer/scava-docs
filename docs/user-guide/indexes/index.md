@@ -218,7 +218,7 @@ GET documentation.documentation.entry.nlp/_search
 
 Searching for GitHub Issues comments containing the word *issue* in the field *plain_text*:
 
- ```
+```
 GET github.bug.comment.nlp/_search
 {
   "query": {

@@ -797,120 +797,104 @@
 
 <h3 id="example-3">Example 3</h3>
 <p>Searching for GitHub Issues comments containing the word <em>issue</em> in the field <em>plain_text</em>:</p>
-<p>```
-GET github.bug.comment.nlp/_search
+<pre><code>GET github.bug.comment.nlp/_search
 {
-  "query": {
-    "match": {
-      "plain_text": "issue"
+  &quot;query&quot;: {
+    &quot;match&quot;: {
+      &quot;plain_text&quot;: &quot;issue&quot;
     }
   }
-}</p>
-<pre><code>
-### Example 4
-
- Searching in all the indexes the string *Astérix*:
-
+}
 </code></pre>
 
-<p>GET _search
+<h3 id="example-4">Example 4</h3>
+<p>Searching in all the indexes the string <em>Astérix</em>:</p>
+<pre><code>GET _search
 {
- "query": {
-   "query_string": {
-     "query": "Astérix"
+ &quot;query&quot;: {
+   &quot;query_string&quot;: {
+     &quot;query&quot;: &quot;Astérix&quot;
    }
  }
-}</p>
-<pre><code>In this case, as we are not quering any particular field, we use the *query_string*.
-
-If we would like to search either for *Astérix* or *Obélix*, we can use boolean operators:
-
+}
 </code></pre>
 
-<p>GET _search
+<p>In this case, as we are not quering any particular field, we use the <em>query_string</em>.</p>
+<p>If we would like to search either for <em>Astérix</em> or <em>Obélix</em>, we can use boolean operators:</p>
+<pre><code>GET _search
 {
- "query": {
-   "query_string": {
-     "query": "Astérix OR Obélix"
+ &quot;query&quot;: {
+   &quot;query_string&quot;: {
+     &quot;query&quot;: &quot;Astérix OR Obélix&quot;
    }
  }
-}</p>
-<pre><code>
-If both names must appear, instead of using OR, we can use AND.
-
+}
 </code></pre>
 
-<p>GET _search
+<p>If both names must appear, instead of using OR, we can use AND.</p>
+<pre><code>GET _search
 {
- "query": {
-   "query_string": {
-     "query": "Astérix AND Obélix"
+ &quot;query&quot;: {
+   &quot;query_string&quot;: {
+     &quot;query&quot;: &quot;Astérix AND Obélix&quot;
    }
  }
-}</p>
-<pre><code>Query strings such as *Astérix Obélix* will be considered to have an implicit OR, i.e. *Astéric OR Obélix*.
-
+}
 </code></pre>
 
-<p>GET _search
+<p>Query strings such as <em>Astérix Obélix</em> will be considered to have an implicit OR, i.e. <em>Astéric OR Obélix</em>.</p>
+<pre><code>GET _search
 {
- "query": {
-   "query_string": {
-     "query": "Astérix Obélix"
+ &quot;query&quot;: {
+   &quot;query_string&quot;: {
+     &quot;query&quot;: &quot;Astérix Obélix&quot;
    }
  }
-}</p>
-<pre><code>
-If the we are looking for the exact combination of words, such as *Astérix and Obélix*, we can use parenthesis to indicate ElasticSearch that the words should be split.
-
+}
 </code></pre>
 
-<p>GET _search
+<p>If the we are looking for the exact combination of words, such as <em>Astérix and Obélix</em>, we can use parenthesis to indicate ElasticSearch that the words should be split.</p>
+<pre><code>GET _search
 {
- "query": {
-   "query_string": {
-     "query": "(Astérix and Obélix) OR (Felix the Cat)"
+ &quot;query&quot;: {
+   &quot;query_string&quot;: {
+     &quot;query&quot;: &quot;(Astérix and Obélix) OR (Felix the Cat)&quot;
    }
  }
-}</p>
-<pre><code>
-### Example 5
-
-ElasticSearch can do some statistics regarding the output of queries. In this example, we want extended statistics about the field readability in the documentation entries:
-
+}
 </code></pre>
 
-<p>GET documentation.documentation.entry.nlp/_search
+<h3 id="example-5">Example 5</h3>
+<p>ElasticSearch can do some statistics regarding the output of queries. In this example, we want extended statistics about the field readability in the documentation entries:</p>
+<pre><code>GET documentation.documentation.entry.nlp/_search
 {
-  "size": 0,
-  "aggs" : {
-        "readability_stats" : {
-            "extended_stats" : {
-                "field" : "readability"
+  &quot;size&quot;: 0,
+  &quot;aggs&quot; : {
+        &quot;readability_stats&quot; : {
+            &quot;extended_stats&quot; : {
+                &quot;field&quot; : &quot;readability&quot;
             }
         }
     }
-}</p>
-<pre><code>
-The option *size=0*, indicates that only the aggregation with the statistics must be returned, otherwise the query will return the elements that also match the searching query.
-
-If instead of wanting some statistics, we want to autogenerate histograms, then we can use the following query:
-
+}
 </code></pre>
 
-<p>POST documentation.documentation.entry.nlp/_search
+<p>The option <em>size=0</em>, indicates that only the aggregation with the statistics must be returned, otherwise the query will return the elements that also match the searching query.</p>
+<p>If instead of wanting some statistics, we want to autogenerate histograms, then we can use the following query:</p>
+<pre><code>POST documentation.documentation.entry.nlp/_search
 {
-  "size": 0,
-  "aggs": {
-    "histogram_analysis": {
-      "histogram" : {
-                "field" : "readability",
-                "interval" : 2
+  &quot;size&quot;: 0,
+  &quot;aggs&quot;: {
+    &quot;histogram_analysis&quot;: {
+      &quot;histogram&quot; : {
+                &quot;field&quot; : &quot;readability&quot;,
+                &quot;interval&quot; : 2
       }
     }
   }
 }
-```</p>
+</code></pre>
+
 <hr />
               
             </div>
