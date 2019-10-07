@@ -6234,8 +6234,8 @@ This plugin generates the factoid regarding sentiment for bug trackers. For exam
 <u>*Additional Information*</u> :
 
 - Star rating information :
-	- `4 star`	*average sentiment* > *0.5* OR *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
-	- `3 star`	*average sentiment* > *0.25* OR *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
+	- `4 star`	*average sentiment* > *0.5* OR *thread end sentiment* - *thread begining sentiment* > *0.25* AND *thread begining sentiment* > *0.15*.
+	- `3 star`	*average sentiment* > *0.25* OR *thread end sentiment* - *thread begining sentiment* > *0.125* AND *thread begining sentiment* > *0.0*.
 	- `2 star`	*average sentiment* > *0* OR *thread end sentiment* - *thread begining sentiment* > *0*.
 	- `1 star`	*otherwise*
 
@@ -6467,8 +6467,8 @@ This plugin generates the factoid regarding sentiments for newsgroups. For examp
 <u>*Additional Information*</u> :
 
 - Star rating information :
-  - `4 star`	*average sentiment* > *0.5* OR *thread end sentiment* - *thread begining sentiment* > *0.25* && *thread begining sentiment* > *0.15*.
-  - `3 star`	*average sentiment* > *0.25* OR *thread end sentiment* - *thread begining sentiment* > *0.125* && *thread begining sentiment* > *0.0*.
+  - `4 star`	*average sentiment* > *0.5* OR *thread end sentiment* - *thread begining sentiment* > *0.25* AND *thread begining sentiment* > *0.15*.
+  - `3 star`	*average sentiment* > *0.25* OR *thread end sentiment* - *thread begining sentiment* > *0.125* AND *thread begining sentiment* > *0.0*.
   - `2 star`	*average sentiment* > *0* OR *thread end sentiment* - *thread begining sentiment* > *0*.
   - `1 star`	*otherwise*
 
