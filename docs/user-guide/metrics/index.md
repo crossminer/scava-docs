@@ -38,6 +38,7 @@ This guide describes the historic and transient metric providers, as well as fac
 - [Factoids](#factoids) for:
 	- [Bug Trackers](#factoids-for-bug-trackers)
 	- [Newsgroups and Forums](#factoids-for-newsgroups-and-forums)
+	- [Documentation](#factoids-for-documentation)
 
 ------
 
@@ -6596,6 +6597,35 @@ This plugin generates the factoid regarding weekly user engagement for newsgroup
   - `3 star`	*maximum percentage of weekly articles* < *3* x *uniform percentage of articles per week (100/7)*.
   - `2 star`	*maximum percentage of weekly articles* < *4* x *uniform percentage of articles per week (100/7)*.
   - `1 star`	*otherwise*
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+### [Factoids for Documentation](#factoids-for-documentation)
+
+These factoids are related to documentation.
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
+
+#### [org.eclipse.scava.factoid.documentation.entries](#org.eclipse.scava.factoid.documentation.entries)
+
+- **Short name**: factoid.documentation.entries
+- **Friendly name**: Documentation Entries
+
+This plugin generates the factoid regarding which sections have been found and which are missing in the documentation. This can help understanding which sections should be added or better indicated to have a better documentation.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.trans.documentation.classification`
+
+<u>*Additional Information*</u> :
+
+- Star rating information :
+  - `4 star`	*All five types of documentation sections have been found*.
+  - `3 star`	*Three or four types of documentation sections have been found*.
+  - `2 star`	*Two or one types of documentation sections have been found*.
+  - `1 star`	*No sections have been found*
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
