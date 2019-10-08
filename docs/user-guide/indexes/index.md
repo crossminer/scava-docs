@@ -132,7 +132,7 @@ This metric prepares and indexes documents relating to communication channels.
 
 Here we present a series of examples of how you can use ElasticSearch queries for finding specific data or doing some aggregations.
 
-More information about ElasticSearch queries can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html
+More information about ElasticSearch queries can be found at https://www.elastic.co/guide/en/elasticsearch/reference/6.3/search.html
 
 ### Example 1
 
