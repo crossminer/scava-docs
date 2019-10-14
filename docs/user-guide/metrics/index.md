@@ -6630,3 +6630,24 @@ This plugin generates the factoid regarding which sections have been found and w
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
+
+#### [org.eclipse.scava.factoid.documentation.entries](#org.eclipse.scava.factoid.documentation.sentiment)
+
+- **Short name**: factoid.documentation.sentiment
+- **Friendly name**: Documentation Sentiment
+
+This plugin generates the factoid regarding sentiment for documentation.
+
+- <u>Depends-on</u> : `org.eclipse.scava.metricprovider.historic.documentation.sentiment.DocumentationSentimentHistoricMetricProvider`
+
+<u>*Additional Information*</u> :
+
+- Star rating information :
+  - `4 star`	*Average sentiment greater than 0.5*.
+  - `3 star`	*Average sentiment between 0.25 and 0.5*.
+  - `2 star`	*Average sentiment between 0 and 0.25*.
+  - `1 star`	*Average sentiment equal or lesser than 0*
+
+[<img src="./arrow_drop_up.svg">Back to top](#top)
+
+------
