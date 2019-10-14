@@ -6159,6 +6159,9 @@ This plugin generates the factoid regarding usage data for bug trackers. For exa
 	- `2 star`	*4* x *number of bugs or comments* > *working days in a year (250)*.
 	- `1 star`	*otherwise*
 
+- Note :
+	- If the analyses is not up to a year (*365* days), the proportion of working days is used. We consider that *250* working days exist within a year.
+
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
 ------
@@ -6387,6 +6390,9 @@ This plugin generates the factoid regarding usage data for newsgroups. For examp
   - `3 star`	*2* x *number of articles* OR *threads* > *working days in a year (250)*.
   - `2 star`	*4* x *number of articles* OR *threads* > *working days in a year (250)*.
   - `1 star`	*otherwise*
+
+- Note :
+	- If the analyses is not up to a year (*365* days), the proportion of working days is used. We consider that *250* working days exist within a year.
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
