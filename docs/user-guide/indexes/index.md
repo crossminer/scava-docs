@@ -12,33 +12,39 @@ This metric prepares and indexes analyses documents relating to bug tracking sys
 **Mapping Information**:
 
 - <u>bug.comment</u>
-	- `String`	comment_Id
-	- `String`	body
-	- `List<String>`	emotional_dimension
-	- `String`	sentiment
-	- `String`	plain_text
-	- `String`	request_reply_classification
-	- `String`	content_class
-	- `boolean`	contains_code
-	- `String`	bug_Id
-	- `String`	project_name
-	- `String`	creator
-	- `Date`	created_at
-	- `String`	uid
-	- `List<String>`	commits
-	- `List<String>`	referring_to
+| Properties | Type |
+|------------|------|
+| comment_Id | `keyword`|
+| body       | `text`|
+| emotional_dimension * | `keyword`|
+| sentiment | `keyword`|
+| plain_text| `text`|
+| request_reply_classification| `keyword`|
+| content_class| `keyword`|
+| contains_code| `boolean`|
+| bug_Id | `keyword`|
+| project_name| `keyword`|
+| creator | `keyword` |
+| created_at | `date`|
+| uid| `keyword` |
+| referring_to <br>	- bugs *<br>	- commits * | `Object`<br>`text` <br>`text` |
 
 - <u>bug.post</u>
-	- `Date`	created_at
-	- `String`	bug_summary
-	- `String`	severity
-	- `String`	bug_id
-	- `String`	project_name
-	- `String`	creator
-	- `String`	uid
-	- `boolean`	migration_issue
-	- `List<String>`		problematic_changes
-	- `double`	matching_score
+| Properties | Type  |
+|------------|------|
+| created_at | `date`   |
+| bug_summary       | `text`   |
+| severity          | `keyword`   |
+| bug_id | `keyword`   |
+| project_name       | `text`   |
+| creator          | `keyword`   |
+| uid | `keyword`   |
+| migration_issue<br>- found<br>	problematic_changes<br>	- change *<br>	- type     | `Object`<br>`boolean`<br>`Object`<br>`text`<br>`double` |
+
+**Additional Note**: 
+
+1. Asterisk (`*`) is used to indicate entries that are stored as an array.
+2. Type `Object` is used to indicate an entry with a nested JSON object passed as its value. The depth of nesting is shown with Indentation at each node/level.    
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.commits](#org.eclipse.scava.metricprovider.indexing.commits)
@@ -50,17 +56,23 @@ This metric prepares and indexes documents related to commits.
 **Mapping Information**:
 
 - <u>commits</u>
-	- `Date`	created_at
-	- `String`	project_name
-	- `String`	uid
-	- `String`	repository
-	- `String`	revision
-	- `String`	author
-	- `String`	author_email
-	- `String`	body
-	- `String`	plain_text
-	- `List<String>`	commits_references
-	- `List<String>`	bugs_references
+| Properties | Type |
+|------------|------|
+| created_at | `date`   | `Date` |
+| project_name       | `keyword`   | `String` |
+| uid          | `text`   | `String` |
+| repository | `keyword`   | `String` |
+| revision       | `keyword`   | `String` |
+| author          | `keyword`   | `String` |
+| author_email | `keyword`   | `String` |
+| body | `text`   | `String` |
+| plain_text       | `text`   | `String` |
+| commits_references *        | `text`   | `List<String>` |
+| bugs_references * | `text`   | `List<String>` |
+
+**Additional Note**: 
+
+Asterisk (`*`) is used to indicate entries that are stored as an array.
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.communicationchannels](#org.eclipse.scava.metricprovider.indexing.communicationchannels)
@@ -72,30 +84,39 @@ This metric prepares and indexes documents relating to communication channels.
 **Mapping Information**:
 
 - <u>article</u>
-	- `Long`	article_Id
-	- `String`	communication_channel_id
-	- `String`	uid
-	- `List<Integer>`	thread_id
-	- `String`	project_name
-	- `String`	message_body
-	- `String`	subject
-	- `String`	creator
-	- `Date`	created_at
-	- `List<String>`	emotional_dimension
-	- `String`	sentiment
-	- `String`	plain_text
-	- `String`	request_reply_classification
-	- `String`	content_class
-	- `boolean`	contains_code
+- <u>commits</u>
+| Properties | Type  |
+|------------|------|
+| article_Id | `date`   | `Date` |
+| communication_channel_id       | `keyword`   | `String` |
+| uid          | `keyword`   | `String` |
+| thread_id * | `keyword`   | `List<Integer>` |
+| project_name       | `keyword`   | `String` |
+| message_body          | `text`   | `String` |
+| subject | `text`   | `String` |
+| creator | `keyword`   | `String` |
+| created_at       | `date`   | `Date` |
+| emotional_dimension *        | `keyword`   | `List<String>` |
+| sentiment | `keyword`   | `String` |
+| plain_text | `text`   | `String` |
+| request_reply_classification       | `keyword`   | `String` |
+| content_class          | `keyword`   | `String` |
+| contains_code | `boolean`   | `boolean` |
+
 - <u>thread</u>
-	- `String`	communication_channel_id
-	- `String`	uid
-	- `int`	thread_id
-	- `String`	project_name
-	- `String`	subject
-	- `boolean`	migration_issue
-	- `List<String>`	problematic_changes
-	- `double`	matching_score
+| Properties | Type|
+|------------|------|
+| communication_channel_id       | `keyword`   | `String` |
+| uid          | `keyword`   | `String` |
+| thread_id | `keyword`   | `int` |
+| project_name       | `keyword`   | `String` |
+| subject | `text`   | `String` |
+| migration_issue<br>- found<br>	problematic_changes<br>	- change *<br>	- matching_score     | `Object`<br>`boolean`<br>`Object`<br>`text`<br>`double` |  <br>`boolean`<br><br>`List<String>`<br>`Double`|
+
+**Additional Note**: 
+
+1. Asterisk (`*`) is used to indicate entries that are stored as an array.
+2. Type `Object` is used to indicate an entry with a nested JSON object passed as its value. The depth of nesting is shown with Indentation at each node/level.  
 
 ------
 #### [org.eclipse.scava.metricprovider.indexing.documentation](#org.eclipse.scava.metricprovider.indexing.documentation)
@@ -107,25 +128,37 @@ This metric prepares and indexes documents relating to communication channels.
 **Mapping Information**:
 
 - <u>documentation_entry</u>
-	- `Date`	created_at
-	- `String`	project_name
-	- `String`	uid
-	- `String`	documentation_id
-	- `String`	documentation_entry_id
-	- `String`	body
-	- `String`	original_format_mime
-	- `String`	sentiment
-	- `String`	plain_text
-	- `double`	readability
-	- `List<String>`	documentation_type
-	- `boolean`	licence_found
-	- `String`	licence
+| Properties | Type |
+|------------|------|
+| created_at       | `date`   | `Date` |
+| project_name          | `keyword`   | `String` |
+| uid | `keyword`   | `String` |
+| documentation_id       | `keyword`   | `String` |
+| documentation_entry_id | `keyword`   | `String` |
+| communication_channel_id       | `keyword`   | `String` |
+| body          | `text`   | `String` |
+| original_format_mime | `keyword`   | `String` |
+| original_format_name | `text`   | `String` |
+| plain_text | `text`   | `String` |
+| sentiment       | `keyword`   | `String` |
+| readability | `keyword`   | `double` |
+| documentation_type *     | `keyword`   | `List<String>` |
+| licence_found | `boolean`   | `boolean` |
+| licence<br>- group<br>- name<br>-header_found<br>-score<br>-is_deprecated_license<br>-is_fsf_libre<br>-is_osi_approved<br>-license_comments| `Object`<br>`keyword`<br>`keyword`<br>`boolean`<br>`double`<br>`boolean`<br>`boolean`<br>`boolean`<br>`text` | <br>`String`<br>`String`<br>`Boolean`<br>`Double`<br>`boolean`<br>`boolean`<br>`boolean`<br>`String` |
+
 - <u>documentation</u>
-	- `Date`	last_update
-	- `String`	uid
-	- `String`	project_name
-	- `String`	documentation_id
-	- `List<String>`	documentation_entries
+| Properties | Type|
+|------------|------|
+| last_update       | `date`   | `Date` |
+| project_name          | `keyword`   | `String` |
+| uid | `text`   | `String` |
+| documentation_id       | `keyword`   | `String` |
+| documentation_entries * | `keyword`   | `List<String>` |
+
+**Additional Note**: 
+
+1. Asterisk (`*`) is used to indicate entries that are stored as an array.
+2. Type `Object` is used to indicate an entry with a nested JSON object passed as its value. The depth of nesting is shown with Indentation at each node/level.  
 
 ------
 # Query Examples
