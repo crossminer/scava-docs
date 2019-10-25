@@ -6637,7 +6637,7 @@ This plugin generates the factoid regarding which sections have been found and w
 
 ------
 
-#### [org.eclipse.scava.factoid.documentation.entries](#org.eclipse.scava.factoid.documentation.sentiment)
+#### [org.eclipse.scava.factoid.documentation.sentiment](#org.eclipse.scava.factoid.documentation.sentiment)
 
 - **Short name**: factoid.documentation.sentiment
 - **Friendly name**: Documentation Sentiment

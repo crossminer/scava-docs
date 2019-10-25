@@ -210,7 +210,7 @@ This reader uses web crawler to retrieve data from websites.  To register a proj
 | Parameter              | Type     | Description | Example |
 | ---------------------- | -------- | ----------- | ------- |
 | URL | `String` | URL of the repository | https://wiki.eclipse.org/Trace_Compass#User_Guides |
-| ExecutionFrequency | `int` | Crawling frequency defined in days, e.g., 1 represents a day  | 1 |
+| ExecutionFrequency* | `int` | Crawling frequency defined in days, e.g., 1 represents a day  | 1 |
 | UserName | `String` | The `username` used to log into the website | name@domain.com |
 | Password | `String` | The `password` used to log into the website | p$%7876 |
 | LoginURL | `String` | The URL of the login page | https://accounts.eclipse.org/user/login?destination=user/login%3Ftakemeback%3Dhttp%253A//www.eclipse.org/forums/index.php%253Ft%253Dlogin |
@@ -218,6 +218,7 @@ This reader uses web crawler to retrieve data from websites.  To register a proj
 | PasswordFieldName | `String` | The name used to define the `password` field on the website | pass |
 
 <u>*Additional Information*</u> :
+- *ExecutionFrequency. By default the value is zero, which means that the documentation will be retrieved only once at the beginning of the analysis. Furthermore, we recommend a execution frequency greater than 5 in order to prevent the crawler to be banned from accessing the data.
 -	For clarity, all examples used in the above table are derived from the Eclipse Foundation website. For example, the `username` field is defined as name.
 -	The `Documentation Systematic` reader supports both password protected and un-protected sources. `URL` and `ExecutionFrequency` are mandatory for both sources. However, only the password protected sources require the additional paramenters.
 -	Dates preceeding the current date are processed once because the reader does not keep track of the website evolution up to the current date.
