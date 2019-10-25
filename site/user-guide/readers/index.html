@@ -1159,7 +1159,7 @@
 <td>https://wiki.eclipse.org/Trace_Compass#User_Guides</td>
 </tr>
 <tr>
-<td>ExecutionFrequency</td>
+<td>ExecutionFrequency*</td>
 <td><code>int</code></td>
 <td>Crawling frequency defined in days, e.g., 1 represents a day</td>
 <td>1</td>
@@ -1197,6 +1197,7 @@
 </tbody>
 </table>
 <p><u><em>Additional Information</em></u> :
+- *ExecutionFrequency. By default the value is zero, which means that the documentation will be retrieved only once at the beginning of the analysis. Furthermore, we recommend a execution frequency greater than 5 in order to prevent the crawler to be banned from accessing the data.
 -   For clarity, all examples used in the above table are derived from the Eclipse Foundation website. For example, the <code>username</code> field is defined as name.
 -   The <code>Documentation Systematic</code> reader supports both password protected and un-protected sources. <code>URL</code> and <code>ExecutionFrequency</code> are mandatory for both sources. However, only the password protected sources require the additional paramenters.
 -   Dates preceeding the current date are processed once because the reader does not keep track of the website evolution up to the current date.

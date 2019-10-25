@@ -586,42 +586,124 @@
 <p>This metric prepares and indexes analyses documents relating to bug tracking system.</p>
 <p><strong>Mapping Information</strong>:</p>
 <ul>
-<li>
-<p><u>bug.comment</u></p>
+<li><u>bug.comment</u></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>comment_Id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>body</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>emotional_dimension *</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>sentiment</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>plain_text</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>request_reply_classification</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>content_class</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>contains_code</td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td>bug_Id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>creator</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>referring_to <br> - bugs *<br>    - commits *</td>
+<td><code>Object</code><br><code>text</code> <br><code>text</code></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><code>String</code>  comment_Id</li>
-<li><code>String</code>  body</li>
-<li><code>List&lt;String&gt;</code>    emotional_dimension</li>
-<li><code>String</code>  sentiment</li>
-<li><code>String</code>  plain_text</li>
-<li><code>String</code>  request_reply_classification</li>
-<li><code>String</code>  content_class</li>
-<li><code>boolean</code> contains_code</li>
-<li><code>String</code>  bug_Id</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  creator</li>
-<li><code>Date</code>    created_at</li>
-<li><code>String</code>  uid</li>
-<li><code>List&lt;String&gt;</code>    commits</li>
-<li><code>List&lt;String&gt;</code>    referring_to</li>
+<li><u>bug.post</u></li>
 </ul>
-</li>
-<li>
-<p><u>bug.post</u></p>
-<ul>
-<li><code>Date</code>    created_at</li>
-<li><code>String</code>  bug_summary</li>
-<li><code>String</code>  severity</li>
-<li><code>String</code>  bug_id</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  creator</li>
-<li><code>String</code>  uid</li>
-<li><code>boolean</code> migration_issue</li>
-<li><code>List&lt;String&gt;</code>        problematic_changes</li>
-<li><code>double</code>  matching_score</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>bug_summary</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>severity</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>bug_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>creator</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>migration_issue<br>- found<br>    problematic_changes<br> - change *<br>  - type</td>
+<td><code>Object</code><br><code>boolean</code><br><code>Object</code><br><code>text</code><br><code>double</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Note</strong>: </p>
+<ol>
+<li>Asterisk (<code>*</code>) is used to indicate entries that are stored as an array.</li>
+<li>Type <code>Object</code> is used to indicate an entry with a nested JSON object passed as its value. The depth of nesting is shown with Indentation at each node/level.    </li>
+</ol>
 <hr />
 <h4 id="orgeclipsescavametricproviderindexingcommits"><a href="#org.eclipse.scava.metricprovider.indexing.commits">org.eclipse.scava.metricprovider.indexing.commits</a></h4>
 <ul>
@@ -631,21 +713,64 @@
 <p>This metric prepares and indexes documents related to commits.</p>
 <p><strong>Mapping Information</strong>:</p>
 <ul>
-<li><u>commits</u><ul>
-<li><code>Date</code>    created_at</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  uid</li>
-<li><code>String</code>  repository</li>
-<li><code>String</code>  revision</li>
-<li><code>String</code>  author</li>
-<li><code>String</code>  author_email</li>
-<li><code>String</code>  body</li>
-<li><code>String</code>  plain_text</li>
-<li><code>List&lt;String&gt;</code>    commits_references</li>
-<li><code>List&lt;String&gt;</code>    bugs_references</li>
+<li><u>commits</u></li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>repository</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>revision</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>author</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>author_email</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>body</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>plain_text</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>commits_references *</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>bugs_references *</td>
+<td><code>text</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Note</strong>: </p>
+<p>Asterisk (<code>*</code>) is used to indicate entries that are stored as an array.</p>
 <hr />
 <h4 id="orgeclipsescavametricproviderindexingcommunicationchannels"><a href="#org.eclipse.scava.metricprovider.indexing.communicationchannels">org.eclipse.scava.metricprovider.indexing.communicationchannels</a></h4>
 <ul>
@@ -655,36 +780,120 @@
 <p>This metric prepares and indexes documents relating to communication channels.</p>
 <p><strong>Mapping Information</strong>:</p>
 <ul>
-<li><u>article</u><ul>
-<li><code>Long</code>    article_Id</li>
-<li><code>String</code>  communication_channel_id</li>
-<li><code>String</code>  uid</li>
-<li><code>List&lt;Integer&gt;</code>   thread_id</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  message_body</li>
-<li><code>String</code>  subject</li>
-<li><code>String</code>  creator</li>
-<li><code>Date</code>    created_at</li>
-<li><code>List&lt;String&gt;</code>    emotional_dimension</li>
-<li><code>String</code>  sentiment</li>
-<li><code>String</code>  plain_text</li>
-<li><code>String</code>  request_reply_classification</li>
-<li><code>String</code>  content_class</li>
-<li><code>boolean</code> contains_code</li>
+<li><u>article</u></li>
 </ul>
-</li>
-<li><u>thread</u><ul>
-<li><code>String</code>  communication_channel_id</li>
-<li><code>String</code>  uid</li>
-<li><code>int</code> thread_id</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  subject</li>
-<li><code>boolean</code> migration_issue</li>
-<li><code>List&lt;String&gt;</code>    problematic_changes</li>
-<li><code>double</code>  matching_score</li>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>article_Id</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>communication_channel_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>thread_id *</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>message_body</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>subject</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>creator</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>emotional_dimension *</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>sentiment</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>plain_text</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>request_reply_classification</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>content_class</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>contains_code</td>
+<td><code>boolean</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><u>thread</u></li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>communication_channel_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>thread_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>subject</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>migration_issue<br>- found<br>    problematic_changes<br> - change *<br>  - matching_score</td>
+<td><code>Object</code><br><code>boolean</code><br><code>Object</code><br><code>text</code><br><code>double</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Note</strong>: </p>
+<ol>
+<li>Asterisk (<code>*</code>) is used to indicate entries that are stored as an array.</li>
+<li>Type <code>Object</code> is used to indicate an entry with a nested JSON object passed as its value. The depth of nesting is shown with Indentation at each node/level.  </li>
+</ol>
 <hr />
 <h4 id="orgeclipsescavametricproviderindexingdocumentation"><a href="#org.eclipse.scava.metricprovider.indexing.documentation">org.eclipse.scava.metricprovider.indexing.documentation</a></h4>
 <ul>
@@ -694,31 +903,116 @@
 <p>This metric prepares and indexes documents relating to communication channels.</p>
 <p><strong>Mapping Information</strong>:</p>
 <ul>
-<li><u>documentation_entry</u><ul>
-<li><code>Date</code>    created_at</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  uid</li>
-<li><code>String</code>  documentation_id</li>
-<li><code>String</code>  documentation_entry_id</li>
-<li><code>String</code>  body</li>
-<li><code>String</code>  original_format_mime</li>
-<li><code>String</code>  sentiment</li>
-<li><code>String</code>  plain_text</li>
-<li><code>double</code>  readability</li>
-<li><code>List&lt;String&gt;</code>    documentation_type</li>
-<li><code>boolean</code> licence_found</li>
-<li><code>String</code>  licence</li>
+<li><u>documentation_entry</u></li>
 </ul>
-</li>
-<li><u>documentation</u><ul>
-<li><code>Date</code>    last_update</li>
-<li><code>String</code>  uid</li>
-<li><code>String</code>  project_name</li>
-<li><code>String</code>  documentation_id</li>
-<li><code>List&lt;String&gt;</code>    documentation_entries</li>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>created_at</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>documentation_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>documentation_entry_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>communication_channel_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>body</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>original_format_mime</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>original_format_name</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>plain_text</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>sentiment</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>readability</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>documentation_type *</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>licence_found</td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td>licence<br>- group<br>- name<br>-header_found<br>-score<br>-is_deprecated_license<br>-is_fsf_libre<br>-is_osi_approved<br>-license_comments</td>
+<td><code>Object</code><br><code>keyword</code><br><code>keyword</code><br><code>boolean</code><br><code>double</code><br><code>boolean</code><br><code>boolean</code><br><code>boolean</code><br><code>text</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><u>documentation</u></li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>last_update</td>
+<td><code>date</code></td>
+</tr>
+<tr>
+<td>project_name</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>uid</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>documentation_id</td>
+<td><code>keyword</code></td>
+</tr>
+<tr>
+<td>documentation_entries *</td>
+<td><code>keyword</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Note</strong>: </p>
+<ol>
+<li>Asterisk (<code>*</code>) is used to indicate entries that are stored as an array.</li>
+<li>Type <code>Object</code> is used to indicate an entry with a nested JSON object passed as its value. The depth of nesting is shown with Indentation at each node/level.  </li>
+</ol>
 <hr />
 <h1 id="query-examples">Query Examples</h1>
 <p>Here we present a series of examples of how you can use ElasticSearch queries for finding specific data or doing some aggregations.</p>
