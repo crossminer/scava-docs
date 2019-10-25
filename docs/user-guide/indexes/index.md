@@ -12,6 +12,7 @@ This metric prepares and indexes analyses documents relating to bug tracking sys
 **Mapping Information**:
 
 - <u>bug.comment</u>
+
 | Properties | Type |
 |------------|------|
 | comment_Id | `keyword`|
@@ -30,6 +31,7 @@ This metric prepares and indexes analyses documents relating to bug tracking sys
 | referring_to <br>	- bugs *<br>	- commits * | `Object`<br>`text` <br>`text` |
 
 - <u>bug.post</u>
+
 | Properties | Type  |
 |------------|------|
 | created_at | `date`   |
@@ -56,6 +58,7 @@ This metric prepares and indexes documents related to commits.
 **Mapping Information**:
 
 - <u>commits</u>
+
 | Properties | Type |
 |------------|------|
 | created_at | `date`   | `Date` |
@@ -84,7 +87,7 @@ This metric prepares and indexes documents relating to communication channels.
 **Mapping Information**:
 
 - <u>article</u>
-- <u>commits</u>
+
 | Properties | Type  |
 |------------|------|
 | article_Id | `date`   | `Date` |
@@ -104,6 +107,7 @@ This metric prepares and indexes documents relating to communication channels.
 | contains_code | `boolean`   | `boolean` |
 
 - <u>thread</u>
+
 | Properties | Type|
 |------------|------|
 | communication_channel_id       | `keyword`   | `String` |
@@ -128,6 +132,7 @@ This metric prepares and indexes documents relating to communication channels.
 **Mapping Information**:
 
 - <u>documentation_entry</u>
+
 | Properties | Type |
 |------------|------|
 | created_at       | `date`   | `Date` |
@@ -147,6 +152,7 @@ This metric prepares and indexes documents relating to communication channels.
 | licence<br>- group<br>- name<br>-header_found<br>-score<br>-is_deprecated_license<br>-is_fsf_libre<br>-is_osi_approved<br>-license_comments| `Object`<br>`keyword`<br>`keyword`<br>`boolean`<br>`double`<br>`boolean`<br>`boolean`<br>`boolean`<br>`text` | <br>`String`<br>`String`<br>`Boolean`<br>`Double`<br>`boolean`<br>`boolean`<br>`boolean`<br>`String` |
 
 - <u>documentation</u>
+
 | Properties | Type|
 |------------|------|
 | last_update       | `date`   | `Date` |
