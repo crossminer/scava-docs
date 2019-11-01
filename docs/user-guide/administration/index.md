@@ -87,13 +87,13 @@ The Properties feature allows to configure generic configurations applied to the
 ![properties-view](./screenshots/properties-view.png)
 
 Among the properties that can be set, we can name:
-- GitHub
-   -Token githubToken
-- GitLab
-   -Token: gitlabToken
-- Eclipse (both mandatory if set)
-   -ClientID: eclipseClientId
-   -Token: eclipseClientToken
+* GitHub
+   * Token githubToken
+* GitLab
+   * Token: gitlabToken
+* Eclipse (both elements mandatory if an authenticated connection want to be used )
+   * ClientID: eclipseClientId
+   * Token: eclipseClientToken
 
 ### The Stack Traces feature
 The Stack traces feature allows to display the errors/stracktraces produced during the metric-platform analysis process in the admin UI to ease debugging.
