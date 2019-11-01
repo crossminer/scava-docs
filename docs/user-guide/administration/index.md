@@ -93,7 +93,7 @@ Among the properties that can be set, we can name:
    * Token: gitlabToken
 * Eclipse (both elements mandatory if an authenticated connection want to be used )
    * ClientID: eclipseClientId
-   * Token: eclipseClientToken
+   * ClientSecret: eclipseClientSecret
 
 ### The Stack Traces feature
 The Stack traces feature allows to display the errors/stracktraces produced during the metric-platform analysis process in the admin UI to ease debugging.
