@@ -2732,13 +2732,17 @@ This metric computes the frequency and percentage of content Classes in bug comm
 <u>*Additional Information*</u> :
 
 - BugTrackerData :
-	- `String`	bugTrackerId
-	- `int`	numberOfComments
+  - `String`	bugTrackerId
+  - `int`	numberOfComments
 - ContentClass :
-	- `String`	bugTrackerId
-	- `String`	classLabel
-	- `int`	numberOfComments
-	- `float`	percentage
+  - `String`	bugTrackerId
+  - `String`	classLabel
+  - `int`	numberOfComments
+  - `float`	percentage
+    
+<u>*Note*</u> : `classLabel` could be one of the content classes shown in the hierarchical tree structure below. Where a node consists of sub-trees of children, only the child nodes are considered as `classLabel`. For example, bug comments of type  **1. Clarification** can be labelled as either **1.1** or **1.2**. A node without sub-trees such as **2. Suggestion of solution** is considered `classLabel` on its own.
+
+  ![Content Class Labels ](./content_class.png)
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 
@@ -3094,6 +3098,10 @@ This metric computes the content classes in newgroup articles, per newsgroup.
 	- `String`	classLabel
 	- `int`	numberOfArticles
 	- `float`	percentage
+
+<u>*Note*</u> : `classLabel` could be one of the content classes shown in the hierarchical tree structure below. Where a node consists of sub-trees of children, only the child nodes are considered as `classLabel`. For example, articles of type  **1. Clarification** can be labelled as either **1.1** or **1.2**. A node without sub-trees such as **2. Suggestion of solution** is considered `classLabel` on its own.
+
+  ![Content Class Labels ](./content_class.png)
 
 [<img src="./arrow_drop_up.svg">Back to top](#top)
 

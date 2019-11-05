@@ -28,7 +28,7 @@ This metric prepares and indexes analyses documents relating to bug tracking sys
 | creator | `keyword` |
 | created_at | `date`|
 | uid| `keyword` |
-| referring_to <br>	- bugs *<br>	- commits * | `Object`<br>`text` <br>`text` |
+| referring_to <br />	bugs *<br />	commits * | `Object`<br />`text` <br />`text` |
 
 - <u>bug.post</u>
 
@@ -41,7 +41,7 @@ This metric prepares and indexes analyses documents relating to bug tracking sys
 | project_name       | `text`   |
 | creator          | `keyword`   |
 | uid | `keyword`   |
-| migration_issue<br>- found<br>	problematic_changes<br>	- change *<br>	- type     | `Object`<br>`boolean`<br>`Object`<br>`text`<br>`double` |
+| migration_issue<br />	found<br />	problematic_changes<br />		change *<br />		type | `Object`<br />`boolean`<br />`Object`<br />`text`<br />`double` |
 
 **Additional Note**: 
 
@@ -110,12 +110,12 @@ This metric prepares and indexes documents relating to communication channels.
 
 | Properties | Type|
 |------------|------|
-| communication_channel_id       | `keyword`   | `String` |
-| uid          | `keyword`   | `String` |
-| thread_id | `keyword`   | `int` |
-| project_name       | `keyword`   | `String` |
-| subject | `text`   | `String` |
-| migration_issue<br>- found<br>	problematic_changes<br>	- change *<br>	- matching_score     | `Object`<br>`boolean`<br>`Object`<br>`text`<br>`double` |  <br>`boolean`<br><br>`List<String>`<br>`Double`|
+| communication_channel_id       | `keyword`   |
+| uid          | `keyword`   |
+| thread_id | `keyword`   |
+| project_name       | `keyword`   |
+| subject | `text`   |
+| migration_issue<br />	found<br />	problematic_changes<br />		change *<br />		matching_score | `Object`<br />`boolean`<br />`Object`<br />`text`<br />`double` |
 
 **Additional Note**: 
 
@@ -135,21 +135,21 @@ This metric prepares and indexes documents relating to communication channels.
 
 | Properties | Type |
 |------------|------|
-| created_at       | `date`   | `Date` |
-| project_name          | `keyword`   | `String` |
-| uid | `keyword`   | `String` |
-| documentation_id       | `keyword`   | `String` |
-| documentation_entry_id | `keyword`   | `String` |
-| communication_channel_id       | `keyword`   | `String` |
-| body          | `text`   | `String` |
-| original_format_mime | `keyword`   | `String` |
-| original_format_name | `text`   | `String` |
-| plain_text | `text`   | `String` |
-| sentiment       | `keyword`   | `String` |
-| readability | `keyword`   | `double` |
-| documentation_type *     | `keyword`   | `List<String>` |
-| licence_found | `boolean`   | `boolean` |
-| licence<br>- group<br>- name<br>-header_found<br>-score<br>-is_deprecated_license<br>-is_fsf_libre<br>-is_osi_approved<br>-license_comments| `Object`<br>`keyword`<br>`keyword`<br>`boolean`<br>`double`<br>`boolean`<br>`boolean`<br>`boolean`<br>`text` | <br>`String`<br>`String`<br>`Boolean`<br>`Double`<br>`boolean`<br>`boolean`<br>`boolean`<br>`String` |
+| created_at       | `date`   |
+| project_name          | `keyword`   |
+| uid | `keyword`   |
+| documentation_id       | `keyword`   |
+| documentation_entry_id | `keyword`   |
+| communication_channel_id       | `keyword`   |
+| body          | `text`   |
+| original_format_mime | `keyword`   |
+| original_format_name | `text`   |
+| plain_text | `text`   |
+| sentiment       | `keyword`   |
+| readability | `keyword`   |
+| documentation_type *     | `keyword`   |
+| licence_found | `boolean`   |
+| licence<br />	group<br />	name<br />	header_found<br />	score<br />	is_deprecated_license<br />	is_fsf_libre<br />	is_osi_approved<br />	license_comments | `Object`<br />`keyword`<br />`keyword`<br />`boolean`<br />`double`<br />`boolean`<br />`boolean`<br />`boolean`<br />`text` |
 
 - <u>documentation</u>
 

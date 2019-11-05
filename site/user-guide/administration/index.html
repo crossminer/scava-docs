@@ -639,8 +639,16 @@ The second operation provides an extra-options to customize the project creation
 <p>The workers view is dedicated to the dashboard administrators which allows them to monitor the status of the analysis tasks processes of the metric-platform. The Platform Workers section shows up the workers with theirs assigned analysis tasks. The Pending Tasks presents the analysis tasks waiting for a free worker.</p>
 <p><img alt="workers-view" src="screenshots/workers-view.png" /></p>
 <h3 id="the-properties-management-feature">The Properties management feature</h3>
-<p>The Properties feature allows to configure generic configurations applied to the metric-platform, eg., Github OAuth tokens, ..</p>
+<p>The Properties feature allows to configure generic configurations applied to the metric-platform, eg., Github OAuth tokens.</p>
 <p><img alt="properties-view" src="screenshots/properties-view.png" /></p>
+<p>Among the properties that can be set, we can name:
+* GitHub
+   * Token githubToken
+* GitLab
+   * Token: gitlabToken
+* Eclipse (both elements mandatory if an authenticated connection want to be used )
+   * ClientID: eclipseClientId
+   * ClientSecret: eclipseClientSecret</p>
 <h3 id="the-stack-traces-feature">The Stack Traces feature</h3>
 <p>The Stack traces feature allows to display the errors/stracktraces produced during the metric-platform analysis process in the admin UI to ease debugging.</p>
 <p><img alt="stacktraces-view" src="screenshots/stacktraces-view.png" /></p>

@@ -4305,19 +4305,17 @@ for a lack in testing effort for the project.</p>
 </ul>
 <p><u><em>Additional Information</em></u> :</p>
 <ul>
-<li>BugTrackerData :<ul>
-<li><code>String</code>  bugTrackerId</li>
-<li><code>int</code> numberOfComments</li>
+<li>BugTrackerData :</li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>int</code>   numberOfComments</li>
+<li>ContentClass :</li>
+<li><code>String</code>    bugTrackerId</li>
+<li><code>String</code>    classLabel</li>
+<li><code>int</code>   numberOfComments</li>
+<li><code>float</code> percentage</li>
 </ul>
-</li>
-<li>ContentClass :<ul>
-<li><code>String</code>  bugTrackerId</li>
-<li><code>String</code>  classLabel</li>
-<li><code>int</code> numberOfComments</li>
-<li><code>float</code>   percentage</li>
-</ul>
-</li>
-</ul>
+<p><u><em>Note</em></u> : <code>classLabel</code> could be one of the content classes shown in the hierarchical tree structure below. Where a node consists of sub-trees of children, only the child nodes are considered as <code>classLabel</code>. For example, bug comments of type  <strong>1. Clarification</strong> can be labelled as either <strong>1.1</strong> or <strong>1.2</strong>. A node without sub-trees such as <strong>2. Suggestion of solution</strong> is considered <code>classLabel</code> on its own.</p>
+<p><img alt="Content Class Labels " src="content_class.png" /></p>
 <p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h4 id="orgeclipsescavametricprovidertransbugsdailyrequestsreplies"><a href="#org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies">org.eclipse.scava.metricprovider.trans.bugs.dailyrequestsreplies</a></h4>
@@ -4855,6 +4853,8 @@ Despite the name of the metrics are newsgroups, all the metrics are valid for co
 </ul>
 </li>
 </ul>
+<p><u><em>Note</em></u> : <code>classLabel</code> could be one of the content classes shown in the hierarchical tree structure below. Where a node consists of sub-trees of children, only the child nodes are considered as <code>classLabel</code>. For example, articles of type  <strong>1. Clarification</strong> can be labelled as either <strong>1.1</strong> or <strong>1.2</strong>. A node without sub-trees such as <strong>2. Suggestion of solution</strong> is considered <code>classLabel</code> on its own.</p>
+<p><img alt="Content Class Labels " src="content_class.png" /></p>
 <p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h4 id="orgeclipsescavametricprovidertransnewsgroupsdailyrequestsreplies"><a href="#org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies">org.eclipse.scava.metricprovider.trans.newsgroups.dailyrequestsreplies</a></h4>
