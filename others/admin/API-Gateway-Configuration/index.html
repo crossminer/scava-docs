@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>API Gateway Configuration - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui.css" rel="stylesheet">
+  <link href="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API Gateway Configuration";
+    var mkdocs_page_input_path = "others/admin/API-Gateway-Configuration.md";
+    var mkdocs_page_url = "/others/admin/API-Gateway-Configuration/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../contributors-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/api-gateway/">Api gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/authentication/">Authentication</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/">Scava developement process</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-licensing-recomendation/">Scava licensing recomendation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-naming-recomendations/">Scava naming recomendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-repository-organisation/">Scava repository organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-testing-organisation/">Scava testing organisation</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/access-mongodb-pongo/">Access mongodb pongo</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/api-gateway-configuration/">Api gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/consume-scava-rest-services/">Consume scava rest services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/rest-api-doc-generation/">Rest api doc generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/restlet-service-implementation/">Restlet service implementation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/scava-data-model-extention/">Scava data model extention</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../developers-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/analysis-platform/">Analysis platform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/api-gateway/">Api gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/knowledge-base/">Knowledge base</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/visualisation-dashboard/">Visualisation dashboard</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/workflow-engine/">Workflow engine</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/metric-provider-developement-guide/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/administration-application/">Administration application</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/analysis-platform/">Analysis platform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/eclipse-plugin/">Eclipse plugin</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/visualisation-dashboard/">Visualisation dashboard</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/database-backup/">Database backup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/licencing/">Licencing</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/docker-installation/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-configuration/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-installation/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/plugin-installation/">Home</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">Home</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">API Gateway Configuration</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#api-gateway-configuration">API Gateway configuration</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#when-to-use-this-guideline">When to use this guideline ?</a></li>
+        
+            <li><a class="toctree-l5" href="#context">Context</a></li>
+        
+            <li><a class="toctree-l5" href="#comments">Comments</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SCAVA-Administration/">SCAVA Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture/API-Gateway-Component/">API Gateway Component</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../architecture/Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/How-To-Develop-Metric-Provider/">How To Develop Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Licensing/">Licensing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Scava-Metrics/">Scava Metrics</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Scava-Resources/">Scava Resources</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../user-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/administration/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/dashboard/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Indexes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/indexes/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/metrics/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/plugin/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/quickstart/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Readers</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/readers/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/workflow/">Home</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Others &raquo;</li>
+        
+      
+        
+          <li>Admin &raquo;</li>
+        
+      
+    
+    <li>API Gateway Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="api-gateway-configuration">API Gateway configuration</h1>
+<h2 id="when-to-use-this-guideline">When to use this guideline ?</h2>
+<p>This guideline presents how to configure the Scava Gateway in order to integrate a new remote REST API.</p>
+<h2 id="context">Context</h2>
+<p>The Scava Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the Scava Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
+<h3 id="routing-service-configuration">Routing : Service Configuration</h3>
+<p>To reference a new remote REST API in the gateway, you have to add  2 new properties in the application.properties configuration file : the relative path of services  which will be integrated to this route and the redirection URL.All requests sent to the gateway which start by this relatice path will be redirected to the output url after the authentication process.</p>
+<p>Examples :
+<em> api gateway url = http://85.36.10.13:8080
+</em> path = /administration/*<em>
+</em> url = http://85.36.10.12:8082/administration</p>
+<p>The request http://85.36.10.13:8080/administration/project/create will be redirected to http://85.36.10.12:8082/administration/project/create</p>
+<table>
+<tr><td><b>id : </b>zuul.routes.**servicename**.path</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Relative path of the incoming service which will be redirected. Example : /test1/**</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.**servicename**.url</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Redirection URL of the route. Example : http://127.0.0.1:8082/test1</td></tr>
+</table>
+
+<h3 id="configuration-file-example">Configuration file example</h3>
+<pre><code># Rooting Configuration : Test1 Service
+zuul.routes.test1.path=/test1/**
+zuul.routes.test1.url=http://127.0.0.1:8082/test1
+
+# Rooting Configuration : Test2 Service
+zuul.routes.test2.path=/test2/**
+zuul.routes.test2.url=http://127.0.0.1:8083/test2
+</code></pre>
+
+<h2 id="comments">Comments</h2>
+<p>More information about API Gateway configuration: <a href="../../architecture/API-Gateway-Component">API Gateway Component</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Access-to-MongoDB-database-using-PONGO/" class="btn btn-neutral float-right" title="Access to MongoDB database using PONGO">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Access-to-MongoDB-database-using-PONGO/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui-bundle.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui-standalone-preset.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui-bundle.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui-standalone-preset.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui.js"></script>
+
+</body>
+</html>

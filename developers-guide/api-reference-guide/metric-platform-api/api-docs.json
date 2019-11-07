@@ -1,0 +1,3529 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The Metric-Platform API documentation",
+    "version": "1.0",
+    "title": "Metric-Platform API doc",
+    "contact": {}
+  },
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "analysis task",
+      "description": "Operations about analysis task"
+    },
+    {
+      "name": "metric providers",
+      "description": "Operations about metric providers"
+    },
+    {
+      "name": "configuration",
+      "description": "Operations about platform configuration"
+    },
+    {
+      "name": "project",
+      "description": "Operations about project"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [],
+        "summary": "Ping Api : deprecated API from OSSMETER project",
+        "operationId": "ping",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Ping"
+            }
+          }
+        }
+      }
+    },
+    "/analysis/metricproviders": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retieve the list of the metric providers",
+        "operationId": "getMetricProviders",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricProviders"
+            }
+          },
+          "404": {
+            "description": "MetricProviders not found"
+          }
+        }
+      }
+    },
+    "/analysis/task": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Retieve the analysis task by id",
+        "operationId": "getAnalysisTask",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "analysisTaskId",
+            "in": "query",
+            "description": "The analysisTaskId needed to fetch an analysis task",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/TaskObject"
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/analysis/task/create": {
+      "post": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Create analysis task",
+        "operationId": "createAnalysisTask",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Created analysis task object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AnalysisTask"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/analysis/task/update": {
+      "put": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Update analysis task",
+        "operationId": "updateAnalysisTask",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Updated analysis task object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AnalysisTaskUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/analysis/task/demote": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Demote the priority of the queue's tasks execution by task id",
+        "operationId": "demoteAnalysisTask",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "analysisTaskId",
+            "in": "query",
+            "description": "The analysisTaskId needed to demote the priority of an analysis task on the queue's tasks execution",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/analysis/task/promote": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Promote the priority an analysis task on the queue's tasks execution by task id",
+        "operationId": "promoteAnalysisTask",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "analysisTaskId",
+            "in": "query",
+            "description": "The analysisTaskId needed to promote the priority of an analysis task on the queue's tasks execution",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/analysis/task/pushOnWorker": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Push an analysis task on the the top of the queue's tasks execution by task id and worker id",
+        "operationId": "pushOnWorkerAnalysisTask",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "analysisTaskId",
+            "in": "query",
+            "description": "The analysisTaskId needed to push an analysis task on a worker",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "workerId",
+            "in": "query",
+            "description": "The workerId needed to push an analysis task on a worker",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/analysis/task/reset": {
+      "post": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Reset analysis task",
+        "operationId": "resetAnalysisTask",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The analysisTaskId object to reset an analysis task",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AnalysisTaskId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/analysis/task/start": {
+      "post": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Start analysis task",
+        "operationId": "startAnalysisTask",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The analysisTaskId object to start an analysis task",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AnalysisTaskId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/analysis/task/stop": {
+      "post": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Stop analysis task",
+        "operationId": "stopAnalysisTask",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The analysisTaskId object to stop an analysis task",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AnalysisTaskId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/analysis/task/delete": {
+      "delete": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Delete analysis task",
+        "operationId": "deleteAnalysisTask",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "analysisTaskId",
+            "in": "query",
+            "description": "The analysisTaskId needed to delete an analysis task",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Task"
+            }
+          },
+          "404": {
+            "description": "Task not found"
+          }
+        }
+      }
+    },
+    "/analysis/tasks": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Retieve all the analysis tasks",
+        "operationId": "getAnalysisTasks",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/TasksArray"
+            }
+          },
+          "404": {
+            "description": "Tasks not found"
+          }
+        }
+      }
+    },
+    "/analysis/tasks/project/{projectid}": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Retieve all the analysis tasks by project id",
+        "operationId": "getAnalysisTasksByProject",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch the analysis tasks",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/TasksArray"
+            }
+          },
+          "404": {
+            "description": "Tasks not found"
+          }
+        }
+      }
+    },
+    "/analysis/tasks/status/project/{projectid}": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Get the global status of the analysis tasks by project id",
+        "operationId": "getAnalysisTasksStatusByProject",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch the analysis tasks",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        }
+      }
+    },
+    "/analysis/workers": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Retrieve the workers on the scava platform",
+        "operationId": "getWorkers",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Workers"
+            }
+          }
+        }
+      }
+    },
+    "/analysis/stacktraces": {
+      "get": {
+        "tags": [
+          "analysis task"
+        ],
+        "summary": "Retieve all the analysis stacktraces",
+        "operationId": "getAnalysisStackTraces",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Stacktraces"
+            }
+          },
+          "404": {
+            "description": "Stacktraces not found"
+          }
+        }
+      }
+    },
+    "/factoids": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the Factoids metric providers",
+        "operationId": "getListFactoids1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Factoids"
+            }
+          }
+        }
+      }
+    },
+    "/factoids/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the Factoids metric providers : deprecated API from OSSMETER project",
+        "operationId": "getListFactoids2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Factoids"
+            }
+          }
+        }
+      }
+    },
+    "/metrics": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the metrics with visualisation",
+        "operationId": "getListMetrics1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricsVisualisation"
+            }
+          }
+        }
+      }
+    },
+    "/metrics/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the metrics with visualisation : deprecated API from OSSMETER project",
+        "operationId": "getListMetrics2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricsVisualisation"
+            }
+          }
+        }
+      }
+    },
+    "/metrics/p/{projectid}": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the metrics with visualisation by project id",
+        "operationId": "getListMetricsVisulisationByProjectId",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch metrics with visualisation",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Metrics"
+            }
+          },
+          "404": {
+            "description": "MetricVisulisation not found"
+          }
+        }
+      }
+    },
+    "/platform/properties": {
+      "get": {
+        "tags": [
+          "configuration"
+        ],
+        "summary": "Retrieve the metric-platform configuration properties",
+        "operationId": "getPlatformListProperties",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Properties"
+            }
+          }
+        }
+      }
+    },
+    "/platform/properties/create": {
+      "post": {
+        "tags": [
+          "configuration"
+        ],
+        "summary": "Add the metric-platform configuration property",
+        "operationId": "createPlatformProperties",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Created property object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Propertie"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Property"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/platform/properties/update": {
+      "put": {
+        "tags": [
+          "configuration"
+        ],
+        "summary": "Update the metric-platform configuration property",
+        "operationId": "updatePlatformProperties",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Updated property object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdatePropertie"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Property"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/platform/properties/delete/{key}": {
+      "delete": {
+        "tags": [
+          "configuration"
+        ],
+        "summary": "Delete the metric-platform configuration property",
+        "operationId": "deletePlatformProperties",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "description": "The key needed to delete a platform's propoerty",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Property"
+            }
+          },
+          "404": {
+            "description": "Property not found"
+          }
+        }
+      }
+    },
+    "/platform/properties/{key}": {
+      "get": {
+        "tags": [
+          "configuration"
+        ],
+        "summary": "Retrieve the metric-platform configuration property by key",
+        "operationId": "getPlatformPropertiesByKey",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "description": "The key needed to fetch the metric-platform configuration property",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Property"
+            }
+          },
+          "404": {
+            "description": "Property not found"
+          }
+        }
+      }
+    },
+    "/projects": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform projects",
+        "operationId": "getListProjects1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page needed to fetch a list of projects",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The size per page needed to fetch a list of projects",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          },
+          "404": {
+            "description": "Projects not found"
+          }
+        }
+      }
+    },
+    "/projects/": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform projects : deprecated API from OSSMETER project",
+        "operationId": "getListProjects2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page needed to fetch a list of projects",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The size per page needed to fetch a list of projects",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          },
+          "404": {
+            "description": "Projects not found"
+          }
+        }
+      }
+    },
+    "/projects/create": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Create a project",
+        "operationId": "createProject",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Created project object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Projet"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/projects/delete/{projectid}": {
+      "delete": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Delete a project",
+        "operationId": "deleteProject",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to delete a platform's project",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "404": {
+            "description": "project not found"
+          }
+        }
+      }
+    },
+    "/projects/import": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Import a project",
+        "operationId": "importProject",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Url to import a project",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ImportProjet"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/projects/edit": {
+      "put": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Edit a project",
+        "operationId": "editProject",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Url to edit a project",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProjetEdition"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ProjetEdition"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform project by project id",
+        "operationId": "getProjectById1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a project",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "404": {
+            "description": "Project not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform project by project id : deprecated API from OSSMETER project",
+        "operationId": "getProjectById2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a project",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "404": {
+            "description": "Project not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/f": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the Factoid metrics by project id",
+        "operationId": "getFactoidsByProjectId1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a Factoid metrics",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FactoidMetrics"
+            }
+          },
+          "404": {
+            "description": "Metrics not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/f/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the Factoid metrics by project id : deprecated API from OSSMETER project",
+        "operationId": "getFactoidsByProjectId2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a Factoid metrics",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FactoidMetrics"
+            }
+          },
+          "404": {
+            "description": "Metrics not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/f/{factoidid}": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the Factoid metric by project id and factoid id",
+        "operationId": "getFactoidByProjectIdAndByFactoidId1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a Factoid metric",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "factoidid",
+            "in": "path",
+            "description": "The factoidid needed to fetch a Factoid metric",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FactoidMetric"
+            }
+          },
+          "404": {
+            "description": "Metric not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/f/{factoidid}/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the Factoid metric by project id and factoid id : deprecated API from OSSMETER project",
+        "operationId": "getFactoidByProjectIdAndByFactoidId2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a Factoid metric",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "factoidid",
+            "in": "path",
+            "description": "The factoidid needed to fetch a Factoid metric",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FactoidMetric"
+            }
+          },
+          "404": {
+            "description": "Metric not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/m/{metricid}": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve a metric with visualisation by project id and metric id",
+        "operationId": "getMetricVisualisation1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a metric visualisation",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "metricid",
+            "in": "path",
+            "description": "The metricId needed to fetch a metric visualisation",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "The startDate needed to filter fetching data from a metric visualisation",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "The endDate needed to filter fetching data from a metric visualisation",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricVisualisation"
+            }
+          },
+          "404": {
+            "description": "Metric not found"
+          }
+        }
+      }
+    },
+    "/projects/p/{projectid}/m/{metricid}/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve a metric with visualisation by project id and metric id : deprecated API from OSSMETER project",
+        "operationId": "getMetricVisualisation2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a metric visualisation",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "metricid",
+            "in": "path",
+            "description": "The metricId needed to fetch a metric visualisation",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "The startDate needed to filter fetching data from a metric visualisation",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "The endDate needed to filter fetching data from a metric visualisation",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricVisualisation"
+            }
+          },
+          "404": {
+            "description": "Metric not found"
+          }
+        }
+      }
+    },
+    "/raw/metrics": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the list of metric providers",
+        "operationId": "getListMetricProviders1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListMetricProviders"
+            }
+          }
+        }
+      }
+    },
+    "/raw/metrics/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the list of metric providers : deprecated API from OSSMETER project",
+        "operationId": "getListMetricProviders2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListMetricProviders"
+            }
+          }
+        }
+      }
+    },
+    "/raw/metrics/p/{projectid}": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve the list of metric providers by project id",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a metric providers",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Metric-Providers"
+            }
+          },
+          "404": {
+            "description": "Metrics not found"
+          }
+        }
+      }
+    },
+    "/raw/projects": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform projects",
+        "operationId": "getListProjects3",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/raw/projects/": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform projects : deprecated API from OSSMETER project",
+        "operationId": "getListProjects4",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          }
+        }
+      }
+    },
+    "/raw/projects/p/{projectid}": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform project by project id",
+        "operationId": "getProjectById3",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a project",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "404": {
+            "description": "Project not found"
+          }
+        }
+      }
+    },
+    "/raw/projects/p/{projectid}/": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform project by project id : deprecated API from OSSMETER project",
+        "operationId": "getProjectById4",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch a project",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Project"
+            }
+          },
+          "404": {
+            "description": "Project not found"
+          }
+        }
+      }
+    },
+    "/raw/projects/p/{projectid}/m/{metricid}": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve a HistoricalMetricProvider & TransientMetricProvider data by project id and metric id",
+        "operationId": "getMetricByProjectIdAndMetricId1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "metricid",
+            "in": "path",
+            "description": "The metricId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "The startDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "The endDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricProvider"
+            }
+          }
+        }
+      }
+    },
+    "/raw/projects/p/{projectid}/m/{metricid}/": {
+      "get": {
+        "tags": [
+          "metric providers"
+        ],
+        "summary": "Retrieve a HistoricalMetricProvider & TransientMetricProvider data by project id and metric id : deprecated API from OSSMETER project",
+        "operationId": "getMetricByProjectIdAndMetricId2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "projectid",
+            "in": "path",
+            "description": "The projectId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "metricid",
+            "in": "path",
+            "description": "The metricId needed to fetch data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "The startDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "The endDate needed to filter fetching data metrics for both HistoricalMetricProvider & TransientMetricProvider",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/MetricProvider"
+            }
+          }
+        }
+      }
+    },
+    "/raw/projects/{page}": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform projects by page and size",
+        "operationId": "getListProjects5",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page needed to filter fetching the list of projects",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The size per page needed to filter fetching the list of projects",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          },
+          "404": {
+            "description": "Projects not found"
+          }
+        }
+      }
+    },
+    "/raw/projects/{page}/": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Retrieve the metric-platform projects by page and size : deprecated API from OSSMETER project",
+        "operationId": "getListProjects6",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page needed to filter fetching the list of projects",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The size per page needed to filter fetching the list of projects",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Projects"
+            }
+          },
+          "404": {
+            "description": "Projects not found"
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Search the projects by a query",
+        "operationId": "searchProjects1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "The query needed to search for the list of projects",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListMetrics"
+            }
+          },
+          "404": {
+            "description": "No projects matched that query."
+          }
+        }
+      }
+    },
+    "/search/": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Search the projects by a query : deprecated API from OSSMETER project",
+        "operationId": "searchProjects2",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "The query needed to search for the list of projects",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ListMetrics"
+            }
+          },
+          "404": {
+            "description": "No projects matched that query."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Ping": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "MetricProviders": {
+      "type": "object",
+      "properties": {
+        "metricProviderId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "hasVisulisation": {
+          "type": "boolean"
+        },
+        "dependOf": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "metricProviderId": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "xml": {
+              "name": "AnalysisTask"
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "MetricProvider"
+      }
+    },
+    "TaskObject": {
+      "type": "object",
+      "properties": {
+        "analysisTaskId": {
+          "type": "string"
+        },
+        "projectId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "object"
+        },
+        "endDate": {
+          "type": "object"
+        },
+        "scheduling": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "currentDate": {
+              "type": "object"
+            },
+            "workerId": {
+              "type": "string"
+            },
+            "progress": {
+              "type": "integer"
+            },
+            "currentMetric": {
+              "type": "string"
+            },
+            "lastDailyExecutionDuration": {
+              "type": "integer"
+            }
+          }
+        },
+        "metricExecutions": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "metricProviderId": {
+                "type": "string"
+              },
+              "projectId": {
+                "type": "string"
+              },
+              "lastDateExecution": {
+                "type": "string"
+              },
+              "hasVisualisation": {
+                "type": "boolean"
+              }
+            },
+            "xml": {
+              "name": "AnalysisTask"
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
+      }
+    },
+    "Task": {
+      "type": "object",
+      "properties": {
+        "analysisTaskId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "object"
+        },
+        "endDate": {
+          "type": "object"
+        },
+        "scheduling": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "executionRequestDate": {
+              "type": "object"
+            },
+            "currentDate": {
+              "type": "object"
+            },
+            "workerId": {
+              "type": "string"
+            },
+            "progress": {
+              "type": "integer"
+            },
+            "currentMetric": {
+              "type": "string"
+            },
+            "lastDailyExecutionDuration": {
+              "type": "integer"
+            }
+          }
+        },
+        "metricExecutions": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "xml": {
+              "name": "AnalysisTask"
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
+      }
+    },
+    "TasksArray": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "analysisTaskId": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "object"
+          },
+          "endDate": {
+            "type": "object"
+          },
+          "scheduling": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "currentDate": {
+                "type": "object"
+              },
+              "workerId": {
+                "type": "string"
+              },
+              "progress": {
+                "type": "integer"
+              },
+              "currentMetric": {
+                "type": "string"
+              },
+              "lastDailyExecutionDuration": {
+                "type": "integer"
+              }
+            }
+          },
+          "metricExecutions": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "metricProviderId": {
+                  "type": "string"
+                },
+                "projectId": {
+                  "type": "string"
+                },
+                "lastDateExecution": {
+                  "type": "string"
+                },
+                "hasVisualisation": {
+                  "type": "boolean"
+                }
+              },
+              "xml": {
+                "name": "AnalysisTask"
+              }
+            }
+          }
+        },
+        "xml": {
+          "name": "AnalysisTask"
+        }
+      }
+    },
+    "Status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Workers": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "_type": {
+            "type": "string"
+          },
+          "currentTask": {
+            "type": "object",
+            "properties": {
+              "metricExecutions": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "object",
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "metricProviderId": {
+                      "type": "string"
+                    },
+                    "projectId": {
+                      "type": "string"
+                    },
+                    "lastDateExecution": {
+                      "type": "string"
+                    },
+                    "hasVisualisation": {
+                      "type": "boolean"
+                    }
+                  },
+                  "xml": {
+                    "name": "MetricExecution"
+                  }
+                }
+              }
+            }
+          },
+          "workerId": {
+            "type": "string"
+          },
+          "heartbeat": {
+            "type": "object"
+          }
+        },
+        "xml": {
+          "name": "Worker"
+        }
+      }
+    },
+    "Stacktraces": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "projectId": {
+            "type": "string"
+          },
+          "projectName": {
+            "type": "string"
+          },
+          "clazz": {
+            "type": "string"
+          },
+          "stackTrace": {
+            "type": "string"
+          },
+          "workerIdentifier": {
+            "type": "string"
+          },
+          "executionErrorDate": {
+            "type": "string"
+          },
+          "analysisRangeErrorDate": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "AnalysisTask"
+        }
+      }
+    },
+    "Factoids": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "string",
+              "required": [
+                "name"
+              ]
+            }
+          }
+        },
+        "xml": {
+          "name": "Factoid"
+        }
+      }
+    },
+    "MetricsVisualisation": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "datatable": {
+            "type": "object",
+            "properties": {
+              "cols": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "object",
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "field": {
+                      "type": "string"
+                    }
+                  },
+                  "xml": {
+                    "name": "MetricVisualisation"
+                  }
+                }
+              }
+            }
+          },
+          "x": {
+            "type": "string"
+          },
+          "y": {
+            "type": "string"
+          },
+          "series": {
+            "type": "string"
+          },
+          "timeSeries": {
+            "type": "boolean"
+          },
+          "metricId": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Worker"
+        }
+      }
+    },
+    "Metrics": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "metricId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Worker"
+        }
+      }
+    },
+    "Properties": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Worker"
+        }
+      }
+    },
+    "Propertie": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "UpdatePropertie": {
+      "type": "object",
+      "properties": {
+        "oldkey": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Property": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "_type": {
+          "type": "string"
+        },
+        "_superTypes": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "string",
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Projects": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "_type": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "object"
+          },
+          "executionInformation": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "_type": {
+                "type": "string"
+              },
+              "storage": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "_type": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  }
+                }
+              },
+              "metricProviderData": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "inErrorState": {
+                "type": "string"
+              },
+              "lastExecuted": {
+                "type": "string"
+              }
+            }
+          },
+          "vcsRepositories": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "_type": {
+                  "type": "string"
+                },
+                "_superTypes": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "communicationChannels": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "_type": {
+                  "type": "string"
+                },
+                "persons": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "_superTypes": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "username": {
+                  "type": "string"
+                },
+                "_ossmeterId": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "port": {
+                  "type": "number"
+                },
+                "newsGroupName": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "authenticationRequired": {
+                  "type": "boolean"
+                },
+                "nonProcessable": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "bugTrackingSystems": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "_type": {
+                  "type": "string"
+                },
+                "persons": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "issues": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "_superTypes": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "url": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "repository": {
+                  "type": "string"
+                },
+                "owner": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "companies": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "_type": {
+                  "type": "string"
+                },
+                "_superTypes": {
+                  "type": "array",
+                  "items": {
+                    "minItems": 1,
+                    "type": "string",
+                    "required": [
+                      "name"
+                    ]
+                  }
+                },
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "downloads": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "forks": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "milestones": {
+            "type": "array",
+            "items": {
+              "minItems": 1,
+              "type": "object",
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "name": {
+            "type": "object"
+          },
+          "_private": {
+            "type": "string"
+          },
+          "fork": {
+            "type": "object"
+          },
+          "html_url": {
+            "type": "string"
+          },
+          "clone_url": {
+            "type": "string"
+          },
+          "homePage": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          },
+          "ssh_url": {
+            "type": "string"
+          },
+          "svn_url": {
+            "type": "string"
+          },
+          "size": {
+            "type": "integer"
+          },
+          "shortName": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Project"
+        }
+      }
+    },
+    "Projet": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "homePage": {
+          "type": "string"
+        },
+        "vcsRepositories": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "bts": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "communication_channels": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "Project"
+      }
+    },
+    "SampleProjet": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Project"
+      }
+    },
+    "ImportProjet": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Project"
+      }
+    },
+    "ProjetEdition": {
+      "type": "object",
+      "properties": {
+        "shortName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "homePage": {
+          "type": "string"
+        },
+        "vcsRepositories": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "bts": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "login": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              }
+              ,
+              "project": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "communication_channels": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "MailingListName": {
+                "type": "string"
+              },
+              "MailingListDescription": {
+                "type": "string"
+              },
+              "compressedFileExtension": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "Project"
+      }
+    },
+    "Project": {
+      "type": "object",
+      "properties": {
+        "_type": {
+          "type": "string"
+        },
+        "parent": {
+          "type": "object"
+        },
+        "executionInformation": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "_type": {
+              "type": "string"
+            },
+            "storage": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "_type": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                }
+              }
+            },
+            "metricProviderData": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "inErrorState": {
+              "type": "string"
+            },
+            "lastExecuted": {
+              "type": "string"
+            }
+          }
+        },
+        "vcsRepositories": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "_type": {
+                "type": "string"
+              },
+              "_superTypes": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "communicationChannels": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "_type": {
+                "type": "string"
+              },
+              "persons": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "_superTypes": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "username": {
+                "type": "string"
+              },
+              "_ossmeterId": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "port": {
+                "type": "number"
+              },
+              "newsGroupName": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "authenticationRequired": {
+                "type": "boolean"
+              },
+              "nonProcessable": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "bugTrackingSystems": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "_type": {
+                "type": "string"
+              },
+              "persons": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "issues": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "_superTypes": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "url": {
+                "type": "string"
+              },
+              "token": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "owner": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "companies": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "_type": {
+                "type": "string"
+              },
+              "_superTypes": {
+                "type": "array",
+                "items": {
+                  "minItems": 1,
+                  "type": "string",
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "contents": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "downloads": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "forks": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "full_name": {
+          "type": "string"
+        },
+        "name": {
+          "type": "object"
+        },
+        "_private": {
+          "type": "string"
+        },
+        "fork": {
+          "type": "object"
+        },
+        "html_url": {
+          "type": "string"
+        },
+        "clone_url": {
+          "type": "string"
+        },
+        "homePage": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "ssh_url": {
+          "type": "string"
+        },
+        "svn_url": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer"
+        },
+        "shortName": {
+          "type": "string"
+        }
+      }
+    },
+    "FactoidMetrics": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "factoid": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "stars": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "FactoidMetric": {
+      "type": "array",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "factoid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "stars": {
+          "type": "string"
+        }
+      }
+    },
+    "MetricVisualisation": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "projectId": {
+          "type": "string"
+        },
+        "metricId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "datatable": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object"
+          }
+        },
+        "x": {
+          "type": "string"
+        },
+        "y": {
+          "type": "string"
+        },
+        "ordinal": {
+          "type": "string"
+        },
+        "timeSeries": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ListMetricProviders": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Metric-Providers": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "object",
+            "properties": {
+              "metricProviderId": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ListMetrics": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Project"
+        }
+      }
+    },
+    "MetricProvider": {
+      "type": "array",
+      "items": {
+        "minItems": 1,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "_type": {
+            "type": "string"
+          },
+          "metricId": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Project"
+        }
+      }
+    },
+    "AnalysisTask": {
+      "type": "object",
+      "properties": {
+        "analysisTaskId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "projectId": {
+          "type": "string"
+        },
+        "type": {
+          "enum": ["SINGLE_EXECUTION", "CONTINUOUS_MONITORING"],
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string"
+        },
+        "metricProviders": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "string",
+            "required": [
+              "name"
+            ]
+          }
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
+      }
+    },
+    "AnalysisTaskUpdate": {
+      "type": "object",
+      "properties": {
+        "oldAnalysisTaskId": {
+          "type": "string"
+        },
+        "analysisTaskId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["SINGLE_EXECUTION", "CONTINUOUS_MONITORING"],
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string"
+        },
+        "metricProviders": {
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "string",
+            "required": [
+              "name"
+            ]
+          }
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
+      }
+    },
+    "AnalysisTaskId": {
+      "type": "object",
+      "properties": {
+        "analysisTaskId": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "AnalysisTask"
+      }
+    }
+  }
+}

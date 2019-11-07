@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>API Gateway Component - Eclipse Scava</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui.css" rel="stylesheet">
+  <link href="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API Gateway Component";
+    var mkdocs_page_input_path = "others/architecture/API-Gateway-Component.md";
+    var mkdocs_page_url = "/others/architecture/API-Gateway-Component/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Eclipse Scava</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Contributors guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../contributors-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Architecture guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/api-gateway/">Api gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/authentication/">Authentication</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/architecture-guidelignes/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Contributors guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-developement-process/">Scava developement process</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-licensing-recomendation/">Scava licensing recomendation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-naming-recomendations/">Scava naming recomendations</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-repository-organisation/">Scava repository organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/contributors-guidelignes/scava-testing-organisation/">Scava testing organisation</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Technical guidelignes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/access-mongodb-pongo/">Access mongodb pongo</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/api-gateway-configuration/">Api gateway configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/consume-scava-rest-services/">Consume scava rest services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/rest-api-doc-generation/">Rest api doc generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/restlet-service-implementation/">Restlet service implementation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../contributors-guide/technical-guidelignes/scava-data-model-extention/">Scava data model extention</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../developers-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Api reference guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/analysis-platform/">Analysis platform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/api-gateway/">Api gateway</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/knowledge-base/">Knowledge base</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/visualisation-dashboard/">Visualisation dashboard</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/api-reference-guide/workflow-engine/">Workflow engine</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metric provider developement guide</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/metric-provider-developement-guide/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Runing from sources</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/administration-application/">Administration application</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/analysis-platform/">Analysis platform</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/eclipse-plugin/">Eclipse plugin</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/">Home</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../developers-guide/runing-from-sources/visualisation-dashboard/">Visualisation dashboard</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Installation guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/database-backup/">Database backup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../installation-guide/licencing/">Licencing</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Docker installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/docker-installation/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform configuration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-configuration/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Platform installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/platform-installation/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../installation-guide/plugin-installation/">Home</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Others</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Admin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/API-Gateway-Configuration/">API Gateway Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/Access-to-MongoDB-database-using-PONGO/">Access to MongoDB database using PONGO</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/SCAVA-Administration/">SCAVA Administration</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">API Gateway Component</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#the-api-gateway-component">The API Gateway component</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#api-gateway-architecture">API Gateway Architecture</a></li>
+        
+            <li><a class="toctree-l5" href="#authentication-mechanism">Authentication Mechanism</a></li>
+        
+            <li><a class="toctree-l5" href="#implementation">Implementation</a></li>
+        
+            <li><a class="toctree-l5" href="#api-gateway-configuration">API Gateway Configuration</a></li>
+        
+            <li><a class="toctree-l5" href="#packaging-form-sources">Packaging Form Sources</a></li>
+        
+            <li><a class="toctree-l5" href="#api-gateway-execution">API Gateway Execution</a></li>
+        
+            <li><a class="toctree-l5" href="#client-implementation">Client Implementation</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Authentication-Component/">Authentication Component</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Deploy</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Docker-Ossmeter/">Docker Ossmeter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Platform-configuration/">Platform configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../deploy/Running-the-platform/">Running the platform</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Component-Naming/">Component Naming</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Contributing/">Contributing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Development-Guidelines/">Development Guidelines</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Extend-MongoDB-Data-Model/">Extend MongoDB Data Model</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/How-To-Develop-Metric-Provider/">How To Develop Metric Provider</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Implementing-Restlet-Service/">Implementing Restlet Service</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Licensing/">Licensing</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Naming-Scava-REST-Services/">Naming Scava REST Services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Repository-Organisation/">Repository Organisation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../development/Testing-Guidelines/">Testing Guidelines</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Users</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Consuming-REST-Services/">Consuming REST Services</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/REST-API-Generation/">REST API Generation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Running-Scava-in-Eclipse/">Running Scava in Eclipse</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Scava-Metrics/">Scava Metrics</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../users/Scava-Resources/">Scava Resources</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../user-guide/">Home</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Administration</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/administration/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Dashboard</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/dashboard/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Indexes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/indexes/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metrics</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/metrics/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Plugin</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/plugin/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Quickstart</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/quickstart/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Readers</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/readers/">Home</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Workflow</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../user-guide/workflow/">Home</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Eclipse Scava</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Others &raquo;</li>
+        
+      
+        
+          <li>Architecture &raquo;</li>
+        
+      
+    
+    <li>API Gateway Component</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-api-gateway-component">The API Gateway component</h1>
+<p>The Scava API Gateway :</p>
+<ul>
+<li>Provide a centralized access point to all web services implemented by the differents tools involved in the platform (DevOps Dashboard, Workflow Execution Engine, Knowledge Base, Metric Provider, Administration Application).</li>
+<li>Provide a centralized mechanisms to secuerize Scava web services and manage authentication  required to access to this services.</li>
+</ul>
+<h2 id="api-gateway-architecture">API Gateway Architecture</h2>
+<p>The API Gateway  is a pattern which come form microserivces echosystem. An API Gateway is a single point of entry (and control) for front end clients, which could be browser based or mobile. The client only has to know the URL of one server, and the backend can be refactored at will with no change.</p>
+<p>The API Gateway act as a revers web proxy in which can be integrated others functions like load balancing and authentication. In case of the Scava platform, the  API Gateway will manage the authentication for all services of the platform.  </p>
+<p><img src="https://zupimages.net/up/18/07/k2wp.png" width="800"></p>
+<h2 id="authentication-mechanism">Authentication Mechanism</h2>
+<h4 id="json-web-tokens">JSON Web Tokens</h4>
+<p>The Scava API Gateway is secruized using JSON Web Tokens (JWT) mechanism, an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.</p>
+<p>In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned and must be saved locally, instead of the traditional approach of creating a session in the server and returning a cookie.When the client request an access to a protected service ,the server's protected routes will check for a valid JWT in the Authorization header of the request, and if it's present, the user will be allowed to access protected resources. (More about JWT : https://jwt.io)</p>
+<p><img src="https://cdn.auth0.com/content/jwt/jwt-diagram.png" width="600"></p>
+<h4 id="authentication-architecture">Authentication Architecture</h4>
+<p>In Scava, the authentification service is a sub component of the Administration Application which centralise Right Management for the whole platform. As for the others services, the authentication service is accessed behind the API Gateway.</p>
+<p><img src="https://zupimages.net/up/18/07/y9nf.png" width="300"></p>
+<h4 id="authentication-flow">Authentication Flow</h4>
+<ol>
+<li>To obtain an access to a specific service, the client must authenticate with the authentication service.If the authentication success,he recived a web token that should be include in the header of all of his future requests.</li>
+<li>When the client request a specific service, the api gateway valivate the token from the authentication  service. If the token is valide, the api gateway transmite the request to the related service.</li>
+</ol>
+<p><img src="https://zupimages.net/up/18/07/4i2a.png" width="600"></p>
+<h2 id="implementation">Implementation</h2>
+<p>The implementation of the gateway is based on Zuul proxy, a component of the spring-cloud project, an extention of the spring framework dedicated to microservices architectures.</p>
+<p>https://projects.spring.io/spring-cloud/spring-cloud.html#_router_and_filter_zuul</p>
+<h2 id="api-gateway-configuration">API Gateway Configuration</h2>
+<p>The Scava Gateway can be configured by the intermediary of an external property file (application.properties) to place in the execution directory of the Scava Gateway component. This file allow to configure the routing of requests send to the gateway an some security parameters.</p>
+<h3 id="server-configuration">Server Configuration</h3>
+<table>
+<tr><td><b>id : </b>server.port</td><td><b>default :</b> 8086</td></tr>
+<tr><td colspan="3">Port of the CORSSMINER API server. Each REST request sent to the gateway must be addressed to this port.</td></tr>
+</table>
+
+<h3 id="jwt-security-configuration">JWT Security Configuration</h3>
+<table>
+<tr><td><b>id : </b>apigateway.security.jwt.secret</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Private key pair which allow to sign jwt tokens using RSA.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>apigateway.security.jwt.url</td><td><b>default :</b> /login</td></tr>
+<tr><td colspan="3">URL Path of the authentication service.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>apigateway.security.jwt.expiration</td><td><b>default :</b> 86400 (24H)</td></tr>
+<tr><td colspan="3">Port of the CORSSMINER API server. Each request sent to the gateway must be addressed to this port.</td></tr>
+</table>
+
+<h3 id="routing-authentication-service-configuration">Routing : Authentication Service Configuration</h3>
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.path</td><td><b>default :</b> /api/authentication/**</td></tr>
+<tr><td colspan="3">Relative path of the authentication service.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.url</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">URL of the authentification server. Example: http://127.0.0.1:8081/ </td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.sensitiveHeaders</td><td><b>default :</b> Cookie,Set-Cookie</td></tr>
+<tr><td colspan="3">Specify a list of ignored headers as part of the route configuration which will be not leaking downstream into external servers.</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.auth-center.stripPrefix</td><td><b>default :</b> false</td></tr>
+<tr><td colspan="3">Switch off the stripping of the service-specific prefix from individual routes</td></tr>
+</table>
+
+<h3 id="routing-service-configuration">Routing : Service Configuration</h3>
+<table>
+<tr><td><b>id : </b>zuul.routes.**servicename**.path</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Relative path of the incoming service which will be redirected. Example : /test1/**</td></tr>
+</table>
+
+<table>
+<tr><td><b>id : </b>zuul.routes.**servicename**.url</td><td><b>default :</b> NA</td></tr>
+<tr><td colspan="3">Redirection URL of the route. Example : http://127.0.0.1:8082/test1</td></tr>
+</table>
+
+<h3 id="configuration-file-example">Configuration file example</h3>
+<pre><code>#API Gateway Port
+server.port=8086
+
+# JWT Configuration
+apigateway.security.jwt.secret=otherpeopledontknowit
+apigateway.security.jwt.url=/api/authentication
+apigateway.security.jwt.expiration=86400
+
+# Rooting Configuration : Authentication Service
+zuul.routes.auth-center.path=/api/authentication/**
+zuul.routes.auth-center.url=http://127.0.0.1:8081/
+zuul.routes.auth-center.sensitiveHeaders=Cookie,Set-Cookie
+zuul.routes.auth-center.stripPrefix=false
+
+
+# Rooting Configuration : Test1 Service
+zuul.routes.test1.path=/test1/**
+zuul.routes.test1.url=http://127.0.0.1:8082/test1
+
+# Rooting Configuration : Test2 Service
+zuul.routes.test2.path=/test2/**
+zuul.routes.test2.url=http://127.0.0.1:8083/test2
+</code></pre>
+
+<h3 id="control-access-api">Control access API</h3>
+<p>The Scava platform comes with public and private APIs to control the access to the REST API using different permission levels. By default, there are three authorization levels which are predefined to get access to all the Scava's APIS, including:
+<em> “ROLE_ADMIN”
+</em> “ROLE_PROJECT_MANAGER”
+* “ROLE_USER”</p>
+<p>By the way, The frontend SCAVA administration comes with a default “admin” who is mainly the admin user with all authorities access including “ROLE_ADMIN”, “ROLE_PROJECT_MANAGER” and “ROLE_USER” authorizations. His default password is “admin”.</p>
+<pre><code># Filtering private restApi
+
+scava.routes.config.adminAccessApi[0]=/api/users
+scava.routes.config.adminAccessApi[1]=/api/user/**
+
+scava.routes.config.projectManagerAccessApi[0]=/administration/projects/create
+scava.routes.config.projectManagerAccessApi[1]=/administration/projects/import
+scava.routes.config.projectManagerAccessApi[2]=/administration/analysis/**
+
+scava.routes.config.userAccessApi[0]=/administration/projects
+scava.routes.config.userAccessApi[1]=/administration/projects/p/**
+scava.routes.config.userAccessApi[2]=/api/users/**
+scava.routes.config.userAccessApi[3]=/api/account
+</code></pre>
+
+<h2 id="packaging-form-sources">Packaging Form Sources</h2>
+<p>Maven Packaging</p>
+<pre><code class="shell">mvn -Pprod install
+</code></pre>
+
+<h2 id="api-gateway-execution">API Gateway Execution</h2>
+<ol>
+<li>complete an put the "application.properties" configuration file in the execute directory.</li>
+<li>Execute the crossmeter-api-gateway-1.0.0.jar Jar.</li>
+</ol>
+<pre><code class="shell">java -jar scava-api-gateway-1.0.0.jar
+</code></pre>
+
+<h2 id="client-implementation">Client Implementation</h2>
+<p><a href="../../users/Consuming-REST-Services">How to consume a Scava REST services ?</a> \
+This guideline is dedicated to clients which would like to use the REST Services. It adresses authentication issues.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Authentication-Component/" class="btn btn-neutral float-right" title="Authentication Component">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../admin/SCAVA-Administration/" class="btn btn-neutral" title="SCAVA Administration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../admin/SCAVA-Administration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Authentication-Component/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui-bundle.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui-standalone-preset.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/kb/dist/swagger-ui.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui-bundle.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui-standalone-preset.js"></script>
+      <script src="../../../developers-guide/api-reference-guide/metric-platform-api/dist/swagger-ui.js"></script>
+
+</body>
+</html>
