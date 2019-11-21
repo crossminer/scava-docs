@@ -372,4 +372,23 @@ POST documentation.documentation.entry.nlp/_search
 }
 ```
 
+### Example 6
+
+With the indexes it is possible to do aggregations and how many times a field value defined as a keyword, such as documentation_id, appears in an index.
+
+```
+POST documentation.documentation.entry.nlp/_search
+{
+  "size": 0, 
+  "aggs": {
+    "doc_id": {
+      "terms": {
+        "field": "documentation_id",
+        "size": 100
+      }
+    }
+  }
+}
+``` 
+
 ------
