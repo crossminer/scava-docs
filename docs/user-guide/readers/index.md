@@ -156,7 +156,7 @@ This reader retrieves data from NNTP through a REST API.  To register a project 
 | Parameter              | Type     | Description | Example | Mandatory |
 | ---------------------- | -------- | ----------- | ------- | ------- |
 | URL | `String` | URL of the project repository | news.mozilla.org | Yes |
-| Name | `String` | The newsgroup name | mozilla.activity-stream | Yes |
+| NewsGroupName | `String` | The newsgroup name | mozilla.activity-stream | Yes |
 | Username | `String` | Username used to log into the newsgroup channel | admin | No |
 | Password | `String` | Password used to log into the newsgroup channel | admin101 | No |
 | Port | `int` | The port number | 119 by default | Yes |
