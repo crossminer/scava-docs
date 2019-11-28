@@ -132,21 +132,22 @@ The Irc reader supports data retrieval from log archive. To register a project o
 ------
 ### org.eclipse.scava.platform.communicationchannel.mbox
 
-The Mbox reader supports data retrieval from log archive. To register a project on the platform the user must use the `Create Project` option and provide the following parameters:
+The Mbox reader uses dumps to parse the data. To register a project on the platform the user must use the `Create Project` option and provide the following parameters:
 
 | Parameter              | Type     | Description | Example | Mandatory |
 | ---------------------- | -------- | ----------- | ------- | ---------------------- |
-| URL | `String` | The URL location of the archive | http://localhost/Downloads/ | Yes |
-| Name | `String` | Name of the Mbox | mboxes | Yes |
-| Description |  `String`| Brief description of the Mbox | The mboxes archive contains .... | Yes |
+| URL | `String` | The URL location of the archive | https://mail.gnome.org/archives/gtk-list/ | Yes |
+| Name | `String` | Name of the Mbox | mboxes | No |
+| Description |  `String`| Brief description of the Mbox | The mboxes archive contains .... | No |
 | Compressed File Ext. |`String`  | File extension of the archive | tar.gzip | Yes |
 | Username |`String` | Username (for protected archive) | admin | No |
 | Password | `String`| Password (for protected archive) | admin101 | No |
 
 <u>*Additional Information*</u> :
 
-- The reader currently supports "tarballs" (i.e., tar.gzip, tgz).
-- The storage location may contain one or more Mbox archive(s), each stored in the following name format `MboxName-yyyymmdd.ext` , to specify the date of analysis. Each Mbox archive must contain one or more email messages (of the same analysis date), stored in a folder. 
+- The reader supports compressed tarballs (i.e., `.tar.gzip`, `.tgz`) and a specific compressed gz files (`.txt.gz`).
+- The URL must contain the Mbox archives with the following name format `YYYY-Month.ext`, e.g. `2019-Janaury.txt.gz`.
+- 
 
 ------
 ### org.eclipse.scava.platform.communicationchannel.nntp
