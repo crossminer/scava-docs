@@ -138,7 +138,7 @@ The Mbox reader uses dumps to parse the data. To register a project on the platf
 | ---------------------- | -------- | ----------- | ------- | ---------------------- |
 | URL | `String` | The URL location of the archive | https://mail.gnome.org/archives/gtk-list/ | Yes |
 | Name | `String` | Name of the Mbox | mboxes | No |
-| Description |  `String`| Brief description of the Mbox | The mboxes archive contains .... | No |
+| Description |  `String`| Brief description of the Mbox | The mboxes archive contains | No |
 | Compressed File Ext. |`String`  | File extension of the archive | tar.gzip | Yes |
 | Username |`String` | Username (for protected archive) | admin | No |
 | Password | `String`| Password (for protected archive) | admin101 | No |
@@ -147,7 +147,7 @@ The Mbox reader uses dumps to parse the data. To register a project on the platf
 
 - The reader supports compressed tarballs (i.e., `.tar.gzip`, `.tgz`) and a specific compressed gz files (`.txt.gz`).
 - The URL must contain the Mbox archives with the following name format `YYYY-Month.ext`, e.g. `2019-Janaury.txt.gz`.
-- 
+- The reader will only store, as a temporal file, the downloaded file until the delta asks for a new year or month.
 
 ------
 ### org.eclipse.scava.platform.communicationchannel.nntp

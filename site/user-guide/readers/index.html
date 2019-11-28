@@ -927,7 +927,7 @@
 - Each archive must be stored in the following name format <code>IrcName-yyyymmdd.ext</code> , to specify the date of analysis (e.g., <code>kubuntu-20040306.tar</code>). The archive may contain one or more files stored in a folder, and each file represents interaction within a single chat room.</p>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchannelmbox">org.eclipse.scava.platform.communicationchannel.mbox</h3>
-<p>The Mbox reader supports data retrieval from log archive. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
+<p>The Mbox reader uses dumps to parse the data. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
 <table>
 <thead>
 <tr>
@@ -943,7 +943,7 @@
 <td>URL</td>
 <td><code>String</code></td>
 <td>The URL location of the archive</td>
-<td>http://localhost/Downloads/</td>
+<td>https://mail.gnome.org/archives/gtk-list/</td>
 <td>Yes</td>
 </tr>
 <tr>
@@ -951,14 +951,14 @@
 <td><code>String</code></td>
 <td>Name of the Mbox</td>
 <td>mboxes</td>
-<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
 <td>Description</td>
 <td><code>String</code></td>
 <td>Brief description of the Mbox</td>
-<td>The mboxes archive contains ....</td>
-<td>Yes</td>
+<td>The mboxes archive contains</td>
+<td>No</td>
 </tr>
 <tr>
 <td>Compressed File Ext.</td>
@@ -985,8 +985,9 @@
 </table>
 <p><u><em>Additional Information</em></u> :</p>
 <ul>
-<li>The reader currently supports "tarballs" (i.e., tar.gzip, tgz).</li>
-<li>The storage location may contain one or more Mbox archive(s), each stored in the following name format <code>MboxName-yyyymmdd.ext</code> , to specify the date of analysis. Each Mbox archive must contain one or more email messages (of the same analysis date), stored in a folder. </li>
+<li>The reader supports compressed tarballs (i.e., <code>.tar.gzip</code>, <code>.tgz</code>) and a specific compressed gz files (<code>.txt.gz</code>).</li>
+<li>The URL must contain the Mbox archives with the following name format <code>YYYY-Month.ext</code>, e.g. <code>2019-Janaury.txt.gz</code>.</li>
+<li>The reader will only store, as a temporal file, the downloaded file until the delta asks for a new year or month.</li>
 </ul>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchannelnntp">org.eclipse.scava.platform.communicationchannel.nntp</h3>
