@@ -500,7 +500,7 @@
         
             <li><a class="toctree-l5" href="#communication-channels">Communication Channels</a></li>
         
-            <li><a class="toctree-l5" href="#documentation-readers">Documentation Readers</a></li>
+            <li><a class="toctree-l5" href="#documentation">Documentation</a></li>
         
         </ul>
     
@@ -564,7 +564,12 @@
               
                 <h1 id="readers">Readers</h1>
 <p>This document describes the readers used to provide data for the Scava platform.</p>
-<h2 id="bug-trackers">Bug Trackers</h2>
+<ul>
+<li><a href="#bug-trackers">Bug Trackers</a></li>
+<li><a href="#communication-channels">Communication Channels</a></li>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<h2 id="bug-trackers"><a href="#bug-trackers">Bug Trackers</a></h2>
 <p>The following readers retrieve data from bug tracking systems.</p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystembitbucket">org.eclipse.scava.platform.bugtrackingsystem.bitbucket</h3>
@@ -603,6 +608,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystembugzilla">org.eclipse.scava.platform.bugtrackingsystem.bugzilla</h3>
 <p>This reader retrieves data from Bugzilla through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -647,6 +653,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemgithub">org.eclipse.scava.platform.bugtrackingsystem.github</h3>
 <p>This reader retrieves data from GitHub through a REST API.  To register a project on the platform the user must use the <code>Import Project</code> option and provide the following parameter:</p>
@@ -668,6 +675,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemgitlab">org.eclipse.scava.platform.bugtrackingsystem.gitlab</h3>
 <p>This reader retrieves data from GitLab through a REST API.  To register a project on the platform the user must use the <code>Import Project</code> option and provide the following parameter:</p>
@@ -689,6 +697,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemjira">org.eclipse.scava.platform.bugtrackingsystem.jira</h3>
 <p>This reader retrieves data from Jira through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -733,6 +742,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemmantis">org.eclipse.scava.platform.bugtrackingsystem.mantis</h3>
 <p>This reader retrieves data from Mantis through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -760,8 +770,11 @@
 </tr>
 </tbody>
 </table>
-<p><u><em>Additional Information</em></u> :
--   To retrieve issues with <code>CLOSED</code> status from Mantis, the user must ensure that the <code>$g_hide_status_default</code> filter parameter located in the config file <code>.../config/config_inc.php</code> is set to <code>META_FILTER_NONE</code>. It seems this parameter is set to <code>CLOSED</code> by default as discussed in <a href="https://www.mantisbt.org/forums/viewtopic.php?f=3&amp;t=20599&amp;p=54037&amp;hilit=issues+does+not+closed#p54037"><strong>this</strong></a> forum post.</p>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>To retrieve issues with <code>CLOSED</code> status from Mantis, the user must ensure that the <code>$g_hide_status_default</code> filter parameter located in the config file <code>.../config/config_inc.php</code> is set to <code>META_FILTER_NONE</code>. It seems this parameter is set to <code>CLOSED</code> by default as discussed in <a href="https://www.mantisbt.org/forums/viewtopic.php?f=3&amp;t=20599&amp;p=54037&amp;hilit=issues+does+not+closed#p54037"><strong>this</strong></a> forum post.</li>
+</ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemredmine">org.eclipse.scava.platform.bugtrackingsystem.redmine</h3>
 <p>This reader retrieves data from Redmine through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -795,6 +808,7 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemsourceforge">org.eclipse.scava.platform.bugtrackingsystem.sourceforge</h3>
 <p>This reader retrieves data from SOURCEFORGE through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameter:</p>
@@ -816,8 +830,9 @@
 </tr>
 </tbody>
 </table>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
-<h2 id="communication-channels">Communication Channels</h2>
+<h2 id="communication-channels"><a href="#communication-channels">Communication Channels</a></h2>
 <p>The following readers retrieve data from communication channels.</p>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchanneleclipseforums">org.eclipse.scava.platform.communicationchannel.eclipseforums</h3>
@@ -863,9 +878,12 @@
 </tr>
 </tbody>
 </table>
-<p><u><em>Additional Information</em></u> :
--   The <code>Forum Id</code> can be found within the forum URL. For example, the <code>Andmore</code> forum URL is https://www.eclipse.org/forums/index.php/f/305/ and the <code>Forum Id</code> is <code>305</code> shown in the last directory of the path.
--   Eclipse enforces a rate limit of 1,000 requests per hour for both authenticated and anonymous requests. However, authenticated users may request to increase the call limit, subject to Eclipse approval.</p>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>The <code>Forum Id</code> can be found within the forum URL. For example, the <code>Andmore</code> forum URL is https://www.eclipse.org/forums/index.php/f/305/ and the <code>Forum Id</code> is <code>305</code> shown in the last directory of the path.</li>
+<li>Eclipse enforces a rate limit of 1,000 requests per hour for both authenticated and anonymous requests. However, authenticated users may request to increase the call limit, subject to Eclipse approval.</li>
+</ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchannelirc">org.eclipse.scava.platform.communicationchannel.irc</h3>
 <p>The Irc reader supports data retrieval from log archive. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -924,9 +942,12 @@
 </tr>
 </tbody>
 </table>
-<p><u><em>Additional Information</em></u> :
-- The reader currently supports "tarballs" (i.e., tar.gzip, tgz).
-- Each archive must be stored in the following name format <code>IrcName-yyyymmdd.ext</code> , to specify the date of analysis (e.g., <code>kubuntu-20040306.tar</code>). The archive may contain one or more files stored in a folder, and each file represents interaction within a single chat room.</p>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>The reader currently supports "tarballs" (i.e., tar.gzip, tgz).</li>
+<li>Each archive must be stored in the following name format <code>IrcName-yyyymmdd.ext</code> , to specify the date of analysis (e.g., <code>kubuntu-20040306.tar</code>). The archive may contain one or more files stored in a folder, and each file represents interaction within a single chat room.</li>
+</ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchannelmbox">org.eclipse.scava.platform.communicationchannel.mbox</h3>
 <p>The Mbox reader uses dumps to parse the data. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -987,10 +1008,21 @@
 </table>
 <p><u><em>Additional Information</em></u> :</p>
 <ul>
-<li>The reader supports compressed tarballs (i.e., <code>.tar.gzip</code>, <code>.tgz</code>) and a specific compressed gz files (<code>.txt.gz</code>).</li>
-<li>The URL must contain the Mbox archives with the following name format <code>YYYY-Month.ext</code>, e.g. <code>2019-Janaury.txt.gz</code>.</li>
-<li>The reader will only store, as a temporal file, the downloaded file until the delta asks for a new year or month.</li>
+<li>The reader supports compressed tarballs (i.e., <code>.tar.gzip</code>, <code>.tgz</code>) and specific compressed gz files (<code>.txt.gz</code> and <code>.mbox.gz</code>).<ul>
+<li>If the format is <code>.tar.gzip</code>, <code>.tgz</code> or <code>.txt.gz</code> the platform supports month based files, following this file format name convention: <code>YYYY-Month.ext</code>, e.g. <code>2019-Janaury.txt.gz</code>.
+This is similar to the one used in https://mail.gnome.org/archives/gtk-list/</li>
+<li>If the format is <code>.mbox.gz</code>, the platform supports one file containing all the emails from the mailing list. In this case the URL must contain the name of the mailing list, like in:
+https://download.eclipse.org/scava/datasets/eclipse_mls/mboxes/actf-dev . This follows the format used in https://download.eclipse.org/scava/datasets/eclipse_mls/eclipse_mls.html to store dumps of mboxes.</li>
 </ul>
+</li>
+<li>The reader will manage intelligently the dumps and will store, as a temporal file, only one file. However, the current implementation have some particular characteristics and limitations:<ul>
+<li>If the format is month-year based, the platform will download the files when the month or year of the delta changes. Do not analyze a mailing list that has not generated yet a dump, as the platform is not aware of the date when the dumps are updated. For example, if we are in December 2019, do not ask for analyzing December 2019 until the dump has been made. Otherwise, the platform will create empty deltas and the analysis will not be accurate.</li>
+<li>If the format is <code>.mbox.gz</code> which contains all the emails sent, the dump will update the files only if the platform need to analyze a delta that the dump does not cover. This is done by calculating when was the last update of the dump; the calculation is based on the fact that Eclipse Mailing lists are updated each Sunday at 2am. The platform will pause until Monday and then get a dump that covers the expected date.</li>
+</ul>
+</li>
+<li>Currently, the reader does not support a user-defined time for updating dumps.</li>
+</ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchannelnntp">org.eclipse.scava.platform.communicationchannel.nntp</h3>
 <p>This reader retrieves data from NNTP through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameter:</p>
@@ -1054,6 +1086,7 @@
 <li>The port number is mandatory and defaults to 119. However, the user has the option to change this value, if their port number is different from 119.</li>
 <li>The Interval is not mandatory but defaults to 10000. However, the user has the option to lower or increase this value.</li>
 </ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformcommunicationchannelsympa">org.eclipse.scava.platform.communicationchannel.sympa</h3>
 <p>The Sympa reader supports data retrieval from log archive. To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
@@ -1117,7 +1150,8 @@
 <li>The reader currently supports "tarballs" (i.e., tar.gzip, tgz).</li>
 <li>The storage location may contain one or more Sympa archive(s), each stored in the following name format <code>SympaName-yyyymmdd.ext</code> , to specify the date of analysis. Each Sympa archive must contain one or more email messages (of the same analysis date), stored in a folder. </li>
 </ul>
-<h2 id="documentation-readers">Documentation Readers</h2>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
+<h2 id="documentation"><a href="#documentation">Documentation</a></h2>
 <p>The following readers retrieve project documentation from relevant sources.</p>
 <hr />
 <h3 id="orgeclipsescavaplatformdocumentationgitbased">org.eclipse.scava.platform.documentation.gitbased</h3>
@@ -1140,8 +1174,11 @@
 </tr>
 </tbody>
 </table>
-<p><u><em>Additional Information</em></u> :
--   This reader cannot be used along with a Git project, because internally they use the same model and the <code>documentation.Git-Based</code> reader extends the Git project reader.</p>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li>This reader cannot be used along with a Git project, because internally they use the same model and the <code>documentation.Git-Based</code> reader extends the Git project reader.</li>
+</ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
 <hr />
 <h3 id="orgeclipsescavaplatformdocumentationsystematic">org.eclipse.scava.platform.documentation.systematic</h3>
 <p>This reader uses web crawler to retrieve data from websites.  To register a project on the platform the user must use the <code>Documentation Systematic</code> option and provide the relevant parameter:</p>
@@ -1199,13 +1236,17 @@
 </tr>
 </tbody>
 </table>
-<p><u><em>Additional Information</em></u> :
-- *ExecutionFrequency. By default the value is zero, which means that the documentation will be retrieved only once at the beginning of the analysis. Furthermore, we recommend a execution frequency greater than 5 in order to prevent the crawler to be banned from accessing the data.
--   For clarity, all examples used in the above table are derived from the Eclipse Foundation website. For example, the <code>username</code> field is defined as name.
--   The <code>Documentation Systematic</code> reader supports both password protected and un-protected sources. <code>URL</code> and <code>ExecutionFrequency</code> are mandatory for both sources. However, only the password protected sources require the additional paramenters.
--   Dates preceeding the current date are processed once because the reader does not keep track of the website evolution up to the current date.
--   The reader assumes that all textual information within the specified URL location are related to documentation.
--   The crawler is configured to comply with the Robots Exclusion protocol and thus folows the rules in the robots.txt file during crawling.</p>
+<p><u><em>Additional Information</em></u> :</p>
+<ul>
+<li><em>ExecutionFrequency. By default the value is zero, which means that the documentation will be retrieved only once at the beginning of the analysis. Furthermore, we recommend a execution frequency greater than 5 in order to prevent the crawler to be banned from accessing the data.</em></li>
+<li>For clarity, all examples used in the above table are derived from the Eclipse Foundation website. For example, the <code>username</code> field is defined as name.</li>
+<li>The <code>Documentation Systematic</code> reader supports both password protected and un-protected sources. <code>URL</code> and <code>ExecutionFrequency</code> are mandatory for both sources. However, only the password protected sources require the additional paramenters.</li>
+<li>Dates preceeding the current date are processed once because the reader does not keep track of the website evolution up to the current date.</li>
+<li>The reader assumes that all textual information within the specified URL location are related to documentation.</li>
+<li>The crawler is configured to comply with the Robots Exclusion protocol and thus follows the rules in the robots.txt file during crawling.</li>
+<li>The crawler does not support websites that are based mostly on JavaScript, such as websites based on AngularJS. The reason behind is that the crawler cannot execute JavaScript.</li>
+</ul>
+<p><a href="#top"><img src="./arrow_drop_up.svg">Back to top</a></p>
               
             </div>
           </div>
