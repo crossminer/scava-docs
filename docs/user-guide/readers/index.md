@@ -70,6 +70,9 @@ This reader retrieves data from Mantis through a REST API.  To register a projec
 |  URL  | `String` | URL of the repository | https://www.mantisbt.org/ |
 | Token | `String` |A unique token used to make authentication request  |   6aefdre554675bfgtrhgfy77567   |
 
+<u>*Additional Information*</u> :
+-	To retrieve issues with `CLOSED` status from Mantis, the user must ensure that the `$g_hide_status_default` filter parameter located in the config file `.../config/config_inc.php` is set to `META_FILTER_NONE`. It seems this parameter is set to `CLOSED` by default as discussed in [**this**](https://www.mantisbt.org/forums/viewtopic.php?f=3&t=20599&p=54037&hilit=issues+does+not+closed#p54037) forum post.
+
 ------
 ### org.eclipse.scava.platform.bugtrackingsystem.redmine
 

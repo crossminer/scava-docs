@@ -760,6 +760,8 @@
 </tr>
 </tbody>
 </table>
+<p><u><em>Additional Information</em></u> :
+-   To retrieve issues with <code>CLOSED</code> status from Mantis, the user must ensure that the <code>$g_hide_status_default</code> filter parameter located in the config file <code>.../config/config_inc.php</code> is set to <code>META_FILTER_NONE</code>. It seems this parameter is set to <code>CLOSED</code> by default as discussed in <a href="https://www.mantisbt.org/forums/viewtopic.php?f=3&amp;t=20599&amp;p=54037&amp;hilit=issues+does+not+closed#p54037"><strong>this</strong></a> forum post.</p>
 <hr />
 <h3 id="orgeclipsescavaplatformbugtrackingsystemredmine">org.eclipse.scava.platform.bugtrackingsystem.redmine</h3>
 <p>This reader retrieves data from Redmine through a REST API.  To register a project on the platform the user must use the <code>Create Project</code> option and provide the following parameters:</p>
