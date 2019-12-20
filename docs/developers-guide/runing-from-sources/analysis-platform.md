@@ -46,12 +46,68 @@ Figure-01: Setup the Eclipse Target Platform.
 
 #### Import Projects into Eclipse Workspace
 
+<<<<<<< HEAD
 Import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
 
 In the case that the Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
+=======
+Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
+>>>>>>> parent of d3479e2... Running metric-platform from sources using the new Target Platform definition
 
+Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
+[Tycho Plugin](https://www.eclipse.org/tycho/).
+<br/>
 <img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
+<<<<<<< HEAD
 Figure-02: Install m2e-connectors plugins.
+=======
+Figure-01: Install m2e-connectors plugins.
+
+#### Configure the Target Platform
+
+The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to run the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.
+
+* **Download Eclipse Mars platform**
+Download the compleate Eclipse Mars platform.
+
+In command ligne :
+
+````Shell
+./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.metadata.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
+````
+
+````Shell
+./eclipse -nosplash -verbose -application org.eclipse.equinox.p2.artifact.repository.mirrorApplication -source http://download.eclipse.org/releases/mars -destination {your platform folder}
+````
+Then, extract the its context somewehere on your machine.
+
+* **Download Rascal dependencies**
+
+Download two external libraries required to run metrics providers based on Rascal.
+
+Repository URL : [Rascal Dependencies](https://update.rascal-mpl.org/unstable/plugins/)
+
+1.  impulse_0.3.0.xxx.jar
+1.  rascal_eclipse_0.12.0.xxx.jar
+
+* **Configure the Target Platform**
+
+Open the Eclipse preferences on (`Window -> Preferencies`), then choose the Target Platform Definition (`Plug-in Development -> Target Platform`).<br/>
+<img src="images/eclipse_preferences_1.png" height="500px" width="500px" /><br/>
+Figure-02: Eclipse Preferences.
+
+Add a new Target Platform configuration for the project, choose the Default initialization then click on (`Next`).<br/>
+<img src="images/eclipse_target_platform_2.png" height="500px" width="500px" /><br/>
+Figure-03: Eclipse Target Platforms Initialization.
+
+Give a name to the new target platform, hit the (`Add`) button to add the Eclipse Mars dependencies and the external rascal libraries content to the target, then click on (`Finish`).<br/>
+<img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
+Figure-04: Eclipse Target Platforms Dependencies.
+
+Finally, check the new target Configuration, then click on (`Apply and Close`) to save the changes.<br/>
+<img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/>
+Figure-05: Eclipse Target Platforms.
+>>>>>>> parent of d3479e2... Running metric-platform from sources using the new Target Platform definition
 
 ### Configure the Analysis Platform
 
