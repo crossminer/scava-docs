@@ -41,7 +41,7 @@ git checkout dev
 
 Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
 
-Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
+Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors including 
 [Tycho Plugin](https://www.eclipse.org/tycho/).
 <br/>
 <img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
