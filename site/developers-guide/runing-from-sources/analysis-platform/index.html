@@ -218,17 +218,6 @@
         
             <li><a class="toctree-l5" href="#configuration">Configuration</a></li>
         
-        </ul>
-    
-
-    <li class="toctree-l4"><a href="#in-the-case-that-the-eclipse-ide-may-trigger-errors-related-to-plugin-execution-not-covered-by-lifecycle-configuration-orgeclipsetychotycho-compiler-plugin110compile-right-click-on-one-of-them-select-quick-fix-let-eclipse-install-the-appropriate-m2e-connectors-and-restart">In the case that the Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l5" href="#configure-the-target-platform">Configure the Target Platform</a></li>
-        
-            <li><a class="toctree-l5" href="#configure-the-analysis-platform">Configure the Analysis Platform</a></li>
-        
             <li><a class="toctree-l5" href="#run-the-analysis-platform">Run the Analysis Platform</a></li>
         
             <li><a class="toctree-l5" href="#run-the-api-gateway">Run the api-gateway</a></li>
@@ -622,33 +611,12 @@ git checkout dev
 <p><img src="images/target-platform.png" height="500px" width="600px"><br/>
 Figure-01: Setup the Eclipse Target Platform.</p>
 <h4 id="import-projects-into-eclipse-workspace">Import Projects into Eclipse Workspace</h4>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
-<h1 id="in-the-case-that-the-eclipse-ide-may-trigger-errors-related-to-plugin-execution-not-covered-by-lifecycle-configuration-orgeclipsetychotycho-compiler-plugin110compile-right-click-on-one-of-them-select-quick-fix-let-eclipse-install-the-appropriate-m2e-connectors-and-restart">In the case that the Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:</h1>
 <p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>parent of d3479e2... Running metric-platform from sources using the new Target Platform definition</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
 <a href="https://www.eclipse.org/tycho/">Tycho Plugin</a>.
 <br/>
-<img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Figure-02: Install m2e-connectors plugins.
-=======
-Figure-01: Install m2e-connectors plugins.</p>
+<img src="images/m2e-connectors.png" height="500px" width="500px"><br/></p>
+<p>Figure-01: Install m2e-connectors plugins.</p>
 <h4 id="configure-the-target-platform">Configure the Target Platform</h4>
 <p>The Scava Analysis Platform is based on the Mars version of the RCP Eclipse. In order to run the platform in a newer eclipse environment, you will have to download the Eclipse Mars platform and configure it as Target Platform.</p>
 <ul>
@@ -687,23 +655,8 @@ Figure-03: Eclipse Target Platforms Initialization.</p>
 <img src="images/eclipse_target_platform_3.png" height="500px" width="500px" /><br/>
 Figure-04: Eclipse Target Platforms Dependencies.</p>
 <p>Finally, check the new target Configuration, then click on (<code>Apply and Close</code>) to save the changes.<br/>
-<img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/>
-Figure-05: Eclipse Target Platforms.</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>parent of d3479e2... Running metric-platform from sources using the new Target Platform definition</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/></p>
+<p>Figure-05: Eclipse Target Platforms.</p>
 <h3 id="configure-the-analysis-platform">Configure the Analysis Platform</h3>
 <h4 id="identifieryour-name"><code>identifier=&lt;your name&gt;</code></h4>
 <p>The identifier of the node. If not specified, the platform will attempt to use the node's hostname, and if it cannot resolve the hostname, it will generated a random UUID. </p>
