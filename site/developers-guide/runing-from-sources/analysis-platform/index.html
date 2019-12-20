@@ -606,10 +606,6 @@ git checkout dev
 
 <h2 id="configuration">Configuration</h2>
 <h3 id="configure-the-eclipse-ide">Configure The Eclipse IDE</h3>
-<h4 id="setup-the-target-platform-definition">Setup the Target Platform Definition</h4>
-<p>We first need to setup the Target Platform definition of Scava. In Eclipse, import (<code>File -&gt; Import -&gt; Existing projects into workspace</code>) the project <code>metric-platform/releng/org.eclipse.scava.target</code>. Then, go to <code>Window -&gt; Preferences -&gt; Plug-in Development -&gt; Target Platform</code> and check the <code>scava</code> target definition in the list. Confirm your selection and wait for the target platform to be resolved by Eclipse; this may take a while.</p>
-<p><img src="images/target-platform.png" height="500px" width="600px"><br/>
-Figure-01: Setup the Eclipse Target Platform.</p>
 <h4 id="import-projects-into-eclipse-workspace">Import Projects into Eclipse Workspace</h4>
 <p>Open Eclipse and import all projects from the top level directory of the Scava code (<code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>), and wait for all the projects to compile without errors.</p>
 <p>Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
