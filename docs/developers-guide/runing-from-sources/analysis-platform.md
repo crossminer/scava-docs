@@ -46,21 +46,13 @@ Figure-01: Setup the Eclipse Target Platform.
 
 #### Import Projects into Eclipse Workspace
 
-<<<<<<< HEAD
-Import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
-
-In the case that the Eclipse IDE may trigger errors related to "Plugin execution not covered by lifecycle configuration: org.eclipse.tycho:tycho-compiler-plugin:1.1.0:compile". Right-click on one of them, select Quick Fix, let Eclipse install the appropriate M2E connectors and restart:
-=======
 Open Eclipse and import all projects from the top level directory of the Scava code (`File -> Import -> Maven -> Existing Maven Projects`), and wait for all the projects to compile without errors.
->>>>>>> parent of d3479e2... Running metric-platform from sources using the new Target Platform definition
 
 Meanwhile, the Eclipse IDE would suggest you to install a set of m2e-connectors iincluding 
 [Tycho Plugin](https://www.eclipse.org/tycho/).
 <br/>
 <img src="images/m2e-connectors.png" height="500px" width="500px"><br/>
-<<<<<<< HEAD
-Figure-02: Install m2e-connectors plugins.
-=======
+
 Figure-01: Install m2e-connectors plugins.
 
 #### Configure the Target Platform
@@ -106,8 +98,8 @@ Figure-04: Eclipse Target Platforms Dependencies.
 
 Finally, check the new target Configuration, then click on (`Apply and Close`) to save the changes.<br/>
 <img src="images/eclipse_target_platform_4.png" height="500px" width="500px" /><br/>
+
 Figure-05: Eclipse Target Platforms.
->>>>>>> parent of d3479e2... Running metric-platform from sources using the new Target Platform definition
 
 ### Configure the Analysis Platform
 
